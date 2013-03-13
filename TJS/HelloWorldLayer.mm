@@ -64,11 +64,11 @@ enum {
 		
 #if 1
 		// Use batch node. Faster
-		CCSpriteBatchNode *parent = [CCSpriteBatchNode batchNodeWithFile:@"blocks.png" capacity:100];
+		CCSpriteBatchNode *parent = [CCSpriteBatchNode batchNodeWithFile:@"blocks2.png" capacity:100];
 		spriteTexture_ = [parent texture];
 #else
 		// doesn't use batch node. Slower
-		spriteTexture_ = [[CCTextureCache sharedTextureCache] addImage:@"blocks.png"];
+		spriteTexture_ = [[CCTextureCache sharedTextureCache] addImage:@"blocks2.png"];
 		CCNode *parent = [CCNode node];
 #endif
 		[self addChild:parent z:0 tag:kTagParentNode];
@@ -152,7 +152,8 @@ enum {
 	CGSize s = [[CCDirector sharedDirector] winSize];
 	
 	b2Vec2 gravity;
-	gravity.Set(0.0f, -10.0f);
+//	gravity.Set(0.0f, -10.0f);
+    gravity.Set(2.0f, -10.0f);
 	world = new b2World(gravity);
 	
 	
@@ -250,7 +251,7 @@ enum {
 	b2FixtureDef fixtureDef;
 	fixtureDef.shape = &dynamicBox;	
 	fixtureDef.density = 1.0f;
-	fixtureDef.friction = 0.3f;
+	fixtureDef.friction = 6.3f; //0.3f
 	body->CreateFixture(&fixtureDef);
 	
 	[sprite setPhysicsBody:body];
