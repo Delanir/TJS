@@ -860,7 +860,7 @@
 			attributes = {
 				LastUpgradeCheck = 0460;
 			};
-			buildConfigurationList = 67C0074816EA48B00040EF46 /* Build configuration list for PBXProject "TesteSprites" */;
+			buildConfigurationList = 67C0074816EA48B00040EF46 /* Build configuration list for PBXProject "SpritesTest" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -1096,7 +1096,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		67C0074816EA48B00040EF46 /* Build configuration list for PBXProject "TesteSprites" */ = {
+		67C0074816EA48B00040EF46 /* Build configuration list for PBXProject "SpritesTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				67C008E316EA48B20040EF46 /* Debug */,
@@ -1112,6 +1112,7 @@
 				67C008E716EA48B20040EF46 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
