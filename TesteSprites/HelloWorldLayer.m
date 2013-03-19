@@ -13,6 +13,9 @@
 // Needed to obtain the Navigation Controller
 #import "AppDelegate.h"
 
+#import "Monster.h"
+#import "LevelManager.h"
+
 #pragma mark - HelloWorldLayer
 
 // HelloWorldLayer implementation
@@ -38,6 +41,10 @@
 	
 	// return the scene
 	return scene;
+}
+
+-(void)gameLogic:(ccTime)dt {
+    [self addMonster];
 }
 
 // on "init" you need to initialize your instance
@@ -74,6 +81,8 @@
         self.walkAction = [CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:walkAnim restoreOriginalFrame:NO]];
         
         //[self.walkAction runAction:[CCRepeatForever actionWithAction: [CCAnimate actionWithDuration:2.8f animation:animation restoreOriginalFrame:NO] ]];
+        
+        [self schedule:@selector(gameLogic:) interval:[LevelManager sharedInstance].curLevel.secsPerSpawn];
         
         //[_bear runAction:_walkAction];
         self.isTouchEnabled = YES;
@@ -125,7 +134,9 @@
 		[menu alignItemsHorizontallyWithPadding:20];
 		[menu setPosition:ccp( size.width/2, size.height/2 - 50)];
 		
-        
+        _monsters = [[NSMutableArray alloc] init];
+                
+        [self schedule:@selector(update:)];
         
 		// Add the menu to the layer
 		[self addChild:menu];
@@ -133,6 +144,32 @@
 	}
 	return self;
 }
+
+- (void)update:(ccTime)dt {
+    
+	NSMutableArray *projectilesToDelete = [[NSMutableArray alloc] init];
+	for (CCSprite *projectile in _projectiles) {
+		CGRect projectileRect = CGRectMake(projectile.position.x - (projectile.contentSize.width/2),
+										   projectile.position.y - (projectile.contentSize.height/2),
+										   projectile.contentSize.width,
+										   projectile.contentSize.height);
+        
+		NSMutableArray *targetsToDelete = [[NSMutableArray alloc] init];
+		
+		
+		if (targetsToDelete.count > 0) {
+			[projectilesToDelete addObject:projectile];
+		}
+		[targetsToDelete release];
+	}
+	
+	for (CCSprite *projectile in projectilesToDelete) {
+		[_projectiles removeObject:projectile];
+		[self removeChild:projectile cleanup:YES];
+	}
+	[projectilesToDelete release];
+}
+
 
 - (void) registerWithTouchDispatcher
 {
@@ -180,6 +217,51 @@
     _moving = FALSE;
 }
 
+- (void) addMonster {
+    
+    //CCSprite * monster = [CCSprite spriteWithFile:@"monster.png"];
+    Monster * monster = nil;
+    if (arc4random() % 2 == 0) {
+        monster = [[[WeakAndFastMonster alloc] init] autorelease];
+    } else {
+        monster = [[[StrongAndSlowMonster alloc] init] autorelease];
+    }
+    
+    // Determine where to spawn the monster along the Y axis
+    CGSize winSize = [CCDirector sharedDirector].winSize;
+    int minY = monster.contentSize.height / 2;
+    int maxY = winSize.height - monster.contentSize.height/2;
+    int rangeY = maxY - minY;
+    int actualY = (arc4random() % rangeY) + minY;
+    
+    // Create the monster slightly off-screen along the right edge,
+    // and along a random position along the Y axis as calculated above
+    monster.position = ccp(winSize.width + monster.contentSize.width/2, actualY);
+    [self addChild:monster];
+    
+    // Determine speed of the monster
+    int minDuration = monster.minMoveDuration; //2.0;
+    int maxDuration = monster.maxMoveDuration; //4.0;
+    int rangeDuration = maxDuration - minDuration;
+    int actualDuration = (arc4random() % rangeDuration) + minDuration;
+    
+    // Create the actions
+    CCMoveTo * actionMove = [CCMoveTo actionWithDuration:actualDuration position:ccp(-monster.contentSize.width/2, actualY)];
+    CCCallBlockN * actionMoveDone = [CCCallBlockN actionWithBlock:^(CCNode *node) {
+        [_monsters removeObject:node];
+        [node removeFromParentAndCleanup:YES];
+        
+        //CCScene *gameOverScene = [GameOverLayer sceneWithWon:NO];
+        //[[CCDirector sharedDirector] replaceScene:gameOverScene];
+    }];
+    [monster runAction:[CCSequence actions:actionMove, actionMoveDone, nil]];
+    
+    monster.tag = 1;
+    [_monsters addObject:monster];
+    
+}
+
+
 
 
 // on "dealloc" you need to release all your retained objects
@@ -191,6 +273,10 @@
     //in dealloc
     self.bear = nil;
     self.walkAction = nil;
+    
+    [_monsters release];
+    _monsters = nil;
+
 	
 	// don't forget to call "super dealloc"
 	[super dealloc];

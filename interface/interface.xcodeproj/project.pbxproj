@@ -1073,6 +1073,7 @@
 				GCC_PREFIX_HEADER = interface/Prefix.pch;
 				HEADER_SEARCH_PATHS = "\"interface/libs/kazmath/include\"";
 				INFOPLIST_FILE = interface/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-ObjC",
@@ -1092,6 +1093,7 @@
 				GCC_PREFIX_HEADER = interface/Prefix.pch;
 				HEADER_SEARCH_PATHS = "\"interface/libs/kazmath/include\"";
 				INFOPLIST_FILE = interface/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-ObjC",

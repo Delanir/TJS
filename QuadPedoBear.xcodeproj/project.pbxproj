@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		679BB82516F0FC27008E1E73 /* Monster.m in Sources */ = {isa = PBXBuildFile; fileRef = 679BB82416F0FC27008E1E73 /* Monster.m */; };
+		679BB82D16F104BB008E1E73 /* Level.m in Sources */ = {isa = PBXBuildFile; fileRef = 679BB82A16F104BB008E1E73 /* Level.m */; };
+		679BB82E16F104BB008E1E73 /* LevelManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 679BB82C16F104BB008E1E73 /* LevelManager.m */; };
 		67C0075116EA48B00040EF46 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67C0075016EA48B00040EF46 /* QuartzCore.framework */; };
 		67C0075316EA48B00040EF46 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67C0075216EA48B00040EF46 /* OpenGLES.framework */; };
 		67C0075516EA48B00040EF46 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67C0075416EA48B00040EF46 /* OpenAL.framework */; };
@@ -138,6 +141,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		679BB82316F0FC27008E1E73 /* Monster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Monster.h; path = ../Monster.h; sourceTree = "<group>"; };
+		679BB82416F0FC27008E1E73 /* Monster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Monster.m; path = ../Monster.m; sourceTree = "<group>"; };
+		679BB82616F0FD1F008E1E73 /* explosion.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = explosion.caf; sourceTree = "<group>"; };
+		679BB82716F0FD1F008E1E73 /* monster2-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "monster2-hd.png"; sourceTree = "<group>"; };
+		679BB82816F0FD1F008E1E73 /* monster2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monster2.png; sourceTree = "<group>"; };
+		679BB82916F104BB008E1E73 /* Level.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Level.h; sourceTree = "<group>"; };
+		679BB82A16F104BB008E1E73 /* Level.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Level.m; sourceTree = "<group>"; };
+		679BB82B16F104BB008E1E73 /* LevelManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelManager.h; sourceTree = "<group>"; };
+		679BB82C16F104BB008E1E73 /* LevelManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelManager.m; sourceTree = "<group>"; };
 		67C0074D16EA48B00040EF46 /* QuadPedoBear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuadPedoBear.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67C0075016EA48B00040EF46 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		67C0075216EA48B00040EF46 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -460,6 +472,12 @@
 		67C0076216EA48B00040EF46 /* QuadPedoBear */ = {
 			isa = PBXGroup;
 			children = (
+				679BB82916F104BB008E1E73 /* Level.h */,
+				679BB82A16F104BB008E1E73 /* Level.m */,
+				679BB82B16F104BB008E1E73 /* LevelManager.h */,
+				679BB82C16F104BB008E1E73 /* LevelManager.m */,
+				679BB82316F0FC27008E1E73 /* Monster.h */,
+				679BB82416F0FC27008E1E73 /* Monster.m */,
 				67C008DA16EA48B20040EF46 /* AppDelegate.h */,
 				67C008DB16EA48B20040EF46 /* AppDelegate.m */,
 				67C008DD16EA48B20040EF46 /* HelloWorldLayer.h */,
@@ -477,6 +495,9 @@
 		67C0076316EA48B00040EF46 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				679BB82616F0FD1F008E1E73 /* explosion.caf */,
+				679BB82716F0FD1F008E1E73 /* monster2-hd.png */,
+				679BB82816F0FD1F008E1E73 /* monster2.png */,
 				67C008EC16EA57980040EF46 /* bear_default.png */,
 				67C008ED16EA57980040EF46 /* bear_default.plist */,
 				67C0076416EA48B00040EF46 /* Default.png */,
@@ -1018,6 +1039,9 @@
 				67C008DC16EA48B20040EF46 /* AppDelegate.m in Sources */,
 				67C008DF16EA48B20040EF46 /* HelloWorldLayer.m in Sources */,
 				67C008E216EA48B20040EF46 /* IntroLayer.m in Sources */,
+				679BB82516F0FC27008E1E73 /* Monster.m in Sources */,
+				679BB82D16F104BB008E1E73 /* Level.m in Sources */,
+				679BB82E16F104BB008E1E73 /* LevelManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

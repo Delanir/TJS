@@ -19,10 +19,15 @@
     CCSprite * _bear;
     CCAction * _walkAction;
     CCAction * _moveAction;
-    BOOL  _moving;
-    
-    
+    BOOL  _moving;NSMutableArray * _monsters;
+    NSMutableArray * _projectiles;
+    int _monstersDestroyed;
+    CCSprite *_player;
+    CCSprite *_nextProjectile;
 }
+
+// returns a CCScene that contains the HelloWorldLayer as the only child
++(CCScene *) scene;
 
 @property (nonatomic, retain) CCSprite * bear;
 @property (nonatomic, retain) CCAction * walkAction;
