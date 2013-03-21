@@ -149,7 +149,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		35DC309F16530C7500862E62 /* ArcherTechDemo1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArcherTechDemo1.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		35DC309F16530C7500862E62 /* TechDemo - Particles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TechDemo - Particles.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35DC30A316530C7500862E62 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		35DC30A516530C7500862E62 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		35DC30A716530C7500862E62 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
@@ -465,7 +465,7 @@
 		35DC30A016530C7500862E62 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				35DC309F16530C7500862E62 /* ArcherTechDemo1.app */,
+				35DC309F16530C7500862E62 /* TechDemo - Particles.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -906,9 +906,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		35DC309E16530C7500862E62 /* ArcherTechDemo1 */ = {
+		35DC309E16530C7500862E62 /* TechDemo - Particles */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 35DC324A16530CA500862E62 /* Build configuration list for PBXNativeTarget "ArcherTechDemo1" */;
+			buildConfigurationList = 35DC324A16530CA500862E62 /* Build configuration list for PBXNativeTarget "TechDemo - Particles" */;
 			buildPhases = (
 				35DC309B16530C7500862E62 /* Sources */,
 				35DC309C16530C7500862E62 /* Frameworks */,
@@ -918,9 +918,9 @@
 			);
 			dependencies = (
 			);
-			name = ArcherTechDemo1;
+			name = "TechDemo - Particles";
 			productName = ArcherTechDemo1;
-			productReference = 35DC309F16530C7500862E62 /* ArcherTechDemo1.app */;
+			productReference = 35DC309F16530C7500862E62 /* TechDemo - Particles.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -932,7 +932,7 @@
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "NightOwl Studios";
 			};
-			buildConfigurationList = 35DC309916530C7500862E62 /* Build configuration list for PBXProject "ArcherTechDemo1" */;
+			buildConfigurationList = 35DC309916530C7500862E62 /* Build configuration list for PBXProject "TechDemo - Particles" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -944,7 +944,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				35DC309E16530C7500862E62 /* ArcherTechDemo1 */,
+				35DC309E16530C7500862E62 /* TechDemo - Particles */,
 			);
 		};
 /* End PBXProject section */
@@ -1160,12 +1160,12 @@
 				GCC_PREFIX_HEADER = ArcherTechDemo1/Prefix.pch;
 				HEADER_SEARCH_PATHS = "\"ArcherTechDemo1/libs/kazmath/include\"";
 				INFOPLIST_FILE = ArcherTechDemo1/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-ObjC",
 				);
-				PRODUCT_NAME = ArcherTechDemo1;
+				PRODUCT_NAME = "TechDemo - Particles";
 				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1180,12 +1180,12 @@
 				GCC_PREFIX_HEADER = ArcherTechDemo1/Prefix.pch;
 				HEADER_SEARCH_PATHS = "\"ArcherTechDemo1/libs/kazmath/include\"";
 				INFOPLIST_FILE = ArcherTechDemo1/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-ObjC",
 				);
-				PRODUCT_NAME = ArcherTechDemo1;
+				PRODUCT_NAME = "TechDemo - Particles";
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
@@ -1195,7 +1195,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		35DC309916530C7500862E62 /* Build configuration list for PBXProject "ArcherTechDemo1" */ = {
+		35DC309916530C7500862E62 /* Build configuration list for PBXProject "TechDemo - Particles" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				35DC324816530CA400862E62 /* Debug */,
@@ -1204,7 +1204,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		35DC324A16530CA500862E62 /* Build configuration list for PBXNativeTarget "ArcherTechDemo1" */ = {
+		35DC324A16530CA500862E62 /* Build configuration list for PBXNativeTarget "TechDemo - Particles" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				35DC324B16530CA500862E62 /* Debug */,
