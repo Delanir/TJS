@@ -1,9 +1,9 @@
-    //
-//  main.m
-//  Cocos2DSimpleGame
 //
-//  Created by Ray Wenderlich on 11/13/12.
-//  Copyright Razeware LLC 2012. All rights reserved.
+//  main.m
+//  TechDemo - Physics
+//
+//  Created by jp on 30/03/13.
+//  Copyright __MyCompanyName__ 2013. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

@@ -1,0 +1,25 @@
+/**            /**
+*                *
+* Coisas a fazer *
+*                *
+**/            **/
+
+
+- Tornar sprites mais visíveis -> Aumentar sprites
+- Criar pixel perfect collisions
+- Criar Toggle button
+- Adicionar som e classe de som
+- Terminar tutorial (som e transição de cenas)
+- Por inimigos a não vir no céu
+- Fazer animações base
+
+/**           /**
+*               *
+* Coisas feitas *
+*               *
+**/           **/
+
+
+- Criada estrutura base para o projecto
+- Criadas colisões simples
+- Actualizar background!

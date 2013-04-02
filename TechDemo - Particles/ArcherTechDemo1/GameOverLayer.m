@@ -17,15 +17,14 @@
     [scene addChild: layer];
     return scene;
 }
-
-- (id)initWithWon:(BOOL)won {
+ - (id)initWithWon:(BOOL)won {
     if ((self = [super initWithColor:ccc4(0, 0, 0, 255)])) {
         
         NSString * message;
-        if (won) {
-            message = @"Yurie has saved the village!";
+          if (won) {
+            message = @"Yuri has saved the village!";
         } else {
-            message = @"Yurie has lost a life!";
+            message = @"Yuri has lost a life!";
         }
 
         CGSize winSize = [[CCDirector sharedDirector] winSize];
