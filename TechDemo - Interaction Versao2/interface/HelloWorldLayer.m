@@ -114,9 +114,10 @@ int mode = 0;
 - (void)changeShootMode:(id)sender {
     if (mode == 0) {
         mode = 1;
-        [shootingModeLabel setString:@"Rope Shoot"];
+        [shootingModeLabel setString:@"Slingshot"];
     } else if (mode == 1) {
         mode = 2;
+        numArrows = 0;
         [shootingModeLabel setString:@"Volley Shoot"];
     } else {
         mode = 0;
