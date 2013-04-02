@@ -10,6 +10,7 @@
 		8C0BCB7516F8B89D00793592 /* ShootingMode.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C0BCB7416F8B89D00793592 /* ShootingMode.png */; };
 		8C1C424D1705FA47001D6816 /* bow.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C1C424B1705FA47001D6816 /* bow.png */; };
 		8C1C424E1705FA47001D6816 /* yurie.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C1C424C1705FA47001D6816 /* yurie.png */; };
+		8C8A333C170B885200971FFD /* Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C8A333B170B885200971FFD /* Background.png */; };
 		8CA99259170AFE3100884132 /* plusButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CA99257170AFE3100884132 /* plusButton.png */; };
 		8CA9925A170AFE3100884132 /* minusButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CA99258170AFE3100884132 /* minusButton.png */; };
 		8CD5E71C16F6A2B000293FAF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CD5E71B16F6A2B000293FAF /* QuartzCore.framework */; };
@@ -145,6 +146,7 @@
 		8C0BCB7416F8B89D00793592 /* ShootingMode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ShootingMode.png; sourceTree = "<group>"; };
 		8C1C424B1705FA47001D6816 /* bow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bow.png; sourceTree = "<group>"; };
 		8C1C424C1705FA47001D6816 /* yurie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yurie.png; sourceTree = "<group>"; };
+		8C8A333B170B885200971FFD /* Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background.png; sourceTree = "<group>"; };
 		8CA99257170AFE3100884132 /* plusButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plusButton.png; sourceTree = "<group>"; };
 		8CA99258170AFE3100884132 /* minusButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = minusButton.png; sourceTree = "<group>"; };
 		8CD5E71816F6A2B000293FAF /* interface.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = interface.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -484,6 +486,7 @@
 		8CD5E72E16F6A2B000293FAF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8C8A333B170B885200971FFD /* Background.png */,
 				8CA99257170AFE3100884132 /* plusButton.png */,
 				8CA99258170AFE3100884132 /* minusButton.png */,
 				8C1C424B1705FA47001D6816 /* bow.png */,
@@ -919,6 +922,7 @@
 				8C1C424E1705FA47001D6816 /* yurie.png in Resources */,
 				8CA99259170AFE3100884132 /* plusButton.png in Resources */,
 				8CA9925A170AFE3100884132 /* minusButton.png in Resources */,
+				8C8A333C170B885200971FFD /* Background.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

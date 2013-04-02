@@ -16,6 +16,7 @@
 @interface HelloWorldLayer : CCLayer <GKAchievementViewControllerDelegate, GKLeaderboardViewControllerDelegate>
 {
     CCSprite *bow;
+    CCSprite * background;
     CCLabelTTF *shootingModeLabel;
     CCLabelTTF *fireRateLabel;
     short int shootRate;
