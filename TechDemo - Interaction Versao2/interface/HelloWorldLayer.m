@@ -51,6 +51,10 @@ int mode = 0;
         // ask director for the window size
 		CGSize size = [[CCDirector sharedDirector] winSize];
         
+        background = [CCSprite spriteWithFile:@"Background.png"];
+        background.position = ccp(size.width/2,size.height/2);
+        [self addChild:background z:0];
+        
         //Arrow Sprite and position
         arrow = [CCSprite spriteWithFile:@"yurie.png"];
         arrow.position = ccp(arrow.contentSize.width/2, size.height/2);
@@ -110,9 +114,10 @@ int mode = 0;
 - (void)changeShootMode:(id)sender {
     if (mode == 0) {
         mode = 1;
-        [shootingModeLabel setString:@"Rope Shoot"];
+        [shootingModeLabel setString:@"Slingshot"];
     } else if (mode == 1) {
         mode = 2;
+        numArrows = 0;
         [shootingModeLabel setString:@"Volley Shoot"];
     } else {
         mode = 0;
