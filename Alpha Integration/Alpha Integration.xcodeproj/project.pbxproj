@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		8B5F33FE1711C3E100885C10 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B5F33FD1711C3E100885C10 /* Default-Landscape~ipad.png */; };
+		8B5F34071711C87500885C10 /* SpriteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B5F34061711C87500885C10 /* SpriteManager.m */; };
+		8B5F34161711DCB100885C10 /* FairyDragon.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B5F34151711DCB100885C10 /* FairyDragon.m */; };
+		8B5F341A1711E1CC00885C10 /* fairiedragon_anim.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B5F34171711E1CB00885C10 /* fairiedragon_anim.plist */; };
+		8B5F341B1711E1CC00885C10 /* fairiedragon.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B5F34181711E1CC00885C10 /* fairiedragon.plist */; };
+		8B5F341C1711E1CC00885C10 /* fairiedragon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B5F34191711E1CC00885C10 /* fairiedragon.png */; };
+		8B5F341D1711E53500885C10 /* EnemyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B5F340B1711C8B900885C10 /* EnemyManager.m */; };
+		8B5F34201711F10100885C10 /* Enemy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B5F341F1711F10000885C10 /* Enemy.m */; };
 		9C7FF344170B28CE009DA7F9 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C7FF343170B28CE009DA7F9 /* Config.plist */; };
 		9C7FF347170B2AFA009DA7F9 /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C7FF346170B2AFA009DA7F9 /* Config.m */; };
 		9C7FF349170B359F009DA7F9 /* TODO in Resources */ = {isa = PBXBuildFile; fileRef = 9C7FF348170B359F009DA7F9 /* TODO */; };
@@ -141,7 +148,6 @@
 		9C85F63D1707980000EECB83 /* Projectile.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C85F63A1707980000EECB83 /* Projectile.png */; };
 		9C85F63E1707980000EECB83 /* Target.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C85F63B1707980000EECB83 /* Target.png */; };
 		9C85F6431709D1A900EECB83 /* Yuri.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C85F6421709D1A900EECB83 /* Yuri.m */; };
-		9C85F6461709D25700EECB83 /* Enemy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C85F6451709D25700EECB83 /* Enemy.m */; };
 		9C85F6491709D2F000EECB83 /* Peasant.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C85F6481709D2EF00EECB83 /* Peasant.m */; };
 		9C85F64C1709D59800EECB83 /* LevelLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C85F64B1709D59800EECB83 /* LevelLayer.m */; };
 		9C85F6531709ECF400EECB83 /* Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C85F6521709ECF300EECB83 /* Entity.m */; };
@@ -154,6 +160,16 @@
 
 /* Begin PBXFileReference section */
 		8B5F33FD1711C3E100885C10 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
+		8B5F34051711C87500885C10 /* SpriteManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpriteManager.h; sourceTree = "<group>"; };
+		8B5F34061711C87500885C10 /* SpriteManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpriteManager.m; sourceTree = "<group>"; };
+		8B5F340B1711C8B900885C10 /* EnemyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnemyManager.m; sourceTree = "<group>"; };
+		8B5F340C1711C8B900885C10 /* EnemyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyManager.h; sourceTree = "<group>"; };
+		8B5F34141711DCB000885C10 /* FairyDragon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FairyDragon.h; sourceTree = "<group>"; };
+		8B5F34151711DCB100885C10 /* FairyDragon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FairyDragon.m; sourceTree = "<group>"; };
+		8B5F34171711E1CB00885C10 /* fairiedragon_anim.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = fairiedragon_anim.plist; sourceTree = "<group>"; };
+		8B5F34181711E1CC00885C10 /* fairiedragon.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = fairiedragon.plist; sourceTree = "<group>"; };
+		8B5F34191711E1CC00885C10 /* fairiedragon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fairiedragon.png; sourceTree = "<group>"; };
+		8B5F341F1711F10000885C10 /* Enemy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Enemy.m; sourceTree = "<group>"; };
 		9C7FF343170B28CE009DA7F9 /* Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		9C7FF345170B2AFA009DA7F9 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		9C7FF346170B2AFA009DA7F9 /* Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
@@ -162,7 +178,7 @@
 		9C7FF34D170B3A4A009DA7F9 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		9C7FF359170B3EFA009DA7F9 /* background4@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "background4@2x.jpg"; path = "Resources/background4@2x.jpg"; sourceTree = "<group>"; };
 		9C7FF35A170B3EFA009DA7F9 /* background8@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "background8@2x.jpg"; path = "Resources/background8@2x.jpg"; sourceTree = "<group>"; };
-		9C85F4961707957E00EECB83 /* TechDemo - Physics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TechDemo - Physics.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C85F4961707957E00EECB83 /* Alpha Integration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Alpha Integration.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C85F4991707957E00EECB83 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		9C85F49B1707957E00EECB83 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		9C85F49D1707957E00EECB83 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
@@ -425,7 +441,6 @@
 		9C85F6411709D1A800EECB83 /* Yuri.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Yuri.h; sourceTree = "<group>"; };
 		9C85F6421709D1A900EECB83 /* Yuri.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Yuri.m; sourceTree = "<group>"; };
 		9C85F6441709D25600EECB83 /* Enemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enemy.h; sourceTree = "<group>"; };
-		9C85F6451709D25700EECB83 /* Enemy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Enemy.m; sourceTree = "<group>"; };
 		9C85F6471709D2EF00EECB83 /* Peasant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Peasant.h; sourceTree = "<group>"; };
 		9C85F6481709D2EF00EECB83 /* Peasant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Peasant.m; sourceTree = "<group>"; };
 		9C85F64A1709D59700EECB83 /* LevelLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelLayer.h; sourceTree = "<group>"; };
@@ -434,7 +449,7 @@
 		9C85F6521709ECF300EECB83 /* Entity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entity.m; sourceTree = "<group>"; };
 		9C85F654170A022800EECB83 /* Arrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Arrow.h; sourceTree = "<group>"; };
 		9C85F655170A022900EECB83 /* Arrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Arrow.m; sourceTree = "<group>"; };
-		9C85F657170A07A400EECB83 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
+		9C85F657170A07A400EECB83 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		9C85F659170A3E4100EECB83 /* MainScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainScene.h; sourceTree = "<group>"; };
 		9C85F65A170A3E4200EECB83 /* MainScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainScene.m; sourceTree = "<group>"; };
 		9C85F65C170A458100EECB83 /* CollisionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollisionManager.h; sourceTree = "<group>"; };
@@ -475,7 +490,7 @@
 		9C85F4971707957E00EECB83 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9C85F4961707957E00EECB83 /* TechDemo - Physics.app */,
+				9C85F4961707957E00EECB83 /* Alpha Integration.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -499,14 +514,18 @@
 		9C85F4AB1707957E00EECB83 /* TechDemo - Physics */ = {
 			isa = PBXGroup;
 			children = (
+				8B5F341F1711F10000885C10 /* Enemy.m */,
+				8B5F340B1711C8B900885C10 /* EnemyManager.m */,
+				8B5F340C1711C8B900885C10 /* EnemyManager.h */,
 				9C85F654170A022800EECB83 /* Arrow.h */,
 				9C85F655170A022900EECB83 /* Arrow.m */,
 				9C85F6471709D2EF00EECB83 /* Peasant.h */,
 				9C85F6481709D2EF00EECB83 /* Peasant.m */,
+				8B5F34141711DCB000885C10 /* FairyDragon.h */,
+				8B5F34151711DCB100885C10 /* FairyDragon.m */,
 				9C85F6411709D1A800EECB83 /* Yuri.h */,
 				9C85F6421709D1A900EECB83 /* Yuri.m */,
 				9C85F6441709D25600EECB83 /* Enemy.h */,
-				9C85F6451709D25700EECB83 /* Enemy.m */,
 				9C85F6511709ECF300EECB83 /* Entity.h */,
 				9C85F6521709ECF300EECB83 /* Entity.m */,
 				9C85F65F170A4E4400EECB83 /* Projectile.h */,
@@ -515,6 +534,8 @@
 				9C7FF346170B2AFA009DA7F9 /* Config.m */,
 				9C85F65C170A458100EECB83 /* CollisionManager.h */,
 				9C85F65D170A458200EECB83 /* CollisionManager.m */,
+				8B5F34051711C87500885C10 /* SpriteManager.h */,
+				8B5F34061711C87500885C10 /* SpriteManager.m */,
 				9C85F659170A3E4100EECB83 /* MainScene.h */,
 				9C85F65A170A3E4200EECB83 /* MainScene.m */,
 				9C85F64A1709D59700EECB83 /* LevelLayer.h */,
@@ -535,6 +556,9 @@
 		9C85F4AC1707957E00EECB83 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8B5F34171711E1CB00885C10 /* fairiedragon_anim.plist */,
+				8B5F34181711E1CC00885C10 /* fairiedragon.plist */,
+				8B5F34191711E1CC00885C10 /* fairiedragon.png */,
 				9C7FF359170B3EFA009DA7F9 /* background4@2x.jpg */,
 				9C7FF35A170B3EFA009DA7F9 /* background8@2x.jpg */,
 				9C85F657170A07A400EECB83 /* Default-568h@2x.png */,
@@ -896,9 +920,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9C85F4951707957E00EECB83 /* TechDemo - Physics */ = {
+		9C85F4951707957E00EECB83 /* Alpha Integration */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9C85F62E1707958200EECB83 /* Build configuration list for PBXNativeTarget "TechDemo - Physics" */;
+			buildConfigurationList = 9C85F62E1707958200EECB83 /* Build configuration list for PBXNativeTarget "Alpha Integration" */;
 			buildPhases = (
 				9C85F4921707957E00EECB83 /* Sources */,
 				9C85F4931707957E00EECB83 /* Frameworks */,
@@ -908,9 +932,9 @@
 			);
 			dependencies = (
 			);
-			name = "TechDemo - Physics";
+			name = "Alpha Integration";
 			productName = "TechDemo - Physics";
-			productReference = 9C85F4961707957E00EECB83 /* TechDemo - Physics.app */;
+			productReference = 9C85F4961707957E00EECB83 /* Alpha Integration.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -921,7 +945,7 @@
 			attributes = {
 				LastUpgradeCheck = 0460;
 			};
-			buildConfigurationList = 9C85F4911707957E00EECB83 /* Build configuration list for PBXProject "TechDemo - Physics" */;
+			buildConfigurationList = 9C85F4911707957E00EECB83 /* Build configuration list for PBXProject "Alpha Integration" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -933,7 +957,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9C85F4951707957E00EECB83 /* TechDemo - Physics */,
+				9C85F4951707957E00EECB83 /* Alpha Integration */,
 			);
 		};
 /* End PBXProject section */
@@ -964,6 +988,9 @@
 				9C7FF35B170B3EFA009DA7F9 /* background4@2x.jpg in Resources */,
 				9C7FF35C170B3EFA009DA7F9 /* background8@2x.jpg in Resources */,
 				8B5F33FE1711C3E100885C10 /* Default-Landscape~ipad.png in Resources */,
+				8B5F341A1711E1CC00885C10 /* fairiedragon_anim.plist in Resources */,
+				8B5F341B1711E1CC00885C10 /* fairiedragon.plist in Resources */,
+				8B5F341C1711E1CC00885C10 /* fairiedragon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1077,8 +1104,8 @@
 				9C85F6251707958200EECB83 /* AppDelegate.m in Sources */,
 				9C85F62B1707958200EECB83 /* IntroLayer.m in Sources */,
 				9C85F6431709D1A900EECB83 /* Yuri.m in Sources */,
-				9C85F6461709D25700EECB83 /* Enemy.m in Sources */,
 				9C85F6491709D2F000EECB83 /* Peasant.m in Sources */,
+				8B5F34161711DCB100885C10 /* FairyDragon.m in Sources */,
 				9C85F64C1709D59800EECB83 /* LevelLayer.m in Sources */,
 				9C85F6531709ECF400EECB83 /* Entity.m in Sources */,
 				9C85F656170A022A00EECB83 /* Arrow.m in Sources */,
@@ -1087,6 +1114,9 @@
 				9C85F65E170A458300EECB83 /* CollisionManager.m in Sources */,
 				9C85F661170A4E4500EECB83 /* Projectile.m in Sources */,
 				9C7FF347170B2AFA009DA7F9 /* Config.m in Sources */,
+				8B5F34071711C87500885C10 /* SpriteManager.m in Sources */,
+				8B5F341D1711E53500885C10 /* EnemyManager.m in Sources */,
+				8B5F34201711F10100885C10 /* Enemy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1149,7 +1179,7 @@
 					"-lz",
 					"-ObjC",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Alpha Integration";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1169,7 +1199,7 @@
 					"-lz",
 					"-ObjC",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Alpha Integration";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1178,7 +1208,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9C85F4911707957E00EECB83 /* Build configuration list for PBXProject "TechDemo - Physics" */ = {
+		9C85F4911707957E00EECB83 /* Build configuration list for PBXProject "Alpha Integration" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9C85F62C1707958200EECB83 /* Debug */,
@@ -1187,7 +1217,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9C85F62E1707958200EECB83 /* Build configuration list for PBXNativeTarget "TechDemo - Physics" */ = {
+		9C85F62E1707958200EECB83 /* Build configuration list for PBXNativeTarget "Alpha Integration" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9C85F62F1707958200EECB83 /* Debug */,
