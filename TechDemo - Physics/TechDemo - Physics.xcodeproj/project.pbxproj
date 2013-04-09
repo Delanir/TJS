@@ -21,6 +21,7 @@
 		9C377C0D170BBDD800F840FB /* EnemyFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C377C0C170BBDD600F840FB /* EnemyFactory.m */; };
 		9C377C10170BC18A00F840FB /* Peasant.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C377C0E170BC18A00F840FB /* Peasant.plist */; };
 		9C377C11170BC18A00F840FB /* Peasant.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C377C0F170BC18A00F840FB /* Peasant.png */; };
+		9C3A9F28170C609D00C9EE57 /* background8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C3A9F27170C609D00C9EE57 /* background8.jpg */; };
 		9C7FF344170B28CE009DA7F9 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C7FF343170B28CE009DA7F9 /* Config.plist */; };
 		9C7FF347170B2AFA009DA7F9 /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C7FF346170B2AFA009DA7F9 /* Config.m */; };
 		9C7FF349170B359F009DA7F9 /* TODO in Resources */ = {isa = PBXBuildFile; fileRef = 9C7FF348170B359F009DA7F9 /* TODO */; };
@@ -185,6 +186,7 @@
 		9C377C0C170BBDD600F840FB /* EnemyFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnemyFactory.m; sourceTree = "<group>"; };
 		9C377C0E170BC18A00F840FB /* Peasant.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Peasant.plist; sourceTree = "<group>"; };
 		9C377C0F170BC18A00F840FB /* Peasant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Peasant.png; sourceTree = "<group>"; };
+		9C3A9F27170C609D00C9EE57 /* background8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = background8.jpg; path = Resources/background8.jpg; sourceTree = "<group>"; };
 		9C7FF343170B28CE009DA7F9 /* Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		9C7FF345170B2AFA009DA7F9 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		9C7FF346170B2AFA009DA7F9 /* Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
@@ -605,6 +607,7 @@
 		9C85F4AC1707957E00EECB83 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9C3A9F27170C609D00C9EE57 /* background8.jpg */,
 				9C377C12170BC19200F840FB /* Sprites */,
 				9C377C04170BAE4500F840FB /* SFX */,
 				9C377BFA170BAB8900F840FB /* MainMenu.mp3 */,
@@ -1045,6 +1048,7 @@
 				9C377C0A170BB7CC00F840FB /* hit.mp3 in Resources */,
 				9C377C10170BC18A00F840FB /* Peasant.plist in Resources */,
 				9C377C11170BC18A00F840FB /* Peasant.png in Resources */,
+				9C3A9F28170C609D00C9EE57 /* background8.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

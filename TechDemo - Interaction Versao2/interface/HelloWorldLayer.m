@@ -51,7 +51,7 @@ int mode = 0;
         // ask director for the window size
 		CGSize size = [[CCDirector sharedDirector] winSize];
         
-        background = [CCSprite spriteWithFile:@"Background.png"];
+        background = [CCSprite spriteWithFile:@"Background-hd.png"];
         background.position = ccp(size.width/2,size.height/2);
         [self addChild:background z:0];
         

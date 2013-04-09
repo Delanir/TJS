@@ -27,7 +27,7 @@
 {
     //@TODO criar aqui o mapa do jogo
     
-    CCSprite * bg= [CCSprite spriteWithFile:@"background8@2x.jpg"];
+    CCSprite * bg= [CCSprite spriteWithFile:@"background8.jpg"];
     [bg setPosition:ccp(winSize.width/2, winSize.height/2)];
     [self addChild:bg z:0];
 }
