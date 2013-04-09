@@ -54,14 +54,20 @@
 @property (nonatomic, readonly) NSUInteger pixelMaskWidth;
 @property (nonatomic, readonly) NSUInteger pixelMaskHeight;
 @property (nonatomic, readonly) NSUInteger pixelMaskSize;
+@property (nonatomic) UInt8 alpha;
 
 // alpha threshold determines how transparent a pixel can be to still be included in the pixel mask
 // by default only fully opaque pixels (alpha threshold = 255) are considered
 -(id) initWithFile:(NSString *)filename alphaThreshold:(UInt8)alphaThreshold;
+-(id) initWithSpriteFrameName:(NSString *)spriteFrameName alphaThreshold:(UInt8)alphaThreshold;
 +(id) spriteWithFile:(NSString *)filename;
 +(id) spriteWithFile:(NSString *)filename alphaThreshold:(UInt8)alphaThreshold;
++(id) spriteWithSpriteFrameName:(NSString *)spriteFrame alphaThreshold:(UInt8)alphaThreshold;
 
 -(BOOL) pixelMaskContainsPoint:(CGPoint)point;
 -(BOOL) pixelMaskIntersectsNode:(CCNode*)other;
+
+// Util
+- (UIImage *) renderUIImageFromSprite :(CCSprite *)sprite;
 
 @end
