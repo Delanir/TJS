@@ -20,14 +20,14 @@
         
         CGSize spriteSize = [self spriteSize];
         
-        int minY = spriteSize.height/2;
-        int maxY = winSize.height - spriteSize.height/2;
+        int minY = winSize.height/6 + spriteSize.height/2;
+        int maxY = (5 * winSize.height / 6) - spriteSize.height/2;
         int rangeY = maxY - minY;
         int actualY = (arc4random() % rangeY) + minY;
         
         // Create the target slightly off-screen along the right edge,
         // and along a random position along the Y axis as calculated above
-        self.position = ccp(winSize.width + (spriteSize.width/2), actualY);
+        sprite.position = ccp(winSize.width + (spriteSize.width/2), actualY);
         
         // Determine speed of the target
         int minDuration = 10;                                                   //@TODO ficheiro de configuraçao
@@ -40,7 +40,8 @@
                                             position:ccp(-spriteSize.width/2, actualY)];
         id actionMoveDone = [CCCallFuncN actionWithTarget:self
                                                  selector:@selector(spriteMoveFinished:)];
-        [self runAction:[CCSequence actions:actionMove, actionMoveDone, nil]];
+        [sprite runAction:[CCSequence actions:actionMove, actionMoveDone, nil]];
+        
     }
     
     return self;

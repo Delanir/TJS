@@ -14,6 +14,10 @@
 #import "Arrow.h"
 #import "CollisionManager.h"
 #import "Config.h"
+#import "EnemyFactory.h"
+
+// Sound interface
+#import "SimpleAudioEngine.h"
 
 // Needed to obtain the Navigation Controller
 #import "AppDelegate.h"
@@ -22,6 +26,8 @@
 
 // HelloWorldLayer implementation
 @implementation LevelLayer
+
+@synthesize toggleUpdate;
 
 // Helper class method that creates a Scene
 +(CCScene *) scene
@@ -47,11 +53,22 @@
 
 -(void)addTarget
 {
+    // THE ENEMY FACTORY IS A GOOD IDEA
+    // BUT IT IS NOT WORKING
+    // BECAUSE OF ANIMATIONS!
+    // ANIMATIONS SUCK!
+    // ESPECIALLY WITH PIXEL-PERFECT COLLISIONS
+    // BECAUSE NOTHING HAPPENS!
+    // MUST SEE WHAT IS HAPPENING INSIDE [PEASANT INIT] MESSAGE CALL
+    
+    //Peasant * peasant  = [[EnemyFactory shared] generatePeasant];
     
     // Determine where to spawn the target along the Y axis
-    CGSize winSize = [[CCDirector sharedDirector] winSize];
     
+    CGSize winSize = [[CCDirector sharedDirector] winSize];
     Enemy *peasant = [[Peasant alloc] initWithSprite:@"Target.png" andWindowSize:winSize];
+    
+    //Enemy *peasant = [[EnemyFactory shared] generatePeasant];
     
     [self addChild:peasant];
     
@@ -69,15 +86,17 @@
     if( (self=[super init]))
     {
         CGSize winSize = [[CCDirector sharedDirector] winSize];
+        timeSinceLastArrow = 0.0f;
+        //Startup sound
+        [[SimpleAudioEngine sharedEngine] setEffectsVolume:0.5f];
+        [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"Battle1.mp3" loop:YES];
         
-        
-        //TODO criar Main Scene (antes do Yuri)
         MainScene *mainScene = [[MainScene alloc] initWithWinSize:winSize];
         [self addChild:mainScene z:0];
         [mainScene release];
         
         Yuri * yuri = [[Yuri alloc] initWithSprite:@"Player.png"];
-        yuri.position = ccp([yuri spriteSize].width/2 + 50, winSize.height/2);
+        yuri.position = ccp([yuri spriteSize].width/2 + 150, winSize.height/2 + 30);     // @Hardcoded - to correct
         [self addChild:yuri z:1];
         [yuri release];
         
@@ -93,12 +112,49 @@
     return self;
 }
 
-- (void)ccTouchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+
+-(void) ccTouchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    if(timeSinceLastArrow > 0.2)
+    {
+        // Choose one of the touches to work with
+        UITouch *touch = [touches anyObject];
+        
+        CGPoint location = [self convertTouchToNodeSpace:touch];
+        
+        
+        // Set up initial location of projectile
+        CGSize winSize = [[CCDirector sharedDirector] winSize];
+        
+        Arrow * arrow = [[Arrow alloc] initWithSprite: @"Projectile.png" andLocation:location andWindowSize:winSize];
+        
+        if(arrow != nil)
+        {
+            [[SimpleAudioEngine sharedEngine] playEffect:@"hit.mp3"];
+            [self addChild:arrow];
+            arrow.tag = 2;
+            [[CollisionManager shared] addToProjectiles:arrow];
+        }
+        [arrow release];
+        timeSinceLastArrow = 0.0f;
+    }
+    
+}
+
+
+- (void)ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     // Choose one of the touches to work with
     UITouch *touch = [touches anyObject];
     CGPoint location = [touch locationInView:[touch view]];
     location = [[CCDirector sharedDirector] convertToGL:location];
+    
+    if(location.x > 950 && location.y > 690)
+    {
+        self.toggleUpdate = !self.toggleUpdate;
+        return;
+    }
+    
     
     // Set up initial location of projectile
     CGSize winSize = [[CCDirector sharedDirector] winSize];
@@ -106,12 +162,12 @@
     Arrow * arrow = [[Arrow alloc] initWithSprite: @"Projectile.png" andLocation:location andWindowSize:winSize];
     if(arrow != nil)
     {
+        [[SimpleAudioEngine sharedEngine] playEffect:@"arrow.mp3"];
         [self addChild:arrow];
         arrow.tag = 2;
         [[CollisionManager shared] addToProjectiles:arrow];
     }
     [arrow release];
-    
 }
 
 // on "dealloc" you need to release all your retained objects
@@ -123,9 +179,14 @@
 
 - (void)update:(ccTime)dt {
     
-    if([[Config shared] getIntProperty:@"collisionMethod"] == 0)
-        [[CollisionManager shared] updateSimpleCollisions:dt];
-    else [[CollisionManager shared] updatePixelPerfectCollisions:dt];
+    timeSinceLastArrow += dt;
+    
+  //  if([[Config shared] getIntProperty:@"collisionMethod"] == 0)
+  //      [[CollisionManager shared] updateSimpleCollisions:dt];
+  //  else [[CollisionManager shared] updatePixelPerfectCollisions:dt];
+      if(toggleUpdate)
+          [[CollisionManager shared] updateSimpleCollisions:dt];
+      else [[CollisionManager shared] updatePixelPerfectCollisions:dt];
 }
 
 

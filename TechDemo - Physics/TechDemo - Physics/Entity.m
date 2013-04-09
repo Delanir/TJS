@@ -22,14 +22,21 @@
     return self;
 }
 
-- (CCSprite*) sprite
+-(void) dealloc
+{
+    [sprite release];
+    [super dealloc];
+}
+
+- (KKPixelMaskSprite*) sprite
 {
     return sprite;
 }
 
 - (void) setSprite:(NSString*)spr
 {
-    sprite = [CCSprite spriteWithFile:spr];
+    sprite = [KKPixelMaskSprite spriteWithFile:spr alphaThreshold:0];
+    [sprite retain];
 }
 
 - (void) destroySprite

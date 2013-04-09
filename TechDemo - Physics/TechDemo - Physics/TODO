@@ -4,14 +4,10 @@
 *                *
 **/            **/
 
-
-- Tornar sprites mais visíveis -> Aumentar sprites
-- Criar pixel perfect collisions
-- Criar Toggle button
-- Adicionar som e classe de som
-- Terminar tutorial (som e transição de cenas)
-- Por inimigos a não vir no céu
-- Fazer animações base
+//Amanhã
+- Fazer animações simples
+- Destruição mais eficiente de projecteis
+- Terminar tutorial (transição de cenas)
 
 /**           /**
 *               *
@@ -20,6 +16,18 @@
 **/           **/
 
 
+- Criar pixel perfect collisions
 - Criada estrutura base para o projecto
 - Criadas colisões simples
 - Actualizar background!
+- Seleccionadas algumas musicas
+- Adicionar som
+- Tornar sprites mais visíveis -> Aumentar sprites
+- Por inimigos a não vir no céu
+- Splash screen
+- Posicionar Yuri e flechas
+- Add repeater do João
+- Criado EnemyFactory (Singleton)
+- Criar Toggle button!!
+- Som de destruição (corrigir)
+- Criado delay entre flechas no swipe∂

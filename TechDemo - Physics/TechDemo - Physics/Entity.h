@@ -7,20 +7,21 @@
 //
 
 
-#import <GameKit/GameKit.h>
-
 // When you import this file, you import all the cocos2d classes
 #import "cocos2d.h"
 
+// For pixel-perfect collisions
+#import "KKPixelMaskSprite.h"
+
 @interface Entity : CCNode
 {
-    CCSprite * sprite;
+    KKPixelMaskSprite * sprite;
 }
 
 - (id) initWithSprite: (NSString*) spriteFile;
 - (void) setSprite: (NSString*) spr;
 - (void) destroySprite;
-- (CCSprite*) sprite;
+- (KKPixelMaskSprite*) sprite;
 - (CGSize) spriteSize;
 
 @end

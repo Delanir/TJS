@@ -253,7 +253,7 @@
     
         [self setTouchEnabled:YES];
         
-        CCSprite * bg= [CCSprite spriteWithFile:@"photo 1.JPG"];
+        CCSprite * bg= [CCSprite spriteWithFile:@"photo 1-hd.JPG"];
         [bg setPosition:ccp(winSize.width/2, winSize.height/2)];
         [self addChild:bg z:0];
         

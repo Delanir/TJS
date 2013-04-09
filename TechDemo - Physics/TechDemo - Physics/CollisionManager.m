@@ -8,6 +8,9 @@
 
 #import "CollisionManager.h"
 
+// Sound interface
+#import "SimpleAudioEngine.h"
+
 @implementation CollisionManager
 
 static CollisionManager* _sharedSingleton = nil;
@@ -66,42 +69,48 @@ static CollisionManager* _sharedSingleton = nil;
 }
 
 
-- (void)updateSimpleCollisions:(ccTime)dt {
+- (void)updateSimpleCollisions:(ccTime)dt
+{
     
     NSMutableArray *projectilesToDelete = [[NSMutableArray alloc] init];
-    for (Projectile* projectile in _projectiles) {
-        CCSprite * projectileSprite = [projectile sprite];
+    for (Projectile* projectile in _projectiles)
+    {
+        KKPixelMaskSprite * projectileSprite = [projectile sprite];
         CGRect projectileRect = CGRectMake(
-                                           projectile.position.x - (projectileSprite.contentSize.width/2),
-                                           projectile.position.y - (projectileSprite.contentSize.height/2),
+                                           projectileSprite.position.x - (projectileSprite.contentSize.width/2),
+                                           projectileSprite.position.y - (projectileSprite.contentSize.height/2),
                                            projectileSprite.contentSize.width,
                                            projectileSprite.contentSize.height);
         
         NSMutableArray *targetsToDelete = [[NSMutableArray alloc] init];
-        for (Enemy *target in _targets) {
-            CCSprite *targetSprite = [target sprite];
+        for (Enemy *target in _targets)
+        {
+            KKPixelMaskSprite *targetSprite = [target sprite];
             CGRect targetRect = CGRectMake(
-                                           target.position.x - (targetSprite.contentSize.width/2),
-                                           target.position.y - (targetSprite.contentSize.height/2),
+                                           targetSprite.position.x - (targetSprite.contentSize.width/2),
+                                           targetSprite.position.y - (targetSprite.contentSize.height/2),
                                            targetSprite.contentSize.width,
                                            targetSprite.contentSize.height);
             
-            if (CGRectIntersectsRect(projectileRect, targetRect)) {
+            if (CGRectIntersectsRect(projectileRect, targetRect)) 
                 [targetsToDelete addObject:target];
-            }
+            
         }
         
-        for (Enemy *target in targetsToDelete) {
+        for (Enemy *target in targetsToDelete)
+        {
+            [[SimpleAudioEngine sharedEngine] playEffect:@"hit.mp3"];
             [target destroySprite];
             [_targets removeObject:target];
         }
         
-        if (targetsToDelete.count > 0) {
+        if (targetsToDelete.count > 0)
             [projectilesToDelete addObject:projectile];
-        }
+        
         [targetsToDelete release];
     }
-    for (Projectile *projectile in projectilesToDelete) {
+    for (Projectile *projectile in projectilesToDelete)
+    {
         [projectile destroySprite];
         [_projectiles removeObject:projectile];
     }
@@ -110,7 +119,40 @@ static CollisionManager* _sharedSingleton = nil;
 
 -(void)updatePixelPerfectCollisions:(ccTime)dt
 {
-    NSLog(@"PIXEL PERFEEEEECT");
+    
+    NSMutableArray *projectilesToDelete = [[NSMutableArray alloc] init];
+    for (Projectile* projectile in _projectiles)
+    {
+        KKPixelMaskSprite * projectileSprite = [projectile sprite];
+        
+        
+        NSMutableArray *targetsToDelete = [[NSMutableArray alloc] init];
+        for (Enemy *target in _targets)
+        {
+            KKPixelMaskSprite *targetSprite = [target sprite];
+            
+            if ([targetSprite pixelMaskContainsPoint:[projectileSprite position]])
+                [targetsToDelete addObject:target];
+        }
+        
+        for (Enemy *target in targetsToDelete)
+        {
+            [[SimpleAudioEngine sharedEngine] playEffect:@"hit.mp3"];
+            [target destroySprite];
+            [_targets removeObject:target];
+        }
+        
+        if (targetsToDelete.count > 0)
+            [projectilesToDelete addObject:projectile];
+            
+        [targetsToDelete release];
+    }
+    for (Projectile *projectile in projectilesToDelete)
+    {
+        [projectile destroySprite];
+        [_projectiles removeObject:projectile];
+    }
+    [projectilesToDelete release];
 }
 
 -(void)addToTargets: (Enemy*) target
@@ -118,7 +160,6 @@ static CollisionManager* _sharedSingleton = nil;
     [_targets addObject:target];
     // For debugging purposes
     // NSLog(@"Units in Targets array: %i", [_targets count]);
-    
 }
 
 -(void)removeFromTargets: (Enemy*) target

@@ -7,7 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Peasant.h"
 
-@interface EnemyFactory : NSObject
+@interface EnemyFactory : CCScene
+{
+    
+}
+
++(EnemyFactory*)shared;
+
+-(Peasant*)generatePeasant;
 
 @end
+
+
