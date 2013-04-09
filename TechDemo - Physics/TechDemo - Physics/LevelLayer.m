@@ -15,6 +15,7 @@
 #import "CollisionManager.h"
 #import "Config.h"
 #import "EnemyFactory.h"
+#import "SpriteManager.h"
 
 // Sound interface
 #import "SimpleAudioEngine.h"
@@ -66,7 +67,7 @@
     // Determine where to spawn the target along the Y axis
     
     CGSize winSize = [[CCDirector sharedDirector] winSize];
-    Enemy *peasant = [[Peasant alloc] initWithSprite:@"Target.png" andWindowSize:winSize];
+    Enemy *peasant = [[Peasant alloc] initWithSprite:@"dead06.png" andWindowSize:winSize];
     
     //Enemy *peasant = [[EnemyFactory shared] generatePeasant];
     
@@ -94,6 +95,10 @@
         MainScene *mainScene = [[MainScene alloc] initWithWinSize:winSize];
         [self addChild:mainScene z:0];
         [mainScene release];
+        
+        //Initialize art
+        [self addChild:[[SpriteManager shared] addSpritesToSpriteFrameCacheWithFile:@"lvl1spritesheet.plist" andBatchSpriteSheet:@"lvl1spritesheet.png"]];
+        
         
         Yuri * yuri = [[Yuri alloc] initWithSprite:@"Player.png"];
         yuri.position = ccp([yuri spriteSize].width/2 + 150, winSize.height/2 + 30);     // @Hardcoded - to correct
