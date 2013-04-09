@@ -62,12 +62,12 @@
     // BECAUSE NOTHING HAPPENS!
     // MUST SEE WHAT IS HAPPENING INSIDE [PEASANT INIT] MESSAGE CALL
     
-    //Peasant * peasant  = [[EnemyFactory shared] generatePeasant];
+    Peasant * peasant  = [[EnemyFactory shared] generatePeasant];
     
     // Determine where to spawn the target along the Y axis
     
-    CGSize winSize = [[CCDirector sharedDirector] winSize];
-    Enemy *peasant = [[Peasant alloc] initWithSprite:@"dead06.png" andWindowSize:winSize];
+    //CGSize winSize = [[CCDirector sharedDirector] winSize];
+    //Enemy *peasant = [[Peasant alloc] initWithSprite:@"walk01.png" andWindowSize:winSize];
     
     //Enemy *peasant = [[EnemyFactory shared] generatePeasant];
     
@@ -76,7 +76,7 @@
     peasant.tag = 1;
     [[CollisionManager shared] addToTargets:peasant];
     
-    [peasant release];
+    //[peasant release];
     
 }
 
@@ -97,14 +97,12 @@
         [mainScene release];
         
         //Initialize art
-        [self addChild:[[SpriteManager shared] addSpritesToSpriteFrameCacheWithFile:@"lvl1spritesheet.plist" andBatchSpriteSheet:@"lvl1spritesheet.png"]];
-        
+        [self addChild:[[SpriteManager shared] addSpritesToSpriteFrameCacheWithFile:@"lvl1spritesheet.plist" andBatchSpriteSheet:@"lvl1spritesheet.png"]];     
         
         Yuri * yuri = [[Yuri alloc] initWithSprite:@"Player.png"];
         yuri.position = ccp([yuri spriteSize].width/2 + 150, winSize.height/2 + 30);     // @Hardcoded - to correct
         [self addChild:yuri z:1];
         [yuri release];
-        
         // This dummy method initializes the collision manager
         [[CollisionManager shared] dummyMethod];
         
@@ -182,8 +180,8 @@
 	[super dealloc];
 }
 
-- (void)update:(ccTime)dt {
-    
+- (void)update:(ccTime)dt
+{    
     timeSinceLastArrow += dt;
     
   //  if([[Config shared] getIntProperty:@"collisionMethod"] == 0)

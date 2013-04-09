@@ -20,7 +20,7 @@
 {
     if( (self=[super init])) {
         
-        [self setSprite:spriteFile];
+        [self setSpriteWithSpriteFrameName:spriteFile];
         [self addChild:sprite];
         
         sprite.position = ccp(190, winSize.height/2 + 45);                 // @TODO init with yuri information

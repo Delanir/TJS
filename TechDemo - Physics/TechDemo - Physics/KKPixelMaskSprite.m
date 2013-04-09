@@ -18,7 +18,7 @@ static Class PixelMaskSpriteClass = nil;
 
 @implementation KKPixelMaskSprite
 
-@synthesize pixelMask, pixelMaskWidth, pixelMaskHeight, pixelMaskSize, alpha;
+@synthesize pixelMask, pixelMaskWidth, pixelMaskHeight, pixelMaskSize;
 
 -(id) initWithFile:(NSString *)filename alphaThreshold:(UInt8)alphaThreshold
 {
@@ -98,7 +98,6 @@ static Class PixelMaskSpriteClass = nil;
 
 -(id) initWithSpriteFrameName:(NSString *)spriteFrameName alphaThreshold:(UInt8)alphaThreshold
 {
-    self.alpha = alphaThreshold;
 	if ((self = [super initWithSpriteFrameName:spriteFrameName]))
 	{
 		if (PixelMaskSpriteClass == nil)
@@ -106,7 +105,7 @@ static Class PixelMaskSpriteClass = nil;
         
 		// this ensures that we're loading the -hd asset on Retina devices, if available
 		//NSString* fullpath = [CCFileUtils fullPathFromRelativePath:filename];
-		//UIImage* image = [[UIImage alloc] init  initWithContentsOfFile:fullpath]; // substituír por carregamento de UIIMAGE
+		//UIImage* image = [[UIImage alloc] init  initWithContentsOfFile:fullpath];
         
         CCSprite *sprite = [CCSprite spriteWithSpriteFrameName:spriteFrameName];
         UIImage *image = [self renderUIImageFromSprite:sprite];
@@ -119,7 +118,7 @@ static Class PixelMaskSpriteClass = nil;
 #if defined(__arm__) && !defined(__ARM_NEON__)
 		NSAssert3(isPowerOfTwo(pixelMaskWidth) && isPowerOfTwo(pixelMaskHeight),
 				  @"Image '%@' size (%u, %u): pixel mask image must have power of two dimensions on 1st & 2nd gen devices.",
-				  filename, pixelMaskWidth, pixelMaskHeight);
+				  spriteFrameName, pixelMaskWidth, pixelMaskHeight);
 #endif
 		
 		// allocate and clear the pixelMask buffer
@@ -167,8 +166,8 @@ static Class PixelMaskSpriteClass = nil;
 		
 		CFRelease(imageData);
 		imageData = nil;
-		[image release];
-		image = nil;
+		//[image release];
+		//image = nil;
 	}
 	return self; 
     
