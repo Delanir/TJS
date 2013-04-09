@@ -203,7 +203,7 @@
 		9C7FF34D170B3A4A009DA7F9 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		9C7FF359170B3EFA009DA7F9 /* background4@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "background4@2x.jpg"; path = "Resources/background4@2x.jpg"; sourceTree = "<group>"; };
 		9C7FF35A170B3EFA009DA7F9 /* background8@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "background8@2x.jpg"; path = "Resources/background8@2x.jpg"; sourceTree = "<group>"; };
-		9C85F4961707957E00EECB83 /* TechDemo - Physics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TechDemo - Physics.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C85F4961707957E00EECB83 /* L'Archer D'Amiens.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "L'Archer D'Amiens.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C85F4991707957E00EECB83 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		9C85F49B1707957E00EECB83 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		9C85F49D1707957E00EECB83 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
@@ -543,7 +543,7 @@
 		9C85F48D1707957E00EECB83 = {
 			isa = PBXGroup;
 			children = (
-				9C85F4AB1707957E00EECB83 /* TechDemo - Physics */,
+				9C85F4AB1707957E00EECB83 /* L'Archer D'Amiens */,
 				9C85F4981707957E00EECB83 /* Frameworks */,
 				9C85F4971707957E00EECB83 /* Products */,
 			);
@@ -552,7 +552,7 @@
 		9C85F4971707957E00EECB83 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9C85F4961707957E00EECB83 /* TechDemo - Physics.app */,
+				9C85F4961707957E00EECB83 /* L'Archer D'Amiens.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -573,7 +573,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		9C85F4AB1707957E00EECB83 /* TechDemo - Physics */ = {
+		9C85F4AB1707957E00EECB83 /* L'Archer D'Amiens */ = {
 			isa = PBXGroup;
 			children = (
 				8BD6228717145FF60076BF42 /* SpriteManager.h */,
@@ -611,6 +611,7 @@
 				9C85F4AC1707957E00EECB83 /* Resources */,
 				9C85F4C61707957E00EECB83 /* libs */,
 			);
+			name = "L'Archer D'Amiens";
 			path = "TechDemo - Physics";
 			sourceTree = "<group>";
 		};
@@ -985,9 +986,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9C85F4951707957E00EECB83 /* TechDemo - Physics */ = {
+		9C85F4951707957E00EECB83 /* L'Archer D'Amiens */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9C85F62E1707958200EECB83 /* Build configuration list for PBXNativeTarget "TechDemo - Physics" */;
+			buildConfigurationList = 9C85F62E1707958200EECB83 /* Build configuration list for PBXNativeTarget "L'Archer D'Amiens" */;
 			buildPhases = (
 				9C85F4921707957E00EECB83 /* Sources */,
 				9C85F4931707957E00EECB83 /* Frameworks */,
@@ -997,9 +998,9 @@
 			);
 			dependencies = (
 			);
-			name = "TechDemo - Physics";
+			name = "L'Archer D'Amiens";
 			productName = "TechDemo - Physics";
-			productReference = 9C85F4961707957E00EECB83 /* TechDemo - Physics.app */;
+			productReference = 9C85F4961707957E00EECB83 /* L'Archer D'Amiens.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -1010,7 +1011,9 @@
 			attributes = {
 				LastUpgradeCheck = 0460;
 			};
+
 			buildConfigurationList = 9C85F4911707957E00EECB83 /* Build configuration list for PBXProject "L'Archer" */;
+
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -1022,7 +1025,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9C85F4951707957E00EECB83 /* TechDemo - Physics */,
+				9C85F4951707957E00EECB83 /* L'Archer D'Amiens */,
 			);
 		};
 /* End PBXProject section */
@@ -1255,7 +1258,7 @@
 					"-lz",
 					"-ObjC",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "L'Archer D'Amiens";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1275,7 +1278,7 @@
 					"-lz",
 					"-ObjC",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "L'Archer D'Amiens";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1284,7 +1287,9 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+
 		9C85F4911707957E00EECB83 /* Build configuration list for PBXProject "L'Archer" */ = {
+
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9C85F62C1707958200EECB83 /* Debug */,
@@ -1293,7 +1298,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9C85F62E1707958200EECB83 /* Build configuration list for PBXNativeTarget "TechDemo - Physics" */ = {
+		9C85F62E1707958200EECB83 /* Build configuration list for PBXNativeTarget "L'Archer D'Amiens" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9C85F62F1707958200EECB83 /* Debug */,

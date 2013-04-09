@@ -41,6 +41,12 @@
     [sprite retain];
 }
 
+- (void) setSpriteWithSpriteFrameName:(NSString*)spr
+{
+    sprite = [KKPixelMaskSprite spriteWithSpriteFrameName:spr alphaThreshold:0];
+    [sprite retain];
+}
+
 - (void) destroySprite
 {
     [self removeChild:sprite cleanup:YES];

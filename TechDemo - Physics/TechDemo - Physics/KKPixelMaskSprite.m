@@ -18,7 +18,7 @@ static Class PixelMaskSpriteClass = nil;
 
 @implementation KKPixelMaskSprite
 
-@synthesize pixelMask, pixelMaskWidth, pixelMaskHeight, pixelMaskSize;
+@synthesize pixelMask, pixelMaskWidth, pixelMaskHeight, pixelMaskSize, alpha;
 
 -(id) initWithFile:(NSString *)filename alphaThreshold:(UInt8)alphaThreshold
 {
@@ -95,6 +95,86 @@ static Class PixelMaskSpriteClass = nil;
 	return self;
 }
 
+
+-(id) initWithSpriteFrameName:(NSString *)spriteFrameName alphaThreshold:(UInt8)alphaThreshold
+{
+    self.alpha = alphaThreshold;
+	if ((self = [super initWithSpriteFrameName:spriteFrameName]))
+	{
+		if (PixelMaskSpriteClass == nil)
+			PixelMaskSpriteClass = [KKPixelMaskSprite class];
+        
+		// this ensures that we're loading the -hd asset on Retina devices, if available
+		//NSString* fullpath = [CCFileUtils fullPathFromRelativePath:filename];
+		//UIImage* image = [[UIImage alloc] init  initWithContentsOfFile:fullpath]; // substituír por carregamento de UIIMAGE
+        
+        CCSprite *sprite = [CCSprite spriteWithSpriteFrameName:spriteFrameName];
+        UIImage *image = [self renderUIImageFromSprite:sprite];
+		
+		// get all the image information we need
+		pixelMaskWidth = image.size.width;
+		pixelMaskHeight = image.size.height;
+		pixelMaskSize = pixelMaskWidth * pixelMaskHeight;
+        
+#if defined(__arm__) && !defined(__ARM_NEON__)
+		NSAssert3(isPowerOfTwo(pixelMaskWidth) && isPowerOfTwo(pixelMaskHeight),
+				  @"Image '%@' size (%u, %u): pixel mask image must have power of two dimensions on 1st & 2nd gen devices.",
+				  filename, pixelMaskWidth, pixelMaskHeight);
+#endif
+		
+		// allocate and clear the pixelMask buffer
+#if USE_BITARRAY
+		pixelMask = BitArrayCreate(pixelMaskSize);
+		BitArrayClearAll(pixelMask);
+#else
+		pixelMask = malloc(pixelMaskSize * sizeof(BOOL));
+		memset(pixelMask, 0, pixelMaskSize * sizeof(BOOL));
+#endif
+		
+		// get the pixel data (more correctly: texels) as 32-Bit unsigned integers
+		CFDataRef imageData = CGDataProviderCopyData(CGImageGetDataProvider(image.CGImage));
+		const UInt32* imagePixels = (const UInt32*)CFDataGetBytePtr(imageData);
+		UInt32 alphaValue = 0, x = 0, y = pixelMaskHeight - 1;
+		UInt8 alpha = 0;
+        
+		for (NSUInteger i = 0; i < pixelMaskSize; i++)
+		{
+			// ensure that the pixelMask is created in the normal orientation (default would be upside down)
+			NSUInteger index = y * pixelMaskWidth + x;
+			x++;
+			if (x == pixelMaskWidth)
+			{
+				x = 0;
+				y--;
+			}
+            
+			// mask out the colors so that only the alpha value remains (upper 8 bits)
+			alphaValue = imagePixels[i] & 0xff000000;
+			if (alphaValue > 0)
+			{
+				// get the 8-Bit alpha value, then compare it with the alpha threshold
+				alpha = (UInt8)(alphaValue >> 24);
+				if (alpha >= alphaThreshold)
+				{
+#if USE_BITARRAY
+					BitArraySetBit(pixelMask, index);
+#else
+					pixelMask[index] = YES;
+#endif
+				}
+			}
+		}
+		
+		CFRelease(imageData);
+		imageData = nil;
+		[image release];
+		image = nil;
+	}
+	return self; 
+    
+}
+
+
 +(id) spriteWithFile:(NSString *)filename
 {
 	return [[[self alloc] initWithFile:filename alphaThreshold:255] autorelease];
@@ -103,6 +183,11 @@ static Class PixelMaskSpriteClass = nil;
 +(id) spriteWithFile:(NSString *)filename alphaThreshold:(UInt8)alphaThreshold
 {
 	return [[[self alloc] initWithFile:filename alphaThreshold:alphaThreshold] autorelease];
+}
+
++(id) spriteWithSpriteFrameName:(NSString *)spriteFrame alphaThreshold:(UInt8)alphaThreshold
+{
+	return [[[self alloc] initWithSpriteFrameName:spriteFrame alphaThreshold:alphaThreshold] autorelease];
 }
 
 -(void) dealloc
@@ -261,5 +346,23 @@ static Class PixelMaskSpriteClass = nil;
 	
 	return NO;
 }
+
+
+- (UIImage *) renderUIImageFromSprite :(CCSprite *)sprite {
+    
+    int tx = sprite.contentSize.width;
+    int ty = sprite.contentSize.height;
+    
+    CCRenderTexture *renderer	= [CCRenderTexture renderTextureWithWidth:tx height:ty];
+    
+    sprite.anchorPoint	= CGPointZero;
+    
+    [renderer begin];
+    [sprite visit];
+    [renderer end];
+    
+    return [renderer getUIImageFromBuffer];
+}
+
 
 @end
