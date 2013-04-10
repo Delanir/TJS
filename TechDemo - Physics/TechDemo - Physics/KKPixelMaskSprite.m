@@ -113,6 +113,7 @@ static Class PixelMaskSpriteClass = nil;
 		// get all the image information we need
 		pixelMaskWidth = image.size.width;
 		pixelMaskHeight = image.size.height;
+        
 		pixelMaskSize = pixelMaskWidth * pixelMaskHeight;
         
 #if defined(__arm__) && !defined(__ARM_NEON__)

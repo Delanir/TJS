@@ -18,7 +18,7 @@ static Config* _sharedSingleton = nil;
 	{
 		if (!_sharedSingleton)
 			[[self alloc] init];
-        
+    
 		return _sharedSingleton;
 	}
     

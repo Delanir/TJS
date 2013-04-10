@@ -19,6 +19,7 @@
 }
 
 - (id) initWithSprite: (NSString*) spriteFile;
+-(id) initWithSpriteFromFile: (NSString*) spriteFile;
 - (void) setSprite: (NSString*) spr;
 - (void) setSpriteWithSpriteFrameName:(NSString*)spr;
 - (void) destroySprite;

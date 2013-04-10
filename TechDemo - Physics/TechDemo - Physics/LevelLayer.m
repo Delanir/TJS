@@ -99,7 +99,8 @@
         //Initialize art
         [self addChild:[[SpriteManager shared] addSpritesToSpriteFrameCacheWithFile:@"lvl1spritesheet.plist" andBatchSpriteSheet:@"lvl1spritesheet.png"]];     
         
-        Yuri * yuri = [[Yuri alloc] initWithSprite:@"Player.png"];
+      
+        Yuri * yuri = [[Yuri alloc] initWithSprite:@"yurie_lvl3_small.png"];
         yuri.position = ccp([yuri spriteSize].width/2 + 150, winSize.height/2 + 30);     // @Hardcoded - to correct
         [self addChild:yuri z:1];
         [yuri release];
@@ -116,61 +117,71 @@
 }
 
 
+-(void) ccTouchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+  fire = NO;
+}
+
+
+
 -(void) ccTouchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
+  fire = YES;
     if(timeSinceLastArrow > 0.2)
     {
         // Choose one of the touches to work with
         UITouch *touch = [touches anyObject];
         
-        CGPoint location = [self convertTouchToNodeSpace:touch];
-        
-        
-        // Set up initial location of projectile
-        CGSize winSize = [[CCDirector sharedDirector] winSize];
-        
-        Arrow * arrow = [[Arrow alloc] initWithSprite: @"Projectile.png" andLocation:location andWindowSize:winSize];
-        
-        if(arrow != nil)
-        {
-            [[SimpleAudioEngine sharedEngine] playEffect:@"hit.mp3"];
-            [self addChild:arrow];
-            arrow.tag = 2;
-            [[CollisionManager shared] addToProjectiles:arrow];
-        }
-        [arrow release];
-        timeSinceLastArrow = 0.0f;
-    }
+        location = [self convertTouchToNodeSpace:touch];
     
+        timeSinceLastArrow = 0.0f;
+    
+    }
 }
 
+- (void) addProjectile:(CGPoint) alocation
+{
+  // Set up initial location of projectile
+  CGSize winSize = [[CCDirector sharedDirector] winSize];
+  
+  Arrow * arrow = [[Arrow alloc] initWithSprite: @"Projectile.png" andLocation:alocation andWindowSize:winSize];
+#warning TODO 
+  ps = [[CCParticleSun node] retain];
+  if(arrow != nil)
+  {
+    [[SimpleAudioEngine sharedEngine] playEffect:@"hit.mp3"];
+    [self addChild:arrow];
+    arrow.tag = 2;
+    [[CollisionManager shared] addToProjectiles:arrow];
+  }
+  [arrow release];
+  arrow=nil;
+}
 
 - (void)ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    // Choose one of the touches to work with
-    UITouch *touch = [touches anyObject];
-    CGPoint location = [touch locationInView:[touch view]];
-    location = [[CCDirector sharedDirector] convertToGL:location];
-    
-    if(location.x > 950 && location.y > 690)
-    {
-        self.toggleUpdate = !self.toggleUpdate;
-        return;
-    }
-    
-    
+  fire = YES;
+  
+  
+  // Choose one of the touches to work with
+  UITouch *touch = [touches anyObject];
+  location = [self convertTouchToNodeSpace:touch];
+  location = [touch locationInView:[touch view]];
+  location = [[CCDirector sharedDirector] convertToGL:location];
+  
+  if(location.x > 950 && location.y > 690)
+  {
+    self.toggleUpdate = !self.toggleUpdate;
+    return;
+  }
+  CCLOG(@"TOUCH PRESSED");
+  CCLOG(@">>> X: %f  Y: %f\n", location.x, location.y);
+  
+  
     // Set up initial location of projectile
     CGSize winSize = [[CCDirector sharedDirector] winSize];
     
-    Arrow * arrow = [[Arrow alloc] initWithSprite: @"Projectile.png" andLocation:location andWindowSize:winSize];
-    if(arrow != nil)
-    {
-        [[SimpleAudioEngine sharedEngine] playEffect:@"arrow.mp3"];
-        [self addChild:arrow];
-        arrow.tag = 2;
-        [[CollisionManager shared] addToProjectiles:arrow];
-    }
-    [arrow release];
+
 }
 
 // on "dealloc" you need to release all your retained objects
@@ -183,7 +194,20 @@
 - (void)update:(ccTime)dt
 {    
     timeSinceLastArrow += dt;
+  
+  
+
+  
+  if (fire) {
     
+      [self addProjectile:location];
+
+//#ifdef DEBUG
+//    CCLOG(@"FIRE");
+//#endif
+  }
+  
+  
   //  if([[Config shared] getIntProperty:@"collisionMethod"] == 0)
   //      [[CollisionManager shared] updateSimpleCollisions:dt];
   //  else [[CollisionManager shared] updatePixelPerfectCollisions:dt];
