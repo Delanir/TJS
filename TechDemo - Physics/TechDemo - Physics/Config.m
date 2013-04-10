@@ -16,7 +16,7 @@ static Config* _sharedSingleton = nil;
 {
 	@synchronized([Config class])
 	{
-		if [[(!_sharedSingleton)
+		if (!_sharedSingleton)
 			[[self alloc] init];
     
 		return _sharedSingleton;

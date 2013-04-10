@@ -12,11 +12,14 @@
 // When you import this file, you import all the cocos2d classes
 #import "cocos2d.h"
 
+
 // HelloWorldLayer
 @interface LevelLayer : CCLayer <GKAchievementViewControllerDelegate, GKLeaderboardViewControllerDelegate>
 {
-    BOOL toggleUpdate;
+    BOOL toggleUpdate, fire;
     float timeSinceLastArrow;
+    CGPoint location;
+
 }
 
 // returns a CCScene that contains the HelloWorldLayer as the only child
