@@ -40,10 +40,9 @@ static SpriteManager* _sharedSingleton = nil;
 
 -(id)init
 {
-	self = [super init];
-	if (self != nil) {
+	if (self = [super init]) {
 
-        return self;
+        // Initialize stuff
     }
     
 	return self;
@@ -127,9 +126,9 @@ static SpriteManager* _sharedSingleton = nil;
         }
         
         if ( delay != nil ) {
-            animation = [CCAnimation animationWithFrames:frames delay:[delay floatValue]];
+            animation = [CCAnimation animationWithSpriteFrames:frames delay:[delay floatValue]];
         } else {
-            animation = [CCAnimation animationWithFrames:frames];
+            animation = [CCAnimation animationWithSpriteFrames:frames];
         }
         
         [[CCAnimationCache sharedAnimationCache] addAnimation:animation name:name];

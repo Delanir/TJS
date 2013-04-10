@@ -13,6 +13,17 @@
 @synthesize moveAction = _moveAction;
 @synthesize walkAction = _walkAction;
 
+
+-(id) initWithSprite:(NSString *)spriteFile andWindowSize:(CGSize)winSize
+{
+    if (self = [super initWithSprite:spriteFile andWindowSize:winSize])
+    {
+        
+#warning TODO initialize animation here
+        
+    }
+    return self;
+}
 /*
  -(id) init {
     if((self = [super init])) {

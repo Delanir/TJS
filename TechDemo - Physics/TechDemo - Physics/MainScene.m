@@ -25,11 +25,22 @@
 
 - (void) setupScene
 {
-    //@TODO criar aqui o mapa do jogo
+    //TODO criar aqui o mapa do jogo
     
     CCSprite * bg= [CCSprite spriteWithFile:@"background.png"];
     [bg setPosition:ccp(winSize.width/2, winSize.height/2)];
     [self addChild:bg z:0];
+    
+    Wall * wall = [[Wall alloc] init];
+    [self addChild:wall];
+    [wall release];
+    
+}
+
+
+- (void) dealloc
+{
+    [super dealloc];
 }
 
 @end

@@ -361,7 +361,7 @@ static Class PixelMaskSpriteClass = nil;
     [sprite visit];
     [renderer end];
     
-    return [renderer getUIImageFromBuffer];
+    return [renderer getUIImage];
 }
 
 

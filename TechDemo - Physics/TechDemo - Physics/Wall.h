@@ -12,6 +12,9 @@
 #import "Entity.h"
 
 @interface Wall : Entity
-- (id) initWithSpriteFromFile:(NSString *)spriteFile andWindowSize:(CGSize) winSize;
+{
+    NSMutableArray *sprites;
+}
+
 
 @end

@@ -43,7 +43,6 @@ static EnemyFactory* _sharedSingleton = nil;
 		// initialize stuff here
     
     }
-    
 	return self;
 }
 
@@ -52,7 +51,6 @@ static EnemyFactory* _sharedSingleton = nil;
 -(Peasant*)generatePeasant
 {
     
-    //Peasant *peasant = [[Peasant alloc] init];
     CGSize winSize = [[CCDirector sharedDirector] winSize];
     Peasant *peasant = [[Peasant alloc] initWithSprite:@"walk01.png" andWindowSize:winSize];
     

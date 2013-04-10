@@ -4,17 +4,19 @@
 *                *
 **/            **/
 
-//Amanhã
 - Fazer animações simples
 - Destruição mais eficiente de projecteis
 - Terminar tutorial (transição de cenas)
+- Logótipo
+- Dividir sprites do castelo em duas
+- Corrigir flechas
+- Modo de disparo está meio mau
 
 /**           /**
 *               *
 * Coisas feitas *
 *               *
 **/           **/
-
 
 - Criar pixel perfect collisions
 - Criada estrutura base para o projecto

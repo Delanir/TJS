@@ -30,7 +30,6 @@
 		9C377C0D170BBDD800F840FB /* EnemyFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C377C0C170BBDD600F840FB /* EnemyFactory.m */; };
 		9C377C10170BC18A00F840FB /* Peasant.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C377C0E170BC18A00F840FB /* Peasant.plist */; };
 		9C377C11170BC18A00F840FB /* Peasant.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C377C0F170BC18A00F840FB /* Peasant.png */; };
-		9C3A9F28170C609D00C9EE57 /* background8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C3A9F27170C609D00C9EE57 /* background8.jpg */; };
 		9C7FF344170B28CE009DA7F9 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C7FF343170B28CE009DA7F9 /* Config.plist */; };
 		9C7FF347170B2AFA009DA7F9 /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C7FF346170B2AFA009DA7F9 /* Config.m */; };
 		9C7FF349170B359F009DA7F9 /* TODO in Resources */ = {isa = PBXBuildFile; fileRef = 9C7FF348170B359F009DA7F9 /* TODO */; };
@@ -207,7 +206,6 @@
 		9C377C0C170BBDD600F840FB /* EnemyFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnemyFactory.m; sourceTree = "<group>"; };
 		9C377C0E170BC18A00F840FB /* Peasant.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Peasant.plist; sourceTree = "<group>"; };
 		9C377C0F170BC18A00F840FB /* Peasant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Peasant.png; sourceTree = "<group>"; };
-		9C3A9F27170C609D00C9EE57 /* background8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = background8.jpg; path = Resources/background8.jpg; sourceTree = "<group>"; };
 		9C7FF343170B28CE009DA7F9 /* Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		9C7FF345170B2AFA009DA7F9 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		9C7FF346170B2AFA009DA7F9 /* Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
@@ -517,7 +515,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9C377BE0170B6E6900F840FB /* Helper Classes */ = {
+		9C377BE0170B6E6900F840FB /* Extern Classes */ = {
 			isa = PBXGroup;
 			children = (
 				9C377BF6170B77BD00F840FB /* ccMoreMacros.h */,
@@ -529,7 +527,7 @@
 				9C377BE3170B715A00F840FB /* bitarray.c */,
 				9C377BE4170B715A00F840FB /* bitarray.h */,
 			);
-			name = "Helper Classes";
+			name = "Extern Classes";
 			sourceTree = "<group>";
 		};
 		9C377C04170BAE4500F840FB /* SFX */ = {
@@ -589,40 +587,15 @@
 		9C85F4AB1707957E00EECB83 /* L'Archer D'Amiens */ = {
 			isa = PBXGroup;
 			children = (
-				3EDD9F2E1715E7F700C6A622 /* Wall.h */,
-				3EDD9F2F1715E7F800C6A622 /* Wall.m */,
-				8BD6228717145FF60076BF42 /* SpriteManager.h */,
-				8BD6228817145FF60076BF42 /* SpriteManager.m */,
-				9C377BE0170B6E6900F840FB /* Helper Classes */,
-				9C85F654170A022800EECB83 /* Arrow.h */,
-				9C85F655170A022900EECB83 /* Arrow.m */,
-				9C85F6471709D2EF00EECB83 /* Peasant.h */,
-				9C85F6481709D2EF00EECB83 /* Peasant.m */,
-				9C85F6411709D1A800EECB83 /* Yuri.h */,
-				9C85F6421709D1A900EECB83 /* Yuri.m */,
-				9C377C0B170BBDD300F840FB /* EnemyFactory.h */,
-				9C377C0C170BBDD600F840FB /* EnemyFactory.m */,
-				9C85F6441709D25600EECB83 /* Enemy.h */,
-				9C85F6451709D25700EECB83 /* Enemy.m */,
-				9C85F6511709ECF300EECB83 /* Entity.h */,
-				9C85F6521709ECF300EECB83 /* Entity.m */,
-				9C85F65F170A4E4400EECB83 /* Projectile.h */,
-				9C85F660170A4E4400EECB83 /* Projectile.m */,
-				9C7FF345170B2AFA009DA7F9 /* Config.h */,
-				9C7FF346170B2AFA009DA7F9 /* Config.m */,
-				9C85F65C170A458100EECB83 /* CollisionManager.h */,
-				9C85F65D170A458200EECB83 /* CollisionManager.m */,
-				9C85F659170A3E4100EECB83 /* MainScene.h */,
-				9C85F65A170A3E4200EECB83 /* MainScene.m */,
+				9C969E581716263000BE7476 /* Scene Entities */,
+				9C969E571716260400BE7476 /* Singleton Classes */,
 				9C85F64A1709D59700EECB83 /* LevelLayer.h */,
 				9C85F64B1709D59800EECB83 /* LevelLayer.m */,
 				9C85F6291707958200EECB83 /* IntroLayer.h */,
 				9C85F62A1707958200EECB83 /* IntroLayer.m */,
-				9C85F6231707958200EECB83 /* AppDelegate.h */,
-				9C85F6241707958200EECB83 /* AppDelegate.m */,
-				9C7FF34C170B3A49009DA7F9 /* main.m */,
-				9C7FF34D170B3A4A009DA7F9 /* Prefix.pch */,
 				9C7FF348170B359F009DA7F9 /* TODO */,
+				9C377BE0170B6E6900F840FB /* Extern Classes */,
+				9C969E591716290D00BE7476 /* Startup Classes */,
 				9C85F4AC1707957E00EECB83 /* Resources */,
 				9C85F4C61707957E00EECB83 /* libs */,
 			);
@@ -641,7 +614,6 @@
 				3EDD9F221715DF2900C6A622 /* background@2x.png */,
 				8BD6228B171460200076BF42 /* lvl1spritesheet.zwd */,
 				8BD6228D171460200076BF42 /* lvl1spritesheet.png */,
-				9C3A9F27170C609D00C9EE57 /* background8.jpg */,
 				9C377C12170BC19200F840FB /* Sprites */,
 				9C377C04170BAE4500F840FB /* SFX */,
 				9C377BFA170BAB8900F840FB /* MainMenu.mp3 */,
@@ -1003,6 +975,55 @@
 			name = GL;
 			sourceTree = "<group>";
 		};
+		9C969E571716260400BE7476 /* Singleton Classes */ = {
+			isa = PBXGroup;
+			children = (
+				9C7FF345170B2AFA009DA7F9 /* Config.h */,
+				9C7FF346170B2AFA009DA7F9 /* Config.m */,
+				9C377C0B170BBDD300F840FB /* EnemyFactory.h */,
+				9C377C0C170BBDD600F840FB /* EnemyFactory.m */,
+				9C85F65C170A458100EECB83 /* CollisionManager.h */,
+				9C85F65D170A458200EECB83 /* CollisionManager.m */,
+				8BD6228717145FF60076BF42 /* SpriteManager.h */,
+				8BD6228817145FF60076BF42 /* SpriteManager.m */,
+			);
+			name = "Singleton Classes";
+			sourceTree = "<group>";
+		};
+		9C969E581716263000BE7476 /* Scene Entities */ = {
+			isa = PBXGroup;
+			children = (
+				9C85F659170A3E4100EECB83 /* MainScene.h */,
+				9C85F65A170A3E4200EECB83 /* MainScene.m */,
+				3EDD9F2E1715E7F700C6A622 /* Wall.h */,
+				3EDD9F2F1715E7F800C6A622 /* Wall.m */,
+				9C85F654170A022800EECB83 /* Arrow.h */,
+				9C85F655170A022900EECB83 /* Arrow.m */,
+				9C85F6471709D2EF00EECB83 /* Peasant.h */,
+				9C85F6481709D2EF00EECB83 /* Peasant.m */,
+				9C85F6411709D1A800EECB83 /* Yuri.h */,
+				9C85F6421709D1A900EECB83 /* Yuri.m */,
+				9C85F6441709D25600EECB83 /* Enemy.h */,
+				9C85F6451709D25700EECB83 /* Enemy.m */,
+				9C85F6511709ECF300EECB83 /* Entity.h */,
+				9C85F6521709ECF300EECB83 /* Entity.m */,
+				9C85F65F170A4E4400EECB83 /* Projectile.h */,
+				9C85F660170A4E4400EECB83 /* Projectile.m */,
+			);
+			name = "Scene Entities";
+			sourceTree = "<group>";
+		};
+		9C969E591716290D00BE7476 /* Startup Classes */ = {
+			isa = PBXGroup;
+			children = (
+				9C85F6231707958200EECB83 /* AppDelegate.h */,
+				9C85F6241707958200EECB83 /* AppDelegate.m */,
+				9C7FF34C170B3A49009DA7F9 /* main.m */,
+				9C7FF34D170B3A4A009DA7F9 /* Prefix.pch */,
+			);
+			name = "Startup Classes";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1082,7 +1103,6 @@
 				9C377C0A170BB7CC00F840FB /* hit.mp3 in Resources */,
 				9C377C10170BC18A00F840FB /* Peasant.plist in Resources */,
 				9C377C11170BC18A00F840FB /* Peasant.png in Resources */,
-				9C3A9F28170C609D00C9EE57 /* background8.jpg in Resources */,
 				8BD62290171460200076BF42 /* lvl1spritesheet.png in Resources */,
 				3EDD9F231715DF2900C6A622 /* background@2x.png in Resources */,
 				3EDD9F251715DF9F00C6A622 /* background.png in Resources */,

@@ -54,29 +54,13 @@
 
 -(void)addTarget
 {
-    // THE ENEMY FACTORY IS A GOOD IDEA
-    // BUT IT IS NOT WORKING
-    // BECAUSE OF ANIMATIONS!
-    // ANIMATIONS SUCK!
-    // ESPECIALLY WITH PIXEL-PERFECT COLLISIONS
-    // BECAUSE NOTHING HAPPENS!
-    // MUST SEE WHAT IS HAPPENING INSIDE [PEASANT INIT] MESSAGE CALL
     
     Peasant * peasant  = [[EnemyFactory shared] generatePeasant];
-    
-    // Determine where to spawn the target along the Y axis
-    
-    //CGSize winSize = [[CCDirector sharedDirector] winSize];
-    //Enemy *peasant = [[Peasant alloc] initWithSprite:@"walk01.png" andWindowSize:winSize];
-    
-    //Enemy *peasant = [[EnemyFactory shared] generatePeasant];
     
     [self addChild:peasant];
     
     peasant.tag = 1;
     [[CollisionManager shared] addToTargets:peasant];
-    
-    //[peasant release];
     
 }
 
@@ -88,6 +72,7 @@
     {
         CGSize winSize = [[CCDirector sharedDirector] winSize];
         timeSinceLastArrow = 0.0f;
+        
         //Startup sound
         [[SimpleAudioEngine sharedEngine] setEffectsVolume:0.5f];
         [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"Battle1.mp3" loop:YES];
@@ -95,15 +80,12 @@
         MainScene *mainScene = [[MainScene alloc] initWithWinSize:winSize];
         [self addChild:mainScene z:0];
         [mainScene release];
-        
-        //Initialize art
-        [self addChild:[[SpriteManager shared] addSpritesToSpriteFrameCacheWithFile:@"lvl1spritesheet.plist" andBatchSpriteSheet:@"lvl1spritesheet.png"]];     
-        
-      
+         
         Yuri * yuri = [[Yuri alloc] initWithSprite:@"yurie_lvl3_small.png"];
         yuri.position = ccp([yuri spriteSize].width/2 + 150, winSize.height/2 + 30);     // @Hardcoded - to correct
         [self addChild:yuri z:1];
         [yuri release];
+        
         // This dummy method initializes the collision manager
         [[CollisionManager shared] dummyMethod];
         
@@ -146,7 +128,8 @@
   
   Arrow * arrow = [[Arrow alloc] initWithSprite: @"Projectile.png" andLocation:alocation andWindowSize:winSize];
 #warning TODO 
-  ps = [[CCParticleSun node] retain];
+//  ps = [[CCParticleSun node] retain];
+#warning README A linha a cima estava descomentada. Estava a largar particulas q nunca eram destruídas
   if(arrow != nil)
   {
     [[SimpleAudioEngine sharedEngine] playEffect:@"hit.mp3"];
@@ -162,7 +145,6 @@
 {
   fire = YES;
   
-  
   // Choose one of the touches to work with
   UITouch *touch = [touches anyObject];
   location = [self convertTouchToNodeSpace:touch];
@@ -176,10 +158,6 @@
   }
   CCLOG(@"TOUCH PRESSED");
   CCLOG(@">>> X: %f  Y: %f\n", location.x, location.y);
-  
-  
-    // Set up initial location of projectile
-    CGSize winSize = [[CCDirector sharedDirector] winSize];
     
 
 }

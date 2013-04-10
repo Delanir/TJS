@@ -46,9 +46,7 @@
 
 - (void) setSprite:(NSString*)spr
 {
-    //sprite = [KKPixelMaskSprite spriteWithFile:spr alphaThreshold:0];
-    sprite = [KKPixelMaskSprite spriteWithSpriteFrameName:spr];
-
+    sprite = [KKPixelMaskSprite spriteWithFile:spr alphaThreshold:0];
     [sprite retain];
 }
 

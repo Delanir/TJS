@@ -10,6 +10,7 @@
 // Import the interfaces
 #import "IntroLayer.h"
 #import "LevelLayer.h"
+#import "SpriteManager.h"
 
 
 #pragma mark - IntroLayer
@@ -56,6 +57,10 @@
 	
 	// In one second transition to the new scene
 	[self scheduleOnce:@selector(makeTransition:) delay:1];
+    
+    
+    //Initialize art
+    [self addChild:[[SpriteManager shared] addSpritesToSpriteFrameCacheWithFile:@"lvl1spritesheet.plist" andBatchSpriteSheet:@"lvl1spritesheet.png"]];
 }
 
 -(void) makeTransition:(ccTime)dt

@@ -12,7 +12,8 @@
 @interface SpriteManager : CCNode {
     CCSpriteBatchNode * spritesheetDisplayList;
 }
-+(SpriteManager*)shared;
+
++ (SpriteManager*) shared;
 - (CCSpriteBatchNode *) addSpritesToSpriteFrameCacheWithFile: (NSString *)filePlist andBatchSpriteSheet: (NSString *)filePng;
 - (void) addAnimationFromFile: (NSString *)file;
 
