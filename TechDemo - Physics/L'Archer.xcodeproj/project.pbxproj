@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3EDD9F231715DF2900C6A622 /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EDD9F221715DF2900C6A622 /* background@2x.png */; };
+		3EDD9F251715DF9F00C6A622 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EDD9F241715DF9F00C6A622 /* background.png */; };
+		3EDD9F271715E0E300C6A622 /* yurie_lvl3_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EDD9F261715E0E300C6A622 /* yurie_lvl3_small.png */; };
+		3EDD9F291715E4CD00C6A622 /* lvl1spritesheet.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3EDD9F281715E4CD00C6A622 /* lvl1spritesheet.plist */; };
+		3EDD9F2B1715E65D00C6A622 /* castle100.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EDD9F2A1715E65D00C6A622 /* castle100.png */; };
+		3EDD9F2D1715E68F00C6A622 /* castle0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EDD9F2C1715E68E00C6A622 /* castle0.png */; };
+		3EDD9F301715E7F800C6A622 /* Wall.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDD9F2F1715E7F800C6A622 /* Wall.m */; };
 		8BD6228917145FF60076BF42 /* SpriteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD6228817145FF60076BF42 /* SpriteManager.m */; };
-		8BD6228F171460200076BF42 /* lvl1spritesheet.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8BD6228C171460200076BF42 /* lvl1spritesheet.plist */; };
 		8BD62290171460200076BF42 /* lvl1spritesheet.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BD6228D171460200076BF42 /* lvl1spritesheet.png */; };
 		9C377BE9170B72D400F840FB /* KKPixelMaskSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C377BE2170B6F5100F840FB /* KKPixelMaskSprite.m */; };
 		9C377BEA170B72D700F840FB /* bitarray.c in Sources */ = {isa = PBXBuildFile; fileRef = 9C377BE3170B715A00F840FB /* bitarray.c */; };
@@ -170,10 +176,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3EDD9F221715DF2900C6A622 /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x.png"; sourceTree = "<group>"; };
+		3EDD9F241715DF9F00C6A622 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		3EDD9F261715E0E300C6A622 /* yurie_lvl3_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yurie_lvl3_small.png; sourceTree = "<group>"; };
+		3EDD9F281715E4CD00C6A622 /* lvl1spritesheet.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = lvl1spritesheet.plist; sourceTree = "<group>"; };
+		3EDD9F2A1715E65D00C6A622 /* castle100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = castle100.png; sourceTree = "<group>"; };
+		3EDD9F2C1715E68E00C6A622 /* castle0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = castle0.png; sourceTree = "<group>"; };
+		3EDD9F2E1715E7F700C6A622 /* Wall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wall.h; sourceTree = "<group>"; };
+		3EDD9F2F1715E7F800C6A622 /* Wall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Wall.m; sourceTree = "<group>"; };
 		8BD6228717145FF60076BF42 /* SpriteManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpriteManager.h; sourceTree = "<group>"; };
 		8BD6228817145FF60076BF42 /* SpriteManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpriteManager.m; sourceTree = "<group>"; };
 		8BD6228B171460200076BF42 /* lvl1spritesheet.zwd */ = {isa = PBXFileReference; lastKnownFileType = file; path = lvl1spritesheet.zwd; sourceTree = "<group>"; };
-		8BD6228C171460200076BF42 /* lvl1spritesheet.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = lvl1spritesheet.plist; sourceTree = "<group>"; };
 		8BD6228D171460200076BF42 /* lvl1spritesheet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lvl1spritesheet.png; sourceTree = "<group>"; };
 		9C377BE1170B6F5100F840FB /* KKPixelMaskSprite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKPixelMaskSprite.h; sourceTree = "<group>"; };
 		9C377BE2170B6F5100F840FB /* KKPixelMaskSprite.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKPixelMaskSprite.m; sourceTree = "<group>"; };
@@ -576,6 +589,8 @@
 		9C85F4AB1707957E00EECB83 /* L'Archer D'Amiens */ = {
 			isa = PBXGroup;
 			children = (
+				3EDD9F2E1715E7F700C6A622 /* Wall.h */,
+				3EDD9F2F1715E7F800C6A622 /* Wall.m */,
 				8BD6228717145FF60076BF42 /* SpriteManager.h */,
 				8BD6228817145FF60076BF42 /* SpriteManager.m */,
 				9C377BE0170B6E6900F840FB /* Helper Classes */,
@@ -618,8 +633,13 @@
 		9C85F4AC1707957E00EECB83 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3EDD9F2C1715E68E00C6A622 /* castle0.png */,
+				3EDD9F2A1715E65D00C6A622 /* castle100.png */,
+				3EDD9F281715E4CD00C6A622 /* lvl1spritesheet.plist */,
+				3EDD9F261715E0E300C6A622 /* yurie_lvl3_small.png */,
+				3EDD9F241715DF9F00C6A622 /* background.png */,
+				3EDD9F221715DF2900C6A622 /* background@2x.png */,
 				8BD6228B171460200076BF42 /* lvl1spritesheet.zwd */,
-				8BD6228C171460200076BF42 /* lvl1spritesheet.plist */,
 				8BD6228D171460200076BF42 /* lvl1spritesheet.png */,
 				9C3A9F27170C609D00C9EE57 /* background8.jpg */,
 				9C377C12170BC19200F840FB /* Sprites */,
@@ -1010,8 +1030,8 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0460;
-			};			buildConfigurationList = 9C85F4911707957E00EECB83 /* Build configuration list for PBXProject "L'Archer" */;
-
+			};
+			buildConfigurationList = 9C85F4911707957E00EECB83 /* Build configuration list for PBXProject "L'Archer" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -1063,8 +1083,13 @@
 				9C377C10170BC18A00F840FB /* Peasant.plist in Resources */,
 				9C377C11170BC18A00F840FB /* Peasant.png in Resources */,
 				9C3A9F28170C609D00C9EE57 /* background8.jpg in Resources */,
-				8BD6228F171460200076BF42 /* lvl1spritesheet.plist in Resources */,
 				8BD62290171460200076BF42 /* lvl1spritesheet.png in Resources */,
+				3EDD9F231715DF2900C6A622 /* background@2x.png in Resources */,
+				3EDD9F251715DF9F00C6A622 /* background.png in Resources */,
+				3EDD9F271715E0E300C6A622 /* yurie_lvl3_small.png in Resources */,
+				3EDD9F291715E4CD00C6A622 /* lvl1spritesheet.plist in Resources */,
+				3EDD9F2B1715E65D00C6A622 /* castle100.png in Resources */,
+				3EDD9F2D1715E68F00C6A622 /* castle0.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1194,6 +1219,7 @@
 				9C377BEA170B72D700F840FB /* bitarray.c in Sources */,
 				9C377C0D170BBDD800F840FB /* EnemyFactory.m in Sources */,
 				8BD6228917145FF60076BF42 /* SpriteManager.m in Sources */,
+				3EDD9F301715E7F800C6A622 /* Wall.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

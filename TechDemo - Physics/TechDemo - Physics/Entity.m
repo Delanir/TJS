@@ -21,6 +21,18 @@
     return self;
 }
 
+// on "init" you need to initialize your instance
+-(id) initWithSpriteFromFile: (NSString*) spriteFile
+{
+  if( (self=[super init])) {
+    [self setSprite:spriteFile];
+    [self addChild:sprite];
+  }
+  
+  return self;
+}
+
+
 -(void) dealloc
 {
     [sprite release];

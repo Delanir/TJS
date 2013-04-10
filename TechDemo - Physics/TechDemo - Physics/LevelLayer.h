@@ -19,6 +19,7 @@
     BOOL toggleUpdate, fire;
     float timeSinceLastArrow;
     CGPoint location;
+    CCParticleSystem *ps;
 
 }
 

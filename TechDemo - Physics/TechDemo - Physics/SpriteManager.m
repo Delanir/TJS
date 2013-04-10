@@ -69,6 +69,12 @@ static SpriteManager* _sharedSingleton = nil;
      return spritesheetDisplayList;
  }
 
+- (void) addSpritesToSpriteFrameCacheWithFile: (NSString *)filePlist
+{
+  [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:filePlist];
+  
+}
+
 
 - (void) addAnimationFromFile: (NSString *)file
 {

@@ -99,7 +99,8 @@
         //Initialize art
         [self addChild:[[SpriteManager shared] addSpritesToSpriteFrameCacheWithFile:@"lvl1spritesheet.plist" andBatchSpriteSheet:@"lvl1spritesheet.png"]];     
         
-        Yuri * yuri = [[Yuri alloc] initWithSprite:@"Player.png"];
+      
+        Yuri * yuri = [[Yuri alloc] initWithSprite:@"yurie_lvl3_small.png"];
         yuri.position = ccp([yuri spriteSize].width/2 + 150, winSize.height/2 + 30);     // @Hardcoded - to correct
         [self addChild:yuri z:1];
         [yuri release];
@@ -138,13 +139,14 @@
     }
 }
 
-- (void) addProjectile:(CGPoint) location
+- (void) addProjectile:(CGPoint) alocation
 {
   // Set up initial location of projectile
   CGSize winSize = [[CCDirector sharedDirector] winSize];
   
-  Arrow * arrow = [[Arrow alloc] initWithSprite: @"Projectile.png" andLocation:location andWindowSize:winSize];
-  
+  Arrow * arrow = [[Arrow alloc] initWithSprite: @"Projectile.png" andLocation:alocation andWindowSize:winSize];
+#warning TODO 
+  ps = [[CCParticleSun node] retain];
   if(arrow != nil)
   {
     [[SimpleAudioEngine sharedEngine] playEffect:@"hit.mp3"];
@@ -194,18 +196,16 @@
     timeSinceLastArrow += dt;
   
   
-  /////////// fui eu :'((((
+
   
   if (fire) {
     
       [self addProjectile:location];
 
-#ifdef DEBUG
-    CCLOG(@"FIRE");
-#endif
+//#ifdef DEBUG
+//    CCLOG(@"FIRE");
+//#endif
   }
-  
-  //// fui eu :'( FIM
   
   
   //  if([[Config shared] getIntProperty:@"collisionMethod"] == 0)
