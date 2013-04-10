@@ -232,10 +232,12 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
+
 		<key>Projectile.png</key>
 		<dict>
 			<key>aliases</key>
 			<array/>
+
 			<key>spriteColorRect</key>
 			<string>{{0, 0}, {30, 4}}</string>
 			<key>spriteOffset</key>
@@ -869,7 +871,7 @@
 		<key>size</key>
 		<string>{1024, 1024}</string>
 		<key>name</key>
-		<string>Untitled</string>
+		<string>lvl1spritesheet</string>
 		<key>target</key>
 		<dict>
 			<key>name</key>

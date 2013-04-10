@@ -13,7 +13,8 @@
 @synthesize moveAction = _moveAction;
 @synthesize walkAction = _walkAction;
 
--(id) init {
+/*
+ -(id) init {
     if((self = [super init])) {
         
         [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:
@@ -66,11 +67,13 @@
     }
     return self;
 }
+ 
+ */
 
 
 -(void)dealloc
 {
-    self.walkAction = nil;
+    //self.walkAction = nil;
     [super dealloc];
 }
 

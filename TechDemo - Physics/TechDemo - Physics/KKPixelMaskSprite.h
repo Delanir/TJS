@@ -54,7 +54,6 @@
 @property (nonatomic, readonly) NSUInteger pixelMaskWidth;
 @property (nonatomic, readonly) NSUInteger pixelMaskHeight;
 @property (nonatomic, readonly) NSUInteger pixelMaskSize;
-@property (nonatomic) UInt8 alpha;
 
 // alpha threshold determines how transparent a pixel can be to still be included in the pixel mask
 // by default only fully opaque pixels (alpha threshold = 255) are considered
