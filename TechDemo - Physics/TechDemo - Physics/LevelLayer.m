@@ -17,6 +17,9 @@
 #import "EnemyFactory.h"
 #import "SpriteManager.h"
 
+// Particle Systems
+#import "CCParticleSystem.h"
+
 // Sound interface
 #import "SimpleAudioEngine.h"
 
@@ -89,8 +92,8 @@
         CGSize winSize = [[CCDirector sharedDirector] winSize];
         timeSinceLastArrow = 0.0f;
         //Startup sound
-        [[SimpleAudioEngine sharedEngine] setEffectsVolume:0.5f];
-        [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"Battle1.mp3" loop:YES];
+        //[[SimpleAudioEngine sharedEngine] setEffectsVolume:0.5f];
+        //[[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"Battle1.mp3" loop:YES];
         
         MainScene *mainScene = [[MainScene alloc] initWithWinSize:winSize];
         [self addChild:mainScene z:0];
@@ -146,16 +149,21 @@
   
   Arrow * arrow = [[Arrow alloc] initWithSprite: @"Projectile.png" andLocation:alocation andWindowSize:winSize];
 #warning TODO 
-  ps = [[CCParticleSun node] retain];
+  
+  CCParticleSystem *ps = [[CCParticleMeteor node] retain];
+  ps.position=alocation;
   if(arrow != nil)
   {
     [[SimpleAudioEngine sharedEngine] playEffect:@"hit.mp3"];
     [self addChild:arrow];
+    [self addChild:ps z:1];
     arrow.tag = 2;
     [[CollisionManager shared] addToProjectiles:arrow];
   }
   [arrow release];
   arrow=nil;
+  [ps release];
+  ps=nil;
 }
 
 - (void)ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event

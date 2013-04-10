@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3EB8A37E17161AF800666626 /* defaultEmitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EB8A37D17161AF800666626 /* defaultEmitter.png */; };
+		3EB8A38017161CFA00666626 /* fire.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EB8A37F17161CFA00666626 /* fire.png */; };
 		3EDD9F231715DF2900C6A622 /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EDD9F221715DF2900C6A622 /* background@2x.png */; };
 		3EDD9F251715DF9F00C6A622 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EDD9F241715DF9F00C6A622 /* background.png */; };
 		3EDD9F271715E0E300C6A622 /* yurie_lvl3_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EDD9F261715E0E300C6A622 /* yurie_lvl3_small.png */; };
@@ -176,6 +178,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3EB8A37D17161AF800666626 /* defaultEmitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultEmitter.png; sourceTree = "<group>"; };
+		3EB8A37F17161CFA00666626 /* fire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fire.png; sourceTree = "<group>"; };
 		3EDD9F221715DF2900C6A622 /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x.png"; sourceTree = "<group>"; };
 		3EDD9F241715DF9F00C6A622 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		3EDD9F261715E0E300C6A622 /* yurie_lvl3_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yurie_lvl3_small.png; sourceTree = "<group>"; };
@@ -633,6 +637,8 @@
 		9C85F4AC1707957E00EECB83 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3EB8A37F17161CFA00666626 /* fire.png */,
+				3EB8A37D17161AF800666626 /* defaultEmitter.png */,
 				3EDD9F2C1715E68E00C6A622 /* castle0.png */,
 				3EDD9F2A1715E65D00C6A622 /* castle100.png */,
 				3EDD9F281715E4CD00C6A622 /* lvl1spritesheet.plist */,
@@ -1090,6 +1096,8 @@
 				3EDD9F291715E4CD00C6A622 /* lvl1spritesheet.plist in Resources */,
 				3EDD9F2B1715E65D00C6A622 /* castle100.png in Resources */,
 				3EDD9F2D1715E68F00C6A622 /* castle0.png in Resources */,
+				3EB8A37E17161AF800666626 /* defaultEmitter.png in Resources */,
+				3EB8A38017161CFA00666626 /* fire.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
