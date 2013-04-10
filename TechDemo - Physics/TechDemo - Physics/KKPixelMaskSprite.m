@@ -114,12 +114,13 @@ static Class PixelMaskSpriteClass = nil;
 		// get all the image information we need
 		pixelMaskWidth = image.size.width;
 		pixelMaskHeight = image.size.height;
+        
 		pixelMaskSize = pixelMaskWidth * pixelMaskHeight;
         
 #if defined(__arm__) && !defined(__ARM_NEON__)
 		NSAssert3(isPowerOfTwo(pixelMaskWidth) && isPowerOfTwo(pixelMaskHeight),
 				  @"Image '%@' size (%u, %u): pixel mask image must have power of two dimensions on 1st & 2nd gen devices.",
-				  filename, pixelMaskWidth, pixelMaskHeight);
+				  spriteFrameName, pixelMaskWidth, pixelMaskHeight);
 #endif
 		
 		// allocate and clear the pixelMask buffer
@@ -167,8 +168,8 @@ static Class PixelMaskSpriteClass = nil;
 		
 		CFRelease(imageData);
 		imageData = nil;
-		[image release];
-		image = nil;
+		//[image release];
+		//image = nil;
 	}
 	return self; 
     

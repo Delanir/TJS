@@ -15,7 +15,8 @@
 {
     if( (self=[super init])) {
         
-        [self setSprite:spriteFile];
+        //[self setSprite:spriteFile];
+        [self setSpriteWithSpriteFrameName:spriteFile];
         [self addChild:sprite];
     }
     

@@ -20,6 +20,7 @@
 
 - (id) initWithSprite: (NSString*) spriteFile;
 - (void) setSprite: (NSString*) spr;
+- (void) setSpriteWithSpriteFrameName:(NSString*)spr;
 - (void) destroySprite;
 - (KKPixelMaskSprite*) sprite;
 - (CGSize) spriteSize;
