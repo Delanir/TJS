@@ -528,10 +528,10 @@
 				9C377BF7170B77DB00F840FB /* ccMoreTypes.h */,
 				9C377BEF170B731A00F840FB /* CCNodeExtensions.h */,
 				9C377BF0170B731B00F840FB /* CCNodeExtensions.m */,
+				9C377BE1170B6F5100F840FB /* KKPixelMaskSprite.h */,
 				9C377BE2170B6F5100F840FB /* KKPixelMaskSprite.m */,
 				9C377BE3170B715A00F840FB /* bitarray.c */,
 				9C377BE4170B715A00F840FB /* bitarray.h */,
-				9C377BE1170B6F5100F840FB /* KKPixelMaskSprite.h */,
 			);
 			name = "Helper Classes";
 			sourceTree = "<group>";
