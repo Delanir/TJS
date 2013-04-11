@@ -31,7 +31,8 @@
         int offY = location.y - sprite.position.y;
         
         // Bail out if we are shooting down or backwards
-        if (offX <= 0) return nil;
+        if (offX <= 0)
+            offX = 1;
         
         // Determine where we wish to shoot the projectile to
         int realX = winSize.width + (spriteSize.width/2);
