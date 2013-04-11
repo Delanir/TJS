@@ -13,8 +13,11 @@
 
 @interface Wall : Entity
 {
+    double health;
     NSMutableArray *sprites;
 }
+
+@property (nonatomic) double health;
 
 
 @end

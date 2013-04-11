@@ -106,9 +106,6 @@ static Class PixelMaskSpriteClass = nil;
         
         CCSprite *sprite = [CCSprite spriteWithSpriteFrameName:spriteFrameName];
         
-        if([Config iPadRetina])
-            [sprite setScale:2.0f];
-        
         UIImage *image = [self renderUIImageFromSprite:sprite];
 		
 		// get all the image information we need

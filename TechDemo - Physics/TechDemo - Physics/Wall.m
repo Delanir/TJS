@@ -10,6 +10,8 @@
 
 @implementation Wall
 
+@synthesize health;
+
 - (id) init
 {
     if((self = [super init]))
@@ -28,6 +30,10 @@
     return self;
 }
 
+// Fazer update
+// Meter no collision cenas
+// Fazer comportamentos peasant
+// Mudar animação peasant
 
 
 @end

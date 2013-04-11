@@ -52,7 +52,7 @@
     
     if([Config iPadRetina])
         [sprite setScale:2.0f];
-    sprite.anchorPoint=ccp(0,0);
+    sprite.anchorPoint=ccp(0.5f,0.5f);
     sprite.zOrder = [[CCDirector sharedDirector] winSize].height - sprite.position.y;
     
 
@@ -65,8 +65,8 @@
     
     if([Config iPadRetina])
         [sprite setScale:2.0f];
-    sprite.anchorPoint=ccp(0,0);
-}
+    sprite.anchorPoint=ccp(0.5f,0.5f);
+    }
 
 - (void) destroySprite
 {
