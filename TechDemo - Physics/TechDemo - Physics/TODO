@@ -4,13 +4,11 @@
 *                *
 **/            **/
 
-- Fazer animações simples
-- Destruição mais eficiente de projecteis
-- Terminar tutorial (transição de cenas)
-- Logótipo
-- Dividir sprites do castelo em duas
-- Corrigir flechas
-- Modo de disparo está meio mau
+- Fazer animações simples (Daniela)
+- Corrigir colisões 
+- Dividir sprites do castelo em duas (PS)
+- Logótipo (PS)
+- Destruição mais eficiente de projecteis (depois das colisões)
 
 /**           /**
 *               *
@@ -32,4 +30,7 @@
 - Criado EnemyFactory (Singleton)
 - Criar Toggle button!!
 - Som de destruição (corrigir)
-- Criado delay entre flechas no swipe∂
+- Criado delay entre flechas no swipe
+- zOrdering
+- Factor de escala no retina
+- Modo de disparo a funcionar bem

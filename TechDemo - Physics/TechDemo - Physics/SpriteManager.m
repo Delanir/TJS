@@ -71,7 +71,6 @@ static SpriteManager* _sharedSingleton = nil;
 - (void) addSpritesToSpriteFrameCacheWithFile: (NSString *)filePlist
 {
   [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:filePlist];
-  
 }
 
 

@@ -14,7 +14,7 @@
 {
     if((self = [super init]))
     {
-        KKPixelMaskSprite * castle = [KKPixelMaskSprite spriteWithFile:@"castle0.png" alphaThreshold:0.5f];
+        KKPixelMaskSprite * castle = [KKPixelMaskSprite spriteWithFile:@"castle100.png" alphaThreshold:0.5f];
         [sprites addObject:castle];
         
         CGSize winSize = [[CCDirector sharedDirector] winSize];
@@ -27,6 +27,7 @@
     
     return self;
 }
+
 
 
 @end

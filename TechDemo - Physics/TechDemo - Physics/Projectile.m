@@ -23,7 +23,7 @@
         [self setSpriteWithSpriteFrameName:spriteFile];
         [self addChild:sprite];
         
-        sprite.position = ccp(190, winSize.height/2 + 45);                 // @TODO init with yuri information
+        sprite.position = ccp(190, winSize.height/2 + 28);                 // @TODO init with yuri information
         CGSize spriteSize = [self spriteSize];
         
         // Determine offset of location to projectile

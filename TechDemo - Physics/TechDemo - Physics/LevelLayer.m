@@ -31,8 +31,6 @@
 // HelloWorldLayer implementation
 @implementation LevelLayer
 
-@synthesize toggleUpdate;
-
 // Helper class method that creates a Scene
 +(CCScene *) scene
 {
@@ -60,7 +58,9 @@
     
     Peasant * peasant  = [[EnemyFactory shared] generatePeasant];
     
-    [self addChild:peasant];
+    NSInteger zOrder = [[CCDirector sharedDirector] winSize].height - [peasant sprite].position.y;
+    
+    [self addChild:peasant z:zOrder];
     
     peasant.tag = 1;
     [[CollisionManager shared] addToTargets:peasant];
@@ -111,17 +111,13 @@
 
 -(void) ccTouchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
-  fire = YES;
-    if(timeSinceLastArrow > 0.2)
-    {
-        // Choose one of the touches to work with
-        UITouch *touch = [touches anyObject];
-        
-        location = [self convertTouchToNodeSpace:touch];
+    // Update touch position
     
-        timeSinceLastArrow = 0.0f;
-    
-    }
+    // Choose one of the touches to work with
+    UITouch *touch = [touches anyObject];
+    location = [self convertTouchToNodeSpace:touch];
+    location = [touch locationInView:[touch view]];
+    location = [[CCDirector sharedDirector] convertToGL:location];
 }
 
 - (void) addProjectile:(CGPoint) alocation
@@ -131,20 +127,20 @@
   
   Arrow * arrow = [[Arrow alloc] initWithSprite: @"Projectile.png" andLocation:alocation andWindowSize:winSize];
   
-  CCParticleSystem *ps = [[CCParticleMeteor node] retain];
-  ps.position=alocation;
+  //CCParticleSystem *ps = [[CCParticleMeteor node] retain];
+  //ps.position=alocation;
   if(arrow != nil)
   {
-    [[SimpleAudioEngine sharedEngine] playEffect:@"hit.mp3"];
+    [[SimpleAudioEngine sharedEngine] playEffect:@"arrow.mp3"];
     [self addChild:arrow];
-    [self addChild:ps z:1];
+    //[self addChild:ps z:1];
     arrow.tag = 2;
     [[CollisionManager shared] addToProjectiles:arrow];
   }
   [arrow release];
   arrow=nil;
-  [ps release];
-  ps=nil;
+  //[ps release];
+  //ps=nil;
 }
 
 - (void)ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
@@ -154,17 +150,11 @@
   // Choose one of the touches to work with
   UITouch *touch = [touches anyObject];
   location = [self convertTouchToNodeSpace:touch];
-  location = [touch locationInView:[touch view]];
+  location = [touch  locationInView:[touch view]];
   location = [[CCDirector sharedDirector] convertToGL:location];
   
-  if(location.x > 950 && location.y > 690)
-  {
-    self.toggleUpdate = !self.toggleUpdate;
-    return;
-  }
-  CCLOG(@"TOUCH PRESSED");
+
   CCLOG(@">>> X: %f  Y: %f\n", location.x, location.y);
-    
 
 }
 
@@ -179,25 +169,13 @@
 {    
     timeSinceLastArrow += dt;
   
-  
-
-  
-  if (fire) {
-    
+    if (fire && timeSinceLastArrow > 0.1)
+    {
+      timeSinceLastArrow = 0.0f;
       [self addProjectile:location];
-
-//#ifdef DEBUG
-//    CCLOG(@"FIRE");
-//#endif
-  }
-  
-  
-  //  if([[Config shared] getIntProperty:@"collisionMethod"] == 0)
-  //      [[CollisionManager shared] updateSimpleCollisions:dt];
-  //  else [[CollisionManager shared] updatePixelPerfectCollisions:dt];
-      if(toggleUpdate)
-          [[CollisionManager shared] updateSimpleCollisions:dt];
-      else [[CollisionManager shared] updatePixelPerfectCollisions:dt];
+    }
+      
+    [[CollisionManager shared] updatePixelPerfectCollisions:dt];
 }
 
 

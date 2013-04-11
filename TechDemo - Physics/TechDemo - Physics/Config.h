@@ -15,6 +15,7 @@
 }
 
 +(Config*)shared;
++(BOOL)iPadRetina;
 -(void)dummyMethod;
 -(NSString*)getStringProperty:(NSString*) key;
 -(int)getIntProperty:(NSString*) key;

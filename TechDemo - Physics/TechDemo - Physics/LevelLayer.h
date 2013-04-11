@@ -16,7 +16,7 @@
 // HelloWorldLayer
 @interface LevelLayer : CCLayer <GKAchievementViewControllerDelegate, GKLeaderboardViewControllerDelegate>
 {
-    BOOL toggleUpdate, fire;
+    BOOL fire;
     float timeSinceLastArrow;
     CGPoint location;
     //CCParticleSystem *ps;
@@ -26,6 +26,5 @@
 // returns a CCScene that contains the HelloWorldLayer as the only child
 +(CCScene *) scene;
 
-@property BOOL toggleUpdate;
 
 @end

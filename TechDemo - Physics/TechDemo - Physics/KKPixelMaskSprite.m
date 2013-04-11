@@ -7,6 +7,7 @@
 
 #import "KKPixelMaskSprite.h"
 #import "CCNodeExtensions.h"
+#import "Config.h"
 
 int isPowerOfTwo (unsigned int x)
 {
@@ -103,11 +104,11 @@ static Class PixelMaskSpriteClass = nil;
 		if (PixelMaskSpriteClass == nil)
 			PixelMaskSpriteClass = [KKPixelMaskSprite class];
         
-		// this ensures that we're loading the -hd asset on Retina devices, if available
-		//NSString* fullpath = [CCFileUtils fullPathFromRelativePath:filename];
-		//UIImage* image = [[UIImage alloc] init  initWithContentsOfFile:fullpath];
-        
         CCSprite *sprite = [CCSprite spriteWithSpriteFrameName:spriteFrameName];
+        
+        if([Config iPadRetina])
+            [sprite setScale:2.0f];
+        
         UIImage *image = [self renderUIImageFromSprite:sprite];
 		
 		// get all the image information we need
@@ -167,8 +168,6 @@ static Class PixelMaskSpriteClass = nil;
 		
 		CFRelease(imageData);
 		imageData = nil;
-		//[image release];
-		//image = nil;
 	}
 	return self; 
     
