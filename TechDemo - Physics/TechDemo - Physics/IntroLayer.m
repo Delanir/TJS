@@ -61,6 +61,7 @@
     
     //Initialize art
     [self addChild:[[SpriteManager shared] addSpritesToSpriteFrameCacheWithFile:@"lvl1spritesheet.plist" andBatchSpriteSheet:@"lvl1spritesheet.png"]];
+    [[SpriteManager shared] addAnimationFromFile:@"peasant_anim.plist"];
 }
 
 -(void) makeTransition:(ccTime)dt

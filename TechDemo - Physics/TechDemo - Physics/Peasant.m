@@ -20,6 +20,9 @@
     {
         
 #warning TODO initialize animation here
+        _walkAction = [CCRepeatForever actionWithAction:
+                                [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"p_walk" ] restoreOriginalFrame:NO]];
+        [[self sprite] runAction:_walkAction];
         
     }
     return self;
