@@ -24,6 +24,8 @@
 - (id) initWithWinSize: (CGSize) winSz;
 - (void) setupScene;
 
+- (void) mountScene;
+
 @property CGSize winSize;
 
 @end

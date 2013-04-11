@@ -5,9 +5,6 @@
 **/            **/
 
 - Corrigir colisões 
-- Fazer animações simples (Daniela)
-- Dividir sprites do castelo em duas (PS)
-- Logótipo (PS)
 - Destruição mais eficiente de projecteis (depois das colisões)
 
 //Posteriormente
@@ -37,3 +34,6 @@
 - zOrdering
 - Factor de escala no retina
 - Modo de disparo a funcionar bem
+- Fazer animações simples (Daniela)
+- Logótipo (PS)
+- Dividir sprites do castelo em duas (PS)

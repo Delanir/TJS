@@ -20,4 +20,7 @@
 @property (nonatomic) double health;
 
 
+-(void) mountWall;
+
+
 @end

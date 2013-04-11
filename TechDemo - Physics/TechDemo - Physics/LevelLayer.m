@@ -82,11 +82,12 @@
         
         MainScene *mainScene = [[MainScene alloc] initWithWinSize:winSize];
         [self addChild:mainScene z:0];
+        [mainScene mountScene];
         [mainScene release];
          
         Yuri * yuri = [[Yuri alloc] initWithSprite:@"yurie_lvl3_small.png"];
         yuri.position = ccp([yuri spriteSize].width/2 + 150, winSize.height/2 + 30);     // @Hardcoded - to correct
-        [self addChild:yuri z:1];
+        [self addChild:yuri z:1000];
         [yuri release];
         
         // This dummy method initializes the collision manager
@@ -154,7 +155,7 @@
   location = [[CCDirector sharedDirector] convertToGL:location];
   
 
-  //CCLOG(@">>> X: %f  Y: %f\n", location.x, location.y);
+  CCLOG(@">>> X: %f  Y: %f\n", location.x, location.y);
 
 }
 

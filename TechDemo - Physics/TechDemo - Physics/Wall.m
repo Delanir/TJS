@@ -7,6 +7,7 @@
 //
 
 #import "Wall.h"
+#import <objc/runtime.h>
 
 @implementation Wall
 
@@ -16,18 +17,32 @@
 {
     if((self = [super init]))
     {
-        KKPixelMaskSprite * castle = [KKPixelMaskSprite spriteWithFile:@"castle100.png" alphaThreshold:0.5f];
-        [sprites addObject:castle];
-        
-        CGSize winSize = [[CCDirector sharedDirector] winSize];
-        [castle setPosition:ccp(winSize.width/2, winSize.height/2)];
-        
-        [self addChild:castle];
-        
-        //[castle setVisible:false];
+
     }
     
     return self;
+}
+
+// Isto tem de ser efectuado aqui para poder colocar as sprites ao nível do LevelLayer
+// É feio mas tem de ser depois do init para as referências estarem montadas
+-(void) mountWall
+{
+    
+    KKPixelMaskSprite * castletop = [KKPixelMaskSprite spriteWithFile:@"castle100-top.png" alphaThreshold:0.5f];
+    [sprites addObject:castletop];
+    
+    CGSize winSize = [[CCDirector sharedDirector] winSize];
+    [castletop setPosition:ccp(winSize.width/2, winSize.height/2)];
+    
+    [[[self parent] parent ] addChild:castletop z:1500];
+    
+    KKPixelMaskSprite * castlebottom = [KKPixelMaskSprite spriteWithFile:@"castle100-bottom.png" alphaThreshold:0.5f];
+    [sprites addObject:castlebottom];
+    
+    [castlebottom setPosition:ccp(winSize.width/2, winSize.height/2)];
+    
+    [[[self parent] parent ] addChild:castlebottom z:0];
+    
 }
 
 // Fazer update
