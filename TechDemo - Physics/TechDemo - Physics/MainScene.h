@@ -21,10 +21,8 @@
 }
 
 
-- (id) initWithWinSize: (CGSize) winSz;
-- (void) setupScene;
+- (id) initWithWinSize: (CGSize) winSz parent: (CCNode*) parent;
 
-- (void) mountScene;
 
 @property CGSize winSize;
 

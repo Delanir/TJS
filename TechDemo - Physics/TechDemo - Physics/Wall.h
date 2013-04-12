@@ -11,16 +11,21 @@
 
 #import "Entity.h"
 
+typedef enum {mint, scratched, damaged, wrecked, totaled} wallStatus;
+
 @interface Wall : Entity
 {
-    double health;
+    double health, lastHealth;
+    wallStatus status;
     NSMutableArray *sprites;
+    CCNode * parentNode;
 }
 
-@property (nonatomic) double health;
+@property (nonatomic) double health, lastHealth;
+@property (nonatomic, retain) CCNode * parentNode;
 
 
--(void) mountWall;
+-(id) initWithParent: (CCNode*) parent;
 
 
 @end

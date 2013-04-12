@@ -80,9 +80,8 @@
         //[[SimpleAudioEngine sharedEngine] setEffectsVolume:0.5f];
         //[[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"Battle1.mp3" loop:YES];
         
-        MainScene *mainScene = [[MainScene alloc] initWithWinSize:winSize];
+        MainScene *mainScene = [[MainScene alloc] initWithWinSize:winSize parent:self];
         [self addChild:mainScene z:0];
-        [mainScene mountScene];
         [mainScene release];
          
         Yuri * yuri = [[Yuri alloc] initWithSprite:@"yurie_lvl3_small.png"];
