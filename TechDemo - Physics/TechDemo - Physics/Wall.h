@@ -10,6 +10,7 @@
 #import "cocos2d.h"
 
 #import "Entity.h"
+#import "CollisionManager.h"
 
 typedef enum {mint, scratched, damaged, wrecked, totaled} wallStatus;
 

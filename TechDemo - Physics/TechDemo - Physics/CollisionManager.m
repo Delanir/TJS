@@ -7,6 +7,7 @@
 //
 
 #import "CollisionManager.h"
+#import "Peasant.h"
 
 // Sound interface
 #import "SimpleAudioEngine.h"
@@ -46,6 +47,7 @@ static CollisionManager* _sharedSingleton = nil;
 	if (self != nil) {
         _targets = [[NSMutableArray alloc] init];
         _projectiles = [[NSMutableArray alloc] init];
+        _walls = [[NSMutableArray alloc] init];
 	}
     
 	return self;
@@ -125,12 +127,10 @@ static CollisionManager* _sharedSingleton = nil;
     {
         KKPixelMaskSprite * projectileSprite = [projectile sprite];
         
-        
         NSMutableArray *targetsToDelete = [[NSMutableArray alloc] init];
         for (Enemy *target in _targets)
         {
             KKPixelMaskSprite *targetSprite = [target sprite];
-            
             if ([targetSprite pixelMaskContainsPoint:[projectileSprite position]])
                 [targetsToDelete addObject:target];
         }
@@ -153,6 +153,15 @@ static CollisionManager* _sharedSingleton = nil;
         [_projectiles removeObject:projectile];
     }
     [projectilesToDelete release];
+}
+
+-(void)updateWallsAndEnemies:(ccTime)dt
+{
+    for (KKPixelMaskSprite* wall in _walls)
+        for (Enemy *target in _targets)
+            if ([wall pixelMaskContainsPoint:[[target sprite] position]])
+                [(Peasant*)target attack];
+#warning Expandir isto para todos os animais
 }
 
 -(void)addToTargets: (Enemy*) target
@@ -178,5 +187,17 @@ static CollisionManager* _sharedSingleton = nil;
 {
     [_projectiles removeObject:projectile];
 }
+
+
+-(void)addToWalls: (CCSprite*) wall
+{
+    [_walls addObject:wall];
+}
+
+-(void)removeFromWalls: (CCSprite*) wall
+{
+    [_walls removeObject:wall];
+}
+
 
 @end

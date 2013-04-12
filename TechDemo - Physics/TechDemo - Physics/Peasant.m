@@ -10,17 +10,18 @@
 
 @implementation Peasant
 
-@synthesize moveAction = _moveAction;
-@synthesize walkAction = _walkAction;
+@synthesize attackAction, walkAction;
 
 
 -(id) initWithSprite:(NSString *)spriteFile andWindowSize:(CGSize)winSize
 {
     if (self = [super initWithSprite:spriteFile andWindowSize:winSize])
     {
-        _walkAction = [CCRepeatForever actionWithAction:
-                                [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"p_walk" ]]];
-        [[self sprite] runAction:_walkAction];
+        [self setWalkAction: [CCRepeatForever actionWithAction:
+                                [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"p_walk" ]]]];
+        [self setAttackAction: [CCRepeatForever actionWithAction:
+                         [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"p_attack" ]]]];
+        [[self sprite] runAction:walkAction];
         
     }
     return self;
@@ -29,6 +30,14 @@
 {
     //self.walkAction = nil;
     [super dealloc];
+}
+
+-(void)attack
+{
+    [[self sprite] stopAllActions];
+    [[self sprite] setPosition:CGPointMake([self sprite].position.x +1, [self sprite].position.y)];
+    //[[self sprite] runAction:walkAction];
+    [[self sprite] runAction:attackAction];
 }
 
 @end

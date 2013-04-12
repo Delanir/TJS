@@ -10,12 +10,14 @@
 
 @interface Peasant : Enemy
 {
-    CCAction *_walkAction;
-    CCAction *_moveAction;
+    CCAction *walkAction;
+    CCAction *attackAction;
     BOOL _moving;
 }
 
 @property (nonatomic, retain) CCAction *walkAction;
-@property (nonatomic, retain) CCAction *moveAction;
+@property (nonatomic, retain) CCAction *attackAction;
+
+-(void)attack;
 
 @end

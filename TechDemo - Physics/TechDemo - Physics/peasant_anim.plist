@@ -33,14 +33,20 @@
 			<string>walk08.png</string>
 		</array>
 	</dict>
-	<key>depart</key>
+	<key>p_attack</key>
 	<dict>
 		<key>delay</key>
 		<real>0.2</real>
 		<key>frames</key>
 		<array>
-			<string>Depart01.png</string>
-			<string>Depart02.png</string>
+			<string>attack01.png</string>
+			<string>attack02.png</string>
+			<string>attack03.png</string>
+			<string>attack04.png</string>
+			<string>attack05.png</string>
+			<string>attack06.png</string>
+			<string>attack07.png</string>
+			<string>attack08.png</string>
 		</array>
 	</dict>
 </dict>

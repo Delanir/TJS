@@ -7,8 +7,6 @@
 - Corrigir colisões 
 - Destruição mais eficiente de projecteis (depois das colisões)
 
-//Posteriormente
-- Coisas para fazer no Wall.m
 
 /**           /**
 *               *
@@ -38,3 +36,6 @@
 - Logótipo (PS)
 - Dividir sprites do castelo em duas (PS)
 - Lógica de dano da wall com todas as sprites
+- Colisões entre Wall e Enemies
+- Comportamento de ataque do peasant
+- Mudança de animação do peasant

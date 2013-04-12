@@ -9,22 +9,32 @@
 
 #import "Enemy.h"
 #import "Arrow.h"
+#import "Wall.h"
 
 @interface CollisionManager : NSObject
 {
     NSMutableArray *_targets;
     NSMutableArray *_projectiles;
+    NSMutableArray * _walls;
 }
 
 +(CollisionManager*)shared;
 
 -(void)dummyMethod;
 -(void)addToTargets: (Enemy*) target;
--(void)removeFromTargets: (Enemy*) target;
 -(void)addToProjectiles: (Projectile*) projectile;
+-(void)addToWalls: (CCSprite*) wall;
+-(void)removeFromTargets: (Enemy*) target;
 -(void)removeFromProjectiles: (Projectile*) projectile;
+-(void)removeFromWalls: (CCSprite*) wall;
+
+// Collisions between arrow and enemies
 -(void)updateSimpleCollisions:(ccTime)dt;
 -(void)updatePixelPerfectCollisions:(ccTime)dt;
+
+// Collisions between enemies and walls
+-(void)updateWallsAndEnemies:(ccTime)dt;
+
 
 @end
 

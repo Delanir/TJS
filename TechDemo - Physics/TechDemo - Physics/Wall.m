@@ -38,6 +38,10 @@
         [parentNode addChild:castletop z:1500];
         [parentNode addChild:castlebottom z:10];
         
+        [[CollisionManager shared] addToWalls:castletop];
+        [[CollisionManager shared] addToWalls:castlebottom];
+        
+        
         [self schedule:@selector(update:)];
     }
     
@@ -98,9 +102,19 @@
     
 }
 
-// Meter no collision cenas
-// Fazer comportamentos peasant
-// Mudar animação peasant
+- (void) dealloc
+{
+    [parentNode removeChild:sprites[0] cleanup:YES];
+    [parentNode removeChild:sprites[1] cleanup:YES];
+    [sprites removeObject:sprites[1]];                      // reverse order is required!
+    [sprites removeObject:sprites[0]];
+    [super dealloc];
+}
+
+- (NSMutableArray*) getSprites
+{
+    return sprites;
+}
 
 
 @end
