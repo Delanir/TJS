@@ -27,6 +27,9 @@ typedef enum {mint, scratched, damaged, wrecked, totaled} wallStatus;
 
 
 -(id) initWithParent: (CCNode*) parent;
+-(void) damage: (double) amount;
+#warning temporario
++(Wall*) getMajor;
 
 
 @end

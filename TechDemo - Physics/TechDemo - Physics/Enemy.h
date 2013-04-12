@@ -8,7 +8,12 @@
 
 #import "Entity.h"
 
+typedef enum {walk, attack, fly, land, hit, die} state;
+
 @interface Enemy : Entity
+{
+    state currentState;
+}
 
 - (id) initWithSprite:(NSString *)spriteFile
         andWindowSize:(CGSize) winSize;

@@ -13,6 +13,9 @@
 
 @synthesize health, lastHealth, parentNode;
 
+#warning temporario
+static Wall * _major = nil;
+
 - (id) initWithParent:(CCNode *)parent
 {
     if((self = [super init]))
@@ -45,6 +48,7 @@
         [self schedule:@selector(update:)];
     }
     
+    _major = self;
     return self;
 }
 
@@ -116,5 +120,15 @@
     return sprites;
 }
 
+-(void) damage: (double) amount
+{
+    health -= amount;
+}
+
+#warning temporario
++(Wall*) getMajor
+{
+    return _major;
+}
 
 @end

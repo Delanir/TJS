@@ -7,6 +7,7 @@
 //
 
 #import "Peasant.h"
+#import "Wall.h"
 
 @implementation Peasant
 
@@ -23,6 +24,8 @@
                          [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"p_attack" ]]]];
         [[self sprite] runAction:walkAction];
         
+        [self schedule:@selector(update:)];
+        
     }
     return self;
 }
@@ -34,10 +37,26 @@
 
 -(void)attack
 {
+    currentState = attack;
     [[self sprite] stopAllActions];
     [[self sprite] setPosition:CGPointMake([self sprite].position.x +1, [self sprite].position.y)];
     //[[self sprite] runAction:walkAction];
     [[self sprite] runAction:attackAction];
+}
+
+- (void)update:(ccTime)dt
+{
+    switch(currentState)
+    {
+        case walk:
+            break;
+        case attack:
+            [[Wall getMajor] damage:0.01];
+#warning TODO damage wall. Neste momento não há como aceder à wall. O método static é temporário
+            break;
+        default:
+            break;
+    }
 }
 
 @end

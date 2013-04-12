@@ -4,6 +4,8 @@
 *                *
 **/            **/
 
+- Mt lento a mudar de castelo. Talvez seja melhor estar na sprite sheet
+- corrigir warnings. Em particular o da referência à wall
 - Corrigir colisões 
 - Destruição mais eficiente de projecteis (depois das colisões)
 

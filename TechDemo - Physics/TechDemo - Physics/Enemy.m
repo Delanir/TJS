@@ -15,6 +15,8 @@
 {
     if( (self=[super init])) {
         
+        currentState = walk;
+        
         [self setSpriteWithSpriteFrameName:spriteFile];
         [self addChild:sprite];
         
