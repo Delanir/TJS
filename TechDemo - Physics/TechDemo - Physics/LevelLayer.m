@@ -16,6 +16,7 @@
 #import "Config.h"
 #import "EnemyFactory.h"
 #import "SpriteManager.h"
+#import "FaerieDragon.h"
 
 // Particle Systems
 #import "CCParticleSystem.h"
@@ -49,11 +50,16 @@
 
 -(void)gameLogic:(ccTime)dt
 {
-    [self addTarget];
+    timeElapsedSinceBeginning += dt;
+    
+    if((int)floor(timeElapsedSinceBeginning) % 3 == 1)
+        [self addPeasant];
+    if((int)floor(timeElapsedSinceBeginning) % 8 == 1)
+        [self addFaerieDragon];
 }
 
 
--(void)addTarget
+-(void)addPeasant
 {
     
     Peasant * peasant  = [[EnemyFactory shared] generatePeasant];
@@ -64,6 +70,18 @@
     
     peasant.tag = 1;
     [[CollisionManager shared] addToTargets:peasant];
+}
+
+-(void)addFaerieDragon
+{
+    FaerieDragon * faerieDragon = [[EnemyFactory shared] generateFaerieDragon];
+    
+    NSInteger zOrder = [[CCDirector sharedDirector] winSize].height - [faerieDragon sprite].position.y;
+    
+    [self addChild:faerieDragon z:zOrder];
+    
+    faerieDragon.tag = 3;
+    [[CollisionManager shared] addToTargets:faerieDragon];
     
 }
 
@@ -75,6 +93,7 @@
     {
         CGSize winSize = [[CCDirector sharedDirector] winSize];
         timeSinceLastArrow = 0.0f;
+        timeElapsedSinceBeginning = 0.0f;
         
         //Startup sound
         //[[SimpleAudioEngine sharedEngine] setEffectsVolume:0.5f];

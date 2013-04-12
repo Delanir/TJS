@@ -17,6 +17,7 @@
 @interface LevelLayer : CCLayer <GKAchievementViewControllerDelegate, GKLeaderboardViewControllerDelegate>
 {
     BOOL fire;
+    double timeElapsedSinceBeginning;
     float timeSinceLastArrow;
     CGPoint location;
     //CCParticleSystem *ps;

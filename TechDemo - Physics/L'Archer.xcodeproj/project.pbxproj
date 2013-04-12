@@ -155,7 +155,6 @@
 		9C85F61D1707958200EECB83 /* vec4.c in Sources */ = {isa = PBXBuildFile; fileRef = 9C85F61C1707958200EECB83 /* vec4.c */; };
 		9C85F6251707958200EECB83 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C85F6241707958200EECB83 /* AppDelegate.m */; };
 		9C85F62B1707958200EECB83 /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C85F62A1707958200EECB83 /* IntroLayer.m */; };
-		9C85F63D1707980000EECB83 /* Projectile.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C85F63A1707980000EECB83 /* Projectile.png */; };
 		9C85F6431709D1A900EECB83 /* Yuri.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C85F6421709D1A900EECB83 /* Yuri.m */; };
 		9C85F6461709D25700EECB83 /* Enemy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C85F6451709D25700EECB83 /* Enemy.m */; };
 		9C85F6491709D2F000EECB83 /* Peasant.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C85F6481709D2EF00EECB83 /* Peasant.m */; };
@@ -166,6 +165,8 @@
 		9C85F65B170A3E4500EECB83 /* MainScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C85F65A170A3E4200EECB83 /* MainScene.m */; };
 		9C85F65E170A458300EECB83 /* CollisionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C85F65D170A458200EECB83 /* CollisionManager.m */; };
 		9C85F661170A4E4500EECB83 /* Projectile.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C85F660170A4E4400EECB83 /* Projectile.m */; };
+		9C8DE0CF171853AD002E0D0A /* FaerieDragon.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8DE0CE171853AD002E0D0A /* FaerieDragon.m */; };
+		9C8DE0D117185844002E0D0A /* Tags in Resources */ = {isa = PBXBuildFile; fileRef = 9C8DE0D017185844002E0D0A /* Tags */; };
 		9C973FD717171B7900B25075 /* Icon-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C973FD617171B7800B25075 /* Icon-ipadhd.png */; };
 		9C973FD917171CE900B25075 /* icon3.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C973FD817171CE900B25075 /* icon3.png */; };
 		9C973FDB1717204700B25075 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C973FDA1717204700B25075 /* Default-Landscape~ipad.png */; };
@@ -477,7 +478,6 @@
 		9C85F6241707958200EECB83 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		9C85F6291707958200EECB83 /* IntroLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntroLayer.h; sourceTree = "<group>"; };
 		9C85F62A1707958200EECB83 /* IntroLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntroLayer.m; sourceTree = "<group>"; };
-		9C85F63A1707980000EECB83 /* Projectile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Projectile.png; sourceTree = "<group>"; };
 		9C85F6411709D1A800EECB83 /* Yuri.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Yuri.h; sourceTree = "<group>"; };
 		9C85F6421709D1A900EECB83 /* Yuri.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Yuri.m; sourceTree = "<group>"; };
 		9C85F6441709D25600EECB83 /* Enemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enemy.h; sourceTree = "<group>"; };
@@ -497,6 +497,9 @@
 		9C85F65D170A458200EECB83 /* CollisionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollisionManager.m; sourceTree = "<group>"; };
 		9C85F65F170A4E4400EECB83 /* Projectile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Projectile.h; sourceTree = "<group>"; };
 		9C85F660170A4E4400EECB83 /* Projectile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Projectile.m; sourceTree = "<group>"; };
+		9C8DE0CD171853AD002E0D0A /* FaerieDragon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaerieDragon.h; sourceTree = "<group>"; };
+		9C8DE0CE171853AD002E0D0A /* FaerieDragon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaerieDragon.m; sourceTree = "<group>"; };
+		9C8DE0D017185844002E0D0A /* Tags */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Tags; sourceTree = "<group>"; };
 		9C973FD617171B7800B25075 /* Icon-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-ipadhd.png"; path = "Resources/Icon-ipadhd.png"; sourceTree = "<group>"; };
 		9C973FD817171CE900B25075 /* icon3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon3.png; path = ../icon3.png; sourceTree = "<group>"; };
 		9C973FDA1717204700B25075 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape~ipad.png"; path = "../Default-Landscape~ipad.png"; sourceTree = "<group>"; };
@@ -563,6 +566,9 @@
 		9C377C12170BC19200F840FB /* Sprites */ = {
 			isa = PBXGroup;
 			children = (
+				3EB8A37F17161CFA00666626 /* fire.png */,
+				3EB8A37D17161AF800666626 /* defaultEmitter.png */,
+				3EDD9F241715DF9F00C6A622 /* background.png */,
 				9C973FE0171739DB00B25075 /* Castle */,
 				9C969E5B17163F1900BE7476 /* normal */,
 				9C969E5A17163EF700BE7476 /* ipadhd */,
@@ -606,8 +612,8 @@
 		9C85F4AB1707957E00EECB83 /* L'Archer D'Amiens */ = {
 			isa = PBXGroup;
 			children = (
-				9C969E581716263000BE7476 /* Scene Entities */,
 				9C969E571716260400BE7476 /* Singleton Classes */,
+				9C969E581716263000BE7476 /* Scene Entities */,
 				9C85F64A1709D59700EECB83 /* LevelLayer.h */,
 				9C85F64B1709D59800EECB83 /* LevelLayer.m */,
 				9C85F6291707958200EECB83 /* IntroLayer.h */,
@@ -625,30 +631,18 @@
 		9C85F4AC1707957E00EECB83 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9C8DE0D017185844002E0D0A /* Tags */,
+				9C8DE0CC171852F8002E0D0A /* App resources */,
 				9C377C04170BAE4500F840FB /* SFX */,
 				9C969E5C1716470500BE7476 /* Music */,
 				9C377C12170BC19200F840FB /* Sprites */,
-				3EB8A37F17161CFA00666626 /* fire.png */,
-				3EB8A37D17161AF800666626 /* defaultEmitter.png */,
 				8BFA2D9C171724F9008A2064 /* fairiedragon_anim.plist */,
-				8BFA2D9F17172536008A2064 /* peasant_anim.plist */,
 				3EDD9F281715E4CD00C6A622 /* lvl1spritesheet.plist */,
-				3EDD9F241715DF9F00C6A622 /* background.png */,
-				8BD6228B171460200076BF42 /* lvl1spritesheet.zwd */,
 				8BD6228D171460200076BF42 /* lvl1spritesheet.png */,
-				9C85F657170A07A400EECB83 /* Default-568h@2x.png */,
+				8BFA2D9F17172536008A2064 /* peasant_anim.plist */,
+				8BD6228B171460200076BF42 /* lvl1spritesheet.zwd */,
 				9C7FF343170B28CE009DA7F9 /* Config.plist */,
-				9C85F63A1707980000EECB83 /* Projectile.png */,
-				9C85F4AD1707957E00EECB83 /* Default.png */,
-				9C85F4B31707957E00EECB83 /* fps_images-hd.png */,
-				9C973FD617171B7800B25075 /* Icon-ipadhd.png */,
-				9C85F4B71707957E00EECB83 /* Icon-72.png */,
-				9C85F4B91707957E00EECB83 /* Icon-Small-50.png */,
-				9C85F4BB1707957E00EECB83 /* Icon-Small.png */,
-				9C85F4BD1707957E00EECB83 /* Icon-Small@2x.png */,
-				9C85F4C11707957E00EECB83 /* Icon@2x.png */,
 				9C85F4C31707957E00EECB83 /* Info.plist */,
-				9C85F4C41707957E00EECB83 /* iTunesArtwork */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -987,6 +981,23 @@
 			name = GL;
 			sourceTree = "<group>";
 		};
+		9C8DE0CC171852F8002E0D0A /* App resources */ = {
+			isa = PBXGroup;
+			children = (
+				9C85F4C41707957E00EECB83 /* iTunesArtwork */,
+				9C85F657170A07A400EECB83 /* Default-568h@2x.png */,
+				9C973FD617171B7800B25075 /* Icon-ipadhd.png */,
+				9C85F4AD1707957E00EECB83 /* Default.png */,
+				9C85F4B31707957E00EECB83 /* fps_images-hd.png */,
+				9C85F4B71707957E00EECB83 /* Icon-72.png */,
+				9C85F4B91707957E00EECB83 /* Icon-Small-50.png */,
+				9C85F4BB1707957E00EECB83 /* Icon-Small.png */,
+				9C85F4BD1707957E00EECB83 /* Icon-Small@2x.png */,
+				9C85F4C11707957E00EECB83 /* Icon@2x.png */,
+			);
+			name = "App resources";
+			sourceTree = "<group>";
+		};
 		9C969E571716260400BE7476 /* Singleton Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -1011,6 +1022,8 @@
 				3EDD9F2F1715E7F800C6A622 /* Wall.m */,
 				9C85F654170A022800EECB83 /* Arrow.h */,
 				9C85F655170A022900EECB83 /* Arrow.m */,
+				9C8DE0CD171853AD002E0D0A /* FaerieDragon.h */,
+				9C8DE0CE171853AD002E0D0A /* FaerieDragon.m */,
 				9C85F6471709D2EF00EECB83 /* Peasant.h */,
 				9C85F6481709D2EF00EECB83 /* Peasant.m */,
 				9C85F6411709D1A800EECB83 /* Yuri.h */,
@@ -1147,7 +1160,6 @@
 				9C85F4C21707957E00EECB83 /* Icon@2x.png in Resources */,
 				9C85F4C51707957E00EECB83 /* iTunesArtwork in Resources */,
 				9C85F6031707958200EECB83 /* ChangeLog in Resources */,
-				9C85F63D1707980000EECB83 /* Projectile.png in Resources */,
 				9C85F658170A07A500EECB83 /* Default-568h@2x.png in Resources */,
 				9C7FF344170B28CE009DA7F9 /* Config.plist in Resources */,
 				9C7FF349170B359F009DA7F9 /* TODO in Resources */,
@@ -1180,6 +1192,7 @@
 				9C973FF2171739EC00B25075 /* castle50-top.png in Resources */,
 				9C973FF3171739EC00B25075 /* castle75-bottom.png in Resources */,
 				9C973FF4171739EC00B25075 /* castle75-top.png in Resources */,
+				9C8DE0D117185844002E0D0A /* Tags in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1310,6 +1323,7 @@
 				9C377C0D170BBDD800F840FB /* EnemyFactory.m in Sources */,
 				8BD6228917145FF60076BF42 /* SpriteManager.m in Sources */,
 				3EDD9F301715E7F800C6A622 /* Wall.m in Sources */,
+				9C8DE0CF171853AD002E0D0A /* FaerieDragon.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

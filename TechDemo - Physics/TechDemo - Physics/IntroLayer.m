@@ -59,9 +59,10 @@
 	[self scheduleOnce:@selector(makeTransition:) delay:1];
     
     
-    //Initialize art
+    //Initialize art and animations
     [self addChild:[[SpriteManager shared] addSpritesToSpriteFrameCacheWithFile:@"lvl1spritesheet.plist" andBatchSpriteSheet:@"lvl1spritesheet.png"]];
     [[SpriteManager shared] addAnimationFromFile:@"peasant_anim.plist"];
+    [[SpriteManager shared] addAnimationFromFile:@"fairiedragon_anim.plist"];
 }
 
 -(void) makeTransition:(ccTime)dt

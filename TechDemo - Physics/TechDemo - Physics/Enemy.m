@@ -15,7 +15,6 @@
 {
     if( (self=[super init])) {
         
-        currentState = walk;
         
         [self setSpriteWithSpriteFrameName:spriteFile];
         [self addChild:sprite];
@@ -31,18 +30,6 @@
         // and along a random position along the Y axis as calculated above
         sprite.position = ccp(winSize.width + (spriteSize.width/2), actualY);
         
-        // Determine speed of the target
-        int minDuration = 10;                                                   //@TODO ficheiro de configuraçao
-        int maxDuration = 20;                                                   //@TODO ficheiro de configuracao
-        int rangeDuration = maxDuration - minDuration;
-        int actualDuration = (arc4random() % rangeDuration) + minDuration;
-        
-        // Create the actions
-        id actionMove = [CCMoveTo actionWithDuration:actualDuration
-                                            position:ccp(-spriteSize.width/2, actualY)];
-        id actionMoveDone = [CCCallFuncN actionWithTarget:self
-                                                 selector:@selector(spriteMoveFinished:)];
-        [sprite runAction:[CCSequence actions:actionMove, actionMoveDone, nil]];
         
     }
     

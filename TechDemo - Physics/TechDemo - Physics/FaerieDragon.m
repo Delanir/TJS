@@ -1,30 +1,29 @@
 //
-//  Peasant.m
-//  TechDemo - Physics
+//  FaerieDragon.m
+//  L'Archer
 //
-//  Created by jp on 01/04/13.
+//  Created by jp on 12/04/13.
 //
 //
 
-#import "Peasant.h"
+#import "FaerieDragon.h"
 #import "Wall.h"
 
-@implementation Peasant
+@implementation FaerieDragon
 
-@synthesize attackAction, walkAction;
-
+@synthesize attackAction, flyAction;
 
 -(id) initWithSprite:(NSString *)spriteFile andWindowSize:(CGSize)winSize
 {
     if (self = [super initWithSprite:spriteFile andWindowSize:winSize])
     {
-        currentState = walk;
+        currentState = fly;
         
-        // Setup movement
         
+        // Setup Movement
         // Determine speed of the target
-        int minDuration = 10;                                                   //@TODO ficheiro de configuraçao
-        int maxDuration = 20;                                                   //@TODO ficheiro de configuracao
+        int minDuration = 8;                                                   //@TODO ficheiro de configuraçao
+        int maxDuration = 12;                                                   //@TODO ficheiro de configuracao
         int rangeDuration = maxDuration - minDuration;
         int actualDuration = (arc4random() % rangeDuration) + minDuration;
         
@@ -34,14 +33,14 @@
         id actionMoveDone = [CCCallFuncN actionWithTarget:self
                                                  selector:@selector(spriteMoveFinished:)];
         [sprite runAction:[CCSequence actions:actionMove, actionMoveDone, nil]];
-
-        // Setup Animations
         
-        [self setWalkAction: [CCRepeatForever actionWithAction:
-                                [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"p_walk" ]]]];
+        
+        // Setup animations
+        [self setFlyAction: [CCRepeatForever actionWithAction:
+                              [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"fd_fly" ]]]];
         [self setAttackAction: [CCRepeatForever actionWithAction:
-                         [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"p_attack" ]]]];
-        [[self sprite] runAction:walkAction];
+                                [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"fd_depart" ]]]];
+        [[self sprite] runAction:flyAction];
         
         [self schedule:@selector(update:)];
         
@@ -67,10 +66,10 @@
 {
     switch(currentState)
     {
-        case walk:
+        case fly:
             break;
         case attack:
-            [[Wall getMajor] damage:0.01];
+            [[Wall getMajor] damage:0.02];
 #warning TODO damage wall. Neste momento não há como aceder à wall. O método static é temporário
             break;
         default:

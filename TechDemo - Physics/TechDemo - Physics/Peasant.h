@@ -12,7 +12,6 @@
 {
     CCAction *walkAction;
     CCAction *attackAction;
-    BOOL _moving;
 }
 
 @property (nonatomic, retain) CCAction *walkAction;

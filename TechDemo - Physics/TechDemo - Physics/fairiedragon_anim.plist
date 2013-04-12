@@ -2,10 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>land</key>
+	<key>fd_land</key>
 	<dict>
 		<key>delay</key>
-		<real>0.3</real>
+		<real>0.1</real>
 		<key>frames</key>
 		<array>
 			<string>Land01.png</string>
@@ -17,20 +17,20 @@
 			<string>Land07.png</string>
 		</array>
 	</dict>
-	<key>fly</key>
+	<key>fd_fly</key>
 	<dict>
 		<key>delay</key>
-		<real>0.2</real>
+		<real>0.1</real>
 		<key>frames</key>
 		<array>
 			<string>Fly01.png</string>
 			<string>Fly02.png</string>
 		</array>
 	</dict>
-	<key>depart</key>
+	<key>fd_depart</key>
 	<dict>
 		<key>delay</key>
-		<real>0.2</real>
+		<real>0.1</real>
 		<key>frames</key>
 		<array>
 			<string>Depart01.png</string>

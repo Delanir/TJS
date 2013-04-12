@@ -60,6 +60,17 @@ static EnemyFactory* _sharedSingleton = nil;
         
 }
 
+-(FaerieDragon*)generateFaerieDragon
+{
+    CGSize winSize = [[CCDirector sharedDirector] winSize];
+    FaerieDragon *faerieDragon = [[FaerieDragon alloc] initWithSprite:@"Fly01.png" andWindowSize:winSize];
+    
+    [faerieDragon autorelease];
+    
+    return faerieDragon;
+    
+}
+
 -(void)dealloc
 {
     [super dealloc];
