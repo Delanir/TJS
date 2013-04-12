@@ -5,6 +5,10 @@
 **/            **/
 
 - Mt lento a mudar de castelo. Talvez seja melhor estar na sprite sheet
+    - Resolvido carregando todas as sprites no init
+    - Fica hardcoded, mas MUITO mais eficiente
+- Carregar tudo no introlayer
+- Corrigir spritesheet com sprites mais recentes
 - corrigir warnings. Em particular o da referência à wall
 - Corrigir colisões 
 - Destruição mais eficiente de projecteis (depois das colisões)
@@ -41,3 +45,6 @@
 - Colisões entre Wall e Enemies
 - Comportamento de ataque do peasant
 - Mudança de animação do peasant
+- Mt lento a mudar de castelo. Talvez seja melhor estar na sprite sheet
+    - Resolvido carregando todas as sprites no init
+    - Fica hardcoded, mas MUITO mais eficiente - Continua a poder ser possível meter na spritesheet
