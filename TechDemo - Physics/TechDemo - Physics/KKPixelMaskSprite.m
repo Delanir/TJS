@@ -7,7 +7,6 @@
 
 #import "KKPixelMaskSprite.h"
 #import "CCNodeExtensions.h"
-#import "Config.h"
 
 int isPowerOfTwo (unsigned int x)
 {
@@ -94,6 +93,13 @@ static Class PixelMaskSpriteClass = nil;
 		image = nil;
 	}
 	return self;
+}
+
+-(void) updatePixelMask
+{
+//#warning update pixel mask
+    CCTexture2D *tex =[[self displayedFrame] texture] ;
+    
 }
 
 
@@ -359,6 +365,7 @@ static Class PixelMaskSpriteClass = nil;
     
     return [renderer getUIImage];
 }
+     
 
 
 @end

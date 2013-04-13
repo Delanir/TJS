@@ -69,4 +69,6 @@
 // Util
 - (UIImage *) renderUIImageFromSprite :(CCSprite *)sprite;
 
+-(void) updatePixelMask;
+
 @end

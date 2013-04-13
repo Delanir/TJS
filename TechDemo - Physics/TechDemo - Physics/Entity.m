@@ -50,8 +50,8 @@
     sprite = [KKPixelMaskSprite spriteWithFile:spr alphaThreshold:0.5f];
     [sprite retain];
     
-    if([Config iPadRetina])
-        [sprite setScale:2.0f];
+    //if([Config iPadRetina])
+    //    [sprite setScale:2.0f];
     sprite.anchorPoint=ccp(0.5f,0.5f);
     sprite.zOrder = [[CCDirector sharedDirector] winSize].height - sprite.position.y;
     
@@ -63,8 +63,8 @@
     sprite = [KKPixelMaskSprite spriteWithSpriteFrameName:spr alphaThreshold:0.5f];
     [sprite retain];
     
-    if([Config iPadRetina])
-        [sprite setScale:2.0f];
+    //if([Config iPadRetina])
+    //    [sprite setScale:2.0f];
     sprite.anchorPoint=ccp(0.5f,0.5f);
     }
 

@@ -161,8 +161,8 @@
   
   Arrow * arrow = [[Arrow alloc] initWithSprite: @"Projectile.png" andLocation:alocation andWindowSize:winSize];
   
-  //CCParticleSystem *ps = [[CCParticleMeteor node] retain];
-  //ps.position=alocation;
+  CCParticleSystem *ps = [[CCParticleMeteor node] retain];
+  ps.position=alocation;
   if(arrow != nil)
   {
     [[SimpleAudioEngine sharedEngine] playEffect:@"Swoosh.caf"];
@@ -173,6 +173,7 @@
   }
   [arrow release];
   arrow=nil;
+
 }
 
 - (void)ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
