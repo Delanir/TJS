@@ -18,7 +18,7 @@ typedef enum {mint, scratched, damaged, wrecked, totaled} wallStatus;
 {
     double health, lastHealth;
     wallStatus status;
-    NSMutableArray *sprites;
+    CCArray *sprites;
     CCNode * parentNode;
 }
 
