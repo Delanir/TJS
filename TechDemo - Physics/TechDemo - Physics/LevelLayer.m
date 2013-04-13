@@ -161,20 +161,17 @@
   
   Arrow * arrow = [[Arrow alloc] initWithSprite: @"Projectile.png" andLocation:alocation andWindowSize:winSize];
   
- // CCParticleSystem *ps = [[CCParticleMeteor node] retain];
- // ps.position=alocation;
   if(arrow != nil)
   {
-    [[SimpleAudioEngine sharedEngine] playEffect:@"arrow.mp3"];
+    [[SimpleAudioEngine sharedEngine] playEffect:@"Swoosh.caf"];
     [self addChild:arrow];
-   // [self addChild:ps z:10];
+
     arrow.tag = 2;
     [[CollisionManager shared] addToProjectiles:arrow];
   }
   [arrow release];
   arrow=nil;
-  //[ps release];
-  //ps=nil;
+
 }
 
 - (void)ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event

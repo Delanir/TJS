@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E08A7C61719A96F007BE310 /* Swoosh.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3E08A7C51719A96F007BE310 /* Swoosh.caf */; };
+		3E08A7C91719B29D007BE310 /* Stimulus.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E08A7C81719B29D007BE310 /* Stimulus.m */; };
 		3EB8A37E17161AF800666626 /* defaultEmitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EB8A37D17161AF800666626 /* defaultEmitter.png */; };
 		3EB8A38017161CFA00666626 /* fire.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EB8A37F17161CFA00666626 /* fire.png */; };
 		3EDD9F231715DF2900C6A622 /* background-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EDD9F221715DF2900C6A622 /* background-ipadhd.png */; };
@@ -201,6 +203,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E08A7C51719A96F007BE310 /* Swoosh.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Swoosh.caf; sourceTree = "<group>"; };
+		3E08A7C71719B29D007BE310 /* Stimulus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stimulus.h; sourceTree = "<group>"; };
+		3E08A7C81719B29D007BE310 /* Stimulus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stimulus.m; sourceTree = "<group>"; };
 		3EB8A37D17161AF800666626 /* defaultEmitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultEmitter.png; sourceTree = "<group>"; };
 		3EB8A37F17161CFA00666626 /* fire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fire.png; sourceTree = "<group>"; };
 		3EDD9F221715DF2900C6A622 /* background-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-ipadhd.png"; sourceTree = "<group>"; };
@@ -589,6 +594,7 @@
 		9C377C04170BAE4500F840FB /* SFX */ = {
 			isa = PBXGroup;
 			children = (
+				3E08A7C51719A96F007BE310 /* Swoosh.caf */,
 				9C377C09170BB7CB00F840FB /* hit.mp3 */,
 				9C377BFE170BAE3E00F840FB /* firearrow.mp3 */,
 				9C377BFF170BAE3E00F840FB /* arrow2.mp3 */,
@@ -1113,6 +1119,8 @@
 				9C85F660170A4E4400EECB83 /* Projectile.m */,
 				9C8DE0D41718E9FF002E0D0A /* Zealot.h */,
 				9C8DE0D51718EA00002E0D0A /* Zealot.m */,
+				3E08A7C71719B29D007BE310 /* Stimulus.h */,
+				3E08A7C81719B29D007BE310 /* Stimulus.m */,
 			);
 			name = "Scene Entities";
 			sourceTree = "<group>";
@@ -1260,6 +1268,7 @@
 				9C8DE0D117185844002E0D0A /* Tags in Resources */,
 				9C8DE0D31718E134002E0D0A /* zealot_anim.plist in Resources */,
 				9C94ABD817197BD2005BCE32 /* zDepth in Resources */,
+				3E08A7C61719A96F007BE310 /* Swoosh.caf in Resources */,
 				9C8C65AC1719AF6200F56FC4 /* castle100-bottom.png in Resources */,
 				9C8C65AD1719AF6200F56FC4 /* castle100-top.png in Resources */,
 				9C8C65AE1719AF6200F56FC4 /* castle0-top.png in Resources */,
@@ -1416,6 +1425,7 @@
 				3EDD9F301715E7F800C6A622 /* Wall.m in Sources */,
 				9C8DE0CF171853AD002E0D0A /* FaerieDragon.m in Sources */,
 				9C8DE0D61718EA00002E0D0A /* Zealot.m in Sources */,
+				3E08A7C91719B29D007BE310 /* Stimulus.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
