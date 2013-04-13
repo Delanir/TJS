@@ -45,9 +45,9 @@ static CollisionManager* _sharedSingleton = nil;
 {
 	self = [super init];
 	if (self != nil) {
-        _targets = [[NSMutableArray alloc] init]; // CCArray!!!!
-        _projectiles = [[NSMutableArray alloc] init];
-        _walls = [[NSMutableArray alloc] init];
+        _targets = [[CCArray alloc] init]; // CCArray!!!!
+        _projectiles = [[CCArray alloc] init];
+        _walls = [[CCArray alloc] init];
 	}
     
 	return self;
@@ -74,7 +74,7 @@ static CollisionManager* _sharedSingleton = nil;
 - (void)updateSimpleCollisions:(ccTime)dt
 {
     
-    NSMutableArray *projectilesToDelete = [[NSMutableArray alloc] init];
+    CCArray *projectilesToDelete = [[CCArray alloc] init];
     for (Projectile* projectile in _projectiles)
     {
         KKPixelMaskSprite * projectileSprite = [projectile sprite];
@@ -84,7 +84,7 @@ static CollisionManager* _sharedSingleton = nil;
                                            projectileSprite.contentSize.width,
                                            projectileSprite.contentSize.height);
         
-        NSMutableArray *targetsToDelete = [[NSMutableArray alloc] init];
+        CCArray *targetsToDelete = [[CCArray alloc] init];
         for (Enemy *target in _targets)
         {
             KKPixelMaskSprite *targetSprite = [target sprite];
@@ -122,14 +122,16 @@ static CollisionManager* _sharedSingleton = nil;
 -(void)updatePixelPerfectCollisions:(ccTime)dt
 {
     
-    NSMutableArray *projectilesToDelete = [[NSMutableArray alloc] init];
+    CCArray *projectilesToDelete = [[CCArray alloc] init];
     for (Projectile* projectile in _projectiles)
     {
         KKPixelMaskSprite * projectileSprite = [projectile sprite];
         
-        NSMutableArray *targetsToDelete = [[NSMutableArray alloc] init];
+        CCArray *targetsToDelete = [[CCArray alloc] init];
         for (Enemy *target in _targets)
         {
+//# warning update pixelmask[target ]
+            //[[target sprite] updatePixelMask];
             KKPixelMaskSprite *targetSprite = [target sprite];
             if ([targetSprite pixelMaskContainsPoint:[projectileSprite position]])
                 [targetsToDelete addObject:target];

@@ -188,7 +188,7 @@
   location = [[CCDirector sharedDirector] convertToGL:location];
   
 
-  CCLOG(@">>> X: %f  Y: %f\n", location.x, location.y);
+  //CCLOG(@">>> X: %f  Y: %f\n", location.x, location.y);
 
 }
 
