@@ -167,7 +167,7 @@
   {
     [[SimpleAudioEngine sharedEngine] playEffect:@"arrow.mp3"];
     [self addChild:arrow];
-    //[self addChild:ps z:1];
+    //[self addChild:ps z:10];
     arrow.tag = 2;
     [[CollisionManager shared] addToProjectiles:arrow];
   }
