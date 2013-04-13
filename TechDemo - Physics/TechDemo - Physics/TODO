@@ -4,15 +4,9 @@
 *                *
 **/            **/
 
-- Por iPads a funcionar por causa do Nojo (na pior das hipoteses tem de funcionar no do João M) DONE!
-- Passar NSMutable para CCArrays (Amaral e Ricardo) DONE!
-- zOrdering (Amaral) à espera dos menus para verificar... ver secção 
+- zOrdering (Amaral) à espera dos menus para verificar... ver secção
 
-
-- Particle System para dentro dos sprites (Optimizar particle system) (João M)
-
-- zOrdering (Amaral)
-
+- Projectiles mais piquenos!
 - Dano dos inimigos (Amaral)
 - Particle System para dentro dos sprites (João M)
     - (Optimizar particle system) 
@@ -20,6 +14,7 @@
     - Passar codigo do projectile para arrow
 
 - Implementação de estimulos (StimulousPackage - Damage, Fire, Ice) (João M)
+
 - Passar para os arqueiros do heroes  (João M)
     - Tratar das sprites
 
@@ -29,7 +24,7 @@
 **/
 
 - Menus com Cocos Builder! (Daniela, Ricardo)
-- Desenhar ingame Menu (???) (health and other debug info)
+- Desenhar GUI (???) (health and other debug info)
 
 - corrigir warnings. Em particular o da referência à wall (João)
 - Corrigir colisões (???????????????????)
@@ -85,22 +80,8 @@
 - Criado Zealot
 - Novas sprites e ataque do dragão
 - Moat usage!
-
-
-/**           /**
-*               *
-*  Z-ordering   *
-*               *
-**/           **/
-
-background 0
-fortress 1
-enemies Screen.height-sprite.position.y
-hero (yuri) ... 1000 (indifferent...)
-arrows 1001
-particle system 1002
-ingame menu 1003
-
+- Por iPads a funcionar por causa do Nojo (na pior das hipoteses tem de funcionar no do João M) DONE!
+- Passar NSMutable para CCArrays (Amaral e Ricardo) DONE!
 - Perceber ao certo os outputs de erro do CCSpriteFrameCache (Daniela)
 - Por iPads a funcionar por causa do Nojo (na pior das hipoteses tem de funcionar no do João M)
 - Passar NSMutable para CCArrays (Amaral e Ricardo)
