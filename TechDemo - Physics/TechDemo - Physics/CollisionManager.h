@@ -13,9 +13,9 @@
 
 @interface CollisionManager : NSObject
 {
-    NSMutableArray *_targets;
-    NSMutableArray *_projectiles;
-    NSMutableArray * _walls;
+    CCArray *_targets;
+    CCArray *_projectiles;
+    CCArray * _walls;
 }
 
 +(CollisionManager*)shared;

@@ -105,8 +105,9 @@ static SpriteManager* _sharedSingleton = nil;
             CCLOG(@"ISCCAnimationCacheExtensions: Animation '%@' found in dictionary without any frames - cannot add to animation cache.", name);
             continue;
         }
-        
-        NSMutableArray *frames = [NSMutableArray arrayWithCapacity:[frameNames count]];
+      
+      CCArray *frames = [CCArray arrayWithCapacity:[frameNames count]];
+        //NSMutableArray *frames = [NSMutableArray arrayWithCapacity:[frameNames count]];
         
         for( NSString *frameName in frameNames ) {
             CCSpriteFrame *frame = [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:frameName];
