@@ -6,9 +6,7 @@
 
 - zOrdering (Amaral)
 
-- inicializar som do jogo
-
-- Dano dos inimigos
+- Dano dos inimigos (Amaral)
 - Particle System para dentro dos sprites (João M)
     - (Optimizar particle system) 
     - Tornar aquilo um projectile
@@ -83,4 +81,5 @@
 - Por iPads a funcionar por causa do Nojo (na pior das hipoteses tem de funcionar no do João M)
 - Passar NSMutable para CCArrays (Amaral e Ricardo)
 - Resolver problemas das sprites do castelo e do moat
+- inicializar som do jogo
 
