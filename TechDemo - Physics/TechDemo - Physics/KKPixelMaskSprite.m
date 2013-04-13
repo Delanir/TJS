@@ -7,7 +7,6 @@
 
 #import "KKPixelMaskSprite.h"
 #import "CCNodeExtensions.h"
-#import "Config.h"
 
 int isPowerOfTwo (unsigned int x)
 {
