@@ -15,7 +15,7 @@
 
 - Menus com Cocos Builder! (Daniela, Ricardo)
 - Desenhar ingame Menu (???) (health and other debug info)
-- Perceber ao certo os outputs de erro do CCSpriteFrameCache (Daniela)
+
 - corrigir warnings. Em particular o da referência à wall (João)
 - Corrigir colisões (???????????????????)
 - Destruição mais eficiente de projecteis (depois das colisões)
@@ -67,3 +67,4 @@
 - Criado Zealot
 - Novas sprites e ataque do dragão
 - Moat usage!
+- Perceber ao certo os outputs de erro do CCSpriteFrameCache (Daniela)
