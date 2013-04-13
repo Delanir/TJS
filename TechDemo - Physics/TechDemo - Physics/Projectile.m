@@ -12,6 +12,9 @@
 @implementation Projectile
 
 -(void)spriteMoveFinished:(id)sender {
+    [self removeChild:ps cleanup:YES];
+// CCLOG(@"Morreu PS");
+// CCLOG(@"Morreu Sprite");
     [self removeChild:sprite cleanup:YES];
     [[CollisionManager shared] removeFromProjectiles:self];
 }
@@ -19,13 +22,22 @@
 - (id) initWithSprite:(NSString *)spriteFile andLocation:(CGPoint)location andWindowSize:(CGSize)winSize
 {
     if( (self=[super init])) {
-        
+      
         [self setSpriteWithSpriteFrameName:spriteFile];
         [self addChild:sprite];
-        
-        sprite.position = ccp(190, winSize.height/2 + 28);                 // @TODO init with yuri information
+      
+        ps = [[CCParticleMeteor node] retain];
+        [self addChild:ps];
+      
+      //  ps.startSize = 15;
+      ps.gravity = CGPointZero;
+      ps.life = 0;
+      //  ps.totalParticles = 25;
+      sprite.position = ccp(190, winSize.height/2 + 28);                 // @TODO init with yuri information
+      ps.position = sprite.position;
+      
         CGSize spriteSize = [self spriteSize];
-        
+        CCLOG(@">>> X: %f  Y: %f\n", sprite.position.x, sprite.position.y);
         // Determine offset of location to projectile
         int offX = location.x - sprite.position.x;
         int offY = location.y - sprite.position.y;
@@ -51,18 +63,32 @@
         float angle = CC_RADIANS_TO_DEGREES(atanf((float)offRealY / (float)offRealX));
         [sprite setRotation:(-1 * angle)];
         
-        // Move projectile to actual endpoint
-        [sprite runAction:[CCSequence actions:
+   
+      
+      // Move Particle system to actual endpoint
+      [ps runAction:[CCSequence actions:
+                         [CCMoveTo actionWithDuration:realMoveDuration position:realDest],
+                         //[CCCallFuncN actionWithTarget:self selector:@selector(spriteMoveFinished:)],
+                         nil]];
+      
+      // Move projectile to actual endpoint
+      [sprite runAction:[CCSequence actions:
                          [CCMoveTo actionWithDuration:realMoveDuration position:realDest],
                          [CCCallFuncN actionWithTarget:self selector:@selector(spriteMoveFinished:)],
                          nil]];
-        
-        
+      
     }
     
     return self;
     
 }
+
+- (void) destroyParticleSystem
+{
+  [self removeChild:ps cleanup:YES];
+}
+
+//-(void)addStimulous
 
 
 
