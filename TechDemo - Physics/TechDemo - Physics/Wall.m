@@ -66,6 +66,9 @@ static Wall * _major = nil;
         [[CollisionManager shared] addToWalls:castlebottom100];
         
         
+#warning TEMPORARIO remover moat
+        [self addMoat];
+        
         [self schedule:@selector(update:)];
     }
     
@@ -106,29 +109,25 @@ static Wall * _major = nil;
 - (void) changeTopSprite: (CCSprite*) topSprite bottomSprite: (CCSprite*) bottomSprite
 {
     
-    //CGSize winSize = [[CCDirector sharedDirector] winSize];
-    [parentNode removeChild:sprites[0] cleanup:YES];
-    [parentNode removeChild:sprites[1] cleanup:YES];
-    //[sprites removeObject:sprites[1]];                      // reverse order is required!
-    //[sprites removeObject:sprites[0]];
-    
-    //KKPixelMaskSprite * castletop = [KKPixelMaskSprite spriteWithFile:topSprite alphaThreshold:0.5f];
-    //KKPixelMaskSprite * castlebottom = [KKPixelMaskSprite spriteWithFile:bottomSprite alphaThreshold:0.5f];
-    
-    //[sprites addObject:castletop];
-    //[sprites addObject:castlebottom];
-    
-    //[castletop setPosition:ccp(winSize.width/2, winSize.height/2)];
-    //[castlebottom setPosition:ccp(winSize.width/2, winSize.height/2)];
+    [parentNode removeChildByTag:5 cleanup:YES];
+    [parentNode removeChildByTag:5 cleanup:YES];
     
     [parentNode addChild:topSprite z:1500];
     [parentNode addChild:bottomSprite z:10];
-    
-    
+}
+
+- (void) addMoat
+{
+    CGSize winSize = [[CCDirector sharedDirector] winSize];
+    CCSprite * moat = [CCSprite spriteWithFile:@"moat.png"];
+    [moat setPosition:ccp(winSize.width/2, winSize.height/2)];
+    [moat setTag:8];
+    [self addChild:moat z:0];
 }
 
 - (void) dealloc
 {
+    [parentNode removeChildByTag:5 cleanup:YES];
     [parentNode removeChildByTag:5 cleanup:YES];
     [sprites removeAllObjects];
     [super dealloc];

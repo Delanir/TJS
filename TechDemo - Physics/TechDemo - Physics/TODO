@@ -4,11 +4,16 @@
 *                *
 **/            **/
 
-- corrigir warnings. Em particular o da referência à wall
+- Lógica de levar dano em cima do moat
+    - Sprites dos bonecos a morrer
+    - Lógica disto também
+- Menus! (Daniela, RicardO)
+- Display health
+- Perceber ao certo os outputs de erro do CCSpriteFrameCache (Daniela)
+- corrigir warnings. Em particular o da referência à wall (João)
 - Corrigir colisões 
 - Destruição mais eficiente de projecteis (depois das colisões)
-- Carregar tudo no introlayer
-
+- Carregar tudo no introlayer (Passive)
 
 /**           /**
 *               *
@@ -47,3 +52,6 @@
 - Corrigir spritesheet com sprites mais recentes
 - Adicionados dragões!
 - Temporizações de entrada
+- Criado Zealot
+- Novas sprites e ataque do dragão
+- Moat usage!

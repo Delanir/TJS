@@ -39,7 +39,7 @@
         [self setFlyAction: [CCRepeatForever actionWithAction:
                               [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"fd_fly" ]]]];
         [self setAttackAction: [CCRepeatForever actionWithAction:
-                                [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"fd_depart" ]]]];
+                                [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"fd_attack" ]]]];
         [[self sprite] runAction:flyAction];
         
         [self schedule:@selector(update:)];
@@ -57,8 +57,7 @@
 {
     currentState = attack;
     [[self sprite] stopAllActions];
-    [[self sprite] setPosition:CGPointMake([self sprite].position.x +1, [self sprite].position.y)];
-    //[[self sprite] runAction:walkAction];
+    [[self sprite] setPosition:CGPointMake([self sprite].position.x +26, [self sprite].position.y)];
     [[self sprite] runAction:attackAction];
 }
 

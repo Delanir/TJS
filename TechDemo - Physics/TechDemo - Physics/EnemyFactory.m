@@ -52,7 +52,7 @@ static EnemyFactory* _sharedSingleton = nil;
 {
     
     CGSize winSize = [[CCDirector sharedDirector] winSize];
-    Peasant *peasant = [[Peasant alloc] initWithSprite:@"walk01.png" andWindowSize:winSize];
+    Peasant *peasant = [[Peasant alloc] initWithSprite:@"p_walk01.png" andWindowSize:winSize];
     
     [peasant autorelease];
     
@@ -63,11 +63,22 @@ static EnemyFactory* _sharedSingleton = nil;
 -(FaerieDragon*)generateFaerieDragon
 {
     CGSize winSize = [[CCDirector sharedDirector] winSize];
-    FaerieDragon *faerieDragon = [[FaerieDragon alloc] initWithSprite:@"Fly01.png" andWindowSize:winSize];
+    FaerieDragon *faerieDragon = [[FaerieDragon alloc] initWithSprite:@"fd_fly01.png" andWindowSize:winSize];
     
     [faerieDragon autorelease];
     
     return faerieDragon;
+    
+}
+
+-(Zealot*)generateZealot
+{
+    CGSize winSize = [[CCDirector sharedDirector] winSize];
+    Zealot *zealot = [[Zealot alloc] initWithSprite:@"z_walk01.png" andWindowSize:winSize];
+    
+    [zealot autorelease];
+    
+    return zealot;
     
 }
 

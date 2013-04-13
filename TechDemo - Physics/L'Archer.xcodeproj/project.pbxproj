@@ -167,6 +167,9 @@
 		9C85F661170A4E4500EECB83 /* Projectile.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C85F660170A4E4400EECB83 /* Projectile.m */; };
 		9C8DE0CF171853AD002E0D0A /* FaerieDragon.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8DE0CE171853AD002E0D0A /* FaerieDragon.m */; };
 		9C8DE0D117185844002E0D0A /* Tags in Resources */ = {isa = PBXBuildFile; fileRef = 9C8DE0D017185844002E0D0A /* Tags */; };
+		9C8DE0D31718E134002E0D0A /* zealot_anim.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C8DE0D21718E133002E0D0A /* zealot_anim.plist */; };
+		9C8DE0D61718EA00002E0D0A /* Zealot.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8DE0D51718EA00002E0D0A /* Zealot.m */; };
+		9C8DE0D81718EDC2002E0D0A /* moat.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C8DE0D71718EDC2002E0D0A /* moat.png */; };
 		9C973FD717171B7900B25075 /* Icon-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C973FD617171B7800B25075 /* Icon-ipadhd.png */; };
 		9C973FD917171CE900B25075 /* icon3.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C973FD817171CE900B25075 /* icon3.png */; };
 		9C973FDB1717204700B25075 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C973FDA1717204700B25075 /* Default-Landscape~ipad.png */; };
@@ -500,6 +503,10 @@
 		9C8DE0CD171853AD002E0D0A /* FaerieDragon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaerieDragon.h; sourceTree = "<group>"; };
 		9C8DE0CE171853AD002E0D0A /* FaerieDragon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaerieDragon.m; sourceTree = "<group>"; };
 		9C8DE0D017185844002E0D0A /* Tags */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Tags; sourceTree = "<group>"; };
+		9C8DE0D21718E133002E0D0A /* zealot_anim.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = zealot_anim.plist; sourceTree = "<group>"; };
+		9C8DE0D41718E9FF002E0D0A /* Zealot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Zealot.h; sourceTree = "<group>"; };
+		9C8DE0D51718EA00002E0D0A /* Zealot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Zealot.m; sourceTree = "<group>"; };
+		9C8DE0D71718EDC2002E0D0A /* moat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moat.png; sourceTree = "<group>"; };
 		9C973FD617171B7800B25075 /* Icon-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-ipadhd.png"; path = "Resources/Icon-ipadhd.png"; sourceTree = "<group>"; };
 		9C973FD817171CE900B25075 /* icon3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon3.png; path = ../icon3.png; sourceTree = "<group>"; };
 		9C973FDA1717204700B25075 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape~ipad.png"; path = "../Default-Landscape~ipad.png"; sourceTree = "<group>"; };
@@ -637,6 +644,7 @@
 				9C969E5C1716470500BE7476 /* Music */,
 				9C377C12170BC19200F840FB /* Sprites */,
 				8BFA2D9C171724F9008A2064 /* fairiedragon_anim.plist */,
+				9C8DE0D21718E133002E0D0A /* zealot_anim.plist */,
 				3EDD9F281715E4CD00C6A622 /* lvl1spritesheet.plist */,
 				8BD6228D171460200076BF42 /* lvl1spritesheet.png */,
 				8BFA2D9F17172536008A2064 /* peasant_anim.plist */,
@@ -1034,6 +1042,8 @@
 				9C85F6521709ECF300EECB83 /* Entity.m */,
 				9C85F65F170A4E4400EECB83 /* Projectile.h */,
 				9C85F660170A4E4400EECB83 /* Projectile.m */,
+				9C8DE0D41718E9FF002E0D0A /* Zealot.h */,
+				9C8DE0D51718EA00002E0D0A /* Zealot.m */,
 			);
 			name = "Scene Entities";
 			sourceTree = "<group>";
@@ -1084,6 +1094,7 @@
 		9C973FE0171739DB00B25075 /* Castle */ = {
 			isa = PBXGroup;
 			children = (
+				9C8DE0D71718EDC2002E0D0A /* moat.png */,
 				9C973FE1171739EC00B25075 /* castle100-bottom.png */,
 				9C973FE2171739EC00B25075 /* castle100-top.png */,
 				9C973FE3171739EC00B25075 /* castle0-top.png */,
@@ -1193,6 +1204,8 @@
 				9C973FF3171739EC00B25075 /* castle75-bottom.png in Resources */,
 				9C973FF4171739EC00B25075 /* castle75-top.png in Resources */,
 				9C8DE0D117185844002E0D0A /* Tags in Resources */,
+				9C8DE0D31718E134002E0D0A /* zealot_anim.plist in Resources */,
+				9C8DE0D81718EDC2002E0D0A /* moat.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1324,6 +1337,7 @@
 				8BD6228917145FF60076BF42 /* SpriteManager.m in Sources */,
 				3EDD9F301715E7F800C6A622 /* Wall.m in Sources */,
 				9C8DE0CF171853AD002E0D0A /* FaerieDragon.m in Sources */,
+				9C8DE0D61718EA00002E0D0A /* Zealot.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

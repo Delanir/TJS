@@ -1,18 +1,17 @@
 //
-//  Peasant.m
-//  TechDemo - Physics
+//  Zealot.m
+//  L'Archer
 //
-//  Created by jp on 01/04/13.
+//  Created by jp on 13/04/13.
 //
 //
 
-#import "Peasant.h"
+#import "Zealot.h"
 #import "Wall.h"
 
-@implementation Peasant
+@implementation Zealot
 
 @synthesize attackAction, walkAction;
-
 
 -(id) initWithSprite:(NSString *)spriteFile andWindowSize:(CGSize)winSize
 {
@@ -20,11 +19,10 @@
     {
         currentState = walk;
         
-        // Setup movement
-        
+        // Setup Movement
         // Determine speed of the target
-        int minDuration = 10;                                                   //@TODO ficheiro de configuraçao
-        int maxDuration = 20;                                                   //@TODO ficheiro de configuracao
+        int minDuration = 16;                                                   //@TODO ficheiro de configuraçao
+        int maxDuration = 18;                                                   //@TODO ficheiro de configuracao
         int rangeDuration = maxDuration - minDuration;
         int actualDuration = (arc4random() % rangeDuration) + minDuration;
         
@@ -34,13 +32,13 @@
         id actionMoveDone = [CCCallFuncN actionWithTarget:self
                                                  selector:@selector(spriteMoveFinished:)];
         [sprite runAction:[CCSequence actions:actionMove, actionMoveDone, nil]];
-
-        // Setup Animations
         
+        
+        // Setup animations
         [self setWalkAction: [CCRepeatForever actionWithAction:
-                                [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"p_walk" ]]]];
+                             [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"z_walk" ]]]];
         [self setAttackAction: [CCRepeatForever actionWithAction:
-                         [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"p_attack" ]]]];
+                                [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"z_attack" ]]]];
         [[self sprite] runAction:walkAction];
         
         [self schedule:@selector(update:)];
@@ -58,8 +56,7 @@
 {
     currentState = attack;
     [[self sprite] stopAllActions];
-    [[self sprite] setPosition:CGPointMake([self sprite].position.x +6, [self sprite].position.y)];
-    //[[self sprite] runAction:walkAction];
+    [[self sprite] setPosition:CGPointMake([self sprite].position.x +10, [self sprite].position.y)];
     [[self sprite] runAction:attackAction];
 }
 
@@ -70,7 +67,7 @@
         case walk:
             break;
         case attack:
-            [[Wall getMajor] damage:0.01];
+            [[Wall getMajor] damage:0.02];
 #warning TODO damage wall. Neste momento não há como aceder à wall. O método static é temporário
             break;
         default:

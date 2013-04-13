@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Peasant.h"
 #import "FaerieDragon.h"
+#import "Zealot.h"
 
 @interface EnemyFactory : CCScene
 {
@@ -19,6 +20,7 @@
 
 -(Peasant*)generatePeasant;
 -(FaerieDragon*)generateFaerieDragon;
+-(Zealot*)generateZealot;
 
 @end
 

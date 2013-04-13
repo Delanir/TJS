@@ -56,6 +56,8 @@
         [self addPeasant];
     if((int)floor(timeElapsedSinceBeginning) % 8 == 1)
         [self addFaerieDragon];
+    if((int)floor(timeElapsedSinceBeginning) % 5 == 1)
+        [self addZealot];
 }
 
 
@@ -82,6 +84,19 @@
     
     faerieDragon.tag = 3;
     [[CollisionManager shared] addToTargets:faerieDragon];
+    
+}
+
+-(void)addZealot
+{
+    Zealot * zealot = [[EnemyFactory shared] generateZealot];
+    
+    NSInteger zOrder = [[CCDirector sharedDirector] winSize].height - [zealot sprite].position.y;
+    
+    [self addChild:zealot z:zOrder];
+    
+    zealot.tag = 4;
+    [[CollisionManager shared] addToTargets:zealot];
     
 }
 
