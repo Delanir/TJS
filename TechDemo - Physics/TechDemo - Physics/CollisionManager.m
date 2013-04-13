@@ -45,7 +45,7 @@ static CollisionManager* _sharedSingleton = nil;
 {
 	self = [super init];
 	if (self != nil) {
-        _targets = [[NSMutableArray alloc] init];
+        _targets = [[NSMutableArray alloc] init]; // CCArray!!!!
         _projectiles = [[NSMutableArray alloc] init];
         _walls = [[NSMutableArray alloc] init];
 	}
