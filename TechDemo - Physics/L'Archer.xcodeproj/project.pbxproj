@@ -170,6 +170,7 @@
 		9C8DE0D31718E134002E0D0A /* zealot_anim.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C8DE0D21718E133002E0D0A /* zealot_anim.plist */; };
 		9C8DE0D61718EA00002E0D0A /* Zealot.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8DE0D51718EA00002E0D0A /* Zealot.m */; };
 		9C8DE0D81718EDC2002E0D0A /* moat.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C8DE0D71718EDC2002E0D0A /* moat.png */; };
+		9C94ABD817197BD2005BCE32 /* zDepth in Resources */ = {isa = PBXBuildFile; fileRef = 9C94ABD717197BD2005BCE32 /* zDepth */; };
 		9C973FD717171B7900B25075 /* Icon-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C973FD617171B7800B25075 /* Icon-ipadhd.png */; };
 		9C973FD917171CE900B25075 /* icon3.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C973FD817171CE900B25075 /* icon3.png */; };
 		9C973FDB1717204700B25075 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C973FDA1717204700B25075 /* Default-Landscape~ipad.png */; };
@@ -507,6 +508,7 @@
 		9C8DE0D41718E9FF002E0D0A /* Zealot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Zealot.h; sourceTree = "<group>"; };
 		9C8DE0D51718EA00002E0D0A /* Zealot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Zealot.m; sourceTree = "<group>"; };
 		9C8DE0D71718EDC2002E0D0A /* moat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moat.png; sourceTree = "<group>"; };
+		9C94ABD717197BD2005BCE32 /* zDepth */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = zDepth; sourceTree = "<group>"; };
 		9C973FD617171B7800B25075 /* Icon-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-ipadhd.png"; path = "Resources/Icon-ipadhd.png"; sourceTree = "<group>"; };
 		9C973FD817171CE900B25075 /* icon3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon3.png; path = ../icon3.png; sourceTree = "<group>"; };
 		9C973FDA1717204700B25075 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape~ipad.png"; path = "../Default-Landscape~ipad.png"; sourceTree = "<group>"; };
@@ -639,6 +641,7 @@
 			isa = PBXGroup;
 			children = (
 				9C8DE0D017185844002E0D0A /* Tags */,
+				9C94ABD717197BD2005BCE32 /* zDepth */,
 				9C8DE0CC171852F8002E0D0A /* App resources */,
 				9C377C04170BAE4500F840FB /* SFX */,
 				9C969E5C1716470500BE7476 /* Music */,
@@ -1206,6 +1209,7 @@
 				9C8DE0D117185844002E0D0A /* Tags in Resources */,
 				9C8DE0D31718E134002E0D0A /* zealot_anim.plist in Resources */,
 				9C8DE0D81718EDC2002E0D0A /* moat.png in Resources */,
+				9C94ABD817197BD2005BCE32 /* zDepth in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
