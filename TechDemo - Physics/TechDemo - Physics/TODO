@@ -4,14 +4,23 @@
 *                *
 **/            **/
 
-- Por iPads a funcionar por causa do Nojo (na pior das hipoteses tem de funcionar no do João M)
-
-- Passar NSMutable para CCArrays (Amaral e Ricardo)
 - zOrdering (Amaral)
-- Particle System para dentro dos sprites (Optimizar particle system) (João M)
+
+- inicializar som do jogo
+
+- Dano dos inimigos
+- Particle System para dentro dos sprites (João M)
+    - (Optimizar particle system) 
+    - Tornar aquilo um projectile
+    - Passar codigo do projectile para arrow
 - Implementação de estimulos (StimulousPackage - Damage, Fire, Ice) (João M)
 - Passar para os arqueiros do heroes  (João M)
     - Tratar das sprites
+
+
+/**
+* Later
+**/
 
 - Menus com Cocos Builder! (Daniela, Ricardo)
 - Desenhar ingame Menu (???) (health and other debug info)
@@ -21,6 +30,9 @@
 - Destruição mais eficiente de projecteis (depois das colisões)
 - Carregar tudo no introlayer (Passive)
 
+/** 
+* Bonus
+**/
 
 - Fazer mais projectiles 
 - Lógica de levar dano em cima do moat
@@ -67,3 +79,6 @@
 - Criado Zealot
 - Novas sprites e ataque do dragão
 - Moat usage!
+- Por iPads a funcionar por causa do Nojo (na pior das hipoteses tem de funcionar no do João M)
+- Passar NSMutable para CCArrays (Amaral e Ricardo)
+- Resolver problemas das sprites do castelo e do moat
