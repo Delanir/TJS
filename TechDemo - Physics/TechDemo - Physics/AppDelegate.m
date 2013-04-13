@@ -10,6 +10,7 @@
 
 #import "AppDelegate.h"
 #import "IntroLayer.h"
+#import "CCBReader/CCBReader.h"
 
 @implementation AppController
 
@@ -73,9 +74,15 @@
 	[CCTexture2D PVRImagesHavePremultipliedAlpha:YES];
     
 	// and add the scene to the stack. The director will run it when it automatically when the view is displayed.
-	[director_ pushScene: [IntroLayer scene]];
+//	[director_ pushScene: [IntroLayer scene]];
     
-	
+	// Load the main menu scene from the ccbi-file
+    CCScene* mainScene = [CCBReader sceneWithNodeGraphFromFile:@"MainMenu.ccbi"];
+    
+    // Then add the scene to the stack. The director will run it when it automatically when the view is displayed.
+    [director_ pushScene: mainScene];
+    
+    
 	// Create a Navigation Controller with the Director
 	navController_ = [[UINavigationController alloc] initWithRootViewController:director_];
 	navController_.navigationBarHidden = YES;
