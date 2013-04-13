@@ -4,16 +4,28 @@
 *                *
 **/            **/
 
+- Por iPads a funcionar por causa do Nojo (na pior das hipoteses tem de funcionar no do João M)
+
+- Passar NSMutable para CCArrays (Amaral e Ricardo)
+- zOrdering (Amaral)
+- Particle System para dentro dos sprites (Optimizar particle system) (João M)
+- Implementação de estimulos (StimulousPackage - Damage, Fire, Ice) (João M)
+- Passar para os arqueiros do heroes  (João M)
+    - Tratar das sprites
+
+- Menus com Cocos Builder! (Daniela, Ricardo)
+- Desenhar ingame Menu (???) (health and other debug info)
+- Perceber ao certo os outputs de erro do CCSpriteFrameCache (Daniela)
+- corrigir warnings. Em particular o da referência à wall (João)
+- Corrigir colisões (???????????????????)
+- Destruição mais eficiente de projecteis (depois das colisões)
+- Carregar tudo no introlayer (Passive)
+
+
+- Fazer mais projectiles 
 - Lógica de levar dano em cima do moat
     - Sprites dos bonecos a morrer
     - Lógica disto também
-- Menus! (Daniela, RicardO)
-- Display health
-- Perceber ao certo os outputs de erro do CCSpriteFrameCache (Daniela)
-- corrigir warnings. Em particular o da referência à wall (João)
-- Corrigir colisões 
-- Destruição mais eficiente de projecteis (depois das colisões)
-- Carregar tudo no introlayer (Passive)
 
 /**           /**
 *               *
