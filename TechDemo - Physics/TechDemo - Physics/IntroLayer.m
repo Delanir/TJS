@@ -11,6 +11,9 @@
 #import "IntroLayer.h"
 #import "LevelLayer.h"
 #import "SpriteManager.h"
+#import "Config.h"
+// Sound interface
+#import "SimpleAudioEngine.h"
 
 
 #pragma mark - IntroLayer
@@ -60,10 +63,15 @@
     
     
     //Initialize art and animations
-    [self addChild:[[SpriteManager shared] addSpritesToSpriteFrameCacheWithFile:@"lvl1spritesheet.plist" andBatchSpriteSheet:@"lvl1spritesheet.png"]];
+    if(![Config iPadRetina])
+        [self addChild:[[SpriteManager shared] addSpritesToSpriteFrameCacheWithFile:@"lvl1spritesheet.plist" andBatchSpriteSheet:@"lvl1spritesheet.png"]];
+    else
+        [self addChild:[[SpriteManager shared] addSpritesToSpriteFrameCacheWithFile:@"lvl1spritesheet-ipadhd.plist" andBatchSpriteSheet:@"lvl1spritesheet-ipadhd.png"]];
+        
     [[SpriteManager shared] addAnimationFromFile:@"peasant_anim.plist"];
     [[SpriteManager shared] addAnimationFromFile:@"fairiedragon_anim.plist"];
     [[SpriteManager shared] addAnimationFromFile:@"zealot_anim.plist"];
+    [[SimpleAudioEngine sharedEngine] init];
     
 }
 

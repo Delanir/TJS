@@ -118,7 +118,7 @@
         [self addChild:mainScene z:0];
         [mainScene release];
          
-        Yuri * yuri = [[Yuri alloc] initWithSprite:@"yurie_lvl3_small.png"];
+        Yuri * yuri = [[Yuri alloc] initWithSprite:@"yurie.png"];
         yuri.position = ccp([yuri spriteSize].width/2 + 150, winSize.height/2 + 30);     // @Hardcoded - to correct
         [self addChild:yuri z:1000];
         [yuri release];
@@ -161,20 +161,17 @@
   
   Arrow * arrow = [[Arrow alloc] initWithSprite: @"Projectile.png" andLocation:alocation andWindowSize:winSize];
   
-  CCParticleSystem *ps = [[CCParticleMeteor node] retain];
-  ps.position=alocation;
   if(arrow != nil)
   {
-    [[SimpleAudioEngine sharedEngine] playEffect:@"arrow.mp3"];
+    [[SimpleAudioEngine sharedEngine] playEffect:@"Swoosh.caf"];
     [self addChild:arrow];
-    [self addChild:ps z:10];
+
     arrow.tag = 2;
     [[CollisionManager shared] addToProjectiles:arrow];
   }
   [arrow release];
   arrow=nil;
-  [ps release];
-  ps=nil;
+
 }
 
 - (void)ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event

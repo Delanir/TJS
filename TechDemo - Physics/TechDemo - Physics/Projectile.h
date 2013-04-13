@@ -9,9 +9,16 @@
 #import "Entity.h"
 
 @interface Projectile : Entity
+{
+  CCParticleSystem *ps;
+}
+
+//@property (nonatomic, retain)  CCParticleSystem *ps;
 
 - (id) initWithSprite:(NSString *)spriteFile
           andLocation: (CGPoint) location
         andWindowSize: (CGSize) winSize;
+
+- (void) destroyParticleSystem;
 
 @end

@@ -152,6 +152,7 @@ static CollisionManager* _sharedSingleton = nil;
     for (Projectile *projectile in projectilesToDelete)
     {
         [projectile destroySprite];
+        [projectile destroyParticleSystem];
         [_projectiles removeObject:projectile];
     }
     [projectilesToDelete release];
