@@ -58,6 +58,7 @@
 		9C377C03170BAE3E00F840FB /* arrow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9C377C00170BAE3E00F840FB /* arrow.mp3 */; };
 		9C377C0A170BB7CC00F840FB /* hit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9C377C09170BB7CB00F840FB /* hit.mp3 */; };
 		9C377C0D170BBDD800F840FB /* EnemyFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C377C0C170BBDD600F840FB /* EnemyFactory.m */; };
+		9C75D80E171A167E00419031 /* yurie_anim.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C75D80D171A167E00419031 /* yurie_anim.plist */; };
 		9C7FF344170B28CE009DA7F9 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C7FF343170B28CE009DA7F9 /* Config.plist */; };
 		9C7FF347170B2AFA009DA7F9 /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C7FF346170B2AFA009DA7F9 /* Config.m */; };
 		9C7FF349170B359F009DA7F9 /* TODO in Resources */ = {isa = PBXBuildFile; fileRef = 9C7FF348170B359F009DA7F9 /* TODO */; };
@@ -300,6 +301,7 @@
 		9C377C09170BB7CB00F840FB /* hit.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hit.mp3; sourceTree = "<group>"; };
 		9C377C0B170BBDD300F840FB /* EnemyFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyFactory.h; sourceTree = "<group>"; };
 		9C377C0C170BBDD600F840FB /* EnemyFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnemyFactory.m; sourceTree = "<group>"; };
+		9C75D80D171A167E00419031 /* yurie_anim.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = yurie_anim.plist; sourceTree = "<group>"; };
 		9C7FF343170B28CE009DA7F9 /* Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		9C7FF345170B2AFA009DA7F9 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		9C7FF346170B2AFA009DA7F9 /* Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
@@ -1150,6 +1152,7 @@
 				8BFA2D9C171724F9008A2064 /* fairiedragon_anim.plist */,
 				9C8DE0D21718E133002E0D0A /* zealot_anim.plist */,
 				8BFA2D9F17172536008A2064 /* peasant_anim.plist */,
+				9C75D80D171A167E00419031 /* yurie_anim.plist */,
 			);
 			name = Animations;
 			sourceTree = "<group>";
@@ -1411,6 +1414,7 @@
 				8B8C2DC31719EA3F00B50C1E /* Button_Play_pressed@2x.png in Resources */,
 				8B8C2DC41719EA3F00B50C1E /* Button_Play@2x.png in Resources */,
 				8B8C2DC51719EA3F00B50C1E /* larcher_transparent_name.png in Resources */,
+				9C75D80E171A167E00419031 /* yurie_anim.plist in Resources */,
 				8B560892171A251200B14693 /* achievements.png in Resources */,
 				8B560893171A251200B14693 /* achievements@2x.png in Resources */,
 				8B560894171A251200B14693 /* leaderboard.png in Resources */,

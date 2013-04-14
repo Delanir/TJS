@@ -6,12 +6,17 @@
 
 - zOrdering (Amaral) à espera dos menus para verificar... ver secção
 
-- Projectiles mais piquenos!
+- Wall está a ser destruída magicamente
+    - Entidades não estão a ser destruídas
+
+- Projectiles mais piquenos! Yuri maior
 - Dano dos inimigos (Amaral)
 - Particle System para dentro dos sprites (João M)
     - (Optimizar particle system) 
     - Tornar aquilo um projectile
     - Passar codigo do projectile para arrow
+
+- setas a saír por cima
 
 - Implementação de estimulos (StimulousPackage - Damage, Fire, Ice) (João M)
 

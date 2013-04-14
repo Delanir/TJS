@@ -11,12 +11,12 @@
 #import "MainScene.h"
 #import "Yuri.h"
 #import "Peasant.h"
-#import "Arrow.h"
 #import "CollisionManager.h"
 #import "Config.h"
 #import "EnemyFactory.h"
 #import "SpriteManager.h"
 #import "FaerieDragon.h"
+#import "Arrow.h"
 #import "StimulusFactory.h"
 #import "Stimulus.h"
 
@@ -62,54 +62,12 @@
         [self addZealot];
 }
 
-
--(void)addPeasant
-{
-    
-    Peasant * peasant  = [[EnemyFactory shared] generatePeasant];
-    
-    NSInteger zOrder = [[CCDirector sharedDirector] winSize].height - [peasant sprite].position.y;
-    
-    [self addChild:peasant z:zOrder];
-    
-    peasant.tag = 1;
-    [[CollisionManager shared] addToTargets:peasant];
-}
-
--(void)addFaerieDragon
-{
-    FaerieDragon * faerieDragon = [[EnemyFactory shared] generateFaerieDragon];
-    
-    NSInteger zOrder = [[CCDirector sharedDirector] winSize].height - [faerieDragon sprite].position.y;
-    
-    [self addChild:faerieDragon z:zOrder];
-    
-    faerieDragon.tag = 3;
-    [[CollisionManager shared] addToTargets:faerieDragon];
-    
-}
-
--(void)addZealot
-{
-    Zealot * zealot = [[EnemyFactory shared] generateZealot];
-    
-    NSInteger zOrder = [[CCDirector sharedDirector] winSize].height - [zealot sprite].position.y;
-    
-    [self addChild:zealot z:zOrder];
-    
-    zealot.tag = 4;
-    [[CollisionManager shared] addToTargets:zealot];
-    
-}
-
-
 // on "init" you need to initialize your instance
 -(id) init
 {
     if( (self=[super init]))
     {
         CGSize winSize = [[CCDirector sharedDirector] winSize];
-        timeSinceLastArrow = 0.0f;
         timeElapsedSinceBeginning = 0.0f;
         _arrows = 50;
         
@@ -121,8 +79,9 @@
         [self addChild:mainScene z:0];
         [mainScene release];
         
-        Yuri * yuri = [[Yuri alloc] initWithSprite:@"yurie.png"];
+        Yuri * yuri = [[Yuri alloc] init];
         yuri.position = ccp([yuri spriteSize].width/2 + 150, winSize.height/2 + 30);     // @Hardcoded - to correct
+        [yuri setTag:9];
         [self addChild:yuri z:1000];
         [yuri release];
         
@@ -192,23 +151,33 @@
 }
 
 
--(void) ccTouchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+
+
+
+// on "dealloc" you need to release all your retained objects
+- (void) dealloc
 {
-    fire = NO;
+    //Dealloc stuff below this line
+	[super dealloc];
 }
 
-
-
--(void) ccTouchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+- (void)update:(ccTime)dt
 {
-    // Update touch position
-    
-    // Choose one of the touches to work with
-    UITouch *touch = [touches anyObject];
-    location = [self convertTouchToNodeSpace:touch];
-    location = [touch locationInView:[touch view]];
-    location = [[CCDirector sharedDirector] convertToGL:location];
+    Yuri * yuri = (Yuri*)[self getChildByTag:9];
+    if([yuri fire])
+    {
+        [yuri setFire:NO];
+        [yuri animateInDirection:location];
+    }
+    if([yuri readyToFire])
+    {
+        [yuri setReadyToFire:NO];
+        [self addProjectile:location];
+    }
+    [[CollisionManager shared] updatePixelPerfectCollisions:dt];
+    [[CollisionManager shared] updateWallsAndEnemies:dt];
 }
+
 
 - (void) addProjectile:(CGPoint) alocation
 {
@@ -243,42 +212,77 @@
     [arrow release];
     arrow=nil;
     
+#warning This might be useful later on
+    //float currentDelay = [[[CCAnimationCache sharedAnimationCache] animationByName:@"y_attack_front"] delayPerUnit];
+    //[(Yuri*)[self getChildByTag:9] changeFireRate:currentDelay+0.1];
 }
+
+
+-(void)addPeasant
+{
+    
+    Peasant * peasant  = [[EnemyFactory shared] generatePeasant];
+    
+    NSInteger zOrder = [[CCDirector sharedDirector] winSize].height - [peasant sprite].position.y;
+    
+    [self addChild:peasant z:zOrder];
+    
+    peasant.tag = 1;
+    [[CollisionManager shared] addToTargets:peasant];
+}
+
+-(void)addFaerieDragon
+{
+    FaerieDragon * faerieDragon = [[EnemyFactory shared] generateFaerieDragon];
+    
+    NSInteger zOrder = [[CCDirector sharedDirector] winSize].height - [faerieDragon sprite].position.y;
+    
+    [self addChild:faerieDragon z:zOrder];
+    
+    faerieDragon.tag = 3;
+    [[CollisionManager shared] addToTargets:faerieDragon];
+    
+}
+
+-(void)addZealot
+{
+    Zealot * zealot = [[EnemyFactory shared] generateZealot];
+    
+    NSInteger zOrder = [[CCDirector sharedDirector] winSize].height - [zealot sprite].position.y;
+    
+    [self addChild:zealot z:zOrder];
+    
+    zealot.tag = 4;
+    [[CollisionManager shared] addToTargets:zealot];
+}
+
 
 - (void)ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    fire = YES;
+    [(Yuri*)[self getChildByTag:9] setFire: YES];
     
     // Choose one of the touches to work with
     UITouch *touch = [touches anyObject];
     location = [self convertTouchToNodeSpace:touch];
     location = [touch  locationInView:[touch view]];
     location = [[CCDirector sharedDirector] convertToGL:location];
-    
-    
-    //CCLOG(@">>> X: %f  Y: %f\n", location.x, location.y);
-    
 }
 
-// on "dealloc" you need to release all your retained objects
-- (void) dealloc
+-(void) ccTouchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    //Dealloc stuff below this line
-	[super dealloc];
+    [(Yuri*)[self getChildByTag:9] resetSprite];
+    [(Yuri*)[self getChildByTag:9] setFire: NO];
 }
 
-- (void)update:(ccTime)dt
+-(void) ccTouchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    timeSinceLastArrow += dt;
+    // Update touch position
     
-    if (fire && timeSinceLastArrow > 0.1)
-    {
-        timeSinceLastArrow = 0.0f;
-        [self addProjectile:location];
-    }
-    
-    [[CollisionManager shared] updatePixelPerfectCollisions:dt];
-    [[CollisionManager shared] updateWallsAndEnemies:dt];
+    // Choose one of the touches to work with
+    UITouch *touch = [touches anyObject];
+    location = [self convertTouchToNodeSpace:touch];
+    location = [touch locationInView:[touch view]];
+    location = [[CCDirector sharedDirector] convertToGL:location];
 }
 
 

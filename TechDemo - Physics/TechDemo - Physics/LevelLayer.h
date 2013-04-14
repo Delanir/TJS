@@ -20,10 +20,9 @@
     int _arrows;
     CCLabelTTF *label,*label2,*label3;
     BOOL fire;
+
     double timeElapsedSinceBeginning;
-    float timeSinceLastArrow;
     CGPoint location;
-    //CCParticleSystem *ps;
 
 }
 
