@@ -10,15 +10,15 @@
 
 @interface Projectile : Entity
 {
-  CCParticleSystem *ps;
+    CGPoint destination;
+    double timeToLive;
 }
 
-//@property (nonatomic, retain)  CCParticleSystem *ps;
+@property (nonatomic) CGPoint destination;
+@property (nonatomic) double timeToLive;
 
-- (id) initWithSprite:(NSString *)spriteFile
-          andLocation: (CGPoint) location
-        andWindowSize: (CGSize) winSize;
+- (id) initWithSprite:(NSString *)spriteFile;
 
-- (void) destroyParticleSystem;
+- (void) destroy;
 
 @end

@@ -1,0 +1,18 @@
+
+/**           /**
+*               *
+*  Z-ordering   *
+*               *
+**/           **/
+
+LevelLayer - 0
+    background 0
+    fortress 1 900
+    enemies Screen.height-sprite.position.y
+    hero (yuri) ... 1000 (indifferent...)
+    arrows 1001
+    
+Node
+    particle system 1
+Node
+    ingame menu 2

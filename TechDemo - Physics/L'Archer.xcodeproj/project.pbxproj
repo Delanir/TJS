@@ -211,6 +211,7 @@
 		9C8C65CC1719B4EA00F56FC4 /* moat-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C8C65C11719B4EA00F56FC4 /* moat-ipadhd.png */; };
 		9C8C65D01719C66300F56FC4 /* lvl1spritesheet-ipadhd.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C8C65CD1719C09800F56FC4 /* lvl1spritesheet-ipadhd.plist */; };
 		9C8C65D11719C66600F56FC4 /* lvl1spritesheet-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C8C65CE1719C09800F56FC4 /* lvl1spritesheet-ipadhd.png */; };
+		9C8C65D41719E2A700F56FC4 /* StimulusFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8C65D31719E2A700F56FC4 /* StimulusFactory.m */; };
 		9C8DE0CF171853AD002E0D0A /* FaerieDragon.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8DE0CE171853AD002E0D0A /* FaerieDragon.m */; };
 		9C8DE0D117185844002E0D0A /* Tags in Resources */ = {isa = PBXBuildFile; fileRef = 9C8DE0D017185844002E0D0A /* Tags */; };
 		9C8DE0D31718E134002E0D0A /* zealot_anim.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C8DE0D21718E133002E0D0A /* zealot_anim.plist */; };
@@ -591,6 +592,8 @@
 		9C8C65CD1719C09800F56FC4 /* lvl1spritesheet-ipadhd.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "lvl1spritesheet-ipadhd.plist"; sourceTree = "<group>"; };
 		9C8C65CE1719C09800F56FC4 /* lvl1spritesheet-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lvl1spritesheet-ipadhd.png"; sourceTree = "<group>"; };
 		9C8C65CF1719C09800F56FC4 /* lvl1spritesheet-ipadhd.zwd */ = {isa = PBXFileReference; lastKnownFileType = file; path = "lvl1spritesheet-ipadhd.zwd"; sourceTree = "<group>"; };
+		9C8C65D21719E2A700F56FC4 /* StimulusFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StimulusFactory.h; sourceTree = "<group>"; };
+		9C8C65D31719E2A700F56FC4 /* StimulusFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StimulusFactory.m; sourceTree = "<group>"; };
 		9C8DE0CD171853AD002E0D0A /* FaerieDragon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaerieDragon.h; sourceTree = "<group>"; };
 		9C8DE0CE171853AD002E0D0A /* FaerieDragon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaerieDragon.m; sourceTree = "<group>"; };
 		9C8DE0D017185844002E0D0A /* Tags */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Tags; sourceTree = "<group>"; };
@@ -1177,6 +1180,8 @@
 				9C85F65D170A458200EECB83 /* CollisionManager.m */,
 				8BD6228717145FF60076BF42 /* SpriteManager.h */,
 				8BD6228817145FF60076BF42 /* SpriteManager.m */,
+				9C8C65D21719E2A700F56FC4 /* StimulusFactory.h */,
+				9C8C65D31719E2A700F56FC4 /* StimulusFactory.m */,
 			);
 			name = "Singleton Classes";
 			sourceTree = "<group>";
@@ -1525,6 +1530,7 @@
 				9C8DE0CF171853AD002E0D0A /* FaerieDragon.m in Sources */,
 				9C8DE0D61718EA00002E0D0A /* Zealot.m in Sources */,
 				3E08A7C91719B29D007BE310 /* Stimulus.m in Sources */,
+				9C8C65D41719E2A700F56FC4 /* StimulusFactory.m in Sources */,
 				8B8C2D971719D8A700B50C1E /* MainMenuLayer.m in Sources */,
 				8B8C2DB61719DDB600B50C1E /* CCBAnimationManager.m in Sources */,
 				8B8C2DB71719DDB900B50C1E /* CCBKeyframe.m in Sources */,
