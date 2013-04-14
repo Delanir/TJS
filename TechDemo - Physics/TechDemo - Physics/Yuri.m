@@ -31,8 +31,9 @@
         [self setShootDown:[CCRepeat actionWithAction:
                             [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"y_attack_down" ]] times:1]];
         [self setIdle:[CCRepeatForever actionWithAction:
-                            [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"y_idle" ]]]];
+                            [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"y_idle_1" ]]]];
         
+        [[self sprite] runAction:[self idle]];
     }
     return self;
 }

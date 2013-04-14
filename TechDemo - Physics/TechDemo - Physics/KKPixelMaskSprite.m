@@ -98,7 +98,7 @@ static Class PixelMaskSpriteClass = nil;
 -(void) updatePixelMask
 {
 //#warning update pixel mask
-    CCTexture2D *tex =[[self displayedFrame] texture] ;
+//    CCTexture2D *tex =[[self displayedFrame] texture] ;
     
 }
 

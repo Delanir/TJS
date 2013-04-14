@@ -62,6 +62,15 @@
         [self addZealot];
 }
 
+-(void) onEnter
+{
+    //Startup sound
+    [super onEnter];
+    //[[SimpleAudioEngine sharedEngine] setEffectsVolume:0.5f];
+    [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"Battle1.mp3" loop:YES];
+}
+
+
 // on "init" you need to initialize your instance
 -(id) init
 {
@@ -71,16 +80,14 @@
         timeElapsedSinceBeginning = 0.0f;
         _arrows = 50;
         
-        //Startup sound
-        //[[SimpleAudioEngine sharedEngine] setEffectsVolume:0.5f];
-        //[[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"Battle1.mp3" loop:YES];
-        
+        // Criação da cena com castelo
         MainScene *mainScene = [[MainScene alloc] initWithWinSize:winSize parent:self];
         [self addChild:mainScene z:0];
         [mainScene release];
         
+        // Meter yuri na cena
         Yuri * yuri = [[Yuri alloc] init];
-        yuri.position = ccp([yuri spriteSize].width/2 + 150, winSize.height/2 + 30);     // @Hardcoded - to correct
+        yuri.position = ccp([yuri spriteSize].width/2 + 120, winSize.height/2 + 30);     // @Hardcoded - to correct
         [yuri setTag:9];
         [self addChild:yuri z:1000];
         [yuri release];
@@ -88,6 +95,8 @@
         // This dummy method initializes the collision manager
         [[CollisionManager shared] dummyMethod];
       
+        
+        // Estes labels deviam estar noutro sitio
       label = [CCLabelTTF labelWithString:@"Number of Arrows Left: 50" fontName:@"Futura" fontSize:20];
       label2 = [CCLabelTTF labelWithString:@"Wall health: 100" fontName:@"Futura" fontSize:20];
       label3 = [CCLabelTTF labelWithString:@"Money: 0" fontName:@"Futura" fontSize:20];
@@ -97,17 +106,17 @@
       
       //Power Buttons
       CCMenuItem *plusMenuItem = [CCMenuItemImage
-                                 itemFromNormalImage:@"plus.png" selectedImage:@"cross.png"
+                                 itemWithNormalImage:@"plus.png" selectedImage:@"cross.png"
                                  target:self selector:@selector(plusButtonTapped:)];
       plusMenuItem.position = ccp(810, 60);
       
       CCMenuItem *crossMenuItem = [CCMenuItemImage
-                                   itemFromNormalImage:@"cross.png" selectedImage:@"plus.png"
+                                   itemWithNormalImage:@"cross.png" selectedImage:@"plus.png"
                                    target:self selector:@selector(crossButtonTapped:)];
       crossMenuItem.position = ccp(880, 60);
       
         CCMenuItem *bullseyeMenuItem = [CCMenuItemImage
-                                        itemFromNormalImage:@"bullseye.png" selectedImage:@"plus.png"
+                                        itemWithNormalImage:@"bullseye.png" selectedImage:@"plus.png"
                                         target:self selector:@selector(bullseyeButtonTapped:)];
         bullseyeMenuItem.position = ccp(950, 60);
       
@@ -130,27 +139,17 @@
 }
 
 - (void)plusButtonTapped:(id)sender {
-  //[_label setString:@"Last button: *"];
-  //CCLOG(@"PLUS BUTTON PRESSED");
-  //NSString* myNewString =;
-  //CCLOG(myNewString);
   buttons=1;
   
 }
 
 - (void)crossButtonTapped:(id)sender {
-  //[_label setString:@"Last button: *"];
-  //CCLOG(@"CROSS BUTTON PRESSED");
   buttons=2;
 }
 
 - (void)bullseyeButtonTapped:(id)sender {
-  //[_label setString:@"Last button: *"];
-  //CCLOG(@"BULLSEYE BUTTON PRESSED");
   buttons=3;
 }
-
-
 
 
 
@@ -201,7 +200,7 @@
     if(arrow != nil)
     {
         [[SimpleAudioEngine sharedEngine] playEffect:@"Swoosh.caf"];
-        [self addChild:arrow];
+        [self addChild:arrow z:1201];
         
         arrow.tag = 2;
         [[CollisionManager shared] addToProjectiles:arrow];
@@ -212,7 +211,7 @@
     [arrow release];
     arrow=nil;
     
-#warning This might be useful later on
+#warning Forma de alterar o firerate do Yuri
     //float currentDelay = [[[CCAnimationCache sharedAnimationCache] animationByName:@"y_attack_front"] delayPerUnit];
     //[(Yuri*)[self getChildByTag:9] changeFireRate:currentDelay+0.1];
 }

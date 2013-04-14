@@ -22,8 +22,9 @@
         CGSize spriteSize = [self spriteSize];
         
         // @TODO init with yuri information
-        sprite.position = ccp(190, winSize.height/2 + 28);
-    
+        sprite.position = ccp(180, winSize.height/2 + 26);
+        [sprite setAnchorPoint:CGPointMake(0, 0.5)];
+        
         // Determine offset of location to projectile
         int offX = location.x - sprite.position.x;
         int offY = location.y - sprite.position.y;

@@ -161,7 +161,6 @@ static CollisionManager* _sharedSingleton = nil;
         for (Enemy *target in _targets)
             if ([wall pixelMaskContainsPoint:[[target sprite] position]])
                 [target attack];
-#warning Expandir isto para todos os animais
 }
 
 -(void)addToTargets: (Enemy*) target

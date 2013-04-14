@@ -113,7 +113,7 @@ static Wall * _major = nil;
     [parentNode removeChildByTag:5 cleanup:YES];
     [parentNode removeChildByTag:5 cleanup:YES];
     
-    [parentNode addChild:topSprite z:1500];
+    [parentNode addChild:topSprite z:999];
     [parentNode addChild:bottomSprite z:10];
 }
 

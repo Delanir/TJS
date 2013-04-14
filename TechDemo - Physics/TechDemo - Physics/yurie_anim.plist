@@ -2,13 +2,34 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>y_idle</key>
+	<key>y_idle_1</key>
 	<dict>
 		<key>delay</key>
-		<integer>1</integer>
+		<real>0.1</real>
 		<key>frames</key>
 		<array>
-			<string>y_lvl3_01.png</string>
+			<string>y_lvl3_idle1_01.png</string>
+			<string>y_lvl3_idle1_02.png</string>
+			<string>y_lvl3_idle1_03.png</string>
+			<string>y_lvl3_idle1_04.png</string>
+			<string>y_lvl3_idle1_05.png</string>
+			<string>y_lvl3_idle1_04.png</string>
+			<string>y_lvl3_idle1_03.png</string>
+			<string>y_lvl3_idle1_02.png</string>
+		</array>
+	</dict>
+	<key>y_idle_2</key>
+	<dict>
+		<key>delay</key>
+		<real>0.1</real>
+		<key>frames</key>
+		<array>
+			<string>y_lvl3_idle2_01.png</string>
+			<string>y_lvl3_idle2_02.png</string>
+			<string>y_lvl3_idle2_03.png</string>
+			<string>y_lvl3_idle2_04.png</string>
+			<string>y_lvl3_idle2_03.png</string>
+			<string>y_lvl3_idle2_02.png</string>
 		</array>
 	</dict>
 	<key>y_attack_up</key>

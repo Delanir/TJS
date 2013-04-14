@@ -9,7 +9,6 @@
 #import "MainMenuLayer.h"
 #import "CCBReader.h"
 
-
 #import "LevelLayer.h"
 #import "SpriteManager.h"
 #import "Config.h"
@@ -25,8 +24,6 @@
 {
 	[super onEnter];
     
-    // ask director for the window size
-	CGSize size = [[CCDirector sharedDirector] winSize];
     //Initialize art and animations
     [self addChild:[[SpriteManager shared] addSpritesToSpriteFrameCacheWithFile:@"lvl1spritesheet.plist" andBatchSpriteSheet:@"lvl1spritesheet.png"]];
     
@@ -35,6 +32,14 @@
     [[SpriteManager shared] addAnimationFromFile:@"zealot_anim.plist"];
     [[SpriteManager shared] addAnimationFromFile:@"yurie_anim.plist"];
     [[SimpleAudioEngine sharedEngine] init];
+    [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"MainMenu.mp3" loop:YES];
+}
+
+-(void) onExit
+{
+    [super onExit];
+    [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
+    
 }
 
 - (void) pressedSettings:(id)sender
@@ -49,14 +54,14 @@
 
 - (void) pressedAchievments:(id)sender
 {
-    GKAchievementViewController *achivementViewController = [[GKAchievementViewController alloc] init];
-    achivementViewController.achievementDelegate = self;
+    GKAchievementViewController *achievementViewController = [[GKAchievementViewController alloc] init];
+    achievementViewController.achievementDelegate = self;
     
     AppController *app = (AppController*) [[UIApplication sharedApplication] delegate];
     
-    [[app navController] presentModalViewController:achivementViewController animated:YES];
+    [[app navController] presentModalViewController:achievementViewController animated:YES];
     
-    [achivementViewController release];
+    [achievementViewController release];
 }
 
 - (void) pressedLeaderboard:(id)sender
@@ -73,14 +78,9 @@
 
 - (void) pressedPlay:(id)sender
 {
-    
-    
 	// In one second transition to the new scene
 	//[self scheduleOnce:@selector(makeTransition:) delay:1];
-    
     [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[LevelLayer scene] withColor:ccWHITE]];
-    
-    
 }
 
 //-(void) makeTransition:(ccTime)dt
