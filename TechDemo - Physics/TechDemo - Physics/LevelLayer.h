@@ -16,6 +16,11 @@
 // HelloWorldLayer
 @interface LevelLayer : CCLayer <GKAchievementViewControllerDelegate, GKLeaderboardViewControllerDelegate>
 {
+    int buttons;
+    int _arrows;
+    CCLabelTTF *label,*label2,*label3;
+    BOOL fire;
+
     double timeElapsedSinceBeginning;
     CGPoint location;
 
