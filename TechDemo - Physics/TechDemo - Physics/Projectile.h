@@ -8,6 +8,8 @@
 
 #import "Entity.h"
 
+typedef enum {ice, air, fire} particleType;
+
 @interface Projectile : Entity
 {
   CCParticleSystem *ps;

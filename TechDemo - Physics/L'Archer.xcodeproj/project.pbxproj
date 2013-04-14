@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3E08A7C61719A96F007BE310 /* Swoosh.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3E08A7C51719A96F007BE310 /* Swoosh.caf */; };
 		3E08A7C91719B29D007BE310 /* Stimulus.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E08A7C81719B29D007BE310 /* Stimulus.m */; };
+		3E14D23B171A2A28005992A6 /* Comet.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E14D23A171A2A28005992A6 /* Comet.plist */; };
 		3EB8A37E17161AF800666626 /* defaultEmitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EB8A37D17161AF800666626 /* defaultEmitter.png */; };
 		3EB8A38017161CFA00666626 /* fire.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EB8A37F17161CFA00666626 /* fire.png */; };
 		3EDD9F231715DF2900C6A622 /* background-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EDD9F221715DF2900C6A622 /* background-ipadhd.png */; };
@@ -206,6 +207,7 @@
 		3E08A7C51719A96F007BE310 /* Swoosh.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Swoosh.caf; sourceTree = "<group>"; };
 		3E08A7C71719B29D007BE310 /* Stimulus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stimulus.h; sourceTree = "<group>"; };
 		3E08A7C81719B29D007BE310 /* Stimulus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stimulus.m; sourceTree = "<group>"; };
+		3E14D23A171A2A28005992A6 /* Comet.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Comet.plist; sourceTree = "<group>"; };
 		3EB8A37D17161AF800666626 /* defaultEmitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultEmitter.png; sourceTree = "<group>"; };
 		3EB8A37F17161CFA00666626 /* fire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fire.png; sourceTree = "<group>"; };
 		3EDD9F221715DF2900C6A622 /* background-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-ipadhd.png"; sourceTree = "<group>"; };
@@ -671,6 +673,7 @@
 		9C85F4AC1707957E00EECB83 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3E14D23A171A2A28005992A6 /* Comet.plist */,
 				9C8DE0D017185844002E0D0A /* Tags */,
 				9C94ABD717197BD2005BCE32 /* zDepth */,
 				9C94ABD917197D3C005BCE32 /* Animations */,
@@ -1293,6 +1296,7 @@
 				9C8C65CA1719B4EA00F56FC4 /* castle75-bottom-ipadhd.png in Resources */,
 				9C8C65CB1719B4EA00F56FC4 /* castle75-top-ipadhd.png in Resources */,
 				9C8C65CC1719B4EA00F56FC4 /* moat-ipadhd.png in Resources */,
+				3E14D23B171A2A28005992A6 /* Comet.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

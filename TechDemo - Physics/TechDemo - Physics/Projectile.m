@@ -22,22 +22,58 @@
 - (id) initWithSprite:(NSString *)spriteFile andLocation:(CGPoint)location andWindowSize:(CGSize)winSize
 {
     if( (self=[super init])) {
+      int type = air;
       
         [self setSpriteWithSpriteFrameName:spriteFile];
         [self addChild:sprite];
       
-        ps = [[CCParticleMeteor node] retain];
-        [self addChild:ps];
+      switch (type) {
+        case fire:
+          ps = [[CCParticleSun node] retain];
+          [self addChild:ps];
+          ps.startSize = 15;
+//          ps.gravity = CGPointZero;
+//          ps.life = 0;
+//          ps.totalParticles = 25;
+          break;
+        case ice:
+          ps = [[CCParticleMeteor node] retain];
+          [self addChild:ps];
+          ps.startSize = 15;
+          ps.gravity = CGPointZero;
+//          ps.life = 0;
+//          ps.totalParticles = 25;
+//          ps.emissionRate = 100;
+//          ps.angle = 0;
+//          
+//            ps.emissionRate = 0.01f;
+//          
+//            ps.duration = 2.7f;
+//            ps.lifeVar = 0.1f;
+//            ps.totalParticles = 100;
+          break;
+        case air:
+          ps = [CCParticleSystemQuad particleWithFile:@"Comet.plist"];
+//          ccBlendFunc bfMask = ccBlendFunc();
+//          bfMask.src = GL_ONE;
+//          bfMask.dst = GL_ZERO;
+//          ps.blendFunc=ccBlendFunc(GL_SRC_ALPHA);
+//          ps = [[CCParticleSmoke node] retain];
+          [self addChild:ps];
+         ps.startSize = 15;
+//          ps.gravity = CGPointZero;
+//          ps.life = 0;
+//          ps.totalParticles = 25;
+          break;
+        default: ps = Nil;
+          break;
+      }
       
-      //  ps.startSize = 15;
-      ps.gravity = CGPointZero;
-      ps.life = 0;
-      //  ps.totalParticles = 25;
       sprite.position = ccp(190, winSize.height/2 + 28);                 // @TODO init with yuri information
-      ps.position = sprite.position;
+      ps.position = ccp(sprite.position.x + sprite.contentSize.width/2,sprite.position.y);
       
         CGSize spriteSize = [self spriteSize];
-        CCLOG(@">>> X: %f  Y: %f\n", sprite.position.x, sprite.position.y);
+//        CCLOG(@">>> X: %f  Y: %f\n", sprite.position.x, sprite.position.y);
         // Determine offset of location to projectile
         int offX = location.x - sprite.position.x;
         int offY = location.y - sprite.position.y;
