@@ -127,9 +127,9 @@ static SpriteManager* _sharedSingleton = nil;
         }
         
         if ( delay != nil ) {
-            animation = [CCAnimation animationWithSpriteFrames:frames delay:[delay floatValue]];
+            animation = [CCAnimation animationWithSpriteFrames:(NSArray *) frames delay:[delay floatValue]];
         } else {
-            animation = [CCAnimation animationWithSpriteFrames:frames];
+            animation = [CCAnimation animationWithSpriteFrames:(NSArray *) frames];
         }
         
         [[CCAnimationCache sharedAnimationCache] addAnimation:animation name:name];

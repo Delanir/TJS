@@ -21,7 +21,7 @@
 - (id) initWithSprite:(NSString *)spriteFile
 {
     if( (self=[super init])) {
-        
+      
         [self setSpriteWithSpriteFrameName:spriteFile];
         [self addChild:sprite];
         

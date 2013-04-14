@@ -1,3 +1,5 @@
+achievements.png
+achievements@2x.png
 background-ipadhd.png
 background.png
 Button_Play.png
@@ -41,6 +43,8 @@ fairiedragon_anim.plist
 fire.png
 HelloCocosBuilder.ccbi
 larcher_transparent_name.png
+leaderboard.png
+leaderboard@2x.png
 lvl1spritesheet-ipadhd.plist
 lvl1spritesheet-ipadhd.png
 lvl1spritesheet.plist
@@ -61,4 +65,8 @@ Icon-Small@2x.png
 icon3.png
 Icon@2x.png
 Info.plist
+settings.png
+settings@2x.png
+skilltree.png
+skilltree@2x.png
 zealot_anim.plist
