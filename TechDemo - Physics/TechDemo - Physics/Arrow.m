@@ -87,17 +87,28 @@
                                //[CCCallFuncN actionWithTarget:self selector:@selector(spriteMoveFinished:)],
                                nil]];
                 break;
-            case dot:
-                // create particle para isto
-                NSLog(@"DAMAGE OVER TIME");
+              case dot:
+                  ps = [[CCParticleSun node] retain];
+                  [self addChild:ps];
+                  ps.startSize = 15;
+//                ps.gravity = CGPointZero;
+//                ps.life = 0;
+//                ps.totalParticles = 25;
+                  ps.position = sprite.position;
+            
+                  // Move Particle system to actual endpoint
+                  [ps runAction:[CCSequence actions:
+                                 [CCMoveTo actionWithDuration:[self timeToLive] position:[self destination]],
+                                 //[CCCallFuncN actionWithTarget:self selector:@selector(spriteMoveFinished:)],
+                                 nil]];
                 break;
-            case damage:
-                NSLog(@"JUST DAMAGE!!");
+              case damage:
+                  NSLog(@"JUST DAMAGE!!");
                 break;
-            case pushBack:
-                NSLog(@"PUSH IT");
+              case pushBack:
+                  NSLog(@"PUSH IT");
                 break;
-            default:
+              default:
                 break;
         }
     }

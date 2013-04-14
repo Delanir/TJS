@@ -111,6 +111,7 @@
         CGSize winSize = [[CCDirector sharedDirector] winSize];
         timeSinceLastArrow = 0.0f;
         timeElapsedSinceBeginning = 0.0f;
+        _arrows = 50;
         
         //Startup sound
         //[[SimpleAudioEngine sharedEngine] setEffectsVolume:0.5f];
@@ -127,7 +128,39 @@
         
         // This dummy method initializes the collision manager
         [[CollisionManager shared] dummyMethod];
-        
+      
+      label = [CCLabelTTF labelWithString:@"Number of Arrows Left: 50" fontName:@"Futura" fontSize:20];
+      label2 = [CCLabelTTF labelWithString:@"Wall health: 100" fontName:@"Futura" fontSize:20];
+      label3 = [CCLabelTTF labelWithString:@"Money: 0" fontName:@"Futura" fontSize:20];
+      label.position = CGPointMake(label.contentSize.width/2 + 70, 80);
+      label2.position = CGPointMake(label2.contentSize.width/2 + 70,50);
+      label3.position = CGPointMake(label3.contentSize.width/2 + 70, 20);
+      
+      //Power Buttons
+      CCMenuItem *plusMenuItem = [CCMenuItemImage
+                                 itemFromNormalImage:@"plus.png" selectedImage:@"cross.png"
+                                 target:self selector:@selector(plusButtonTapped:)];
+      plusMenuItem.position = ccp(810, 60);
+      
+      CCMenuItem *crossMenuItem = [CCMenuItemImage
+                                   itemFromNormalImage:@"cross.png" selectedImage:@"plus.png"
+                                   target:self selector:@selector(crossButtonTapped:)];
+      crossMenuItem.position = ccp(880, 60);
+      
+        CCMenuItem *bullseyeMenuItem = [CCMenuItemImage
+                                        itemFromNormalImage:@"bullseye.png" selectedImage:@"plus.png"
+                                        target:self selector:@selector(bullseyeButtonTapped:)];
+        bullseyeMenuItem.position = ccp(950, 60);
+      
+      
+        CCMenu *superMenu = [CCMenu menuWithItems:plusMenuItem, crossMenuItem, bullseyeMenuItem, nil];
+        superMenu.position = CGPointZero;
+      
+        [self addChild:superMenu];
+        [self addChild:label z:1];
+        [self addChild:label2 z:1];
+        [self addChild:label3 z:1];
+      
         [self schedule:@selector(update:)];
     }
     
@@ -135,6 +168,27 @@
     [self schedule:@selector(gameLogic:) interval:1.0];
     
     return self;
+}
+
+- (void)plusButtonTapped:(id)sender {
+  //[_label setString:@"Last button: *"];
+  //CCLOG(@"PLUS BUTTON PRESSED");
+  //NSString* myNewString =;
+  //CCLOG(myNewString);
+  buttons=1;
+  
+}
+
+- (void)crossButtonTapped:(id)sender {
+  //[_label setString:@"Last button: *"];
+  //CCLOG(@"CROSS BUTTON PRESSED");
+  buttons=2;
+}
+
+- (void)bullseyeButtonTapped:(id)sender {
+  //[_label setString:@"Last button: *"];
+  //CCLOG(@"BULLSEYE BUTTON PRESSED");
+  buttons=3;
 }
 
 
@@ -160,10 +214,16 @@
 {
     
     CCArray * stimulusPackage = [[CCArray alloc] init];
+    [stimulusPackage removeAllObjects];
+  if (buttons==1) {
     [stimulusPackage addObject:[[StimulusFactory shared] generateColdStimulusWithValue:2]];
-    [stimulusPackage addObject:[[StimulusFactory shared] generateDamageStimulusWithValue:2]];
-    [stimulusPackage addObject:[[StimulusFactory shared] generatePushBackStimulusWithValue:2]];
+  }else if (buttons==2){
     [stimulusPackage addObject:[[StimulusFactory shared] generateFireStimulusWithValue:2]];
+  }else if (buttons==3){
+    [stimulusPackage addObject:[[StimulusFactory shared] generatePushBackStimulusWithValue:2]];
+  }else {
+    [stimulusPackage addObject:[[StimulusFactory shared] generateDamageStimulusWithValue:2]];
+  }
     
     Arrow * arrow = [[Arrow alloc] initWithDestination:alocation andStimulusPackage:stimulusPackage];
     
@@ -176,7 +236,10 @@
         
         arrow.tag = 2;
         [[CollisionManager shared] addToProjectiles:arrow];
+      
+        _arrows--;
     }
+    [label setString:[NSString stringWithFormat:@"Number of Arrows Left: %i", _arrows]];
     [arrow release];
     arrow=nil;
     
