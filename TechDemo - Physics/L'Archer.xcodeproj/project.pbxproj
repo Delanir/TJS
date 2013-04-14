@@ -15,6 +15,14 @@
 		3EDD9F251715DF9F00C6A622 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EDD9F241715DF9F00C6A622 /* background.png */; };
 		3EDD9F291715E4CD00C6A622 /* lvl1spritesheet.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3EDD9F281715E4CD00C6A622 /* lvl1spritesheet.plist */; };
 		3EDD9F301715E7F800C6A622 /* Wall.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDD9F2F1715E7F800C6A622 /* Wall.m */; };
+		8B560892171A251200B14693 /* achievements.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B56088C171A251200B14693 /* achievements.png */; };
+		8B560893171A251200B14693 /* achievements@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B56088D171A251200B14693 /* achievements@2x.png */; };
+		8B560894171A251200B14693 /* leaderboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B56088E171A251200B14693 /* leaderboard.png */; };
+		8B560895171A251200B14693 /* leaderboard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B56088F171A251200B14693 /* leaderboard@2x.png */; };
+		8B560896171A251200B14693 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B560890171A251200B14693 /* settings.png */; };
+		8B560897171A251200B14693 /* settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B560891171A251200B14693 /* settings@2x.png */; };
+		8B56089B171A251F00B14693 /* skilltree.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B560899171A251F00B14693 /* skilltree.png */; };
+		8B56089C171A251F00B14693 /* skilltree@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B56089A171A251F00B14693 /* skilltree@2x.png */; };
 		8B8C2D971719D8A700B50C1E /* MainMenuLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B8C2D961719D8A700B50C1E /* MainMenuLayer.m */; };
 		8B8C2D9C1719DB9300B50C1E /* MainMenu.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 8B8C2D9B1719DB9300B50C1E /* MainMenu.ccbi */; };
 		8B8C2DB61719DDB600B50C1E /* CCBAnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B8C2DAB1719DDA900B50C1E /* CCBAnimationManager.m */; };
@@ -226,6 +234,14 @@
 		3EDD9F281715E4CD00C6A622 /* lvl1spritesheet.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = lvl1spritesheet.plist; sourceTree = "<group>"; };
 		3EDD9F2E1715E7F700C6A622 /* Wall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wall.h; sourceTree = "<group>"; };
 		3EDD9F2F1715E7F800C6A622 /* Wall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Wall.m; sourceTree = "<group>"; };
+		8B56088C171A251200B14693 /* achievements.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = achievements.png; sourceTree = "<group>"; };
+		8B56088D171A251200B14693 /* achievements@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "achievements@2x.png"; sourceTree = "<group>"; };
+		8B56088E171A251200B14693 /* leaderboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leaderboard.png; sourceTree = "<group>"; };
+		8B56088F171A251200B14693 /* leaderboard@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "leaderboard@2x.png"; sourceTree = "<group>"; };
+		8B560890171A251200B14693 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
+		8B560891171A251200B14693 /* settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings@2x.png"; sourceTree = "<group>"; };
+		8B560899171A251F00B14693 /* skilltree.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = skilltree.png; sourceTree = "<group>"; };
+		8B56089A171A251F00B14693 /* skilltree@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "skilltree@2x.png"; sourceTree = "<group>"; };
 		8B8C2D951719D8A700B50C1E /* MainMenuLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuLayer.h; sourceTree = "<group>"; };
 		8B8C2D961719D8A700B50C1E /* MainMenuLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuLayer.m; sourceTree = "<group>"; };
 		8B8C2D9B1719DB9300B50C1E /* MainMenu.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = MainMenu.ccbi; sourceTree = "<group>"; };
@@ -731,6 +747,14 @@
 		9C85F4AC1707957E00EECB83 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8B560899171A251F00B14693 /* skilltree.png */,
+				8B56089A171A251F00B14693 /* skilltree@2x.png */,
+				8B56088C171A251200B14693 /* achievements.png */,
+				8B56088D171A251200B14693 /* achievements@2x.png */,
+				8B56088E171A251200B14693 /* leaderboard.png */,
+				8B56088F171A251200B14693 /* leaderboard@2x.png */,
+				8B560890171A251200B14693 /* settings.png */,
+				8B560891171A251200B14693 /* settings@2x.png */,
 				8B8C2D9B1719DB9300B50C1E /* MainMenu.ccbi */,
 				9C8DE0D017185844002E0D0A /* Tags */,
 				9C94ABD717197BD2005BCE32 /* zDepth */,
@@ -1360,6 +1384,14 @@
 				8B8C2DC31719EA3F00B50C1E /* Button_Play_pressed@2x.png in Resources */,
 				8B8C2DC41719EA3F00B50C1E /* Button_Play@2x.png in Resources */,
 				8B8C2DC51719EA3F00B50C1E /* larcher_transparent_name.png in Resources */,
+				8B560892171A251200B14693 /* achievements.png in Resources */,
+				8B560893171A251200B14693 /* achievements@2x.png in Resources */,
+				8B560894171A251200B14693 /* leaderboard.png in Resources */,
+				8B560895171A251200B14693 /* leaderboard@2x.png in Resources */,
+				8B560896171A251200B14693 /* settings.png in Resources */,
+				8B560897171A251200B14693 /* settings@2x.png in Resources */,
+				8B56089B171A251F00B14693 /* skilltree.png in Resources */,
+				8B56089C171A251F00B14693 /* skilltree@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
