@@ -47,6 +47,7 @@
 		8BD62290171460200076BF42 /* lvl1spritesheet.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BD6228D171460200076BF42 /* lvl1spritesheet.png */; };
 		8BFA2D9D171724F9008A2064 /* fairiedragon_anim.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8BFA2D9C171724F9008A2064 /* fairiedragon_anim.plist */; };
 		8BFA2DA017172536008A2064 /* peasant_anim.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8BFA2D9F17172536008A2064 /* peasant_anim.plist */; };
+		8C5C3324171B195800093301 /* HudLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C5C3323171B195800093301 /* HudLayer.m */; };
 		9C377BE9170B72D400F840FB /* KKPixelMaskSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C377BE2170B6F5100F840FB /* KKPixelMaskSprite.m */; };
 		9C377BEA170B72D700F840FB /* bitarray.c in Sources */ = {isa = PBXBuildFile; fileRef = 9C377BE3170B715A00F840FB /* bitarray.c */; };
 		9C377BF3170B732D00F840FB /* CCNodeExtensions.h in Sources */ = {isa = PBXBuildFile; fileRef = 9C377BEF170B731A00F840FB /* CCNodeExtensions.h */; };
@@ -284,6 +285,8 @@
 		8BD6228D171460200076BF42 /* lvl1spritesheet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lvl1spritesheet.png; sourceTree = "<group>"; };
 		8BFA2D9C171724F9008A2064 /* fairiedragon_anim.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = fairiedragon_anim.plist; sourceTree = "<group>"; };
 		8BFA2D9F17172536008A2064 /* peasant_anim.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = peasant_anim.plist; sourceTree = "<group>"; };
+		8C5C3322171B195800093301 /* HudLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HudLayer.h; sourceTree = "<group>"; };
+		8C5C3323171B195800093301 /* HudLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HudLayer.m; sourceTree = "<group>"; };
 		9C377BE1170B6F5100F840FB /* KKPixelMaskSprite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKPixelMaskSprite.h; sourceTree = "<group>"; };
 		9C377BE2170B6F5100F840FB /* KKPixelMaskSprite.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKPixelMaskSprite.m; sourceTree = "<group>"; };
 		9C377BE3170B715A00F840FB /* bitarray.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = bitarray.c; sourceTree = "<group>"; };
@@ -1213,6 +1216,8 @@
 		9C969E581716263000BE7476 /* Scene Entities */ = {
 			isa = PBXGroup;
 			children = (
+				8C5C3322171B195800093301 /* HudLayer.h */,
+				8C5C3323171B195800093301 /* HudLayer.m */,
 				9C85F659170A3E4100EECB83 /* MainScene.h */,
 				9C85F65A170A3E4200EECB83 /* MainScene.m */,
 				3EDD9F2E1715E7F700C6A622 /* Wall.h */,
@@ -1570,6 +1575,7 @@
 				8B8C2DB91719DDBF00B50C1E /* CCBsequence.m in Sources */,
 				8B8C2DBA1719DDC200B50C1E /* CCBSequenceProperty.m in Sources */,
 				8B8C2DBB1719DDC500B50C1E /* CCNode+CCBRelativePositioning.m in Sources */,
+				8C5C3324171B195800093301 /* HudLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -103,10 +103,10 @@
                                  nil]];
                 break;
               case damage:
-                  NSLog(@"JUST DAMAGE!!");
+//                  NSLog(@"JUST DAMAGE!!");
                 break;
               case pushBack:
-                  NSLog(@"PUSH IT");
+//                  NSLog(@"PUSH IT");
                 break;
               default:
                 break;
