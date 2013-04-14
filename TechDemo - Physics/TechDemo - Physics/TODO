@@ -4,27 +4,19 @@
 *                *
 **/            **/
 
-- Wall está a ser destruída magicamente
-    - Entidades não estão a ser destruídas
+- Background sound para assim que começa
+- som do impacto tem de ser corrigido
 - Vida da wall
 - setas a saír por cima
-
-- Sprites de morte dos inimigos (ps) - Done, falta implementar
 - Desenhar Skill Tree (ps)
-
-- Dano dos inimigos (Amaral)
-- Implementação de estimulos (StimulousPackage - Damage, Fire, Ice) (João M)
-
-- Passar para os arqueiros do heroes  (João M)
-    - Tratar das sprites
-- Limitar as setas disparadas (quando acabam comeaça os nums negativos
+- Dano dos inimigos (Amaral)        
+- Limitar as setas disparadas (quando acabam comeaça os nums negativos)
 
 /**
 * Later
 **/
 
 - Menus com Cocos Builder! (Daniela, Ricardo)
-- Desenhar GUI (???) (health and other debug info)
 
 - corrigir warnings. Em particular o da referência à wall (João)
 - Corrigir colisões no retina (???????????????????)
@@ -98,5 +90,9 @@
 - Sprites de morte dos inimigos (ps) - Done, falta implementar
 - Sprites Idle do yuri (ps) - Done,
 - Posição e rotação da flecha corrigida
+- Implementação de estimulos (StimulousPackage - Damage, Fire, Ice) (João M)
+- Sprites de morte dos inimigos (ps) - Done
+- Wall está a ser destruída magicamente - Done
+- Desenhar GUI (???) (health and other debug info)
 
 

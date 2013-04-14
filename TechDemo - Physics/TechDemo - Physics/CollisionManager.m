@@ -139,7 +139,7 @@ static CollisionManager* _sharedSingleton = nil;
         {
             [[SimpleAudioEngine sharedEngine] playEffect:@"hit.mp3"];
             [_targets removeObject:target];
-            [target destroy];
+            [target die];
         }
         
         if (targetsToDelete.count > 0)

@@ -11,6 +11,8 @@
 
 @implementation Enemy
 
+@synthesize currentState;
+
 - (id) initWithSprite:(NSString *)spriteFile andWindowSize:(CGSize) winSize
 {
     if( (self=[super init])) {
@@ -44,6 +46,12 @@
 
 -(void)attack
 {
+}
+
+-(void)die
+{
+    // descomentar para a sprites aparecerem
+    //[self destroy];
 }
 
 @end

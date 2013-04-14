@@ -2,6 +2,20 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>p_dies</key>
+	<dict>
+		<key>delay</key>
+		<real>0.1</real>
+		<key>frames</key>
+		<array>
+			<string>p_dead01.png</string>
+			<string>p_dead02.png</string>
+			<string>p_dead03.png</string>
+			<string>p_dead04.png</string>
+			<string>p_dead05.png</string>
+			<string>p_dead06.png</string>
+		</array>
+	</dict>
 	<key>p_walk</key>
 	<dict>
 		<key>delay</key>

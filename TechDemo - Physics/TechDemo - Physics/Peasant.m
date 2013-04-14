@@ -18,7 +18,7 @@
 {
     if (self = [super initWithSprite:spriteFile andWindowSize:winSize])
     {
-        currentState = walk;
+        [self setCurrentState:walk];
         
         // Setup movement
         
@@ -56,11 +56,21 @@
 
 -(void)attack
 {
-    currentState = attack;
+    [self setCurrentState:attack];
     [[self sprite] stopAllActions];
     [[self sprite] setPosition:CGPointMake([self sprite].position.x +6, [self sprite].position.y)];
     //[[self sprite] runAction:walkAction];
     [[self sprite] runAction:attackAction];
+}
+
+-(void)die
+{
+    [super die];
+    [self setCurrentState:die];
+    [[self sprite] stopAllActions];
+    
+    CCFiniteTimeAction * dieAction = [CCRepeat actionWithAction:[CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"p_dies" ]] times:1];
+    [[self sprite] runAction:dieAction];
 }
 
 - (void)update:(ccTime)dt

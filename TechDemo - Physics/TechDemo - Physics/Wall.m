@@ -64,9 +64,7 @@ static Wall * _major = nil;
         
         [[CollisionManager shared] addToWalls:castletop100];
         [[CollisionManager shared] addToWalls:castlebottom100];
-        
-        NSLog(@"Castle size is W:%f H:%f", castlebottom100.contentSize.width, castlebottom100.contentSize.height);
-        
+                
 #warning TEMPORARIO remover moat
         [self addMoat];
         
