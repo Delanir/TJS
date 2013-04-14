@@ -11,20 +11,19 @@
 
 // When you import this file, you import all the cocos2d classes
 #import "cocos2d.h"
+#import "HudLayer.h"
 
 
 // HelloWorldLayer
 @interface LevelLayer : CCLayer <GKAchievementViewControllerDelegate, GKLeaderboardViewControllerDelegate>
 {
-    int buttons;
-    int _arrows;
-    CCLabelTTF *label,*label2,*label3;
     BOOL fire;
-
+    HudLayer *hud;
     double timeElapsedSinceBeginning;
     CGPoint location;
 
 }
+@property (nonatomic,retain) HudLayer *hud;
 
 // returns a CCScene that contains the HelloWorldLayer as the only child
 +(CCScene *) scene;
