@@ -17,6 +17,8 @@
 #import "EnemyFactory.h"
 #import "SpriteManager.h"
 #import "FaerieDragon.h"
+#import "StimulusFactory.h"
+#import "Stimulus.h"
 
 // Particle Systems
 #import "CCParticleSystem.h"
@@ -117,7 +119,7 @@
         MainScene *mainScene = [[MainScene alloc] initWithWinSize:winSize parent:self];
         [self addChild:mainScene z:0];
         [mainScene release];
-         
+        
         Yuri * yuri = [[Yuri alloc] initWithSprite:@"yurie.png"];
         yuri.position = ccp([yuri spriteSize].width/2 + 150, winSize.height/2 + 30);     // @Hardcoded - to correct
         [self addChild:yuri z:1000];
@@ -138,7 +140,7 @@
 
 -(void) ccTouchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-  fire = NO;
+    fire = NO;
 }
 
 
@@ -156,37 +158,43 @@
 
 - (void) addProjectile:(CGPoint) alocation
 {
-  // Set up initial location of projectile
-  CGSize winSize = [[CCDirector sharedDirector] winSize];
-  
-  Arrow * arrow = [[Arrow alloc] initWithSprite: @"Projectile.png" andLocation:alocation andWindowSize:winSize];
-  
-  if(arrow != nil)
-  {
-    [[SimpleAudioEngine sharedEngine] playEffect:@"Swoosh.caf"];
-    [self addChild:arrow];
-
-    arrow.tag = 2;
-    [[CollisionManager shared] addToProjectiles:arrow];
-  }
-  [arrow release];
-  arrow=nil;
-
+    
+    CCArray * stimulusPackage = [[CCArray alloc] init];
+    [stimulusPackage addObject:[[StimulusFactory shared] generateColdStimulusWithValue:2]];
+    [stimulusPackage addObject:[[StimulusFactory shared] generateDamageStimulusWithValue:2]];
+    [stimulusPackage addObject:[[StimulusFactory shared] generatePushBackStimulusWithValue:2]];
+    [stimulusPackage addObject:[[StimulusFactory shared] generateFireStimulusWithValue:2]];
+    
+    Arrow * arrow = [[Arrow alloc] initWithDestination:alocation andStimulusPackage:stimulusPackage];
+    
+    [stimulusPackage release];
+    
+    if(arrow != nil)
+    {
+        [[SimpleAudioEngine sharedEngine] playEffect:@"Swoosh.caf"];
+        [self addChild:arrow];
+        
+        arrow.tag = 2;
+        [[CollisionManager shared] addToProjectiles:arrow];
+    }
+    [arrow release];
+    arrow=nil;
+    
 }
 
 - (void)ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-  fire = YES;
-  
-  // Choose one of the touches to work with
-  UITouch *touch = [touches anyObject];
-  location = [self convertTouchToNodeSpace:touch];
-  location = [touch  locationInView:[touch view]];
-  location = [[CCDirector sharedDirector] convertToGL:location];
-  
-
-  //CCLOG(@">>> X: %f  Y: %f\n", location.x, location.y);
-
+    fire = YES;
+    
+    // Choose one of the touches to work with
+    UITouch *touch = [touches anyObject];
+    location = [self convertTouchToNodeSpace:touch];
+    location = [touch  locationInView:[touch view]];
+    location = [[CCDirector sharedDirector] convertToGL:location];
+    
+    
+    //CCLOG(@">>> X: %f  Y: %f\n", location.x, location.y);
+    
 }
 
 // on "dealloc" you need to release all your retained objects
@@ -197,15 +205,15 @@
 }
 
 - (void)update:(ccTime)dt
-{    
+{
     timeSinceLastArrow += dt;
-  
+    
     if (fire && timeSinceLastArrow > 0.1)
     {
-      timeSinceLastArrow = 0.0f;
-      [self addProjectile:location];
+        timeSinceLastArrow = 0.0f;
+        [self addProjectile:location];
     }
-      
+    
     [[CollisionManager shared] updatePixelPerfectCollisions:dt];
     [[CollisionManager shared] updateWallsAndEnemies:dt];
 }

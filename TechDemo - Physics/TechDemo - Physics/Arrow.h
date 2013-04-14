@@ -10,4 +10,7 @@
 
 @interface Arrow : Projectile
 
+
+- (id) initWithDestination: (CGPoint) location andStimulusPackage: (CCArray *) stimulusPackage;
+
 @end
