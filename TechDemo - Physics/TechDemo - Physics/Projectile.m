@@ -29,10 +29,7 @@
     return self;
 }
 
-- (void) destroy
-{
-    [self removeAllChildrenWithCleanup:YES];
-}
+
 
 
 

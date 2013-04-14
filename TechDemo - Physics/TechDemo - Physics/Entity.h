@@ -25,5 +25,6 @@
 - (void) destroySprite;
 - (KKPixelMaskSprite*) sprite;
 - (CGSize) spriteSize;
+- (void) destroy;
 
 @end

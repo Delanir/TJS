@@ -17,5 +17,6 @@ typedef enum {walk, attack, fly, land, hit, die} state;
 
 - (id) initWithSprite:(NSString *)spriteFile
         andWindowSize:(CGSize) winSize;
+-(void)attack;
 
 @end

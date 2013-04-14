@@ -78,4 +78,9 @@
     return [sprite contentSize];
 }
 
+- (void) destroy
+{
+    [self removeAllChildrenWithCleanup:YES];
+}
+
 @end

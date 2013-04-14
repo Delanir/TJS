@@ -42,5 +42,8 @@
     [[CollisionManager shared] removeFromTargets:self];
 }
 
+-(void)attack
+{
+}
 
 @end

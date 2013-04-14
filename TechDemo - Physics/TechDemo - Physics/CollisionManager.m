@@ -130,8 +130,6 @@ static CollisionManager* _sharedSingleton = nil;
         CCArray *targetsToDelete = [[CCArray alloc] init];
         for (Enemy *target in _targets)
         {
-//# warning update pixelmask[target ]
-            //[[target sprite] updatePixelMask];
             KKPixelMaskSprite *targetSprite = [target sprite];
             if ([targetSprite pixelMaskContainsPoint:[projectileSprite position]])
                 [targetsToDelete addObject:target];
@@ -140,8 +138,8 @@ static CollisionManager* _sharedSingleton = nil;
         for (Enemy *target in targetsToDelete)
         {
             [[SimpleAudioEngine sharedEngine] playEffect:@"hit.mp3"];
-            [target destroySprite];
             [_targets removeObject:target];
+            [target destroy];
         }
         
         if (targetsToDelete.count > 0)
@@ -151,9 +149,8 @@ static CollisionManager* _sharedSingleton = nil;
     }
     for (Projectile *projectile in projectilesToDelete)
     {
-        [projectile destroySprite];
-        [projectile destroy];
         [_projectiles removeObject:projectile];
+        [projectile destroy];
     }
     [projectilesToDelete release];
 }
@@ -163,7 +160,7 @@ static CollisionManager* _sharedSingleton = nil;
     for (KKPixelMaskSprite* wall in _walls)
         for (Enemy *target in _targets)
             if ([wall pixelMaskContainsPoint:[[target sprite] position]])
-                [(Peasant*)target attack];
+                [target attack];
 #warning Expandir isto para todos os animais
 }
 

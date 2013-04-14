@@ -4,25 +4,14 @@
 *                *
 **/            **/
 
-- zOrdering (Amaral) à espera dos menus para verificar... ver secção
-
 - Wall está a ser destruída magicamente
     - Entidades não estão a ser destruídas
-
-- Projectiles mais piquenos! Yuri maior
-- Dano dos inimigos (Amaral)
-- Particle System para dentro dos sprites (João M)
-    - (Optimizar particle system) 
-    - Tornar aquilo um projectile
-    - Passar codigo do projectile para arrow
-
 - setas a saír por cima
+- Projectiles mais piquenos! Yuri maior (ps)
+- Sprites de morte dos inimigos (ps)
+- Sprites Idle dos inimigos (ps)
 
-- Implementação de estimulos (StimulousPackage - Damage, Fire, Ice) (João M)
-
-- Passar para os arqueiros do heroes  (João M)
-    - Tratar das sprites
-
+- Dano dos inimigos (Amaral)
 
 /**
 * Later
@@ -35,6 +24,8 @@
 - Corrigir colisões (???????????????????)
 - Destruição mais eficiente de projecteis (depois das colisões)
 - Carregar tudo no introlayer (Passive)
+- Passar para os arqueiros do heroes  (João M)
+    - Tratar das sprites do wood elf e do grand elf
 
 /** 
 * Bonus
@@ -92,5 +83,11 @@
 - Passar NSMutable para CCArrays (Amaral e Ricardo)
 - Resolver problemas das sprites do castelo e do moat
 - inicializar som do jogo
+- Particle System para dentro dos sprites (João M)
+    - (Optimizar particle system) 
+    - Tornar aquilo um projectile
+    - Passar codigo do projectile para arrow
+- Implementação de estimulos (StimulousPackage - Damage, Fire, Ice) (João M)
+- zOrdering (Amaral) à espera dos menus para verificar... ver secção
 
 

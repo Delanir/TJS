@@ -21,6 +21,5 @@ typedef enum {ice, air, fire} particleType;
 
 - (id) initWithSprite:(NSString *)spriteFile;
 
-- (void) destroy;
 
 @end
