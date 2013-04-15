@@ -14,11 +14,11 @@
 	<array>
 		<string>Icon-144.png</string>
 		<string>Icon@2x.png</string>
-		<string>Icon-ipadhd.png</string>
+		<string>larcher_icon_144x144.png</string>
 		<string>Icon-Small-50.png</string>
 		<string>Icon-Small.png</string>
 		<string>Icon-Small@2x.png</string>
-		<string>icon3.png</string>
+		<string>larcher_icon_72x72.png</string>
 	</array>
 	<key>CFBundleIcons</key>
 	<dict>
@@ -28,11 +28,11 @@
 			<array>
 				<string>Icon-144.png</string>
 				<string>Icon@2x.png</string>
-				<string>Icon-ipadhd.png</string>
+				<string>larcher_icon_144x144.png</string>
 				<string>Icon-Small-50.png</string>
 				<string>Icon-Small.png</string>
 				<string>Icon-Small@2x.png</string>
-				<string>icon3.png</string>
+				<string>larcher_icon_72x72.png</string>
 			</array>
 		</dict>
 	</dict>

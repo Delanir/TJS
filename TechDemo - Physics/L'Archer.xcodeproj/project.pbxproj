@@ -16,6 +16,8 @@
 		3E1231D2171A414D00FEBEDE /* plus-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E1231CC171A414D00FEBEDE /* plus-ipadhd.png */; };
 		3E1231D3171A414D00FEBEDE /* plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E1231CD171A414D00FEBEDE /* plus.png */; };
 		3E14D23B171A2A28005992A6 /* Comet.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E14D23A171A2A28005992A6 /* Comet.plist */; };
+		3E3A5D09171C6AE2006D5370 /* larcher_icon_72x72.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E3A5D08171C6AE2006D5370 /* larcher_icon_72x72.png */; };
+		3E3A5D0B171C6AEC006D5370 /* larcher_icon_144x144.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E3A5D0A171C6AEC006D5370 /* larcher_icon_144x144.png */; };
 		3EB8A37E17161AF800666626 /* defaultEmitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EB8A37D17161AF800666626 /* defaultEmitter.png */; };
 		3EB8A38017161CFA00666626 /* fire.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EB8A37F17161CFA00666626 /* fire.png */; };
 		3EDD9F231715DF2900C6A622 /* background-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EDD9F221715DF2900C6A622 /* background-ipadhd.png */; };
@@ -67,7 +69,6 @@
 		9C85F4A61707957E00EECB83 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C85F4A51707957E00EECB83 /* Foundation.framework */; };
 		9C85F4A81707957E00EECB83 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C85F4A71707957E00EECB83 /* CoreGraphics.framework */; };
 		9C85F4AA1707957E00EECB83 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C85F4A91707957E00EECB83 /* GameKit.framework */; };
-		9C85F4AE1707957E00EECB83 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C85F4AD1707957E00EECB83 /* Default.png */; };
 		9C85F4B21707957E00EECB83 /* fps_images.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C85F4B11707957E00EECB83 /* fps_images.png */; };
 		9C85F4B41707957E00EECB83 /* fps_images-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C85F4B31707957E00EECB83 /* fps_images-hd.png */; };
 		9C85F4B61707957E00EECB83 /* fps_images-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C85F4B51707957E00EECB83 /* fps_images-ipadhd.png */; };
@@ -244,6 +245,8 @@
 		3E1231CC171A414D00FEBEDE /* plus-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "plus-ipadhd.png"; sourceTree = "<group>"; };
 		3E1231CD171A414D00FEBEDE /* plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus.png; sourceTree = "<group>"; };
 		3E14D23A171A2A28005992A6 /* Comet.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Comet.plist; sourceTree = "<group>"; };
+		3E3A5D08171C6AE2006D5370 /* larcher_icon_72x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = larcher_icon_72x72.png; path = ../larcher_icon_72x72.png; sourceTree = "<group>"; };
+		3E3A5D0A171C6AEC006D5370 /* larcher_icon_144x144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = larcher_icon_144x144.png; path = ../larcher_icon_144x144.png; sourceTree = "<group>"; };
 		3EB8A37D17161AF800666626 /* defaultEmitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultEmitter.png; sourceTree = "<group>"; };
 		3EB8A37F17161CFA00666626 /* fire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fire.png; sourceTree = "<group>"; };
 		3EDD9F221715DF2900C6A622 /* background-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-ipadhd.png"; sourceTree = "<group>"; };
@@ -1135,6 +1138,8 @@
 		9C8DE0CC171852F8002E0D0A /* App resources */ = {
 			isa = PBXGroup;
 			children = (
+				3E3A5D0A171C6AEC006D5370 /* larcher_icon_144x144.png */,
+				3E3A5D08171C6AE2006D5370 /* larcher_icon_72x72.png */,
 				9C85F4C41707957E00EECB83 /* iTunesArtwork */,
 				9C85F657170A07A400EECB83 /* Default-568h@2x.png */,
 				9C973FD617171B7800B25075 /* Icon-ipadhd.png */,
@@ -1351,7 +1356,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C85F4AE1707957E00EECB83 /* Default.png in Resources */,
 				9C85F4B21707957E00EECB83 /* fps_images.png in Resources */,
 				9C85F4B41707957E00EECB83 /* fps_images-hd.png in Resources */,
 				9C85F4B61707957E00EECB83 /* fps_images-ipadhd.png in Resources */,
@@ -1434,6 +1438,8 @@
 				9CBF5B03171B1A0E00EF44B2 /* skilltree-ipadhd.png in Resources */,
 				9CBF5B06171B1AA700EF44B2 /* Button_Play_pressed-ipadhd.png in Resources */,
 				9CBF5B07171B1AA700EF44B2 /* Button_Play-ipadhd.png in Resources */,
+				3E3A5D09171C6AE2006D5370 /* larcher_icon_72x72.png in Resources */,
+				3E3A5D0B171C6AEC006D5370 /* larcher_icon_144x144.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
