@@ -10,8 +10,8 @@
 
 @interface HudLayer : CCLayer
 {
-    int buttons;
-    int _arrows;
+    int buttons, _arrows, money;
+    double lastHealth;
     CCLabelTTF *label,*label2,*label3;
 }
 
@@ -20,5 +20,7 @@
 - (void)bullseyeButtonTapped:(id)sender;
 - (int)buttonPressed;
 - (void)updateArrows;
+- (void)updateWallHealth;
+- (void)updateMoney:(int)enemyXPosition;
 
 @end

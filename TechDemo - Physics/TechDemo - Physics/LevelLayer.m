@@ -131,6 +131,7 @@
     }
     [[CollisionManager shared] updatePixelPerfectCollisions:dt];
     [[CollisionManager shared] updateWallsAndEnemies:dt];
+    [hud updateWallHealth];
 }
 
 
