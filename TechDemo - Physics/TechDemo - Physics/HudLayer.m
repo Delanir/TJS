@@ -10,6 +10,7 @@
 #import "Wall.h"
 
 @implementation HudLayer
+@synthesize numberOfEnemiesFromStart, numberOfEnemiesKilled;
 
 -(id) init
 {
@@ -21,7 +22,7 @@
 
         label = [CCLabelTTF labelWithString:@"Number of Arrows Left: 50" fontName:@"Futura" fontSize:20];
         label2 = [CCLabelTTF labelWithString:@"Wall health: 100.00" fontName:@"Futura" fontSize:20];
-        label3 = [CCLabelTTF labelWithString:@"Money: 0" fontName:@"Futura" fontSize:20];
+        label3 = [CCLabelTTF labelWithString:@"Enemies: 0  Money:  0 Accurracy: 100%" fontName:@"Futura" fontSize:20];
         label.position = CGPointMake(label.contentSize.width/2 + 70, 80);
         label2.position = CGPointMake(label2.contentSize.width/2 + 70,50);
         label3.position = CGPointMake(label3.contentSize.width/2 + 70, 20);
@@ -89,15 +90,31 @@
     }
 }
 
+
 - (void)updateMoney:(int)enemyXPosition
 {
-    if (enemyXPosition < 500) {
-        money++;
-    } else if (enemyXPosition < 1000 && enemyXPosition > 500) {
-        money = money + 2;
-    } else money = money + 5;
+//    if (enemyXPosition < 500) {
+//        money++;
+//    } else if (enemyXPosition < 1000 && enemyXPosition > 500) {
+//        money = money + 2;
+//    } else money = money + 5;
     
     [label3 setString:[NSString stringWithFormat:@"Money: %i", money]];
+}
+
+- (void)increaseEnemyCount
+{
+  numberOfEnemiesFromStart++;
+  CCLOG(@"NEW %d", numberOfEnemiesFromStart);
+  NSLog(@"NEW %d", numberOfEnemiesFromStart);
+}
+
+- (void)updateNumberOfEnemiesKilled:(int) killed
+{
+
+  CCLOG(@"DEAD %d", killed);
+  NSLog(@"DEAD %d", killed);
+  [label3 setString:[NSString stringWithFormat:@"Enemies: %i Money: %i Accurracy: %d%%", numberOfEnemiesFromStart, killed, (100*killed/(50-_arrows))]];
 }
 
 @end

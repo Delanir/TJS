@@ -31,8 +31,7 @@
         // Create the target slightly off-screen along the right edge,
         // and along a random position along the Y axis as calculated above
         sprite.position = ccp(winSize.width + (spriteSize.width/2), actualY);
-        
-        
+
     }
     
     return self;
@@ -50,8 +49,11 @@
 
 -(void)die
 {
+//#warning die!
+  //numberOfEnemiesKilled++;
     // descomentar para a sprites aparecerem
     //[self destroy];
+  [[CollisionManager shared] setNumberOfDeadEnemies: [CollisionManager shared].numberOfDeadEnemies+1];
 }
 
 @end

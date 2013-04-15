@@ -14,6 +14,8 @@
     double lastHealth;
     CCLabelTTF *label,*label2,*label3;
 }
+@property int numberOfEnemiesFromStart;
+@property int numberOfEnemiesKilled;
 
 - (void)plusButtonTapped:(id)sender;
 - (void)crossButtonTapped:(id)sender;
@@ -22,5 +24,7 @@
 - (void)updateArrows;
 - (void)updateWallHealth;
 - (void)updateMoney:(int)enemyXPosition;
+- (void)increaseEnemyCount;
+- (void)increaseEnemyKilledCount;
 
 @end
