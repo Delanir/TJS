@@ -114,7 +114,7 @@
 
   CCLOG(@"DEAD %d", killed);
   NSLog(@"DEAD %d", killed);
-  [label3 setString:[NSString stringWithFormat:@"Enemies: %i Money: %i Accurracy: %d%%", numberOfEnemiesFromStart, killed, (100*killed/(50-_arrows))]];
+  [label3 setString:[NSString stringWithFormat:@"Enemies: %i Money: %i Accurracy: %d%%", numberOfEnemiesFromStart, killed, ((100*killed+1)/(50-_arrows+1))]];
 }
 
 @end
