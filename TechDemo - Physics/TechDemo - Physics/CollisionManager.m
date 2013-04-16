@@ -13,7 +13,7 @@
 #import "SimpleAudioEngine.h"
 
 @implementation CollisionManager
-
+@synthesize numberOfDeadEnemies;
 static CollisionManager* _sharedSingleton = nil;
 
 +(CollisionManager*)shared
@@ -45,10 +45,11 @@ static CollisionManager* _sharedSingleton = nil;
 {
 	self = [super init];
 	if (self != nil) {
-        _targets = [[CCArray alloc] init]; // CCArray!!!!
+        _targets = [[CCArray alloc] init];
         _projectiles = [[CCArray alloc] init];
         _walls = [[CCArray alloc] init];
 	}
+  self.numberOfDeadEnemies = 0;
     
 	return self;
 }

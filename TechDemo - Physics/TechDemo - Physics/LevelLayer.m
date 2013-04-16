@@ -131,6 +131,8 @@
     }
     [[CollisionManager shared] updatePixelPerfectCollisions:dt];
     [[CollisionManager shared] updateWallsAndEnemies:dt];
+    [hud updateWallHealth];
+    [hud updateNumberOfEnemiesKilled: [[CollisionManager shared] numberOfDeadEnemies]];
 }
 
 
@@ -184,6 +186,7 @@
     
     peasant.tag = 1;
     [[CollisionManager shared] addToTargets:peasant];
+    [hud increaseEnemyCount];
 }
 
 -(void)addFaerieDragon
@@ -196,6 +199,7 @@
     
     faerieDragon.tag = 3;
     [[CollisionManager shared] addToTargets:faerieDragon];
+    [hud increaseEnemyCount];
     
 }
 
@@ -209,6 +213,7 @@
     
     zealot.tag = 4;
     [[CollisionManager shared] addToTargets:zealot];
+    [hud increaseEnemyCount];
 }
 
 

@@ -17,6 +17,9 @@
     CCArray *_projectiles;
     CCArray * _walls;
 }
+@property int numberOfDeadEnemies;
+
+
 
 +(CollisionManager*)shared;
 
