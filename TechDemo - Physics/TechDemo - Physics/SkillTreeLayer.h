@@ -19,4 +19,5 @@
     CCSprite *_cityBranch1;
 }
 - (void) pressedCitySymbol:(id)sender;
+- (void) pressedMainMenu:(id)sender;
 @end

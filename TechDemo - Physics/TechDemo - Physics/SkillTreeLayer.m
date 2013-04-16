@@ -7,6 +7,7 @@
 //
 
 #import "SkillTreeLayer.h"
+#import "CCBReader.h"
 
 
 @implementation SkillTreeLayer
@@ -40,4 +41,11 @@
     [_cityBranch1 setVisible:YES];
 }
 
+- (void) pressedMainMenu:(id)sender{
+    // Load the game scene
+    CCScene* gameScene = [CCBReader sceneWithNodeGraphFromFile:@"MainMenu.ccbi"];
+    
+    // Go to the game scene
+    [[CCDirector sharedDirector] replaceScene:gameScene];
+}
 @end
