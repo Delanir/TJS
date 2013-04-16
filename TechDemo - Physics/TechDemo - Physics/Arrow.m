@@ -71,14 +71,15 @@
         {
             case slow:
                 
-                ps = [[CCParticleMeteor node] retain];
+                ps = [[CCParticleSun node] retain];
                 [ps setTag:7];
                 [self addChild:ps];
-                
-                //  ps.startSize = 15;
-                ps.gravity = CGPointZero;
-                ps.life = 0;
+                ps.startSize = 15;
+//                ps.gravity = CGPointZero;
+//                ps.life = 0;
                 //  ps.totalParticles = 25;
+            ccColor4F startColor = {0.38, 0.698, 0.8, 1.0};
+            ps.startColor= startColor;
                 ps.position = sprite.position;
                 
                 

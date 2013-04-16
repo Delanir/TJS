@@ -34,8 +34,6 @@
 				<string>Icon-Small@2x.png</string>
 				<string>larcher_icon_72x72.png</string>
 			</array>
-			<key>UIPrerenderedIcon</key>
-			<true/>
 		</dict>
 	</dict>
 	<key>CFBundleIdentifier</key>
@@ -51,8 +49,6 @@
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
 	<key>LSRequiresIPhoneOS</key>
-	<true/>
-	<key>UIPrerenderedIcon</key>
 	<true/>
 	<key>UIRequiredDeviceCapabilities</key>
 	<dict>
