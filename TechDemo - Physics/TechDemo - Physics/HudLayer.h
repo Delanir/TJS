@@ -27,6 +27,6 @@
 - (void)updateMoney:(int)enemyXPosition;
 - (void)increaseEnemyCount;
 - (void)increaseEnemyKilledCount;
--(int) hasArrows;
+- (int) hasArrows;
 
 @end

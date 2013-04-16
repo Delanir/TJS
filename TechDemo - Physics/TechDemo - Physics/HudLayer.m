@@ -113,15 +113,11 @@
 - (void)increaseEnemyCount
 {
   numberOfEnemiesFromStart++;
-  CCLOG(@"NEW %d", numberOfEnemiesFromStart);
-  NSLog(@"NEW %d", numberOfEnemiesFromStart);
 }
 
 - (void)updateNumberOfEnemiesKilled:(int) killed
 {
-
-  CCLOG(@"DEAD %d", killed);
-  NSLog(@"DEAD %d", killed);
+  [label3 setString:[NSString stringWithFormat:@"Enemies: %i Money: %i Accurracy: %d%%", numberOfEnemiesFromStart, killed, (100*killed/(50-_arrows))]];
 //    #warning accuracy com esta formula nao preve que se possam comprar mais setas. Queremos algo do tipo mortos/setas?disparadas
 //  [label3 setString:[NSString stringWithFormat:@"Enemies: %i Money: %i Accurracy: %d%%", numberOfEnemiesFromStart, killed, ((100*(killed+1))/(MAX_NUM_ARROWS-_arrows+1))]];
     [label3 setString:[NSString stringWithFormat:@"Enemies: %i Money: %i Accurracy: %d%%", numberOfEnemiesFromStart, killed, ((100*(killed+1))/(numberOfArrowsUsed+1))]];
