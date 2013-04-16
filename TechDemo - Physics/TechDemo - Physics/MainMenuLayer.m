@@ -50,6 +50,11 @@
 - (void) pressedSkillTree:(id)sender
 {
     CCLOG(@"Skilltree Menu");
+    // Load the game scene
+    CCScene* gameScene = [CCBReader sceneWithNodeGraphFromFile:@"SkillTreeLayer.ccbi"];
+    
+    // Go to the game scene
+    [[CCDirector sharedDirector] replaceScene:gameScene];
 }
 
 - (void) pressedAchievments:(id)sender

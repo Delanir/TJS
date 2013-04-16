@@ -13,6 +13,8 @@
 - Dano dos inimigos (Amaral)
 - Impedir a animacao de disparo do Yuri quando nao ha setas        
 - Random shouts dos inimigos
+- GameResourceManager -uma classe estática de variáveis de jogo
+(o número de estrelas por exemplo é algo persistente em todos os ecrãs)
 
 /**
 * Later

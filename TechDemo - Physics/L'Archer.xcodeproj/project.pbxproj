@@ -30,6 +30,44 @@
 		8B0E70E1171DBBFA004D212C /* leaderboard_@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E70DB171DBBFA004D212C /* leaderboard_@2x.png */; };
 		8B0E70E2171DBBFA004D212C /* settings_.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E70DC171DBBFA004D212C /* settings_.png */; };
 		8B0E70E3171DBBFA004D212C /* settings_@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E70DD171DBBFA004D212C /* settings_@2x.png */; };
+		8B0E710A171DCCB9004D212C /* Background z0.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E70E6171DCCB9004D212C /* Background z0.png */; };
+		8B0E710B171DCCB9004D212C /* City - branch1 - z13.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E70E7171DCCB9004D212C /* City - branch1 - z13.png */; };
+		8B0E710C171DCCB9004D212C /* City - branch2 - z14.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E70E8171DCCB9004D212C /* City - branch2 - z14.png */; };
+		8B0E710D171DCCB9004D212C /* City - branch3 z12.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E70E9171DCCB9004D212C /* City - branch3 z12.png */; };
+		8B0E710E171DCCB9004D212C /* City - el1 z5.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E70EA171DCCB9004D212C /* City - el1 z5.png */; };
+		8B0E710F171DCCB9004D212C /* City - el2 z4.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E70EB171DCCB9004D212C /* City - el2 z4.png */; };
+		8B0E7110171DCCB9004D212C /* City - el3 z2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E70EC171DCCB9004D212C /* City - el3 z2.png */; };
+		8B0E7111171DCCB9004D212C /* City - Main branch z15.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E70ED171DCCB9004D212C /* City - Main branch z15.png */; };
+		8B0E7112171DCCB9004D212C /* City - Symbol z34.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E70EE171DCCB9004D212C /* City - Symbol z34.png */; };
+		8B0E7113171DCCB9004D212C /* Fire - branch 1 z8.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E70EF171DCCB9004D212C /* Fire - branch 1 z8.png */; };
+		8B0E7114171DCCB9004D212C /* Fire - branch2 z9.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E70F0171DCCB9004D212C /* Fire - branch2 z9.png */; };
+		8B0E7115171DCCB9004D212C /* Fire - branch3 z7.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E70F1171DCCB9004D212C /* Fire - branch3 z7.png */; };
+		8B0E7116171DCCB9004D212C /* Fire - el1 z11.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E70F2171DCCB9004D212C /* Fire - el1 z11.png */; };
+		8B0E7117171DCCB9004D212C /* Fire - el2 z35.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E70F3171DCCB9004D212C /* Fire - el2 z35.png */; };
+		8B0E7118171DCCB9004D212C /* Fire - el3 z6.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E70F4171DCCB9004D212C /* Fire - el3 z6.png */; };
+		8B0E7119171DCCB9004D212C /* Fire - Main branch z10.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E70F5171DCCB9004D212C /* Fire - Main branch z10.png */; };
+		8B0E711A171DCCB9004D212C /* Fire - Symbol z32.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E70F6171DCCB9004D212C /* Fire - Symbol z32.png */; };
+		8B0E711B171DCCB9004D212C /* Ice - branch1 z17.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E70F7171DCCB9004D212C /* Ice - branch1 z17.png */; };
+		8B0E711C171DCCB9004D212C /* Ice - branch2 z18.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E70F8171DCCB9004D212C /* Ice - branch2 z18.png */; };
+		8B0E711D171DCCB9004D212C /* Ice - branch3 z16.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E70F9171DCCB9004D212C /* Ice - branch3 z16.png */; };
+		8B0E711E171DCCB9004D212C /* Ice - el1 z1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E70FA171DCCB9004D212C /* Ice - el1 z1.png */; };
+		8B0E711F171DCCB9004D212C /* Ice - el2 z3.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E70FB171DCCB9004D212C /* Ice - el2 z3.png */; };
+		8B0E7120171DCCB9004D212C /* Ice - el3 z24.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E70FC171DCCB9004D212C /* Ice - el3 z24.png */; };
+		8B0E7121171DCCB9004D212C /* Ice - Main branch z19.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E70FD171DCCB9004D212C /* Ice - Main branch z19.png */; };
+		8B0E7122171DCCB9004D212C /* Ice - Symbol z31.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E70FE171DCCB9004D212C /* Ice - Symbol z31.png */; };
+		8B0E7123171DCCB9004D212C /* Main Tree Branch - el1 z27.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E70FF171DCCB9004D212C /* Main Tree Branch - el1 z27.png */; };
+		8B0E7124171DCCB9004D212C /* Main Tree Branch - el2 z30.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E7100171DCCB9004D212C /* Main Tree Branch - el2 z30.png */; };
+		8B0E7125171DCCB9004D212C /* Main Tree Branch z25.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E7101171DCCB9004D212C /* Main Tree Branch z25.png */; };
+		8B0E7126171DCCB9004D212C /* Marksman - branch1 z22.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E7102171DCCB9004D212C /* Marksman - branch1 z22.png */; };
+		8B0E7127171DCCB9004D212C /* Marksman - branch2 z20.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E7103171DCCB9004D212C /* Marksman - branch2 z20.png */; };
+		8B0E7128171DCCB9004D212C /* Marksman - branch3 z21.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E7104171DCCB9004D212C /* Marksman - branch3 z21.png */; };
+		8B0E7129171DCCB9004D212C /* Marksman - el1 z29.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E7105171DCCB9004D212C /* Marksman - el1 z29.png */; };
+		8B0E712A171DCCB9004D212C /* Marksman - el2 z28.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E7106171DCCB9004D212C /* Marksman - el2 z28.png */; };
+		8B0E712B171DCCB9004D212C /* Marksman - el3 z26.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E7107171DCCB9004D212C /* Marksman - el3 z26.png */; };
+		8B0E712C171DCCB9004D212C /* Marksman - Main branch z23.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E7108171DCCB9004D212C /* Marksman - Main branch z23.png */; };
+		8B0E712D171DCCB9004D212C /* Marksman Symbol - z33.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E7109171DCCB9004D212C /* Marksman Symbol - z33.png */; };
+		8B0E7130171DD447004D212C /* SkillTreeLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0E712F171DD447004D212C /* SkillTreeLayer.m */; };
+		8B0E7132171DD5A2004D212C /* SkillTreeLayer.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E7131171DD5A2004D212C /* SkillTreeLayer.ccbi */; };
 		8B560892171A251200B14693 /* achievements.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B56088C171A251200B14693 /* achievements.png */; };
 		8B560894171A251200B14693 /* leaderboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B56088E171A251200B14693 /* leaderboard.png */; };
 		8B560896171A251200B14693 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B560890171A251200B14693 /* settings.png */; };
@@ -266,6 +304,45 @@
 		8B0E70DB171DBBFA004D212C /* leaderboard_@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "leaderboard_@2x.png"; sourceTree = "<group>"; };
 		8B0E70DC171DBBFA004D212C /* settings_.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings_.png; sourceTree = "<group>"; };
 		8B0E70DD171DBBFA004D212C /* settings_@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings_@2x.png"; sourceTree = "<group>"; };
+		8B0E70E6171DCCB9004D212C /* Background z0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Background z0.png"; sourceTree = "<group>"; };
+		8B0E70E7171DCCB9004D212C /* City - branch1 - z13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "City - branch1 - z13.png"; sourceTree = "<group>"; };
+		8B0E70E8171DCCB9004D212C /* City - branch2 - z14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "City - branch2 - z14.png"; sourceTree = "<group>"; };
+		8B0E70E9171DCCB9004D212C /* City - branch3 z12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "City - branch3 z12.png"; sourceTree = "<group>"; };
+		8B0E70EA171DCCB9004D212C /* City - el1 z5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "City - el1 z5.png"; sourceTree = "<group>"; };
+		8B0E70EB171DCCB9004D212C /* City - el2 z4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "City - el2 z4.png"; sourceTree = "<group>"; };
+		8B0E70EC171DCCB9004D212C /* City - el3 z2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "City - el3 z2.png"; sourceTree = "<group>"; };
+		8B0E70ED171DCCB9004D212C /* City - Main branch z15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "City - Main branch z15.png"; sourceTree = "<group>"; };
+		8B0E70EE171DCCB9004D212C /* City - Symbol z34.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "City - Symbol z34.png"; sourceTree = "<group>"; };
+		8B0E70EF171DCCB9004D212C /* Fire - branch 1 z8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fire - branch 1 z8.png"; sourceTree = "<group>"; };
+		8B0E70F0171DCCB9004D212C /* Fire - branch2 z9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fire - branch2 z9.png"; sourceTree = "<group>"; };
+		8B0E70F1171DCCB9004D212C /* Fire - branch3 z7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fire - branch3 z7.png"; sourceTree = "<group>"; };
+		8B0E70F2171DCCB9004D212C /* Fire - el1 z11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fire - el1 z11.png"; sourceTree = "<group>"; };
+		8B0E70F3171DCCB9004D212C /* Fire - el2 z35.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fire - el2 z35.png"; sourceTree = "<group>"; };
+		8B0E70F4171DCCB9004D212C /* Fire - el3 z6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fire - el3 z6.png"; sourceTree = "<group>"; };
+		8B0E70F5171DCCB9004D212C /* Fire - Main branch z10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fire - Main branch z10.png"; sourceTree = "<group>"; };
+		8B0E70F6171DCCB9004D212C /* Fire - Symbol z32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fire - Symbol z32.png"; sourceTree = "<group>"; };
+		8B0E70F7171DCCB9004D212C /* Ice - branch1 z17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ice - branch1 z17.png"; sourceTree = "<group>"; };
+		8B0E70F8171DCCB9004D212C /* Ice - branch2 z18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ice - branch2 z18.png"; sourceTree = "<group>"; };
+		8B0E70F9171DCCB9004D212C /* Ice - branch3 z16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ice - branch3 z16.png"; sourceTree = "<group>"; };
+		8B0E70FA171DCCB9004D212C /* Ice - el1 z1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ice - el1 z1.png"; sourceTree = "<group>"; };
+		8B0E70FB171DCCB9004D212C /* Ice - el2 z3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ice - el2 z3.png"; sourceTree = "<group>"; };
+		8B0E70FC171DCCB9004D212C /* Ice - el3 z24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ice - el3 z24.png"; sourceTree = "<group>"; };
+		8B0E70FD171DCCB9004D212C /* Ice - Main branch z19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ice - Main branch z19.png"; sourceTree = "<group>"; };
+		8B0E70FE171DCCB9004D212C /* Ice - Symbol z31.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ice - Symbol z31.png"; sourceTree = "<group>"; };
+		8B0E70FF171DCCB9004D212C /* Main Tree Branch - el1 z27.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Main Tree Branch - el1 z27.png"; sourceTree = "<group>"; };
+		8B0E7100171DCCB9004D212C /* Main Tree Branch - el2 z30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Main Tree Branch - el2 z30.png"; sourceTree = "<group>"; };
+		8B0E7101171DCCB9004D212C /* Main Tree Branch z25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Main Tree Branch z25.png"; sourceTree = "<group>"; };
+		8B0E7102171DCCB9004D212C /* Marksman - branch1 z22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Marksman - branch1 z22.png"; sourceTree = "<group>"; };
+		8B0E7103171DCCB9004D212C /* Marksman - branch2 z20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Marksman - branch2 z20.png"; sourceTree = "<group>"; };
+		8B0E7104171DCCB9004D212C /* Marksman - branch3 z21.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Marksman - branch3 z21.png"; sourceTree = "<group>"; };
+		8B0E7105171DCCB9004D212C /* Marksman - el1 z29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Marksman - el1 z29.png"; sourceTree = "<group>"; };
+		8B0E7106171DCCB9004D212C /* Marksman - el2 z28.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Marksman - el2 z28.png"; sourceTree = "<group>"; };
+		8B0E7107171DCCB9004D212C /* Marksman - el3 z26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Marksman - el3 z26.png"; sourceTree = "<group>"; };
+		8B0E7108171DCCB9004D212C /* Marksman - Main branch z23.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Marksman - Main branch z23.png"; sourceTree = "<group>"; };
+		8B0E7109171DCCB9004D212C /* Marksman Symbol - z33.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Marksman Symbol - z33.png"; sourceTree = "<group>"; };
+		8B0E712E171DD446004D212C /* SkillTreeLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkillTreeLayer.h; sourceTree = "<group>"; };
+		8B0E712F171DD447004D212C /* SkillTreeLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkillTreeLayer.m; sourceTree = "<group>"; };
+		8B0E7131171DD5A2004D212C /* SkillTreeLayer.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = SkillTreeLayer.ccbi; sourceTree = "<group>"; };
 		8B56088C171A251200B14693 /* achievements.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = achievements.png; sourceTree = "<group>"; };
 		8B56088E171A251200B14693 /* leaderboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leaderboard.png; sourceTree = "<group>"; };
 		8B560890171A251200B14693 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
@@ -662,6 +739,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8B0E70E5171DCCB9004D212C /* Skilltree - HD */ = {
+			isa = PBXGroup;
+			children = (
+				8B0E70E6171DCCB9004D212C /* Background z0.png */,
+				8B0E70E7171DCCB9004D212C /* City - branch1 - z13.png */,
+				8B0E70E8171DCCB9004D212C /* City - branch2 - z14.png */,
+				8B0E70E9171DCCB9004D212C /* City - branch3 z12.png */,
+				8B0E70EA171DCCB9004D212C /* City - el1 z5.png */,
+				8B0E70EB171DCCB9004D212C /* City - el2 z4.png */,
+				8B0E70EC171DCCB9004D212C /* City - el3 z2.png */,
+				8B0E70ED171DCCB9004D212C /* City - Main branch z15.png */,
+				8B0E70EE171DCCB9004D212C /* City - Symbol z34.png */,
+				8B0E70EF171DCCB9004D212C /* Fire - branch 1 z8.png */,
+				8B0E70F0171DCCB9004D212C /* Fire - branch2 z9.png */,
+				8B0E70F1171DCCB9004D212C /* Fire - branch3 z7.png */,
+				8B0E70F2171DCCB9004D212C /* Fire - el1 z11.png */,
+				8B0E70F3171DCCB9004D212C /* Fire - el2 z35.png */,
+				8B0E70F4171DCCB9004D212C /* Fire - el3 z6.png */,
+				8B0E70F5171DCCB9004D212C /* Fire - Main branch z10.png */,
+				8B0E70F6171DCCB9004D212C /* Fire - Symbol z32.png */,
+				8B0E70F7171DCCB9004D212C /* Ice - branch1 z17.png */,
+				8B0E70F8171DCCB9004D212C /* Ice - branch2 z18.png */,
+				8B0E70F9171DCCB9004D212C /* Ice - branch3 z16.png */,
+				8B0E70FA171DCCB9004D212C /* Ice - el1 z1.png */,
+				8B0E70FB171DCCB9004D212C /* Ice - el2 z3.png */,
+				8B0E70FC171DCCB9004D212C /* Ice - el3 z24.png */,
+				8B0E70FD171DCCB9004D212C /* Ice - Main branch z19.png */,
+				8B0E70FE171DCCB9004D212C /* Ice - Symbol z31.png */,
+				8B0E70FF171DCCB9004D212C /* Main Tree Branch - el1 z27.png */,
+				8B0E7100171DCCB9004D212C /* Main Tree Branch - el2 z30.png */,
+				8B0E7101171DCCB9004D212C /* Main Tree Branch z25.png */,
+				8B0E7102171DCCB9004D212C /* Marksman - branch1 z22.png */,
+				8B0E7103171DCCB9004D212C /* Marksman - branch2 z20.png */,
+				8B0E7104171DCCB9004D212C /* Marksman - branch3 z21.png */,
+				8B0E7105171DCCB9004D212C /* Marksman - el1 z29.png */,
+				8B0E7106171DCCB9004D212C /* Marksman - el2 z28.png */,
+				8B0E7107171DCCB9004D212C /* Marksman - el3 z26.png */,
+				8B0E7108171DCCB9004D212C /* Marksman - Main branch z23.png */,
+				8B0E7109171DCCB9004D212C /* Marksman Symbol - z33.png */,
+			);
+			path = "Skilltree - HD";
+			sourceTree = "<group>";
+		};
 		8B8C2DA91719DDA900B50C1E /* CCBReader */ = {
 			isa = PBXGroup;
 			children = (
@@ -767,6 +887,8 @@
 				9C969E581716263000BE7476 /* Scene Entities */,
 				9C85F64A1709D59700EECB83 /* LevelLayer.h */,
 				9C85F64B1709D59800EECB83 /* LevelLayer.m */,
+				8B0E712E171DD446004D212C /* SkillTreeLayer.h */,
+				8B0E712F171DD447004D212C /* SkillTreeLayer.m */,
 				8B8C2D951719D8A700B50C1E /* MainMenuLayer.h */,
 				8B8C2D961719D8A700B50C1E /* MainMenuLayer.m */,
 				9C85F6291707958200EECB83 /* IntroLayer.h */,
@@ -784,6 +906,7 @@
 		9C85F4AC1707957E00EECB83 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8B0E70E5171DCCB9004D212C /* Skilltree - HD */,
 				8B0E70D8171DBBFA004D212C /* achievements_.png */,
 				8B0E70D9171DBBFA004D212C /* achievements_@2x.png */,
 				8B0E70DA171DBBFA004D212C /* leaderboard_.png */,
@@ -811,6 +934,7 @@
 				9CBF5AFE171B1A0E00EF44B2 /* settings-ipadhd.png */,
 				3E14D23A171A2A28005992A6 /* Comet.plist */,
 				8B8C2D9B1719DB9300B50C1E /* MainMenu.ccbi */,
+				8B0E7131171DD5A2004D212C /* SkillTreeLayer.ccbi */,
 				9C8DE0D017185844002E0D0A /* Tags */,
 				9C94ABD717197BD2005BCE32 /* zDepth */,
 				9C7FF343170B28CE009DA7F9 /* Config.plist */,
@@ -1464,6 +1588,43 @@
 				8B0E70E1171DBBFA004D212C /* leaderboard_@2x.png in Resources */,
 				8B0E70E2171DBBFA004D212C /* settings_.png in Resources */,
 				8B0E70E3171DBBFA004D212C /* settings_@2x.png in Resources */,
+				8B0E710A171DCCB9004D212C /* Background z0.png in Resources */,
+				8B0E710B171DCCB9004D212C /* City - branch1 - z13.png in Resources */,
+				8B0E710C171DCCB9004D212C /* City - branch2 - z14.png in Resources */,
+				8B0E710D171DCCB9004D212C /* City - branch3 z12.png in Resources */,
+				8B0E710E171DCCB9004D212C /* City - el1 z5.png in Resources */,
+				8B0E710F171DCCB9004D212C /* City - el2 z4.png in Resources */,
+				8B0E7110171DCCB9004D212C /* City - el3 z2.png in Resources */,
+				8B0E7111171DCCB9004D212C /* City - Main branch z15.png in Resources */,
+				8B0E7112171DCCB9004D212C /* City - Symbol z34.png in Resources */,
+				8B0E7113171DCCB9004D212C /* Fire - branch 1 z8.png in Resources */,
+				8B0E7114171DCCB9004D212C /* Fire - branch2 z9.png in Resources */,
+				8B0E7115171DCCB9004D212C /* Fire - branch3 z7.png in Resources */,
+				8B0E7116171DCCB9004D212C /* Fire - el1 z11.png in Resources */,
+				8B0E7117171DCCB9004D212C /* Fire - el2 z35.png in Resources */,
+				8B0E7118171DCCB9004D212C /* Fire - el3 z6.png in Resources */,
+				8B0E7119171DCCB9004D212C /* Fire - Main branch z10.png in Resources */,
+				8B0E711A171DCCB9004D212C /* Fire - Symbol z32.png in Resources */,
+				8B0E711B171DCCB9004D212C /* Ice - branch1 z17.png in Resources */,
+				8B0E711C171DCCB9004D212C /* Ice - branch2 z18.png in Resources */,
+				8B0E711D171DCCB9004D212C /* Ice - branch3 z16.png in Resources */,
+				8B0E711E171DCCB9004D212C /* Ice - el1 z1.png in Resources */,
+				8B0E711F171DCCB9004D212C /* Ice - el2 z3.png in Resources */,
+				8B0E7120171DCCB9004D212C /* Ice - el3 z24.png in Resources */,
+				8B0E7121171DCCB9004D212C /* Ice - Main branch z19.png in Resources */,
+				8B0E7122171DCCB9004D212C /* Ice - Symbol z31.png in Resources */,
+				8B0E7123171DCCB9004D212C /* Main Tree Branch - el1 z27.png in Resources */,
+				8B0E7124171DCCB9004D212C /* Main Tree Branch - el2 z30.png in Resources */,
+				8B0E7125171DCCB9004D212C /* Main Tree Branch z25.png in Resources */,
+				8B0E7126171DCCB9004D212C /* Marksman - branch1 z22.png in Resources */,
+				8B0E7127171DCCB9004D212C /* Marksman - branch2 z20.png in Resources */,
+				8B0E7128171DCCB9004D212C /* Marksman - branch3 z21.png in Resources */,
+				8B0E7129171DCCB9004D212C /* Marksman - el1 z29.png in Resources */,
+				8B0E712A171DCCB9004D212C /* Marksman - el2 z28.png in Resources */,
+				8B0E712B171DCCB9004D212C /* Marksman - el3 z26.png in Resources */,
+				8B0E712C171DCCB9004D212C /* Marksman - Main branch z23.png in Resources */,
+				8B0E712D171DCCB9004D212C /* Marksman Symbol - z33.png in Resources */,
+				8B0E7132171DD5A2004D212C /* SkillTreeLayer.ccbi in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1606,6 +1767,7 @@
 				8B8C2DBA1719DDC200B50C1E /* CCBSequenceProperty.m in Sources */,
 				8B8C2DBB1719DDC500B50C1E /* CCNode+CCBRelativePositioning.m in Sources */,
 				8C5C3324171B195800093301 /* HudLayer.m in Sources */,
+				8B0E7130171DD447004D212C /* SkillTreeLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
