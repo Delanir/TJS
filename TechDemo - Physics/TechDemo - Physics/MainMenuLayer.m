@@ -33,6 +33,7 @@
     [[SpriteManager shared] addAnimationFromFile:@"yurie_anim.plist"];
     [[SimpleAudioEngine sharedEngine] init];
     [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"MainMenu.mp3" loop:YES];
+    
 }
 
 -(void) onExit
@@ -44,12 +45,17 @@
 
 - (void) pressedSettings:(id)sender
 {
-    CCLOG(@"Setting Menu");
+//    CCLOG(@"Setting Menu");
+    // Load the game scene
+    CCScene* gameScene = [CCBReader sceneWithNodeGraphFromFile:@"SettingsMenu.ccbi"];
+    
+    // Go to the game scene
+    [[CCDirector sharedDirector] replaceScene:gameScene];
 }
 
 - (void) pressedSkillTree:(id)sender
 {
-    CCLOG(@"Skilltree Menu");
+//    CCLOG(@"Skilltree Menu");
     // Load the game scene
     CCScene* gameScene = [CCBReader sceneWithNodeGraphFromFile:@"SkillTreeLayer.ccbi"];
     
