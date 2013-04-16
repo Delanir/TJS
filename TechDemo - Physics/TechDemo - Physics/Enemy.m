@@ -56,4 +56,8 @@
   [[CollisionManager shared] setNumberOfDeadEnemies: [CollisionManager shared].numberOfDeadEnemies+1];
 }
 
+-(void ) shout
+{
+}
+
 @end

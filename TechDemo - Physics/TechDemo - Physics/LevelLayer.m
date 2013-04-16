@@ -66,6 +66,8 @@
         [self addFaerieDragon];
     if((int)floor(timeElapsedSinceBeginning) % 5 == 1)
         [self addZealot];
+
+    
 }
 
 -(void) onEnter

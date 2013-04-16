@@ -4,7 +4,7 @@
 *                *
 **/            **/
 
-- Background sound para assim que começa
+
 - som do impacto tem de ser corrigido
 - Desenhar Skill Tree (ps)
 
@@ -12,7 +12,7 @@
 - setas a saír por cima
 - Dano dos inimigos (Amaral)
 - Impedir a animacao de disparo do Yuri quando nao ha setas        
-
+- Random shouts dos inimigos
 
 /**
 * Later
@@ -97,5 +97,6 @@
 - Wall está a ser destruída magicamente - Done
 - Desenhar GUI (???) (health and other debug info)
 - Limitar as setas disparadas (quando acabam comeaça os nums negativos)
+- Background sound para assim que começa
 
 
