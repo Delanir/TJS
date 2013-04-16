@@ -6,16 +6,16 @@
 
 - Background sound para assim que começa
 - som do impacto tem de ser corrigido
-- Desenhar Skill Tree (ps)
+- Implementar skill tree
+- Por dano apenas quando inimigos acabam o movimento (callback)
 
-- Vida da wall
 - setas a saír por cima
 - Dano dos inimigos (Amaral)        
 - Limitar as setas disparadas (quando acabam comeaça os nums negativos)
 
 /**
 * Later
-**/
+**/f
 
 - Menus com Cocos Builder! (Daniela, Ricardo)
 
@@ -95,5 +95,7 @@
 - Sprites de morte dos inimigos (ps) - Done
 - Wall está a ser destruída magicamente - Done
 - Desenhar GUI (???) (health and other debug info)
+- Desenhar Skill Tree (ps)
+- Vida da wall
 
 

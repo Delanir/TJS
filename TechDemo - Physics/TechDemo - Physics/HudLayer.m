@@ -105,15 +105,11 @@
 - (void)increaseEnemyCount
 {
   numberOfEnemiesFromStart++;
-  CCLOG(@"NEW %d", numberOfEnemiesFromStart);
-  NSLog(@"NEW %d", numberOfEnemiesFromStart);
 }
 
 - (void)updateNumberOfEnemiesKilled:(int) killed
 {
 
-  CCLOG(@"DEAD %d", killed);
-  NSLog(@"DEAD %d", killed);
   [label3 setString:[NSString stringWithFormat:@"Enemies: %i Money: %i Accurracy: %d%%", numberOfEnemiesFromStart, killed, (100*killed/(50-_arrows))]];
 }
 
