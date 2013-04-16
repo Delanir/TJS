@@ -22,5 +22,6 @@ typedef enum {walk, attack, fly, land, hit, die} state;
         andWindowSize:(CGSize) winSize;
 -(void)attack;
 -(void)die;
+-(void ) shout;
 
 @end

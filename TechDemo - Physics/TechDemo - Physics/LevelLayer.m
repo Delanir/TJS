@@ -66,6 +66,8 @@
         [self addFaerieDragon];
     if((int)floor(timeElapsedSinceBeginning) % 5 == 1)
         [self addZealot];
+
+    
 }
 
 -(void) onEnter
@@ -124,11 +126,12 @@
         [yuri setFire:NO];
         [yuri animateInDirection:location];
     }
-    if([yuri readyToFire])
+    if([yuri readyToFire] && ([hud hasArrows]>0))
     {
         [yuri setReadyToFire:NO];
         [self addProjectile:location];
     }
+        
     [[CollisionManager shared] updatePixelPerfectCollisions:dt];
     [[CollisionManager shared] updateWallsAndEnemies:dt];
     [hud updateWallHealth];

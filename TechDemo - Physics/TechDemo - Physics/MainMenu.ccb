@@ -341,8 +341,6 @@
 								</array>
 							</dict>
 						</array>
-						<key>selected</key>
-						<true/>
 					</dict>
 				</array>
 				<key>customClass</key>
@@ -520,7 +518,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>settings.png</string>
+									<string>settings_.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -909,8 +907,8 @@
 								<string>ScaleLock</string>
 								<key>value</key>
 								<array>
-									<real>0.5</real>
-									<real>0.5</real>
+									<real>1</real>
+									<real>1</real>
 									<true/>
 									<integer>0</integer>
 								</array>
@@ -950,7 +948,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>achievements.png</string>
+									<string>achievements_.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -1124,9 +1122,9 @@
 								<string>ScaleLock</string>
 								<key>value</key>
 								<array>
-									<real>1</real>
-									<real>1</real>
-									<false/>
+									<real>1.5</real>
+									<real>1.5</real>
+									<true/>
 									<integer>0</integer>
 								</array>
 							</dict>
@@ -1165,7 +1163,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>leaderboard.png</string>
+									<string>leaderboard_.png</string>
 								</array>
 							</dict>
 							<dict>

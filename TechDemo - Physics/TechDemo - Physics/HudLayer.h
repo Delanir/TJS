@@ -16,6 +16,7 @@
 }
 @property int numberOfEnemiesFromStart;
 @property int numberOfEnemiesKilled;
+@property int numberOfArrowsUsed;
 
 - (void)plusButtonTapped:(id)sender;
 - (void)crossButtonTapped:(id)sender;
@@ -26,5 +27,6 @@
 - (void)updateMoney:(int)enemyXPosition;
 - (void)increaseEnemyCount;
 - (void)increaseEnemyKilledCount;
+- (int) hasArrows;
 
 @end

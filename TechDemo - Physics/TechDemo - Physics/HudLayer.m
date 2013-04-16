@@ -9,18 +9,21 @@
 #import "HudLayer.h"
 #import "Wall.h"
 
+#define MAX_NUM_ARROWS 50
+
 @implementation HudLayer
-@synthesize numberOfEnemiesFromStart, numberOfEnemiesKilled;
+@synthesize numberOfEnemiesFromStart, numberOfEnemiesKilled, numberOfArrowsUsed;
 
 -(id) init
 {
     if( (self=[super init]))
     {
         buttons = 0;
-        _arrows = 50;
+        _arrows = MAX_NUM_ARROWS;
+        numberOfArrowsUsed =0;
         lastHealth = 100.00;
 
-        label = [CCLabelTTF labelWithString:@"Number of Arrows Left: 50" fontName:@"Futura" fontSize:20];
+        label =[CCLabelTTF labelWithString:[NSString stringWithFormat:@"Number of Arrows Left: %i", MAX_NUM_ARROWS] fontName:@"Futura" fontSize:20];
         label2 = [CCLabelTTF labelWithString:@"Wall health: 100.00" fontName:@"Futura" fontSize:20];
         label3 = [CCLabelTTF labelWithString:@"Enemies: 0  Money:  0 Accurracy: 100%" fontName:@"Futura" fontSize:20];
         label.position = CGPointMake(label.contentSize.width/2 + 70, 80);
@@ -77,8 +80,13 @@
 
 - (void)updateArrows
 {
-    _arrows--;
-    [label setString:[NSString stringWithFormat:@"Number of Arrows Left: %i", _arrows]];
+#warning arrow numbers
+    if (_arrows>0) {
+        numberOfArrowsUsed++;
+        _arrows--;
+        [label setString:[NSString stringWithFormat:@"Number of Arrows Left: %i", _arrows]];
+    }
+    
 }
 
 - (void)updateWallHealth
@@ -109,8 +117,15 @@
 
 - (void)updateNumberOfEnemiesKilled:(int) killed
 {
-
   [label3 setString:[NSString stringWithFormat:@"Enemies: %i Money: %i Accurracy: %d%%", numberOfEnemiesFromStart, killed, (100*killed/(50-_arrows))]];
+//    #warning accuracy com esta formula nao preve que se possam comprar mais setas. Queremos algo do tipo mortos/setas?disparadas
+//  [label3 setString:[NSString stringWithFormat:@"Enemies: %i Money: %i Accurracy: %d%%", numberOfEnemiesFromStart, killed, ((100*(killed+1))/(MAX_NUM_ARROWS-_arrows+1))]];
+    [label3 setString:[NSString stringWithFormat:@"Enemies: %i Money: %i Accurracy: %d%%", numberOfEnemiesFromStart, killed, ((100*(killed+1))/(numberOfArrowsUsed+1))]];
+}
+
+-(int) hasArrows
+{
+    return _arrows;
 }
 
 @end
