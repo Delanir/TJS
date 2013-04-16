@@ -65,20 +65,22 @@
 - (void) handleStimulus:(CCArray *) stimulusPackage;
 {
     CCParticleSystem * ps;
+  
     for(Stimulus * stimulus in stimulusPackage)
     {
         switch ([stimulus type])
         {
             case slow:
                 
-                ps = [[CCParticleMeteor node] retain];
+                ps = [[CCParticleSun node] retain];
                 [ps setTag:7];
                 [self addChild:ps];
-                
-                //  ps.startSize = 15;
-                ps.gravity = CGPointZero;
-                ps.life = 0;
+                ps.startSize = 15;
+//                ps.gravity = CGPointZero;
+//                ps.life = 0;
                 //  ps.totalParticles = 25;
+            ccColor4F startColorIce = {0.38, 0.698, 0.8, 1.0};
+            ps.startColor= startColorIce;
                 ps.position = sprite.position;
                 
                 
@@ -91,6 +93,11 @@
               case dot:
                   ps = [[CCParticleSun node] retain];
                   [self addChild:ps];
+//          Wildfire alternative
+            ccColor4F startColorWildfire = {0.38, 0.698, 0.267, 1.0};
+            ps.startColor= startColorWildfire;
+            
+//          Wildfire alternative (End)
                   ps.startSize = 15;
 //                ps.gravity = CGPointZero;
 //                ps.life = 0;
@@ -105,9 +112,22 @@
                 break;
               case damage:
 //                  NSLog(@"JUST DAMAGE!!");
+// Normal Arrow! No ParticleSystem
                 break;
               case pushBack:
 //                  NSLog(@"PUSH IT");
+                  ps = [[CCParticleSun node] retain];
+                  [self addChild:ps];
+                  ccColor4F startColorPushBack = {0.035, 0.027, 0.09, 1.0};
+                  ps.startColor= startColorPushBack;
+                  ps.startSize = 15;
+                  ps.position = sprite.position;
+                  
+                  // Move Particle system to actual endpoint
+                  [ps runAction:[CCSequence actions:
+                                 [CCMoveTo actionWithDuration:[self timeToLive] position:[self destination]],
+                                 //[CCCallFuncN actionWithTarget:self selector:@selector(spriteMoveFinished:)],
+                                 nil]];
                 break;
               default:
                 break;
