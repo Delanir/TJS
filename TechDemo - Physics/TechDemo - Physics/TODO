@@ -10,8 +10,9 @@
 
 - Vida da wall
 - setas a saír por cima
-- Dano dos inimigos (Amaral)        
-- Limitar as setas disparadas (quando acabam comeaça os nums negativos)
+- Dano dos inimigos (Amaral)
+- Impedir a animacao de disparo do Yuri quando nao ha setas        
+
 
 /**
 * Later
@@ -95,5 +96,6 @@
 - Sprites de morte dos inimigos (ps) - Done
 - Wall está a ser destruída magicamente - Done
 - Desenhar GUI (???) (health and other debug info)
+- Limitar as setas disparadas (quando acabam comeaça os nums negativos)
 
 
