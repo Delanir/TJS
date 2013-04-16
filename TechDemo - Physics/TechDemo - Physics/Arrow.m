@@ -43,7 +43,7 @@
         int offRealX = realX - sprite.position.x;
         int offRealY = realY - sprite.position.y;
         float length = sqrtf((offRealX*offRealX)+(offRealY*offRealY));
-        float velocity = 480/1; // 480pixels/1sec
+        float velocity = 600/1; // 480pixels/1sec
         [self setTimeToLive:length/velocity];
         
         // Rotate the arrow in the correct direction
