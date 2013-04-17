@@ -38,14 +38,14 @@
 		<real>0.06</real>
 		<key>frames</key>
 		<array>
+			<string>y_lvl3_07_up.png</string>
+			<string>y_lvl3_08.png</string>
 			<string>y_lvl3_01.png</string>
 			<string>y_lvl3_02.png</string>
 			<string>y_lvl3_03.png</string>
 			<string>y_lvl3_04.png</string>
 			<string>y_lvl3_05_up.png</string>
 			<string>y_lvl3_06_up.png</string>
-			<string>y_lvl3_07_up.png</string>
-			<string>y_lvl3_08.png</string>
 		</array>
 	</dict>
 	<key>y_attack_front</key>
@@ -54,14 +54,14 @@
 		<real>0.06</real>
 		<key>frames</key>
 		<array>
+			<string>y_lvl3_07.png</string>
+			<string>y_lvl3_08.png</string>
 			<string>y_lvl3_01.png</string>
 			<string>y_lvl3_02.png</string>
 			<string>y_lvl3_03.png</string>
 			<string>y_lvl3_04.png</string>
 			<string>y_lvl3_05.png</string>
 			<string>y_lvl3_06.png</string>
-			<string>y_lvl3_07.png</string>
-			<string>y_lvl3_08.png</string>
 		</array>
 	</dict>
 	<key>y_attack_down</key>
@@ -70,14 +70,14 @@
 		<real>0.06</real>
 		<key>frames</key>
 		<array>
+			<string>y_lvl3_07_down.png</string>
+			<string>y_lvl3_08.png</string>
 			<string>y_lvl3_01.png</string>
 			<string>y_lvl3_02.png</string>
 			<string>y_lvl3_03.png</string>
 			<string>y_lvl3_04.png</string>
 			<string>y_lvl3_05_down.png</string>
 			<string>y_lvl3_06_down.png</string>
-			<string>y_lvl3_07_down.png</string>
-			<string>y_lvl3_08.png</string>
 		</array>
 	</dict>
 </dict>

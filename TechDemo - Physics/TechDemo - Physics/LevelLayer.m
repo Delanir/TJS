@@ -86,6 +86,7 @@
     {
         CGSize winSize = [[CCDirector sharedDirector] winSize];
         timeElapsedSinceBeginning = 2.0f;
+        fire = NO;
         
         // Criação da cena com castelo
         MainScene *mainScene = [[MainScene alloc] initWithWinSize:winSize parent:self];
@@ -120,18 +121,9 @@
 
 - (void)update:(ccTime)dt
 {
-    Yuri * yuri = (Yuri*)[self getChildByTag:9];
-    if([yuri fire])
-    {
-        [yuri setFire:NO];
-        [yuri animateInDirection:location];
-    }
-    if([yuri readyToFire] && ([hud hasArrows]>0))
-    {
-        [yuri setReadyToFire:NO];
+    if(fire && [hud hasArrows] > 0 && [(Yuri*)[self getChildByTag:9]fireIfAble: location] )
         [self addProjectile:location];
-    }
-        
+    
     [[CollisionManager shared] updatePixelPerfectCollisions:dt];
     [[CollisionManager shared] updateWallsAndEnemies:dt];
     [hud updateWallHealth];
@@ -221,8 +213,10 @@
 
 - (void)ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    [(Yuri*)[self getChildByTag:9] setFire: YES];
-    
+
+    [super ccTouchesBegan:touches withEvent:event];
+   
+    fire = YES;
     // Choose one of the touches to work with
     UITouch *touch = [touches anyObject];
     location = [self convertTouchToNodeSpace:touch];
@@ -232,12 +226,15 @@
 
 -(void) ccTouchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    [(Yuri*)[self getChildByTag:9] resetSprite];
-    [(Yuri*)[self getChildByTag:9] setFire: NO];
+
+    [super ccTouchesMoved:touches withEvent:event];
+
+    fire = NO;
 }
 
 -(void) ccTouchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    [super ccTouchesMoved:touches withEvent:event];
     // Update touch position
     
     // Choose one of the touches to work with
@@ -248,17 +245,4 @@
 }
 
 
-#pragma mark GameKit delegate
-
--(void) achievementViewControllerDidFinish:(GKAchievementViewController *)viewController
-{
-	AppController *app = (AppController*) [[UIApplication sharedApplication] delegate];
-	[[app navController] dismissModalViewControllerAnimated:YES];
-}
-
--(void) leaderboardViewControllerDidFinish:(GKLeaderboardViewController *)viewController
-{
-	AppController *app = (AppController*) [[UIApplication sharedApplication] delegate];
-	[[app navController] dismissModalViewControllerAnimated:YES];
-}
 @end
