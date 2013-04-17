@@ -10,7 +10,7 @@
 
 typedef enum {power1button, power2button, power3button} powerButton;
 
-@interface HudLayer : CCLayer
+@interface Hud : CCLayer
 {
     int _arrows, money;
     NSMutableArray * buttons;

@@ -44,7 +44,7 @@
 	
 	// 'layer' is an autorelease object.
 	LevelLayer *level = [LevelLayer node];
-    HudLayer *levelHud = [HudLayer node];
+    Hud *levelHud = [Hud node];
 	
 	// add layer as a child to scene
 	[scene addChild: level];
