@@ -38,6 +38,8 @@
     CCSprite *_marksmanBranch3;
     CCSprite *_marksmanBranch2;
     CCSprite *_marksmanBranch1;
+    
+    CCLabelTTF *_numberStars;
 }
 - (void) pressedCitySymbol:(id)sender;
 - (void) pressedMainMenu:(id)sender;
