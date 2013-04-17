@@ -39,7 +39,9 @@
 -(void) onExit
 {
     [super onExit];
-    [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
+    // Isto estava a parar a musica porque esta layer saía depois da outra entrar
+    // onde se iniciava a música. E realmente isto era desnecessário
+    //[[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
     
 }
 

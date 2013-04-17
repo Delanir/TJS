@@ -74,8 +74,6 @@
 {
     //Startup sound
     [super onEnter];
-    //[[SimpleAudioEngine sharedEngine] setEffectsVolume:0.5f];
-    [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"Battle1.mp3" loop:YES];
 }
 
 
@@ -84,6 +82,9 @@
 {
     if( (self=[super init]))
     {
+        //[[SimpleAudioEngine sharedEngine] setEffectsVolume:0.5f];
+        [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"Battle1.mp3" loop:YES];
+
         CGSize winSize = [[CCDirector sharedDirector] winSize];
         timeElapsedSinceBeginning = 2.0f;
         fire = NO;
