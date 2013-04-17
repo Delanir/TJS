@@ -83,6 +83,21 @@
 		8B8C2DC11719EA3F00B50C1E /* Button_Play.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B8C2DBC1719EA3F00B50C1E /* Button_Play.png */; };
 		8B8C2DC21719EA3F00B50C1E /* Button_Play_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B8C2DBD1719EA3F00B50C1E /* Button_Play_pressed.png */; };
 		8B8C2DC51719EA3F00B50C1E /* larcher_transparent_name.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B8C2DC01719EA3F00B50C1E /* larcher_transparent_name.png */; };
+		8BBB6A13171E00C90064B3CD /* City - Symbol z34_DOWN-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BBB6A11171E00C90064B3CD /* City - Symbol z34_DOWN-ipadhd.png */; };
+		8BBB6A14171E00C90064B3CD /* City - Symbol z34_UP-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BBB6A12171E00C90064B3CD /* City - Symbol z34_UP-ipadhd.png */; };
+		8BBB6A1C171E08CD0064B3CD /* SpeakerIcon_DOWN-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BBB6A16171E08CD0064B3CD /* SpeakerIcon_DOWN-ipadhd.png */; };
+		8BBB6A1D171E08CD0064B3CD /* SpeakerIcon_DOWN.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BBB6A17171E08CD0064B3CD /* SpeakerIcon_DOWN.png */; };
+		8BBB6A1E171E08CD0064B3CD /* SpeakerIcon_UP_SOUND-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BBB6A18171E08CD0064B3CD /* SpeakerIcon_UP_SOUND-ipadhd.png */; };
+		8BBB6A1F171E08CD0064B3CD /* SpeakerIcon_UP_SOUND.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BBB6A19171E08CD0064B3CD /* SpeakerIcon_UP_SOUND.png */; };
+		8BBB6A20171E08CD0064B3CD /* SpeakerIcon_UP-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BBB6A1A171E08CD0064B3CD /* SpeakerIcon_UP-ipadhd.png */; };
+		8BBB6A21171E08CD0064B3CD /* SpeakerIcon_UP.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BBB6A1B171E08CD0064B3CD /* SpeakerIcon_UP.png */; };
+		8BBB6A23171E09E30064B3CD /* SettingsMenu.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 8BBB6A22171E09E30064B3CD /* SettingsMenu.ccbi */; };
+		8BBB6A26171E0B240064B3CD /* SettingsMenuLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BBB6A25171E0B240064B3CD /* SettingsMenuLayer.m */; };
+		8BBB6A2B171E273C0064B3CD /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BBB6A27171E273B0064B3CD /* star.png */; };
+		8BBB6A2C171E273C0064B3CD /* star-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BBB6A28171E273C0064B3CD /* star-ipadhd.png */; };
+		8BBB6A2D171E273C0064B3CD /* starUP.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BBB6A29171E273C0064B3CD /* starUP.png */; };
+		8BBB6A2E171E273C0064B3CD /* starUP-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BBB6A2A171E273C0064B3CD /* starUP-ipadhd.png */; };
+		8BBB6A30171E27970064B3CD /* akaPotsley.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8BBB6A2F171E27970064B3CD /* akaPotsley.ttf */; };
 		8BC00EFC171DEA4700A0DCD4 /* City - Symbol z34_DOWN.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC00EFA171DEA4700A0DCD4 /* City - Symbol z34_DOWN.png */; };
 		8BC00EFD171DEA4700A0DCD4 /* City - Symbol z34_UP.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC00EFB171DEA4700A0DCD4 /* City - Symbol z34_UP.png */; };
 		8BC00F29171DF82000A0DCD4 /* Background z0-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC00F05171DF81F00A0DCD4 /* Background z0-ipadhd.png */; };
@@ -403,6 +418,22 @@
 		8B8C2DBC1719EA3F00B50C1E /* Button_Play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Button_Play.png; sourceTree = "<group>"; };
 		8B8C2DBD1719EA3F00B50C1E /* Button_Play_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Button_Play_pressed.png; sourceTree = "<group>"; };
 		8B8C2DC01719EA3F00B50C1E /* larcher_transparent_name.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = larcher_transparent_name.png; sourceTree = "<group>"; };
+		8BBB6A11171E00C90064B3CD /* City - Symbol z34_DOWN-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "City - Symbol z34_DOWN-ipadhd.png"; sourceTree = "<group>"; };
+		8BBB6A12171E00C90064B3CD /* City - Symbol z34_UP-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "City - Symbol z34_UP-ipadhd.png"; sourceTree = "<group>"; };
+		8BBB6A16171E08CD0064B3CD /* SpeakerIcon_DOWN-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SpeakerIcon_DOWN-ipadhd.png"; sourceTree = "<group>"; };
+		8BBB6A17171E08CD0064B3CD /* SpeakerIcon_DOWN.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SpeakerIcon_DOWN.png; sourceTree = "<group>"; };
+		8BBB6A18171E08CD0064B3CD /* SpeakerIcon_UP_SOUND-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SpeakerIcon_UP_SOUND-ipadhd.png"; sourceTree = "<group>"; };
+		8BBB6A19171E08CD0064B3CD /* SpeakerIcon_UP_SOUND.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SpeakerIcon_UP_SOUND.png; sourceTree = "<group>"; };
+		8BBB6A1A171E08CD0064B3CD /* SpeakerIcon_UP-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SpeakerIcon_UP-ipadhd.png"; sourceTree = "<group>"; };
+		8BBB6A1B171E08CD0064B3CD /* SpeakerIcon_UP.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SpeakerIcon_UP.png; sourceTree = "<group>"; };
+		8BBB6A22171E09E30064B3CD /* SettingsMenu.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = SettingsMenu.ccbi; sourceTree = "<group>"; };
+		8BBB6A24171E0B240064B3CD /* SettingsMenuLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsMenuLayer.h; sourceTree = "<group>"; };
+		8BBB6A25171E0B240064B3CD /* SettingsMenuLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsMenuLayer.m; sourceTree = "<group>"; };
+		8BBB6A27171E273B0064B3CD /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
+		8BBB6A28171E273C0064B3CD /* star-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-ipadhd.png"; sourceTree = "<group>"; };
+		8BBB6A29171E273C0064B3CD /* starUP.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = starUP.png; sourceTree = "<group>"; };
+		8BBB6A2A171E273C0064B3CD /* starUP-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "starUP-ipadhd.png"; sourceTree = "<group>"; };
+		8BBB6A2F171E27970064B3CD /* akaPotsley.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = akaPotsley.ttf; sourceTree = "<group>"; };
 		8BC00EFA171DEA4700A0DCD4 /* City - Symbol z34_DOWN.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "City - Symbol z34_DOWN.png"; sourceTree = "<group>"; };
 		8BC00EFB171DEA4700A0DCD4 /* City - Symbol z34_UP.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "City - Symbol z34_UP.png"; sourceTree = "<group>"; };
 		8BC00F05171DF81F00A0DCD4 /* Background z0-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Background z0-ipadhd.png"; sourceTree = "<group>"; };
@@ -854,6 +885,8 @@
 				8BC00F26171DF82000A0DCD4 /* Marksman - el3 z26-ipadhd.png */,
 				8BC00F27171DF82000A0DCD4 /* Marksman - Main branch z23-ipadhd.png */,
 				8BC00F28171DF82000A0DCD4 /* Marksman Symbol - z33-ipadhd.png */,
+				8BBB6A11171E00C90064B3CD /* City - Symbol z34_DOWN-ipadhd.png */,
+				8BBB6A12171E00C90064B3CD /* City - Symbol z34_UP-ipadhd.png */,
 				8BC00EFA171DEA4700A0DCD4 /* City - Symbol z34_DOWN.png */,
 				8BC00EFB171DEA4700A0DCD4 /* City - Symbol z34_UP.png */,
 				8B0E70E6171DCCB9004D212C /* Background z0.png */,
@@ -1006,6 +1039,8 @@
 				8B0E712F171DD447004D212C /* SkillTreeLayer.m */,
 				8B8C2D951719D8A700B50C1E /* MainMenuLayer.h */,
 				8B8C2D961719D8A700B50C1E /* MainMenuLayer.m */,
+				8BBB6A24171E0B240064B3CD /* SettingsMenuLayer.h */,
+				8BBB6A25171E0B240064B3CD /* SettingsMenuLayer.m */,
 				9C85F6291707958200EECB83 /* IntroLayer.h */,
 				9C85F62A1707958200EECB83 /* IntroLayer.m */,
 				9C7FF348170B359F009DA7F9 /* TODO */,
@@ -1021,6 +1056,12 @@
 		9C85F4AC1707957E00EECB83 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8BBB6A16171E08CD0064B3CD /* SpeakerIcon_DOWN-ipadhd.png */,
+				8BBB6A17171E08CD0064B3CD /* SpeakerIcon_DOWN.png */,
+				8BBB6A18171E08CD0064B3CD /* SpeakerIcon_UP_SOUND-ipadhd.png */,
+				8BBB6A19171E08CD0064B3CD /* SpeakerIcon_UP_SOUND.png */,
+				8BBB6A1A171E08CD0064B3CD /* SpeakerIcon_UP-ipadhd.png */,
+				8BBB6A1B171E08CD0064B3CD /* SpeakerIcon_UP.png */,
 				8B0E70E5171DCCB9004D212C /* Skilltree */,
 				8B0E70D8171DBBFA004D212C /* achievements_.png */,
 				8B0E70D9171DBBFA004D212C /* achievements_@2x.png */,
@@ -1039,6 +1080,10 @@
 				3E1231CA171A414D00FEBEDE /* cross-ipadhd.png */,
 				3E1231CD171A414D00FEBEDE /* plus.png */,
 				3E1231CC171A414D00FEBEDE /* plus-ipadhd.png */,
+				8BBB6A27171E273B0064B3CD /* star.png */,
+				8BBB6A28171E273C0064B3CD /* star-ipadhd.png */,
+				8BBB6A29171E273C0064B3CD /* starUP.png */,
+				8BBB6A2A171E273C0064B3CD /* starUP-ipadhd.png */,
 				8B560899171A251F00B14693 /* skilltree.png */,
 				9CBF5AFF171B1A0E00EF44B2 /* skilltree-ipadhd.png */,
 				8B56088C171A251200B14693 /* achievements.png */,
@@ -1049,7 +1094,9 @@
 				9CBF5AFE171B1A0E00EF44B2 /* settings-ipadhd.png */,
 				3E14D23A171A2A28005992A6 /* Comet.plist */,
 				8B8C2D9B1719DB9300B50C1E /* MainMenu.ccbi */,
+				8BBB6A2F171E27970064B3CD /* akaPotsley.ttf */,
 				8B0E7131171DD5A2004D212C /* SkillTreeLayer.ccbi */,
+				8BBB6A22171E09E30064B3CD /* SettingsMenu.ccbi */,
 				9C8DE0D017185844002E0D0A /* Tags */,
 				9C94ABD717197BD2005BCE32 /* zDepth */,
 				9C7FF343170B28CE009DA7F9 /* Config.plist */,
@@ -1778,6 +1825,20 @@
 				8BC00F4A171DF82000A0DCD4 /* Marksman - el3 z26-ipadhd.png in Resources */,
 				8BC00F4B171DF82000A0DCD4 /* Marksman - Main branch z23-ipadhd.png in Resources */,
 				8BC00F4C171DF82000A0DCD4 /* Marksman Symbol - z33-ipadhd.png in Resources */,
+				8BBB6A13171E00C90064B3CD /* City - Symbol z34_DOWN-ipadhd.png in Resources */,
+				8BBB6A14171E00C90064B3CD /* City - Symbol z34_UP-ipadhd.png in Resources */,
+				8BBB6A1C171E08CD0064B3CD /* SpeakerIcon_DOWN-ipadhd.png in Resources */,
+				8BBB6A1D171E08CD0064B3CD /* SpeakerIcon_DOWN.png in Resources */,
+				8BBB6A1E171E08CD0064B3CD /* SpeakerIcon_UP_SOUND-ipadhd.png in Resources */,
+				8BBB6A1F171E08CD0064B3CD /* SpeakerIcon_UP_SOUND.png in Resources */,
+				8BBB6A20171E08CD0064B3CD /* SpeakerIcon_UP-ipadhd.png in Resources */,
+				8BBB6A21171E08CD0064B3CD /* SpeakerIcon_UP.png in Resources */,
+				8BBB6A23171E09E30064B3CD /* SettingsMenu.ccbi in Resources */,
+				8BBB6A2B171E273C0064B3CD /* star.png in Resources */,
+				8BBB6A2C171E273C0064B3CD /* star-ipadhd.png in Resources */,
+				8BBB6A2D171E273C0064B3CD /* starUP.png in Resources */,
+				8BBB6A2E171E273C0064B3CD /* starUP-ipadhd.png in Resources */,
+				8BBB6A30171E27970064B3CD /* akaPotsley.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1921,6 +1982,7 @@
 				8B8C2DBB1719DDC500B50C1E /* CCNode+CCBRelativePositioning.m in Sources */,
 				8C5C3324171B195800093301 /* HudLayer.m in Sources */,
 				8B0E7130171DD447004D212C /* SkillTreeLayer.m in Sources */,
+				8BBB6A26171E0B240064B3CD /* SettingsMenuLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

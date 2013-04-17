@@ -6,6 +6,7 @@
 
 
 - som do impacto tem de ser corrigido
+- Implementar skill tree - implementar a lógica e ver se fazemos uma spritesheet de bocadinhos para melhorar a performance
 - Por dano apenas quando inimigos acabam o movimento (callback)
 
 - setas a saír por cima

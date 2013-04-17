@@ -73,5 +73,10 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 	</array>
+	<key>UIAppFonts</key>
+<array>
+    <string>akaPotsley.ttf</string>
+    
+</array>
 </dict>
 </plist>

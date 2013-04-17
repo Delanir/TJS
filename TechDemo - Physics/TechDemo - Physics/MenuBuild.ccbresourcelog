@@ -2,6 +2,7 @@ achievements-ipadhd.png
 achievements.png
 achievements_.png
 achievements_@2x.png
+akaPotsley.ttf
 background-ipadhd.png
 background.png
 bullseye-ipadhd.png
@@ -80,6 +81,7 @@ settings-ipadhd.png
 settings.png
 settings_.png
 settings_@2x.png
+SettingsMenu.ccbi
 Background z0-ipadhd.png
 Background z0.png
 City - branch1 - z13-ipadhd.png
@@ -98,7 +100,9 @@ City - Main branch z15-ipadhd.png
 City - Main branch z15.png
 City - Symbol z34-ipadhd.png
 City - Symbol z34.png
+City - Symbol z34_DOWN-ipadhd.png
 City - Symbol z34_DOWN.png
+City - Symbol z34_UP-ipadhd.png
 City - Symbol z34_UP.png
 Fire - branch 1 z8-ipadhd.png
 Fire - branch 1 z8.png
@@ -157,5 +161,15 @@ Marksman Symbol - z33.png
 skilltree-ipadhd.png
 skilltree.png
 SkillTreeLayer.ccbi
+SpeakerIcon_DOWN-ipadhd.png
+SpeakerIcon_DOWN.png
+SpeakerIcon_UP-ipadhd.png
+SpeakerIcon_UP.png
+SpeakerIcon_UP_SOUND-ipadhd.png
+SpeakerIcon_UP_SOUND.png
+star-ipadhd.png
+star.png
+starUP-ipadhd.png
+starUP.png
 yurie_anim.plist
 zealot_anim.plist
