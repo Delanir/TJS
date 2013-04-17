@@ -73,6 +73,7 @@
 		8B560896171A251200B14693 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B560890171A251200B14693 /* settings.png */; };
 		8B56089B171A251F00B14693 /* skilltree.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B560899171A251F00B14693 /* skilltree.png */; };
 		8B79CDCB171F15B800E58EDD /* LevelLayerAbstract.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B79CDCA171F15B800E58EDD /* LevelLayerAbstract.m */; };
+		8B79CDE1171F501D00E58EDD /* Hud.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B79CDE0171F501D00E58EDD /* Hud.m */; };
 		8B8C2D971719D8A700B50C1E /* MainMenuLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B8C2D961719D8A700B50C1E /* MainMenuLayer.m */; };
 		8B8C2D9C1719DB9300B50C1E /* MainMenu.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 8B8C2D9B1719DB9300B50C1E /* MainMenu.ccbi */; };
 		8B8C2DB61719DDB600B50C1E /* CCBAnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B8C2DAB1719DDA900B50C1E /* CCBAnimationManager.m */; };
@@ -141,7 +142,6 @@
 		8BD62290171460200076BF42 /* lvl1spritesheet.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BD6228D171460200076BF42 /* lvl1spritesheet.png */; };
 		8BFA2D9D171724F9008A2064 /* fairiedragon_anim.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8BFA2D9C171724F9008A2064 /* fairiedragon_anim.plist */; };
 		8BFA2DA017172536008A2064 /* peasant_anim.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8BFA2D9F17172536008A2064 /* peasant_anim.plist */; };
-		8C5C3324171B195800093301 /* HudLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C5C3323171B195800093301 /* HudLayer.m */; };
 		9C2B3CBD171EE8FB00E695FE /* Registry Entities in Resources */ = {isa = PBXBuildFile; fileRef = 9C2B3CBC171EE8FB00E695FE /* Registry Entities */; };
 		9C377BE9170B72D400F840FB /* KKPixelMaskSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C377BE2170B6F5100F840FB /* KKPixelMaskSprite.m */; };
 		9C377BEA170B72D700F840FB /* bitarray.c in Sources */ = {isa = PBXBuildFile; fileRef = 9C377BE3170B715A00F840FB /* bitarray.c */; };
@@ -406,6 +406,8 @@
 		8B79CDC9171F15B800E58EDD /* LevelLayerAbstract.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelLayerAbstract.h; sourceTree = "<group>"; };
 		8B79CDCA171F15B800E58EDD /* LevelLayerAbstract.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelLayerAbstract.m; sourceTree = "<group>"; };
 		8B79CDD9171F2D2500E58EDD /* TODO */ = {isa = PBXFileReference; lastKnownFileType = text; path = TODO; sourceTree = "<group>"; };
+		8B79CDDF171F501D00E58EDD /* Hud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hud.h; sourceTree = "<group>"; };
+		8B79CDE0171F501D00E58EDD /* Hud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hud.m; sourceTree = "<group>"; };
 		8B8C2D951719D8A700B50C1E /* MainMenuLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuLayer.h; sourceTree = "<group>"; };
 		8B8C2D961719D8A700B50C1E /* MainMenuLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuLayer.m; sourceTree = "<group>"; };
 		8B8C2D9B1719DB9300B50C1E /* MainMenu.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = MainMenu.ccbi; sourceTree = "<group>"; };
@@ -484,8 +486,6 @@
 		8BD6228D171460200076BF42 /* lvl1spritesheet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lvl1spritesheet.png; sourceTree = "<group>"; };
 		8BFA2D9C171724F9008A2064 /* fairiedragon_anim.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = fairiedragon_anim.plist; sourceTree = "<group>"; };
 		8BFA2D9F17172536008A2064 /* peasant_anim.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = peasant_anim.plist; sourceTree = "<group>"; };
-		8C5C3322171B195800093301 /* HudLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HudLayer.h; sourceTree = "<group>"; };
-		8C5C3323171B195800093301 /* HudLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HudLayer.m; sourceTree = "<group>"; };
 		9C2B3CBC171EE8FB00E695FE /* Registry Entities */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Registry Entities"; sourceTree = "<group>"; };
 		9C377BE1170B6F5100F840FB /* KKPixelMaskSprite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKPixelMaskSprite.h; sourceTree = "<group>"; };
 		9C377BE2170B6F5100F840FB /* KKPixelMaskSprite.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKPixelMaskSprite.m; sourceTree = "<group>"; };
@@ -1551,8 +1551,8 @@
 		9C969E581716263000BE7476 /* Scene Entities */ = {
 			isa = PBXGroup;
 			children = (
-				8C5C3322171B195800093301 /* HudLayer.h */,
-				8C5C3323171B195800093301 /* HudLayer.m */,
+				8B79CDDF171F501D00E58EDD /* Hud.h */,
+				8B79CDE0171F501D00E58EDD /* Hud.m */,
 				9C85F659170A3E4100EECB83 /* MainScene.h */,
 				9C85F65A170A3E4200EECB83 /* MainScene.m */,
 				3EDD9F2E1715E7F700C6A622 /* Wall.h */,
@@ -2035,12 +2035,12 @@
 				8B8C2DB91719DDBF00B50C1E /* CCBsequence.m in Sources */,
 				8B8C2DBA1719DDC200B50C1E /* CCBSequenceProperty.m in Sources */,
 				8B8C2DBB1719DDC500B50C1E /* CCNode+CCBRelativePositioning.m in Sources */,
-				8C5C3324171B195800093301 /* HudLayer.m in Sources */,
 				8B0E7130171DD447004D212C /* SkillTreeLayer.m in Sources */,
 				8BBB6A26171E0B240064B3CD /* SettingsMenuLayer.m in Sources */,
 				9CBF5B0A171E463000EF44B2 /* Registry.m in Sources */,
 				9CBF5B0D171E464E00EF44B2 /* ResourceManager.m in Sources */,
 				8B79CDCB171F15B800E58EDD /* LevelLayerAbstract.m in Sources */,
+				8B79CDE1171F501D00E58EDD /* Hud.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

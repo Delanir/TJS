@@ -6,12 +6,12 @@
 //
 //
 
-#import "HudLayer.h"
+#import "Hud.h"
 #import "Wall.h"
 
 #define MAX_NUM_ARROWS 100
 
-@implementation HudLayer
+@implementation Hud
 @synthesize numberOfEnemiesFromStart, numberOfEnemiesKilled, numberOfArrowsUsed;
 
 -(id) init

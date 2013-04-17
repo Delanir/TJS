@@ -38,9 +38,11 @@
         CCLOG(@"MIAU MIAU SOU O GATO MUITO MAU");
         self.isTouchEnabled = YES;
         CGSize winSize = [[CCDirector sharedDirector] winSize];
-        _pauseButton= [[CCSprite spriteWithFile:@"starUP.png"] retain];
+        _pauseButton= [CCSprite spriteWithFile:@"starUP.png"];
         [_pauseButton setPosition:CGPointMake(_pauseButton.contentSize.width, winSize.height-_pauseButton.contentSize.height)];
-        [_pauseButton setZOrder:501];//it-s over 9000
+
+        [_pauseButton setZOrder:71];
+        [self addChild:_pauseButton];
     }
     
     
@@ -50,7 +52,6 @@
 
 -(void)dealloc
 {
-    [_pauseButton release];
     [super dealloc];
 }
 

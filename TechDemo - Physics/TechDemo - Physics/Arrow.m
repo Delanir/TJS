@@ -90,9 +90,10 @@
             case dot:
                 ps = [[CCParticleSun node] retain];
                 [self addChild:ps];
+            
                 //          Wildfire alternative
-                ccColor4F startColorWildfire = {0.38, 0.698, 0.267, 1.0};
-                ps.startColor= startColorWildfire;
+                //ccColor4F startColorWildfire = {0.38, 0.698, 0.267, 1.0};
+                //ps.startColor= startColorWildfire;
                 
                 //          Wildfire alternative (End)
                 ps.startSize = 15;
