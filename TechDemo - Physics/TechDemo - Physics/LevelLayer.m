@@ -86,6 +86,7 @@
     {
         CGSize winSize = [[CCDirector sharedDirector] winSize];
         timeElapsedSinceBeginning = 2.0f;
+        fire = NO;
         
         // Criação da cena com castelo
         MainScene *mainScene = [[MainScene alloc] initWithWinSize:winSize parent:self];
@@ -120,18 +121,9 @@
 
 - (void)update:(ccTime)dt
 {
-    Yuri * yuri = (Yuri*)[self getChildByTag:9];
-    if([yuri fire])
-    {
-        [yuri setFire:NO];
-        [yuri animateInDirection:location];
-    }
-    if([yuri readyToFire] && ([hud hasArrows]>0))
-    {
-        [yuri setReadyToFire:NO];
+    if(fire && [hud hasArrows] > 0 && [(Yuri*)[self getChildByTag:9]fireIfAble: location] )
         [self addProjectile:location];
-    }
-        
+    
     [[CollisionManager shared] updatePixelPerfectCollisions:dt];
     [[CollisionManager shared] updateWallsAndEnemies:dt];
     [hud updateWallHealth];
@@ -221,8 +213,8 @@
 
 - (void)ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    [(Yuri*)[self getChildByTag:9] setFire: YES];
     
+    fire = YES;
     // Choose one of the touches to work with
     UITouch *touch = [touches anyObject];
     location = [self convertTouchToNodeSpace:touch];
@@ -232,8 +224,8 @@
 
 -(void) ccTouchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    [(Yuri*)[self getChildByTag:9] resetSprite];
-    [(Yuri*)[self getChildByTag:9] setFire: NO];
+    fire = NO;
+   // [(Yuri*)[self getChildByTag:9] setFire: NO];
 }
 
 -(void) ccTouchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
