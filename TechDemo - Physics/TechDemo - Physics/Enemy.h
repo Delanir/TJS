@@ -13,9 +13,11 @@ typedef enum {walk, attack, fly, land, hit, die} state;
 @interface Enemy : Entity
 {
     state currentState;
+    float strength;
 }
 
 @property state currentState;
+@property float strength;
 
 
 - (id) initWithSprite:(NSString *)spriteFile

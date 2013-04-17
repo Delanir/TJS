@@ -329,6 +329,8 @@
 		9CBF5B03171B1A0E00EF44B2 /* skilltree-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CBF5AFF171B1A0E00EF44B2 /* skilltree-ipadhd.png */; };
 		9CBF5B06171B1AA700EF44B2 /* Button_Play_pressed-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CBF5B04171B1AA700EF44B2 /* Button_Play_pressed-ipadhd.png */; };
 		9CBF5B07171B1AA700EF44B2 /* Button_Play-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CBF5B05171B1AA700EF44B2 /* Button_Play-ipadhd.png */; };
+		9CBF5B0A171E463000EF44B2 /* Registry.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CBF5B09171E462E00EF44B2 /* Registry.m */; };
+		9CBF5B0D171E464E00EF44B2 /* ResourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CBF5B0C171E464C00EF44B2 /* ResourceManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -824,6 +826,10 @@
 		9CBF5AFF171B1A0E00EF44B2 /* skilltree-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "skilltree-ipadhd.png"; sourceTree = "<group>"; };
 		9CBF5B04171B1AA700EF44B2 /* Button_Play_pressed-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Button_Play_pressed-ipadhd.png"; sourceTree = "<group>"; };
 		9CBF5B05171B1AA700EF44B2 /* Button_Play-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Button_Play-ipadhd.png"; sourceTree = "<group>"; };
+		9CBF5B08171E462D00EF44B2 /* Registry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Registry.h; sourceTree = "<group>"; };
+		9CBF5B09171E462E00EF44B2 /* Registry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Registry.m; sourceTree = "<group>"; };
+		9CBF5B0B171E464C00EF44B2 /* ResourceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourceManager.h; sourceTree = "<group>"; };
+		9CBF5B0C171E464C00EF44B2 /* ResourceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResourceManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1518,6 +1524,10 @@
 				8BD6228817145FF60076BF42 /* SpriteManager.m */,
 				9C8C65D21719E2A700F56FC4 /* StimulusFactory.h */,
 				9C8C65D31719E2A700F56FC4 /* StimulusFactory.m */,
+				9CBF5B08171E462D00EF44B2 /* Registry.h */,
+				9CBF5B09171E462E00EF44B2 /* Registry.m */,
+				9CBF5B0B171E464C00EF44B2 /* ResourceManager.h */,
+				9CBF5B0C171E464C00EF44B2 /* ResourceManager.m */,
 			);
 			name = "Singleton Classes";
 			sourceTree = "<group>";
@@ -1983,6 +1993,8 @@
 				8C5C3324171B195800093301 /* HudLayer.m in Sources */,
 				8B0E7130171DD447004D212C /* SkillTreeLayer.m in Sources */,
 				8BBB6A26171E0B240064B3CD /* SettingsMenuLayer.m in Sources */,
+				9CBF5B0A171E463000EF44B2 /* Registry.m in Sources */,
+				9CBF5B0D171E464E00EF44B2 /* ResourceManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

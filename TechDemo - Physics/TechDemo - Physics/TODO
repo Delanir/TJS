@@ -4,16 +4,15 @@
 *                *
 **/            **/
 
+- REFACTORIZAR TUDO PARA USAR REGISTRY E RESOURCE MANAGER
+- TIRAR TODOS OS WARNINGS
 
 - som do impacto tem de ser corrigido
 - Implementar skill tree - implementar a lógica e ver se fazemos uma spritesheet de bocadinhos para melhorar a performance
-- Por dano apenas quando inimigos acabam o movimento (callback)
-
 - setas a saír por cima
 - Dano dos inimigos (Amaral)
 - Impedir a animacao de disparo do Yuri quando nao ha setas        
 - Random shouts dos inimigos
-- GameResourceManager -uma classe estática de variáveis de jogo
 (o número de estrelas por exemplo é algo persistente em todos os ecrãs)
 
 /**
@@ -103,5 +102,6 @@
 - Vida da wall
 - Limitar as setas disparadas (quando acabam comeaça os nums negativos)
 - Background sound para assim que começa
-
-
+- Por dano apenas quando inimigos acabam o movimento (callback)
+- ResourceManager - um singleton de variáveis de jogo
+- Registry - um singleton para acedermos a entidades do jogo

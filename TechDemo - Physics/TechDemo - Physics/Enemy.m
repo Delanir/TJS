@@ -11,7 +11,7 @@
 
 @implementation Enemy
 
-@synthesize currentState;
+@synthesize currentState, strength;
 
 - (id) initWithSprite:(NSString *)spriteFile andWindowSize:(CGSize) winSize
 {
@@ -54,6 +54,11 @@
     // descomentar para a sprites aparecerem
     //[self destroy];
   [[CollisionManager shared] setNumberOfDeadEnemies: [CollisionManager shared].numberOfDeadEnemies+1];
+}
+
+- (void)damageWall
+{
+    [[Wall getMajor] damage:strength];
 }
 
 -(void ) shout

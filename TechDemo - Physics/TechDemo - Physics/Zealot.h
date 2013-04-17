@@ -11,11 +11,11 @@
 @interface Zealot : Enemy
 {
     CCAction *walkAction;
-    CCAction *attackAction;
+    CCSequence *attackAction;
 }
 
 @property (nonatomic, retain) CCAction *walkAction;
-@property (nonatomic, retain) CCAction *attackAction;
+@property (nonatomic, retain) CCSequence *attackAction;
 
 -(void)attack;
 @end

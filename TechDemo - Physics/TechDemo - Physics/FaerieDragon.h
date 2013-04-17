@@ -11,11 +11,11 @@
 @interface FaerieDragon : Enemy
 {
     CCAction *flyAction;
-    CCAction *attackAction;
+    CCSequence *attackAction;
 }
 
 @property (nonatomic, retain) CCAction *flyAction;
-@property (nonatomic, retain) CCAction *attackAction;
+@property (nonatomic, retain) CCSequence *attackAction;
 
 -(void)attack;
 @end

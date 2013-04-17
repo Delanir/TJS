@@ -18,6 +18,7 @@
     if (self = [super initWithSprite:spriteFile andWindowSize:winSize])
     {
         [self setCurrentState:walk];
+        [self setStrength:1.0];
         
         // Setup Movement
         // Determine speed of the target
@@ -37,19 +38,14 @@
         // Setup animations
         [self setWalkAction: [CCRepeatForever actionWithAction:
                              [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"z_walk" ]]]];
-        [self setAttackAction: [CCRepeatForever actionWithAction:
-                                [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"z_attack" ]]]];
+        [self setAttackAction: [CCSequence actions:
+                                [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"z_attack"]],
+                                [CCCallFuncN actionWithTarget:self selector:@selector(damageWall)],
+                                nil]];
         [[self sprite] runAction:walkAction];
-        
-        [self schedule:@selector(update:)];
         
     }
     return self;
-}
--(void)dealloc
-{
-    //self.walkAction = nil;
-    [super dealloc];
 }
 
 -(void)attack
@@ -57,7 +53,7 @@
     [self setCurrentState:attack];
     [[self sprite] stopAllActions];
     [[self sprite] setPosition:CGPointMake([self sprite].position.x +10, [self sprite].position.y)];
-    [[self sprite] runAction:attackAction];
+    [[self sprite] runAction:[CCRepeatForever actionWithAction:attackAction]];
 }
 
 -(void)die
@@ -70,19 +66,5 @@
     [[self sprite] runAction:dieAction];
 }
 
-- (void)update:(ccTime)dt
-{
-    switch(currentState)
-    {
-        case walk:
-            break;
-        case attack:
-            [[Wall getMajor] damage:0.02];
-#warning TODO damage wall. Neste momento não há como aceder à wall. O método static é temporário
-            break;
-        default:
-            break;
-    }
-}
 
 @end
