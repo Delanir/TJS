@@ -41,7 +41,8 @@
         _pauseButton= [CCSprite spriteWithFile:@"starUP.png"];
         [_pauseButton setPosition:CGPointMake(_pauseButton.contentSize.width, winSize.height-_pauseButton.contentSize.height)];
         [_pauseButton setZOrder:71];
-        [_pauseButton retain];
+        [self addChild:_pauseButton];
+//        [_pauseButton retain];
     }
     
     
