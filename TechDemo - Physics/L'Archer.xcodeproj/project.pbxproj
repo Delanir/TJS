@@ -72,6 +72,7 @@
 		8B560894171A251200B14693 /* leaderboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B56088E171A251200B14693 /* leaderboard.png */; };
 		8B560896171A251200B14693 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B560890171A251200B14693 /* settings.png */; };
 		8B56089B171A251F00B14693 /* skilltree.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B560899171A251F00B14693 /* skilltree.png */; };
+		8B79CDCB171F15B800E58EDD /* LevelLayerAbstract.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B79CDCA171F15B800E58EDD /* LevelLayerAbstract.m */; };
 		8B8C2D971719D8A700B50C1E /* MainMenuLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B8C2D961719D8A700B50C1E /* MainMenuLayer.m */; };
 		8B8C2D9C1719DB9300B50C1E /* MainMenu.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 8B8C2D9B1719DB9300B50C1E /* MainMenu.ccbi */; };
 		8B8C2DB61719DDB600B50C1E /* CCBAnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B8C2DAB1719DDA900B50C1E /* CCBAnimationManager.m */; };
@@ -402,6 +403,8 @@
 		8B56088E171A251200B14693 /* leaderboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leaderboard.png; sourceTree = "<group>"; };
 		8B560890171A251200B14693 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
 		8B560899171A251F00B14693 /* skilltree.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = skilltree.png; sourceTree = "<group>"; };
+		8B79CDC9171F15B800E58EDD /* LevelLayerAbstract.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelLayerAbstract.h; sourceTree = "<group>"; };
+		8B79CDCA171F15B800E58EDD /* LevelLayerAbstract.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelLayerAbstract.m; sourceTree = "<group>"; };
 		8B8C2D951719D8A700B50C1E /* MainMenuLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuLayer.h; sourceTree = "<group>"; };
 		8B8C2D961719D8A700B50C1E /* MainMenuLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuLayer.m; sourceTree = "<group>"; };
 		8B8C2D9B1719DB9300B50C1E /* MainMenu.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = MainMenu.ccbi; sourceTree = "<group>"; };
@@ -1041,6 +1044,8 @@
 				9C969E581716263000BE7476 /* Scene Entities */,
 				9C85F64A1709D59700EECB83 /* LevelLayer.h */,
 				9C85F64B1709D59800EECB83 /* LevelLayer.m */,
+				8B79CDC9171F15B800E58EDD /* LevelLayerAbstract.h */,
+				8B79CDCA171F15B800E58EDD /* LevelLayerAbstract.m */,
 				8B0E712E171DD446004D212C /* SkillTreeLayer.h */,
 				8B0E712F171DD447004D212C /* SkillTreeLayer.m */,
 				8B8C2D951719D8A700B50C1E /* MainMenuLayer.h */,
@@ -1995,6 +2000,7 @@
 				8BBB6A26171E0B240064B3CD /* SettingsMenuLayer.m in Sources */,
 				9CBF5B0A171E463000EF44B2 /* Registry.m in Sources */,
 				9CBF5B0D171E464E00EF44B2 /* ResourceManager.m in Sources */,
+				8B79CDCB171F15B800E58EDD /* LevelLayerAbstract.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

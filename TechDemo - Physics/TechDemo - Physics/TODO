@@ -27,6 +27,8 @@
 - Destruição mais eficiente de projecteis (depois das colisões)
 - Passar para os arqueiros do heroes  (João M)
     - Tratar das sprites do wood elf e do grand elf
+    
+-optimizar os imports > o Nuno disse que os imports devem ser feitos sempre q poss]ivel no .h
 
 /** 
 * Bonus

@@ -221,6 +221,7 @@
 
 - (void)ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    [super ccTouchesBegan:touches withEvent:event];
     [(Yuri*)[self getChildByTag:9] setFire: YES];
     
     // Choose one of the touches to work with
@@ -232,12 +233,14 @@
 
 -(void) ccTouchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    [super ccTouchesMoved:touches withEvent:event];
     [(Yuri*)[self getChildByTag:9] resetSprite];
     [(Yuri*)[self getChildByTag:9] setFire: NO];
 }
 
 -(void) ccTouchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    [super ccTouchesMoved:touches withEvent:event];
     // Update touch position
     
     // Choose one of the touches to work with
@@ -248,17 +251,4 @@
 }
 
 
-#pragma mark GameKit delegate
-
--(void) achievementViewControllerDidFinish:(GKAchievementViewController *)viewController
-{
-	AppController *app = (AppController*) [[UIApplication sharedApplication] delegate];
-	[[app navController] dismissModalViewControllerAnimated:YES];
-}
-
--(void) leaderboardViewControllerDidFinish:(GKLeaderboardViewController *)viewController
-{
-	AppController *app = (AppController*) [[UIApplication sharedApplication] delegate];
-	[[app navController] dismissModalViewControllerAnimated:YES];
-}
 @end

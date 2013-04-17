@@ -7,15 +7,15 @@
 //
 
 
-#import <GameKit/GameKit.h>
 
 // When you import this file, you import all the cocos2d classes
 #import "cocos2d.h"
 #import "HudLayer.h"
+#import "LevelLayerAbstract.h"
 
 
 // HelloWorldLayer
-@interface LevelLayer : CCLayer <GKAchievementViewControllerDelegate, GKLeaderboardViewControllerDelegate>
+@interface LevelLayer : LevelLayerAbstract
 {
     BOOL fire;
     HudLayer *hud;
