@@ -11,10 +11,9 @@
 
 @interface Yuri : Entity
 {
-    BOOL readyToFire, fire;
+    BOOL readyToFire;
 }
 
-@property (nonatomic) BOOL fire;
 @property (nonatomic) BOOL readyToFire;
 @property (nonatomic) float timeSinceLastArrow;
 @property (nonatomic, retain) CCFiniteTimeAction *shootUp;
@@ -22,10 +21,10 @@
 @property (nonatomic, retain) CCFiniteTimeAction *shootDown;
 @property (nonatomic, retain) CCAction *idle;
 
--(void)animateInDirection:(CGPoint)location;
 -(void) getReady;
 -(void) resetSprite;
 
+-(BOOL)fireIfAble:(CGPoint)location;
 -(void) changeFireRate: (float) fireRate;
 
 @end

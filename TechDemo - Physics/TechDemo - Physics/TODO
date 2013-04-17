@@ -7,22 +7,19 @@
 - REFACTORIZAR TUDO PARA USAR REGISTRY E RESOURCE MANAGER
 - TIRAR TODOS OS WARNINGS
 
-- som do impacto tem de ser corrigido
-- Implementar skill tree - implementar a lógica e ver se fazemos uma spritesheet de bocadinhos para melhorar a performance
-- setas a saír por cima
-- Dano dos inimigos (Amaral)
-- Impedir a animacao de disparo do Yuri quando nao ha setas        
-- Random shouts dos inimigos
-(o número de estrelas por exemplo é algo persistente em todos os ecrãs)
+- Implementar pausa e restart
+    - Para pausa é preciso que o update seja scheduled numa classe
+- Fazer Máquina de estado
+    - Fazer gestor de cena
 
-/**
-* Later
-**/
+- som do impacto tem de ser corrigido
+- Implementar skill tree - implementar a lógica e ver se fazemos uma spritesheet de bocadinhos para melhorar a performance (Daniela)
+- setas a saír por cima da wall
+- Dano dos inimigos (Amaral)
+- Random shouts dos inimigos (Daniela)
 
 - Menus com Cocos Builder! (Daniela, Ricardo)
-- Implementar skill tree
 
-- corrigir warnings. Em particular o da referência à wall (João)
 - Corrigir colisões no retina (???????????????????)
 - Destruição mais eficiente de projecteis (depois das colisões)
 - Passar para os arqueiros do heroes  (João M)
@@ -30,14 +27,8 @@
     
 -optimizar os imports > o Nuno disse que os imports devem ser feitos sempre q poss]ivel no .h
 
-/** 
-* Bonus
-**/
-
 - Fazer mais projectiles 
 - Lógica de levar dano em cima do moat
-    - Sprites dos bonecos a morrer
-    - Lógica disto também
 
 /**           /**
 *               *
@@ -107,3 +98,6 @@
 - Por dano apenas quando inimigos acabam o movimento (callback)
 - ResourceManager - um singleton de variáveis de jogo
 - Registry - um singleton para acedermos a entidades do jogo
+- Impedir a animacao de disparo do Yuri quando nao ha setas
+- Estrutura de pastas actualizada dentro do eks code
+- Modo de interacção do Yuri refeito

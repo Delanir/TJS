@@ -13,67 +13,75 @@
 
 @implementation Yuri
 
-@synthesize fire, readyToFire;
+@synthesize  readyToFire;
 #warning Pode ser necessário sintetizar as acções
 
 -(id) init
 {
-    if(self = [super initWithSprite:@"y_lvl3_01.png"])
+    if(self = [super initWithSprite:@"y_lvl3_06.png"])
     {
-        fire = NO;
-        readyToFire = NO;
+        readyToFire = YES;
         
         
         [self setShootUp:[CCRepeat actionWithAction:
-                            [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"y_attack_up" ]] times:1]];
+                          [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"y_attack_up" ]] times:1]];
         [self setShootFront:[CCRepeat actionWithAction:
-                            [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"y_attack_front" ]] times:1]];
+                             [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"y_attack_front" ]] times:1]];
         [self setShootDown:[CCRepeat actionWithAction:
                             [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"y_attack_down" ]] times:1]];
         [self setIdle:[CCRepeatForever actionWithAction:
-                            [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"y_idle_1" ]]]];
+                       [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"y_idle_1" ]]]];
         
-        [[self sprite] runAction:[self idle]];
+        //[[self sprite] runAction:[self idle]];
     }
     return self;
 }
 
 
--(void)animateInDirection:(CGPoint)location
+
+
+
+-(BOOL)fireIfAble:(CGPoint)location
 {
     CGSize winSize = [[CCDirector sharedDirector] winSize];
     
-    [[self sprite] stopAllActions];
-    int direction = (int)(floor(location.y / (winSize.height/3)));
-    switch (direction) {
-        case 0:
-            [[self sprite] runAction:[CCSequence actions:
-                           [self shootDown],
-                           [CCCallFuncN actionWithTarget:self selector:@selector(getReady)],
-                           nil]];
-            break;
-        case 1:
-            [[self sprite] runAction:[CCSequence actions:
-                                      [self shootFront],
-                                      [CCCallFuncN actionWithTarget:self selector:@selector(getReady)],
-                                      nil]];
-            break;
-        case 2:
-            [[self sprite] runAction:[CCSequence actions:
-                                      [self shootUp],
-                                      [CCCallFuncN actionWithTarget:self selector:@selector(getReady)],
-                                      nil]];
-            break;
-        default:
-            break;
+    if(readyToFire)
+    {
+        readyToFire = NO;
+        int direction = (int)(floor(location.y / (winSize.height/3)));
+        switch (direction)
+        {
+            case 0:
+                [[self sprite] runAction:[CCSequence actions:
+                                          [self shootDown],
+                                          [CCCallFuncN actionWithTarget:self selector:@selector(getReady)],
+                                          nil]];
+                break;
+            case 1:
+                [[self sprite] runAction:[CCSequence actions:
+                                          [self shootFront],
+                                          [CCCallFuncN actionWithTarget:self selector:@selector(getReady)],
+                                          nil]];
+                break;
+            case 2:
+                [[self sprite] runAction:[CCSequence actions:
+                                          [self shootUp],
+                                          [CCCallFuncN actionWithTarget:self selector:@selector(getReady)],
+                                          nil]];
+                break;
+        }
+        return true;
     }
-    
+    else return false;
 }
+
+
+
+
 
 -(void) getReady
 {
     [self setReadyToFire:YES];
-    [self setFire:YES];
 }
 
 
@@ -91,9 +99,9 @@
     [[[CCAnimationCache sharedAnimationCache] animationByName:@"y_attack_down" ] setDelayPerUnit:fireRate];
     
     [[self sprite] stopAllActions];
-        
+    
     [self setShootUp:[CCRepeat actionWithAction:
-                        [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"y_attack_up" ]] times:1]];
+                      [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"y_attack_up" ]] times:1]];
     [self setShootFront:[CCRepeat actionWithAction:
                          [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"y_attack_front" ]] times:1]];
     [self setShootDown:[CCRepeat actionWithAction:

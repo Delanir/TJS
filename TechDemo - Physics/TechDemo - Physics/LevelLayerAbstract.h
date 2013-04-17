@@ -14,6 +14,8 @@
     CCSprite *_pauseButton;
 }
 
+
+
 -(void) togglePause;
 -(void) pauseCheck:(UITouch *)touchLocation;
 
