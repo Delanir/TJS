@@ -6,7 +6,6 @@
 
 
 - som do impacto tem de ser corrigido
-- Implementar skill tree
 - Por dano apenas quando inimigos acabam o movimento (callback)
 
 - setas a saír por cima
@@ -18,9 +17,10 @@
 
 /**
 * Later
-**/f
+**/
 
 - Menus com Cocos Builder! (Daniela, Ricardo)
+- Implementar skill tree
 
 - corrigir warnings. Em particular o da referência à wall (João)
 - Corrigir colisões no retina (???????????????????)

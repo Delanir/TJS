@@ -8,9 +8,12 @@
 
 #import "CCLayer.h"
 
+typedef enum {power1button, power2button, power3button} powerButton;
+
 @interface HudLayer : CCLayer
 {
-    int buttons, _arrows, money;
+    int _arrows, money;
+    NSMutableArray * buttons;
     double lastHealth;
     CCLabelTTF *label,*label2,*label3;
 }
@@ -18,15 +21,12 @@
 @property int numberOfEnemiesKilled;
 @property int numberOfArrowsUsed;
 
-- (void)plusButtonTapped:(id)sender;
-- (void)crossButtonTapped:(id)sender;
-- (void)bullseyeButtonTapped:(id)sender;
-- (int)buttonPressed;
+- (NSMutableArray *)buttonsPressed;
 - (void)updateArrows;
 - (void)updateWallHealth;
 - (void)updateMoney:(int)enemyXPosition;
 - (void)increaseEnemyCount;
-- (void)increaseEnemyKilledCount;
+- (void)updateNumberOfEnemiesKilled:(int) killed;
 - (int) hasArrows;
 
 @end

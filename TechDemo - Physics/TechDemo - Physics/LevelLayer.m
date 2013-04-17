@@ -60,11 +60,11 @@
 {
     timeElapsedSinceBeginning += dt;
     
-    if((int)floor(timeElapsedSinceBeginning) % 3 == 1)
+    if((int)floor(timeElapsedSinceBeginning) % 4 == 1)
         [self addPeasant];
-    if((int)floor(timeElapsedSinceBeginning) % 8 == 1)
+    if((int)floor(timeElapsedSinceBeginning) % 10 == 1)
         [self addFaerieDragon];
-    if((int)floor(timeElapsedSinceBeginning) % 5 == 1)
+    if((int)floor(timeElapsedSinceBeginning) % 6 == 1)
         [self addZealot];
 
     
@@ -85,7 +85,7 @@
     if( (self=[super init]))
     {
         CGSize winSize = [[CCDirector sharedDirector] winSize];
-        timeElapsedSinceBeginning = 0.0f;
+        timeElapsedSinceBeginning = 2.0f;
         
         // Criação da cena com castelo
         MainScene *mainScene = [[MainScene alloc] initWithWinSize:winSize parent:self];
@@ -144,17 +144,16 @@
     
     CCArray * stimulusPackage = [[CCArray alloc] init];
     [stimulusPackage removeAllObjects];
-    int buttons = [hud buttonPressed];
+    NSMutableArray * buttons = [hud buttonsPressed];
     
-    if (buttons==1) {
+    
+    [stimulusPackage addObject:[[StimulusFactory shared] generateDamageStimulusWithValue:2]];
+    if ([[buttons objectAtIndex:power1button] boolValue])
         [stimulusPackage addObject:[[StimulusFactory shared] generateColdStimulusWithValue:2]];
-    }else if (buttons==2){
+    if ([[buttons objectAtIndex:power2button] boolValue])
         [stimulusPackage addObject:[[StimulusFactory shared] generateFireStimulusWithValue:2]];
-    }else if (buttons==3){
+    if ([[buttons objectAtIndex:power3button] boolValue])
         [stimulusPackage addObject:[[StimulusFactory shared] generatePushBackStimulusWithValue:2]];
-    }else {
-        [stimulusPackage addObject:[[StimulusFactory shared] generateDamageStimulusWithValue:2]];
-    }
     
     Arrow * arrow = [[Arrow alloc] initWithDestination:alocation andStimulusPackage:stimulusPackage];
     

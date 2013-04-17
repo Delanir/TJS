@@ -80,6 +80,7 @@ static StimulusFactory* _sharedSingleton = nil;
 
 -(void)dealloc
 {
+    [_sharedSingleton release];
     [super dealloc];
 }
 
