@@ -67,6 +67,11 @@ static Registry* _sharedSingleton = nil;
     return [registry objectForKey:entityName];
 }
 
+-(void) clearRegistry
+{
+    [registry removeAllObjects];
+}
+
 
 
 @end

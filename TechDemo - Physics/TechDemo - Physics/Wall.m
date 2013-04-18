@@ -8,15 +8,13 @@
 
 #import "Wall.h"
 #import <objc/runtime.h>
+#import "Registry.h"
 
 @implementation Wall
 
-@synthesize health, lastHealth, parentNode;
+@synthesize health, lastHealth;
 
-#warning temporario
-static Wall * _major = nil;
-
-- (id) initWithParent:(CCNode *)parent
+- (id) init
 {
     if((self = [super init]))
     {
@@ -24,10 +22,12 @@ static Wall * _major = nil;
         health = 100.0f;
         lastHealth = 100.0f;
         status = mint;
-        [self setParentNode:parent];
+        
         sprites = [[CCArray alloc] init];
         
         CGSize winSize = [[CCDirector sharedDirector] winSize];
+        
+        CCNode * levelLayer = [[Registry shared] getEntityByName:@"LevelLayer"];
         
         KKPixelMaskSprite * castletop100 = [KKPixelMaskSprite spriteWithFile:@"castle100-top.png" alphaThreshold:0.5f];
         KKPixelMaskSprite * castlebottom100 = [KKPixelMaskSprite spriteWithFile:@"castle100-bottom.png" alphaThreshold:0.5f];
@@ -59,19 +59,15 @@ static Wall * _major = nil;
             [spr setTag:5];
         }
         
-        [parentNode addChild:castletop100 z:1500];
-        [parentNode addChild:castlebottom100 z:10];
+        [levelLayer addChild:castletop100 z:1500];
+        [levelLayer addChild:castlebottom100 z:10];
         
         [[CollisionManager shared] addToWalls:castletop100];
         [[CollisionManager shared] addToWalls:castlebottom100];
-                
-#warning TEMPORARIO remover moat
-        [self addMoat];
         
         [self schedule:@selector(update:)];
     }
     
-    _major = self;
     return self;
 }
 
@@ -107,12 +103,13 @@ static Wall * _major = nil;
 
 - (void) changeTopSprite: (CCSprite*) topSprite bottomSprite: (CCSprite*) bottomSprite
 {
+    CCNode * levelLayer = [[Registry shared] getEntityByName:@"LevelLayer"];
     
-    [parentNode removeChildByTag:5 cleanup:YES];
-    [parentNode removeChildByTag:5 cleanup:YES];
+    [levelLayer removeChildByTag:5 cleanup:YES];
+    [levelLayer removeChildByTag:5 cleanup:YES];
     
-    [parentNode addChild:topSprite z:999];
-    [parentNode addChild:bottomSprite z:10];
+    [levelLayer addChild:topSprite z:999];
+    [levelLayer addChild:bottomSprite z:10];
 }
 
 - (void) addMoat
@@ -126,8 +123,10 @@ static Wall * _major = nil;
 
 - (void) dealloc
 {
-    [parentNode removeChildByTag:5 cleanup:YES];
-    [parentNode removeChildByTag:5 cleanup:YES];
+    CCNode * levelLayer = [[Registry shared] getEntityByName:@"LevelLayer"];
+    
+    [levelLayer removeChildByTag:5 cleanup:YES];
+    [levelLayer removeChildByTag:5 cleanup:YES];
     [sprites removeAllObjects];
     [super dealloc];
 }
@@ -142,10 +141,5 @@ static Wall * _major = nil;
     health -= amount;
 }
 
-#warning temporario
-+(Wall*) getMajor
-{
-    return _major;
-}
 
 @end

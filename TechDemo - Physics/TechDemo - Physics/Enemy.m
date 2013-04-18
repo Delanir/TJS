@@ -8,14 +8,16 @@
 
 #import "Enemy.h"
 #import "CollisionManager.h"
+#import "Registry.h"
+#import "ResourceManager.h"
 
 @implementation Enemy
 
-@synthesize currentState, strength;
+@synthesize currentState, strength, goldValue;
 
 - (id) initWithSprite:(NSString *)spriteFile andWindowSize:(CGSize) winSize
 {
-    if( (self=[super init])) {
+    if( (self = [super init])) {
         
         
         [self setSpriteWithSpriteFrameName:spriteFile];
@@ -31,7 +33,7 @@
         // Create the target slightly off-screen along the right edge,
         // and along a random position along the Y axis as calculated above
         sprite.position = ccp(winSize.width + (spriteSize.width/2), actualY);
-
+        //sprite.anchorPoint = ccp(1.0,1.0);
     }
     
     return self;
@@ -45,20 +47,19 @@
 
 -(void)attack
 {
+    
 }
 
 -(void)die
 {
-//#warning die!
-  //numberOfEnemiesKilled++;
-    // descomentar para a sprites aparecerem
-    //[self destroy];
-  [[CollisionManager shared] setNumberOfDeadEnemies: [CollisionManager shared].numberOfDeadEnemies+1];
+    [[ResourceManager shared] increaseEnemyKillCount];
+    [[ResourceManager shared] addGold: goldValue];
 }
 
 - (void)damageWall
 {
-    [[Wall getMajor] damage:strength];
+    Wall * wall = [[Registry shared] getEntityByName:@"Wall"];
+    [wall damage:strength];
 }
 
 -(void ) shout

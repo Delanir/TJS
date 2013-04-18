@@ -30,7 +30,7 @@ static Class PixelMaskSpriteClass = nil;
 		}
 		
 		// this ensures that we're loading the -hd asset on Retina devices, if available
-		NSString* fullpath = [CCFileUtils fullPathFromRelativePath:filename];
+		NSString* fullpath = [[CCFileUtils sharedFileUtils] fullPathFromRelativePath:filename];
 		UIImage* image = [[UIImage alloc] initWithContentsOfFile:fullpath];
 		
 		// get all the image information we need
@@ -86,7 +86,6 @@ static Class PixelMaskSpriteClass = nil;
 				}
 			}
 		}
-		
 		CFRelease(imageData);
 		imageData = nil;
 		[image release];
@@ -111,12 +110,11 @@ static Class PixelMaskSpriteClass = nil;
 			PixelMaskSpriteClass = [KKPixelMaskSprite class];
         
         CCSprite *sprite = [CCSprite spriteWithSpriteFrameName:spriteFrameName];
-        
         UIImage *image = [self renderUIImageFromSprite:sprite];
-		
+        
 		// get all the image information we need
-		pixelMaskWidth = image.size.width;
-		pixelMaskHeight = image.size.height;
+		pixelMaskWidth = image.size.width * [image scale];
+		pixelMaskHeight = image.size.height * [image scale];
         
 		pixelMaskSize = pixelMaskWidth * pixelMaskHeight;
         
@@ -252,8 +250,8 @@ static Class PixelMaskSpriteClass = nil;
 	CGRect intersectSelf = [self intersectRectInPixels:self otherNode:other];
 	CGRect intersectOther = [self intersectRectInPixels:other otherNode:self];
 	
-	NSUInteger originOffsetX = intersectOther.origin.x - intersectSelf.origin.x;
-	NSUInteger originOffsetY = intersectOther.origin.y - intersectSelf.origin.y;
+	NSInteger originOffsetX = intersectOther.origin.x - intersectSelf.origin.x;
+	NSInteger originOffsetY = intersectOther.origin.y - intersectSelf.origin.y;
 	NSUInteger otherPixelMaskWidth = other.pixelMaskWidth;
 #if USE_BITARRAY
 	bit_array_t* otherPixelMask = other.pixelMask;

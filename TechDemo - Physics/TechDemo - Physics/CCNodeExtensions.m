@@ -22,7 +22,7 @@
 -(BOOL) containsTouch:(UITouch*)touch
 {
 	CCDirector* director = [CCDirector sharedDirector];
-	CGPoint locationGL = [director convertToGL:[touch locationInView:director.openGLView]];
+	CGPoint locationGL = [director convertToGL:[touch locationInView:director.view]];
 	return [self containsPoint:locationGL];
 }
 #endif

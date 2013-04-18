@@ -16,6 +16,12 @@
     unsigned int arrows;
     double mana;
     
+    
+    // Statistics part
+    unsigned int enemiesFromStart;
+    unsigned int enemiesHit;
+    unsigned int arrowsUsed;
+    unsigned int enemyKillCount;
     // Other things may not be as useful to be here but could be.
     // They are not resources, just numbers
     // - number of enemies
@@ -27,6 +33,10 @@
 @property unsigned int skillPoints;
 @property unsigned int gold;
 @property unsigned int arrows;
+@property unsigned int arrowsUsed;
+@property unsigned int enemiesFromStart;
+@property unsigned int enemyKillCount;
+@property unsigned int enemiesHit;
 @property double mana;
 
 -(void) addSkillPoints:(unsigned int) add;
@@ -39,6 +49,14 @@
 -(BOOL) spendArrows:(unsigned int) spend;
 -(BOOL) spendMana:(double) spend;
 
+
+// Statistics part
+- (void)increaseEnemyCount;
+- (void)increaseEnemyHitCount;
+- (void)increaseArrowsUsedCount;
+- (void)increaseEnemyKillCount;
+- (double)determineAccuracy;
+- (unsigned int) activeEnemies;
 
 +(ResourceManager*)shared;
 

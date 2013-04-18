@@ -92,6 +92,11 @@ static Config* _sharedSingleton = nil;
     return [temp intValue];
 }
 
+-(NSNumber*) getNumberProperty:(NSString *)key
+{
+    return [data objectForKey:key];
+}
+
 +(BOOL)iPadRetina{
     return ([[UIScreen mainScreen] respondsToSelector:@selector(displayLinkWithTarget:selector:)] && ([UIScreen mainScreen].scale == 2.0))?1:0;
 }

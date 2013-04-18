@@ -15,16 +15,15 @@
 }
 
 @property (nonatomic) BOOL readyToFire;
-@property (nonatomic) float timeSinceLastArrow;
 @property (nonatomic, retain) CCFiniteTimeAction *shootUp;
 @property (nonatomic, retain) CCFiniteTimeAction *shootFront;
 @property (nonatomic, retain) CCFiniteTimeAction *shootDown;
-@property (nonatomic, retain) CCAction *idle;
+//@property (nonatomic, retain) CCAction *idle;
 
 -(void) getReady;
--(void) resetSprite;
 
 -(BOOL)fireIfAble:(CGPoint)location;
+-(float) getCurrentFireRate;
 -(void) changeFireRate: (float) fireRate;
 
 @end

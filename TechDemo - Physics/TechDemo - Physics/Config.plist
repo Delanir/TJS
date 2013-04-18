@@ -2,6 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>InitialArrows</key>
+	<integer>120</integer>
+	<key>InitialMana</key>
+	<integer>200</integer>
+	<key>InitialSkillPoints</key>
+	<integer>5</integer>
+	<key>InitialGold</key>
+	<integer>0</integer>
 	<key>collisionMethod</key>
 	<integer>1</integer>
 </dict>

@@ -19,6 +19,7 @@
 #import "StimulusFactory.h"
 #import "Stimulus.h"
 
+#import "CCBReader.h"   
 
 // Particle Systems
 #import "CCParticleSystem.h"
@@ -35,13 +36,16 @@
 {
     if( (self=[super init]))
     {
-        CCLOG(@"MIAU MIAU SOU O GATO MUITO MAU");
+       
         self.isTouchEnabled = YES;
         CGSize winSize = [[CCDirector sharedDirector] winSize];
-        _pauseButton= [CCSprite spriteWithFile:@"starUP.png"];
-        [_pauseButton setPosition:CGPointMake(_pauseButton.contentSize.width, winSize.height-_pauseButton.contentSize.height)];
-        [_pauseButton setZOrder:9001];//it-s over 9000
-        [_pauseButton retain];
+        _pauseButton= [CCSprite spriteWithFile:@"pause.png"];
+//        [_pauseButton setAnchorPoint:CGPointMake(0.5f, 0.5f)];
+        [_pauseButton setPosition:CGPointMake(_pauseButton.contentSize.width/2.0, winSize.height - _pauseButton.contentSize.height/2.0)];
+
+        [_pauseButton setZOrder:1000];
+
+        [self addChild:_pauseButton];
     }
     
     
@@ -49,17 +53,11 @@
     return self;
 }
 
--(void)dealloc
-{
-    [_pauseButton release];
-    [super dealloc];
-}
-
-
 - (void)ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     UITouch *touch = [touches anyObject];
     [self pauseCheck:touch];
+    [self gameOverReturnToMainMenuCheck:touch];
     if ([[CCDirector sharedDirector] isPaused]) {
         return;
     }
@@ -83,12 +81,29 @@
 }
 
 -(void) pauseCheck:(UITouch *)touchLocation {
+    CGSize winSize = [[CCDirector sharedDirector] winSize];
     CGPoint location=[touchLocation locationInView:[touchLocation view]];
+    location.y=winSize.height-location.y;
     CGPoint pausePosition = _pauseButton.position;
-    float pauseRadius = _pauseButton.contentSize.width/2.0f;
+    float pauseRadius = _pauseButton.contentSize.width/2;
     
-    if (ccpDistance(location, pausePosition)<=pauseRadius){
+    if (ccpDistance(pausePosition, location)<=pauseRadius){
         [self togglePause];
+    }
+}
+
+-(void) gameOverReturnToMainMenuCheck:(UITouch *)touchLocation {
+    CGSize winSize = [[CCDirector sharedDirector] winSize];
+    CGPoint location=[touchLocation locationInView:[touchLocation view]];
+    location.y=winSize.height-location.y;
+    CGPoint btnPosition = _gameOver.mainMenuButtonPosition;
+    float btnRadius = _gameOver.mainMenuButtonRadius/2;
+    
+    if (ccpDistance(btnPosition, location)<=btnRadius){
+        [[CCDirector sharedDirector] resume];
+        CCScene* gameScene = [CCBReader sceneWithNodeGraphFromFile:@"MainMenu.ccbi"];
+        [[CCDirector sharedDirector] replaceScene:gameScene];
+        
     }
 }
 
@@ -103,6 +118,15 @@
         
         [[CCDirector sharedDirector] pause];
     }
+    
+}
+
+-(void) gameOver
+{
+    _gameOver= (GameOver *)[CCBReader nodeGraphFromFile:@"GameOver.ccbi"];
+    [self addChild:_gameOver];
+    [_gameOver setZOrder:1535];
+    [[CCDirector sharedDirector] pause];
     
 }
 

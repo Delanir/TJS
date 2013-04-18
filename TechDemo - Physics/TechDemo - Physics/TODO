@@ -4,30 +4,30 @@
 *                *
 **/            **/
 
-- REFACTORIZAR TUDO PARA USAR REGISTRY E RESOURCE MANAGER
-- TIRAR TODOS OS WARNINGS
+- Substituír definições contantes por Classe de nomes
 
-- Implementar pausa e restart
-    - Para pausa é preciso que o update seja scheduled numa classe
 - Fazer Máquina de estado
     - Fazer gestor de cena
+- Implementar pausa e restart
+    - Para pausa é preciso que o update seja scheduled numa classe
 
 - som do impacto tem de ser corrigido
 - Implementar skill tree - implementar a lógica e ver se fazemos uma spritesheet de bocadinhos para melhorar a performance (Daniela)
+- Fazer menu em baixo
 - setas a saír por cima da wall
+    - isto na verdade é corrigir o zOrder
 - Dano dos inimigos (Amaral)
 - Random shouts dos inimigos (Daniela)
 
 - Menus com Cocos Builder! (Daniela, Ricardo)
 
-- Corrigir colisões no retina (???????????????????)
 - Destruição mais eficiente de projecteis (depois das colisões)
 - Passar para os arqueiros do heroes  (João M)
     - Tratar das sprites do wood elf e do grand elf
     
--optimizar os imports > o Nuno disse que os imports devem ser feitos sempre q poss]ivel no .h
+- optimizar os imports > o Nuno disse que os imports devem ser feitos sempre q poss]ivel no .h
 
-- Fazer mais projectiles 
+- Fazer projectiles do zealot
 - Lógica de levar dano em cima do moat
 
 /**           /**
@@ -101,3 +101,11 @@
 - Impedir a animacao de disparo do Yuri quando nao ha setas
 - Estrutura de pastas actualizada dentro do eks code
 - Modo de interacção do Yuri refeito
+- Musica já funciona bem
+- Enorme refactorização de código para usar Registry e ResourceManager
+- Removidos quase todos os warnings
+- Corrigir PBX
+- Tirar warnings que faltam
+
+- corrigido bug das setas que não eram decrementadas
+- fuckin colisões no fuckin retina fuckin corrigidas 

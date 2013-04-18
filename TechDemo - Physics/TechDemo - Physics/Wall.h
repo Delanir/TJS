@@ -19,18 +19,13 @@ typedef enum {mint, scratched, damaged, wrecked, totaled} wallStatus;
     double health, lastHealth;
     wallStatus status;
     CCArray *sprites;
-    CCNode * parentNode;
 }
 
 @property (nonatomic) double health, lastHealth;
-@property (nonatomic, retain) CCNode * parentNode;
 
 
--(id) initWithParent: (CCNode*) parent;
 -(void) damage: (double) amount;
 -(void) addMoat;
-#warning temporario
-+(Wall*) getMajor;
 
 
 @end

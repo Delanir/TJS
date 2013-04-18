@@ -10,7 +10,7 @@
 
 @implementation ResourceManager
 
-@synthesize skillPoints, arrows, gold, mana;
+@synthesize skillPoints, arrows, gold, mana, arrowsUsed, enemiesFromStart, enemiesHit, enemyKillCount;
 
 static ResourceManager* _sharedSingleton = nil;
 
@@ -43,7 +43,10 @@ static ResourceManager* _sharedSingleton = nil;
 {
 	self = [super init];
 	if (self != nil) {
-		// initialize stuff here
+		arrowsUsed = 0;
+        enemyKillCount = 0;
+        enemiesHit = 0;
+        enemiesFromStart = 0;
         
     }
 	return self;
@@ -102,5 +105,37 @@ static ResourceManager* _sharedSingleton = nil;
     return true;
 }
 
+- (void)increaseEnemyCount
+{
+    enemiesFromStart++;
+}
+
+- (void)increaseEnemyKillCount
+{
+    enemyKillCount++;
+}
+
+-(void)increaseEnemyHitCount
+{
+    enemiesHit++;
+}
+
+- (void)increaseArrowsUsedCount
+{
+    arrowsUsed++;
+    arrows--;
+}
+
+- (double)determineAccuracy
+{
+    if(arrowsUsed == 0)
+        return -1;
+    else return 100 * ( (enemiesHit * 1.0f) / arrowsUsed);
+}
+
+- (unsigned int) activeEnemies
+{
+    return enemiesFromStart - enemyKillCount;
+}
 
 @end

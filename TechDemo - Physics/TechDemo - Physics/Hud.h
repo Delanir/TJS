@@ -12,21 +12,16 @@ typedef enum {power1button, power2button, power3button} powerButton;
 
 @interface Hud : CCLayer
 {
-    int _arrows, money;
+    int money;
     NSMutableArray * buttons;
     double lastHealth;
     CCLabelTTF *label,*label2,*label3;
 }
-@property int numberOfEnemiesFromStart;
-@property int numberOfEnemiesKilled;
-@property int numberOfArrowsUsed;
 
 - (NSMutableArray *)buttonsPressed;
 - (void)updateArrows;
 - (void)updateWallHealth;
 - (void)updateMoney:(int)enemyXPosition;
-- (void)increaseEnemyCount;
-- (void)updateNumberOfEnemiesKilled:(int) killed;
-- (int) hasArrows;
+- (void)updateData;
 
 @end
