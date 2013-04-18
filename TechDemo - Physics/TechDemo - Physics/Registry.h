@@ -20,5 +20,6 @@
 
 -(void) registerEntity: (id) entity withName: (NSString *) name;
 -(id) getEntityByName: (NSString *) entityName;
+-(void) clearRegistry;
 
 @end

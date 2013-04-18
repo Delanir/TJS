@@ -145,7 +145,6 @@
 		9C2B3CBD171EE8FB00E695FE /* Registry Entities in Resources */ = {isa = PBXBuildFile; fileRef = 9C2B3CBC171EE8FB00E695FE /* Registry Entities */; };
 		9C377BE9170B72D400F840FB /* KKPixelMaskSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C377BE2170B6F5100F840FB /* KKPixelMaskSprite.m */; };
 		9C377BEA170B72D700F840FB /* bitarray.c in Sources */ = {isa = PBXBuildFile; fileRef = 9C377BE3170B715A00F840FB /* bitarray.c */; };
-		9C377BF3170B732D00F840FB /* CCNodeExtensions.h in Sources */ = {isa = PBXBuildFile; fileRef = 9C377BEF170B731A00F840FB /* CCNodeExtensions.h */; };
 		9C377BF4170B732E00F840FB /* CCNodeExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C377BF0170B731B00F840FB /* CCNodeExtensions.m */; };
 		9C377BFB170BAB8A00F840FB /* MainMenu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9C377BFA170BAB8900F840FB /* MainMenu.mp3 */; };
 		9C377BFD170BAC1F00F840FB /* Battle1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9C377BFC170BAC1F00F840FB /* Battle1.mp3 */; };
@@ -405,7 +404,7 @@
 		8B560899171A251F00B14693 /* skilltree.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = skilltree.png; sourceTree = "<group>"; };
 		8B79CDC9171F15B800E58EDD /* LevelLayerAbstract.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelLayerAbstract.h; sourceTree = "<group>"; };
 		8B79CDCA171F15B800E58EDD /* LevelLayerAbstract.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelLayerAbstract.m; sourceTree = "<group>"; };
-		8B79CDD9171F2D2500E58EDD /* TODO */ = {isa = PBXFileReference; lastKnownFileType = text; path = TODO; sourceTree = "<group>"; };
+		8B79CDD9171F2D2500E58EDD /* TODO */ = {isa = PBXFileReference; lastKnownFileType = text; name = TODO; path = "TechDemo - Physics/TODO"; sourceTree = "<group>"; };
 		8B79CDDF171F501D00E58EDD /* Hud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hud.h; sourceTree = "<group>"; };
 		8B79CDE0171F501D00E58EDD /* Hud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hud.m; sourceTree = "<group>"; };
 		8B8C2D951719D8A700B50C1E /* MainMenuLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuLayer.h; sourceTree = "<group>"; };
@@ -967,6 +966,7 @@
 				9C94ABD717197BD2005BCE32 /* zDepth */,
 				9C7FF343170B28CE009DA7F9 /* Config.plist */,
 				9C2B3CBC171EE8FB00E695FE /* Registry Entities */,
+				8B79CDD9171F2D2500E58EDD /* TODO */,
 				9C7FF348170B359F009DA7F9 /* TODO */,
 			);
 			name = "Configs and References";
@@ -1089,7 +1089,6 @@
 				9C969E571716260400BE7476 /* Singleton Classes */,
 				9CBF5B0E171E4D5D00EF44B2 /* Layer Classes */,
 				9C969E581716263000BE7476 /* Scene Entities */,
-				8B79CDD9171F2D2500E58EDD /* TODO */,
 				9C377BE0170B6E6900F840FB /* Extern Classes */,
 				9C2B3CBB171EE83500E695FE /* Configs and References */,
 				9C969E591716290D00BE7476 /* Startup Classes */,
@@ -1923,7 +1922,6 @@
 				9C85F4FA1707957F00EECB83 /* CCCamera.m in Sources */,
 				9C85F4FE1707957F00EECB83 /* CCConfiguration.m in Sources */,
 				9C85F5011707957F00EECB83 /* ccDeprecated.m in Sources */,
-				9C377BF3170B732D00F840FB /* CCNodeExtensions.h in Sources */,
 				9C85F5041707957F00EECB83 /* CCDirector.m in Sources */,
 				9C85F5071707957F00EECB83 /* CCDrawingPrimitives.m in Sources */,
 				9C85F50A1707957F00EECB83 /* CCGLProgram.m in Sources */,

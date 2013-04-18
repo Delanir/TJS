@@ -19,5 +19,6 @@
 -(void)dummyMethod;
 -(NSString*)getStringProperty:(NSString*) key;
 -(int)getIntProperty:(NSString*) key;
+-(NSNumber*)getNumberProperty:(NSString*) key;
 
 @end

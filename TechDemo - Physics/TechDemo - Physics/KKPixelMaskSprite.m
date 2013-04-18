@@ -30,7 +30,7 @@ static Class PixelMaskSpriteClass = nil;
 		}
 		
 		// this ensures that we're loading the -hd asset on Retina devices, if available
-		NSString* fullpath = [CCFileUtils fullPathFromRelativePath:filename];
+		NSString* fullpath = [[CCFileUtils sharedFileUtils] fullPathFromRelativePath:filename];
 		UIImage* image = [[UIImage alloc] initWithContentsOfFile:fullpath];
 		
 		// get all the image information we need

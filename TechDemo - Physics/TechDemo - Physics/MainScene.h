@@ -16,14 +16,9 @@
 
 @interface MainScene : CCNode
 {
-    CGSize winSize;
     
 }
 
 
-- (id) initWithWinSize: (CGSize) winSz parent: (CCNode*) parent;
-
-
-@property CGSize winSize;
 
 @end

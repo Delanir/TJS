@@ -20,6 +20,7 @@
     {
         [self setCurrentState:walk];
         [self setStrength:0.5];
+        [self setGoldValue:1];
         
         // Setup movement
         

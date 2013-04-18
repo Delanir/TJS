@@ -4,14 +4,15 @@
 *                *
 **/            **/
 
-- REFACTORIZAR TUDO PARA USAR REGISTRY E RESOURCE MANAGER
-- TIRAR TODOS OS WARNINGS
+- Tirar warnings que faltam
+- Substituír definições contantes por Classe de nomes
+- Corrigir colisões no retina (???????????????????)
 
+- Fazer Máquina de estado
+    - Fazer gestor de cena
 - Corrigir PBX
 - Implementar pausa e restart
     - Para pausa é preciso que o update seja scheduled numa classe
-- Fazer Máquina de estado
-    - Fazer gestor de cena
 
 - som do impacto tem de ser corrigido
 - Implementar skill tree - implementar a lógica e ver se fazemos uma spritesheet de bocadinhos para melhorar a performance (Daniela)
@@ -21,7 +22,6 @@
 
 - Menus com Cocos Builder! (Daniela, Ricardo)
 
-- Corrigir colisões no retina (???????????????????)
 - Destruição mais eficiente de projecteis (depois das colisões)
 - Passar para os arqueiros do heroes  (João M)
     - Tratar das sprites do wood elf e do grand elf
@@ -102,5 +102,6 @@
 - Impedir a animacao de disparo do Yuri quando nao ha setas
 - Estrutura de pastas actualizada dentro do eks code
 - Modo de interacção do Yuri refeito
-
 - Musica já funciona bem
+- Enorme refactorização de código para usar Registry e ResourceManager
+- Removidos quase todos os warnings

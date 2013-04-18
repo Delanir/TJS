@@ -19,6 +19,8 @@
 #import "Arrow.h"
 #import "StimulusFactory.h"
 #import "Stimulus.h"
+#import "Registry.h"
+#import "ResourceManager.h"
 
 
 // Particle Systems
@@ -82,7 +84,8 @@
 {
     if( (self=[super init]))
     {
-        //[[SimpleAudioEngine sharedEngine] setEffectsVolume:0.5f];
+        [[Registry shared] registerEntity:self withName:@"LevelLayer"];
+        
         [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"Battle1.mp3" loop:YES];
 
         CGSize winSize = [[CCDirector sharedDirector] winSize];
@@ -90,7 +93,7 @@
         fire = NO;
         
         // Criação da cena com castelo
-        MainScene *mainScene = [[MainScene alloc] initWithWinSize:winSize parent:self];
+        MainScene *mainScene = [[MainScene alloc] init];
         [self addChild:mainScene z:0];
         [mainScene release];
         
@@ -99,7 +102,12 @@
         yuri.position = ccp([yuri spriteSize].width/2 + 120, winSize.height/2 + 30);     // @Hardcoded - to correct
         [yuri setTag:9];
         [self addChild:yuri z:1000];
+        [[Registry shared] registerEntity:yuri withName:@"Yuri"];
         [yuri release];
+        
+        
+        // inicializar recursos
+        [self initializeResources];
         
         // This dummy method initializes the collision manager
         [[CollisionManager shared] dummyMethod];
@@ -109,6 +117,7 @@
     
     self.isTouchEnabled = YES;
     [self schedule:@selector(gameLogic:) interval:1.0];
+    
     
     return self;
 }
@@ -120,15 +129,25 @@
 	[super dealloc];
 }
 
+- (void) initializeResources
+{
+    ResourceManager * rm = [ResourceManager shared];
+    Config * conf = [Config shared];
+    [rm setArrows:[conf getIntProperty:@"InitialArrows"]];
+    [rm setGold: [conf getIntProperty:@"InitialGold"]];
+    [rm setSkillPoints: [conf getIntProperty:@"InitialSkillPoints"]];
+    [rm setMana: [[conf getNumberProperty:@"InitialMana"] doubleValue]];
+}
+
 - (void)update:(ccTime)dt
 {
-    if(fire && [hud hasArrows] > 0 && [(Yuri*)[self getChildByTag:9]fireIfAble: location] )
+    if(fire && [[ResourceManager shared] arrows] > 0 && [(Yuri*)[self getChildByTag:9]fireIfAble: location] )
         [self addProjectile:location];
     
     [[CollisionManager shared] updatePixelPerfectCollisions:dt];
     [[CollisionManager shared] updateWallsAndEnemies:dt];
     [hud updateWallHealth];
-    [hud updateNumberOfEnemiesKilled: [[CollisionManager shared] numberOfDeadEnemies]];
+    [hud updateData];
 }
 
 
@@ -154,6 +173,7 @@
     
     if(arrow != nil)
     {
+        [[ResourceManager shared] increaseArrowsUsedCount];
         [[SimpleAudioEngine sharedEngine] playEffect:@"Swoosh.caf"];
         [self addChild:arrow z:1201];
         
@@ -163,10 +183,7 @@
     }
     [arrow release];
     arrow=nil;
-    
-#warning Forma de alterar o firerate do Yuri
-    //float currentDelay = [[[CCAnimationCache sharedAnimationCache] animationByName:@"y_attack_front"] delayPerUnit];
-    //[(Yuri*)[self getChildByTag:9] changeFireRate:currentDelay+0.1];
+
 }
 
 
@@ -181,7 +198,7 @@
     
     peasant.tag = 1;
     [[CollisionManager shared] addToTargets:peasant];
-    [hud increaseEnemyCount];
+    [[ResourceManager shared] increaseEnemyCount];
 }
 
 -(void)addFaerieDragon
@@ -194,7 +211,7 @@
     
     faerieDragon.tag = 3;
     [[CollisionManager shared] addToTargets:faerieDragon];
-    [hud increaseEnemyCount];
+    [[ResourceManager shared] increaseEnemyCount];
     
 }
 
@@ -208,7 +225,7 @@
     
     zealot.tag = 4;
     [[CollisionManager shared] addToTargets:zealot];
-    [hud increaseEnemyCount];
+    [[ResourceManager shared] increaseEnemyCount];
 }
 
 

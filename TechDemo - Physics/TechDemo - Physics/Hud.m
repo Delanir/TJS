@@ -8,11 +8,10 @@
 
 #import "Hud.h"
 #import "Wall.h"
-
-#define MAX_NUM_ARROWS 100
+#import "Registry.h"
+#import "ResourceManager.h"
 
 @implementation Hud
-@synthesize numberOfEnemiesFromStart, numberOfEnemiesKilled, numberOfArrowsUsed;
 
 -(id) init
 {
@@ -23,11 +22,10 @@
         [buttons addObject:[NSNumber numberWithBool:NO]];
         [buttons addObject:[NSNumber numberWithBool:NO]];
         
-        _arrows = MAX_NUM_ARROWS;
-        numberOfArrowsUsed =0;
         lastHealth = 100.00;
         
-        label =[CCLabelTTF labelWithString:[NSString stringWithFormat:@"Number of Arrows Left: %i", MAX_NUM_ARROWS] fontName:@"Futura" fontSize:20];
+        unsigned int maxArrows = [[ResourceManager shared] arrows];
+        label =[CCLabelTTF labelWithString:[NSString stringWithFormat:@"Number of Arrows Left: %i", maxArrows] fontName:@"Futura" fontSize:20];
         label2 = [CCLabelTTF labelWithString:@"Wall health: 100.00" fontName:@"Futura" fontSize:20];
         label3 = [CCLabelTTF labelWithString:@"Enemies: 0  Money:  0 Accurracy: 100%" fontName:@"Futura" fontSize:20];
         label.position = CGPointMake(label.contentSize.width/2 + 70, 80);
@@ -95,19 +93,14 @@
 
 - (void)updateArrows
 {
-#warning arrow numbers
-    if (_arrows>0)
-    {
-        numberOfArrowsUsed++;
-        _arrows--;
-        [label setString:[NSString stringWithFormat:@"Number of Arrows Left: %i", _arrows]];
-    }
-    
+   [label setString:[NSString stringWithFormat:@"Number of Arrows Left: %i", [[ResourceManager shared] arrows]]];
 }
 
 - (void)updateWallHealth
 {
-    double newHealth = [Wall getMajor].health;
+    Wall * wall = [[Registry shared] getEntityByName:@"Wall"];
+    double newHealth = [wall health];
+    // optimização
     if(newHealth != lastHealth)
     {
         [label2 setString:[NSString stringWithFormat:@"Wall health: %.02f", newHealth]];
@@ -118,29 +111,19 @@
 
 - (void)updateMoney:(int)enemyXPosition
 {
-    //    if (enemyXPosition < 500) {
-    //        money++;
-    //    } else if (enemyXPosition < 1000 && enemyXPosition > 500) {
-    //        money = money + 2;
-    //    } else money = money + 5;
-    
-    [label3 setString:[NSString stringWithFormat:@"Money: %i", money]];
+    [label3 setString:[NSString stringWithFormat:@"Money: %i", [[ResourceManager shared] gold]]];
 }
 
-- (void)increaseEnemyCount
+- (void)updateData
 {
-    numberOfEnemiesFromStart++;
-}
-
-- (void)updateNumberOfEnemiesKilled:(int) killed
-{
-    
-    [label3 setString:[NSString stringWithFormat:@"Enemies: %i Money: %i Accurracy: %d%%", numberOfEnemiesFromStart, killed, ((100*(killed+1))/(numberOfArrowsUsed+1))]];
-}
-
--(int) hasArrows
-{
-    return _arrows;
+    ResourceManager * rm = [ResourceManager shared];
+    unsigned int enemies = [rm activeEnemies];
+    unsigned int gold = [rm gold];
+    double accuracy = [rm determineAccuracy];
+    if (accuracy < 0)
+        [label3 setString:[NSString stringWithFormat:@"Enemies: %i Gold: %i Accuracy: --%%", enemies, gold]];
+    else
+        [label3 setString:[NSString stringWithFormat:@"Enemies: %i Gold: %i Accuracy: %i%%", enemies, gold, (int) accuracy]];
 }
 
 -(void) dealloc

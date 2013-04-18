@@ -19,7 +19,6 @@
 #import "StimulusFactory.h"
 #import "Stimulus.h"
 
-
 // Particle Systems
 #import "CCParticleSystem.h"
 
@@ -35,7 +34,7 @@
 {
     if( (self=[super init]))
     {
-        CCLOG(@"MIAU MIAU SOU O GATO MUITO MAU");
+        //CCLOG(@"MIAU MIAU SOU O GATO MUITO MAU"); <- LOOOL
         self.isTouchEnabled = YES;
         CGSize winSize = [[CCDirector sharedDirector] winSize];
         _pauseButton= [CCSprite spriteWithFile:@"starUP.png"];
@@ -49,12 +48,6 @@
     
     return self;
 }
-
--(void)dealloc
-{
-    [super dealloc];
-}
-
 
 - (void)ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {

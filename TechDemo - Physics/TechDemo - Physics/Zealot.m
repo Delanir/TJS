@@ -19,6 +19,7 @@
     {
         [self setCurrentState:walk];
         [self setStrength:1.0];
+        [self setGoldValue:3];
         
         // Setup Movement
         // Determine speed of the target

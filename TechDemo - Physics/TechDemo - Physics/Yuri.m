@@ -14,7 +14,6 @@
 @implementation Yuri
 
 @synthesize  readyToFire;
-#warning Pode ser necessário sintetizar as acções
 
 -(id) init
 {
@@ -22,23 +21,19 @@
     {
         readyToFire = YES;
         
-        
         [self setShootUp:[CCRepeat actionWithAction:
                           [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"y_attack_up" ]] times:1]];
         [self setShootFront:[CCRepeat actionWithAction:
                              [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"y_attack_front" ]] times:1]];
         [self setShootDown:[CCRepeat actionWithAction:
                             [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"y_attack_down" ]] times:1]];
-        [self setIdle:[CCRepeatForever actionWithAction:
-                       [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"y_idle_1" ]]]];
+        //[self setIdle:[CCRepeatForever actionWithAction:
+        //               [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"y_idle_1" ]]]];
         
         //[[self sprite] runAction:[self idle]];
     }
     return self;
 }
-
-
-
 
 
 -(BOOL)fireIfAble:(CGPoint)location
@@ -52,20 +47,17 @@
         switch (direction)
         {
             case 0:
-                [[self sprite] runAction:[CCSequence actions:
-                                          [self shootDown],
+                [[self sprite] runAction:[CCSequence actions: [self shootDown],
                                           [CCCallFuncN actionWithTarget:self selector:@selector(getReady)],
                                           nil]];
                 break;
             case 1:
-                [[self sprite] runAction:[CCSequence actions:
-                                          [self shootFront],
+                [[self sprite] runAction:[CCSequence actions: [self shootFront],
                                           [CCCallFuncN actionWithTarget:self selector:@selector(getReady)],
                                           nil]];
                 break;
             case 2:
-                [[self sprite] runAction:[CCSequence actions:
-                                          [self shootUp],
+                [[self sprite] runAction:[CCSequence actions: [self shootUp],
                                           [CCCallFuncN actionWithTarget:self selector:@selector(getReady)],
                                           nil]];
                 break;
@@ -76,20 +68,11 @@
 }
 
 
-
-
-
 -(void) getReady
 {
     [self setReadyToFire:YES];
 }
 
-
--(void) resetSprite
-{
-    [[self sprite] stopAllActions];
-    [[self sprite] runAction:[self idle]];
-}
 
 -(void) changeFireRate: (float) fireRate
 {
@@ -107,6 +90,11 @@
     [self setShootDown:[CCRepeat actionWithAction:
                         [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"y_attack_down" ]] times:1]];
     
+}
+
+-(float) getCurrentFireRate
+{
+    return [[[CCAnimationCache sharedAnimationCache] animationByName:@"y_attack_front"] delayPerUnit];
 }
 
 

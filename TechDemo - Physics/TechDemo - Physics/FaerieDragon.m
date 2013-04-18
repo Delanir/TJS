@@ -19,6 +19,7 @@
     {
         [self setCurrentState:fly];
         [self setStrength:2.0];
+        [self setGoldValue:6];
         
         
         // Setup Movement

@@ -7,13 +7,13 @@
 //
 
 #import "CollisionManager.h"
-#import "Peasant.h"
+#import "ResourceManager.h"
 
 // Sound interface
 #import "SimpleAudioEngine.h"
 
 @implementation CollisionManager
-@synthesize numberOfDeadEnemies;
+
 static CollisionManager* _sharedSingleton = nil;
 
 +(CollisionManager*)shared
@@ -49,7 +49,6 @@ static CollisionManager* _sharedSingleton = nil;
         _projectiles = [[CCArray alloc] init];
         _walls = [[CCArray alloc] init];
 	}
-  self.numberOfDeadEnemies = 0;
     
 	return self;
 }
@@ -152,6 +151,7 @@ static CollisionManager* _sharedSingleton = nil;
     {
         [_projectiles removeObject:projectile];
         [projectile destroy];
+        [[ResourceManager shared] increaseEnemyHitCount];
     }
     [projectilesToDelete release];
 }
