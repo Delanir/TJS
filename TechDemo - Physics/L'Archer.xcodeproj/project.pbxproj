@@ -148,6 +148,8 @@
 		9C11EEC3172063B3003510EB /* Level1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C11EEC2172063B3003510EB /* Level1.plist */; };
 		9C11EEC61720646F003510EB /* PeasantColumn.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C11EEC51720646F003510EB /* PeasantColumn.plist */; };
 		9C11EEC9172073F5003510EB /* NSMutableArray+QueueAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C11EEC8172073F5003510EB /* NSMutableArray+QueueAdditions.m */; };
+		8BFC3F0C172042C3000161FD /* GameOver.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BFC3F0B172042C3000161FD /* GameOver.m */; };
+		8BFC3F0F17204440000161FD /* GameOver.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 8BFC3F0E17204440000161FD /* GameOver.ccbi */; };
 		9C2B3CBD171EE8FB00E695FE /* Registry Entities in Resources */ = {isa = PBXBuildFile; fileRef = 9C2B3CBC171EE8FB00E695FE /* Registry Entities */; };
 		9C377BE9170B72D400F840FB /* KKPixelMaskSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C377BE2170B6F5100F840FB /* KKPixelMaskSprite.m */; };
 		9C377BEA170B72D700F840FB /* bitarray.c in Sources */ = {isa = PBXBuildFile; fileRef = 9C377BE3170B715A00F840FB /* bitarray.c */; };
@@ -499,6 +501,9 @@
 		9C11EEC51720646F003510EB /* PeasantColumn.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PeasantColumn.plist; sourceTree = "<group>"; };
 		9C11EEC7172073F5003510EB /* NSMutableArray+QueueAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+QueueAdditions.h"; sourceTree = "<group>"; };
 		9C11EEC8172073F5003510EB /* NSMutableArray+QueueAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+QueueAdditions.m"; sourceTree = "<group>"; };
+		8BFC3F0A172042C2000161FD /* GameOver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOver.h; sourceTree = "<group>"; };
+		8BFC3F0B172042C3000161FD /* GameOver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOver.m; sourceTree = "<group>"; };
+		8BFC3F0E17204440000161FD /* GameOver.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = GameOver.ccbi; sourceTree = "<group>"; };
 		9C2B3CBC171EE8FB00E695FE /* Registry Entities */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Registry Entities"; sourceTree = "<group>"; };
 		9C377BE1170B6F5100F840FB /* KKPixelMaskSprite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKPixelMaskSprite.h; sourceTree = "<group>"; };
 		9C377BE2170B6F5100F840FB /* KKPixelMaskSprite.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKPixelMaskSprite.m; sourceTree = "<group>"; };
@@ -1150,6 +1155,7 @@
 				3E14D23A171A2A28005992A6 /* Comet.plist */,
 				8B8C2D9B1719DB9300B50C1E /* MainMenu.ccbi */,
 				8BBB6A2F171E27970064B3CD /* akaPotsley.ttf */,
+				8BFC3F0E17204440000161FD /* GameOver.ccbi */,
 				8B0E7131171DD5A2004D212C /* SkillTreeLayer.ccbi */,
 				8BBB6A22171E09E30064B3CD /* SettingsMenu.ccbi */,
 				9C85F4C31707957E00EECB83 /* Info.plist */,
@@ -1584,6 +1590,8 @@
 			isa = PBXGroup;
 			children = (
 				8B79CDDF171F501D00E58EDD /* Hud.h */,
+				8BFC3F0A172042C2000161FD /* GameOver.h */,
+				8BFC3F0B172042C3000161FD /* GameOver.m */,
 				8B79CDE0171F501D00E58EDD /* Hud.m */,
 				9C85F659170A3E4100EECB83 /* MainScene.h */,
 				9C85F65A170A3E4200EECB83 /* MainScene.m */,
@@ -1920,6 +1928,7 @@
 				8BFC3F0417202EC7000161FD /* pause-ipadhd.png in Resources */,
 				9C11EEC3172063B3003510EB /* Level1.plist in Resources */,
 				9C11EEC61720646F003510EB /* PeasantColumn.plist in Resources */,
+				8BFC3F0F17204440000161FD /* GameOver.ccbi in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2068,6 +2077,7 @@
 				8B79CDE1171F501D00E58EDD /* Hud.m in Sources */,
 				9C11EEC017205775003510EB /* WaveManager.m in Sources */,
 				9C11EEC9172073F5003510EB /* NSMutableArray+QueueAdditions.m in Sources */,
+				8BFC3F0C172042C3000161FD /* GameOver.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

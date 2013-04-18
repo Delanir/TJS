@@ -138,6 +138,11 @@
     [[CollisionManager shared] updateWallsAndEnemies:dt];
     [hud updateWallHealth];
     [hud updateData];
+    
+    if (((Wall *)[[Registry shared]getEntityByName:@"Wall"]).health<=0 && (_gameOver==nil)) {
+        [self gameOver];
+    }
+    
 }
 
 
@@ -173,6 +178,8 @@
     }
     [arrow release];
     arrow=nil;
+    
+    
 
 }
 

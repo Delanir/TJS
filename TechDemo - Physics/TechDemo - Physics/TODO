@@ -10,8 +10,6 @@
     - Fazer gestor de cena
 - Implementar restart
 
-- Carregar um nível
-
 - som do impacto tem de ser corrigido
 - Implementar skill tree - implementar a lógica e ver se fazemos uma spritesheet de bocadinhos para melhorar a performance (Daniela)
 - Fazer menu em baixo
@@ -110,5 +108,6 @@
 - corrigido bug das setas que não eram decrementadas
 - fuckin colisões no fuckin retina fuckin corrigidas 
 - Pausa implementada
-
 - Criado WaveManager
+- Criada lógica de gestão de waves
+- Já temos waves, podemos fazer níveis :D
