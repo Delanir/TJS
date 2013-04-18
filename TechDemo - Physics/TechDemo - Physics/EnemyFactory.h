@@ -21,6 +21,7 @@
 -(Peasant*)generatePeasant;
 -(FaerieDragon*)generateFaerieDragon;
 -(Zealot*)generateZealot;
+-(Enemy*)generateEnemyWithType:(NSString*) type vertical:(int) vpos displacement:(CGPoint) disp;
 
 @end
 

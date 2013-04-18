@@ -14,18 +14,21 @@ typedef enum {walk, attack, fly, land, hit, die} state;
 {
     state currentState;
     float strength;
+    float speed;
     unsigned int goldValue;
 }
 
 @property state currentState;
 @property float strength;
+@property float speed;
 @property unsigned int goldValue;
 
 
-- (id) initWithSprite:(NSString *)spriteFile
-        andWindowSize:(CGSize) winSize;
--(void)attack;
--(void)die;
--(void ) shout;
+- (id) initWithSprite:(NSString *)spriteFile;
+-(void) setupActions;
+-(void) attack;
+-(void) die;
+-(void) shout;
+-(void) placeRandomly;
 
 @end

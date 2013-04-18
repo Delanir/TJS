@@ -144,6 +144,10 @@
 		8BFA2DA017172536008A2064 /* peasant_anim.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8BFA2D9F17172536008A2064 /* peasant_anim.plist */; };
 		8BFC3F0317202EC7000161FD /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BFC3F0117202EC7000161FD /* pause.png */; };
 		8BFC3F0417202EC7000161FD /* pause-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BFC3F0217202EC7000161FD /* pause-ipadhd.png */; };
+		9C11EEC017205775003510EB /* WaveManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C11EEBF17205775003510EB /* WaveManager.m */; };
+		9C11EEC3172063B3003510EB /* Level1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C11EEC2172063B3003510EB /* Level1.plist */; };
+		9C11EEC61720646F003510EB /* PeasantColumn.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C11EEC51720646F003510EB /* PeasantColumn.plist */; };
+		9C11EEC9172073F5003510EB /* NSMutableArray+QueueAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C11EEC8172073F5003510EB /* NSMutableArray+QueueAdditions.m */; };
 		9C2B3CBD171EE8FB00E695FE /* Registry Entities in Resources */ = {isa = PBXBuildFile; fileRef = 9C2B3CBC171EE8FB00E695FE /* Registry Entities */; };
 		9C377BE9170B72D400F840FB /* KKPixelMaskSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C377BE2170B6F5100F840FB /* KKPixelMaskSprite.m */; };
 		9C377BEA170B72D700F840FB /* bitarray.c in Sources */ = {isa = PBXBuildFile; fileRef = 9C377BE3170B715A00F840FB /* bitarray.c */; };
@@ -489,6 +493,12 @@
 		8BFA2D9F17172536008A2064 /* peasant_anim.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = peasant_anim.plist; sourceTree = "<group>"; };
 		8BFC3F0117202EC7000161FD /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
 		8BFC3F0217202EC7000161FD /* pause-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pause-ipadhd.png"; sourceTree = "<group>"; };
+		9C11EEBE17205775003510EB /* WaveManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaveManager.h; sourceTree = "<group>"; };
+		9C11EEBF17205775003510EB /* WaveManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaveManager.m; sourceTree = "<group>"; };
+		9C11EEC2172063B3003510EB /* Level1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Level1.plist; sourceTree = "<group>"; };
+		9C11EEC51720646F003510EB /* PeasantColumn.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PeasantColumn.plist; sourceTree = "<group>"; };
+		9C11EEC7172073F5003510EB /* NSMutableArray+QueueAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+QueueAdditions.h"; sourceTree = "<group>"; };
+		9C11EEC8172073F5003510EB /* NSMutableArray+QueueAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+QueueAdditions.m"; sourceTree = "<group>"; };
 		9C2B3CBC171EE8FB00E695FE /* Registry Entities */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Registry Entities"; sourceTree = "<group>"; };
 		9C377BE1170B6F5100F840FB /* KKPixelMaskSprite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKPixelMaskSprite.h; sourceTree = "<group>"; };
 		9C377BE2170B6F5100F840FB /* KKPixelMaskSprite.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKPixelMaskSprite.m; sourceTree = "<group>"; };
@@ -961,9 +971,27 @@
 			path = CCBReader;
 			sourceTree = "<group>";
 		};
+		9C11EEC11720637D003510EB /* Levels */ = {
+			isa = PBXGroup;
+			children = (
+				9C11EEC2172063B3003510EB /* Level1.plist */,
+			);
+			name = Levels;
+			sourceTree = "<group>";
+		};
+		9C11EEC417206465003510EB /* Waves */ = {
+			isa = PBXGroup;
+			children = (
+				9C11EEC51720646F003510EB /* PeasantColumn.plist */,
+			);
+			name = Waves;
+			sourceTree = "<group>";
+		};
 		9C2B3CBB171EE83500E695FE /* Configs and References */ = {
 			isa = PBXGroup;
 			children = (
+				9C11EEC417206465003510EB /* Waves */,
+				9C11EEC11720637D003510EB /* Levels */,
 				9C8DE0D017185844002E0D0A /* Tags */,
 				9C94ABD717197BD2005BCE32 /* zDepth */,
 				9C7FF343170B28CE009DA7F9 /* Config.plist */,
@@ -1018,6 +1046,8 @@
 				9C377BE2170B6F5100F840FB /* KKPixelMaskSprite.m */,
 				9C377BE3170B715A00F840FB /* bitarray.c */,
 				9C377BE4170B715A00F840FB /* bitarray.h */,
+				9C11EEC7172073F5003510EB /* NSMutableArray+QueueAdditions.h */,
+				9C11EEC8172073F5003510EB /* NSMutableArray+QueueAdditions.m */,
 			);
 			name = "Extern Classes";
 			sourceTree = "<group>";
@@ -1544,6 +1574,8 @@
 				9CBF5B09171E462E00EF44B2 /* Registry.m */,
 				9CBF5B0B171E464C00EF44B2 /* ResourceManager.h */,
 				9CBF5B0C171E464C00EF44B2 /* ResourceManager.m */,
+				9C11EEBE17205775003510EB /* WaveManager.h */,
+				9C11EEBF17205775003510EB /* WaveManager.m */,
 			);
 			name = "Singleton Classes";
 			sourceTree = "<group>";
@@ -1886,6 +1918,8 @@
 				9C2B3CBD171EE8FB00E695FE /* Registry Entities in Resources */,
 				8BFC3F0317202EC7000161FD /* pause.png in Resources */,
 				8BFC3F0417202EC7000161FD /* pause-ipadhd.png in Resources */,
+				9C11EEC3172063B3003510EB /* Level1.plist in Resources */,
+				9C11EEC61720646F003510EB /* PeasantColumn.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2032,6 +2066,8 @@
 				9CBF5B0D171E464E00EF44B2 /* ResourceManager.m in Sources */,
 				8B79CDCB171F15B800E58EDD /* LevelLayerAbstract.m in Sources */,
 				8B79CDE1171F501D00E58EDD /* Hud.m in Sources */,
+				9C11EEC017205775003510EB /* WaveManager.m in Sources */,
+				9C11EEC9172073F5003510EB /* NSMutableArray+QueueAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

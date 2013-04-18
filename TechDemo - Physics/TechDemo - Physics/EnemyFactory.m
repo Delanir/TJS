@@ -50,9 +50,9 @@ static EnemyFactory* _sharedSingleton = nil;
 
 -(Peasant*)generatePeasant
 {
-    
-    CGSize winSize = [[CCDirector sharedDirector] winSize];
-    Peasant *peasant = [[Peasant alloc] initWithSprite:@"p_walk01.png" andWindowSize:winSize];
+    Peasant *peasant = [[Peasant alloc] initWithSprite:@"p_walk01.png"];
+    [peasant placeRandomly];
+    [peasant setupActions];
     
     [peasant autorelease];
     
@@ -62,8 +62,9 @@ static EnemyFactory* _sharedSingleton = nil;
 
 -(FaerieDragon*)generateFaerieDragon
 {
-    CGSize winSize = [[CCDirector sharedDirector] winSize];
-    FaerieDragon *faerieDragon = [[FaerieDragon alloc] initWithSprite:@"fd_fly01.png" andWindowSize:winSize];
+    FaerieDragon *faerieDragon = [[FaerieDragon alloc] initWithSprite:@"fd_fly01.png"];
+    [faerieDragon placeRandomly];
+    [faerieDragon setupActions];
     
     [faerieDragon autorelease];
     
@@ -73,13 +74,46 @@ static EnemyFactory* _sharedSingleton = nil;
 
 -(Zealot*)generateZealot
 {
-    CGSize winSize = [[CCDirector sharedDirector] winSize];
-    Zealot *zealot = [[Zealot alloc] initWithSprite:@"z_walk01.png" andWindowSize:winSize];
+    Zealot *zealot = [[Zealot alloc] initWithSprite:@"z_walk01.png"];
+    [zealot placeRandomly];
+    [zealot setupActions];
     
     [zealot autorelease];
     
     return zealot;
     
+}
+
+-(Enemy*)generateEnemyWithType:(NSString*) type vertical:(int) vpos displacement:(CGPoint) disp;
+{
+    Enemy * enemy = nil;
+    //NSLog(@"Enemy: %@ Vert: %d Disp:(%f,%f)", type, vpos, disp.x, disp.y);
+    
+    if([type isEqualToString:@"peasant"])
+        enemy = [[Peasant alloc] initWithSprite:@"p_walk01.png"];
+    
+    else if([type isEqualToString:@"faerie"])
+        enemy = [[FaerieDragon alloc] initWithSprite:@"fd_fly01.png"];
+    
+    else if([type isEqualToString:@"zealot"])
+        enemy = [[Zealot alloc] initWithSprite:@"z_walk01.png"];
+    
+    else return nil;
+    
+#warning Falta normalizar a velocidade e testar sem os aleatórios
+    // placement
+    CGSize winSize = [[CCDirector sharedDirector] winSize];
+    CGSize spriteSize = [[enemy sprite] contentSize];
+    
+    float x = winSize.width + (spriteSize.width/2) + (disp.x * spriteSize.width);
+    float y = vpos + (disp.y * spriteSize.height);
+    
+    [enemy sprite].position = ccp(x,y);
+    
+    [enemy setupActions];
+    [enemy autorelease];
+    
+    return enemy;
 }
 
 -(void)dealloc

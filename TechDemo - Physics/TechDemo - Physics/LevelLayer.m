@@ -21,6 +21,7 @@
 #import "Stimulus.h"
 #import "Registry.h"
 #import "ResourceManager.h"
+#import "WaveManager.h"
 
 
 // Particle Systems
@@ -61,23 +62,15 @@
 -(void)gameLogic:(ccTime)dt
 {
     timeElapsedSinceBeginning += dt;
-    
-    if((int)floor(timeElapsedSinceBeginning) % 4 == 1)
+    /*
+    if((int)floor(timeElapsedSinceBeginning) % 5 == 1)
         [self addPeasant];
-    if((int)floor(timeElapsedSinceBeginning) % 10 == 1)
+    if((int)floor(timeElapsedSinceBeginning) % 12 == 1)
         [self addFaerieDragon];
-    if((int)floor(timeElapsedSinceBeginning) % 6 == 1)
+    if((int)floor(timeElapsedSinceBeginning) % 8 == 1)
         [self addZealot];
-
-    
+     */
 }
-
--(void) onEnter
-{
-    //Startup sound
-    [super onEnter];
-}
-
 
 // on "init" you need to initialize your instance
 -(id) init
@@ -85,7 +78,6 @@
     if( (self=[super init]))
     {
         [[Registry shared] registerEntity:self withName:@"LevelLayer"];
-        
         [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"Battle1.mp3" loop:YES];
 
         CGSize winSize = [[CCDirector sharedDirector] winSize];
@@ -109,6 +101,10 @@
         // inicializar recursos
         [self initializeResources];
         
+        // inicializar nível
+        [[WaveManager shared] initializeLevelLogic:@"Level1"];
+        [[WaveManager shared] beginWaves];
+        
         // This dummy method initializes the collision manager
         [[CollisionManager shared] dummyMethod];
       
@@ -122,12 +118,6 @@
     return self;
 }
 
-// on "dealloc" you need to release all your retained objects
-- (void) dealloc
-{
-    //Dealloc stuff below this line
-	[super dealloc];
-}
 
 - (void) initializeResources
 {

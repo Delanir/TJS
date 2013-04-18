@@ -13,41 +13,39 @@
 
 @synthesize attackAction, flyAction;
 
--(id) initWithSprite:(NSString *)spriteFile andWindowSize:(CGSize)winSize
+-(id) initWithSprite:(NSString *)spriteFile
 {
-    if (self = [super initWithSprite:spriteFile andWindowSize:winSize])
+    if (self = [super initWithSprite:spriteFile])
     {
         [self setCurrentState:fly];
         [self setStrength:2.0];
         [self setGoldValue:6];
-        
-        
-        // Setup Movement
-        // Determine speed of the target
-        int minDuration = 8;                                                   //@TODO ficheiro de configuraçao
-        int maxDuration = 12;                                                   //@TODO ficheiro de configuracao
-        int rangeDuration = maxDuration - minDuration;
-        int actualDuration = (arc4random() % rangeDuration) + minDuration;
-        
-        // Create the actions
-        id actionMove = [CCMoveTo actionWithDuration:actualDuration
-                                            position:ccp(-sprite.contentSize.width/2, sprite.position.y)];
-        id actionMoveDone = [CCCallFuncN actionWithTarget:self
-                                                 selector:@selector(spriteMoveFinished:)];
-        [sprite runAction:[CCSequence actions:actionMove, actionMoveDone, nil]];
-        
-        
-        // Setup animations
-        [self setFlyAction: [CCRepeatForever actionWithAction:
-                              [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"fd_fly" ]]]];
-        [self setAttackAction: [CCSequence actions:
-                                [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"fd_attack"]],
-                                [CCCallFuncN actionWithTarget:self selector:@selector(damageWall)],
-                                nil]];
-        [[self sprite] runAction:flyAction];
+        [self setSpeed:10];
         
     }
     return self;
+}
+
+-(void) setupActions
+{
+    // Setup Movement
+    // Create the actions
+    id actionMove = [CCMoveTo actionWithDuration:speed
+                                        position:ccp(-sprite.contentSize.width/2, sprite.position.y)];
+    id actionMoveDone = [CCCallFuncN actionWithTarget:self
+                                             selector:@selector(spriteMoveFinished:)];
+    [sprite runAction:[CCSequence actions:actionMove, actionMoveDone, nil]];
+    
+    
+    // Setup animations
+    [self setFlyAction: [CCRepeatForever actionWithAction:
+                         [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"fd_fly" ]]]];
+    [self setAttackAction: [CCSequence actions:
+                            [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"fd_attack"]],
+                            [CCCallFuncN actionWithTarget:self selector:@selector(damageWall)],
+                            nil]];
+    [[self sprite] runAction:flyAction];
+ 
 }
 
 -(void)attack

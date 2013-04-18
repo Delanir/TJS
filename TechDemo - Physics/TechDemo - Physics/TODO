@@ -8,8 +8,9 @@
 
 - Fazer Máquina de estado
     - Fazer gestor de cena
-- Implementar pausa e restart
-    - Para pausa é preciso que o update seja scheduled numa classe
+- Implementar restart
+
+- Carregar um nível
 
 - som do impacto tem de ser corrigido
 - Implementar skill tree - implementar a lógica e ver se fazemos uma spritesheet de bocadinhos para melhorar a performance (Daniela)
@@ -25,7 +26,7 @@
 - Passar para os arqueiros do heroes  (João M)
     - Tratar das sprites do wood elf e do grand elf
     
-- optimizar os imports > o Nuno disse que os imports devem ser feitos sempre q poss]ivel no .h
+- optimizar os imports > o Nuno disse que os imports devem ser feitos sempre q possível no .h
 
 - Fazer projectiles do zealot
 - Lógica de levar dano em cima do moat
@@ -106,6 +107,8 @@
 - Removidos quase todos os warnings
 - Corrigir PBX
 - Tirar warnings que faltam
-
 - corrigido bug das setas que não eram decrementadas
 - fuckin colisões no fuckin retina fuckin corrigidas 
+- Pausa implementada
+
+- Criado WaveManager

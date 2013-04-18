@@ -14,44 +14,40 @@
 @synthesize attackAction, walkAction;
 
 
--(id) initWithSprite:(NSString *)spriteFile andWindowSize:(CGSize)winSize
+-(id) initWithSprite:(NSString *)spriteFile
 {
-    if (self = [super initWithSprite:spriteFile andWindowSize:winSize])
+    if (self = [super initWithSprite:spriteFile])
     {
         [self setCurrentState:walk];
         [self setStrength:0.5];
         [self setGoldValue:1];
-        
-        // Setup movement
-        
-        // Determine speed of the target
-        int minDuration = 10;                                                   //@TODO ficheiro de configuraçao
-        int maxDuration = 20;                                                   //@TODO ficheiro de configuracao
-        int rangeDuration = maxDuration - minDuration;
-        int actualDuration = (arc4random() % rangeDuration) + minDuration;
-        
-        // Create the actions
-        id actionMove = [CCMoveTo actionWithDuration:actualDuration
-                                            position:ccp(-sprite.contentSize.width/2, sprite.position.y)];
-        id actionMoveDone = [CCCallFuncN actionWithTarget:self
-                                                 selector:@selector(spriteMoveFinished:)];
-        [sprite runAction:[CCSequence actions:actionMove, actionMoveDone, nil]];
-
-        // Setup Animations
-        
-        [self setWalkAction: [CCRepeatForever actionWithAction:
-                                [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"p_walk" ]]]];
-        
-        [self setAttackAction: [CCSequence actions:
-                         [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"p_attack"]],
-                          [CCCallFuncN actionWithTarget:self selector:@selector(damageWall)],
-                          nil]];
-        
-        [[self sprite] runAction:walkAction];
-        
-        
+        [self setSpeed:15];
     }
     return self;
+}
+
+-(void) setupActions
+{
+    // Setup movement
+    
+    // Create the actions
+    id actionMove = [CCMoveTo actionWithDuration:speed
+                                        position:ccp(-sprite.contentSize.width/2, sprite.position.y)];
+    id actionMoveDone = [CCCallFuncN actionWithTarget:self
+                                             selector:@selector(spriteMoveFinished:)];
+    [sprite runAction:[CCSequence actions:actionMove, actionMoveDone, nil]];
+    
+    // Setup Animations
+    
+    [self setWalkAction: [CCRepeatForever actionWithAction:
+                          [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"p_walk" ]]]];
+    
+    [self setAttackAction: [CCSequence actions:
+                            [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"p_attack"]],
+                            [CCCallFuncN actionWithTarget:self selector:@selector(damageWall)],
+                            nil]];
+    
+    [[self sprite] runAction:walkAction];
 }
 
 -(void)attack

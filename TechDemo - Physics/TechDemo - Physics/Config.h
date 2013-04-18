@@ -15,6 +15,7 @@
 }
 
 +(Config*)shared;
+#warning criar classe utils
 +(BOOL)iPadRetina;
 -(void)dummyMethod;
 -(NSString*)getStringProperty:(NSString*) key;
