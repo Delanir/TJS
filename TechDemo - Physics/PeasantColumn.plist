@@ -12,6 +12,28 @@
 			<key>displacement</key>
 			<dict>
 				<key>height</key>
+				<integer>1</integer>
+				<key>width</key>
+				<integer>1</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>peasant</string>
+			<key>displacement</key>
+			<dict>
+				<key>height</key>
+				<real>0.5</real>
+				<key>width</key>
+				<real>0.5</real>
+			</dict>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>peasant</string>
+			<key>displacement</key>
+			<dict>
+				<key>height</key>
 				<integer>0</integer>
 				<key>width</key>
 				<integer>0</integer>
@@ -23,9 +45,9 @@
 			<key>displacement</key>
 			<dict>
 				<key>height</key>
-				<integer>1</integer>
+				<real>-0.5</real>
 				<key>width</key>
-				<integer>1</integer>
+				<real>0.5</real>
 			</dict>
 		</dict>
 		<dict>
