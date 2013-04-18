@@ -47,11 +47,9 @@
 
 - (void) setSprite:(NSString*)spr
 {
-    sprite = [KKPixelMaskSprite spriteWithFile:spr alphaThreshold:0.5f];
+    sprite = [KKPixelMaskSprite spriteWithFile:spr alphaThreshold:0.8f];
     [sprite retain];
     
-    //if([Config iPadRetina])
-    //    [sprite setScale:2.0f];
     sprite.anchorPoint=ccp(0.5f,0.5f);
     sprite.zOrder = [[CCDirector sharedDirector] winSize].height - sprite.position.y;
     
@@ -60,13 +58,12 @@
 
 - (void) setSpriteWithSpriteFrameName:(NSString*)spr
 {
-    sprite = [KKPixelMaskSprite spriteWithSpriteFrameName:spr alphaThreshold:0.5f];
+    sprite = [KKPixelMaskSprite spriteWithSpriteFrameName:spr alphaThreshold:0.8f];
     [sprite retain];
     
-    //if([Config iPadRetina])
-    //    [sprite setScale:2.0f];
     sprite.anchorPoint=ccp(0.5f,0.5f);
-    }
+    sprite.zOrder = [[CCDirector sharedDirector] winSize].height - sprite.position.y;
+}
 
 - (void) destroySprite
 {

@@ -123,6 +123,7 @@ static ResourceManager* _sharedSingleton = nil;
 - (void)increaseArrowsUsedCount
 {
     arrowsUsed++;
+    arrows--;
 }
 
 - (double)determineAccuracy

@@ -33,7 +33,7 @@
         // Create the target slightly off-screen along the right edge,
         // and along a random position along the Y axis as calculated above
         sprite.position = ccp(winSize.width + (spriteSize.width/2), actualY);
-        
+        //sprite.anchorPoint = ccp(1.0,1.0);
     }
     
     return self;

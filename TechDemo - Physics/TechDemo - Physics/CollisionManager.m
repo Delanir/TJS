@@ -70,7 +70,7 @@ static CollisionManager* _sharedSingleton = nil;
     return;
 }
 
-
+// SO DEPRECATED
 - (void)updateSimpleCollisions:(ccTime)dt
 {
     
