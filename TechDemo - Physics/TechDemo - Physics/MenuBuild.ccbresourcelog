@@ -49,6 +49,7 @@ Default-Landscape~ipad.png
 defaultEmitter.png
 fairiedragon_anim.plist
 fire.png
+GameOver.ccbi
 HelloCocosBuilder.ccbi
 larcher_transparent_name.png
 leaderboard-ipadhd.png
@@ -62,6 +63,8 @@ lvl1spritesheet.png
 MainMenu.ccbi
 moat-ipadhd.png
 moat.png
+pause-ipadhd.png
+pause.png
 peasant_anim.plist
 plus-ipadhd.png
 plus.png

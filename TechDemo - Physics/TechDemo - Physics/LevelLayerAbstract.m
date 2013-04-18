@@ -19,6 +19,8 @@
 #import "StimulusFactory.h"
 #import "Stimulus.h"
 
+#import "CCBReader.h"   
+
 // Particle Systems
 #import "CCParticleSystem.h"
 
@@ -55,6 +57,7 @@
 {
     UITouch *touch = [touches anyObject];
     [self pauseCheck:touch];
+    [self gameOverReturnToMainMenuCheck:touch];
     if ([[CCDirector sharedDirector] isPaused]) {
         return;
     }
@@ -89,6 +92,21 @@
     }
 }
 
+-(void) gameOverReturnToMainMenuCheck:(UITouch *)touchLocation {
+    CGSize winSize = [[CCDirector sharedDirector] winSize];
+    CGPoint location=[touchLocation locationInView:[touchLocation view]];
+    location.y=winSize.height-location.y;
+    CGPoint btnPosition = _gameOver.mainMenuButtonPosition;
+    float btnRadius = _gameOver.mainMenuButtonRadius/2;
+    
+    if (ccpDistance(btnPosition, location)<=btnRadius){
+        [[CCDirector sharedDirector] resume];
+        CCScene* gameScene = [CCBReader sceneWithNodeGraphFromFile:@"MainMenu.ccbi"];
+        [[CCDirector sharedDirector] replaceScene:gameScene];
+        
+    }
+}
+
 -(void) togglePause
 {
     if ([[CCDirector sharedDirector] isPaused]) {
@@ -100,6 +118,15 @@
         
         [[CCDirector sharedDirector] pause];
     }
+    
+}
+
+-(void) gameOver
+{
+    _gameOver= (GameOver *)[CCBReader nodeGraphFromFile:@"GameOver.ccbi"];
+    [self addChild:_gameOver];
+    [_gameOver setZOrder:1535];
+    [[CCDirector sharedDirector] pause];
     
 }
 

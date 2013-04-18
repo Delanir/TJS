@@ -144,6 +144,8 @@
 		8BFA2DA017172536008A2064 /* peasant_anim.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8BFA2D9F17172536008A2064 /* peasant_anim.plist */; };
 		8BFC3F0317202EC7000161FD /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BFC3F0117202EC7000161FD /* pause.png */; };
 		8BFC3F0417202EC7000161FD /* pause-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BFC3F0217202EC7000161FD /* pause-ipadhd.png */; };
+		8BFC3F0C172042C3000161FD /* GameOver.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BFC3F0B172042C3000161FD /* GameOver.m */; };
+		8BFC3F0F17204440000161FD /* GameOver.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 8BFC3F0E17204440000161FD /* GameOver.ccbi */; };
 		9C2B3CBD171EE8FB00E695FE /* Registry Entities in Resources */ = {isa = PBXBuildFile; fileRef = 9C2B3CBC171EE8FB00E695FE /* Registry Entities */; };
 		9C377BE9170B72D400F840FB /* KKPixelMaskSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C377BE2170B6F5100F840FB /* KKPixelMaskSprite.m */; };
 		9C377BEA170B72D700F840FB /* bitarray.c in Sources */ = {isa = PBXBuildFile; fileRef = 9C377BE3170B715A00F840FB /* bitarray.c */; };
@@ -489,6 +491,9 @@
 		8BFA2D9F17172536008A2064 /* peasant_anim.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = peasant_anim.plist; sourceTree = "<group>"; };
 		8BFC3F0117202EC7000161FD /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
 		8BFC3F0217202EC7000161FD /* pause-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pause-ipadhd.png"; sourceTree = "<group>"; };
+		8BFC3F0A172042C2000161FD /* GameOver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOver.h; sourceTree = "<group>"; };
+		8BFC3F0B172042C3000161FD /* GameOver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOver.m; sourceTree = "<group>"; };
+		8BFC3F0E17204440000161FD /* GameOver.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = GameOver.ccbi; sourceTree = "<group>"; };
 		9C2B3CBC171EE8FB00E695FE /* Registry Entities */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Registry Entities"; sourceTree = "<group>"; };
 		9C377BE1170B6F5100F840FB /* KKPixelMaskSprite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKPixelMaskSprite.h; sourceTree = "<group>"; };
 		9C377BE2170B6F5100F840FB /* KKPixelMaskSprite.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKPixelMaskSprite.m; sourceTree = "<group>"; };
@@ -1120,6 +1125,7 @@
 				3E14D23A171A2A28005992A6 /* Comet.plist */,
 				8B8C2D9B1719DB9300B50C1E /* MainMenu.ccbi */,
 				8BBB6A2F171E27970064B3CD /* akaPotsley.ttf */,
+				8BFC3F0E17204440000161FD /* GameOver.ccbi */,
 				8B0E7131171DD5A2004D212C /* SkillTreeLayer.ccbi */,
 				8BBB6A22171E09E30064B3CD /* SettingsMenu.ccbi */,
 				9C85F4C31707957E00EECB83 /* Info.plist */,
@@ -1552,6 +1558,8 @@
 			isa = PBXGroup;
 			children = (
 				8B79CDDF171F501D00E58EDD /* Hud.h */,
+				8BFC3F0A172042C2000161FD /* GameOver.h */,
+				8BFC3F0B172042C3000161FD /* GameOver.m */,
 				8B79CDE0171F501D00E58EDD /* Hud.m */,
 				9C85F659170A3E4100EECB83 /* MainScene.h */,
 				9C85F65A170A3E4200EECB83 /* MainScene.m */,
@@ -1886,6 +1894,7 @@
 				9C2B3CBD171EE8FB00E695FE /* Registry Entities in Resources */,
 				8BFC3F0317202EC7000161FD /* pause.png in Resources */,
 				8BFC3F0417202EC7000161FD /* pause-ipadhd.png in Resources */,
+				8BFC3F0F17204440000161FD /* GameOver.ccbi in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2032,6 +2041,7 @@
 				9CBF5B0D171E464E00EF44B2 /* ResourceManager.m in Sources */,
 				8B79CDCB171F15B800E58EDD /* LevelLayerAbstract.m in Sources */,
 				8B79CDE1171F501D00E58EDD /* Hud.m in Sources */,
+				8BFC3F0C172042C3000161FD /* GameOver.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
