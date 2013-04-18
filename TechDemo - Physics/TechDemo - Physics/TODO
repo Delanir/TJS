@@ -10,7 +10,6 @@
 
 - Fazer Máquina de estado
     - Fazer gestor de cena
-- Corrigir PBX
 - Implementar pausa e restart
     - Para pausa é preciso que o update seja scheduled numa classe
 
@@ -105,3 +104,5 @@
 - Musica já funciona bem
 - Enorme refactorização de código para usar Registry e ResourceManager
 - Removidos quase todos os warnings
+
+- Corrigir PBX

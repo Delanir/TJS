@@ -9,7 +9,10 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 
-@interface MainMenuLayer : CCLayer {
+#import <GameKit/GameKit.h>
+
+@interface MainMenuLayer : CCLayer <GKAchievementViewControllerDelegate, GKLeaderboardViewControllerDelegate>
+{
     
 }
 - (void) pressedPlay:(id)sender;
