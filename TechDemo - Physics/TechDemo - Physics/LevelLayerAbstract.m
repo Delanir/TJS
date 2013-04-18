@@ -34,15 +34,14 @@
 {
     if( (self=[super init]))
     {
-        //CCLOG(@"MIAU MIAU SOU O GATO MUITO MAU"); <- LOOOL
-        
+       
         self.isTouchEnabled = YES;
         CGSize winSize = [[CCDirector sharedDirector] winSize];
-        _pauseButton= [CCSprite spriteWithFile:@"starUP.png"];
-        [_pauseButton setAnchorPoint:CGPointMake(0.5f, 0.5f)];
-        [_pauseButton setPosition:CGPointMake(_pauseButton.contentSize.width, winSize.height-_pauseButton.contentSize.height)];
+        _pauseButton= [CCSprite spriteWithFile:@"pause.png"];
+//        [_pauseButton setAnchorPoint:CGPointMake(0.5f, 0.5f)];
+        [_pauseButton setPosition:CGPointMake(_pauseButton.contentSize.width/2.0, winSize.height - _pauseButton.contentSize.height/2.0)];
 
-        [_pauseButton setZOrder:100];
+        [_pauseButton setZOrder:1000];
 
         [self addChild:_pauseButton];
     }
@@ -79,11 +78,13 @@
 }
 
 -(void) pauseCheck:(UITouch *)touchLocation {
+    CGSize winSize = [[CCDirector sharedDirector] winSize];
     CGPoint location=[touchLocation locationInView:[touchLocation view]];
+    location.y=winSize.height-location.y;
     CGPoint pausePosition = _pauseButton.position;
     float pauseRadius = _pauseButton.contentSize.width/2;
     
-    if (ccpDistance(location, pausePosition)<=pauseRadius){
+    if (ccpDistance(pausePosition, location)<=pauseRadius){
         [self togglePause];
     }
 }
