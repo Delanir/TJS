@@ -4,9 +4,7 @@
 *                *
 **/            **/
 
-- Tirar warnings que faltam
 - Substituír definições contantes por Classe de nomes
-- Corrigir colisões no retina (???????????????????)
 
 - Fazer Máquina de estado
     - Fazer gestor de cena
@@ -15,7 +13,9 @@
 
 - som do impacto tem de ser corrigido
 - Implementar skill tree - implementar a lógica e ver se fazemos uma spritesheet de bocadinhos para melhorar a performance (Daniela)
+- Fazer menu em baixo
 - setas a saír por cima da wall
+    - isto na verdade é corrigir o zOrder
 - Dano dos inimigos (Amaral)
 - Random shouts dos inimigos (Daniela)
 
@@ -25,7 +25,7 @@
 - Passar para os arqueiros do heroes  (João M)
     - Tratar das sprites do wood elf e do grand elf
     
--optimizar os imports > o Nuno disse que os imports devem ser feitos sempre q poss]ivel no .h
+- optimizar os imports > o Nuno disse que os imports devem ser feitos sempre q poss]ivel no .h
 
 - Fazer projectiles do zealot
 - Lógica de levar dano em cima do moat
@@ -104,5 +104,8 @@
 - Musica já funciona bem
 - Enorme refactorização de código para usar Registry e ResourceManager
 - Removidos quase todos os warnings
-
 - Corrigir PBX
+- Tirar warnings que faltam
+
+- corrigido bug das setas que não eram decrementadas
+- fuckin colisões no fuckin retina fuckin corrigidas 
