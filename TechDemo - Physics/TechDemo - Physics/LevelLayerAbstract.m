@@ -18,6 +18,7 @@
 #import "Arrow.h"
 #import "StimulusFactory.h"
 #import "Stimulus.h"
+#import "ResourceManager.h"
 
 #import "CCBReader.h"   
 
@@ -29,6 +30,8 @@
 
 // Needed to obtain the Navigation Controller
 #import "AppDelegate.h"
+
+#import "WaveManager.h"
 
 @implementation LevelLayerAbstract
 
@@ -46,6 +49,7 @@
         [_pauseButton setZOrder:1000];
 
         [self addChild:_pauseButton];
+        [self addChild:[WaveManager shared]]; // Esta linha é imensos de feia. Mas tem de ser para haver update
     }
     
     
@@ -121,15 +125,23 @@
     
 }
 
+-(void) addEnemy:(Enemy *) newEnemy
+{
+    NSInteger zOrder = [[CCDirector sharedDirector] winSize].height - [newEnemy sprite].position.y;
+    
+    [self addChild:newEnemy z:zOrder];
+    
+    [[CollisionManager shared] addToTargets:newEnemy];
+    [[ResourceManager shared] increaseEnemyCount];
+}
+
 -(void) gameOver
 {
     _gameOver= (GameOver *)[CCBReader nodeGraphFromFile:@"GameOver.ccbi"];
     [self addChild:_gameOver];
     [_gameOver setZOrder:1535];
     [[CCDirector sharedDirector] pause];
-    
 }
-
 
 #pragma mark GameKit delegate
 

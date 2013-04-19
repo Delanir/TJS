@@ -7,8 +7,11 @@
 //
 
 #import "EnemyFactory.h"
+#import "Config.h"
 
 @implementation EnemyFactory
+
+@synthesize enemyTypes;
 
 static EnemyFactory* _sharedSingleton = nil;
 
@@ -40,8 +43,7 @@ static EnemyFactory* _sharedSingleton = nil;
 -(id)init {
 	self = [super init];
 	if (self != nil) {
-		// initialize stuff here
-    
+		enemyTypes = [[Config shared] getArrayProperty:@"existingEnemies"];
     }
 	return self;
 }
@@ -50,20 +52,21 @@ static EnemyFactory* _sharedSingleton = nil;
 
 -(Peasant*)generatePeasant
 {
-    
-    CGSize winSize = [[CCDirector sharedDirector] winSize];
-    Peasant *peasant = [[Peasant alloc] initWithSprite:@"p_walk01.png" andWindowSize:winSize];
+    Peasant *peasant = [[Peasant alloc] initWithSprite:@"p_walk01.png"];
+    [peasant placeRandomly];
+    [peasant setupActions];
     
     [peasant autorelease];
     
     return peasant;
-        
+    
 }
 
 -(FaerieDragon*)generateFaerieDragon
 {
-    CGSize winSize = [[CCDirector sharedDirector] winSize];
-    FaerieDragon *faerieDragon = [[FaerieDragon alloc] initWithSprite:@"fd_fly01.png" andWindowSize:winSize];
+    FaerieDragon *faerieDragon = [[FaerieDragon alloc] initWithSprite:@"fd_fly01.png"];
+    [faerieDragon placeRandomly];
+    [faerieDragon setupActions];
     
     [faerieDragon autorelease];
     
@@ -73,13 +76,48 @@ static EnemyFactory* _sharedSingleton = nil;
 
 -(Zealot*)generateZealot
 {
-    CGSize winSize = [[CCDirector sharedDirector] winSize];
-    Zealot *zealot = [[Zealot alloc] initWithSprite:@"z_walk01.png" andWindowSize:winSize];
+    Zealot *zealot = [[Zealot alloc] initWithSprite:@"z_walk01.png"];
+    [zealot placeRandomly];
+    [zealot setupActions];
     
     [zealot autorelease];
     
     return zealot;
     
+}
+
+-(Enemy*)generateEnemyWithType:(NSString*) type vertical:(int) vpos displacement:(CGPoint) disp;
+{
+    Enemy * newEnemy = nil;
+    //NSLog(@"Enemy: %@ Vert: %d Disp:(%f,%f)", type, vpos, disp.x, disp.y);
+    
+    for ( NSDictionary * enemy in enemyTypes)
+    {
+        NSString * enemyType = [enemy objectForKey:@"type"];
+        if([type isEqualToString:enemyType])
+        {
+            NSString * className = [enemy objectForKey:@"class"];
+            NSString * spriteFile = [enemy objectForKey:@"initSprite"];
+            
+            newEnemy = [NSClassFromString(className) alloc];
+            [newEnemy initWithSprite:spriteFile];
+            
+            // placement
+            CGSize winSize = [[CCDirector sharedDirector] winSize];
+            CGSize spriteSize = [[newEnemy sprite] contentSize];
+            
+            float x = winSize.width + (spriteSize.width/2) + (disp.x * spriteSize.width);
+            float y = vpos + (disp.y * spriteSize.height);
+            
+            [newEnemy sprite].position = ccp(x,y);
+            
+            [newEnemy setupActions];
+            [newEnemy autorelease];
+            
+            break;
+        }
+    }
+    return newEnemy;
 }
 
 -(void)dealloc

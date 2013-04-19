@@ -33,6 +33,7 @@
     [[SpriteManager shared] addAnimationFromFile:@"yurie_anim.plist"];
     [[SimpleAudioEngine sharedEngine] init];
     [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"MainMenu.mp3" loop:YES];
+#warning por no config.plist
     
 }
 

@@ -102,6 +102,7 @@ static CollisionManager* _sharedSingleton = nil;
         for (Enemy *target in targetsToDelete)
         {
             [[SimpleAudioEngine sharedEngine] playEffect:@"hit.mp3"];
+#warning por no config.plist
             [target destroySprite];
             [_targets removeObject:target];
         }
@@ -132,12 +133,16 @@ static CollisionManager* _sharedSingleton = nil;
         {
             KKPixelMaskSprite *targetSprite = [target sprite];
             if ([targetSprite pixelMaskContainsPoint:[projectileSprite position]])
+            {
                 [targetsToDelete addObject:target];
+                break;              // Cada flecha só mata um
+            }
         }
         
         for (Enemy *target in targetsToDelete)
         {
             [[SimpleAudioEngine sharedEngine] playEffect:@"hit.mp3"];
+#warning por no config.plist
             [_targets removeObject:target];
             [target die];
         }

@@ -12,5 +12,32 @@
 	<integer>0</integer>
 	<key>collisionMethod</key>
 	<integer>1</integer>
+	<key>existingEnemies</key>
+	<array>
+		<dict>
+			<key>type</key>
+			<string>peasant</string>
+			<key>class</key>
+			<string>Peasant</string>
+			<key>initSprite</key>
+			<string>p_walk01.png</string>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>faerie</string>
+			<key>class</key>
+			<string>FaerieDragon</string>
+			<key>initSprite</key>
+			<string>fd_fly01.png</string>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>zealot</string>
+			<key>class</key>
+			<string>Zealot</string>
+			<key>initSprite</key>
+			<string>z_walk01.png</string>
+		</dict>
+	</array>
 </dict>
 </plist>

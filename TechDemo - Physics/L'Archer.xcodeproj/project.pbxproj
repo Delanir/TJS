@@ -324,6 +324,7 @@
 		9C973FDB1717204700B25075 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C973FDA1717204700B25075 /* Default-Landscape~ipad.png */; };
 		9C973FDD1717205000B25075 /* Default-Landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C973FDC1717205000B25075 /* Default-Landscape@2x~ipad.png */; };
 		9C973FDF1717232300B25075 /* Icon-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C973FDE1717232300B25075 /* Icon-ipadhd.png */; };
+		9C9ADB2D17218AA200C3FA59 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9ADB2C17218AA200C3FA59 /* Utils.m */; };
 		9CBF5B00171B1A0E00EF44B2 /* achievements-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CBF5AFC171B1A0E00EF44B2 /* achievements-ipadhd.png */; };
 		9CBF5B01171B1A0E00EF44B2 /* leaderboard-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CBF5AFD171B1A0E00EF44B2 /* leaderboard-ipadhd.png */; };
 		9CBF5B02171B1A0E00EF44B2 /* settings-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CBF5AFE171B1A0E00EF44B2 /* settings-ipadhd.png */; };
@@ -825,6 +826,8 @@
 		9C973FDA1717204700B25075 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape~ipad.png"; path = "../Default-Landscape~ipad.png"; sourceTree = "<group>"; };
 		9C973FDC1717205000B25075 /* Default-Landscape@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape@2x~ipad.png"; path = "../Default-Landscape@2x~ipad.png"; sourceTree = "<group>"; };
 		9C973FDE1717232300B25075 /* Icon-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-ipadhd.png"; path = "../Icon-ipadhd.png"; sourceTree = "<group>"; };
+		9C9ADB2B17218AA200C3FA59 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		9C9ADB2C17218AA200C3FA59 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		9CBF5AFC171B1A0E00EF44B2 /* achievements-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "achievements-ipadhd.png"; sourceTree = "<group>"; };
 		9CBF5AFD171B1A0E00EF44B2 /* leaderboard-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "leaderboard-ipadhd.png"; sourceTree = "<group>"; };
 		9CBF5AFE171B1A0E00EF44B2 /* settings-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings-ipadhd.png"; sourceTree = "<group>"; };
@@ -960,12 +963,30 @@
 			path = CCBReader;
 			sourceTree = "<group>";
 		};
+		9C11EEC11720637D003510EB /* Levels */ = {
+			isa = PBXGroup;
+			children = (
+				9C11EEC2172063B3003510EB /* Level1.plist */,
+			);
+			name = Levels;
+			sourceTree = "<group>";
+		};
+		9C11EEC417206465003510EB /* Waves */ = {
+			isa = PBXGroup;
+			children = (
+				9C11EEC51720646F003510EB /* PeasantColumn.plist */,
+			);
+			name = Waves;
+			sourceTree = "<group>";
+		};
 		9C2B3CBB171EE83500E695FE /* Configs and References */ = {
 			isa = PBXGroup;
 			children = (
+				9C11EEC417206465003510EB /* Waves */,
+				9C11EEC11720637D003510EB /* Levels */,
+				9C7FF343170B28CE009DA7F9 /* Config.plist */,
 				9C8DE0D017185844002E0D0A /* Tags */,
 				9C94ABD717197BD2005BCE32 /* zDepth */,
-				9C7FF343170B28CE009DA7F9 /* Config.plist */,
 				9C2B3CBC171EE8FB00E695FE /* Registry Entities */,
 				8B79CDD9171F2D2500E58EDD /* TODO */,
 			);
@@ -1091,6 +1112,7 @@
 				9CBF5B0E171E4D5D00EF44B2 /* Layer Classes */,
 				9C969E581716263000BE7476 /* Scene Entities */,
 				9C2B3CBB171EE83500E695FE /* Configs and References */,
+				9C9ADB2A17218A5E00C3FA59 /* Helper Classes */,
 				9C969E591716290D00BE7476 /* Startup Classes */,
 				9C377BE0170B6E6900F840FB /* Extern Classes */,
 				9C85F4AC1707957E00EECB83 /* Resources */,
@@ -1544,6 +1566,8 @@
 				9CBF5B09171E462E00EF44B2 /* Registry.m */,
 				9CBF5B0B171E464C00EF44B2 /* ResourceManager.h */,
 				9CBF5B0C171E464C00EF44B2 /* ResourceManager.m */,
+				9C11EEBE17205775003510EB /* WaveManager.h */,
+				9C11EEBF17205775003510EB /* WaveManager.m */,
 			);
 			name = "Singleton Classes";
 			sourceTree = "<group>";
@@ -1552,9 +1576,9 @@
 			isa = PBXGroup;
 			children = (
 				8B79CDDF171F501D00E58EDD /* Hud.h */,
+				8B79CDE0171F501D00E58EDD /* Hud.m */,
 				8BFC3F0A172042C2000161FD /* GameOver.h */,
 				8BFC3F0B172042C3000161FD /* GameOver.m */,
-				8B79CDE0171F501D00E58EDD /* Hud.m */,
 				9C85F659170A3E4100EECB83 /* MainScene.h */,
 				9C85F65A170A3E4200EECB83 /* MainScene.m */,
 				3EDD9F2E1715E7F700C6A622 /* Wall.h */,
@@ -1636,6 +1660,17 @@
 				9C94AC0617199F9E005BCE32 /* normal */,
 			);
 			name = Castle;
+			sourceTree = "<group>";
+		};
+		9C9ADB2A17218A5E00C3FA59 /* Helper Classes */ = {
+			isa = PBXGroup;
+			children = (
+				9C11EEC7172073F5003510EB /* NSMutableArray+QueueAdditions.h */,
+				9C11EEC8172073F5003510EB /* NSMutableArray+QueueAdditions.m */,
+				9C9ADB2B17218AA200C3FA59 /* Utils.h */,
+				9C9ADB2C17218AA200C3FA59 /* Utils.m */,
+			);
+			name = "Helper Classes";
 			sourceTree = "<group>";
 		};
 		9CBF5B0E171E4D5D00EF44B2 /* Layer Classes */ = {
@@ -1888,6 +1923,8 @@
 				9C2B3CBD171EE8FB00E695FE /* Registry Entities in Resources */,
 				8BFC3F0317202EC7000161FD /* pause.png in Resources */,
 				8BFC3F0417202EC7000161FD /* pause-ipadhd.png in Resources */,
+				9C11EEC3172063B3003510EB /* Level1.plist in Resources */,
+				9C11EEC61720646F003510EB /* PeasantColumn.plist in Resources */,
 				8BFC3F0F17204440000161FD /* GameOver.ccbi in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2035,7 +2072,10 @@
 				9CBF5B0D171E464E00EF44B2 /* ResourceManager.m in Sources */,
 				8B79CDCB171F15B800E58EDD /* LevelLayerAbstract.m in Sources */,
 				8B79CDE1171F501D00E58EDD /* Hud.m in Sources */,
+				9C11EEC017205775003510EB /* WaveManager.m in Sources */,
+				9C11EEC9172073F5003510EB /* NSMutableArray+QueueAdditions.m in Sources */,
 				8BFC3F0C172042C3000161FD /* GameOver.m in Sources */,
+				9C9ADB2D17218AA200C3FA59 /* Utils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

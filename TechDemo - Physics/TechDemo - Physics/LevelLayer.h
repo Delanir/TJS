@@ -21,7 +21,6 @@
     Hud *hud;
     double timeElapsedSinceBeginning;
     CGPoint location;
-
 }
 @property (nonatomic,retain) Hud *hud;
 

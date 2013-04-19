@@ -9,8 +9,9 @@
 #import <GameKit/GameKit.h>
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
-#import "GameOver.h"
 
+#import "Enemy.h"
+#import "GameOver.h"
 
 @interface LevelLayerAbstract : CCLayer <GKAchievementViewControllerDelegate, GKLeaderboardViewControllerDelegate>{
     CCSprite *_pauseButton;
@@ -22,5 +23,7 @@
 -(void) togglePause;
 -(void) pauseCheck:(UITouch *)touchLocation;
 -(void) gameOver;
+
+-(void) addEnemy:(Enemy *) newEnemy;
 
 @end
