@@ -7,8 +7,11 @@
 //
 
 #import "EnemyFactory.h"
+#import "Config.h"
 
 @implementation EnemyFactory
+
+@synthesize enemyTypes;
 
 static EnemyFactory* _sharedSingleton = nil;
 
@@ -40,8 +43,7 @@ static EnemyFactory* _sharedSingleton = nil;
 -(id)init {
 	self = [super init];
 	if (self != nil) {
-		// initialize stuff here
-    
+		enemyTypes = [[Config shared] getArrayProperty:@"existingEnemies"];
     }
 	return self;
 }
@@ -57,7 +59,7 @@ static EnemyFactory* _sharedSingleton = nil;
     [peasant autorelease];
     
     return peasant;
-        
+    
 }
 
 -(FaerieDragon*)generateFaerieDragon
@@ -86,34 +88,36 @@ static EnemyFactory* _sharedSingleton = nil;
 
 -(Enemy*)generateEnemyWithType:(NSString*) type vertical:(int) vpos displacement:(CGPoint) disp;
 {
-    Enemy * enemy = nil;
+    Enemy * newEnemy = nil;
     //NSLog(@"Enemy: %@ Vert: %d Disp:(%f,%f)", type, vpos, disp.x, disp.y);
     
-    if([type isEqualToString:@"peasant"])
-        enemy = [[Peasant alloc] initWithSprite:@"p_walk01.png"];
-    
-    else if([type isEqualToString:@"faerie"])
-        enemy = [[FaerieDragon alloc] initWithSprite:@"fd_fly01.png"];
-    
-    else if([type isEqualToString:@"zealot"])
-        enemy = [[Zealot alloc] initWithSprite:@"z_walk01.png"];
-    
-    else return nil;
-    
-#warning Falta normalizar a velocidade e testar sem os aleatórios
-    // placement
-    CGSize winSize = [[CCDirector sharedDirector] winSize];
-    CGSize spriteSize = [[enemy sprite] contentSize];
-    
-    float x = winSize.width + (spriteSize.width/2) + (disp.x * spriteSize.width);
-    float y = vpos + (disp.y * spriteSize.height);
-    
-    [enemy sprite].position = ccp(x,y);
-    
-    [enemy setupActions];
-    [enemy autorelease];
-    
-    return enemy;
+    for ( NSDictionary * enemy in enemyTypes)
+    {
+        NSString * enemyType = [enemy objectForKey:@"type"];
+        if([type isEqualToString:enemyType])
+        {
+            NSString * className = [enemy objectForKey:@"class"];
+            NSString * spriteFile = [enemy objectForKey:@"initSprite"];
+            
+            newEnemy = [NSClassFromString(className) alloc];
+            [newEnemy initWithSprite:spriteFile];
+            
+            // placement
+            CGSize winSize = [[CCDirector sharedDirector] winSize];
+            CGSize spriteSize = [[newEnemy sprite] contentSize];
+            
+            float x = winSize.width + (spriteSize.width/2) + (disp.x * spriteSize.width);
+            float y = vpos + (disp.y * spriteSize.height);
+            
+            [newEnemy sprite].position = ccp(x,y);
+            
+            [newEnemy setupActions];
+            [newEnemy autorelease];
+            
+            break;
+        }
+    }
+    return newEnemy;
 }
 
 -(void)dealloc

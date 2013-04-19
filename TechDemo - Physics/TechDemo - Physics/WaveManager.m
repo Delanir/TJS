@@ -11,6 +11,7 @@
 #import "LevelLayer.h"
 #import "EnemyFactory.h"
 #import "Enemy.h"
+#import "Utils.h"
 
 @implementation WaveManager
 
@@ -54,7 +55,7 @@ static WaveManager* _sharedSingleton = nil;
 {
     
     // Por waves numa queue. Guardar tempo entre layers
-    NSDictionary * levelDetails = [self openPlist:level];
+    NSDictionary * levelDetails = [Utils openPlist:level];
     [self setIntervalBetweenWaves:[(NSNumber*)[levelDetails objectForKey:@"timeBetweenWaves"] doubleValue]];
     
     NSArray* temp = [levelDetails objectForKey:@"waves"];
@@ -78,16 +79,15 @@ static WaveManager* _sharedSingleton = nil;
     if([waves count] > 0)
     {
         LevelLayer * ll = [[Registry shared] getEntityByName:@"LevelLayer"];
-        NSDictionary * nextWave = [self openPlist:[waves dequeue]];
+        NSDictionary * nextWave = [Utils openPlist:[waves dequeue]];
         NSNumber * vPosition = [nextWave objectForKey:@"verticalCenter"];
         NSArray * enemies = [nextWave objectForKey:@"enemies"];
         
         for (NSDictionary * enemy in enemies)
         {
             NSString * type = [enemy objectForKey:@"type"];
-            NSDictionary * disp = [enemy objectForKey:@"displacement"];
-            float xDisp = [[disp objectForKey:@"width"] floatValue];
-            float yDisp = [[disp objectForKey:@"height"] floatValue];
+            float xDisp = [[enemy objectForKey:@"xdisp" ] floatValue];
+            float yDisp = [[enemy objectForKey:@"ydisp"] floatValue];
             CGPoint displacementPoint = ccp(xDisp, yDisp);
             Enemy * newEnemy = [[EnemyFactory shared] generateEnemyWithType:type
                                                                    vertical:[vPosition intValue]
@@ -97,25 +97,6 @@ static WaveManager* _sharedSingleton = nil;
     }
     else
         [self stopWaves];
-}
-
-#warning criar classe utils
--(NSDictionary *) openPlist: (NSString *) plist
-{
-    NSString *errorDesc = nil;
-    NSPropertyListFormat format;
-    NSString *plistPath;
-    plistPath = [[NSBundle mainBundle] pathForResource:plist ofType:@"plist"];
-    NSData *plistXML = [[NSFileManager defaultManager] contentsAtPath:plistPath];
-    NSDictionary * dict = (NSDictionary *)[NSPropertyListSerialization
-                                           propertyListFromData:plistXML
-                                           mutabilityOption:NSPropertyListMutableContainersAndLeaves
-                                           format:&format
-                                           errorDescription:&errorDesc];
-    if (!dict)
-        NSLog(@"Error reading plist: %@, format: %d", errorDesc, format);
-    return dict;
-    
 }
 
 -(void) clearLevel

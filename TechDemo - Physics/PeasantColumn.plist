@@ -9,57 +9,42 @@
 		<dict>
 			<key>type</key>
 			<string>peasant</string>
-			<key>displacement</key>
-			<dict>
-				<key>height</key>
-				<integer>1</integer>
-				<key>width</key>
-				<integer>1</integer>
-			</dict>
+			<key>xdisp</key>
+			<integer>1</integer>
+			<key>ydisp</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>type</key>
 			<string>peasant</string>
-			<key>displacement</key>
-			<dict>
-				<key>height</key>
-				<real>0.5</real>
-				<key>width</key>
-				<real>0.5</real>
-			</dict>
+			<key>xdisp</key>
+			<real>0.5</real>
+			<key>ydisp</key>
+			<real>0.5</real>
 		</dict>
 		<dict>
 			<key>type</key>
 			<string>peasant</string>
-			<key>displacement</key>
-			<dict>
-				<key>height</key>
-				<integer>0</integer>
-				<key>width</key>
-				<integer>0</integer>
-			</dict>
+			<key>xdisp</key>
+			<integer>0</integer>
+			<key>ydisp</key>
+			<integer>0</integer>
 		</dict>
 		<dict>
 			<key>type</key>
 			<string>peasant</string>
-			<key>displacement</key>
-			<dict>
-				<key>height</key>
-				<real>-0.5</real>
-				<key>width</key>
-				<real>0.5</real>
-			</dict>
+			<key>xdisp</key>
+			<real>0.5</real>
+			<key>ydisp</key>
+			<real>-0.5</real>
 		</dict>
 		<dict>
 			<key>type</key>
 			<string>peasant</string>
-			<key>displacement</key>
-			<dict>
-				<key>height</key>
-				<integer>-1</integer>
-				<key>width</key>
-				<integer>1</integer>
-			</dict>
+			<key>xdisp</key>
+			<integer>1</integer>
+			<key>ydisp</key>
+			<integer>-1</integer>
 		</dict>
 	</array>
 </dict>

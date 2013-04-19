@@ -111,7 +111,7 @@
 
 - (void)updateMoney:(int)enemyXPosition
 {
-    [label3 setString:[NSString stringWithFormat:@"Money: %i", [[ResourceManager shared] gold]]];
+    [label3 setString:[NSString stringWithFormat:@"Gold: %i", [[ResourceManager shared] gold]]];
 }
 
 - (void)updateData

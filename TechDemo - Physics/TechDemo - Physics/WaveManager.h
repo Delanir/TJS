@@ -25,7 +25,5 @@
 -(void) stopWaves;
 -(void) clearLevel;
 
-#warning criar classe utils
--(NSDictionary *) openPlist: (NSString *) plist;
 
 @end

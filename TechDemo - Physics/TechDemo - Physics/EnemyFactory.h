@@ -13,8 +13,10 @@
 
 @interface EnemyFactory : CCScene
 {
-    
+    NSArray * enemyTypes;
 }
+
+@property (nonatomic, retain) NSArray * enemyTypes;
 
 +(EnemyFactory*)shared;
 

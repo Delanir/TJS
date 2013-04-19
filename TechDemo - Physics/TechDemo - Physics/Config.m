@@ -7,6 +7,7 @@
 //
 
 #import "Config.h"
+#import "Utils.h"
 
 @implementation Config
 
@@ -53,30 +54,8 @@ static Config* _sharedSingleton = nil;
 
 -(id)init
 {
-	self = [super init];
-	if (self != nil)
-    {
-        NSString *errorDesc = nil;
-        NSPropertyListFormat format;
-        NSString *plistPath;
-        NSString *rootPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
-                                                                  NSUserDomainMask, YES) objectAtIndex:0];
-        plistPath = [rootPath stringByAppendingPathComponent:@"Config.plist"];
-        if (![[NSFileManager defaultManager] fileExistsAtPath:plistPath])
-        {
-            plistPath = [[NSBundle mainBundle] pathForResource:@"Config" ofType:@"plist"];
-        }
-        NSData *plistXML = [[NSFileManager defaultManager] contentsAtPath:plistPath];
-        data = (NSDictionary *)[NSPropertyListSerialization
-                                              propertyListFromData:plistXML
-                                              mutabilityOption:NSPropertyListMutableContainersAndLeaves
-                                              format:&format
-                                              errorDescription:&errorDesc];
-        if (!data)
-            NSLog(@"Error reading plist: %@, format: %d", errorDesc, format);
-        else
-            [data retain];
-	}
+	if(self = [super init]);
+        data = [[Utils openPlist:@"Config"] retain];
     
 	return self;
 }
@@ -97,9 +76,11 @@ static Config* _sharedSingleton = nil;
     return [data objectForKey:key];
 }
 
-+(BOOL)iPadRetina{
-    return ([[UIScreen mainScreen] respondsToSelector:@selector(displayLinkWithTarget:selector:)] && ([UIScreen mainScreen].scale == 2.0))?1:0;
+-(NSArray*) getArrayProperty:(NSString *)key
+{
+    return [data objectForKey:key];
 }
+
 
 
 @end

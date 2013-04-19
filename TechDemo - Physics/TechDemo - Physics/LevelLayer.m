@@ -79,6 +79,7 @@
     {
         [[Registry shared] registerEntity:self withName:@"LevelLayer"];
         [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"Battle1.mp3" loop:YES];
+#warning por no config.plist
 
         CGSize winSize = [[CCDirector sharedDirector] winSize];
         timeElapsedSinceBeginning = 2.0f;
@@ -170,6 +171,7 @@
     {
         [[ResourceManager shared] increaseArrowsUsedCount];
         [[SimpleAudioEngine sharedEngine] playEffect:@"Swoosh.caf"];
+#warning por no config.plist
         [self addChild:arrow z:1201];
         
         arrow.tag = 2;
