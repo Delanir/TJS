@@ -21,6 +21,9 @@
         [self setStrength:1.0];
         [self setGoldValue:3];
         [self setSpeed:20];
+        [self setHealth:100];
+        
+        [self postInit];
     }
     return self;
 }
@@ -28,14 +31,7 @@
 -(void) setupActions
 {
     // Setup Movement
-
-    // Create the actions
-    id actionMove = [CCMoveTo actionWithDuration:speed
-                                        position:ccp(-sprite.contentSize.width/2, sprite.position.y)];
-    id actionMoveDone = [CCCallFuncN actionWithTarget:self
-                                             selector:@selector(spriteMoveFinished:)];
-    [sprite runAction:[CCSequence actions:actionMove, actionMoveDone, nil]];
-    
+    [self animateWalkLeft];
     
     // Setup animations
     [self setWalkAction: [CCRepeatForever actionWithAction:
@@ -51,7 +47,9 @@
 {
     [self setCurrentState:attack];
     [[self sprite] stopAllActions];
-    [[self sprite] setPosition:CGPointMake([self sprite].position.x +10, [self sprite].position.y)];
+    [[self healthBar] stopAllActions];
+    [sprite setPosition:ccp([sprite position].x +10, [sprite position].y)];
+    [healthBar setPosition:ccp([sprite position].x, [sprite position].y + [sprite contentSize].height/2 + 2)];
     [[self sprite] runAction:[CCRepeatForever actionWithAction:attackAction]];
 }
 

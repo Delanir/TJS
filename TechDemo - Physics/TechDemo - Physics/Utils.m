@@ -31,7 +31,6 @@
     if (!dict)
         NSLog(@"Error reading plist: %@, format: %d", errorDesc, format);
     return dict;
-    
 }
 
 @end

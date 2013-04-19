@@ -5,10 +5,18 @@
 **/            **/
 
 (JM)
-- Criar mais waves
+- Fazer health
+    - Inimigos tratam estimulos
 - Implementar restart
     - Destruições
-    
+- Alterar lógica do vPos para ser relativo ao ecrã
+
+- Fazer fogo e fumo nas walls
+    - Ver este exemplo https://github.com/azamsharp/Desert-Race/blob/master/DesertRace/Car.m
+
+- Melhorar botões de setas e de pause
+- Multiplas setas de acordo com o nível do yuri
+    - já agora, os níveis do yuri
 - Fazer Máquina de estado
     - Fazer gestor de cena
 - som do impacto tem de ser corrigido
@@ -16,7 +24,6 @@
 - Fazer menu em baixo
 - setas a saír por cima da wall
     - isto na verdade é corrigir o zOrder
-- Dano dos inimigos (Amaral)
 - Random shouts dos inimigos (Daniela)
 
 - Menus com Cocos Builder! (Daniela, Ricardo)
@@ -112,9 +119,14 @@
 - Criado WaveManager
 - Criada lógica de gestão de waves
 - Já temos waves, podemos fazer níveis :D
-
-
 - Criar classe Utils
 - optimizar plists de waves (tirar dictionary displacement)
 - Adicionado info de inimigos ao Config.plist. Agora carrega tipos dinamicamente
 - Cada flecha só acerta num inimigo. 
+- Criar mais waves
+- Arrows posicionadas correctamente
+- Acrescentar também uns bonecos aleatórios
+- Fazer health
+    - Inimigos têm vida - done
+    - Barra de vida - done
+    - Mudar para progress timer - done

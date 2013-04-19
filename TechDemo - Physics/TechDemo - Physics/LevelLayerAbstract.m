@@ -43,7 +43,6 @@
         self.isTouchEnabled = YES;
         CGSize winSize = [[CCDirector sharedDirector] winSize];
         _pauseButton= [CCSprite spriteWithFile:@"pause.png"];
-//        [_pauseButton setAnchorPoint:CGPointMake(0.5f, 0.5f)];
         [_pauseButton setPosition:CGPointMake(_pauseButton.contentSize.width/2.0, winSize.height - _pauseButton.contentSize.height/2.0)];
 
         [_pauseButton setZOrder:1000];

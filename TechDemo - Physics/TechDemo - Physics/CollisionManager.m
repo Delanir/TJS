@@ -70,7 +70,7 @@ static CollisionManager* _sharedSingleton = nil;
     return;
 }
 
-// SO DEPRECATED
+#warning SO DEPRECATED que me apetece apagar
 - (void)updateSimpleCollisions:(ccTime)dt
 {
     
@@ -131,6 +131,14 @@ static CollisionManager* _sharedSingleton = nil;
         CCArray *targetsToDelete = [[CCArray alloc] init];
         for (Enemy *target in _targets)
         {
+            //Tem de de ser testado aqui porque se for em
+            // baixo os estimulos podem ainda n estar processados
+            if ([target isDead])
+            {
+                [_targets removeObject:target];
+                continue;
+            }
+            
             KKPixelMaskSprite *targetSprite = [target sprite];
             if ([targetSprite pixelMaskContainsPoint:[projectileSprite position]])
             {
@@ -141,10 +149,10 @@ static CollisionManager* _sharedSingleton = nil;
         
         for (Enemy *target in targetsToDelete)
         {
-            [[SimpleAudioEngine sharedEngine] playEffect:@"hit.mp3"];
 #warning por no config.plist
-            [_targets removeObject:target];
-            [target die];
+            [[SimpleAudioEngine sharedEngine] playEffect:@"hit.mp3"];
+#warning temporário - na verdade tem de passar os estimulos
+            [target takeDamage:50];
         }
         
         if (targetsToDelete.count > 0)

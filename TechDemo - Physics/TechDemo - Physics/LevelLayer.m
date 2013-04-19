@@ -62,14 +62,14 @@
 -(void)gameLogic:(ccTime)dt
 {
     timeElapsedSinceBeginning += dt;
-    /*
+    
     if((int)floor(timeElapsedSinceBeginning) % 5 == 1)
         [self addPeasant];
-    if((int)floor(timeElapsedSinceBeginning) % 12 == 1)
+    if((int)floor(timeElapsedSinceBeginning) % 15 == 1)
         [self addFaerieDragon];
-    if((int)floor(timeElapsedSinceBeginning) % 8 == 1)
+    if((int)floor(timeElapsedSinceBeginning) % 10 == 1)
         [self addZealot];
-     */
+     
 }
 
 // on "init" you need to initialize your instance

@@ -111,8 +111,13 @@ static EnemyFactory* _sharedSingleton = nil;
             
             [newEnemy sprite].position = ccp(x,y);
             
+            [newEnemy healthBar].position = ccp(x,y+spriteSize.width/2+2);
+            [newEnemy healthBar].scaleY = 1;
+            [newEnemy healthBar].scaleX = 6;
+            
             [newEnemy setupActions];
             [newEnemy autorelease];
+            
             
             break;
         }

@@ -101,12 +101,13 @@ static WaveManager* _sharedSingleton = nil;
 
 -(void) clearLevel
 {
+    [waves removeAllObjects];
     // todo
 }
 
 -(void)dealloc
 {
-    [waves dealloc];
+    [waves release];
     [_sharedSingleton release];
     [super dealloc];
 }

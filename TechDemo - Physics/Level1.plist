@@ -6,9 +6,12 @@
 	<integer>4</integer>
 	<key>waves</key>
 	<array>
-		<string>PeasantColumn</string>
-		<string>PeasantColumn</string>
-		<string>PeasantColumn</string>
+		<string>FaerieColumn</string>
+		<string>PeasantSpear</string>
+		<string>ZealotSquare</string>
+		<string>PeasantSpear</string>
+		<string>ZealotSquare</string>
+		<string>PeasantSpear</string>
 	</array>
 </dict>
 </plist>
