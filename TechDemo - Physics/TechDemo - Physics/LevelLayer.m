@@ -54,8 +54,7 @@
     if( (self=[super init]))
     {
         [[Registry shared] registerEntity:self withName:@"LevelLayer"];
-        [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"Battle1.mp3" loop:YES];
-#warning por no config.plist
+        [[SimpleAudioEngine sharedEngine] playBackgroundMusic:[[Config shared] getStringProperty:@"IngameMusic"] loop:YES];
 
         CGSize winSize = [[CCDirector sharedDirector] winSize];
         timeElapsedSinceBeginning = 2.0f;
@@ -146,8 +145,7 @@
     if(arrow != nil)
     {
         [[ResourceManager shared] increaseArrowsUsedCount];
-        [[SimpleAudioEngine sharedEngine] playEffect:@"Swoosh.caf"];
-#warning por no config.plist
+        [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"ShootArrowSound"]];
         [self addChild:arrow z:1201];
         
         arrow.tag = 2;

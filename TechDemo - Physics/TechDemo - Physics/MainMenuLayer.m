@@ -22,9 +22,7 @@
     [[SpriteManager shared] addAnimationFromFile:@"fairiedragon_anim.plist"];
     [[SpriteManager shared] addAnimationFromFile:@"zealot_anim.plist"];
     [[SpriteManager shared] addAnimationFromFile:@"yurie_anim.plist"];
-    [[SimpleAudioEngine sharedEngine] init];
-    [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"MainMenu.mp3" loop:YES];
-#warning por no config.plist
+    [[SimpleAudioEngine sharedEngine] playBackgroundMusic:[[Config shared] getStringProperty:@"MainMenuMusic"] loop:YES];
     
 }
 

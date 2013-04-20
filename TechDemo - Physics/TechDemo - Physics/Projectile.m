@@ -11,7 +11,7 @@
 
 @implementation Projectile
 
-@synthesize destination, timeToLive;
+@synthesize destination, timeToLive, stimuli;
 
 -(void)spriteMoveFinished:(id)sender {
     [self destroy];

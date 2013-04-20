@@ -10,8 +10,6 @@
 
 @implementation Arrow
 
-
-
 - (id) initWithDestination: (CGPoint) location andStimulusPackage: (CCArray *) stimulusPackage
 {
     CGSize winSize = [[CCDirector sharedDirector] winSize];
@@ -66,7 +64,9 @@
 {
     CCParticleSystem * ps;
     
-    for(Stimulus * stimulus in stimulusPackage)
+    [self setStimuli:stimulusPackage];
+    
+    for(Stimulus * stimulus in stimuli)
     {
         switch ([stimulus type])
         {

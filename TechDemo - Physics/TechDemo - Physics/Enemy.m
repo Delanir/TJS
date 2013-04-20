@@ -11,7 +11,7 @@
 
 @implementation Enemy
 
-@synthesize currentState, strength, speed, goldValue, health, healthBar, maxHealth;
+@synthesize currentState, strength, speed, goldValue, health, healthBar, maxHealth, stimuli;
 
 
 - (id) initWithSprite:(NSString *)spriteFile
@@ -20,6 +20,7 @@
     {
         [self setSpriteWithSpriteFrameName:spriteFile];
         [self addChild:sprite z:1];
+        stimuli = [[NSMutableArray alloc] init];
         
         // Initialize health bar
         CCSprite * barSprite = [[CCSprite alloc] initWithFile:@"red_health_bar.png"];
@@ -40,6 +41,12 @@
     [self schedule:@selector(update:)];
 }
 
+-(void) dealloc
+{
+    [stimuli release];
+    [super dealloc];
+}
+
 - (void) setupActions
 {
     
@@ -48,7 +55,6 @@
 
 - (void) animateWalkLeft;
 {
-    
     // Create the actions
     id actionMove = [CCMoveTo actionWithDuration:speed
                                         position:ccp(-sprite.contentSize.width/2, sprite.position.y)];
@@ -96,40 +102,76 @@
     
 }
 
-#warning isto é temporário. Depois o que tem de ser feito é um update de tratamento de estimulos. Mas o método pode ficar assim
 -(void) takeDamage:(int) amount
 {
-    health -= amount;
-    
-    [healthBar setPercentage:100 * (self.health/self.maxHealth)];
-    [healthBar setOpacity:255];
-    /* IGNORAR ISTO PARA JÁ, N ESTÁ A FUNCIONAR LA MT BEM NAO CENAS E COISE
-    if(100 * (self.health/self.maxHealth) < 60)
+    if(![self isDead])  // para garantir que só morre uma vez
     {
-        [[self healthBar] setSprite:[CCSprite spriteWithFile:@"red_health_bar.png"]];
-        healthBar.position = ccp([[self sprite] position].x, [[self sprite] position].y + 2);
-        healthBar.scaleX = 6;
-        healthBar.scaleY = 2;
+        health -= amount;
+        
+        [healthBar setPercentage:100 * (self.health/self.maxHealth)];
+        [healthBar setOpacity:255];
+        
+        if(health <= 0)
+            [self die];
     }
-    */
-    if(health <= 0)
-        [self die];
+}
+
+-(void) enqueueStimuli:(NSMutableArray *) stimulusPackage
+{
+    for (Stimulus * stimulus in stimulusPackage)
+        [stimuli enqueue:stimulus];
 }
 
 
 - (void)update:(ccTime)dt
 {
-    [healthBar setOpacity:[healthBar opacity] - dt*0.05];
-#warning Testar aqui os selectors
+    if([stimuli count] > 0)
+    {
+        [healthBar setOpacity:[healthBar opacity] - dt*0.05];
+        
+        // PARA EXPANDIR PARA PARTICULARIDADES DE CADA UM DOS ENEMIES
+        // É PRECISO POR ESTE FOR EM CADA UMA DAS SUBCLASSES
+        // E IMPLEMENTAR DISTINTAMENTE PARA CADA UM DELES
+        for (int i = 0; i< [stimuli count]; i++)
+        {
+            Stimulus * stimulus = [stimuli dequeue];
+            
+            switch ([stimulus type]) {
+                case damage:
+                    [self takeDamage:50];
+                    break;
+                case dot:
+                    // FAZER LOGICA DE DAMAGE OVER TIME
+                    // METER UMA VARIAVEL QUE DECREMENTA
+                    // ENQUANTO N É ZERO, PARTICULAS FOGO
+                    [self takeDamage:50];
+                    break;
+                case slow:
+                    // FAZER LOGICA DE SLOW
+                    // METER UMA VARIAVEL QUE DECREMENTA
+                    // ENQUANTO N É ZERO, SPEED MAIS LENTO -> REFAZER ANIMAÇÃO
+                    [self takeDamage:50];
+                    break;
+                case pushBack:
+                    // FAZER LOGICA DE PUSH BACK
+                    // TRANSLATES PARA TRÁS
+                    [self takeDamage:20];
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
 }
-
 
 
 -(void)die
 {
+    
     [self removeChild:healthBar cleanup:YES];
     [[ResourceManager shared] increaseEnemyKillCount];
     [[ResourceManager shared] addGold: goldValue];
+    
 }
 
 -(BOOL) isDead

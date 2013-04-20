@@ -5,16 +5,15 @@
 **/            **/
 
 (JM)
-- Fazer health
-    - Inimigos tratam estimulos
+- Acabar lógica dos estimulos
 - Implementar restart
     - Destruições
 - Alterar lógica do vPos para ser relativo ao ecrã
+- Destruição mais eficiente de projecteis (depois das colisões)
 
 - Fazer fogo e fumo nas walls
     - Ver este exemplo https://github.com/azamsharp/Desert-Race/blob/master/DesertRace/Car.m
 - Por barra de vida na spritesheet
-
 - Melhorar botões de setas e de pause
 - Multiplas setas de acordo com o nível do yuri
     - já agora, os níveis do yuri
@@ -26,15 +25,9 @@
 - setas a saír por cima da wall
     - isto na verdade é corrigir o zOrder
 - Random shouts dos inimigos (Daniela)
-
 - Menus com Cocos Builder! (Daniela, Ricardo)
-
-- Destruição mais eficiente de projecteis (depois das colisões)
 - Passar para os arqueiros do heroes  (João M)
     - Tratar das sprites do wood elf e do grand elf
-    
-- optimizar os imports > o Nuno disse que os imports devem ser feitos sempre q possível no .h
-
 - Fazer projectiles do zealot
 - Lógica de levar dano em cima do moat
 
@@ -131,3 +124,7 @@
     - Inimigos têm vida - done
     - Barra de vida - done
     - Mudar para progress timer - done
+- optimizar os imports > o Nuno disse que os imports devem ser feitos sempre q possível no .h
+- Fazer health
+    - Arquitectura dos estimulos "in place". Enemy.m
+- corrigidas chamadas aos sons para irem ao config

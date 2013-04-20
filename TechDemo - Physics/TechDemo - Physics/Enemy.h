@@ -9,6 +9,7 @@
 #import "Entity.h"
 #import "Registry.h"
 #import "ResourceManager.h"
+#import "NSMutableArray+QueueAdditions.h"
 
 
 typedef enum {walk, attack, fly, land, hit, die} state;
@@ -21,9 +22,11 @@ typedef enum {walk, attack, fly, land, hit, die} state;
     float health, maxHealth;
     unsigned int goldValue;
     CCProgressTimer * healthBar;
+    NSMutableArray * stimuli;
 }
 
 @property (nonatomic, retain) CCProgressTimer * healthBar;
+@property (nonatomic, retain) NSMutableArray * stimuli;
 @property state currentState;
 @property float strength;
 @property float speed;
@@ -40,6 +43,7 @@ typedef enum {walk, attack, fly, land, hit, die} state;
 -(void) placeRandomly;
 -(void) animateWalkLeft;
 -(BOOL) isDead;
+-(void) enqueueStimuli:(NSMutableArray *) stimulusPackage;
 
 -(void) takeDamage:(int) amount;
 @end
