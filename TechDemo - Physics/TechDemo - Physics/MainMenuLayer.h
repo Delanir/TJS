@@ -11,6 +11,16 @@
 
 #import <GameKit/GameKit.h>
 
+#import "CCBReader.h"
+
+#import "LevelLayer.h"
+#import "SpriteManager.h"
+#import "Config.h"
+// Sound interface
+#import "SimpleAudioEngine.h"
+// Needed to obtain the Navigation Controller
+#import "AppDelegate.h"
+
 @interface MainMenuLayer : CCLayer <GKAchievementViewControllerDelegate, GKLeaderboardViewControllerDelegate>
 {
     

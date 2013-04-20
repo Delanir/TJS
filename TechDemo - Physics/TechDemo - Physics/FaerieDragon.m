@@ -7,7 +7,6 @@
 //
 
 #import "FaerieDragon.h"
-#import "Wall.h"
 
 @implementation FaerieDragon
 
@@ -21,7 +20,9 @@
         [self setStrength:2.0];
         [self setGoldValue:6];
         [self setSpeed:10];
+        [self setHealth:200];
         
+        [self postInit];
     }
     return self;
 }
@@ -29,13 +30,7 @@
 -(void) setupActions
 {
     // Setup Movement
-    // Create the actions
-    id actionMove = [CCMoveTo actionWithDuration:speed
-                                        position:ccp(-sprite.contentSize.width/2, sprite.position.y)];
-    id actionMoveDone = [CCCallFuncN actionWithTarget:self
-                                             selector:@selector(spriteMoveFinished:)];
-    [sprite runAction:[CCSequence actions:actionMove, actionMoveDone, nil]];
-    
+    [self animateWalkLeft];
     
     // Setup animations
     [self setFlyAction: [CCRepeatForever actionWithAction:
@@ -45,14 +40,15 @@
                             [CCCallFuncN actionWithTarget:self selector:@selector(damageWall)],
                             nil]];
     [[self sprite] runAction:flyAction];
- 
 }
 
 -(void)attack
 {
     [self setCurrentState:attack];
     [[self sprite] stopAllActions];
-    [[self sprite] setPosition:CGPointMake([self sprite].position.x +26, [self sprite].position.y)];
+    [[self healthBar] stopAllActions];
+    [sprite setPosition:ccp([sprite position].x +26, [sprite position].y)];
+    [healthBar setPosition:ccp([sprite position].x, [sprite position].y + [sprite contentSize].height/2 + 2)];
     [[self sprite] runAction:[CCRepeatForever actionWithAction:attackAction]];
 }
 

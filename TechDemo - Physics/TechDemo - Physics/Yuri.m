@@ -8,8 +8,6 @@
 
 #import "Yuri.h"
 
-// Sound interface
-#import "SimpleAudioEngine.h"
 
 @implementation Yuri
 

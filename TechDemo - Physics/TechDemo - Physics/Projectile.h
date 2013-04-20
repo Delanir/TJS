@@ -14,10 +14,12 @@ typedef enum {ice, air, fire} particleType;
 {
     CGPoint destination;
     double timeToLive;
+    CCArray * stimuli;
 }
 
 @property (nonatomic) CGPoint destination;
 @property (nonatomic) double timeToLive;
+@property (nonatomic, retain) CCArray * stimuli;
 
 - (id) initWithSprite:(NSString *)spriteFile;
 

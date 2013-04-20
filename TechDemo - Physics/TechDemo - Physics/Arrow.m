@@ -7,11 +7,8 @@
 //
 
 #import "Arrow.h"
-#import "Stimulus.h"
 
 @implementation Arrow
-
-
 
 - (id) initWithDestination: (CGPoint) location andStimulusPackage: (CCArray *) stimulusPackage
 {
@@ -23,7 +20,7 @@
         CGSize spriteSize = [self spriteSize];
         
         // @TODO init with yuri information
-        sprite.position = ccp(180, winSize.height/2 + 26);
+        sprite.position = ccp(160, winSize.height/2 + 35);
         [sprite setAnchorPoint:CGPointMake(0, 0.5)];
         
         // Determine offset of location to projectile
@@ -67,7 +64,9 @@
 {
     CCParticleSystem * ps;
     
-    for(Stimulus * stimulus in stimulusPackage)
+    [self setStimuli:stimulusPackage];
+    
+    for(Stimulus * stimulus in stimuli)
     {
         switch ([stimulus type])
         {

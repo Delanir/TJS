@@ -7,31 +7,7 @@
 //
 
 #import "LevelLayerAbstract.h"
-#import "MainScene.h"
-#import "Yuri.h"
-#import "Peasant.h"
-#import "CollisionManager.h"
-#import "Config.h"
-#import "EnemyFactory.h"
-#import "SpriteManager.h"
-#import "FaerieDragon.h"
-#import "Arrow.h"
-#import "StimulusFactory.h"
-#import "Stimulus.h"
-#import "ResourceManager.h"
 
-#import "CCBReader.h"   
-
-// Particle Systems
-#import "CCParticleSystem.h"
-
-// Sound interface
-#import "SimpleAudioEngine.h"
-
-// Needed to obtain the Navigation Controller
-#import "AppDelegate.h"
-
-#import "WaveManager.h"
 
 @implementation LevelLayerAbstract
 
@@ -43,7 +19,6 @@
         self.isTouchEnabled = YES;
         CGSize winSize = [[CCDirector sharedDirector] winSize];
         _pauseButton= [CCSprite spriteWithFile:@"pause.png"];
-//        [_pauseButton setAnchorPoint:CGPointMake(0.5f, 0.5f)];
         [_pauseButton setPosition:CGPointMake(_pauseButton.contentSize.width/2.0, winSize.height - _pauseButton.contentSize.height/2.0)];
 
         [_pauseButton setZOrder:1000];

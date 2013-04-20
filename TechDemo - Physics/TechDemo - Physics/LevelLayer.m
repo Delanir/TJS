@@ -8,30 +8,6 @@
 
 // Import the interfaces
 #import "LevelLayer.h"
-#import "MainScene.h"
-#import "Yuri.h"
-#import "Peasant.h"
-#import "CollisionManager.h"
-#import "Config.h"
-#import "EnemyFactory.h"
-#import "SpriteManager.h"
-#import "FaerieDragon.h"
-#import "Arrow.h"
-#import "StimulusFactory.h"
-#import "Stimulus.h"
-#import "Registry.h"
-#import "ResourceManager.h"
-#import "WaveManager.h"
-
-
-// Particle Systems
-#import "CCParticleSystem.h"
-
-// Sound interface
-#import "SimpleAudioEngine.h"
-
-// Needed to obtain the Navigation Controller
-#import "AppDelegate.h"
 
 #pragma mark - Level
 
@@ -62,14 +38,14 @@
 -(void)gameLogic:(ccTime)dt
 {
     timeElapsedSinceBeginning += dt;
-    /*
+    
     if((int)floor(timeElapsedSinceBeginning) % 5 == 1)
         [self addPeasant];
-    if((int)floor(timeElapsedSinceBeginning) % 12 == 1)
+    if((int)floor(timeElapsedSinceBeginning) % 15 == 1)
         [self addFaerieDragon];
-    if((int)floor(timeElapsedSinceBeginning) % 8 == 1)
+    if((int)floor(timeElapsedSinceBeginning) % 10 == 1)
         [self addZealot];
-     */
+     
 }
 
 // on "init" you need to initialize your instance
@@ -78,8 +54,7 @@
     if( (self=[super init]))
     {
         [[Registry shared] registerEntity:self withName:@"LevelLayer"];
-        [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"Battle1.mp3" loop:YES];
-#warning por no config.plist
+        [[SimpleAudioEngine sharedEngine] playBackgroundMusic:[[Config shared] getStringProperty:@"IngameMusic"] loop:YES];
 
         CGSize winSize = [[CCDirector sharedDirector] winSize];
         timeElapsedSinceBeginning = 2.0f;
@@ -170,8 +145,7 @@
     if(arrow != nil)
     {
         [[ResourceManager shared] increaseArrowsUsedCount];
-        [[SimpleAudioEngine sharedEngine] playEffect:@"Swoosh.caf"];
-#warning por no config.plist
+        [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"ShootArrowSound"]];
         [self addChild:arrow z:1201];
         
         arrow.tag = 2;

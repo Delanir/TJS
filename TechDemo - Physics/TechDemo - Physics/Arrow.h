@@ -7,9 +7,9 @@
 //
 
 #import "Projectile.h"
+#import "Stimulus.h"
 
 @interface Arrow : Projectile
-
 
 - (id) initWithDestination: (CGPoint) location andStimulusPackage: (CCArray *) stimulusPackage;
 

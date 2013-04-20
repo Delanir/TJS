@@ -39,5 +39,13 @@
 			<string>z_walk01.png</string>
 		</dict>
 	</array>
+	<key>MainMenuMusic</key>
+	<string>MainMenu.mp3</string>
+	<key>IngameMusic</key>
+	<string>Battle1.mp3</string>
+	<key>HitSound</key>
+	<string>hit.mp3</string>
+	<key>ShootArrowSound</key>
+	<string>Swoosh.caf</string>
 </dict>
 </plist>

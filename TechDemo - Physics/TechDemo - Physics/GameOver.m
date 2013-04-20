@@ -7,7 +7,6 @@
 //
 
 #import "GameOver.h"
-#import "CCBReader.h"
 
 
 @implementation GameOver

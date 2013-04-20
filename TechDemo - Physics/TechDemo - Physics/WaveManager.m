@@ -7,11 +7,7 @@
 //
 
 #import "WaveManager.h"
-#import "Registry.h"
 #import "LevelLayer.h"
-#import "EnemyFactory.h"
-#import "Enemy.h"
-#import "Utils.h"
 
 @implementation WaveManager
 
@@ -101,12 +97,13 @@ static WaveManager* _sharedSingleton = nil;
 
 -(void) clearLevel
 {
+    [waves removeAllObjects];
     // todo
 }
 
 -(void)dealloc
 {
-    [waves dealloc];
+    [waves release];
     [_sharedSingleton release];
     [super dealloc];
 }

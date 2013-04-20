@@ -6,7 +6,6 @@
 //
 //
 
-
 #import "Enemy.h"
 #import "Arrow.h"
 #import "Wall.h"
@@ -31,7 +30,6 @@
 -(void)removeFromWalls: (CCSprite*) wall;
 
 // Collisions between arrow and enemies
--(void)updateSimpleCollisions:(ccTime)dt;
 -(void)updatePixelPerfectCollisions:(ccTime)dt;
 
 // Collisions between enemies and walls

@@ -7,7 +7,6 @@
 //
 
 #import "Config.h"
-#import "Utils.h"
 
 @implementation Config
 

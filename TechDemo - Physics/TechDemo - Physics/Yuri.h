@@ -8,6 +8,8 @@
 
 #import "Entity.h"
 #import "AppDelegate.h"
+// Sound interface
+#import "SimpleAudioEngine.h"
 
 @interface Yuri : Entity
 {

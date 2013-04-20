@@ -7,9 +7,6 @@
 //
 
 #import "Hud.h"
-#import "Wall.h"
-#import "Registry.h"
-#import "ResourceManager.h"
 
 @implementation Hud
 

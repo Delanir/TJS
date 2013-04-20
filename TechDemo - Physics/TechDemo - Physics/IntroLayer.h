@@ -9,6 +9,12 @@
 
 // When you import this file, you import all the cocos2d classes
 #import "cocos2d.h"
+#import "LevelLayer.h"
+#import "SpriteManager.h"
+#import "Config.h"
+// Sound interface
+#import "SimpleAudioEngine.h"
+#import "CCBReader.h"
 
 // HelloWorldLayer
 @interface IntroLayer : CCLayer

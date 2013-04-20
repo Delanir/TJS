@@ -7,8 +7,6 @@
 //
 
 #import "Wall.h"
-#import <objc/runtime.h>
-#import "Registry.h"
 
 @implementation Wall
 
@@ -19,8 +17,8 @@
     if((self = [super init]))
     {
         
-        health = 100.0f;
-        lastHealth = 100.0f;
+        health = 1000.0f;
+        lastHealth = 1000.0f;
         status = mint;
         
         sprites = [[CCArray alloc] init];

@@ -12,6 +12,7 @@
 
 // For pixel-perfect collisions
 #import "KKPixelMaskSprite.h"
+#import "Config.h"
 
 @interface Entity : CCNode
 {

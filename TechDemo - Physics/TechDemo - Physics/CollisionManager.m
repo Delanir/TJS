@@ -8,6 +8,7 @@
 
 #import "CollisionManager.h"
 #import "ResourceManager.h"
+#import "Config.h"
 
 // Sound interface
 #import "SimpleAudioEngine.h"
@@ -70,56 +71,6 @@ static CollisionManager* _sharedSingleton = nil;
     return;
 }
 
-// SO DEPRECATED
-- (void)updateSimpleCollisions:(ccTime)dt
-{
-    
-    CCArray *projectilesToDelete = [[CCArray alloc] init];
-    for (Projectile* projectile in _projectiles)
-    {
-        KKPixelMaskSprite * projectileSprite = [projectile sprite];
-        CGRect projectileRect = CGRectMake(
-                                           projectileSprite.position.x - (projectileSprite.contentSize.width/2),
-                                           projectileSprite.position.y - (projectileSprite.contentSize.height/2),
-                                           projectileSprite.contentSize.width,
-                                           projectileSprite.contentSize.height);
-        
-        CCArray *targetsToDelete = [[CCArray alloc] init];
-        for (Enemy *target in _targets)
-        {
-            KKPixelMaskSprite *targetSprite = [target sprite];
-            CGRect targetRect = CGRectMake(
-                                           targetSprite.position.x - (targetSprite.contentSize.width/2),
-                                           targetSprite.position.y - (targetSprite.contentSize.height/2),
-                                           targetSprite.contentSize.width,
-                                           targetSprite.contentSize.height);
-            
-            if (CGRectIntersectsRect(projectileRect, targetRect)) 
-                [targetsToDelete addObject:target];
-            
-        }
-        
-        for (Enemy *target in targetsToDelete)
-        {
-            [[SimpleAudioEngine sharedEngine] playEffect:@"hit.mp3"];
-#warning por no config.plist
-            [target destroySprite];
-            [_targets removeObject:target];
-        }
-        
-        if (targetsToDelete.count > 0)
-            [projectilesToDelete addObject:projectile];
-        
-        [targetsToDelete release];
-    }
-    for (Projectile *projectile in projectilesToDelete)
-    {
-        [projectile destroySprite];
-        [_projectiles removeObject:projectile];
-    }
-    [projectilesToDelete release];
-}
-
 -(void)updatePixelPerfectCollisions:(ccTime)dt
 {
     
@@ -131,6 +82,14 @@ static CollisionManager* _sharedSingleton = nil;
         CCArray *targetsToDelete = [[CCArray alloc] init];
         for (Enemy *target in _targets)
         {
+            //Tem de de ser testado aqui porque se for em
+            // baixo os estimulos podem ainda n estar processados
+            if ([target isDead])
+            {
+                [_targets removeObject:target];
+                continue;
+            }
+            
             KKPixelMaskSprite *targetSprite = [target sprite];
             if ([targetSprite pixelMaskContainsPoint:[projectileSprite position]])
             {
@@ -141,10 +100,8 @@ static CollisionManager* _sharedSingleton = nil;
         
         for (Enemy *target in targetsToDelete)
         {
-            [[SimpleAudioEngine sharedEngine] playEffect:@"hit.mp3"];
-#warning por no config.plist
-            [_targets removeObject:target];
-            [target die];
+            [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"HitSound"]];
+            [target enqueueStimuli:(NSMutableArray*)[projectile stimuli]];
         }
         
         if (targetsToDelete.count > 0)

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>verticalCenter</key>
+	<integer>380</integer>
+	<key>enemies</key>
+	<array>
+		<dict>
+			<key>type</key>
+			<string>peasant</string>
+			<key>xdisp</key>
+			<integer>1</integer>
+			<key>ydisp</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>peasant</string>
+			<key>xdisp</key>
+			<real>0.5</real>
+			<key>ydisp</key>
+			<real>0.5</real>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>peasant</string>
+			<key>xdisp</key>
+			<integer>0</integer>
+			<key>ydisp</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>peasant</string>
+			<key>xdisp</key>
+			<real>0.5</real>
+			<key>ydisp</key>
+			<real>-0.5</real>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>peasant</string>
+			<key>xdisp</key>
+			<integer>1</integer>
+			<key>ydisp</key>
+			<integer>-1</integer>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>peasant</string>
+			<key>xdisp</key>
+			<real>1.5</real>
+			<key>ydisp</key>
+			<real>-1.5</real>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>peasant</string>
+			<key>xdisp</key>
+			<real>1.5</real>
+			<key>ydisp</key>
+			<real>1.5</real>
+		</dict>
+	</array>
+</dict>
+</plist>

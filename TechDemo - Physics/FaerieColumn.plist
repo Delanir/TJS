@@ -3,28 +3,12 @@
 <plist version="1.0">
 <dict>
 	<key>verticalCenter</key>
-	<integer>380</integer>
+	<integer>440</integer>
 	<key>enemies</key>
 	<array>
 		<dict>
 			<key>type</key>
-			<string>peasant</string>
-			<key>xdisp</key>
-			<integer>1</integer>
-			<key>ydisp</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>type</key>
-			<string>peasant</string>
-			<key>xdisp</key>
-			<real>0.5</real>
-			<key>ydisp</key>
-			<real>0.5</real>
-		</dict>
-		<dict>
-			<key>type</key>
-			<string>peasant</string>
+			<string>faerie</string>
 			<key>xdisp</key>
 			<integer>0</integer>
 			<key>ydisp</key>
@@ -32,19 +16,35 @@
 		</dict>
 		<dict>
 			<key>type</key>
-			<string>peasant</string>
+			<string>faerie</string>
 			<key>xdisp</key>
-			<real>0.5</real>
+			<integer>0</integer>
 			<key>ydisp</key>
-			<real>-0.5</real>
+			<real>-0.8</real>
 		</dict>
 		<dict>
 			<key>type</key>
-			<string>peasant</string>
+			<string>faerie</string>
 			<key>xdisp</key>
-			<integer>1</integer>
+			<integer>0</integer>
 			<key>ydisp</key>
-			<integer>-1</integer>
+			<real>0.8</real>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>faerie</string>
+			<key>xdisp</key>
+			<integer>0</integer>
+			<key>ydisp</key>
+			<real>-1.6</real>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>faerie</string>
+			<key>xdisp</key>
+			<integer>0</integer>
+			<key>ydisp</key>
+			<real>1.6</real>
 		</dict>
 	</array>
 </dict>
