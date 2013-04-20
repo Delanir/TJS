@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import "NSMutableArray+QueueAdditions.h"
+#import "Registry.h"
+#import "EnemyFactory.h"
+#import "Enemy.h"
+#import "Utils.h"
 
 @interface WaveManager : CCNode
 {

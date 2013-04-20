@@ -7,6 +7,9 @@
 //
 
 #import "Entity.h"
+#import "Registry.h"
+#import "ResourceManager.h"
+
 
 typedef enum {walk, attack, fly, land, hit, die} state;
 

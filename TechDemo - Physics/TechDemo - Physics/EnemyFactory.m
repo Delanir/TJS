@@ -7,7 +7,6 @@
 //
 
 #import "EnemyFactory.h"
-#import "Config.h"
 
 @implementation EnemyFactory
 

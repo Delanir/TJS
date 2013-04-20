@@ -7,31 +7,7 @@
 //
 
 #import "LevelLayerAbstract.h"
-#import "MainScene.h"
-#import "Yuri.h"
-#import "Peasant.h"
-#import "CollisionManager.h"
-#import "Config.h"
-#import "EnemyFactory.h"
-#import "SpriteManager.h"
-#import "FaerieDragon.h"
-#import "Arrow.h"
-#import "StimulusFactory.h"
-#import "Stimulus.h"
-#import "ResourceManager.h"
 
-#import "CCBReader.h"   
-
-// Particle Systems
-#import "CCParticleSystem.h"
-
-// Sound interface
-#import "SimpleAudioEngine.h"
-
-// Needed to obtain the Navigation Controller
-#import "AppDelegate.h"
-
-#import "WaveManager.h"
 
 @implementation LevelLayerAbstract
 

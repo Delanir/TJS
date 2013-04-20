@@ -7,7 +7,6 @@
 //
 
 #import "Peasant.h"
-#import "Wall.h"
 
 @implementation Peasant
 

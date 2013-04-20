@@ -7,7 +7,6 @@
 //
 
 #import "Entity.h"
-#import "Config.h"
 
 @implementation Entity
 

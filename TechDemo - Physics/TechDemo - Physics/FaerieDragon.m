@@ -7,7 +7,6 @@
 //
 
 #import "FaerieDragon.h"
-#import "Wall.h"
 
 @implementation FaerieDragon
 

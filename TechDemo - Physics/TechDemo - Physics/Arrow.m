@@ -7,7 +7,6 @@
 //
 
 #import "Arrow.h"
-#import "Stimulus.h"
 
 @implementation Arrow
 

@@ -8,8 +8,6 @@
 
 #import "Enemy.h"
 #import "CollisionManager.h"
-#import "Registry.h"
-#import "ResourceManager.h"
 
 @implementation Enemy
 

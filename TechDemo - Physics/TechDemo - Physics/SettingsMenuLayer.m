@@ -7,8 +7,7 @@
 //
 
 #import "SettingsMenuLayer.h"
-#import "CCBReader.h"
-#import "SimpleAudioEngine.h"
+
 
 @implementation SettingsMenuLayer
 

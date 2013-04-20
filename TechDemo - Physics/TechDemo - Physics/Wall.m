@@ -7,8 +7,6 @@
 //
 
 #import "Wall.h"
-#import <objc/runtime.h>
-#import "Registry.h"
 
 @implementation Wall
 

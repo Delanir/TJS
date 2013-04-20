@@ -8,6 +8,10 @@
 
 #import "Entity.h"
 #import "AppDelegate.h"
+// Sound interface
+#import "SimpleAudioEngine.h"
+#warning por o audio engine nos precompiled headers
+#warning por também o registry. e o appdelegate
 
 @interface Yuri : Entity
 {

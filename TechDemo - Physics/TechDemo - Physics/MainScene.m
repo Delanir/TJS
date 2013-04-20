@@ -7,7 +7,6 @@
 //
 
 #import "MainScene.h"
-#import "Registry.h"
 
 @implementation MainScene
 

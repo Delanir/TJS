@@ -7,7 +7,6 @@
 //
 
 #import "Zealot.h"
-#import "Wall.h"
 
 @implementation Zealot
 

@@ -7,6 +7,7 @@
 //
 
 #import "Projectile.h"
+#import "Stimulus.h"
 
 @interface Arrow : Projectile
 

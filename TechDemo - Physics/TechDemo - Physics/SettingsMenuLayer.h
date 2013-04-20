@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
+#import "CCBReader.h"
+#import "SimpleAudioEngine.h"
 
 @interface SettingsMenuLayer : CCLayer {
     CCSprite * _mute;

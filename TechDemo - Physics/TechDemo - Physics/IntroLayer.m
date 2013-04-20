@@ -6,15 +6,7 @@
 //  Copyright __MyCompanyName__ 2013. All rights reserved.
 //
 
-
-// Import the interfaces
 #import "IntroLayer.h"
-#import "LevelLayer.h"
-#import "SpriteManager.h"
-#import "Config.h"
-// Sound interface
-#import "SimpleAudioEngine.h"
-#import "CCBReader.h"
 
 
 #pragma mark - IntroLayer

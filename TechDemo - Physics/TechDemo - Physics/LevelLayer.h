@@ -6,12 +6,23 @@
 //  Copyright __MyCompanyName__ 2013. All rights reserved.
 //
 
-
-
 // When you import this file, you import all the cocos2d classes
 #import "cocos2d.h"
 #import "Hud.h"
 #import "LevelLayerAbstract.h"
+
+#import "Registry.h"
+#import "WaveManager.h"
+#import "StimulusFactory.h"
+
+// Particle Systems
+#import "CCParticleSystem.h"
+
+// Sound interface
+#import "SimpleAudioEngine.h"
+
+// Needed to obtain the Navigation Controller
+#import "AppDelegate.h"
 
 
 // HelloWorldLayer

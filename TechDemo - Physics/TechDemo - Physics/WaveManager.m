@@ -7,11 +7,7 @@
 //
 
 #import "WaveManager.h"
-#import "Registry.h"
 #import "LevelLayer.h"
-#import "EnemyFactory.h"
-#import "Enemy.h"
-#import "Utils.h"
 
 @implementation WaveManager
 

@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
+#import "CCBReader.h"
 
 @interface GameOver : CCNode {
     CCSprite * _mainMenuButton;
