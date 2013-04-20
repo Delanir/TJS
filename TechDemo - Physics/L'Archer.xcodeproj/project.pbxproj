@@ -24,6 +24,13 @@
 		3EDD9F251715DF9F00C6A622 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EDD9F241715DF9F00C6A622 /* background.png */; };
 		3EDD9F291715E4CD00C6A622 /* lvl1spritesheet.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3EDD9F281715E4CD00C6A622 /* lvl1spritesheet.plist */; };
 		3EDD9F301715E7F800C6A622 /* Wall.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDD9F2F1715E7F800C6A622 /* Wall.m */; };
+		3EE2F95E17230E640084DF2F /* LevelStars.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE2F95D17230E640084DF2F /* LevelStars.m */; };
+		3EE2F9621723175E0084DF2F /* LevelSelectLayer.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 3EE2F95F1723175E0084DF2F /* LevelSelectLayer.ccbi */; };
+		3EE2F9631723175E0084DF2F /* LevelThumbnail.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 3EE2F9601723175E0084DF2F /* LevelThumbnail.ccbi */; };
+		3EE2F9641723175E0084DF2F /* StarsNode.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 3EE2F9611723175E0084DF2F /* StarsNode.ccbi */; };
+		3EE2F9671723178C0084DF2F /* LevelThumbnail.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE2F9661723178C0084DF2F /* LevelThumbnail.m */; };
+		3EE2F96A17231EC40084DF2F /* LevelSelectLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE2F96917231EC40084DF2F /* LevelSelectLayer.m */; };
+		3EE2F96C1723287F0084DF2F /* keylock.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EE2F96B1723287F0084DF2F /* keylock.png */; };
 		8B0E70DE171DBBFA004D212C /* achievements_.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E70D8171DBBFA004D212C /* achievements_.png */; };
 		8B0E70DF171DBBFA004D212C /* achievements_@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E70D9171DBBFA004D212C /* achievements_@2x.png */; };
 		8B0E70E0171DBBFA004D212C /* leaderboard_.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E70DA171DBBFA004D212C /* leaderboard_.png */; };
@@ -142,7 +149,14 @@
 		8BD62290171460200076BF42 /* lvl1spritesheet.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BD6228D171460200076BF42 /* lvl1spritesheet.png */; };
 		8BFA2D9D171724F9008A2064 /* fairiedragon_anim.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8BFA2D9C171724F9008A2064 /* fairiedragon_anim.plist */; };
 		8BFA2DA017172536008A2064 /* peasant_anim.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8BFA2D9F17172536008A2064 /* peasant_anim.plist */; };
-		8C5C3324171B195800093301 /* Hud.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C5C3323171B195800093301 /* Hud.m */; };
+		8BFC3F0317202EC7000161FD /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BFC3F0117202EC7000161FD /* pause.png */; };
+		8BFC3F0417202EC7000161FD /* pause-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BFC3F0217202EC7000161FD /* pause-ipadhd.png */; };
+		8BFC3F0C172042C3000161FD /* GameOver.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BFC3F0B172042C3000161FD /* GameOver.m */; };
+		8BFC3F0F17204440000161FD /* GameOver.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 8BFC3F0E17204440000161FD /* GameOver.ccbi */; };
+		9C11EEC017205775003510EB /* WaveManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C11EEBF17205775003510EB /* WaveManager.m */; };
+		9C11EEC3172063B3003510EB /* Level1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C11EEC2172063B3003510EB /* Level1.plist */; };
+		9C11EEC61720646F003510EB /* PeasantSpear.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C11EEC51720646F003510EB /* PeasantSpear.plist */; };
+		9C11EEC9172073F5003510EB /* NSMutableArray+QueueAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C11EEC8172073F5003510EB /* NSMutableArray+QueueAdditions.m */; };
 		9C2B3CBD171EE8FB00E695FE /* Registry Entities in Resources */ = {isa = PBXBuildFile; fileRef = 9C2B3CBC171EE8FB00E695FE /* Registry Entities */; };
 		9C377BE9170B72D400F840FB /* KKPixelMaskSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C377BE2170B6F5100F840FB /* KKPixelMaskSprite.m */; };
 		9C377BEA170B72D700F840FB /* bitarray.c in Sources */ = {isa = PBXBuildFile; fileRef = 9C377BE3170B715A00F840FB /* bitarray.c */; };
@@ -359,6 +373,16 @@
 		3EDD9F281715E4CD00C6A622 /* lvl1spritesheet.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = lvl1spritesheet.plist; sourceTree = "<group>"; };
 		3EDD9F2E1715E7F700C6A622 /* Wall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wall.h; sourceTree = "<group>"; };
 		3EDD9F2F1715E7F800C6A622 /* Wall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Wall.m; sourceTree = "<group>"; };
+		3EE2F95C17230E640084DF2F /* LevelStars.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelStars.h; sourceTree = "<group>"; };
+		3EE2F95D17230E640084DF2F /* LevelStars.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelStars.m; sourceTree = "<group>"; };
+		3EE2F95F1723175E0084DF2F /* LevelSelectLayer.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = LevelSelectLayer.ccbi; sourceTree = "<group>"; };
+		3EE2F9601723175E0084DF2F /* LevelThumbnail.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = LevelThumbnail.ccbi; sourceTree = "<group>"; };
+		3EE2F9611723175E0084DF2F /* StarsNode.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = StarsNode.ccbi; sourceTree = "<group>"; };
+		3EE2F9651723178B0084DF2F /* LevelThumbnail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelThumbnail.h; sourceTree = "<group>"; };
+		3EE2F9661723178C0084DF2F /* LevelThumbnail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelThumbnail.m; sourceTree = "<group>"; };
+		3EE2F96817231EC40084DF2F /* LevelSelectLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelSelectLayer.h; sourceTree = "<group>"; };
+		3EE2F96917231EC40084DF2F /* LevelSelectLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelSelectLayer.m; sourceTree = "<group>"; };
+		3EE2F96B1723287F0084DF2F /* keylock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = keylock.png; sourceTree = "<group>"; };
 		8B0E70D8171DBBFA004D212C /* achievements_.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = achievements_.png; sourceTree = "<group>"; };
 		8B0E70D9171DBBFA004D212C /* achievements_@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "achievements_@2x.png"; sourceTree = "<group>"; };
 		8B0E70DA171DBBFA004D212C /* leaderboard_.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leaderboard_.png; sourceTree = "<group>"; };
@@ -491,8 +515,17 @@
 		8BD6228D171460200076BF42 /* lvl1spritesheet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lvl1spritesheet.png; sourceTree = "<group>"; };
 		8BFA2D9C171724F9008A2064 /* fairiedragon_anim.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = fairiedragon_anim.plist; sourceTree = "<group>"; };
 		8BFA2D9F17172536008A2064 /* peasant_anim.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = peasant_anim.plist; sourceTree = "<group>"; };
-		8C5C3322171B195800093301 /* Hud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hud.h; sourceTree = "<group>"; };
-		8C5C3323171B195800093301 /* Hud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hud.m; sourceTree = "<group>"; };
+		8BFC3F0117202EC7000161FD /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
+		8BFC3F0217202EC7000161FD /* pause-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pause-ipadhd.png"; sourceTree = "<group>"; };
+		8BFC3F0A172042C2000161FD /* GameOver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOver.h; sourceTree = "<group>"; };
+		8BFC3F0B172042C3000161FD /* GameOver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOver.m; sourceTree = "<group>"; };
+		8BFC3F0E17204440000161FD /* GameOver.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = GameOver.ccbi; sourceTree = "<group>"; };
+		9C11EEBE17205775003510EB /* WaveManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaveManager.h; sourceTree = "<group>"; };
+		9C11EEBF17205775003510EB /* WaveManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaveManager.m; sourceTree = "<group>"; };
+		9C11EEC2172063B3003510EB /* Level1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Level1.plist; sourceTree = "<group>"; };
+		9C11EEC51720646F003510EB /* PeasantSpear.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PeasantSpear.plist; sourceTree = "<group>"; };
+		9C11EEC7172073F5003510EB /* NSMutableArray+QueueAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+QueueAdditions.h"; sourceTree = "<group>"; };
+		9C11EEC8172073F5003510EB /* NSMutableArray+QueueAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+QueueAdditions.m"; sourceTree = "<group>"; };
 		9C2B3CBC171EE8FB00E695FE /* Registry Entities */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Registry Entities"; sourceTree = "<group>"; };
 		9C377BE1170B6F5100F840FB /* KKPixelMaskSprite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKPixelMaskSprite.h; sourceTree = "<group>"; };
 		9C377BE2170B6F5100F840FB /* KKPixelMaskSprite.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKPixelMaskSprite.m; sourceTree = "<group>"; };
@@ -1007,6 +1040,7 @@
 		9C2B3CBE171EE9BC00E695FE /* Menus */ = {
 			isa = PBXGroup;
 			children = (
+				3EE2F96B1723287F0084DF2F /* keylock.png */,
 				8BFC3F0117202EC7000161FD /* pause.png */,
 				8BFC3F0217202EC7000161FD /* pause-ipadhd.png */,
 				8B0E70D8171DBBFA004D212C /* achievements_.png */,
@@ -1135,6 +1169,9 @@
 		9C85F4AC1707957E00EECB83 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3EE2F95F1723175E0084DF2F /* LevelSelectLayer.ccbi */,
+				3EE2F9601723175E0084DF2F /* LevelThumbnail.ccbi */,
+				3EE2F9611723175E0084DF2F /* StarsNode.ccbi */,
 				9C9ADB321721CA2C00C3FA59 /* red_health_bar.png */,
 				9C9ADB331721CA2C00C3FA59 /* green_health_bar.png */,
 				9C94ABD917197D3C005BCE32 /* Animations */,
@@ -1613,6 +1650,10 @@
 				9C8DE0D51718EA00002E0D0A /* Zealot.m */,
 				3E08A7C71719B29D007BE310 /* Stimulus.h */,
 				3E08A7C81719B29D007BE310 /* Stimulus.m */,
+				3EE2F9651723178B0084DF2F /* LevelThumbnail.h */,
+				3EE2F9661723178C0084DF2F /* LevelThumbnail.m */,
+				3EE2F95C17230E640084DF2F /* LevelStars.h */,
+				3EE2F95D17230E640084DF2F /* LevelStars.m */,
 			);
 			name = "Scene Entities";
 			sourceTree = "<group>";
@@ -1693,6 +1734,8 @@
 				8B79CDC9171F15B800E58EDD /* LevelLayerAbstract.h */,
 				8B79CDCA171F15B800E58EDD /* LevelLayerAbstract.m */,
 				8B0E712E171DD446004D212C /* SkillTreeLayer.h */,
+				3EE2F96817231EC40084DF2F /* LevelSelectLayer.h */,
+				3EE2F96917231EC40084DF2F /* LevelSelectLayer.m */,
 				8B0E712F171DD447004D212C /* SkillTreeLayer.m */,
 				8B8C2D951719D8A700B50C1E /* MainMenuLayer.h */,
 				8B8C2D961719D8A700B50C1E /* MainMenuLayer.m */,
@@ -1942,6 +1985,10 @@
 				9C9ADB311721AB6400C3FA59 /* FaerieColumn.plist in Resources */,
 				9C9ADB341721CA2C00C3FA59 /* red_health_bar.png in Resources */,
 				9C9ADB351721CA2C00C3FA59 /* green_health_bar.png in Resources */,
+				3EE2F9621723175E0084DF2F /* LevelSelectLayer.ccbi in Resources */,
+				3EE2F9631723175E0084DF2F /* LevelThumbnail.ccbi in Resources */,
+				3EE2F9641723175E0084DF2F /* StarsNode.ccbi in Resources */,
+				3EE2F96C1723287F0084DF2F /* keylock.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2092,6 +2139,9 @@
 				9C11EEC9172073F5003510EB /* NSMutableArray+QueueAdditions.m in Sources */,
 				8BFC3F0C172042C3000161FD /* GameOver.m in Sources */,
 				9C9ADB2D17218AA200C3FA59 /* Utils.m in Sources */,
+				3EE2F95E17230E640084DF2F /* LevelStars.m in Sources */,
+				3EE2F9671723178C0084DF2F /* LevelThumbnail.m in Sources */,
+				3EE2F96A17231EC40084DF2F /* LevelSelectLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

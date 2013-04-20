@@ -2,6 +2,7 @@ achievements-ipadhd.png
 achievements.png
 achievements_.png
 achievements_@2x.png
+AchievmentsLayer.ccbi
 akaPotsley.ttf
 background-ipadhd.png
 background.png
@@ -50,12 +51,17 @@ defaultEmitter.png
 fairiedragon_anim.plist
 fire.png
 GameOver.ccbi
+green_health_bar.png
 HelloCocosBuilder.ccbi
+keylock.png
 larcher_transparent_name.png
 leaderboard-ipadhd.png
 leaderboard.png
 leaderboard_.png
 leaderboard_@2x.png
+LeaderBoardLayer.ccbi
+LevelSelectLayer.ccbi
+LevelThumbnail.ccbi
 lvl1spritesheet-ipadhd.plist
 lvl1spritesheet-ipadhd.png
 lvl1spritesheet.plist
@@ -68,6 +74,7 @@ pause.png
 peasant_anim.plist
 plus-ipadhd.png
 plus.png
+red_health_bar.png
 Default.png
 fps_images-hd.png
 fps_images-ipadhd.png
@@ -172,6 +179,7 @@ SpeakerIcon_UP_SOUND-ipadhd.png
 SpeakerIcon_UP_SOUND.png
 star-ipadhd.png
 star.png
+StarsNode.ccbi
 starUP-ipadhd.png
 starUP.png
 yurie_anim.plist

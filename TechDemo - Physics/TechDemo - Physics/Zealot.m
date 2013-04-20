@@ -42,7 +42,7 @@
     [[self sprite] runAction:walkAction];
 }
 
--(void)attack
+-(void) attack
 {
     [self setCurrentState:attack];
     [[self sprite] stopAllActions];
@@ -52,7 +52,7 @@
     [[self sprite] runAction:[CCRepeatForever actionWithAction:attackAction]];
 }
 
--(void)die
+-(void) die
 {
     [super die];
     [self setCurrentState:die];

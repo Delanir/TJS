@@ -15,15 +15,15 @@
 {
 	[super onEnter];
     
-    //Initialize art and animations
-    [self addChild:[[SpriteManager shared] addSpritesToSpriteFrameCacheWithFile:@"lvl1spritesheet.plist" andBatchSpriteSheet:@"lvl1spritesheet.png"]];
-    
-    [[SpriteManager shared] addAnimationFromFile:@"peasant_anim.plist"];
-    [[SpriteManager shared] addAnimationFromFile:@"fairiedragon_anim.plist"];
-    [[SpriteManager shared] addAnimationFromFile:@"zealot_anim.plist"];
-    [[SpriteManager shared] addAnimationFromFile:@"yurie_anim.plist"];
-    [[SimpleAudioEngine sharedEngine] playBackgroundMusic:[[Config shared] getStringProperty:@"MainMenuMusic"] loop:YES];
-    
+//    //Initialize art and animations
+//    [self addChild:[[SpriteManager shared] addSpritesToSpriteFrameCacheWithFile:@"lvl1spritesheet.plist" andBatchSpriteSheet:@"lvl1spritesheet.png"]];
+//    
+//    [[SpriteManager shared] addAnimationFromFile:@"peasant_anim.plist"];
+//    [[SpriteManager shared] addAnimationFromFile:@"fairiedragon_anim.plist"];
+//    [[SpriteManager shared] addAnimationFromFile:@"zealot_anim.plist"];
+//    [[SpriteManager shared] addAnimationFromFile:@"yurie_anim.plist"];
+//    [[SimpleAudioEngine sharedEngine] playBackgroundMusic:[[Config shared] getStringProperty:@"MainMenuMusic"] loop:YES];
+//    
 }
 
 -(void) onExit
@@ -83,7 +83,11 @@
 {
 	// In one second transition to the new scene
 	//[self scheduleOnce:@selector(makeTransition:) delay:1];
-    [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[LevelLayer scene] withColor:ccWHITE]];
+  //    [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[LevelLayer scene] withColor:ccWHITE]];
+  CCScene* gameScene = [CCBReader sceneWithNodeGraphFromFile:@"LevelSelectLayer.ccbi"];
+  
+  // Go to the game scene
+  [[CCDirector sharedDirector] replaceScene:gameScene];
 }
 
 //-(void) makeTransition:(ccTime)dt
