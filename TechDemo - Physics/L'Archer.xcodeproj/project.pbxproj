@@ -31,6 +31,8 @@
 		3EE2F9671723178C0084DF2F /* LevelThumbnail.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE2F9661723178C0084DF2F /* LevelThumbnail.m */; };
 		3EE2F96A17231EC40084DF2F /* LevelSelectLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE2F96917231EC40084DF2F /* LevelSelectLayer.m */; };
 		3EE2F96C1723287F0084DF2F /* keylock.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EE2F96B1723287F0084DF2F /* keylock.png */; };
+		3EEB67A017234BC2005C58E9 /* PauseMenu.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 3EEB679F17234BC2005C58E9 /* PauseMenu.ccbi */; };
+		3EEB67A317234C1B005C58E9 /* PauseHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EEB67A217234C1A005C58E9 /* PauseHUD.m */; };
 		8B0E70DE171DBBFA004D212C /* achievements_.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E70D8171DBBFA004D212C /* achievements_.png */; };
 		8B0E70DF171DBBFA004D212C /* achievements_@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E70D9171DBBFA004D212C /* achievements_@2x.png */; };
 		8B0E70E0171DBBFA004D212C /* leaderboard_.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E70DA171DBBFA004D212C /* leaderboard_.png */; };
@@ -383,6 +385,9 @@
 		3EE2F96817231EC40084DF2F /* LevelSelectLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelSelectLayer.h; sourceTree = "<group>"; };
 		3EE2F96917231EC40084DF2F /* LevelSelectLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelSelectLayer.m; sourceTree = "<group>"; };
 		3EE2F96B1723287F0084DF2F /* keylock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = keylock.png; sourceTree = "<group>"; };
+		3EEB679F17234BC2005C58E9 /* PauseMenu.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = PauseMenu.ccbi; sourceTree = "<group>"; };
+		3EEB67A117234C1A005C58E9 /* PauseHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PauseHUD.h; sourceTree = "<group>"; };
+		3EEB67A217234C1A005C58E9 /* PauseHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PauseHUD.m; sourceTree = "<group>"; };
 		8B0E70D8171DBBFA004D212C /* achievements_.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = achievements_.png; sourceTree = "<group>"; };
 		8B0E70D9171DBBFA004D212C /* achievements_@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "achievements_@2x.png"; sourceTree = "<group>"; };
 		8B0E70DA171DBBFA004D212C /* leaderboard_.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leaderboard_.png; sourceTree = "<group>"; };
@@ -1191,6 +1196,7 @@
 				8B8C2D9B1719DB9300B50C1E /* MainMenu.ccbi */,
 				8BBB6A2F171E27970064B3CD /* akaPotsley.ttf */,
 				8BFC3F0E17204440000161FD /* GameOver.ccbi */,
+				3EEB679F17234BC2005C58E9 /* PauseMenu.ccbi */,
 				8B0E7131171DD5A2004D212C /* SkillTreeLayer.ccbi */,
 				8BBB6A22171E09E30064B3CD /* SettingsMenu.ccbi */,
 				9C85F4C31707957E00EECB83 /* Info.plist */,
@@ -1632,6 +1638,8 @@
 				9C85F65A170A3E4200EECB83 /* MainScene.m */,
 				3EDD9F2E1715E7F700C6A622 /* Wall.h */,
 				3EDD9F2F1715E7F800C6A622 /* Wall.m */,
+				3EEB67A117234C1A005C58E9 /* PauseHUD.h */,
+				3EEB67A217234C1A005C58E9 /* PauseHUD.m */,
 				9C85F654170A022800EECB83 /* Arrow.h */,
 				9C85F655170A022900EECB83 /* Arrow.m */,
 				9C8DE0CD171853AD002E0D0A /* FaerieDragon.h */,
@@ -1733,9 +1741,9 @@
 				9C85F64B1709D59800EECB83 /* LevelLayer.m */,
 				8B79CDC9171F15B800E58EDD /* LevelLayerAbstract.h */,
 				8B79CDCA171F15B800E58EDD /* LevelLayerAbstract.m */,
-				8B0E712E171DD446004D212C /* SkillTreeLayer.h */,
 				3EE2F96817231EC40084DF2F /* LevelSelectLayer.h */,
 				3EE2F96917231EC40084DF2F /* LevelSelectLayer.m */,
+				8B0E712E171DD446004D212C /* SkillTreeLayer.h */,
 				8B0E712F171DD447004D212C /* SkillTreeLayer.m */,
 				8B8C2D951719D8A700B50C1E /* MainMenuLayer.h */,
 				8B8C2D961719D8A700B50C1E /* MainMenuLayer.m */,
@@ -1989,6 +1997,7 @@
 				3EE2F9631723175E0084DF2F /* LevelThumbnail.ccbi in Resources */,
 				3EE2F9641723175E0084DF2F /* StarsNode.ccbi in Resources */,
 				3EE2F96C1723287F0084DF2F /* keylock.png in Resources */,
+				3EEB67A017234BC2005C58E9 /* PauseMenu.ccbi in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2142,6 +2151,7 @@
 				3EE2F95E17230E640084DF2F /* LevelStars.m in Sources */,
 				3EE2F9671723178C0084DF2F /* LevelThumbnail.m in Sources */,
 				3EE2F96A17231EC40084DF2F /* LevelSelectLayer.m in Sources */,
+				3EEB67A317234C1B005C58E9 /* PauseHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,7 +10,7 @@
 
 @implementation Registry
 
-@synthesize registry;
+@synthesize registry,lastScene;
 
 static Registry* _sharedSingleton = nil;
 

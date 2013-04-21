@@ -276,10 +276,12 @@
 						<key>type</key>
 						<string>Text</string>
 						<key>value</key>
-						<string>The enemies have beached the walls…
+						<string>The enemies have breached the walls…
 Yuri couldn't save his people.</string>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>baseClass</key>
@@ -480,8 +482,6 @@ Yuri couldn't save his people.</string>
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>

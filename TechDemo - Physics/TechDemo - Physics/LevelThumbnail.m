@@ -25,7 +25,7 @@
 - (void) goToLevel:(id)sender{
   //NSString *abc =[NSString string]
 //  CCLOG(@"pressed %d", numberStars)
-  [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[LevelLayer scene] withColor:ccWHITE]];
+  [[CCDirector sharedDirector] replaceScene:[LevelLayer scene]];
   
   
 }

@@ -11,6 +11,12 @@
 
 @implementation SettingsMenuLayer
 
+-(id)init{
+  [super init];
+  [[CCDirector sharedDirector] purgeCachedData];
+  return self;
+}
+
 - (void) pressedMainMenu:(id)sender{
     // Load the game scene
     CCScene* gameScene = [CCBReader sceneWithNodeGraphFromFile:@"MainMenu.ccbi"];
