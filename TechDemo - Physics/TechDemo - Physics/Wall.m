@@ -126,6 +126,7 @@
     [levelLayer removeChildByTag:5 cleanup:YES];
     [levelLayer removeChildByTag:5 cleanup:YES];
     [sprites removeAllObjects];
+    [sprites release];
     [super dealloc];
 }
 
