@@ -30,24 +30,26 @@
         label3.position = CGPointMake(label3.contentSize.width/2 + 70, 20);
         
         //Power Buttons
-        CCMenuItem *plusMenuItem = [CCMenuItemImage
-                                    itemWithNormalImage:@"plus.png" selectedImage:@"cross.png"
+        CCMenuItemToggle *plusMenuItem = [CCMenuItemImage
+                                    itemWithNormalImage:@"IceButton.png" selectedImage:@"IceButton-bw.png"
                                     target:self selector:@selector(plusButtonToggle)];
         plusMenuItem.position = ccp(810, 60);
         
         CCMenuItem *crossMenuItem = [CCMenuItemImage
-                                     itemWithNormalImage:@"cross.png" selectedImage:@"bullseye.png"
+                                     itemWithNormalImage:@"FireButton.png" selectedImage:@"FireButton-bw.png"
                                      target:self selector:@selector(crossButtonToggle)];
         crossMenuItem.position = ccp(880, 60);
         
         CCMenuItem *bullseyeMenuItem = [CCMenuItemImage
-                                        itemWithNormalImage:@"bullseye.png" selectedImage:@"plus.png"
+                                        itemWithNormalImage:@"MarksManButton.png" selectedImage:@"MarksManButton-bw.png"
                                         target:self selector:@selector(bullseyeButtonToggle)];
         bullseyeMenuItem.position = ccp(950, 60);
         
         
         CCMenu *superMenu = [CCMenu menuWithItems:plusMenuItem, crossMenuItem, bullseyeMenuItem, nil];
         superMenu.position = CGPointZero;
+        
+        
         
         [self addChild:superMenu];
         [self addChild:label z:1];
