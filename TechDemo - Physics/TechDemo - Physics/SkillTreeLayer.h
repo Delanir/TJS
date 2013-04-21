@@ -47,4 +47,7 @@
 - (void) pressedMarksmanSymbol:(id)sender;
 - (void) pressedIceSymbol:(id)sender;
 - (void) pressedFireSymbol:(id)sender;
++(SkillTreeLayer*)shared;
+
+
 @end

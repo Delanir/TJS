@@ -7,14 +7,21 @@
 //
 
 #import "MainMenuLayer.h"
-
+#import "Registry.h"
 
 @implementation MainMenuLayer
+
+-(id)init{
+  [super init];
+  
+  
+  return self;
+}
 
 -(void) onEnter
 {
 	[super onEnter];
-    
+  [[CCDirector sharedDirector] purgeCachedData];
 //    //Initialize art and animations
 //    [self addChild:[[SpriteManager shared] addSpritesToSpriteFrameCacheWithFile:@"lvl1spritesheet.plist" andBatchSpriteSheet:@"lvl1spritesheet.png"]];
 //    
@@ -94,6 +101,11 @@
 //{
 //	
 //}
+
+- (void)dealloc{
+  [super dealloc];
+  
+}
 
 #pragma mark GameKit delegate
 

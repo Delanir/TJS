@@ -15,6 +15,7 @@
 #import "Yuri.h"
 #import "Enemy.h"
 #import "GameOver.h"
+#import "PauseHUD.h"
 #import "Peasant.h"
 #import "CollisionManager.h"
 #import "Config.h"
@@ -42,6 +43,7 @@
 @interface LevelLayerAbstract : CCLayer <GKAchievementViewControllerDelegate, GKLeaderboardViewControllerDelegate>{
     CCSprite *_pauseButton;
     GameOver *_gameOver;
+    PauseHUD *_pause;
 }
 
 

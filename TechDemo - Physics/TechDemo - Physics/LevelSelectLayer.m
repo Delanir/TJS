@@ -14,7 +14,11 @@
 
 @implementation LevelSelectLayer
 
-
+-(id)init{
+  [super init];
+  [[CCDirector sharedDirector] purgeCachedData];
+  return self;
+}
 
 -(void)onEnter{
 #warning ler do dic ou da plist

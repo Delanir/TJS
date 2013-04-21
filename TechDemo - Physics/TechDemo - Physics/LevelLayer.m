@@ -85,6 +85,9 @@
         [[CollisionManager shared] dummyMethod];
       
         [self schedule:@selector(update:)];
+      
+      
+      [[CCDirector sharedDirector] purgeCachedData];
     }
     
     self.isTouchEnabled = YES;
@@ -233,6 +236,11 @@
     location = [self convertTouchToNodeSpace:touch];
     location = [touch locationInView:[touch view]];
     location = [[CCDirector sharedDirector] convertToGL:location];
+}
+
+-(void)dealloc{
+  [super dealloc];
+  CCLOG(@"DEALOQUEI");
 }
 
 

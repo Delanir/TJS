@@ -25,6 +25,11 @@
 
         [self addChild:_pauseButton];
         [self addChild:[WaveManager shared]]; // Esta linha é imensos de feia. Mas tem de ser para haver update
+      
+      _pause= (PauseHUD *)[CCBReader nodeGraphFromFile:@"PauseMenu.ccbi"];
+      [self addChild:_pause];
+      [_pause setZOrder:1535];
+      [_pause setVisible:NO];
     }
     
     
@@ -65,8 +70,14 @@
     location.y=winSize.height-location.y;
     CGPoint pausePosition = _pauseButton.position;
     float pauseRadius = _pauseButton.contentSize.width/2;
-    
-    if (ccpDistance(pausePosition, location)<=pauseRadius){
+  
+  
+  CGPoint pausePosition2 = [[_pause getPauseButton] position];
+                  
+  float pauseRadius2 = [[_pause getPauseButton] contentSize].width/2;
+
+  
+    if (ccpDistance(pausePosition, location)<=pauseRadius || (_pause.visible&&ccpDistance(pausePosition2, location)<=pauseRadius2)){
         [self togglePause];
     }
 }
@@ -79,6 +90,7 @@
     float btnRadius = _gameOver.mainMenuButtonRadius/2;
     
     if (ccpDistance(btnPosition, location)<=btnRadius){
+      [self removeAllChildrenWithCleanup:YES];
         [[CCDirector sharedDirector] resume];
         CCScene* gameScene = [CCBReader sceneWithNodeGraphFromFile:@"MainMenu.ccbi"];
         [[CCDirector sharedDirector] replaceScene:gameScene];
@@ -89,10 +101,14 @@
 -(void) togglePause
 {
     if ([[CCDirector sharedDirector] isPaused]) {
+//      [self removeChild:_pause cleanup:YES];
+      [_pause setVisible:NO];
         [[SimpleAudioEngine sharedEngine] resumeBackgroundMusic];
         [[CCDirector sharedDirector] resume];
         
     } else {
+
+      [_pause setVisible:YES];
         [[SimpleAudioEngine sharedEngine] pauseBackgroundMusic];
         
         [[CCDirector sharedDirector] pause];
@@ -116,6 +132,11 @@
     [self addChild:_gameOver];
     [_gameOver setZOrder:1535];
     [[CCDirector sharedDirector] pause];
+}
+
+-(void)onExit{
+  [super onExit];
+  [self removeAllChildrenWithCleanup:YES];
 }
 
 #pragma mark GameKit delegate
