@@ -49,6 +49,8 @@
 -(BOOL) spendArrows:(unsigned int) spend;
 -(BOOL) spendMana:(double) spend;
 
+-(void) reset;
+
 
 // Statistics part
 - (void)increaseEnemyCount;

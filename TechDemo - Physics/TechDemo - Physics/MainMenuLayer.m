@@ -12,53 +12,30 @@
 @implementation MainMenuLayer
 
 -(id)init{
-  [super init];
-  
-  
-  return self;
+    [super init];
+    
+    
+    return self;
 }
 
 -(void) onEnter
 {
 	[super onEnter];
-  [[CCDirector sharedDirector] purgeCachedData];
-//    //Initialize art and animations
-//    [self addChild:[[SpriteManager shared] addSpritesToSpriteFrameCacheWithFile:@"lvl1spritesheet.plist" andBatchSpriteSheet:@"lvl1spritesheet.png"]];
-//    
-//    [[SpriteManager shared] addAnimationFromFile:@"peasant_anim.plist"];
-//    [[SpriteManager shared] addAnimationFromFile:@"fairiedragon_anim.plist"];
-//    [[SpriteManager shared] addAnimationFromFile:@"zealot_anim.plist"];
-//    [[SpriteManager shared] addAnimationFromFile:@"yurie_anim.plist"];
-//    [[SimpleAudioEngine sharedEngine] playBackgroundMusic:[[Config shared] getStringProperty:@"MainMenuMusic"] loop:YES];
-//    
+    [[CCDirector sharedDirector] purgeCachedData];
 }
 
--(void) onExit
-{
-    [super onExit];
-    // Isto estava a parar a musica porque esta layer saía depois da outra entrar
-    // onde se iniciava a música. E realmente isto era desnecessário
-    //[[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
-    
-}
 
 - (void) pressedSettings:(id)sender
 {
-//    CCLOG(@"Setting Menu");
-    // Load the game scene
     CCScene* gameScene = [CCBReader sceneWithNodeGraphFromFile:@"SettingsMenu.ccbi"];
     
-    // Go to the game scene
     [[CCDirector sharedDirector] replaceScene:gameScene];
 }
 
 - (void) pressedSkillTree:(id)sender
 {
-//    CCLOG(@"Skilltree Menu");
-    // Load the game scene
     CCScene* gameScene = [CCBReader sceneWithNodeGraphFromFile:@"SkillTreeLayer.ccbi"];
     
-    // Go to the game scene
     [[CCDirector sharedDirector] replaceScene:gameScene];
 }
 
@@ -88,23 +65,10 @@
 
 - (void) pressedPlay:(id)sender
 {
-	// In one second transition to the new scene
-	//[self scheduleOnce:@selector(makeTransition:) delay:1];
-  //    [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[LevelLayer scene] withColor:ccWHITE]];
-  CCScene* gameScene = [CCBReader sceneWithNodeGraphFromFile:@"LevelSelectLayer.ccbi"];
-  
-  // Go to the game scene
-  [[CCDirector sharedDirector] replaceScene:gameScene];
-}
-
-//-(void) makeTransition:(ccTime)dt
-//{
-//	
-//}
-
-- (void)dealloc{
-  [super dealloc];
-  
+    CCScene* gameScene = [CCBReader sceneWithNodeGraphFromFile:@"LevelSelectLayer.ccbi"];
+    
+    // Go to the game scene
+    [[CCDirector sharedDirector] replaceScene:gameScene];
 }
 
 #pragma mark GameKit delegate

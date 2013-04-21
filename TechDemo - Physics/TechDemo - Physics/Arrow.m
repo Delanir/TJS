@@ -88,6 +88,7 @@
                 break;
             case dot:
                 ps = [[CCParticleSun node] retain];
+                [ps setTag:7];
                 [self addChild:ps];
             
                 //          Wildfire alternative
@@ -106,6 +107,7 @@
                 break;
             case pushBack:
                 ps = [[CCParticleSun node] retain];
+                [ps setTag:7];
                 [self addChild:ps];
                 ccColor4F startColorPushBack = {0.035, 0.027, 0.09, 1.0};
                 ps.startColor= startColorPushBack;
@@ -123,5 +125,27 @@
         }
     }
 }
+
+- (void) destroy
+{
+    CCArray * toRemove = [[CCArray alloc] init];
+    for(id child in [self children])
+        if ([child tag] == 7)
+        {
+            [child stopAllActions];
+            [(CCParticleSun*)child setEmissionRate:0];
+        }
+        else [toRemove addObject:child];
+    for (id child in toRemove)
+         [[self children] removeObject:child];
+}
+
+-(void) dealloc
+{
+    [self removeAllChildrenWithCleanup:YES];
+    [super dealloc];
+}
+
+
 
 @end

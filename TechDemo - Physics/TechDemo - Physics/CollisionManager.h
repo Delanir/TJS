@@ -28,6 +28,7 @@
 -(void)removeFromTargets: (Enemy*) target;
 -(void)removeFromProjectiles: (Projectile*) projectile;
 -(void)removeFromWalls: (CCSprite*) wall;
+-(void)clearAllEntities;
 
 // Collisions between arrow and enemies
 -(void)updatePixelPerfectCollisions:(ccTime)dt;

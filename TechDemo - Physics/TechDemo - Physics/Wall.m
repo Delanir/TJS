@@ -10,15 +10,15 @@
 
 @implementation Wall
 
-@synthesize health, lastHealth;
+@synthesize health, lastHealth, maxHealth;
 
 - (id) init
 {
     if((self = [super init]))
     {
-        
-        health = 1000.0f;
-        lastHealth = 1000.0f;
+        maxHealth = 100.0f; // Vai depender da skilltree
+        health = maxHealth;
+        lastHealth = maxHealth;
         status = mint;
         
         sprites = [[CCArray alloc] init];
@@ -74,17 +74,17 @@
     //Only test if required - try health and status
     if(health != lastHealth)
     {
-        if (health < 75 && health >= 50 && status == mint)
+        if (health < (0.75 * maxHealth) && health >= (0.5 * maxHealth) && status == mint)
         {
             [self changeTopSprite:[sprites objectAtIndex:2] bottomSprite:[sprites objectAtIndex:3]];
             status = scratched;
         }
-        else if (health < 50 && health >= 25 && status == scratched)
+        else if (health < (0.5 * maxHealth) && health >= (0.25 * maxHealth) && status == scratched)
         {
             [self changeTopSprite:[sprites objectAtIndex:4] bottomSprite:[sprites objectAtIndex:5]];
             status = damaged;
         }
-        else if (health < 25 && health > 0 && status == damaged)
+        else if (health < (0.25 * maxHealth) && health > 0 && status == damaged)
         {
             [self changeTopSprite:[sprites objectAtIndex:6] bottomSprite:[sprites objectAtIndex:7]];
             status = wrecked;
@@ -127,6 +127,7 @@
     [levelLayer removeChildByTag:5 cleanup:YES];
     [sprites removeAllObjects];
     [sprites release];
+    sprites = nil;
     [super dealloc];
 }
 

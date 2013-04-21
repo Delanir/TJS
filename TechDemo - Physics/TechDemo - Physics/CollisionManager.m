@@ -161,5 +161,11 @@ static CollisionManager* _sharedSingleton = nil;
     [_walls removeObject:wall];
 }
 
+-(void)clearAllEntities
+{
+    [_walls removeAllObjects];
+    [_targets removeAllObjects];
+}
+
 
 @end

@@ -67,6 +67,11 @@ static Registry* _sharedSingleton = nil;
     return [registry objectForKey:entityName];
 }
 
+-(BOOL) entityAlreadyRegistered: (NSString *) name
+{
+    return([registry objectForKey:name]);
+}
+
 -(void) clearRegistry
 {
     [registry removeAllObjects];

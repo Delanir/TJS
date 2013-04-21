@@ -43,13 +43,17 @@ static ResourceManager* _sharedSingleton = nil;
 {
 	self = [super init];
 	if (self != nil) {
-		arrowsUsed = 0;
-        enemyKillCount = 0;
-        enemiesHit = 0;
-        enemiesFromStart = 0;
-        
+		[self reset];
     }
 	return self;
+}
+
+-(void) reset
+{
+    arrowsUsed = 0;
+    enemyKillCount = 0;
+    enemiesHit = 0;
+    enemiesFromStart = 0;
 }
 
 

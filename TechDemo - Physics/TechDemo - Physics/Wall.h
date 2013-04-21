@@ -18,12 +18,12 @@ typedef enum {mint, scratched, damaged, wrecked, totaled} wallStatus;
 
 @interface Wall : Entity
 {
-    double health, lastHealth;
+    double maxHealth, health, lastHealth;
     wallStatus status;
     CCArray *sprites;
 }
 
-@property (nonatomic) double health, lastHealth;
+@property (nonatomic) double maxHealth, health, lastHealth;
 
 
 -(void) damage: (double) amount;

@@ -49,7 +49,7 @@ static WaveManager* _sharedSingleton = nil;
 
 -(void) initializeLevelLogic: (NSString *) level;
 {
-    
+    [self clearLevel];
     // Por waves numa queue. Guardar tempo entre layers
     NSDictionary * levelDetails = [Utils openPlist:level];
     [self setIntervalBetweenWaves:[(NSNumber*)[levelDetails objectForKey:@"timeBetweenWaves"] doubleValue]];

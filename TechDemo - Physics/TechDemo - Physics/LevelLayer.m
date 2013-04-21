@@ -1,4 +1,4 @@
-//
+    //
 //  Level.m
 //  TechDemo - Physics
 //
@@ -45,7 +45,7 @@
         [self addFaerieDragon];
     if((int)floor(timeElapsedSinceBeginning) % 10 == 1)
         [self addZealot];
-     
+    
 }
 
 // on "init" you need to initialize your instance
@@ -55,10 +55,13 @@
     {
         [[Registry shared] registerEntity:self withName:@"LevelLayer"];
         [[SimpleAudioEngine sharedEngine] playBackgroundMusic:[[Config shared] getStringProperty:@"IngameMusic"] loop:YES];
-
+        
         CGSize winSize = [[CCDirector sharedDirector] winSize];
         timeElapsedSinceBeginning = 2.0f;
         fire = NO;
+        
+        // inicializar recursos
+        [self initializeResources];
         
         // Criação da cena com castelo
         MainScene *mainScene = [[MainScene alloc] init];
@@ -73,21 +76,16 @@
         [[Registry shared] registerEntity:yuri withName:@"Yuri"];
         [yuri release];
         
-        
-        // inicializar recursos
-        [self initializeResources];
-        
         // inicializar nível
-        [[WaveManager shared] initializeLevelLogic:@"Level1"];
+        [[WaveManager shared] initializeLevelLogic:@"Level1"];                  // Hardcoded
         [[WaveManager shared] beginWaves];
         
         // This dummy method initializes the collision manager
         [[CollisionManager shared] dummyMethod];
-      
+        
         [self schedule:@selector(update:)];
-      
-      
-      [[CCDirector sharedDirector] purgeCachedData];
+        
+        [[CCDirector sharedDirector] purgeCachedData];
     }
     
     self.isTouchEnabled = YES;
@@ -106,6 +104,7 @@
     [rm setGold: [conf getIntProperty:@"InitialGold"]];
     [rm setSkillPoints: [conf getIntProperty:@"InitialSkillPoints"]];
     [rm setMana: [[conf getNumberProperty:@"InitialMana"] doubleValue]];
+    [rm reset];
 }
 
 - (void)update:(ccTime)dt
@@ -158,14 +157,11 @@
     [arrow release];
     arrow=nil;
     
-    
-
 }
 
 
 -(void)addPeasant
 {
-    
     Peasant * peasant  = [[EnemyFactory shared] generatePeasant];
     
     NSInteger zOrder = [[CCDirector sharedDirector] winSize].height - [peasant sprite].position.y;
@@ -207,9 +203,9 @@
 
 - (void)ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-
+    
     [super ccTouchesBegan:touches withEvent:event];
-   
+    
     fire = YES;
     // Choose one of the touches to work with
     UITouch *touch = [touches anyObject];
@@ -220,9 +216,7 @@
 
 -(void) ccTouchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-
     [super ccTouchesMoved:touches withEvent:event];
-
     fire = NO;
 }
 
@@ -239,8 +233,10 @@
 }
 
 -(void)dealloc{
-  [super dealloc];
-  CCLOG(@"DEALOQUEI");
+    [[CollisionManager shared] clearAllEntities];
+    [[Registry shared] clearRegistry];
+    [super dealloc];
+    CCLOG(@"DEALOQUEI");
 }
 
 

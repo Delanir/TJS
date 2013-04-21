@@ -14,13 +14,15 @@
 
 @implementation LevelSelectLayer
 
--(id)init{
+-(id)init
+{
   [super init];
   [[CCDirector sharedDirector] purgeCachedData];
   return self;
 }
 
--(void)onEnter{
+-(void)onEnter
+{
 #warning ler do dic ou da plist
   [super onEnter];
   [_level1 setLevel:1];
@@ -44,9 +46,8 @@
   
 }
 
-
-
-- (void) pressedGoToMainMenu:(id)sender{
+- (void) pressedGoToMainMenu:(id)sender
+{
   // Load the game scene
   CCScene* gameScene = [CCBReader sceneWithNodeGraphFromFile:@"MainMenu.ccbi"];
   

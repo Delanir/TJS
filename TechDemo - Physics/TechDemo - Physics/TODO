@@ -4,12 +4,21 @@
 *                *
 **/            **/
 
-(JM)
+Bug list:
+- Quando se mete pause e sai do jogo, quando volta ele tira o pause
+    - é preciso não deixar isso acontecer
+- Quando se cria número par de níveis:
+    - Não há wall
+    - Não há waves
+
+- Fazer Máquina de estado
+    - Fazer gestor de cena
+- Melhorar wall com mudança de sprite definida por percentagens
+- Progress bar
+- Criar .h de constantes
 - Acabar lógica dos estimulos
-- Implementar restart
-    - Destruições
-- Alterar lógica do vPos para ser relativo ao ecrã
 - Destruição mais eficiente de projecteis (depois das colisões)
+- Alterar lógica do vPos para ser relativo ao ecrã
 
 (Para usar o dell)
 - Passar para os arqueiros do heroes  (João M)
@@ -20,15 +29,12 @@
 - Fazer menu em baixo
 - Converter todas as sprites com o faststone 
 
-- Progress bar
 - Balancear e fazer mais níveis
-- Select level layer 
 - Fazer fogo e fumo nas walls
     - Ver este exemplo https://github.com/azamsharp/Desert-Race/blob/master/DesertRace/Car.m
 - Multiplas setas de acordo com o nível do yuri
     - já agora, os níveis do yuri
-- Fazer Máquina de estado
-    - Fazer gestor de cena
+
 - Implementar skill tree - implementar a lógica e ver se fazemos uma spritesheet de bocadinhos para melhorar a performance (Daniela)
 - setas a saír por cima da wall
     - isto na verdade é corrigir o zOrder
@@ -137,3 +143,7 @@
 - Fazer health
     - Arquitectura dos estimulos "in place". Enemy.m
 - corrigidas chamadas aos sons para irem ao config
+- Select level layer 
+- Melhorado sistema de particulas para não desaparecer completamente assim que colide com inimigo
+- Reinicialização de singletons
+- Progressão da wall está em percentagem
