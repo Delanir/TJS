@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>InitialArrows</key>
+	<integer>120</integer>
+	<key>InitialMana</key>
+	<integer>200</integer>
+	<key>InitialSkillPoints</key>
+	<integer>5</integer>
+	<key>InitialGold</key>
+	<integer>0</integer>
+	<key>collisionMethod</key>
+	<integer>1</integer>
+	<key>existingEnemies</key>
+	<array>
+		<dict>
+			<key>type</key>
+			<string>peasant</string>
+			<key>class</key>
+			<string>Peasant</string>
+			<key>initSprite</key>
+			<string>p_walk01.png</string>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>faerie</string>
+			<key>class</key>
+			<string>FaerieDragon</string>
+			<key>initSprite</key>
+			<string>fd_fly01.png</string>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>zealot</string>
+			<key>class</key>
+			<string>Zealot</string>
+			<key>initSprite</key>
+			<string>z_walk01.png</string>
+		</dict>
+	</array>
+	<key>MainMenuMusic</key>
+	<string>MainMenu.mp3</string>
+	<key>IngameMusic</key>
+	<string>Battle1.mp3</string>
+	<key>HitSound</key>
+	<string>hit.mp3</string>
+	<key>ShootArrowSound</key>
+	<string>Swoosh.caf</string>
+</dict>
+</plist>
