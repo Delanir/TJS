@@ -13,7 +13,7 @@
 
 #import "Registry.h"
 #import "WaveManager.h"
-#import "StimulusFactory.h"
+
 
 // Particle Systems
 #import "CCParticleSystem.h"

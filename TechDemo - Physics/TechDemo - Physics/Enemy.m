@@ -125,9 +125,11 @@
 
 - (void)update:(ccTime)dt
 {
+    if([healthBar opacity] > 0)
+        [healthBar setOpacity:[healthBar opacity] - dt*0.08];
+    
     if([stimuli count] > 0)
     {
-        [healthBar setOpacity:[healthBar opacity] - dt*0.05];
         
         // PARA EXPANDIR PARA PARTICULARIDADES DE CADA UM DOS ENEMIES
         // É PRECISO POR ESTE FOR EM CADA UMA DAS SUBCLASSES

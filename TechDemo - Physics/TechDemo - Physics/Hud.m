@@ -118,7 +118,7 @@
     unsigned int gold = [rm gold];
     double accuracy = [rm determineAccuracy];
     if (accuracy < 0)
-        [label3 setString:[NSString stringWithFormat:@"Enemies: %i Gold: %i Accuracy: --%%", enemies, gold]];
+        [label3 setString:[NSString stringWithFormat:@"Enemies: %i Gold: %i Accuracy: ---%%", enemies, gold]];
     else
         [label3 setString:[NSString stringWithFormat:@"Enemies: %i Gold: %i Accuracy: %i%%", enemies, gold, (int) accuracy]];
 }
