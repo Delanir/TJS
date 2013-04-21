@@ -175,7 +175,7 @@
 						<key>value</key>
 						<array>
 							<real>512</real>
-							<real>512</real>
+							<real>385</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -197,8 +197,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>0.5</real>
-							<real>0.5</real>
+							<real>1</real>
+							<real>1</real>
 							<true/>
 							<integer>0</integer>
 						</array>
@@ -219,7 +219,18 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>larcher_transparent_name.png</string>
+							<string>MainMenu/menuBackground.jpg</string>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>blendFunc</string>
+						<key>type</key>
+						<string>Blendmode</string>
+						<key>value</key>
+						<array>
+							<integer>770</integer>
+							<integer>771</integer>
 						</array>
 					</dict>
 				</array>
@@ -252,7 +263,7 @@
 								<key>value</key>
 								<array>
 									<real>512</real>
-									<real>256</real>
+									<real>292</real>
 									<integer>0</integer>
 								</array>
 							</dict>
@@ -274,8 +285,8 @@
 								<string>ScaleLock</string>
 								<key>value</key>
 								<array>
-									<real>0.5</real>
-									<real>0.5</real>
+									<real>1</real>
+									<real>1</real>
 									<false/>
 									<integer>0</integer>
 								</array>
@@ -315,7 +326,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>Button_Play.png</string>
+									<string>MainMenu/playButton.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -326,7 +337,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>Button_Play_pressed.png</string>
+									<string>MainMenu/playButton.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -337,7 +348,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>Button_Play_pressed.png</string>
+									<string>MainMenu/playButton.png</string>
 								</array>
 							</dict>
 						</array>
@@ -461,6 +472,18 @@
 						<array>
 							<dict>
 								<key>name</key>
+								<string>position</string>
+								<key>type</key>
+								<string>Position</string>
+								<key>value</key>
+								<array>
+									<real>-89</real>
+									<real>27</real>
+									<integer>0</integer>
+								</array>
+							</dict>
+							<dict>
+								<key>name</key>
 								<string>anchorPoint</string>
 								<key>type</key>
 								<string>Point</string>
@@ -518,7 +541,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>settings_.png</string>
+									<string>MainMenu/buttonSettings.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -529,7 +552,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>settings.png</string>
+									<string>MainMenu/buttonSettingsPressed.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -544,6 +567,8 @@
 								</array>
 							</dict>
 						</array>
+						<key>selected</key>
+						<true/>
 					</dict>
 				</array>
 				<key>customClass</key>
@@ -563,8 +588,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>944</real>
-							<real>68</real>
+							<real>960</real>
+							<real>62</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -670,7 +695,7 @@
 								<key>value</key>
 								<array>
 									<real>150</real>
-									<real>86</real>
+									<real>85</real>
 									<integer>0</integer>
 								</array>
 							</dict>
@@ -733,7 +758,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>skilltree.png</string>
+									<string>MainMenu/buttonSkillTree.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -744,7 +769,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>skilltree.png</string>
+									<string>MainMenu/buttonSkillTreePressed.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -884,8 +909,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>404</real>
-									<real>84</real>
+									<real>398</real>
+									<real>85</real>
 									<integer>0</integer>
 								</array>
 							</dict>
@@ -948,7 +973,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>achievements_.png</string>
+									<string>MainMenu/buttonAchievements.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -959,7 +984,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>achievements.png</string>
+									<string>MainMenu/buttonAchievementsPressed.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -1099,8 +1124,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>640</real>
-									<real>84</real>
+									<real>641</real>
+									<real>85</real>
 									<integer>0</integer>
 								</array>
 							</dict>
@@ -1122,8 +1147,8 @@
 								<string>ScaleLock</string>
 								<key>value</key>
 								<array>
-									<real>1.5</real>
-									<real>1.5</real>
+									<real>1</real>
+									<real>1</real>
 									<true/>
 									<integer>0</integer>
 								</array>
@@ -1163,7 +1188,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>leaderboard_.png</string>
+									<string>MainMenu/buttonLeaderboard.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -1174,7 +1199,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>leaderboard.png</string>
+									<string>MainMenu/buttonLeaderboardPressed.png</string>
 								</array>
 							</dict>
 							<dict>

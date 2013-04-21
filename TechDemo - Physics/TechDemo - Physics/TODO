@@ -11,25 +11,34 @@
 - Alterar lógica do vPos para ser relativo ao ecrã
 - Destruição mais eficiente de projecteis (depois das colisões)
 
+(Para usar o dell)
+- Passar para os arqueiros do heroes  (João M)
+    - Tratar das sprites do wood elf e do grand elf
+- som do impacto tem de ser corrigido
+- Melhorar botões de setas e de pause
+- Por barra de vida na spritesheet
+- Fazer menu em baixo
+- Converter todas as sprites com o faststone 
+
+- Progress bar
+- Balancear e fazer mais níveis
+- Select level layer 
 - Fazer fogo e fumo nas walls
     - Ver este exemplo https://github.com/azamsharp/Desert-Race/blob/master/DesertRace/Car.m
-- Por barra de vida na spritesheet
-- Melhorar botões de setas e de pause
 - Multiplas setas de acordo com o nível do yuri
     - já agora, os níveis do yuri
 - Fazer Máquina de estado
     - Fazer gestor de cena
-- som do impacto tem de ser corrigido
 - Implementar skill tree - implementar a lógica e ver se fazemos uma spritesheet de bocadinhos para melhorar a performance (Daniela)
-- Fazer menu em baixo
 - setas a saír por cima da wall
     - isto na verdade é corrigir o zOrder
 - Random shouts dos inimigos (Daniela)
 - Menus com Cocos Builder! (Daniela, Ricardo)
-- Passar para os arqueiros do heroes  (João M)
-    - Tratar das sprites do wood elf e do grand elf
 - Fazer projectiles do zealot
 - Lógica de levar dano em cima do moat
+
+
+
 
 /**           /**
 *               *
