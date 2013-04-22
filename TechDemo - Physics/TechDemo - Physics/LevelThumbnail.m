@@ -8,6 +8,7 @@
 
 #import "LevelThumbnail.h"
 #import "LevelLayer.h"
+#import "GameManager.h"
 
 
 @implementation LevelThumbnail
@@ -25,7 +26,8 @@
 - (void) goToLevel:(id)sender{
   //NSString *abc =[NSString string]
 //  CCLOG(@"pressed %d", numberStars)
-  [[CCDirector sharedDirector] replaceScene:[LevelLayer scene]];
+#warning temporário
+    [[GameManager shared] runSceneWithID:kGameLevel];
   
   
 }

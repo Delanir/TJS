@@ -15,13 +15,14 @@
    
 }
 
-@property (nonatomic, retain) NSMutableDictionary * registry;
+@property (retain) NSMutableDictionary * registry;
 @property (nonatomic, retain)  CCLayer *lastScene;
 +(Registry*)shared;
 
 -(void) registerEntity: (id) entity withName: (NSString *) name;
 -(id) getEntityByName: (NSString *) entityName;
 -(void) clearRegistry;
+-(void) printRegistry;
 
 
 @end

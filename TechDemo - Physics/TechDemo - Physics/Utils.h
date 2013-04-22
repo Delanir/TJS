@@ -12,5 +12,7 @@
 
 +(BOOL)iPadRetina;
 +(NSDictionary *) openPlist: (NSString *) plist;
+id loadData(NSString * filename);
+void saveData(id theData, NSString *filename);
 
 @end

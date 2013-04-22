@@ -57,7 +57,7 @@
         [[SimpleAudioEngine sharedEngine] playBackgroundMusic:[[Config shared] getStringProperty:@"IngameMusic"] loop:YES];
         
         CGSize winSize = [[CCDirector sharedDirector] winSize];
-        timeElapsedSinceBeginning = 2.0f;
+        timeElapsedSinceBeginning = 1.0f;
         fire = NO;
         
         // inicializar recursos
@@ -117,10 +117,8 @@
     [hud updateWallHealth];
     [hud updateData];
     
-    if (((Wall *)[[Registry shared]getEntityByName:@"Wall"]).health<=0 && (_gameOver==nil)) {
-        [self gameOver];
-    }
-    
+    if (((Wall *)[[Registry shared]getEntityByName:@"Wall"]).health<=0 && (_gameOver==nil))
+        [self gameOver];    
 }
 
 
@@ -233,10 +231,11 @@
 }
 
 -(void)dealloc{
+    [self unscheduleAllSelectors];
     [[CollisionManager shared] clearAllEntities];
     [[Registry shared] clearRegistry];
     [super dealloc];
-    CCLOG(@"DEALOQUEI");
+    //CCLOG(@"DEALOQUEI");
 }
 
 

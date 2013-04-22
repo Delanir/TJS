@@ -11,7 +11,8 @@
 #import "CCBReader.h"
 #import "SimpleAudioEngine.h"
 
-@interface SettingsMenuLayer : CCLayer {
+@interface SettingsMenuLayer : CCLayer
+{
     CCSprite * _mute;
 }
 

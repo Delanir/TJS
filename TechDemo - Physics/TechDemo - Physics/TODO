@@ -10,10 +10,30 @@ Bug list:
 - Quando se cria número par de níveis:
     - Não há wall
     - Não há waves
+    - Isto acontece porque a entidade que está no registry fica mal composta
+    - Depois de limpar o registry, quando se insere alguma coisa, o directorio fica vazio à mesma
 
-- Fazer Máquina de estado
-    - Fazer gestor de cena
-- Melhorar wall com mudança de sprite definida por percentagens
+- Definir achievements
+    - Criar classe gameState para fazer track dos resources e estado do jogo
+    - loadState vai definir:
+        - Nível do yuri
+        - Estado da SkillTree
+        - Estado dos achievements
+        - Estado do leaderboard
+        - Estado das settings
+        - Gold actual
+        - Skill points actuais (skill tree)
+        - Níveis completos e estrelas associadas
+        
+- Ligar ao game center para fazer achievements e leaderboard
+    - A partir da página 495 do livro
+
+- Criar layers de achievements e leaderboard
+
+- Acabar parte dos níveis
+    - Fazer método no gamemanager RunLevelNumber: (int) levelNumber
+    - Fica dinâmico e recebe o parametro do thumbnail que é criado no selectLevelLayer
+
 - Progress bar
 - Criar .h de constantes
 - Acabar lógica dos estimulos
@@ -28,6 +48,10 @@ Bug list:
 - Por barra de vida na spritesheet
 - Fazer menu em baixo
 - Converter todas as sprites com o faststone 
+- Sprites dos edifícios
+    - mage tower
+    - masonry
+    - fletcher
 
 - Balancear e fazer mais níveis
 - Fazer fogo e fumo nas walls
@@ -39,7 +63,6 @@ Bug list:
 - setas a saír por cima da wall
     - isto na verdade é corrigir o zOrder
 - Random shouts dos inimigos (Daniela)
-- Menus com Cocos Builder! (Daniela, Ricardo)
 - Fazer projectiles do zealot
 - Lógica de levar dano em cima do moat
 
@@ -147,3 +170,6 @@ Bug list:
 - Melhorado sistema de particulas para não desaparecer completamente assim que colide com inimigo
 - Reinicialização de singletons
 - Progressão da wall está em percentagem
+- Criado gestor de cena
+- Criados métodos para carregar e salvar dados para ficheiros
+- Criada classe GameState

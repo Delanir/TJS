@@ -8,6 +8,7 @@
 
 #import "MainMenuLayer.h"
 #import "Registry.h"
+#import "GameManager.H"
 
 @implementation MainMenuLayer
 
@@ -27,16 +28,12 @@
 
 - (void) pressedSettings:(id)sender
 {
-    CCScene* gameScene = [CCBReader sceneWithNodeGraphFromFile:@"SettingsMenu.ccbi"];
-    
-    [[CCDirector sharedDirector] replaceScene:gameScene];
+    [[GameManager shared] runSceneWithID:kSettingsScene];
 }
 
 - (void) pressedSkillTree:(id)sender
 {
-    CCScene* gameScene = [CCBReader sceneWithNodeGraphFromFile:@"SkillTreeLayer.ccbi"];
-    
-    [[CCDirector sharedDirector] replaceScene:gameScene];
+    [[GameManager shared] runSceneWithID:kSkillTreeScene];
 }
 
 - (void) pressedAchievments:(id)sender
@@ -65,10 +62,7 @@
 
 - (void) pressedPlay:(id)sender
 {
-    CCScene* gameScene = [CCBReader sceneWithNodeGraphFromFile:@"LevelSelectLayer.ccbi"];
-    
-    // Go to the game scene
-    [[CCDirector sharedDirector] replaceScene:gameScene];
+    [[GameManager shared] runSceneWithID:kSelectLevel];
 }
 
 #pragma mark GameKit delegate

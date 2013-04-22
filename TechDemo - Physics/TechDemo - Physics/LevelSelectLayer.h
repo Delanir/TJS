@@ -11,7 +11,8 @@
 #import "CCLayer.h"
 #import "LevelThumbnail.h"
 
-@interface LevelSelectLayer : CCLayer{
+@interface LevelSelectLayer : CCLayer
+{
   LevelThumbnail *_level1;
   LevelThumbnail *_level2;
 }

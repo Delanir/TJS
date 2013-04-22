@@ -10,7 +10,8 @@
 #import "cocos2d.h"
 #import "CCBReader.h"
 
-@interface SkillTreeLayer : CCLayer {
+@interface SkillTreeLayer : CCLayer
+{
     CCSprite *_iceMainBranch;
     CCSprite *_iceElement2;
     CCSprite *_iceElement1;

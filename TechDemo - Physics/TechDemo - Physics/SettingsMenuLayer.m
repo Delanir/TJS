@@ -7,29 +7,33 @@
 //
 
 #import "SettingsMenuLayer.h"
+#import "GameManager.h"
 
 
 @implementation SettingsMenuLayer
 
--(id)init{
+-(id)init
+{
   [super init];
   [[CCDirector sharedDirector] purgeCachedData];
   return self;
 }
 
-- (void) pressedMainMenu:(id)sender{
-    // Load the game scene
-    CCScene* gameScene = [CCBReader sceneWithNodeGraphFromFile:@"MainMenu.ccbi"];
-    
-    // Go to the game scene
-    [[CCDirector sharedDirector] replaceScene:gameScene];
+- (void) pressedMainMenu:(id)sender
+{
+    [[GameManager shared] runSceneWithID:kMainMenuScene];
 };
-- (void) toggleMute:(id)sender{
+
+- (void) toggleMute:(id)sender
+{
     BOOL mute = [[SimpleAudioEngine sharedEngine] mute];
-    if (mute) {
+    if (mute)
+    {
         [[SimpleAudioEngine sharedEngine] setMute:NO];
         [_mute setVisible:YES];
-    }else{
+    }
+    else
+    {
         [[SimpleAudioEngine sharedEngine] setMute:YES];
         [_mute setVisible:NO];
     }

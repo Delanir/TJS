@@ -8,6 +8,7 @@
 
 #import "SkillTreeLayer.h"
 #import "Registry.h"
+#import "GameManager.h"
 
 @implementation SkillTreeLayer
 
@@ -98,7 +99,8 @@ static SkillTreeLayer* _sharedSingleton = nil;
     [_marksmanBranch1 setVisible:NO];
 }
 
-- (void) pressedCitySymbol:(id)sender{
+- (void) pressedCitySymbol:(id)sender
+{
     [_cityMainBranch setVisible:YES];
     [_cityElement2 setVisible:YES];
     [_cityElement1 setVisible:YES];
@@ -108,7 +110,8 @@ static SkillTreeLayer* _sharedSingleton = nil;
     [_cityBranch1 setVisible:YES];
 }
 
-- (void) pressedFireSymbol:(id)sender{
+- (void) pressedFireSymbol:(id)sender
+{
     [_fireMainBranch setVisible:YES];
     [_fireElement2 setVisible:YES];
     [_fireElement1 setVisible:YES];
@@ -118,7 +121,8 @@ static SkillTreeLayer* _sharedSingleton = nil;
     [_fireBranch1 setVisible:YES];
 }
 
-- (void) pressedMarksmanSymbol:(id)sender{
+- (void) pressedMarksmanSymbol:(id)sender
+{
     [_marksmanMainBranch setVisible:YES];
     [_marksmanElement2 setVisible:YES];
     [_marksmanElement1 setVisible:YES];
@@ -128,7 +132,8 @@ static SkillTreeLayer* _sharedSingleton = nil;
     [_marksmanBranch1 setVisible:YES];
 }
 
-- (void) pressedIceSymbol:(id)sender{
+- (void) pressedIceSymbol:(id)sender
+{
     [_iceMainBranch setVisible:YES];
     [_iceElement2 setVisible:YES];
     [_iceElement1 setVisible:YES];
@@ -138,17 +143,13 @@ static SkillTreeLayer* _sharedSingleton = nil;
     [_iceBranch1 setVisible:YES];
 }
 
-- (void) pressedMainMenu:(id)sender{
-    // Load the game scene
-    CCScene* gameScene = [CCBReader sceneWithNodeGraphFromFile:@"MainMenu.ccbi"];
-    
-    // Go to the game scene
-    [[CCDirector sharedDirector] replaceScene:gameScene];
-    
-  
+- (void) pressedMainMenu:(id)sender
+{
+   [[GameManager shared] runSceneWithID:kMainMenuScene];
 }
 
--(void)onExit{
+-(void)onExit
+{
   [super onExit];
   [self removeAllChildrenWithCleanup:YES];
 }

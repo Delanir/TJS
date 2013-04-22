@@ -7,6 +7,7 @@
 //
 
 #import "LevelLayerAbstract.h"
+#import "GameManager.h"
 
 
 @implementation LevelLayerAbstract
@@ -82,8 +83,7 @@
     {
         [self removeAllChildrenWithCleanup:YES];
         [[CCDirector sharedDirector] resume];
-        CCScene* gameScene = [CCBReader sceneWithNodeGraphFromFile:@"MainMenu.ccbi"];
-        [[CCDirector sharedDirector] replaceScene:gameScene];
+        [[GameManager shared] runSceneWithID:kMainMenuScene];
         
     }
 }

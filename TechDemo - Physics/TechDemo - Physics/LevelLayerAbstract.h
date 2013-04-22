@@ -40,7 +40,8 @@
 
 #import "WaveManager.h"
 
-@interface LevelLayerAbstract : CCLayer <GKAchievementViewControllerDelegate, GKLeaderboardViewControllerDelegate>{
+@interface LevelLayerAbstract : CCLayer <GKAchievementViewControllerDelegate, GKLeaderboardViewControllerDelegate>
+{
     CCSprite *_pauseButton;
     GameOver *_gameOver;
     PauseHUD *_pause;

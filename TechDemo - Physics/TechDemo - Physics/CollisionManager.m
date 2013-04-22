@@ -57,6 +57,8 @@ static CollisionManager* _sharedSingleton = nil;
 // on "dealloc" you need to release all your retained objects
 - (void) dealloc
 {
+    [_walls release];
+    _walls = nil;
     [_targets release];
     _targets = nil;
     [_projectiles release];
@@ -163,6 +165,7 @@ static CollisionManager* _sharedSingleton = nil;
 
 -(void)clearAllEntities
 {
+    [_projectiles removeAllObjects];
     [_walls removeAllObjects];
     [_targets removeAllObjects];
 }
