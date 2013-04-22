@@ -4,6 +4,7 @@
 *                *
 **/            **/
 
+Daniela:
 Bug list:
 - Quando se mete pause e sai do jogo, quando volta ele tira o pause
     - é preciso não deixar isso acontecer
@@ -12,39 +13,35 @@ Bug list:
     - Não há waves
     - Isto acontece porque a entidade que está no registry fica mal composta
     - Depois de limpar o registry, quando se insere alguma coisa, o directorio fica vazio à mesma
+Outras coisas:
+- Progress bar (o que está feito está no teu pc)
+- Implementar skill tree - implementar a lógica e ver se fazemos uma spritesheet de bocadinhos para melhorar a performance (Daniela)
+- Random shouts dos inimigos (Daniela)
 
-- Definir achievements
-    - Criar classe gameState para fazer track dos resources e estado do jogo
-    - loadState vai definir:
-        - Nível do yuri
-        - Estado da SkillTree
-        - Estado dos achievements
-        - Estado do leaderboard
-        - Estado das settings
-        - Gold actual
-        - Skill points actuais (skill tree)
-        - Níveis completos e estrelas associadas
-        
-- Ligar ao game center para fazer achievements e leaderboard
-    - A partir da página 495 do livro
-
-- Criar layers de achievements e leaderboard
-
+João M:
+- Criar classe gameState para fazer track dos resources e estado do jogo
+- loadState vai definir:
+    - Nível do yuri
+    - Estado da SkillTree
+    - Estado dos achievements
+    - Estado do leaderboard
+    - Estado das settings
+    - Gold actual
+    - Skill points actuais (skill tree)
+    - Níveis completos e estrelas associadas
 - Acabar parte dos níveis
     - Fazer método no gamemanager RunLevelNumber: (int) levelNumber
     - Fica dinâmico e recebe o parametro do thumbnail que é criado no selectLevelLayer
-
-- Progress bar
 - Criar .h de constantes
+- Destruição mais eficiente de projecteis
 - Acabar lógica dos estimulos
-- Destruição mais eficiente de projecteis (depois das colisões)
+- Lógica de levar dano em cima do moat
 - Alterar lógica do vPos para ser relativo ao ecrã
-
 (Para usar o dell)
 - Passar para os arqueiros do heroes  (João M)
     - Tratar das sprites do wood elf e do grand elf
 - som do impacto tem de ser corrigido
-- Melhorar botões de setas e de pause
+- Sprite de voltar para trás
 - Por barra de vida na spritesheet
 - Fazer menu em baixo
 - Converter todas as sprites com o faststone 
@@ -52,21 +49,24 @@ Bug list:
     - mage tower
     - masonry
     - fletcher
+        
+Ricardo:
+- Ligar ao game center para fazer achievements e leaderboard
+    - A partir da página 495 do livro que está na drop
+- Criar layers de achievements e leaderboard
+- Definir achievements
+- Balancear dificuldade e fazer mais níveis
 
-- Balancear e fazer mais níveis
+João A:
 - Fazer fogo e fumo nas walls
     - Ver este exemplo https://github.com/azamsharp/Desert-Race/blob/master/DesertRace/Car.m
 - Multiplas setas de acordo com o nível do yuri
     - já agora, os níveis do yuri
-
-- Implementar skill tree - implementar a lógica e ver se fazemos uma spritesheet de bocadinhos para melhorar a performance (Daniela)
 - setas a saír por cima da wall
     - isto na verdade é corrigir o zOrder
-- Random shouts dos inimigos (Daniela)
 - Fazer projectiles do zealot
-- Lógica de levar dano em cima do moat
-
-
+    
+    
 
 
 /**           /**
