@@ -129,14 +129,15 @@
     [stimulusPackage removeAllObjects];
     NSMutableArray * buttons = [hud buttonsPressed];
     
-    
-    [stimulusPackage addObject:[[StimulusFactory shared] generateDamageStimulusWithValue:2]];
-    if ([[buttons objectAtIndex:power1button] boolValue])
-        [stimulusPackage addObject:[[StimulusFactory shared] generateColdStimulusWithValue:2]];
-    if ([[buttons objectAtIndex:power2button] boolValue])
-        [stimulusPackage addObject:[[StimulusFactory shared] generateFireStimulusWithValue:2]];
-    if ([[buttons objectAtIndex:power3button] boolValue])
-        [stimulusPackage addObject:[[StimulusFactory shared] generatePushBackStimulusWithValue:2]];
+#warning depois de fazer o gamestate, podemos testá-lo para linkar com os valores dos estimulos
+#warning calculate stimulus value method or something
+    [stimulusPackage addObject:[[StimulusFactory shared] generateDamageStimulusWithValue:50]];
+    if ([[buttons objectAtIndex:kPower1Button] boolValue])
+        [stimulusPackage addObject:[[StimulusFactory shared] generateColdStimulusWithValue:50]];
+    if ([[buttons objectAtIndex:kPower2Button] boolValue])
+        [stimulusPackage addObject:[[StimulusFactory shared] generateFireStimulusWithValue:50]];
+    if ([[buttons objectAtIndex:kPower3Button] boolValue])
+        [stimulusPackage addObject:[[StimulusFactory shared] generatePushBackStimulusWithValue:50]];
     
     Arrow * arrow = [[Arrow alloc] initWithDestination:alocation andStimulusPackage:stimulusPackage];
     

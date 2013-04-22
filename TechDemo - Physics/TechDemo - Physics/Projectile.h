@@ -7,8 +7,7 @@
 //
 
 #import "Entity.h"
-
-typedef enum {ice, air, fire} particleType;
+#import "Constants.h"
 
 @interface Projectile : Entity
 {

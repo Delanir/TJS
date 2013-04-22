@@ -70,7 +70,7 @@
     {
         switch ([stimulus type])
         {
-            case slow:
+            case kSlowStimulus:
                 ps = [[CCParticleSun node] retain];
                 [ps setTag:7];
                 [self addChild:ps];
@@ -86,7 +86,7 @@
                                //[CCCallFuncN actionWithTarget:self selector:@selector(spriteMoveFinished:)],
                                nil]];
                 break;
-            case dot:
+            case kDOTStimulus:
                 ps = [[CCParticleSun node] retain];
                 [ps setTag:7];
                 [self addChild:ps];
@@ -105,7 +105,7 @@
                                //[CCCallFuncN actionWithTarget:self selector:@selector(spriteMoveFinished:)],
                                nil]];
                 break;
-            case pushBack:
+            case KPushBackStimulus:
                 ps = [[CCParticleSun node] retain];
                 [ps setTag:7];
                 [self addChild:ps];

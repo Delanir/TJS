@@ -9,6 +9,7 @@
 #import "cocos2d.h"
 #import "CCNode.h"
 #import "CCBReader.h"
+
 @interface LevelStars : CCNode{
   CCSprite *_star1;
   CCSprite *_star2;

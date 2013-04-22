@@ -17,8 +17,6 @@
     CCArray * _walls;
 }
 
-
-
 +(CollisionManager*)shared;
 
 -(void)dummyMethod;

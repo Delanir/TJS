@@ -8,20 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "CCBReader.h"
-
-typedef enum {
-    kNoSceneInitialized=0,
-    kMainMenuScene=1,
-    kSkillTreeScene=2,
-    kAchievementsScene=3,
-    kLeaderboardScene=4,
-    kSettingsScene=5,
-    kSelectLevel=6,
-    kGameLevel=7,
-    kGameOverScene=8,
-    kLevelCompleteScene=9,
-    kCreditsScene=101,
-} SceneTypes;
+#import "Constants.h"
 
 @interface GameManager : NSObject
 {

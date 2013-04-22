@@ -139,25 +139,25 @@
             Stimulus * stimulus = [stimuli dequeue];
             
             switch ([stimulus type]) {
-                case damage:
-                    [self takeDamage:50];
+                case kDamageStimulus:
+                    [self takeDamage:[stimulus value]];
                     break;
-                case dot:
+                case kDOTStimulus:
                     // FAZER LOGICA DE DAMAGE OVER TIME
                     // METER UMA VARIAVEL QUE DECREMENTA
                     // ENQUANTO N É ZERO, PARTICULAS FOGO
-                    [self takeDamage:50];
+                    [self takeDamage:[stimulus value]];
                     break;
-                case slow:
+                case kSlowStimulus:
                     // FAZER LOGICA DE SLOW
                     // METER UMA VARIAVEL QUE DECREMENTA
                     // ENQUANTO N É ZERO, SPEED MAIS LENTO -> REFAZER ANIMAÇÃO
-                    [self takeDamage:50];
+                    [self takeDamage:[stimulus value]];
                     break;
-                case pushBack:
+                case KPushBackStimulus:
                     // FAZER LOGICA DE PUSH BACK
                     // TRANSLATES PARA TRÁS
-                    [self takeDamage:20];
+                    [self takeDamage:[stimulus value]];
                     break;
                 default:
                     break;

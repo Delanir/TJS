@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "cocos2d.h"
-
-typedef enum {pushBack, slow, dot, damage} stimulusType;
+#import "Constants.h"
 
 @interface Stimulus : NSObject
 {

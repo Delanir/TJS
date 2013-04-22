@@ -11,8 +11,7 @@
 
 @interface Registry : NSObject
 {
-    NSMutableDictionary * registry;
-   
+    NSMutableDictionary * registry;   
 }
 
 @property (retain) NSMutableDictionary * registry;

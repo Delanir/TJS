@@ -10,8 +10,7 @@
 #import "Wall.h"
 #import "Registry.h"
 #import "ResourceManager.h"
-
-typedef enum {power1button, power2button, power3button} powerButton;
+#import "Constants.h"
 
 @interface Hud : CCLayer
 {

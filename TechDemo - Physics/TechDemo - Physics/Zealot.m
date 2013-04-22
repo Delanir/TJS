@@ -16,7 +16,7 @@
 {
     if (self = [super initWithSprite:spriteFile])
     {
-        [self setCurrentState:walk];
+        [self setCurrentState:kWalkEnemyState];
         [self setStrength:1.0];
         [self setGoldValue:3];
         [self setSpeed:20];
@@ -44,7 +44,7 @@
 
 -(void) attack
 {
-    [self setCurrentState:attack];
+    [self setCurrentState:kAttackEnemyState];
     [[self sprite] stopAllActions];
     [[self healthBar] stopAllActions];
     [sprite setPosition:ccp([sprite position].x +10, [sprite position].y)];
@@ -55,7 +55,7 @@
 -(void) die
 {
     [super die];
-    [self setCurrentState:die];
+    [self setCurrentState:kDieEnemyState];
     [[self sprite] stopAllActions];
     
     CCFiniteTimeAction * dieAction = [CCRepeat actionWithAction:[CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"z_dies" ]] times:1];

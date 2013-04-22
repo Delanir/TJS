@@ -156,6 +156,7 @@
 		9C11EEC9172073F5003510EB /* NSMutableArray+QueueAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C11EEC8172073F5003510EB /* NSMutableArray+QueueAdditions.m */; };
 		9C1E05B617249B3A0093F0E3 /* GameManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1E05B517249B380093F0E3 /* GameManager.m */; };
 		9C1E05BC1724C0560093F0E3 /* GameState.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1E05BB1724C0560093F0E3 /* GameState.m */; };
+		9C1E05BF1724C7B00093F0E3 /* DoneStuff in Resources */ = {isa = PBXBuildFile; fileRef = 9C1E05BE1724C7B00093F0E3 /* DoneStuff */; };
 		9C2B3CBD171EE8FB00E695FE /* Registry Entities in Resources */ = {isa = PBXBuildFile; fileRef = 9C2B3CBC171EE8FB00E695FE /* Registry Entities */; };
 		9C377BE9170B72D400F840FB /* KKPixelMaskSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C377BE2170B6F5100F840FB /* KKPixelMaskSprite.m */; };
 		9C377BEA170B72D700F840FB /* bitarray.c in Sources */ = {isa = PBXBuildFile; fileRef = 9C377BE3170B715A00F840FB /* bitarray.c */; };
@@ -546,6 +547,8 @@
 		9C1E05B517249B380093F0E3 /* GameManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameManager.m; sourceTree = "<group>"; };
 		9C1E05BA1724C0550093F0E3 /* GameState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameState.h; sourceTree = "<group>"; };
 		9C1E05BB1724C0560093F0E3 /* GameState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameState.m; sourceTree = "<group>"; };
+		9C1E05BD1724C4CC0093F0E3 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		9C1E05BE1724C7B00093F0E3 /* DoneStuff */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DoneStuff; sourceTree = "<group>"; };
 		9C2B3CBC171EE8FB00E695FE /* Registry Entities */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Registry Entities"; sourceTree = "<group>"; };
 		9C377BE1170B6F5100F840FB /* KKPixelMaskSprite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKPixelMaskSprite.h; sourceTree = "<group>"; };
 		9C377BE2170B6F5100F840FB /* KKPixelMaskSprite.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKPixelMaskSprite.m; sourceTree = "<group>"; };
@@ -1071,6 +1074,7 @@
 				9C94ABD717197BD2005BCE32 /* zDepth */,
 				9C2B3CBC171EE8FB00E695FE /* Registry Entities */,
 				8B79CDD9171F2D2500E58EDD /* TODO */,
+				9C1E05BE1724C7B00093F0E3 /* DoneStuff */,
 			);
 			name = "Configs and References";
 			path = ..;
@@ -1778,6 +1782,7 @@
 		9C9ADB2A17218A5E00C3FA59 /* Helper Classes */ = {
 			isa = PBXGroup;
 			children = (
+				9C1E05BD1724C4CC0093F0E3 /* Constants.h */,
 				9C11EEC7172073F5003510EB /* NSMutableArray+QueueAdditions.h */,
 				9C11EEC8172073F5003510EB /* NSMutableArray+QueueAdditions.m */,
 				9C9ADB2B17218AA200C3FA59 /* Utils.h */,
@@ -2064,6 +2069,7 @@
 				8CE17A0E172460F90069B4E3 /* IceButton-bw.png in Resources */,
 				8CE17A0F172460F90069B4E3 /* IceButton.png in Resources */,
 				8CE17A10172460F90069B4E3 /* MarksManButton-bw.png in Resources */,
+				9C1E05BF1724C7B00093F0E3 /* DoneStuff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

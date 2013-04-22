@@ -10,9 +10,7 @@
 #import "Registry.h"
 #import "ResourceManager.h"
 #import "NSMutableArray+QueueAdditions.h"
-
-
-typedef enum {walk, attack, fly, land, hit, die} state;
+#import "Constants.h"
 
 @interface Enemy : Entity
 {

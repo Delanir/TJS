@@ -10,8 +10,6 @@
 	<integer>5</integer>
 	<key>InitialGold</key>
 	<integer>0</integer>
-	<key>collisionMethod</key>
-	<integer>1</integer>
 	<key>existingEnemies</key>
 	<array>
 		<dict>

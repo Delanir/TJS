@@ -13,8 +13,7 @@
 #import "CollisionManager.h"
 #import <objc/runtime.h>
 #import "Registry.h"
-
-typedef enum {mint, scratched, damaged, wrecked, totaled} wallStatus;
+#import "Constants.h"
 
 @interface Wall : Entity
 {

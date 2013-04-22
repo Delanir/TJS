@@ -107,44 +107,4 @@ static GameManager* _sharedSingleton = nil;
         [[CCDirector sharedDirector] replaceScene:sceneToRun];
 }
 
--(void)pushSceneWithID:(SceneTypes)sceneID {
-    SceneTypes oldScene = currentScene;
-    currentScene = sceneID;
-    id sceneToRun = nil;
-    switch (sceneID) {
-        case kMainMenuScene:
-            sceneToRun = [CCBReader sceneWithNodeGraphFromFile:@"MainMenu.ccbi"];
-            [[CCDirector sharedDirector] pushScene:sceneToRun];
-            return;
-        case kSkillTreeScene:
-            sceneToRun = [CCBReader sceneWithNodeGraphFromFile:@"SkillTreeLayer.ccbi"];
-            break;
-        case kAchievementsScene:
-            //            sceneToRun = ; // TODO
-            break;
-        case kLeaderboardScene:
-            //            sceneToRun = ; // TODO
-            break;
-        case kSettingsScene:
-            sceneToRun = [CCBReader sceneWithNodeGraphFromFile:@"SettingsMenu.ccbi"];
-            break;
-        case kSelectLevel:
-            sceneToRun = [CCBReader sceneWithNodeGraphFromFile:@"LevelSelectLayer.ccbi"];
-            break;
-        case kGameLevel:
-            //            sceneToRun = [GameScene node]; // TODO interactive way to do this for every level
-            break;
-        case kGameOverScene:
-            //            sceneToRun = [GameScene node]; // TODO
-            break;
-        case kLevelCompleteScene:
-            //            sceneToRun = [GameScene node]; // TODO
-            break;
-        default:
-            CCLOG(@"Unknown ID, cannot push scenes");
-            return;
-            break;
-    }
-}
-
 @end

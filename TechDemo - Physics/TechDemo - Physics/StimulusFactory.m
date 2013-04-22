@@ -50,28 +50,28 @@ static StimulusFactory* _sharedSingleton = nil;
 
 -(Stimulus*) generateColdStimulusWithValue: (double) value
 {
-    Stimulus * coldStimulus = [[Stimulus alloc] initWithStimulusType:slow andValue:value];
+    Stimulus * coldStimulus = [[Stimulus alloc] initWithStimulusType:kSlowStimulus andValue:value];
     [coldStimulus autorelease];
     return coldStimulus;
 }
 
 -(Stimulus*) generateFireStimulusWithValue: (double) value
 {
-    Stimulus * fireStimulus = [[Stimulus alloc] initWithStimulusType:dot andValue:value];
+    Stimulus * fireStimulus = [[Stimulus alloc] initWithStimulusType:kDOTStimulus andValue:value];
     [fireStimulus autorelease];
     return fireStimulus;
 }
 
 -(Stimulus*) generateDamageStimulusWithValue: (double) value
 {
-    Stimulus * damageStimulus = [[Stimulus alloc] initWithStimulusType:damage andValue:value];
+    Stimulus * damageStimulus = [[Stimulus alloc] initWithStimulusType:kDamageStimulus andValue:value];
     [damageStimulus autorelease];
     return damageStimulus;
 }
 
 -(Stimulus*) generatePushBackStimulusWithValue: (double) value
 {
-    Stimulus * pushBackStimulus = [[Stimulus alloc] initWithStimulusType:pushBack andValue:value];
+    Stimulus * pushBackStimulus = [[Stimulus alloc] initWithStimulusType:KPushBackStimulus andValue:value];
     [pushBackStimulus autorelease];
     return pushBackStimulus;
 }

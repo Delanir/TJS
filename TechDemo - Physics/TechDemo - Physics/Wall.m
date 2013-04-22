@@ -19,7 +19,7 @@
         maxHealth = 100.0f; // Vai depender da skilltree
         health = maxHealth;
         lastHealth = maxHealth;
-        status = mint;
+        status = kMintWall;
         
         sprites = [[CCArray alloc] init];
         
@@ -64,6 +64,9 @@
         [[CollisionManager shared] addToWalls:castlebottom100];
         
         [self schedule:@selector(update:)];
+        
+#warning temporario
+        [self addMoat];
     }
     
     return self;
@@ -74,25 +77,25 @@
     //Only test if required - try health and status
     if(health != lastHealth)
     {
-        if (health < (0.75 * maxHealth) && health >= (0.5 * maxHealth) && status == mint)
+        if (health < (0.75 * maxHealth) && health >= (0.5 * maxHealth) && status == kMintWall)
         {
             [self changeTopSprite:[sprites objectAtIndex:2] bottomSprite:[sprites objectAtIndex:3]];
-            status = scratched;
+            status = kScratchedWall;
         }
-        else if (health < (0.5 * maxHealth) && health >= (0.25 * maxHealth) && status == scratched)
+        else if (health < (0.5 * maxHealth) && health >= (0.25 * maxHealth) && status == kScratchedWall)
         {
             [self changeTopSprite:[sprites objectAtIndex:4] bottomSprite:[sprites objectAtIndex:5]];
-            status = damaged;
+            status = kDamagedWall;
         }
-        else if (health < (0.25 * maxHealth) && health > 0 && status == damaged)
+        else if (health < (0.25 * maxHealth) && health > 0 && status == kDamagedWall)
         {
             [self changeTopSprite:[sprites objectAtIndex:6] bottomSprite:[sprites objectAtIndex:7]];
-            status = wrecked;
+            status = kWreckedWall;
         }
-        else if (health <= 0 && status == wrecked)
+        else if (health <= 0 && status == kWreckedWall)
         {
             [self changeTopSprite:[sprites objectAtIndex:8] bottomSprite:[sprites objectAtIndex:9]];
-            status = totaled;
+            status = kTotaledWall;
         }
         lastHealth = health;
     }

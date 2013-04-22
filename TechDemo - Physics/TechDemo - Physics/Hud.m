@@ -71,17 +71,17 @@
 
 - (void) plusButtonToggle
 {
-    [self toggleButton:power1button];
+    [self toggleButton:kPower1Button];
 }
 
 - (void) crossButtonToggle
 {
-    [self toggleButton:power2button];
+    [self toggleButton:kPower2Button];
 }
 
 - (void) bullseyeButtonToggle
 {
-    [self toggleButton:power3button];
+    [self toggleButton:kPower3Button];
 }
 
 
