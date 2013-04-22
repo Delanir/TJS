@@ -147,6 +147,12 @@
 		8BFC3F0F17204440000161FD /* GameOver.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 8BFC3F0E17204440000161FD /* GameOver.ccbi */; };
 		8CA9AECA17244CE400283D69 /* FireButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CA9AEC717244CE400283D69 /* FireButton.png */; };
 		8CA9AECC17244CE400283D69 /* MarksManButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CA9AEC917244CE400283D69 /* MarksManButton.png */; };
+		8CDE45941725A4630076BF38 /* FireButton-bw-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CDE458E1725A4630076BF38 /* FireButton-bw-ipadhd.png */; };
+		8CDE45951725A4630076BF38 /* FireButton-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CDE458F1725A4630076BF38 /* FireButton-ipadhd.png */; };
+		8CDE45961725A4630076BF38 /* IceButton-bw-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CDE45901725A4630076BF38 /* IceButton-bw-ipadhd.png */; };
+		8CDE45971725A4630076BF38 /* IceButton-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CDE45911725A4630076BF38 /* IceButton-ipadhd.png */; };
+		8CDE45981725A4630076BF38 /* MarksManButton-bw-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CDE45921725A4630076BF38 /* MarksManButton-bw-ipadhd.png */; };
+		8CDE45991725A4630076BF38 /* MarksManButton-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CDE45931725A4630076BF38 /* MarksManButton-ipadhd.png */; };
 		8CE17A0D172460F90069B4E3 /* FireButton-bw.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CE17A09172460F90069B4E3 /* FireButton-bw.png */; };
 		8CE17A0E172460F90069B4E3 /* IceButton-bw.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CE17A0A172460F90069B4E3 /* IceButton-bw.png */; };
 		8CE17A0F172460F90069B4E3 /* IceButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CE17A0B172460F90069B4E3 /* IceButton.png */; };
@@ -535,6 +541,12 @@
 		8BFC3F0E17204440000161FD /* GameOver.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = GameOver.ccbi; sourceTree = "<group>"; };
 		8CA9AEC717244CE400283D69 /* FireButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FireButton.png; sourceTree = "<group>"; };
 		8CA9AEC917244CE400283D69 /* MarksManButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MarksManButton.png; sourceTree = "<group>"; };
+		8CDE458E1725A4630076BF38 /* FireButton-bw-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FireButton-bw-ipadhd.png"; sourceTree = "<group>"; };
+		8CDE458F1725A4630076BF38 /* FireButton-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FireButton-ipadhd.png"; sourceTree = "<group>"; };
+		8CDE45901725A4630076BF38 /* IceButton-bw-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IceButton-bw-ipadhd.png"; sourceTree = "<group>"; };
+		8CDE45911725A4630076BF38 /* IceButton-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IceButton-ipadhd.png"; sourceTree = "<group>"; };
+		8CDE45921725A4630076BF38 /* MarksManButton-bw-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MarksManButton-bw-ipadhd.png"; sourceTree = "<group>"; };
+		8CDE45931725A4630076BF38 /* MarksManButton-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MarksManButton-ipadhd.png"; sourceTree = "<group>"; };
 		8CE17A09172460F90069B4E3 /* FireButton-bw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FireButton-bw.png"; sourceTree = "<group>"; };
 		8CE17A0A172460F90069B4E3 /* IceButton-bw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IceButton-bw.png"; sourceTree = "<group>"; };
 		8CE17A0B172460F90069B4E3 /* IceButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IceButton.png; sourceTree = "<group>"; };
@@ -1085,6 +1097,12 @@
 		9C2B3CBE171EE9BC00E695FE /* Menus */ = {
 			isa = PBXGroup;
 			children = (
+				8CDE458E1725A4630076BF38 /* FireButton-bw-ipadhd.png */,
+				8CDE458F1725A4630076BF38 /* FireButton-ipadhd.png */,
+				8CDE45901725A4630076BF38 /* IceButton-bw-ipadhd.png */,
+				8CDE45911725A4630076BF38 /* IceButton-ipadhd.png */,
+				8CDE45921725A4630076BF38 /* MarksManButton-bw-ipadhd.png */,
+				8CDE45931725A4630076BF38 /* MarksManButton-ipadhd.png */,
 				8CE17A09172460F90069B4E3 /* FireButton-bw.png */,
 				8CE17A0A172460F90069B4E3 /* IceButton-bw.png */,
 				8CE17A0B172460F90069B4E3 /* IceButton.png */,
@@ -2074,6 +2092,12 @@
 				8CE17A10172460F90069B4E3 /* MarksManButton-bw.png in Resources */,
 				9C1E05BF1724C7B00093F0E3 /* DoneStuff in Resources */,
 				3EE9FE1417256DAD009718EC /* LevelSelectLayer.ccb in Resources */,
+				8CDE45941725A4630076BF38 /* FireButton-bw-ipadhd.png in Resources */,
+				8CDE45951725A4630076BF38 /* FireButton-ipadhd.png in Resources */,
+				8CDE45961725A4630076BF38 /* IceButton-bw-ipadhd.png in Resources */,
+				8CDE45971725A4630076BF38 /* IceButton-ipadhd.png in Resources */,
+				8CDE45981725A4630076BF38 /* MarksManButton-bw-ipadhd.png in Resources */,
+				8CDE45991725A4630076BF38 /* MarksManButton-ipadhd.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
