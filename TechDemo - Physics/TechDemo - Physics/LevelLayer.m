@@ -85,7 +85,7 @@
         
         [self schedule:@selector(update:)];
         
-        [[CCDirector sharedDirector] purgeCachedData];
+//        [[CCDirector sharedDirector] purgeCachedData];
     }
     
     self.isTouchEnabled = YES;
@@ -104,6 +104,8 @@
     [rm setGold: [conf getIntProperty:@"InitialGold"]];
     [rm setSkillPoints: [conf getIntProperty:@"InitialSkillPoints"]];
     [rm setMana: [[conf getNumberProperty:@"InitialMana"] doubleValue]];
+    
+#warning isto faz alguma coisa?
     [rm reset];
 }
 

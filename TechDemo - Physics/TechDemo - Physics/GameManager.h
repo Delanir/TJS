@@ -15,6 +15,7 @@
     BOOL isMusicON;
     BOOL isSoundEffectsON;
     SceneTypes currentScene;
+    NSMutableDictionary *ScenePointerDic;
 }
 
 @property BOOL isMusicON;

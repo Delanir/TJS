@@ -15,7 +15,7 @@
 -(id)init
 {
   [super init];
-  [[CCDirector sharedDirector] purgeCachedData];
+  
   return self;
 }
 
@@ -39,4 +39,9 @@
     }
     
 };
+
+-(void)dealloc{
+    [super dealloc];
+    [self removeAllChildrenWithCleanup:YES];
+}
 @end

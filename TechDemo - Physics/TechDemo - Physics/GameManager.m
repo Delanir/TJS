@@ -48,6 +48,7 @@ static GameManager* _sharedSingleton = nil;
         isSoundEffectsON = YES;
         currentScene = kNoSceneInitialized;
 		NSLog(@"Game Manager initialized");
+        ScenePointerDic=[[NSMutableDictionary alloc] init];
     }
 	return self;
 }
@@ -55,6 +56,8 @@ static GameManager* _sharedSingleton = nil;
 
 -(void)dealloc
 {
+    [ScenePointerDic release];
+    ScenePointerDic=nil;
     [_sharedSingleton release];
     [super dealloc];
 }
@@ -68,7 +71,18 @@ static GameManager* _sharedSingleton = nil;
             sceneToRun = [CCBReader sceneWithNodeGraphFromFile:@"MainMenu.ccbi"];
             break;
         case kSkillTreeScene:
-            sceneToRun = [CCBReader sceneWithNodeGraphFromFile:@"SkillTreeLayer.ccbi"];
+            CCLOG(@"we hates it, golum golum");
+            if ([ScenePointerDic objectForKey:[NSString stringWithFormat:@"%i",kSkillTreeScene]] !=nil) {
+                [ScenePointerDic removeObjectForKey:[NSString stringWithFormat:@"%i",kSkillTreeScene]];
+              
+//                sceneToRun = [CCBReader sceneWithNodeGraphFromFile:@"SkillTreeLayer.ccbi" owner:self];
+                [ScenePointerDic setValue:[CCBReader sceneWithNodeGraphFromFile:@"SkillTreeLayer.ccbi" ] forKey:[NSString stringWithFormat:@"%i",kSkillTreeScene] ];
+                sceneToRun =[ScenePointerDic objectForKey:[NSString stringWithFormat:@"%i",kSkillTreeScene]];
+            }else{
+                
+                sceneToRun = [CCBReader sceneWithNodeGraphFromFile:@"SkillTreeLayer.ccbi"];
+                [ScenePointerDic setValue:sceneToRun forKey:[NSString stringWithFormat:@"%i",kSkillTreeScene] ];
+            }
             break;
         case kAchievementsScene:
 //            sceneToRun = ; // TODO
@@ -77,7 +91,18 @@ static GameManager* _sharedSingleton = nil;
 //            sceneToRun = ; // TODO
             break;
         case kSettingsScene:
-            sceneToRun = [CCBReader sceneWithNodeGraphFromFile:@"SettingsMenu.ccbi"];
+            
+            if ([ScenePointerDic objectForKey:[NSString stringWithFormat:@"%i",kSettingsScene]] !=nil) {
+                [ScenePointerDic removeObjectForKey:[NSString stringWithFormat:@"%i",kSettingsScene]];
+                
+                //                sceneToRun = [CCBReader sceneWithNodeGraphFromFile:@"SkillTreeLayer.ccbi" owner:self];
+                [ScenePointerDic setValue:sceneToRun = [CCBReader sceneWithNodeGraphFromFile:@"SettingsMenu.ccbi"] forKey:[NSString stringWithFormat:@"%i",kSettingsScene] ];
+                sceneToRun =[ScenePointerDic objectForKey:[NSString stringWithFormat:@"%i",kSettingsScene]];
+            }else{
+                
+                sceneToRun = [CCBReader sceneWithNodeGraphFromFile:@"SettingsMenu.ccbi"];
+                [ScenePointerDic setValue:sceneToRun forKey:[NSString stringWithFormat:@"%i",kSettingsScene] ];
+            }
             break;
         case kSelectLevel:
             sceneToRun = [CCBReader sceneWithNodeGraphFromFile:@"LevelSelectLayer.ccbi"];
@@ -103,8 +128,12 @@ static GameManager* _sharedSingleton = nil;
     
     if ([[CCDirector sharedDirector] runningScene] == nil)
         [[CCDirector sharedDirector] runWithScene:sceneToRun];
-    else
+    else{
+        [[[CCDirector sharedDirector] runningScene]stopAllActions];
         [[CCDirector sharedDirector] replaceScene:sceneToRun];
+                
+    }
+    
 }
 
 @end

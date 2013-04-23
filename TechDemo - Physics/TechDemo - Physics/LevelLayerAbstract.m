@@ -34,6 +34,11 @@
     return self;
 }
 
+-(void)dealloc{
+    [super dealloc];
+
+}
+
 - (void)ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     UITouch *touch = [touches anyObject];
@@ -81,8 +86,9 @@
     
     if (ccpDistance(btnPosition, location)<=btnRadius)
     {
-        [self removeAllChildrenWithCleanup:YES];
+        
         [[CCDirector sharedDirector] resume];
+        [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
         [[GameManager shared] runSceneWithID:kMainMenuScene];
         
     }
@@ -90,13 +96,13 @@
 
 -(void) togglePause
 {
-    if ([[CCDirector sharedDirector] isPaused])
+    if ([[CCDirector sharedDirector] isPaused] && _gameOver==nil)
     {
         [_pause setVisible:NO];
         [[SimpleAudioEngine sharedEngine] resumeBackgroundMusic];
         [[CCDirector sharedDirector] resume];
         
-    } else
+    } else if(_gameOver==nil)
     {
         [_pause setVisible:YES];
         [[SimpleAudioEngine sharedEngine] pauseBackgroundMusic];

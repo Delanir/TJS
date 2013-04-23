@@ -12,47 +12,56 @@
 
 @implementation SkillTreeLayer
 
-static SkillTreeLayer* _sharedSingleton = nil;
+//static SkillTreeLayer* _sharedSingleton = nil;
+//
+//+(SkillTreeLayer*)shared
+//{
+//	@synchronized([SkillTreeLayer class])
+//	{
+//		if (!_sharedSingleton)
+//			[[self alloc] init];
+//    
+//		return _sharedSingleton;
+//	}
+//  
+//	return nil;
+//}
+//
+//+(id)alloc
+//{
+//	@synchronized([SkillTreeLayer class])
+//	{
+//		NSAssert(_sharedSingleton == nil, @"Attempted to allocate a second instance of a singleton.");
+//		_sharedSingleton = [super alloc];
+//		return _sharedSingleton;
+//	}
+//  
+//	return nil;
+//}
+//
+//-(id)init
+//{
+//	self = [super init];
+//	if (self != nil) {
+//		// initialize stuff here
+//  }
+//	return self;
+//}
+//
+//
+//-(void)dealloc
+//{
+//  [_sharedSingleton release];
+//  [super dealloc];
+//}
 
-+(SkillTreeLayer*)shared
-{
-	@synchronized([SkillTreeLayer class])
-	{
-		if (!_sharedSingleton)
-			[[self alloc] init];
+
+
+-(void)dealloc{
+
+//    [self removeAllChildrenWithCleanup:YES];
+    [super dealloc];
     
-		return _sharedSingleton;
-	}
-  
-	return nil;
-}
-
-+(id)alloc
-{
-	@synchronized([SkillTreeLayer class])
-	{
-		NSAssert(_sharedSingleton == nil, @"Attempted to allocate a second instance of a singleton.");
-		_sharedSingleton = [super alloc];
-		return _sharedSingleton;
-	}
-  
-	return nil;
-}
-
--(id)init
-{
-	self = [super init];
-	if (self != nil) {
-		// initialize stuff here
-  }
-	return self;
-}
-
-
--(void)dealloc
-{
-  [_sharedSingleton release];
-  [super dealloc];
 }
 
 -(void)onEnter
@@ -141,6 +150,8 @@ static SkillTreeLayer* _sharedSingleton = nil;
     [_iceBranch3 setVisible:YES];
     [_iceBranch2 setVisible:YES];
     [_iceBranch1 setVisible:YES];
+    
+    
 }
 
 - (void) pressedMainMenu:(id)sender
@@ -151,8 +162,10 @@ static SkillTreeLayer* _sharedSingleton = nil;
 -(void)onExit
 {
   [super onExit];
-  [self removeAllChildrenWithCleanup:YES];
+//  [self removeAllChildrenWithCleanup:YES];
 }
+
+
 
 
 @end
