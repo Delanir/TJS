@@ -91,9 +91,10 @@
         
         if ( ccpDistance(btnPosition, location)<=btnRadius)
         {
+            [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
             [self setIsTouchEnabled:NO];
             [[CCDirector sharedDirector] resume];
-            [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
+            
             [[GameManager shared] runSceneWithID:kMainMenuScene];
             
         }

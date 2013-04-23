@@ -58,7 +58,7 @@
 
 
 -(void)dealloc{
-
+    CCLOG(@"fui deallocado: skill");
 //    [self removeAllChildrenWithCleanup:YES];
     [super dealloc];
     
