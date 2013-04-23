@@ -236,11 +236,12 @@
 -(void)onExit
 {
     [[Registry shared] clearRegistry];
+    [[CollisionManager shared] clearAllEntities];
 }
 
--(void)dealloc{
+-(void)dealloc
+{
     [self unscheduleAllSelectors];
-    [[CollisionManager shared] clearAllEntities];
     [super dealloc];
     //CCLOG(@"DEALOQUEI");
 }
