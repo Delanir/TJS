@@ -52,7 +52,7 @@ static Registry* _sharedSingleton = nil;
 
 -(void)dealloc
 {
-    [registry dealloc];
+    [registry release];
     [_sharedSingleton release];
     [super dealloc];
 }
@@ -60,6 +60,8 @@ static Registry* _sharedSingleton = nil;
 -(void) registerEntity: (id) entity withName: (NSString *) name
 {
     [registry setObject:entity forKey:name];
+    
+    [self printRegistry];
 }
 
 -(id) getEntityByName: (NSString *) entityName

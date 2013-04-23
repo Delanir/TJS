@@ -24,7 +24,9 @@
         [_pauseButton setZOrder:1000];
         
         [self addChild:_pauseButton];
-        [self addChild:[WaveManager shared]]; // Esta linha é imensos de feia. Mas tem de ser para haver update
+        
+        if(![[self children] containsObject:[WaveManager shared]])
+            [self addChild:[WaveManager shared]]; // Esta linha é imensos de feia. Mas tem de ser para haver update
         
         _pause= (PauseHUD *)[CCBReader nodeGraphFromFile:@"PauseMenu.ccbi"];
         [self addChild:_pause];

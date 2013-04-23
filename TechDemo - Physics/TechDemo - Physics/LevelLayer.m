@@ -235,11 +235,11 @@
 {
     [[Registry shared] clearRegistry];
     [[CollisionManager shared] clearAllEntities];
+    [self removeAllChildrenWithCleanup:YES];
 }
 
 -(void)dealloc
 {
-    //[self unscheduleAllSelectors];
     [super dealloc];
     //CCLOG(@"DEALOQUEI");
 }

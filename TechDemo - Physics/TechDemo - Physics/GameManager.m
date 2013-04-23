@@ -107,4 +107,11 @@ static GameManager* _sharedSingleton = nil;
         [[CCDirector sharedDirector] replaceScene:sceneToRun];
 }
 
+-(void) startMain
+{
+    id main = [CCBReader sceneWithNodeGraphFromFile:@"MainMenu.ccbi"];
+
+    [[CCDirector sharedDirector] pushScene:main];
+}
+
 @end
