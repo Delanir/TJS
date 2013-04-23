@@ -130,6 +130,9 @@ static GameManager* _sharedSingleton = nil;
         [[CCDirector sharedDirector] runWithScene:sceneToRun];
     else{
         [[[CCDirector sharedDirector] runningScene]stopAllActions];
+        [[[CCDirector sharedDirector] runningScene] unscheduleAllSelectors];
+        [[[CCDirector sharedDirector] runningScene] removeAllChildrenWithCleanup:YES];
+        [[[CCDirector sharedDirector] runningScene] removeFromParentAndCleanup:YES];
         [[CCDirector sharedDirector] replaceScene:sceneToRun];
                 
     }
