@@ -22,7 +22,6 @@
 -(void) onEnter
 {
 	[super onEnter];
-    [[CCDirector sharedDirector] purgeCachedData];
 }
 
 

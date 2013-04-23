@@ -60,8 +60,6 @@ static Registry* _sharedSingleton = nil;
 -(void) registerEntity: (id) entity withName: (NSString *) name
 {
     [registry setObject:entity forKey:name];
-    
-    [self printRegistry];
 }
 
 -(id) getEntityByName: (NSString *) entityName

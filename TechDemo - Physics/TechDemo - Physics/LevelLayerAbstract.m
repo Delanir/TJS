@@ -16,7 +16,6 @@
 {
     if( (self=[super init]))
     {
-        self.isTouchEnabled = YES;
         CGSize winSize = [[CCDirector sharedDirector] winSize];
         _pauseButton= [CCSprite spriteWithFile:@"pause.png"];
         [_pauseButton setPosition:CGPointMake(_pauseButton.contentSize.width/2.0, winSize.height - _pauseButton.contentSize.height/2.0)];
@@ -32,6 +31,7 @@
         [self addChild:_pause];
         [_pause setZOrder:1535];
         [_pause setVisible:NO];
+        self.isTouchEnabled = YES;
     }
     return self;
 }

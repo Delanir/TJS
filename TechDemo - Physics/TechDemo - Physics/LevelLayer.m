@@ -85,7 +85,6 @@
         
         [self schedule:@selector(update:)];
         
-        [[CCDirector sharedDirector] purgeCachedData];
     }
     
     self.isTouchEnabled = YES;

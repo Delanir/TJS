@@ -18,7 +18,6 @@
 -(id)init
 {
     [super init];
-    [[CCDirector sharedDirector] purgeCachedData];
     return self;
 }
 
