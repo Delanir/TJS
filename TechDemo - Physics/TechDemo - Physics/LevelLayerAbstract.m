@@ -16,7 +16,7 @@
 {
     if( (self=[super init]))
     {
-        self.isTouchEnabled = YES;
+        
         CGSize winSize = [[CCDirector sharedDirector] winSize];
         _pauseButton= [CCSprite spriteWithFile:@"pause.png"];
         [_pauseButton setPosition:CGPointMake(_pauseButton.contentSize.width/2.0, winSize.height - _pauseButton.contentSize.height/2.0)];
@@ -24,10 +24,14 @@
         [_pauseButton setZOrder:1000];
         
         [self addChild:_pauseButton];
+        [[WaveManager shared] removeFromParentAndCleanup:NO];
         [self addChild:[WaveManager shared]]; // Esta linha é imensos de feia. Mas tem de ser para haver update
         
-        _pause= (PauseHUD *)[CCBReader nodeGraphFromFile:@"PauseMenu.ccbi"];
-        [self addChild:_pause];
+        
+            _pause= (PauseHUD *)[CCBReader nodeGraphFromFile:@"PauseMenu.ccbi"];
+            [self addChild:_pause];
+        
+        
         [_pause setZOrder:1535];
         [_pause setVisible:NO];
     }
@@ -78,20 +82,24 @@
 
 -(void) gameOverReturnToMainMenuCheck:(UITouch *)touchLocation
 {
-    CGSize winSize = [[CCDirector sharedDirector] winSize];
-    CGPoint location=[touchLocation locationInView:[touchLocation view]];
-    location.y=winSize.height-location.y;
-    CGPoint btnPosition = _gameOver.mainMenuButtonPosition;
-    float btnRadius = _gameOver.mainMenuButtonRadius/2;
+    if (_gameOver!=nil) {
+        CGSize winSize = [[CCDirector sharedDirector] winSize];
+        CGPoint location=[touchLocation locationInView:[touchLocation view]];
+        location.y=winSize.height-location.y;
+        CGPoint btnPosition = _gameOver.mainMenuButtonPosition;
+        float btnRadius = _gameOver.mainMenuButtonRadius/2;
+        
+        if ( ccpDistance(btnPosition, location)<=btnRadius)
+        {
+            [self setIsTouchEnabled:NO];
+            [[CCDirector sharedDirector] resume];
+            [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
+            [[GameManager shared] runSceneWithID:kMainMenuScene];
+            
+        }
+    }else
+        return;
     
-    if (ccpDistance(btnPosition, location)<=btnRadius)
-    {
-        
-        [[CCDirector sharedDirector] resume];
-        [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
-        [[GameManager shared] runSceneWithID:kMainMenuScene];
-        
-    }
 }
 
 -(void) togglePause
@@ -102,7 +110,7 @@
         [[SimpleAudioEngine sharedEngine] resumeBackgroundMusic];
         [[CCDirector sharedDirector] resume];
         
-    } else if(_gameOver==nil)
+    } else if(_gameOver==nil&&(![[CCDirector sharedDirector] isPaused]))
     {
         [_pause setVisible:YES];
         [[SimpleAudioEngine sharedEngine] pauseBackgroundMusic];
@@ -132,7 +140,7 @@
 
 -(void)onExit{
     [super onExit];
-    [self removeAllChildrenWithCleanup:YES];
+    //[self removeAllChildrenWithCleanup:YES];
 }
 
 #pragma mark GameKit delegate

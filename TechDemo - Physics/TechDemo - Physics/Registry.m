@@ -52,7 +52,7 @@ static Registry* _sharedSingleton = nil;
 
 -(void)dealloc
 {
-    [registry dealloc];
+    [registry release];
     [_sharedSingleton release];
     [super dealloc];
 }
