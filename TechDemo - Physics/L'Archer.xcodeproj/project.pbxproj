@@ -1725,6 +1725,7 @@
 		9C969E591716290D00BE7476 /* Startup Classes */ = {
 			isa = PBXGroup;
 			children = (
+				8BBB6A25171E0B240064B3CD /* SettingsMenuLayer.m */,
 				9C85F6231707958200EECB83 /* AppDelegate.h */,
 				9C85F6241707958200EECB83 /* AppDelegate.m */,
 				9C7FF34C170B3A49009DA7F9 /* main.m */,
@@ -1805,7 +1806,6 @@
 				8B8C2D951719D8A700B50C1E /* MainMenuLayer.h */,
 				8B8C2D961719D8A700B50C1E /* MainMenuLayer.m */,
 				8BBB6A24171E0B240064B3CD /* SettingsMenuLayer.h */,
-				8BBB6A25171E0B240064B3CD /* SettingsMenuLayer.m */,
 				9C85F6291707958200EECB83 /* IntroLayer.h */,
 				9C85F62A1707958200EECB83 /* IntroLayer.m */,
 			);

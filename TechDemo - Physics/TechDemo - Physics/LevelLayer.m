@@ -231,10 +231,14 @@
     location = [[CCDirector sharedDirector] convertToGL:location];
 }
 
+-(void)onExit
+{
+    [[Registry shared] clearRegistry];
+}
+
 -(void)dealloc{
     [self unscheduleAllSelectors];
     [[CollisionManager shared] clearAllEntities];
-    [[Registry shared] clearRegistry];
     [super dealloc];
     //CCLOG(@"DEALOQUEI");
 }
