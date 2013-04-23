@@ -19,9 +19,15 @@
     return self;
 }
 
+-(void)dealloc{
+    [super dealloc];
+//    [self removeAllChildrenWithCleanup:YES];
+}
+
 -(void) onEnter
 {
 	[super onEnter];
+    
 }
 
 

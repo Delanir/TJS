@@ -99,7 +99,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>Resources/icon3.png</string>
+									<string>SelectLevelMenu/level1.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -110,7 +110,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>Resources/icon3.png</string>
+									<string>SelectLevelMenu/level1.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -272,8 +272,6 @@
 						<string>StarsNode.ccb</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>

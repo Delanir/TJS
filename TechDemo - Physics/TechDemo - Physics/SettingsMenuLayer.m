@@ -15,6 +15,7 @@
 -(id)init
 {
   [super init];
+  
   return self;
 }
 
@@ -38,4 +39,9 @@
     }
     
 };
+
+-(void)dealloc{
+    [super dealloc];
+    [self removeAllChildrenWithCleanup:YES];
+}
 @end

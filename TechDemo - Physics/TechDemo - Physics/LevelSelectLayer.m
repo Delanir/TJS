@@ -21,13 +21,26 @@
     return self;
 }
 
+-(void)dealloc{
+    [super dealloc];
+    [self removeAllChildrenWithCleanup:YES];
+}
+
 -(void)onEnter
 {
 #warning ler do dic ou da plist
     [super onEnter];
     [_level1 setLevel:1];
     [_level2 setLevel:2];
-    [_level1 setNumberStars:1];
+    [_level3 setLevel:3];
+    [_level4 setLevel:4];
+    [_level5 setLevel:5];
+    [_level6 setLevel:6];
+    [_level7 setLevel:7];
+    [_level8 setLevel:8];
+    [_level9 setLevel:9];
+    [_level10 setLevel:10];
+    [_level1 setNumberStars:0];
     [_level2 setNumberStars:0];
     [_level1 setIsEnabled:YES];
     [_level2 setIsEnabled:NO];

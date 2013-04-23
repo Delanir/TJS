@@ -127,7 +127,8 @@
 
 -(void) dealloc
 {
-    [buttons dealloc];
+    [buttons release];
+    buttons = nil;
     [super dealloc];
 }
 

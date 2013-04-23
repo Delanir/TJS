@@ -103,6 +103,8 @@
     [rm setGold: [conf getIntProperty:@"InitialGold"]];
     [rm setSkillPoints: [conf getIntProperty:@"InitialSkillPoints"]];
     [rm setMana: [[conf getNumberProperty:@"InitialMana"] doubleValue]];
+    
+#warning isto faz alguma coisa?
     [rm reset];
 }
 
