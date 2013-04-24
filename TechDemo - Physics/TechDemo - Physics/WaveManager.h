@@ -21,6 +21,7 @@
 
 @property double intervalBetweenWaves, timeElapsedSinceLastWave;
 @property (nonatomic, retain) NSMutableArray* waves;
+@property int enemies;
 
 +(WaveManager*)shared;
 

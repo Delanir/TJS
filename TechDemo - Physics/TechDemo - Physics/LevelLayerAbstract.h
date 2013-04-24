@@ -52,6 +52,7 @@
 -(void) togglePause;
 -(void) pauseCheck:(UITouch *)touchLocation;
 -(void) gameOver;
+-(void) victory;
 
 -(void) addEnemy:(Enemy *) newEnemy;
 

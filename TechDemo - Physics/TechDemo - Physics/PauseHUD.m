@@ -10,7 +10,8 @@
 
 @implementation PauseHUD
 
--(CCSprite *) getPauseButton{
+-(CCSprite *) getPauseButton
+{
   return _pause;
 };
 
