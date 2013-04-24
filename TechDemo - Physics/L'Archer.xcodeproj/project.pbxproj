@@ -165,26 +165,6 @@
 		9C1E05BC1724C0560093F0E3 /* GameState.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1E05BB1724C0560093F0E3 /* GameState.m */; };
 		9C1E05BF1724C7B00093F0E3 /* DoneStuff in Resources */ = {isa = PBXBuildFile; fileRef = 9C1E05BE1724C7B00093F0E3 /* DoneStuff */; };
 		9C2B3CBD171EE8FB00E695FE /* Registry Entities in Resources */ = {isa = PBXBuildFile; fileRef = 9C2B3CBC171EE8FB00E695FE /* Registry Entities */; };
-		9C319F421727024E00D3A6EA /* level1-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C319F2C1727024E00D3A6EA /* level1-ipadhd.png */; };
-		9C319F431727024E00D3A6EA /* level1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C319F2D1727024E00D3A6EA /* level1.png */; };
-		9C319F441727024E00D3A6EA /* level10-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C319F2E1727024E00D3A6EA /* level10-ipadhd.png */; };
-		9C319F451727024E00D3A6EA /* level10.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C319F2F1727024E00D3A6EA /* level10.png */; };
-		9C319F461727024E00D3A6EA /* level2-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C319F301727024E00D3A6EA /* level2-ipadhd.png */; };
-		9C319F471727024E00D3A6EA /* level2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C319F311727024E00D3A6EA /* level2.png */; };
-		9C319F481727024E00D3A6EA /* level3-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C319F321727024E00D3A6EA /* level3-ipadhd.png */; };
-		9C319F491727024E00D3A6EA /* level3.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C319F331727024E00D3A6EA /* level3.png */; };
-		9C319F4A1727024E00D3A6EA /* level4-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C319F341727024E00D3A6EA /* level4-ipadhd.png */; };
-		9C319F4B1727024E00D3A6EA /* level4.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C319F351727024E00D3A6EA /* level4.png */; };
-		9C319F4C1727024E00D3A6EA /* level5-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C319F361727024E00D3A6EA /* level5-ipadhd.png */; };
-		9C319F4D1727024E00D3A6EA /* level5.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C319F371727024E00D3A6EA /* level5.png */; };
-		9C319F4E1727024E00D3A6EA /* level6-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C319F381727024E00D3A6EA /* level6-ipadhd.png */; };
-		9C319F4F1727024E00D3A6EA /* level6.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C319F391727024E00D3A6EA /* level6.png */; };
-		9C319F501727024E00D3A6EA /* level7-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C319F3A1727024E00D3A6EA /* level7-ipadhd.png */; };
-		9C319F511727024E00D3A6EA /* level7.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C319F3B1727024E00D3A6EA /* level7.png */; };
-		9C319F521727024E00D3A6EA /* level8-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C319F3C1727024E00D3A6EA /* level8-ipadhd.png */; };
-		9C319F531727024E00D3A6EA /* level8.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C319F3D1727024E00D3A6EA /* level8.png */; };
-		9C319F541727024E00D3A6EA /* level9-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C319F3E1727024E00D3A6EA /* level9-ipadhd.png */; };
-		9C319F551727024E00D3A6EA /* level9.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C319F3F1727024E00D3A6EA /* level9.png */; };
 		9C319F561727024E00D3A6EA /* SimpleBackground-ipadhd.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C319F401727024E00D3A6EA /* SimpleBackground-ipadhd.jpg */; };
 		9C319F571727024E00D3A6EA /* SimpleBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C319F411727024E00D3A6EA /* SimpleBackground.jpg */; };
 		9C377BE9170B72D400F840FB /* KKPixelMaskSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C377BE2170B6F5100F840FB /* KKPixelMaskSprite.m */; };
@@ -590,26 +570,6 @@
 		9C1E05BD1724C4CC0093F0E3 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		9C1E05BE1724C7B00093F0E3 /* DoneStuff */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DoneStuff; sourceTree = "<group>"; };
 		9C2B3CBC171EE8FB00E695FE /* Registry Entities */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Registry Entities"; sourceTree = "<group>"; };
-		9C319F2C1727024E00D3A6EA /* level1-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "level1-ipadhd.png"; sourceTree = "<group>"; };
-		9C319F2D1727024E00D3A6EA /* level1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = level1.png; sourceTree = "<group>"; };
-		9C319F2E1727024E00D3A6EA /* level10-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "level10-ipadhd.png"; sourceTree = "<group>"; };
-		9C319F2F1727024E00D3A6EA /* level10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = level10.png; sourceTree = "<group>"; };
-		9C319F301727024E00D3A6EA /* level2-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "level2-ipadhd.png"; sourceTree = "<group>"; };
-		9C319F311727024E00D3A6EA /* level2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = level2.png; sourceTree = "<group>"; };
-		9C319F321727024E00D3A6EA /* level3-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "level3-ipadhd.png"; sourceTree = "<group>"; };
-		9C319F331727024E00D3A6EA /* level3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = level3.png; sourceTree = "<group>"; };
-		9C319F341727024E00D3A6EA /* level4-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "level4-ipadhd.png"; sourceTree = "<group>"; };
-		9C319F351727024E00D3A6EA /* level4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = level4.png; sourceTree = "<group>"; };
-		9C319F361727024E00D3A6EA /* level5-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "level5-ipadhd.png"; sourceTree = "<group>"; };
-		9C319F371727024E00D3A6EA /* level5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = level5.png; sourceTree = "<group>"; };
-		9C319F381727024E00D3A6EA /* level6-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "level6-ipadhd.png"; sourceTree = "<group>"; };
-		9C319F391727024E00D3A6EA /* level6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = level6.png; sourceTree = "<group>"; };
-		9C319F3A1727024E00D3A6EA /* level7-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "level7-ipadhd.png"; sourceTree = "<group>"; };
-		9C319F3B1727024E00D3A6EA /* level7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = level7.png; sourceTree = "<group>"; };
-		9C319F3C1727024E00D3A6EA /* level8-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "level8-ipadhd.png"; sourceTree = "<group>"; };
-		9C319F3D1727024E00D3A6EA /* level8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = level8.png; sourceTree = "<group>"; };
-		9C319F3E1727024E00D3A6EA /* level9-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "level9-ipadhd.png"; sourceTree = "<group>"; };
-		9C319F3F1727024E00D3A6EA /* level9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = level9.png; sourceTree = "<group>"; };
 		9C319F401727024E00D3A6EA /* SimpleBackground-ipadhd.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "SimpleBackground-ipadhd.jpg"; sourceTree = "<group>"; };
 		9C319F411727024E00D3A6EA /* SimpleBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SimpleBackground.jpg; sourceTree = "<group>"; };
 		9C377BE1170B6F5100F840FB /* KKPixelMaskSprite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKPixelMaskSprite.h; sourceTree = "<group>"; };
@@ -1207,26 +1167,6 @@
 		9C319F2B1727024E00D3A6EA /* SelectLevelMenu */ = {
 			isa = PBXGroup;
 			children = (
-				9C319F2C1727024E00D3A6EA /* level1-ipadhd.png */,
-				9C319F2D1727024E00D3A6EA /* level1.png */,
-				9C319F2E1727024E00D3A6EA /* level10-ipadhd.png */,
-				9C319F2F1727024E00D3A6EA /* level10.png */,
-				9C319F301727024E00D3A6EA /* level2-ipadhd.png */,
-				9C319F311727024E00D3A6EA /* level2.png */,
-				9C319F321727024E00D3A6EA /* level3-ipadhd.png */,
-				9C319F331727024E00D3A6EA /* level3.png */,
-				9C319F341727024E00D3A6EA /* level4-ipadhd.png */,
-				9C319F351727024E00D3A6EA /* level4.png */,
-				9C319F361727024E00D3A6EA /* level5-ipadhd.png */,
-				9C319F371727024E00D3A6EA /* level5.png */,
-				9C319F381727024E00D3A6EA /* level6-ipadhd.png */,
-				9C319F391727024E00D3A6EA /* level6.png */,
-				9C319F3A1727024E00D3A6EA /* level7-ipadhd.png */,
-				9C319F3B1727024E00D3A6EA /* level7.png */,
-				9C319F3C1727024E00D3A6EA /* level8-ipadhd.png */,
-				9C319F3D1727024E00D3A6EA /* level8.png */,
-				9C319F3E1727024E00D3A6EA /* level9-ipadhd.png */,
-				9C319F3F1727024E00D3A6EA /* level9.png */,
 				9C319F401727024E00D3A6EA /* SimpleBackground-ipadhd.jpg */,
 				9C319F411727024E00D3A6EA /* SimpleBackground.jpg */,
 			);
@@ -2184,26 +2124,6 @@
 				8CDE45971725A4630076BF38 /* IceButton-ipadhd.png in Resources */,
 				8CDE45981725A4630076BF38 /* MarksManButton-bw-ipadhd.png in Resources */,
 				8CDE45991725A4630076BF38 /* MarksManButton-ipadhd.png in Resources */,
-				9C319F421727024E00D3A6EA /* level1-ipadhd.png in Resources */,
-				9C319F431727024E00D3A6EA /* level1.png in Resources */,
-				9C319F441727024E00D3A6EA /* level10-ipadhd.png in Resources */,
-				9C319F451727024E00D3A6EA /* level10.png in Resources */,
-				9C319F461727024E00D3A6EA /* level2-ipadhd.png in Resources */,
-				9C319F471727024E00D3A6EA /* level2.png in Resources */,
-				9C319F481727024E00D3A6EA /* level3-ipadhd.png in Resources */,
-				9C319F491727024E00D3A6EA /* level3.png in Resources */,
-				9C319F4A1727024E00D3A6EA /* level4-ipadhd.png in Resources */,
-				9C319F4B1727024E00D3A6EA /* level4.png in Resources */,
-				9C319F4C1727024E00D3A6EA /* level5-ipadhd.png in Resources */,
-				9C319F4D1727024E00D3A6EA /* level5.png in Resources */,
-				9C319F4E1727024E00D3A6EA /* level6-ipadhd.png in Resources */,
-				9C319F4F1727024E00D3A6EA /* level6.png in Resources */,
-				9C319F501727024E00D3A6EA /* level7-ipadhd.png in Resources */,
-				9C319F511727024E00D3A6EA /* level7.png in Resources */,
-				9C319F521727024E00D3A6EA /* level8-ipadhd.png in Resources */,
-				9C319F531727024E00D3A6EA /* level8.png in Resources */,
-				9C319F541727024E00D3A6EA /* level9-ipadhd.png in Resources */,
-				9C319F551727024E00D3A6EA /* level9.png in Resources */,
 				9C319F561727024E00D3A6EA /* SimpleBackground-ipadhd.jpg in Resources */,
 				9C319F571727024E00D3A6EA /* SimpleBackground.jpg in Resources */,
 				9C9703551727804A00E48924 /* Level2.plist in Resources */,
@@ -2424,6 +2344,7 @@
 					"\"TechDemo - Physics/libs/kazmath/include\"",
 				);
 				INFOPLIST_FILE = "TechDemo - Physics/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-ObjC",
@@ -2445,6 +2366,7 @@
 					"\"TechDemo - Physics/libs/kazmath/include\"",
 				);
 				INFOPLIST_FILE = "TechDemo - Physics/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-ObjC",

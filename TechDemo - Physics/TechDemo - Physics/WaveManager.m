@@ -89,6 +89,7 @@ static WaveManager* _sharedSingleton = nil;
                                                                    vertical:[vPosition intValue]
                                                                displacement:displacementPoint];
             [ll addEnemy:newEnemy];
+            self.enemies++;
         }
     }
     else
@@ -98,6 +99,7 @@ static WaveManager* _sharedSingleton = nil;
 -(void) clearLevel
 {
     [waves removeAllObjects];
+    self.enemies = 0;
     // todo
 }
 

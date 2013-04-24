@@ -135,6 +135,14 @@
     [[CCDirector sharedDirector] pause];
 }
 
+-(void) victory
+{
+    _gameOver= (GameOver *)[CCBReader nodeGraphFromFile:@"GameOver.ccbi"];
+    [self addChild:_gameOver];
+    [_gameOver setZOrder:1535];
+    [[CCDirector sharedDirector] pause];
+}
+
 
 #pragma mark GameKit delegate
 
