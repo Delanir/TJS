@@ -15,20 +15,27 @@
 @synthesize isEnabled,numberStars,level;
 
 
--(void)initLevel{
-  #warning TODO @"level1.plist"
-  
-  [_thumbnail setIsEnabled:isEnabled];
-  [_stars makeVisible:numberStars];
-  
+-(void)initLevel
+{
+    [_thumbnail setIsEnabled:isEnabled];
+    [_stars makeVisible:numberStars];
 }
 
-- (void) goToLevel:(id)sender{
-  //NSString *abc =[NSString string]
-//  CCLOG(@"pressed %d", numberStars)
-#warning temporário
-    [[GameManager shared] runSceneWithID:kGameLevel];
-  
-  
+- (void) goToLevel:(id)sender
+{
+    [[GameManager shared] runLevel:level];
 }
+
+-(void) setThumbnail:(NSString *) sprite
+{
+    CCSprite * spriteImage = [CCSprite spriteWithSpriteFrameName:sprite];
+    CGRect rect = CGRectMake (0,0,
+                              [spriteImage contentSize].width,
+                              [spriteImage contentSize].height);
+    CCSpriteFrame * spriteFrame = [[CCSpriteFrame alloc] initWithTextureFilename:sprite rect:rect];
+    
+    [_thumbnail setSelectedSpriteFrame: spriteFrame];
+    [_thumbnail setNormalSpriteFrame: spriteFrame];
+}
+
 @end

@@ -28,26 +28,40 @@
 
 -(void)onEnter
 {
-#warning ler do dic ou da plist
     [super onEnter];
-    [_level1 setLevel:1];
-    [_level2 setLevel:2];
-    [_level1 setNumberStars:1];
-    [_level2 setNumberStars:0];
-    [_level1 setIsEnabled:YES];
-    [_level2 setIsEnabled:NO];
-    
-    [_level1 initLevel];
-    [_level2 initLevel];
     
     //Initialize art and animations
     [self addChild:[[SpriteManager shared] addSpritesToSpriteFrameCacheWithFile:@"lvl1spritesheet.plist" andBatchSpriteSheet:@"lvl1spritesheet.png"]];
+    
+    levelButtons = [[CCArray alloc] init];
+    [levelButtons addObject:_level1];
+    [levelButtons addObject:_level2];
+    [levelButtons addObject:_level3];
+    [levelButtons addObject:_level4];
+    [levelButtons addObject:_level5];
+    [levelButtons addObject:_level6];
+    [levelButtons addObject:_level7];
+    [levelButtons addObject:_level8];
+    [levelButtons addObject:_level9];
+    [levelButtons addObject:_level10];
+    
+    for (int i = 1; i <= 10; i++)
+    {
+        LevelThumbnail * level = [levelButtons objectAtIndex:i-1];
+        [level setLevel:i];
+        [level setNumberStars:0];
+        if (i < 6) // Hardcoded stuff for now
+            [level setIsEnabled:YES];
+        else
+            [level setIsEnabled:NO];
+        [level initLevel];
+        [level setThumbnail:[NSString stringWithFormat:@"level%d.png",i]];
+    }
     
     [[SpriteManager shared] addAnimationFromFile:@"peasant_anim.plist"];
     [[SpriteManager shared] addAnimationFromFile:@"fairiedragon_anim.plist"];
     [[SpriteManager shared] addAnimationFromFile:@"zealot_anim.plist"];
     [[SpriteManager shared] addAnimationFromFile:@"yurie_anim.plist"];
-    [[SimpleAudioEngine sharedEngine] playBackgroundMusic:[[Config shared] getStringProperty:@"MainMenuMusic"] loop:YES];
     
 }
 

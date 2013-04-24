@@ -31,7 +31,7 @@
 						<key>children</key>
 						<array/>
 						<key>customClass</key>
-						<string></string>
+						<string>Thumbnail</string>
 						<key>displayName</key>
 						<string>CCMenuItemImage</string>
 						<key>memberVarAssignmentName</key>
@@ -40,6 +40,18 @@
 						<integer>1</integer>
 						<key>properties</key>
 						<array>
+							<dict>
+								<key>name</key>
+								<string>position</string>
+								<key>type</key>
+								<string>Position</string>
+								<key>value</key>
+								<array>
+									<real>1</real>
+									<real>0.0</real>
+									<integer>0</integer>
+								</array>
+							</dict>
 							<dict>
 								<key>name</key>
 								<string>anchorPoint</string>
@@ -99,7 +111,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>Resources/icon3.png</string>
+									<string>SelectLevelMenu/level1.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -110,7 +122,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>Resources/icon3.png</string>
+									<string>SelectLevelMenu/level1.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -125,6 +137,8 @@
 								</array>
 							</dict>
 						</array>
+						<key>selected</key>
+						<true/>
 					</dict>
 				</array>
 				<key>customClass</key>
@@ -272,8 +286,6 @@
 						<string>StarsNode.ccb</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>

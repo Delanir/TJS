@@ -23,5 +23,7 @@
 
 +(GameManager*)shared;
 -(void)runSceneWithID:(SceneTypes)sceneID;
+-(void)runLevel:(int)level;
+-(void)startMain;
 
 @end

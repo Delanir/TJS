@@ -38,10 +38,6 @@
     return self;
 }
 
--(void)dealloc{
-    [super dealloc];
-
-}
 
 - (void)ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
@@ -139,10 +135,6 @@
     [[CCDirector sharedDirector] pause];
 }
 
--(void)onExit{
-    [super onExit];
-    //[self removeAllChildrenWithCleanup:YES];
-}
 
 #pragma mark GameKit delegate
 

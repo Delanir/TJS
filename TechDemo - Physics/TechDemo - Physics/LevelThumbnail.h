@@ -23,7 +23,8 @@
 @property (nonatomic, assign) int  level;
 
 
-- (void) goToLevel:(id)sender;
--(void)initLevel;
+-(void) goToLevel:(id)sender;
+-(void) initLevel;
+-(void) setThumbnail:(NSString *) sprite;
 
 @end

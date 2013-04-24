@@ -27,7 +27,7 @@
 -(void) onEnter
 {
 	[super onEnter];
-    
+    [[SimpleAudioEngine sharedEngine] playBackgroundMusic:[[Config shared] getStringProperty:@"MainMenuMusic"] loop:YES];
 }
 
 

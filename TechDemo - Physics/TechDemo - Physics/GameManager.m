@@ -74,8 +74,6 @@ static GameManager* _sharedSingleton = nil;
             CCLOG(@"we hates it, golum golum");
             if ([ScenePointerDic objectForKey:[NSString stringWithFormat:@"%i",kSkillTreeScene]] !=nil) {
                 [ScenePointerDic removeObjectForKey:[NSString stringWithFormat:@"%i",kSkillTreeScene]];
-              
-//                sceneToRun = [CCBReader sceneWithNodeGraphFromFile:@"SkillTreeLayer.ccbi" owner:self];
                 [ScenePointerDic setValue:[CCBReader sceneWithNodeGraphFromFile:@"SkillTreeLayer.ccbi" ] forKey:[NSString stringWithFormat:@"%i",kSkillTreeScene] ];
                 sceneToRun =[ScenePointerDic objectForKey:[NSString stringWithFormat:@"%i",kSkillTreeScene]];
             }else{
@@ -129,7 +127,7 @@ static GameManager* _sharedSingleton = nil;
     if ([[CCDirector sharedDirector] runningScene] == nil)
         [[CCDirector sharedDirector] runWithScene:sceneToRun];
     else{
-        [[[CCDirector sharedDirector] runningScene]stopAllActions];
+        [[[CCDirector sharedDirector] runningScene] stopAllActions];
         [[[CCDirector sharedDirector] runningScene] unscheduleAllSelectors];
         [[[CCDirector sharedDirector] runningScene] removeAllChildrenWithCleanup:YES];
         [[[CCDirector sharedDirector] runningScene] removeFromParentAndCleanup:YES];
@@ -137,6 +135,18 @@ static GameManager* _sharedSingleton = nil;
                 
     }
     
+}
+
+-(void) startMain
+{
+    id main = [CCBReader sceneWithNodeGraphFromFile:@"MainMenu.ccbi"];
+    [[CCDirector sharedDirector] pushScene:main];
+}
+
+-(void)runLevel:(int)level
+{
+    [LevelLayer setCurrentLevel:level];
+    [self runSceneWithID:kGameLevel];
 }
 
 @end

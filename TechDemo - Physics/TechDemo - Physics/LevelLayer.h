@@ -28,15 +28,19 @@
 // HelloWorldLayer
 @interface LevelLayer : LevelLayerAbstract
 {
+    int level;
     BOOL fire;
     Hud *hud;
     double timeElapsedSinceBeginning;
     CGPoint location;
 }
 @property (nonatomic,retain) Hud *hud;
+@property int level;
 
 // returns a CCScene that contains the HelloWorldLayer as the only child
 +(CCScene *) scene;
++(void)setCurrentLevel:(int) newLevel;
+
 
 
 @end

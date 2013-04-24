@@ -13,7 +13,9 @@
 
 // HelloWorldLayer implementation
 @implementation LevelLayer
-@synthesize hud;
+@synthesize hud, level;
+
+static int current_level = -1;
 
 // Helper class method that creates a Scene
 +(CCScene *) scene
@@ -33,6 +35,11 @@
     
 	// return the scene
 	return scene;
+}
+
++(void)setCurrentLevel:(int) newLevel
+{
+    current_level = newLevel;
 }
 
 -(void)gameLogic:(ccTime)dt
@@ -77,7 +84,8 @@
         [yuri release];
         
         // inicializar nível
-        [[WaveManager shared] initializeLevelLogic:@"Level1"];                  // Hardcoded
+        [self setLevel:current_level];
+        [[WaveManager shared] initializeLevelLogic:[NSString stringWithFormat:@"Level%d",level]];
         [[WaveManager shared] beginWaves];
         
         // This dummy method initializes the collision manager
@@ -85,7 +93,6 @@
         
         [self schedule:@selector(update:)];
         
-//        [[CCDirector sharedDirector] purgeCachedData];
     }
     
     self.isTouchEnabled = YES;
@@ -106,6 +113,7 @@
     [rm setMana: [[conf getNumberProperty:@"InitialMana"] doubleValue]];
     
 #warning isto faz alguma coisa?
+#warning sim, é necessário para reinicializar as estatisticas entre níveis
     [rm reset];
 }
 
@@ -237,11 +245,11 @@
 {
     [[Registry shared] clearRegistry];
     [[CollisionManager shared] clearAllEntities];
+    [self removeAllChildrenWithCleanup:YES];
 }
 
 -(void)dealloc
 {
-    [self unscheduleAllSelectors];
     [super dealloc];
     //CCLOG(@"DEALOQUEI");
 }

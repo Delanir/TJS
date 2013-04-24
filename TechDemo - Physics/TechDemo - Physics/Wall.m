@@ -65,8 +65,7 @@
         
         [self schedule:@selector(update:)];
         
-#warning temporario
-        [self addMoat];
+        //[self addMoat];
     }
     
     return self;

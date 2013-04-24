@@ -12,51 +12,6 @@
 
 @implementation SkillTreeLayer
 
-//static SkillTreeLayer* _sharedSingleton = nil;
-//
-//+(SkillTreeLayer*)shared
-//{
-//	@synchronized([SkillTreeLayer class])
-//	{
-//		if (!_sharedSingleton)
-//			[[self alloc] init];
-//    
-//		return _sharedSingleton;
-//	}
-//  
-//	return nil;
-//}
-//
-//+(id)alloc
-//{
-//	@synchronized([SkillTreeLayer class])
-//	{
-//		NSAssert(_sharedSingleton == nil, @"Attempted to allocate a second instance of a singleton.");
-//		_sharedSingleton = [super alloc];
-//		return _sharedSingleton;
-//	}
-//  
-//	return nil;
-//}
-//
-//-(id)init
-//{
-//	self = [super init];
-//	if (self != nil) {
-//		// initialize stuff here
-//  }
-//	return self;
-//}
-//
-//
-//-(void)dealloc
-//{
-//  [_sharedSingleton release];
-//  [super dealloc];
-//}
-
-
-
 -(void)dealloc{
     CCLOG(@"fui deallocado: skill");
 //    [self removeAllChildrenWithCleanup:YES];
