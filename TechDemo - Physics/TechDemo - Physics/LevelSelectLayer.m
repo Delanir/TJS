@@ -22,8 +22,8 @@
 }
 
 -(void)dealloc{
-    [super dealloc];
     [self removeAllChildrenWithCleanup:YES];
+    [super dealloc];
 }
 
 -(void)onEnter

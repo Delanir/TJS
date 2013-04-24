@@ -96,7 +96,7 @@ static int current_level = -1;
     }
     
     self.isTouchEnabled = YES;
-    [self schedule:@selector(gameLogic:) interval:1.0];
+//    [self schedule:@selector(gameLogic:) interval:1.0];
     
     
     return self;
@@ -111,9 +111,6 @@ static int current_level = -1;
     [rm setGold: [conf getIntProperty:@"InitialGold"]];
     [rm setSkillPoints: [conf getIntProperty:@"InitialSkillPoints"]];
     [rm setMana: [[conf getNumberProperty:@"InitialMana"] doubleValue]];
-    
-#warning isto faz alguma coisa?
-#warning sim, é necessário para reinicializar as estatisticas entre níveis
     [rm reset];
 }
 
@@ -127,8 +124,10 @@ static int current_level = -1;
     [hud updateWallHealth];
     [hud updateData];
     
-    if (((Wall *)[[Registry shared]getEntityByName:@"Wall"]).health<=0 && (_gameOver==nil))
-        [self gameOver];    
+    if ((((Wall *)[[Registry shared]getEntityByName:@"Wall"]).health<=0 && (_gameOver==nil)))
+        [self gameOver];
+    else if ([[WaveManager shared] enemies]==[[ResourceManager shared] enemyKillCount] && [[ResourceManager shared] enemiesHit] > 0)
+        [self victory];
 }
 
 

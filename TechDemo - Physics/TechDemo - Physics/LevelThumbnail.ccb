@@ -31,7 +31,7 @@
 						<key>children</key>
 						<array/>
 						<key>customClass</key>
-						<string>Thumbnail</string>
+						<string></string>
 						<key>displayName</key>
 						<string>CCMenuItemImage</string>
 						<key>memberVarAssignmentName</key>
@@ -111,7 +111,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>SelectLevelMenu/level1.png</string>
+									<string>cross.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -122,7 +122,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>SelectLevelMenu/level1.png</string>
+									<string>cross.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -137,8 +137,6 @@
 								</array>
 							</dict>
 						</array>
-						<key>selected</key>
-						<true/>
 					</dict>
 				</array>
 				<key>customClass</key>
