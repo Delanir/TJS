@@ -34,7 +34,7 @@
 
 -(void) dealloc
 {
-    [self removeAllChildrenWithCleanup:YES];
+//    [self removeAllChildrenWithCleanup:YES];
     [super dealloc];
 }
 

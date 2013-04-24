@@ -12,9 +12,10 @@
 
 @implementation SkillTreeLayer
 
--(void)dealloc{
-    CCLOG(@"fui deallocado: skill");
-//    [self removeAllChildrenWithCleanup:YES];
+-(void)dealloc
+{
+    NSLog(@"fui deallocado: skill");
+    // [self removeAllChildrenWithCleanup:YES];
     [super dealloc];
     
 }
@@ -105,8 +106,6 @@
     [_iceBranch3 setVisible:YES];
     [_iceBranch2 setVisible:YES];
     [_iceBranch1 setVisible:YES];
-    
-    
 }
 
 - (void) pressedMainMenu:(id)sender
@@ -116,8 +115,19 @@
 
 -(void)onExit
 {
+  
+  [[[CCDirector sharedDirector] runningScene] stopAllActions];
+  [[[CCDirector sharedDirector] runningScene] unscheduleAllSelectors];
+  [self removeAllChildrenWithCleanup:YES];
+  NSLog(@"EU NAO MORRO PORQUE %d GAJOS ESTAO A FALAR DE MIM",[self retainCount]);
+//  [self setIsTouchEnabled: NO];
+  
+
+//  [self removeFromParentAndCleanup:YES];
+
+  
   [super onExit];
-//  [self removeAllChildrenWithCleanup:YES];
+  NSLog(@"DEPOIS DO SUPER ON EXIT %d",[self retainCount]);
 }
 
 

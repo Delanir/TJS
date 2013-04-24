@@ -11,7 +11,7 @@
 
 
 typedef enum {
-    kNoSceneInitialized=0,
+    kMasterScene=0,
     kMainMenuScene=1,
     kSkillTreeScene=2,
     kAchievementsScene=3,

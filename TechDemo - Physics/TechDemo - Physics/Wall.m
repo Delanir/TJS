@@ -16,7 +16,7 @@
 {
     if((self = [super init]))
     {
-        maxHealth = 100.0f; // Vai depender da skilltree
+        maxHealth = 4.0; // Vai depender da skilltree
         health = maxHealth;
         lastHealth = maxHealth;
         status = kMintWall;
@@ -29,15 +29,20 @@
         
         KKPixelMaskSprite * castletop100 = [KKPixelMaskSprite spriteWithFile:@"castle100-top.png" alphaThreshold:0.5f];
         KKPixelMaskSprite * castlebottom100 = [KKPixelMaskSprite spriteWithFile:@"castle100-bottom.png" alphaThreshold:0.5f];
+      
         KKPixelMaskSprite * castletop75 = [KKPixelMaskSprite spriteWithFile:@"castle75-top.png" alphaThreshold:0.5f];
         KKPixelMaskSprite * castlebottom75 = [KKPixelMaskSprite spriteWithFile:@"castle75-bottom.png" alphaThreshold:0.5f];
+      
         KKPixelMaskSprite * castletop50 = [KKPixelMaskSprite spriteWithFile:@"castle50-top.png" alphaThreshold:0.5f];
         KKPixelMaskSprite * castlebottom50 = [KKPixelMaskSprite spriteWithFile:@"castle50-bottom.png" alphaThreshold:0.5f];
+      
         KKPixelMaskSprite * castletop25 = [KKPixelMaskSprite spriteWithFile:@"castle25-top.png" alphaThreshold:0.5f];
         KKPixelMaskSprite * castlebottom25 = [KKPixelMaskSprite spriteWithFile:@"castle25-bottom.png" alphaThreshold:0.5f];
+      
         KKPixelMaskSprite * castletop0 = [KKPixelMaskSprite spriteWithFile:@"castle0-top.png" alphaThreshold:0.5f];
         KKPixelMaskSprite * castlebottom0 = [KKPixelMaskSprite spriteWithFile:@"castle0-bottom.png" alphaThreshold:0.5f];
-        
+
+      
         [sprites addObject:castletop100];
         [sprites addObject:castlebottom100];
         [sprites addObject:castletop75];
@@ -72,13 +77,25 @@
 }
 
 - (void)update:(ccTime)dt
-{    
+{
+    CGSize winSize = [[CCDirector sharedDirector] winSize];
+    CGPoint center = ccp(winSize.width/2, winSize.height/2);
     //Only test if required - try health and status
     if(health != lastHealth)
     {
         if (health < (0.75 * maxHealth) && health >= (0.5 * maxHealth) && status == kMintWall)
         {
             [self changeTopSprite:[sprites objectAtIndex:2] bottomSprite:[sprites objectAtIndex:3]];
+//          CCParticleSmoke *smoke = [[CCParticleSmoke alloc] init];
+          //CCParticleSmoke *fire = [[CCParticleMeteor alloc] init];
+//          [smoke setAutoRemoveOnFinish:YES];
+//          [smoke setScaleX:0.8];
+//          [smoke setStartSize:10];
+//          [smoke setEndSize:10];
+//          [smoke setGravity:ccp(0,-90)];
+//          [smoke setTotalParticles:50];
+//          smoke.position = center;
+//          [[[Registry shared] getEntityByName:@"LevelLayer"] addChild:smoke];
             status = kScratchedWall;
         }
         else if (health < (0.5 * maxHealth) && health >= (0.25 * maxHealth) && status == kScratchedWall)
@@ -95,6 +112,8 @@
         {
             [self changeTopSprite:[sprites objectAtIndex:8] bottomSprite:[sprites objectAtIndex:9]];
             status = kTotaledWall;
+
+
         }
         lastHealth = health;
     }

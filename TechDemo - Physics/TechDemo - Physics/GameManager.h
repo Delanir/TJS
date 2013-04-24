@@ -15,15 +15,15 @@
     BOOL isMusicON;
     BOOL isSoundEffectsON;
     SceneTypes currentScene;
-    NSMutableDictionary *ScenePointerDic;
+    CCScene * masterScene;
 }
 
 @property BOOL isMusicON;
 @property BOOL isSoundEffectsON;
+@property (nonatomic, retain) CCScene * masterScene;
 
 +(GameManager*)shared;
 -(void)runSceneWithID:(SceneTypes)sceneID;
 -(void)runLevel:(int)level;
--(void)startMain;
 
 @end

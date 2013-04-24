@@ -78,8 +78,7 @@
 //	[director_ pushScene: [IntroLayer scene]];
     
 	// Load the main menu scene from the ccbi-file
-    //[[GameManager shared] runSceneWithID:kMainMenuScene];
-    [[GameManager shared] startMain];
+    [[GameManager shared] runSceneWithID:kMasterScene];
     
 	// Create a Navigation Controller with the Director
 	navController_ = [[UINavigationController alloc] initWithRootViewController:director_];
