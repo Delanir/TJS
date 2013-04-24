@@ -2424,6 +2424,7 @@
 					"\"TechDemo - Physics/libs/kazmath/include\"",
 				);
 				INFOPLIST_FILE = "TechDemo - Physics/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-ObjC",
@@ -2445,6 +2446,7 @@
 					"\"TechDemo - Physics/libs/kazmath/include\"",
 				);
 				INFOPLIST_FILE = "TechDemo - Physics/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-ObjC",
