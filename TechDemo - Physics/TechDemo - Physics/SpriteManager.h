@@ -10,7 +10,7 @@
 #import "cocos2d.h"
 
 @interface SpriteManager : CCNode {
-    CCSpriteBatchNode * spritesheetDisplayList;
+    
 }
 
 + (SpriteManager*) shared;
