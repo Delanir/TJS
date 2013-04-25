@@ -28,14 +28,10 @@
 
 -(void) setThumbnail:(NSString *) sprite
 {
-    CCSprite * spriteImage = [CCSprite spriteWithSpriteFrameName:sprite];
-    CGRect rect = CGRectMake (0,0,
-                              [spriteImage contentSize].width,
-                              [spriteImage contentSize].height);
-    CCSpriteFrame * spriteFrame = [[CCSpriteFrame alloc] initWithTextureFilename:sprite rect:rect];
-    
-    [_thumbnail setSelectedSpriteFrame: spriteFrame];
-    [_thumbnail setNormalSpriteFrame: spriteFrame];
+    CCSprite * spriteImage1 = [CCSprite spriteWithSpriteFrameName:sprite];
+    CCSprite * spriteImage2 = [CCSprite spriteWithSpriteFrameName:sprite];
+    [_thumbnail setNormalImage: spriteImage1];
+    [_thumbnail setSelectedImage: spriteImage2];
 }
 
 @end
