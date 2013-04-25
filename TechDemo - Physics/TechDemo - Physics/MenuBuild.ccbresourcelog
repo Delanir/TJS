@@ -51,6 +51,7 @@ FireButton-bw.png
 FireButton-ipadhd.png
 FireButton.png
 GameOver.ccbi
+GameWin.ccbi
 green_health_bar.png
 IceButton-bw-ipadhd.png
 IceButton-bw.png
@@ -65,8 +66,6 @@ lvl1spritesheet-ipadhd.plist
 lvl1spritesheet-ipadhd.png
 lvl1spritesheet.plist
 lvl1spritesheet.png
-lvl1spritesheet_Untitled.plist
-lvl1spritesheet_Untitled.png
 Button_Play.png
 Button_Play_pressed.png
 buttonAchievements-ipadhd.png

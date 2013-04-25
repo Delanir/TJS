@@ -44,6 +44,7 @@
     UITouch *touch = [touches anyObject];
     [self pauseCheck:touch];
     [self gameOverReturnToMainMenuCheck:touch];
+    [self gameWinReturnToMainMenuCheck:touch];
     if ([[CCDirector sharedDirector] isPaused])
         return;    
 }
@@ -99,6 +100,29 @@
     
 }
 
+-(void) gameWinReturnToMainMenuCheck:(UITouch *)touchLocation
+{
+    if (_gameWin!=nil) {
+        CGSize winSize = [[CCDirector sharedDirector] winSize];
+        CGPoint location=[touchLocation locationInView:[touchLocation view]];
+        location.y=winSize.height-location.y;
+        CGPoint btnPosition = _gameWin.mainMenuButtonPosition;
+        float btnRadius = _gameWin.mainMenuButtonRadius/2;
+        
+        if ( ccpDistance(btnPosition, location)<=btnRadius)
+        {
+            [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
+            [self setIsTouchEnabled:NO];
+            [[CCDirector sharedDirector] resume];
+            
+            [[GameManager shared] runSceneWithID:kMainMenuScene];
+            
+        }
+    }else
+        return;
+    
+}
+
 -(void) togglePause
 {
     if ([[CCDirector sharedDirector] isPaused] && _gameOver==nil)
@@ -135,11 +159,11 @@
     [[CCDirector sharedDirector] pause];
 }
 
--(void) victory
+-(void) gameWin
 {
-    _gameOver= (GameOver *)[CCBReader nodeGraphFromFile:@"GameOver.ccbi"];
-    [self addChild:_gameOver];
-    [_gameOver setZOrder:1535];
+    _gameWin = (GameWin *)[CCBReader nodeGraphFromFile:@"GameOver.ccbi"];
+    [self addChild:_gameWin];
+    [_gameWin setZOrder:1535];
     [[CCDirector sharedDirector] pause];
 }
 

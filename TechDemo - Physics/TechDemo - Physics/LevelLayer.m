@@ -127,7 +127,7 @@ static int current_level = -1;
     if ((((Wall *)[[Registry shared]getEntityByName:@"Wall"]).health<=0 && (_gameOver==nil)))
         [self gameOver];
     else if ([[WaveManager shared] enemies]==[[ResourceManager shared] enemyKillCount] && [[ResourceManager shared] enemiesHit] > 0)
-        [self victory];
+        [self gameWin];
 }
 
 

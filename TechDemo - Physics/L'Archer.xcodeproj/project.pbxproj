@@ -145,6 +145,7 @@
 		8BFA2DA017172536008A2064 /* peasant_anim.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8BFA2D9F17172536008A2064 /* peasant_anim.plist */; };
 		8BFC3F0C172042C3000161FD /* GameOver.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BFC3F0B172042C3000161FD /* GameOver.m */; };
 		8BFC3F0F17204440000161FD /* GameOver.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 8BFC3F0E17204440000161FD /* GameOver.ccbi */; };
+		8C72C2A8172968F6009EF8C1 /* GameWin.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C72C2A7172968F6009EF8C1 /* GameWin.m */; };
 		8CA9AECA17244CE400283D69 /* FireButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CA9AEC717244CE400283D69 /* FireButton.png */; };
 		8CA9AECC17244CE400283D69 /* MarksManButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CA9AEC917244CE400283D69 /* MarksManButton.png */; };
 		8CDE45941725A4630076BF38 /* FireButton-bw-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CDE458E1725A4630076BF38 /* FireButton-bw-ipadhd.png */; };
@@ -545,6 +546,9 @@
 		8BFC3F0A172042C2000161FD /* GameOver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOver.h; sourceTree = "<group>"; };
 		8BFC3F0B172042C3000161FD /* GameOver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOver.m; sourceTree = "<group>"; };
 		8BFC3F0E17204440000161FD /* GameOver.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = GameOver.ccbi; sourceTree = "<group>"; };
+		8C72C2A51729687B009EF8C1 /* GameWin.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = GameWin.ccbi; sourceTree = "<group>"; };
+		8C72C2A6172968F6009EF8C1 /* GameWin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameWin.h; sourceTree = "<group>"; };
+		8C72C2A7172968F6009EF8C1 /* GameWin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameWin.m; sourceTree = "<group>"; };
 		8CA9AEC717244CE400283D69 /* FireButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FireButton.png; sourceTree = "<group>"; };
 		8CA9AEC917244CE400283D69 /* MarksManButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MarksManButton.png; sourceTree = "<group>"; };
 		8CDE458E1725A4630076BF38 /* FireButton-bw-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FireButton-bw-ipadhd.png"; sourceTree = "<group>"; };
@@ -1295,6 +1299,7 @@
 				8B8C2D9B1719DB9300B50C1E /* MainMenu.ccbi */,
 				8BBB6A2F171E27970064B3CD /* akaPotsley.ttf */,
 				8BFC3F0E17204440000161FD /* GameOver.ccbi */,
+				8C72C2A51729687B009EF8C1 /* GameWin.ccbi */,
 				3EEB679F17234BC2005C58E9 /* PauseMenu.ccbi */,
 				8B0E7131171DD5A2004D212C /* SkillTreeLayer.ccbi */,
 				8BBB6A22171E09E30064B3CD /* SettingsMenu.ccbi */,
@@ -1737,6 +1742,8 @@
 				8B79CDE0171F501D00E58EDD /* Hud.m */,
 				8BFC3F0A172042C2000161FD /* GameOver.h */,
 				8BFC3F0B172042C3000161FD /* GameOver.m */,
+				8C72C2A6172968F6009EF8C1 /* GameWin.h */,
+				8C72C2A7172968F6009EF8C1 /* GameWin.m */,
 				9C85F659170A3E4100EECB83 /* MainScene.h */,
 				9C85F65A170A3E4200EECB83 /* MainScene.m */,
 				3EDD9F2E1715E7F700C6A622 /* Wall.h */,
@@ -2286,6 +2293,7 @@
 				3EEB67A317234C1B005C58E9 /* PauseHUD.m in Sources */,
 				9C1E05B617249B3A0093F0E3 /* GameManager.m in Sources */,
 				9C1E05BC1724C0560093F0E3 /* GameState.m in Sources */,
+				8C72C2A8172968F6009EF8C1 /* GameWin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2344,9 +2352,7 @@
 					"\"TechDemo - Physics/libs/kazmath/include\"",
 				);
 				INFOPLIST_FILE = "TechDemo - Physics/Resources/Info.plist";
-
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-ObjC",
@@ -2368,9 +2374,7 @@
 					"\"TechDemo - Physics/libs/kazmath/include\"",
 				);
 				INFOPLIST_FILE = "TechDemo - Physics/Resources/Info.plist";
-
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-ObjC",
