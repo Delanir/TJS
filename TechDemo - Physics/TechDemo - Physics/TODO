@@ -27,16 +27,17 @@ João M:
     - Níveis completos e estrelas associadas
 - Destruição mais eficiente de projecteis
 - Acabar lógica dos estimulos
+- Passar projecto para deployment target 6.1
 - Lógica de levar dano em cima do moat
 - Alterar lógica do vPos para ser relativo ao ecrã
-- Passar projecto para deployment target 6.1
+- HUD
 
 (Para usar o dell)
 - Passar para os arqueiros do heroes  (João M)
     - Tratar das sprites do wood elf e do grand elf
 - som do impacto tem de ser corrigido
 - Sprite de voltar para trás
-- Por barra de vida na spritesheet
+- Por barra de vida na spritesheet (actually this is to be done on zwoptex)
 - Fazer menu em baixo
 - Converter todas as sprites com o faststone 
 - Sprites dos edifícios

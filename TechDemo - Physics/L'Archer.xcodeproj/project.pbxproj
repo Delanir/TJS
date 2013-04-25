@@ -365,6 +365,7 @@
 		9C8DE0D31718E134002E0D0A /* zealot_anim.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C8DE0D21718E133002E0D0A /* zealot_anim.plist */; };
 		9C8DE0D61718EA00002E0D0A /* Zealot.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8DE0D51718EA00002E0D0A /* Zealot.m */; };
 		9C93D8E317297849004891D2 /* GameWin.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 8C72C2A51729687B009EF8C1 /* GameWin.ccbi */; };
+		9C93D8E81729C23C004891D2 /* GameData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C93D8E71729C23C004891D2 /* GameData.plist */; };
 		9C94ABD817197BD2005BCE32 /* zDepth in Resources */ = {isa = PBXBuildFile; fileRef = 9C94ABD717197BD2005BCE32 /* zDepth */; };
 		9C9703551727804A00E48924 /* Level2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C9703541727804A00E48924 /* Level2.plist */; };
 		9C9703571727805800E48924 /* Level3.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C9703561727805800E48924 /* Level3.plist */; };
@@ -929,6 +930,7 @@
 		9C8DE0D21718E133002E0D0A /* zealot_anim.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = zealot_anim.plist; sourceTree = "<group>"; };
 		9C8DE0D41718E9FF002E0D0A /* Zealot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Zealot.h; sourceTree = "<group>"; };
 		9C8DE0D51718EA00002E0D0A /* Zealot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Zealot.m; sourceTree = "<group>"; };
+		9C93D8E71729C23C004891D2 /* GameData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GameData.plist; sourceTree = "<group>"; };
 		9C94ABD717197BD2005BCE32 /* zDepth */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = zDepth; path = "TechDemo - Physics/zDepth"; sourceTree = "<group>"; };
 		9C9703541727804A00E48924 /* Level2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Level2.plist; sourceTree = "<group>"; };
 		9C9703561727805800E48924 /* Level3.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Level3.plist; sourceTree = "<group>"; };
@@ -1105,6 +1107,7 @@
 				9C11EEC417206465003510EB /* Waves */,
 				9C11EEC11720637D003510EB /* Levels */,
 				9C7FF343170B28CE009DA7F9 /* Config.plist */,
+				9C93D8E71729C23C004891D2 /* GameData.plist */,
 				9C8DE0D017185844002E0D0A /* Tags */,
 				9C94ABD717197BD2005BCE32 /* zDepth */,
 				9C2B3CBC171EE8FB00E695FE /* Registry Entities */,
@@ -1780,7 +1783,6 @@
 		9C969E591716290D00BE7476 /* Startup Classes */ = {
 			isa = PBXGroup;
 			children = (
-				8BBB6A25171E0B240064B3CD /* SettingsMenuLayer.m */,
 				9C85F6231707958200EECB83 /* AppDelegate.h */,
 				9C85F6241707958200EECB83 /* AppDelegate.m */,
 				9C7FF34C170B3A49009DA7F9 /* main.m */,
@@ -1861,6 +1863,7 @@
 				8B8C2D951719D8A700B50C1E /* MainMenuLayer.h */,
 				8B8C2D961719D8A700B50C1E /* MainMenuLayer.m */,
 				8BBB6A24171E0B240064B3CD /* SettingsMenuLayer.h */,
+				8BBB6A25171E0B240064B3CD /* SettingsMenuLayer.m */,
 				9C85F6291707958200EECB83 /* IntroLayer.h */,
 				9C85F62A1707958200EECB83 /* IntroLayer.m */,
 			);
@@ -2139,6 +2142,7 @@
 				9C9703571727805800E48924 /* Level3.plist in Resources */,
 				9C9703591727806200E48924 /* Level4.plist in Resources */,
 				9C97035B1727806A00E48924 /* Level5.plist in Resources */,
+				9C93D8E81729C23C004891D2 /* GameData.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2354,7 +2358,7 @@
 					"\"TechDemo - Physics/libs/kazmath/include\"",
 				);
 				INFOPLIST_FILE = "TechDemo - Physics/Resources/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-ObjC",
@@ -2376,7 +2380,7 @@
 					"\"TechDemo - Physics/libs/kazmath/include\"",
 				);
 				INFOPLIST_FILE = "TechDemo - Physics/Resources/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-ObjC",

@@ -264,12 +264,13 @@ static int current_level = -1;
     
     unsigned int numberStars = (unsigned int) ceil((cont1+cont2)*3);
     
-    CCArray * stars = [[GameState shared] starStates];
+    NSMutableArray * stars = [[GameState shared] starStates];
     [stars replaceObjectAtIndex:current_level-1 withObject: [NSNumber numberWithInt:numberStars]];
 }
 
 -(void)onExit
 {
+    [[GameState shared] saveApplicationData];
     [[Registry shared] clearRegistry];
     [[CollisionManager shared] clearAllEntities];
     [self removeAllChildrenWithCleanup:YES];

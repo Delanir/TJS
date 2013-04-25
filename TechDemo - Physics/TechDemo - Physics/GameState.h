@@ -11,11 +11,16 @@
 
 @interface GameState : NSObject
 {
-    CCArray * starStates;
+    NSMutableArray * starStates;
 }
 
-@property (nonatomic, retain) CCArray * starStates;
+@property (nonatomic, retain) NSMutableArray * starStates;
 
 +(GameState*)shared;
+
+-(void)saveApplicationData;
+-(void)loadApplicationData;
+-(void)initApplicationData;
+-(void)resetApplicationData;
 
 @end

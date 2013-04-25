@@ -8,8 +8,6 @@
 
 #import "GameState.h"
 
-#warning Era tótil nice se esta classe salvasse cenas em sitios
-
 @implementation GameState
 
 static GameState* _sharedSingleton = nil;
@@ -45,11 +43,42 @@ static GameState* _sharedSingleton = nil;
 	self = [super init];
 	if (self != nil)
     {
-        starStates = [[CCArray alloc] init];
-        for (int i = 0; i < 10; i++)
-            [starStates addObject: [NSNumber numberWithInt:0]];
+        [self loadApplicationData];
     }
 	return self;
+}
+
+-(void)saveApplicationData
+{
+    NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:starStates forKey:@"Stars"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+-(void)loadApplicationData
+{
+    NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
+    starStates = [defaults objectForKey:@"Stars"];
+    if ( starStates == nil)
+        [self initApplicationData];
+}
+
+-(void)initApplicationData
+{
+//    NSString * plistPath = [[NSBundle mainBundle] pathForResource:@"GameData" ofType:@"plist"];
+//    NSDictionary *appDefaults = [NSDictionary dictionaryWithContentsOfFile:plistPath];
+//    [[NSUserDefaults standardUserDefaults] registerDefaults:appDefaults];
+    starStates = [[NSMutableArray alloc] init];
+    for (int i = 0; i < 10; i++)
+        [starStates addObject: [NSNumber numberWithInt:0]];
+//    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+
+-(void)resetApplicationData
+{
+    // limpar tudo
+    // chamar init Application Data
 }
 
 

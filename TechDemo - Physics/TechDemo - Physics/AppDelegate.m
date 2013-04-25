@@ -111,12 +111,15 @@
 // call got rejected
 -(void) applicationDidBecomeActive:(UIApplication *)application
 {
-	if( [navController_ visibleViewController] == director_ )
+#warning e tirar isto depois de fazer o de baixo
+	if( [navController_ visibleViewController] == director_)
 		[director_ resume];
 }
 
 -(void) applicationDidEnterBackground:(UIApplication*)application
 {
+#warning DANIELA: x§forcar o pause aqui
+    [[NSUserDefaults standardUserDefaults] synchronize];
 	if( [navController_ visibleViewController] == director_ )
 		[director_ stopAnimation];
 }
