@@ -11,7 +11,7 @@
 #import "SimpleAudioEngine.h"
 #import "Config.h"
 #import "GameManager.h"
-
+#import "GameState.h"
 
 @implementation LevelSelectLayer
 
@@ -49,7 +49,7 @@
     {
         LevelThumbnail * level = [levelButtons objectAtIndex:i-1];
         [level setLevel:i];
-        [level setNumberStars:0];
+        [level setNumberStars:[[[[GameState shared] starStates] objectAtIndex:i-1] intValue]];
         if (i < 6) // Hardcoded stuff for now
             [level setIsEnabled:YES];
         else

@@ -119,7 +119,7 @@ static GameManager* _sharedSingleton = nil;
   else
   {
     
-    CCNode * node = [[masterScene children] objectAtIndex:0];
+//    CCNode * node = [[masterScene children] objectAtIndex:0];
     
     [masterScene removeAllChildrenWithCleanup:YES];
     [masterScene addChild:sceneToRun];

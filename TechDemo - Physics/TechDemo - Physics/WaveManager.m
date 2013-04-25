@@ -96,6 +96,11 @@ static WaveManager* _sharedSingleton = nil;
         [self stopWaves];
 }
 
+- (BOOL) anymoreWaves
+{
+    return [waves count] > 0;
+}
+
 -(void) clearLevel
 {
     [waves removeAllObjects];

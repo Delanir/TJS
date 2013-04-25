@@ -11,7 +11,7 @@
 
 @implementation Yuri
 
-@synthesize  readyToFire;
+@synthesize  readyToFire, level;
 
 -(id) init
 {

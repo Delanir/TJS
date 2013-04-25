@@ -12,6 +12,7 @@
 
 @implementation LevelLayerAbstract
 
+
 -(id) init
 {
     if( (self=[super init]))
@@ -30,7 +31,6 @@
         
             _pause= (PauseHUD *)[CCBReader nodeGraphFromFile:@"PauseMenu.ccbi"];
             [self addChild:_pause];
-        
         
         [_pause setZOrder:1535];
         [_pause setVisible:NO];
@@ -102,6 +102,7 @@
 
 -(void) gameWinReturnToMainMenuCheck:(UITouch *)touchLocation
 {
+#warning calcular pontuacao e atribuir estrelas ou flores de lis
     if (_gameWin!=nil) {
         CGSize winSize = [[CCDirector sharedDirector] winSize];
         CGPoint location=[touchLocation locationInView:[touchLocation view]];
@@ -161,12 +162,18 @@
 
 -(void) gameWin
 {
-    _gameWin = (GameWin *)[CCBReader nodeGraphFromFile:@"GameOver.ccbi"];
+    _gameWin = (GameWin *)[CCBReader nodeGraphFromFile:@"GameWin.ccbi"];
     [self addChild:_gameWin];
     [_gameWin setZOrder:1535];
     [[CCDirector sharedDirector] pause];
+    
+    [self calculateAndUpdateNumberOfStars];
 }
 
+-(void) calculateAndUpdateNumberOfStars
+{
+    
+}
 
 #pragma mark GameKit delegate
 

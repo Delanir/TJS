@@ -8,9 +8,13 @@
 
 #import "GameState.h"
 
+#warning Era tótil nice se esta classe salvasse cenas em sitios
+
 @implementation GameState
 
 static GameState* _sharedSingleton = nil;
+
+@synthesize starStates;
 
 +(GameState*)shared
 {
@@ -39,8 +43,11 @@ static GameState* _sharedSingleton = nil;
 -(id)init
 {
 	self = [super init];
-	if (self != nil) {
-		NSLog(@"Game State initialized");
+	if (self != nil)
+    {
+        starStates = [[CCArray alloc] init];
+        for (int i = 0; i < 10; i++)
+            [starStates addObject: [NSNumber numberWithInt:0]];
     }
 	return self;
 }
@@ -48,6 +55,7 @@ static GameState* _sharedSingleton = nil;
 
 -(void)dealloc
 {
+    [starStates release];
     [_sharedSingleton release];
     [super dealloc];
 }

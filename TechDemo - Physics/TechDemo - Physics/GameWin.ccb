@@ -186,7 +186,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>514</real>
+							<real>512</real>
 							<real>450</real>
 							<integer>0</integer>
 						</array>
@@ -276,9 +276,11 @@
 						<key>type</key>
 						<string>Text</string>
 						<key>value</key>
-						<string>Yuri save his people.</string>
+						<string>Yuri saved Amiens and his people.</string>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>baseClass</key>
@@ -536,8 +538,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>selected</key>
-		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>

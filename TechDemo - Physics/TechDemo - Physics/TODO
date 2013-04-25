@@ -29,6 +29,8 @@ João M:
 - Acabar lógica dos estimulos
 - Lógica de levar dano em cima do moat
 - Alterar lógica do vPos para ser relativo ao ecrã
+- Passar projecto para deployment target 6.1
+
 (Para usar o dell)
 - Passar para os arqueiros do heroes  (João M)
     - Tratar das sprites do wood elf e do grand elf

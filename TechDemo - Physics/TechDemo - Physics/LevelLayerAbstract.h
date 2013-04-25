@@ -55,6 +55,7 @@
 -(void) pauseCheck:(UITouch *)touchLocation;
 -(void) gameOver;
 -(void) gameWin;
+-(void) calculateAndUpdateNumberOfStars;
 
 -(void) addEnemy:(Enemy *) newEnemy;
 

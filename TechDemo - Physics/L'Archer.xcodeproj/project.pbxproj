@@ -364,6 +364,7 @@
 		9C8DE0D117185844002E0D0A /* Tags in Resources */ = {isa = PBXBuildFile; fileRef = 9C8DE0D017185844002E0D0A /* Tags */; };
 		9C8DE0D31718E134002E0D0A /* zealot_anim.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C8DE0D21718E133002E0D0A /* zealot_anim.plist */; };
 		9C8DE0D61718EA00002E0D0A /* Zealot.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8DE0D51718EA00002E0D0A /* Zealot.m */; };
+		9C93D8E317297849004891D2 /* GameWin.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 8C72C2A51729687B009EF8C1 /* GameWin.ccbi */; };
 		9C94ABD817197BD2005BCE32 /* zDepth in Resources */ = {isa = PBXBuildFile; fileRef = 9C94ABD717197BD2005BCE32 /* zDepth */; };
 		9C9703551727804A00E48924 /* Level2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C9703541727804A00E48924 /* Level2.plist */; };
 		9C9703571727805800E48924 /* Level3.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C9703561727805800E48924 /* Level3.plist */; };
@@ -2126,6 +2127,7 @@
 				9C1E05BF1724C7B00093F0E3 /* DoneStuff in Resources */,
 				3EE9FE1417256DAD009718EC /* LevelSelectLayer.ccb in Resources */,
 				8CDE45941725A4630076BF38 /* FireButton-bw-ipadhd.png in Resources */,
+				9C93D8E317297849004891D2 /* GameWin.ccbi in Resources */,
 				8CDE45951725A4630076BF38 /* FireButton-ipadhd.png in Resources */,
 				8CDE45961725A4630076BF38 /* IceButton-bw-ipadhd.png in Resources */,
 				8CDE45971725A4630076BF38 /* IceButton-ipadhd.png in Resources */,

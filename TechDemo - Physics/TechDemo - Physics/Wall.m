@@ -78,8 +78,8 @@
 
 - (void)update:(ccTime)dt
 {
-    CGSize winSize = [[CCDirector sharedDirector] winSize];
-    CGPoint center = ccp(winSize.width/2, winSize.height/2);
+//    CGSize winSize = [[CCDirector sharedDirector] winSize];
+    //CGPoint center = ccp(winSize.width/2, winSize.height/2);
     //Only test if required - try health and status
     if(health != lastHealth)
     {

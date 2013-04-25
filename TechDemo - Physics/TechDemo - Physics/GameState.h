@@ -10,6 +10,11 @@
 #import "Constants.h"
 
 @interface GameState : NSObject
+{
+    CCArray * starStates;
+}
+
+@property (nonatomic, retain) CCArray * starStates;
 
 +(GameState*)shared;
 

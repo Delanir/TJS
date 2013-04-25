@@ -29,6 +29,7 @@
 -(void) beginWaves;
 -(void) stopWaves;
 -(void) clearLevel;
+-(BOOL) anymoreWaves;
 
 
 @end

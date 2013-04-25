@@ -8,6 +8,7 @@
 
 // Import the interfaces
 #import "LevelLayer.h"
+#import "GameState.h"
 
 #pragma mark - Level
 
@@ -124,9 +125,9 @@ static int current_level = -1;
     [hud updateWallHealth];
     [hud updateData];
     
-    if ((((Wall *)[[Registry shared]getEntityByName:@"Wall"]).health<=0 && (_gameOver==nil)))
+    if ([self tryLose])
         [self gameOver];
-    else if ([[WaveManager shared] enemies]==[[ResourceManager shared] enemyKillCount] && [[ResourceManager shared] enemiesHit] > 0)
+    else if ([self tryWin])
         [self gameWin];
 }
 
@@ -238,6 +239,33 @@ static int current_level = -1;
     location = [self convertTouchToNodeSpace:touch];
     location = [touch locationInView:[touch view]];
     location = [[CCDirector sharedDirector] convertToGL:location];
+}
+
+-(BOOL) tryWin
+{
+    return ![[WaveManager shared] anymoreWaves] && [[ResourceManager shared] activeEnemies] == 0;
+}
+
+-(BOOL) tryLose
+{
+    return [(Wall *)[[Registry shared]getEntityByName:@"Wall"] health] <=0 && _gameOver == nil;
+}
+
+-(void) calculateAndUpdateNumberOfStars
+{
+    // Pontuacao:
+    // 1/2 accuracy
+    // 1/2 wall health
+    
+    Wall* wall = [[Registry shared] getEntityByName:@"Wall"];
+    
+    float cont1 = 0.5 * [wall health] / [wall maxHealth];
+    float cont2 = 0.5 * [[ResourceManager shared] determineAccuracy] * 0.01;
+    
+    unsigned int numberStars = (unsigned int) ceil((cont1+cont2)*3);
+    
+    CCArray * stars = [[GameState shared] starStates];
+    [stars replaceObjectAtIndex:current_level-1 withObject: [NSNumber numberWithInt:numberStars]];
 }
 
 -(void)onExit
