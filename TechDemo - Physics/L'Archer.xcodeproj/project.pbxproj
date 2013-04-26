@@ -178,6 +178,7 @@
 		9C377C03170BAE3E00F840FB /* arrow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9C377C00170BAE3E00F840FB /* arrow.mp3 */; };
 		9C377C0A170BB7CC00F840FB /* hit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9C377C09170BB7CB00F840FB /* hit.mp3 */; };
 		9C377C0D170BBDD800F840FB /* EnemyFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C377C0C170BBDD600F840FB /* EnemyFactory.m */; };
+		9C500253172AD03800C141DB /* LoadingBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C500252172AD03800C141DB /* LoadingBar.m */; };
 		9C75D80E171A167E00419031 /* yurie_anim.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C75D80D171A167E00419031 /* yurie_anim.plist */; };
 		9C791C06172376B700780C5D /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C791C04172376B700780C5D /* pause.png */; };
 		9C791C07172376B700780C5D /* pause-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C791C05172376B700780C5D /* pause-ipadhd.png */; };
@@ -365,7 +366,6 @@
 		9C8DE0D31718E134002E0D0A /* zealot_anim.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C8DE0D21718E133002E0D0A /* zealot_anim.plist */; };
 		9C8DE0D61718EA00002E0D0A /* Zealot.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8DE0D51718EA00002E0D0A /* Zealot.m */; };
 		9C93D8E317297849004891D2 /* GameWin.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 8C72C2A51729687B009EF8C1 /* GameWin.ccbi */; };
-		9C93D8E81729C23C004891D2 /* GameData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C93D8E71729C23C004891D2 /* GameData.plist */; };
 		9C94ABD817197BD2005BCE32 /* zDepth in Resources */ = {isa = PBXBuildFile; fileRef = 9C94ABD717197BD2005BCE32 /* zDepth */; };
 		9C9703551727804A00E48924 /* Level2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C9703541727804A00E48924 /* Level2.plist */; };
 		9C9703571727805800E48924 /* Level3.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C9703561727805800E48924 /* Level3.plist */; };
@@ -594,6 +594,8 @@
 		9C377C09170BB7CB00F840FB /* hit.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hit.mp3; sourceTree = "<group>"; };
 		9C377C0B170BBDD300F840FB /* EnemyFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyFactory.h; sourceTree = "<group>"; };
 		9C377C0C170BBDD600F840FB /* EnemyFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnemyFactory.m; sourceTree = "<group>"; };
+		9C500251172AD03800C141DB /* LoadingBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingBar.h; sourceTree = "<group>"; };
+		9C500252172AD03800C141DB /* LoadingBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingBar.m; sourceTree = "<group>"; };
 		9C75D80D171A167E00419031 /* yurie_anim.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = yurie_anim.plist; sourceTree = "<group>"; };
 		9C791C04172376B700780C5D /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
 		9C791C05172376B700780C5D /* pause-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pause-ipadhd.png"; sourceTree = "<group>"; };
@@ -930,7 +932,6 @@
 		9C8DE0D21718E133002E0D0A /* zealot_anim.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = zealot_anim.plist; sourceTree = "<group>"; };
 		9C8DE0D41718E9FF002E0D0A /* Zealot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Zealot.h; sourceTree = "<group>"; };
 		9C8DE0D51718EA00002E0D0A /* Zealot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Zealot.m; sourceTree = "<group>"; };
-		9C93D8E71729C23C004891D2 /* GameData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GameData.plist; sourceTree = "<group>"; };
 		9C94ABD717197BD2005BCE32 /* zDepth */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = zDepth; path = "TechDemo - Physics/zDepth"; sourceTree = "<group>"; };
 		9C9703541727804A00E48924 /* Level2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Level2.plist; sourceTree = "<group>"; };
 		9C9703561727805800E48924 /* Level3.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Level3.plist; sourceTree = "<group>"; };
@@ -1107,7 +1108,6 @@
 				9C11EEC417206465003510EB /* Waves */,
 				9C11EEC11720637D003510EB /* Levels */,
 				9C7FF343170B28CE009DA7F9 /* Config.plist */,
-				9C93D8E71729C23C004891D2 /* GameData.plist */,
 				9C8DE0D017185844002E0D0A /* Tags */,
 				9C94ABD717197BD2005BCE32 /* zDepth */,
 				9C2B3CBC171EE8FB00E695FE /* Registry Entities */,
@@ -1776,6 +1776,8 @@
 				3EE2F9661723178C0084DF2F /* LevelThumbnail.m */,
 				3EE2F95C17230E640084DF2F /* LevelStars.h */,
 				3EE2F95D17230E640084DF2F /* LevelStars.m */,
+				9C500251172AD03800C141DB /* LoadingBar.h */,
+				9C500252172AD03800C141DB /* LoadingBar.m */,
 			);
 			name = "Scene Entities";
 			sourceTree = "<group>";
@@ -2142,7 +2144,6 @@
 				9C9703571727805800E48924 /* Level3.plist in Resources */,
 				9C9703591727806200E48924 /* Level4.plist in Resources */,
 				9C97035B1727806A00E48924 /* Level5.plist in Resources */,
-				9C93D8E81729C23C004891D2 /* GameData.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2300,6 +2301,7 @@
 				9C1E05B617249B3A0093F0E3 /* GameManager.m in Sources */,
 				9C1E05BC1724C0560093F0E3 /* GameState.m in Sources */,
 				8C72C2A8172968F6009EF8C1 /* GameWin.m in Sources */,
+				9C500253172AD03800C141DB /* LoadingBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

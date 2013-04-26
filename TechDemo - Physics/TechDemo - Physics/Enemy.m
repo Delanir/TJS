@@ -138,7 +138,8 @@
         {
             Stimulus * stimulus = [stimuli dequeue];
             
-            switch ([stimulus type]) {
+            switch ([stimulus type])
+            {
                 case kDamageStimulus:
                     [self takeDamage:[stimulus value]];
                     break;

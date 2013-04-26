@@ -56,11 +56,13 @@ static int current_level = -1;
     
 }
 
+
 // on "init" you need to initialize your instance
 -(id) init
 {
     if( (self=[super init]))
     {
+        
         [[Registry shared] registerEntity:self withName:@"LevelLayer"];
         [[SimpleAudioEngine sharedEngine] playBackgroundMusic:[[Config shared] getStringProperty:@"IngameMusic"] loop:YES];
         
@@ -254,7 +256,6 @@ static int current_level = -1;
     // Pontuacao:
     // 1/4 accuracy
     // 3/4 wall health
-    
     Wall* wall = [[Registry shared] getEntityByName:@"Wall"];
     
     float cont1 = 0.75 * [wall health] / [wall maxHealth];

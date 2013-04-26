@@ -67,19 +67,17 @@ static GameState* _sharedSingleton = nil;
 
 -(void)initApplicationData
 {
-//    NSString * plistPath = [[NSBundle mainBundle] pathForResource:@"GameData" ofType:@"plist"];
-//    NSDictionary *appDefaults = [NSDictionary dictionaryWithContentsOfFile:plistPath];
-//    [[NSUserDefaults standardUserDefaults] registerDefaults:appDefaults];
     starStates = [[NSMutableArray alloc] init];
     for (int i = 0; i < 10; i++)
         [starStates addObject: [NSNumber numberWithInt:0]];
     goldState = [NSNumber numberWithInt:0];
-//    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 
 -(void)resetApplicationData
 {
+    [NSUserDefaults resetStandardUserDefaults];
+    [self initApplicationData];
     // limpar tudo
     // chamar init Application Data
 }

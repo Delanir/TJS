@@ -12,23 +12,27 @@ Outras coisas:
 - Progress bar (o que está feito está no teu pc)
 - Implementar skill tree - implementar a lógica e ver se fazemos uma spritesheet de bocadinhos para melhorar a performance (Daniela)
 - Random shouts dos inimigos (Daniela)
+- Acabar com o LevelLayerAbstract - Deixou de fazer sentido
+- Fazer Reset ao NSUserDefaults (uma setting no SettingsLayer, método ja está criado, mas n testado no gamestate)
 
 
 João M:
-- loadState vai definir:
-    - Nível do yuri - pode ser calculado através do numero de skillpoints
-    - Estado da SkillTree - é preciso terminar a lógica disto primeiro
-    - Estado dos achievements - é preciso implementar primeiro
-    - Estado do leaderboard - é preciso implementar primeiro
-    - Estado das settings - DOOOONE
-    - Gold actual - Isto pode ser feito
-    - Skill points actuais (skill tree) - é preciso fazer umas contas
-    - Níveis completos e estrelas associadas - DOOOONE
 - Destruição mais eficiente de projecteis
 - Acabar lógica dos estimulos
 - Lógica de levar dano em cima do moat
 - Alterar lógica do vPos para ser relativo ao ecrã
-- HUD
+- GameState falta definir:
+    - Nível do yuri - pode ser calculado através do numero de skillpoints, n precisa ser persistente
+    - Estado da SkillTree - é preciso terminar a lógica disto primeiro
+    - Estado dos achievements - é preciso implementar primeiro
+    - Estado do leaderboard - é preciso implementar primeiro
+    - Estado das settings - Isto pode ser feito
+    - Skill points actuais (skill tree) - é preciso fazer umas contas, n precisa ser persistente
+- Ligacoes entre menus
+
+- BURACOS DE MEMORIA ARGHHGHGHGH
+    - Nao percebo a skill tree
+
 
 (Para usar o dell)
 - Passar para os arqueiros do heroes  (João M)
@@ -36,12 +40,13 @@ João M:
 - som do impacto tem de ser corrigido
 - Sprite de voltar para trás
 - Por barra de vida na spritesheet (actually this is to be done on zwoptex)
-- Fazer menu em baixo
+- Desenhar HUD
 - Converter todas as sprites com o faststone 
 - Sprites dos edifícios
     - mage tower
     - masonry
     - fletcher
+        
         
 Ricardo:
 - Ligar ao game center para fazer achievements e leaderboard
@@ -49,6 +54,7 @@ Ricardo:
 - Criar layers de achievements e leaderboard
 - Definir achievements
 - Balancear dificuldade
+
 
 João A:
 - Fazer fogo e fumo nas walls
@@ -79,3 +85,9 @@ João A:
 - Passar projecto para deployment target 6.1
     - alterei o cocos para o efeito :p
 - Gold também já é persistente
+- HUD
+    - mudar botões para toggles
+    - posicionar melhor botoes por todo o lado
+- Optimizacoes brutais no carregamento dos niveis
+    - Falta correr profiler nisto
+- Criei a classe LoadingBar mas ignorem pra ja, obg. Estou a investigar multithreading

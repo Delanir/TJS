@@ -45,6 +45,7 @@
     [levelButtons addObject:_level9];
     [levelButtons addObject:_level10];
     
+    
     for (int i = 1; i <= 10; i++)
     {
         LevelThumbnail * level = [levelButtons objectAtIndex:i-1];
@@ -64,6 +65,7 @@
     [[SpriteManager shared] addAnimationFromFile:@"yurie_anim.plist"];
     
 }
+
 
 - (void) pressedGoToMainMenu:(id)sender
 {

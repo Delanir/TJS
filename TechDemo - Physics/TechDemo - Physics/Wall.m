@@ -23,26 +23,35 @@
         
         sprites = [[CCArray alloc] init];
         
-        CGSize winSize = [[CCDirector sharedDirector] winSize];
-        
         CCNode * levelLayer = [[Registry shared] getEntityByName:@"LevelLayer"];
+        CGPoint topPoint = ccp(161,549);
+        CGPoint bottomPoint = ccp(200,252);
         
         KKPixelMaskSprite * castletop100 = [KKPixelMaskSprite spriteWithFile:@"castle100-top.png" alphaThreshold:0.5f];
         KKPixelMaskSprite * castlebottom100 = [KKPixelMaskSprite spriteWithFile:@"castle100-bottom.png" alphaThreshold:0.5f];
-      
+        [castletop100 setPosition:topPoint];
+        [castlebottom100 setPosition:bottomPoint];
+        
         KKPixelMaskSprite * castletop75 = [KKPixelMaskSprite spriteWithFile:@"castle75-top.png" alphaThreshold:0.5f];
         KKPixelMaskSprite * castlebottom75 = [KKPixelMaskSprite spriteWithFile:@"castle75-bottom.png" alphaThreshold:0.5f];
-      
+        [castletop75 setPosition:topPoint];
+        [castlebottom75 setPosition:bottomPoint];
+        
         KKPixelMaskSprite * castletop50 = [KKPixelMaskSprite spriteWithFile:@"castle50-top.png" alphaThreshold:0.5f];
         KKPixelMaskSprite * castlebottom50 = [KKPixelMaskSprite spriteWithFile:@"castle50-bottom.png" alphaThreshold:0.5f];
-      
+        [castletop50 setPosition:topPoint];
+        [castlebottom50 setPosition:bottomPoint];
+        
         KKPixelMaskSprite * castletop25 = [KKPixelMaskSprite spriteWithFile:@"castle25-top.png" alphaThreshold:0.5f];
         KKPixelMaskSprite * castlebottom25 = [KKPixelMaskSprite spriteWithFile:@"castle25-bottom.png" alphaThreshold:0.5f];
-      
+        [castletop25 setPosition:topPoint];
+        [castlebottom25 setPosition:bottomPoint];
+        
         KKPixelMaskSprite * castletop0 = [KKPixelMaskSprite spriteWithFile:@"castle0-top.png" alphaThreshold:0.5f];
         KKPixelMaskSprite * castlebottom0 = [KKPixelMaskSprite spriteWithFile:@"castle0-bottom.png" alphaThreshold:0.5f];
+        [castletop0 setPosition:topPoint];
+        [castlebottom0 setPosition:ccp(265,252)];
 
-      
         [sprites addObject:castletop100];
         [sprites addObject:castlebottom100];
         [sprites addObject:castletop75];
@@ -54,11 +63,8 @@
         [sprites addObject:castletop0];
         [sprites addObject:castlebottom0];
         
-        CGPoint center = ccp(winSize.width/2, winSize.height/2);
-        
         for (CCSprite * spr in sprites)
         {
-            [spr setPosition:center];
             [spr setTag:5];
         }
         
