@@ -48,7 +48,7 @@
     
     AppController *app = (AppController*) [[UIApplication sharedApplication] delegate];
     
-    [[app navController] presentModalViewController:achievementViewController animated:YES];
+    [[app navController] presentViewController:achievementViewController animated:YES completion:nil];
     
     [achievementViewController release];
 }
@@ -60,7 +60,7 @@
     
     AppController *app = (AppController*) [[UIApplication sharedApplication] delegate];
     
-    [[app navController] presentModalViewController:leaderboardViewController animated:YES];
+    [[app navController] presentViewController:leaderboardViewController animated:YES completion:nil];
     
     [leaderboardViewController release];
 }
@@ -75,13 +75,13 @@
 -(void) achievementViewControllerDidFinish:(GKAchievementViewController *)viewController
 {
 	AppController *app = (AppController*) [[UIApplication sharedApplication] delegate];
-	[[app navController] dismissModalViewControllerAnimated:YES];
+	[[app navController] dismissViewControllerAnimated:YES completion:nil];
 }
 
 -(void) leaderboardViewControllerDidFinish:(GKLeaderboardViewController *)viewController
 {
 	AppController *app = (AppController*) [[UIApplication sharedApplication] delegate];
-	[[app navController] dismissModalViewControllerAnimated:YES];
+	[[app navController] dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

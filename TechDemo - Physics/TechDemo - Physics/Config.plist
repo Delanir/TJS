@@ -8,8 +8,6 @@
 	<integer>200</integer>
 	<key>InitialSkillPoints</key>
 	<integer>5</integer>
-	<key>InitialGold</key>
-	<integer>0</integer>
 	<key>existingEnemies</key>
 	<array>
 		<dict>

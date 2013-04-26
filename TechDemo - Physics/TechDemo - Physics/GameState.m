@@ -12,7 +12,7 @@
 
 static GameState* _sharedSingleton = nil;
 
-@synthesize starStates;
+@synthesize starStates, goldState;
 
 +(GameState*)shared
 {
@@ -52,6 +52,7 @@ static GameState* _sharedSingleton = nil;
 {
     NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:starStates forKey:@"Stars"];
+    [defaults setObject:goldState forKey:@"Gold"];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
@@ -61,6 +62,7 @@ static GameState* _sharedSingleton = nil;
     starStates = [defaults objectForKey:@"Stars"];
     if ( starStates == nil)
         [self initApplicationData];
+    goldState = [defaults objectForKey:@"Gold"];
 }
 
 -(void)initApplicationData
@@ -71,6 +73,7 @@ static GameState* _sharedSingleton = nil;
     starStates = [[NSMutableArray alloc] init];
     for (int i = 0; i < 10; i++)
         [starStates addObject: [NSNumber numberWithInt:0]];
+    goldState = [NSNumber numberWithInt:0];
 //    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 

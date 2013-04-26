@@ -15,19 +15,17 @@ Outras coisas:
 
 
 João M:
-- Criar classe gameState para fazer track dos resources e estado do jogo
 - loadState vai definir:
-    - Nível do yuri
-    - Estado da SkillTree
-    - Estado dos achievements
-    - Estado do leaderboard
-    - Estado das settings
-    - Gold actual
-    - Skill points actuais (skill tree)
-    - Níveis completos e estrelas associadas
+    - Nível do yuri - pode ser calculado através do numero de skillpoints
+    - Estado da SkillTree - é preciso terminar a lógica disto primeiro
+    - Estado dos achievements - é preciso implementar primeiro
+    - Estado do leaderboard - é preciso implementar primeiro
+    - Estado das settings - DOOOONE
+    - Gold actual - Isto pode ser feito
+    - Skill points actuais (skill tree) - é preciso fazer umas contas
+    - Níveis completos e estrelas associadas - DOOOONE
 - Destruição mais eficiente de projecteis
 - Acabar lógica dos estimulos
-- Passar projecto para deployment target 6.1
 - Lógica de levar dano em cima do moat
 - Alterar lógica do vPos para ser relativo ao ecrã
 - HUD
@@ -77,3 +75,7 @@ João A:
     - Fazer método no gamemanager RunLevelNumber: (int) levelNumber
     - Fica dinâmico e recebe o parametro do thumbnail que é criado no selectLevelLayer
 - 5 níveis criados
+- Criar classe gameState para fazer track dos resources e estado do jogo
+- Passar projecto para deployment target 6.1
+    - alterei o cocos para o efeito :p
+- Gold também já é persistente

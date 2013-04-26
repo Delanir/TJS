@@ -12,9 +12,11 @@
 @interface GameState : NSObject
 {
     NSMutableArray * starStates;
+    NSNumber * goldState;
 }
 
 @property (nonatomic, retain) NSMutableArray * starStates;
+@property (nonatomic, retain) NSNumber * goldState;
 
 +(GameState*)shared;
 

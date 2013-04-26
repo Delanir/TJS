@@ -119,10 +119,11 @@
     unsigned int enemies = [rm activeEnemies];
     unsigned int gold = [rm gold];
     double accuracy = [rm determineAccuracy];
+    double mana = [rm mana];
     if (accuracy < 0)
-        [label3 setString:[NSString stringWithFormat:@"Enemies: %i Gold: %i Accuracy: ---%%", enemies, gold]];
+        [label3 setString:[NSString stringWithFormat:@"Enemies: %i Gold: %i Accuracy: ---%% Mana: %f", enemies, gold, mana]];
     else
-        [label3 setString:[NSString stringWithFormat:@"Enemies: %i Gold: %i Accuracy: %i%%", enemies, gold, (int) accuracy]];
+        [label3 setString:[NSString stringWithFormat:@"Enemies: %i Gold: %i Accuracy: %i%% Mana: %f", enemies, gold, (int) accuracy, mana]];
 }
 
 -(void) dealloc

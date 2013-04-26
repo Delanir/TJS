@@ -56,6 +56,7 @@
 -(void) gameOver;
 -(void) gameWin;
 -(void) calculateAndUpdateNumberOfStars;
+-(void) makeMoneyPersistent;
 
 -(void) addEnemy:(Enemy *) newEnemy;
 

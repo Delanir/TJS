@@ -109,7 +109,6 @@ static int current_level = -1;
     ResourceManager * rm = [ResourceManager shared];
     Config * conf = [Config shared];
     [rm setArrows:[conf getIntProperty:@"InitialArrows"]];
-    [rm setGold: [conf getIntProperty:@"InitialGold"]];
     [rm setSkillPoints: [conf getIntProperty:@"InitialSkillPoints"]];
     [rm setMana: [[conf getNumberProperty:@"InitialMana"] doubleValue]];
     [rm reset];
@@ -212,7 +211,6 @@ static int current_level = -1;
 
 - (void)ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    
     [super ccTouchesBegan:touches withEvent:event];
     
     fire = YES;
@@ -254,18 +252,28 @@ static int current_level = -1;
 -(void) calculateAndUpdateNumberOfStars
 {
     // Pontuacao:
-    // 1/2 accuracy
-    // 1/2 wall health
+    // 1/4 accuracy
+    // 3/4 wall health
     
     Wall* wall = [[Registry shared] getEntityByName:@"Wall"];
     
-    float cont1 = 0.5 * [wall health] / [wall maxHealth];
-    float cont2 = 0.5 * [[ResourceManager shared] determineAccuracy] * 0.01;
+    float cont1 = 0.75 * [wall health] / [wall maxHealth];
+    float cont2 = 0.25 * [[ResourceManager shared] determineAccuracy] * 0.01;
     
     unsigned int numberStars = (unsigned int) ceil((cont1+cont2)*3);
     
     NSMutableArray * stars = [[GameState shared] starStates];
-    [stars replaceObjectAtIndex:current_level-1 withObject: [NSNumber numberWithInt:numberStars]];
+    
+    NSNumber * currentStars = [stars objectAtIndex:current_level-1];
+    
+    if (numberStars > [currentStars intValue])
+        [stars replaceObjectAtIndex:current_level-1 withObject: [NSNumber numberWithInt:numberStars]];
+    
+}
+
+-(void)makeMoneyPersistent
+{
+    [[GameState shared] setGoldState: [NSNumber numberWithUnsignedInt:[[ResourceManager shared] gold]]];
 }
 
 -(void)onExit

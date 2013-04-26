@@ -29,8 +29,8 @@
         [self addChild:[WaveManager shared]]; // Esta linha é imensos de feia. Mas tem de ser para haver update
         
         
-            _pause= (PauseHUD *)[CCBReader nodeGraphFromFile:@"PauseMenu.ccbi"];
-            [self addChild:_pause];
+        _pause= (PauseHUD *)[CCBReader nodeGraphFromFile:@"PauseMenu.ccbi"];
+        [self addChild:_pause];
         
         [_pause setZOrder:1535];
         [_pause setVisible:NO];
@@ -46,7 +46,7 @@
     [self gameOverReturnToMainMenuCheck:touch];
     [self gameWinReturnToMainMenuCheck:touch];
     if ([[CCDirector sharedDirector] isPaused])
-        return;    
+        return;
 }
 
 -(void) ccTouchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
@@ -79,7 +79,8 @@
 
 -(void) gameOverReturnToMainMenuCheck:(UITouch *)touchLocation
 {
-    if (_gameOver!=nil) {
+    if (_gameOver!=nil)
+    {
         CGSize winSize = [[CCDirector sharedDirector] winSize];
         CGPoint location=[touchLocation locationInView:[touchLocation view]];
         location.y=winSize.height-location.y;
@@ -102,8 +103,8 @@
 
 -(void) gameWinReturnToMainMenuCheck:(UITouch *)touchLocation
 {
-#warning calcular pontuacao e atribuir estrelas ou flores de lis
-    if (_gameWin!=nil) {
+    if (_gameWin!=nil)
+    {
         CGSize winSize = [[CCDirector sharedDirector] winSize];
         CGPoint location=[touchLocation locationInView:[touchLocation view]];
         location.y=winSize.height-location.y;
@@ -168,6 +169,7 @@
     [[CCDirector sharedDirector] pause];
     
     [self calculateAndUpdateNumberOfStars];
+    [self makeMoneyPersistent];
 }
 
 -(void) calculateAndUpdateNumberOfStars
@@ -175,18 +177,22 @@
     
 }
 
+-(void) makeMoneyPersistent
+{
+}
+
 #pragma mark GameKit delegate
 
 -(void) achievementViewControllerDidFinish:(GKAchievementViewController *)viewController
 {
 	AppController *app = (AppController*) [[UIApplication sharedApplication] delegate];
-	[[app navController] dismissModalViewControllerAnimated:YES];
+	[[app navController] dismissViewControllerAnimated:YES completion:nil];
 }
 
 -(void) leaderboardViewControllerDidFinish:(GKLeaderboardViewController *)viewController
 {
 	AppController *app = (AppController*) [[UIApplication sharedApplication] delegate];
-	[[app navController] dismissModalViewControllerAnimated:YES];
+	[[app navController] dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end
