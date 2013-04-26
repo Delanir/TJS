@@ -11,9 +11,9 @@ Bug list:
 Outras coisas:
 - Progress bar (o que está feito está no teu pc)
 - Implementar skill tree - implementar a lógica e ver se fazemos uma spritesheet de bocadinhos para melhorar a performance (Daniela)
-- Random shouts dos inimigos (Daniela)
+- Random shouts dos inimigos
 - Acabar com o LevelLayerAbstract - Deixou de fazer sentido
-- Fazer Reset ao NSUserDefaults (uma setting no SettingsLayer, método ja está criado, mas n testado no gamestate)
+- Fazer Reset ao NSUserDefaults (uma setting no SettingsLayer, método ja está criado, mas n testado, no gamestate)
 
 
 João M:
@@ -30,9 +30,10 @@ João M:
     - Skill points actuais (skill tree) - é preciso fazer umas contas, n precisa ser persistente
 - Ligacoes entre menus
 
+Fazer transicoes entre cenas 
+
 - BURACOS DE MEMORIA ARGHHGHGHGH
     - Nao percebo a skill tree
-
 
 (Para usar o dell)
 - Passar para os arqueiros do heroes  (João M)
@@ -41,11 +42,12 @@ João M:
 - Sprite de voltar para trás
 - Por barra de vida na spritesheet (actually this is to be done on zwoptex)
 - Desenhar HUD
-- Converter todas as sprites com o faststone 
+- Converter todas as sprites com o faststone para ganhar memoria
 - Sprites dos edifícios
     - mage tower
     - masonry
     - fletcher
+- Melhorar sprites da Skill tree para ocuparem menos memoria talvez? testar com algumas mas sem posicionar
         
         
 Ricardo:
