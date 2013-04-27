@@ -27,28 +27,28 @@
         CGPoint topPoint = ccp(161,549);
         CGPoint bottomPoint = ccp(200,252);
         
-        KKPixelMaskSprite * castletop100 = [KKPixelMaskSprite spriteWithFile:@"castle100-top.png" alphaThreshold:0.5f];
-        KKPixelMaskSprite * castlebottom100 = [KKPixelMaskSprite spriteWithFile:@"castle100-bottom.png" alphaThreshold:0.5f];
+        KKPixelMaskSprite * castletop100 = [KKPixelMaskSprite spriteWithSpriteFrameName:@"castle100-top.png" alphaThreshold:0.5f];
+        KKPixelMaskSprite * castlebottom100 = [KKPixelMaskSprite spriteWithSpriteFrameName:@"castle100-bottom.png" alphaThreshold:0.5f];
         [castletop100 setPosition:topPoint];
         [castlebottom100 setPosition:bottomPoint];
         
-        KKPixelMaskSprite * castletop75 = [KKPixelMaskSprite spriteWithFile:@"castle75-top.png" alphaThreshold:0.5f];
-        KKPixelMaskSprite * castlebottom75 = [KKPixelMaskSprite spriteWithFile:@"castle75-bottom.png" alphaThreshold:0.5f];
+        KKPixelMaskSprite * castletop75 = [KKPixelMaskSprite spriteWithSpriteFrameName:@"castle75-top.png" alphaThreshold:0.5f];
+        KKPixelMaskSprite * castlebottom75 = [KKPixelMaskSprite spriteWithSpriteFrameName:@"castle75-bottom.png" alphaThreshold:0.5f];
         [castletop75 setPosition:topPoint];
         [castlebottom75 setPosition:bottomPoint];
         
-        KKPixelMaskSprite * castletop50 = [KKPixelMaskSprite spriteWithFile:@"castle50-top.png" alphaThreshold:0.5f];
-        KKPixelMaskSprite * castlebottom50 = [KKPixelMaskSprite spriteWithFile:@"castle50-bottom.png" alphaThreshold:0.5f];
+        KKPixelMaskSprite * castletop50 = [KKPixelMaskSprite spriteWithSpriteFrameName:@"castle50-top.png" alphaThreshold:0.5f];
+        KKPixelMaskSprite * castlebottom50 = [KKPixelMaskSprite spriteWithSpriteFrameName:@"castle50-bottom.png" alphaThreshold:0.5f];
         [castletop50 setPosition:topPoint];
         [castlebottom50 setPosition:bottomPoint];
         
-        KKPixelMaskSprite * castletop25 = [KKPixelMaskSprite spriteWithFile:@"castle25-top.png" alphaThreshold:0.5f];
-        KKPixelMaskSprite * castlebottom25 = [KKPixelMaskSprite spriteWithFile:@"castle25-bottom.png" alphaThreshold:0.5f];
+        KKPixelMaskSprite * castletop25 = [KKPixelMaskSprite spriteWithSpriteFrameName:@"castle25-top.png" alphaThreshold:0.5f];
+        KKPixelMaskSprite * castlebottom25 = [KKPixelMaskSprite spriteWithSpriteFrameName:@"castle25-bottom.png" alphaThreshold:0.5f];
         [castletop25 setPosition:topPoint];
         [castlebottom25 setPosition:bottomPoint];
         
-        KKPixelMaskSprite * castletop0 = [KKPixelMaskSprite spriteWithFile:@"castle0-top.png" alphaThreshold:0.5f];
-        KKPixelMaskSprite * castlebottom0 = [KKPixelMaskSprite spriteWithFile:@"castle0-bottom.png" alphaThreshold:0.5f];
+        KKPixelMaskSprite * castletop0 = [KKPixelMaskSprite spriteWithSpriteFrameName:@"castle0-top.png" alphaThreshold:0.5f];
+        KKPixelMaskSprite * castlebottom0 = [KKPixelMaskSprite spriteWithSpriteFrameName:@"castle0-bottom.png" alphaThreshold:0.5f];
         [castletop0 setPosition:topPoint];
         [castlebottom0 setPosition:ccp(265,252)];
 
@@ -93,7 +93,7 @@
         {
             [self changeTopSprite:[sprites objectAtIndex:2] bottomSprite:[sprites objectAtIndex:3]];
 //          CCParticleSmoke *smoke = [[CCParticleSmoke alloc] init];
-          //CCParticleSmoke *fire = [[CCParticleMeteor alloc] init];
+//          CCParticleSmoke *fire = [[CCParticleMeteor alloc] init];
 //          [smoke setAutoRemoveOnFinish:YES];
 //          [smoke setScaleX:0.8];
 //          [smoke setStartSize:10];

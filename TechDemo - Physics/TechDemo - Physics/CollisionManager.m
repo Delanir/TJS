@@ -45,12 +45,12 @@ static CollisionManager* _sharedSingleton = nil;
 -(id)init
 {
 	self = [super init];
-	if (self != nil) {
+	if (self != nil)
+    {
         _targets = [[CCArray alloc] init];
         _projectiles = [[CCArray alloc] init];
         _walls = [[CCArray alloc] init];
 	}
-    
 	return self;
 }
 

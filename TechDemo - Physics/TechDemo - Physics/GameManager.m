@@ -71,8 +71,7 @@ static GameManager* _sharedSingleton = nil;
             sceneToRun = [CCBReader sceneWithNodeGraphFromFile:@"MainMenu.ccbi"];
             break;
         case kSkillTreeScene:
-            CCLOG(@"we hates it, golum golum");
-            sceneToRun = [[CCBReader sceneWithNodeGraphFromFile:@"SkillTreeLayer.ccbi"] autorelease];
+            sceneToRun = [CCBReader sceneWithNodeGraphFromFile:@"SkillTreeLayer.ccbi"];
             break;
         case kAchievementsScene:
             //            sceneToRun = ; // TODO
@@ -112,7 +111,11 @@ static GameManager* _sharedSingleton = nil;
         [[[CCDirector sharedDirector] runningScene] unscheduleAllSelectors];
         [[[CCDirector sharedDirector] runningScene] removeAllChildrenWithCleanup:YES];
         [[[CCDirector sharedDirector] runningScene] removeFromParentAndCleanup:YES];
-        [[CCDirector sharedDirector] replaceScene:[CCTransitionZoomFlipY transitionWithDuration:0.5f scene:sceneToRun]];
+        
+        if (sceneID == kMainMenuScene)
+            [[CCDirector sharedDirector] replaceScene:[CCTransitionSlideInL transitionWithDuration:0.5f scene:sceneToRun]];
+        else
+            [[CCDirector sharedDirector] replaceScene:[CCTransitionSlideInR transitionWithDuration:0.5f scene:sceneToRun]];
 
         //  else
         //  {

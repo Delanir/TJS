@@ -24,15 +24,6 @@
 
 - (void) goToLevel:(id)sender
 {
-#warning estou aqui a mais
-    LoadingBar * loading = [[LoadingBar alloc] init];
-    [[loading loadingTimer] setPercentage:100]; // temporario
-    [loading setPosition: ccp(512, 384)];
-    [loading setZOrder:2000];
-    [self addChild:loading];
-    [loading release];
-    [[CCDirector sharedDirector] drawScene];
-#warning estou aqui a mais
     [[GameManager shared] runLevel:level];
 }
 
@@ -43,5 +34,6 @@
     [_thumbnail setNormalImage: spriteImage1];
     [_thumbnail setSelectedImage: spriteImage2];
 }
+
 
 @end

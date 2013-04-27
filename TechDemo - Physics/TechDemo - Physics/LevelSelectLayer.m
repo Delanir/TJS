@@ -28,10 +28,11 @@
 
 -(void)onEnter
 {
+    
     [super onEnter];
     
     //Initialize art and animations
-    [self addChild:[[SpriteManager shared] addSpritesToSpriteFrameCacheWithFile:@"lvl1spritesheet.plist" andBatchSpriteSheet:@"lvl1spritesheet.png"]];
+    [self addChild:[[SpriteManager shared] addSpritesToSpriteFrameCacheWithFile:@"MenuSpritesheet.plist" andBatchSpriteSheet:@"MenuSpritesheet.png"]];
     
     levelButtons = [[CCArray alloc] init];
     [levelButtons addObject:_level1];
@@ -52,7 +53,7 @@
         [level setLevel:i];
         int stateStars = [[[[GameState shared] starStates] objectAtIndex:i-1] intValue];
         [level setNumberStars:stateStars];
-        if ((stateStars > 0 || i == 1 || prevStars > 0) && i < 5) {// Hardcoded stuff for now
+        if ((stateStars > 0 || i == 1 || prevStars > 0) && i < 6) {// Hardcoded stuff for now
             [level setIsEnabled:YES];
             prevStars = stateStars;
         } else
@@ -61,16 +62,15 @@
         [level setThumbnail:[NSString stringWithFormat:@"level%d.png",i]];
     }
     
-    [[SpriteManager shared] addAnimationFromFile:@"peasant_anim.plist"];
-    [[SpriteManager shared] addAnimationFromFile:@"fairiedragon_anim.plist"];
-    [[SpriteManager shared] addAnimationFromFile:@"zealot_anim.plist"];
-    [[SpriteManager shared] addAnimationFromFile:@"yurie_anim.plist"];
     
 }
+
+
 
 
 - (void) pressedGoToMainMenu:(id)sender
 {
     [[GameManager shared] runSceneWithID:kMainMenuScene];
 }
+
 @end

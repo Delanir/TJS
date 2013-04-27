@@ -51,7 +51,6 @@ static SpriteManager* _sharedSingleton = nil;
 // on "dealloc" you need to release all your retained objects
 - (void) dealloc
 {
-    
     //Dealloc stuff below this line
     [_sharedSingleton release];
 	[super dealloc];

@@ -21,7 +21,7 @@
         [self setLoadingTimer:[CCProgressTimer progressWithSprite:loadingSprite]];
         [loadingTimer setType: kCCProgressTimerTypeRadial];
         [loadingTimer setPercentage:0];
-        [self addChild:loadingSprite z:2];
+        [self addChild:loadingTimer z:2];
     }
     return self;
 }

@@ -53,7 +53,6 @@ static int current_level = -1;
         [self addFaerieDragon];
     if((int)floor(timeElapsedSinceBeginning) % 10 == 1)
         [self addZealot];
-    
 }
 
 
@@ -62,9 +61,14 @@ static int current_level = -1;
 {
     if( (self=[super init]))
     {
-        
         [[Registry shared] registerEntity:self withName:@"LevelLayer"];
         [[SimpleAudioEngine sharedEngine] playBackgroundMusic:[[Config shared] getStringProperty:@"IngameMusic"] loop:YES];
+        
+        [[SpriteManager shared] addSpritesToSpriteFrameCacheWithFile:@"lvl1spritesheet.plist" andBatchSpriteSheet:@"lvl1spritesheet.png"];
+        [[SpriteManager shared] addAnimationFromFile:@"peasant_anim.plist"];
+        [[SpriteManager shared] addAnimationFromFile:@"fairiedragon_anim.plist"];
+        [[SpriteManager shared] addAnimationFromFile:@"zealot_anim.plist"];
+        [[SpriteManager shared] addAnimationFromFile:@"yurie_anim.plist"];
         
         CGSize winSize = [[CCDirector sharedDirector] winSize];
         timeElapsedSinceBeginning = 1.0f;
@@ -95,7 +99,6 @@ static int current_level = -1;
         [[CollisionManager shared] dummyMethod];
         
         [self schedule:@selector(update:)];
-        
     }
     
     self.isTouchEnabled = YES;
