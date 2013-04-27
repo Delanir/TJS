@@ -20,6 +20,8 @@
     double maxHealth, health, lastHealth;
     wallStatus status;
     CCArray *sprites;
+    CCParticleSmoke *smoke;
+    CCParticleFire *fire;
 }
 
 @property (nonatomic) double maxHealth, health, lastHealth;

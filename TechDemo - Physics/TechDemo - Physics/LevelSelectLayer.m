@@ -52,7 +52,7 @@
         [level setLevel:i];
         int stateStars = [[[[GameState shared] starStates] objectAtIndex:i-1] intValue];
         [level setNumberStars:stateStars];
-        if ((stateStars > 0 || i == 1 || prevStars > 0) && i < 5) {// Hardcoded stuff for now
+        if ((stateStars > 0 || i == 1 || prevStars > 0) && i <= 5) {// Hardcoded stuff for now
             [level setIsEnabled:YES];
             prevStars = stateStars;
         } else
