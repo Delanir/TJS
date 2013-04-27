@@ -78,7 +78,7 @@
 //	[director_ pushScene: [IntroLayer scene]];
     
 	// Load the main menu scene from the ccbi-file
-    [[GameManager shared] runSceneWithID:kMasterScene];
+    [[GameManager shared] runSceneWithID:kMainMenuScene];
     
 	// Create a Navigation Controller with the Director
 	navController_ = [[UINavigationController alloc] initWithRootViewController:director_];
@@ -111,12 +111,15 @@
 // call got rejected
 -(void) applicationDidBecomeActive:(UIApplication *)application
 {
-	if( [navController_ visibleViewController] == director_ )
+#warning e tirar isto depois de fazer o de baixo para n recomecar
+	if( [navController_ visibleViewController] == director_)
 		[director_ resume];
 }
 
 -(void) applicationDidEnterBackground:(UIApplication*)application
 {
+#warning DANIELA: -forcar o pause aqui (o nosso pause)
+    [[NSUserDefaults standardUserDefaults] synchronize];
 	if( [navController_ visibleViewController] == director_ )
 		[director_ stopAnimation];
 }

@@ -17,7 +17,7 @@
     int money;
     NSMutableArray * buttons;
     double lastHealth;
-    CCLabelTTF *label,*label2,*label3;
+    CCLabelTTF *label1,*label2,*label3;
 }
 
 - (NSMutableArray *)buttonsPressed;

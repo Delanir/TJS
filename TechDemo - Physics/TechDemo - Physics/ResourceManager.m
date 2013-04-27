@@ -7,6 +7,7 @@
 //
 
 #import "ResourceManager.h"
+#import "GameState.h"
 
 @implementation ResourceManager
 
@@ -44,6 +45,7 @@ static ResourceManager* _sharedSingleton = nil;
 	self = [super init];
 	if (self != nil) {
 		[self reset];
+        [self setGold: [[[GameState shared] goldState] unsignedIntValue]];
     }
 	return self;
 }

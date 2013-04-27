@@ -14,9 +14,11 @@
 @interface Yuri : Entity
 {
     BOOL readyToFire;
+    unsigned int level;
 }
 
 @property (nonatomic) BOOL readyToFire;
+@property unsigned int level;
 @property (nonatomic, retain) CCFiniteTimeAction *shootUp;
 @property (nonatomic, retain) CCFiniteTimeAction *shootFront;
 @property (nonatomic, retain) CCFiniteTimeAction *shootDown;

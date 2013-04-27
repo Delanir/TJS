@@ -12,7 +12,8 @@
 #import "LevelStars.h"
 
 
-@interface LevelThumbnail : CCNode{
+@interface LevelThumbnail : CCNode
+{
   CCMenuItemImage *_thumbnail;
   LevelStars *_stars;
   

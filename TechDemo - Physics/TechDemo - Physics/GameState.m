@@ -12,6 +12,8 @@
 
 static GameState* _sharedSingleton = nil;
 
+@synthesize starStates, goldState;
+
 +(GameState*)shared
 {
 	@synchronized([GameState class])
@@ -39,15 +41,51 @@ static GameState* _sharedSingleton = nil;
 -(id)init
 {
 	self = [super init];
-	if (self != nil) {
-		NSLog(@"Game State initialized");
+	if (self != nil)
+    {
+        [self loadApplicationData];
     }
 	return self;
+}
+
+-(void)saveApplicationData
+{
+    NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:starStates forKey:@"Stars"];
+    [defaults setObject:goldState forKey:@"Gold"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+-(void)loadApplicationData
+{
+    NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
+    starStates = [defaults objectForKey:@"Stars"];
+    if ( starStates == nil)
+        [self initApplicationData];
+    goldState = [defaults objectForKey:@"Gold"];
+}
+
+-(void)initApplicationData
+{
+    starStates = [[NSMutableArray alloc] init];
+    for (int i = 0; i < 10; i++)
+        [starStates addObject: [NSNumber numberWithInt:0]];
+    goldState = [NSNumber numberWithInt:0];
+}
+
+
+-(void)resetApplicationData
+{
+    [NSUserDefaults resetStandardUserDefaults];
+    [self initApplicationData];
+    // limpar tudo
+    // chamar init Application Data
 }
 
 
 -(void)dealloc
 {
+    [starStates release];
     [_sharedSingleton release];
     [super dealloc];
 }

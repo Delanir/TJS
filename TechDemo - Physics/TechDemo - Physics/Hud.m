@@ -22,37 +22,65 @@
         lastHealth = 100.00;
         
         unsigned int maxArrows = [[ResourceManager shared] arrows];
-        label =[CCLabelTTF labelWithString:[NSString stringWithFormat:@"Number of Arrows Left: %i", maxArrows] fontName:@"Futura" fontSize:20];
+        label1 =[CCLabelTTF labelWithString:[NSString stringWithFormat:@"Number of Arrows Left: %i", maxArrows] fontName:@"Futura" fontSize:20];
         label2 = [CCLabelTTF labelWithString:@"Wall health: 100.00" fontName:@"Futura" fontSize:20];
         label3 = [CCLabelTTF labelWithString:@"Enemies: 0  Money:  0 Accurracy: 100%" fontName:@"Futura" fontSize:20];
-        label.position = CGPointMake(label.contentSize.width/2 + 70, 80);
+        label1.position = CGPointMake(label1.contentSize.width/2 + 70, 80);
         label2.position = CGPointMake(label2.contentSize.width/2 + 70,50);
         label3.position = CGPointMake(label3.contentSize.width/2 + 70, 20);
         
         //Power Buttons
-        CCMenuItemToggle *plusMenuItem = [CCMenuItemImage
-                                    itemWithNormalImage:@"IceButton.png" selectedImage:@"IceButton-bw.png"
-                                    target:self selector:@selector(plusButtonToggle)];
-        plusMenuItem.position = ccp(810, 60);
+        CCMenuItem *iceOn = [CCMenuItemImage
+                             itemWithNormalImage:@"IceButton.png" selectedImage:@"IceButton.png"
+                             target:self selector:nil];
+        CCMenuItem *iceOff = [CCMenuItemImage
+                              itemWithNormalImage:@"IceButton-bw.png" selectedImage:@"IceButton-bw.png"
+                              target:self selector:nil];
         
-        CCMenuItem *crossMenuItem = [CCMenuItemImage
-                                     itemWithNormalImage:@"FireButton.png" selectedImage:@"FireButton-bw.png"
-                                     target:self selector:@selector(crossButtonToggle)];
-        crossMenuItem.position = ccp(880, 60);
-        
-        CCMenuItem *bullseyeMenuItem = [CCMenuItemImage
-                                        itemWithNormalImage:@"MarksManButton.png" selectedImage:@"MarksManButton-bw.png"
-                                        target:self selector:@selector(bullseyeButtonToggle)];
-        bullseyeMenuItem.position = ccp(950, 60);
-        
-        
-        CCMenu *superMenu = [CCMenu menuWithItems:plusMenuItem, crossMenuItem, bullseyeMenuItem, nil];
-        superMenu.position = CGPointZero;
+        CCMenuItemToggle *iceToggleButton = [CCMenuItemToggle itemWithTarget:self
+                                                                    selector:@selector(iceButtonToggle)
+                                                                       items:iceOff, iceOn, nil];
+        iceToggleButton.position = ccp(750, 60);
         
         
         
-        [self addChild:superMenu];
-        [self addChild:label z:1];
+        CCMenuItem *fireOn = [CCMenuItemImage
+                              itemWithNormalImage:@"FireButton.png" selectedImage:@"FireButton.png"
+                              target:self selector:nil];
+        CCMenuItem *fireOff = [CCMenuItemImage
+                               itemWithNormalImage:@"FireButton-bw.png" selectedImage:@"FireButton-bw.png"
+                               target:self selector:nil];
+        
+        CCMenuItemToggle *fireToggleButton = [CCMenuItemToggle itemWithTarget:self
+                                                                     selector:@selector(fireButtonToggle)
+                                                                        items:fireOff, fireOn, nil];
+        fireToggleButton.position = ccp(850, 60);
+        
+        
+        
+        CCMenuItem *pushBackOn = [CCMenuItemImage
+                                  itemWithNormalImage:@"MarksManButton.png" selectedImage:@"MarksManButton.png"
+                                  target:self selector:nil];
+        CCMenuItem *pushBackOff = [CCMenuItemImage
+                                   itemWithNormalImage:@"MarksManButton-bw.png" selectedImage:@"MarksManButton-bw.png"
+                                   target:self selector:nil];
+        
+        CCMenuItemToggle *pushBackToggleButton = [CCMenuItemToggle itemWithTarget:self
+                                                                         selector:@selector(pushBackButtonToggle)
+                                                                            items:pushBackOff, pushBackOn, nil];
+        pushBackToggleButton.position = ccp(950, 60);
+        
+        CCMenuItem *buyButton = [CCMenuItemImage itemWithNormalImage:@"Buy_Button.png" selectedImage:@"Buy_Button.png" target:self selector:@selector(buyArrows)];
+        
+        buyButton.position = ccp(600, 60);
+        
+        
+        CCMenu *hudMenu = [CCMenu menuWithItems:iceToggleButton, fireToggleButton, pushBackToggleButton, buyButton, nil];
+        hudMenu.position = CGPointZero;
+        
+        
+        [self addChild:hudMenu];
+        [self addChild:label1 z:1];
         [self addChild:label2 z:1];
         [self addChild:label3 z:1];
     }
@@ -69,21 +97,34 @@
 }
 
 
-- (void) plusButtonToggle
+- (void) iceButtonToggle
 {
     [self toggleButton:kPower1Button];
 }
 
-- (void) crossButtonToggle
+- (void) fireButtonToggle
 {
     [self toggleButton:kPower2Button];
 }
 
-- (void) bullseyeButtonToggle
+- (void) pushBackButtonToggle
 {
     [self toggleButton:kPower3Button];
 }
 
+- (void) buyArrows
+{
+    if ([[ResourceManager shared] gold] > 4) {
+        
+        int arrow = [[ResourceManager shared] arrows];
+        [[ResourceManager shared] setArrows:arrow+10];
+        int gold = [[ResourceManager shared] gold];
+        [[ResourceManager shared] setGold:gold-5];
+        [self updateArrows];
+        [self updateMoney:0];
+    }
+    
+}
 
 - (NSMutableArray *)buttonsPressed
 {
@@ -92,7 +133,7 @@
 
 - (void)updateArrows
 {
-   [label setString:[NSString stringWithFormat:@"Number of Arrows Left: %i", [[ResourceManager shared] arrows]]];
+    [label1 setString:[NSString stringWithFormat:@"Number of Arrows Left: %i", [[ResourceManager shared] arrows]]];
 }
 
 - (void)updateWallHealth
@@ -119,10 +160,11 @@
     unsigned int enemies = [rm activeEnemies];
     unsigned int gold = [rm gold];
     double accuracy = [rm determineAccuracy];
+    double mana = [rm mana];
     if (accuracy < 0)
-        [label3 setString:[NSString stringWithFormat:@"Enemies: %i Gold: %i Accuracy: ---%%", enemies, gold]];
+        [label3 setString:[NSString stringWithFormat:@"Enemies: %i Gold: %i Accuracy: ---%% Mana: %.0f", enemies, gold, mana]];
     else
-        [label3 setString:[NSString stringWithFormat:@"Enemies: %i Gold: %i Accuracy: %i%%", enemies, gold, (int) accuracy]];
+        [label3 setString:[NSString stringWithFormat:@"Enemies: %i Gold: %i Accuracy: %i%% Mana: %.0f", enemies, gold, (int) accuracy, mana]];
 }
 
 -(void) dealloc

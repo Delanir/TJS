@@ -26,8 +26,7 @@
 
 - (void) toggleMute:(id)sender
 {
-    BOOL mute = [[SimpleAudioEngine sharedEngine] mute];
-    if (mute)
+    if ([[SimpleAudioEngine sharedEngine] mute])
     {
         [[SimpleAudioEngine sharedEngine] setMute:NO];
         [_mute setVisible:YES];
@@ -40,8 +39,9 @@
     
 };
 
--(void)dealloc{
-    [super dealloc];
+-(void)dealloc
+{
     [self removeAllChildrenWithCleanup:YES];
+    [super dealloc];
 }
 @end

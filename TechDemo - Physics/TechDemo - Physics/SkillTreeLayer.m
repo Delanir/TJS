@@ -119,15 +119,8 @@
   [[[CCDirector sharedDirector] runningScene] stopAllActions];
   [[[CCDirector sharedDirector] runningScene] unscheduleAllSelectors];
   [self removeAllChildrenWithCleanup:YES];
-  NSLog(@"EU NAO MORRO PORQUE %d GAJOS ESTAO A FALAR DE MIM",[self retainCount]);
-//  [self setIsTouchEnabled: NO];
-  
-
-//  [self removeFromParentAndCleanup:YES];
-
-  
+    
   [super onExit];
-  NSLog(@"DEPOIS DO SUPER ON EXIT %d",[self retainCount]);
 }
 
 

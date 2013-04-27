@@ -11,7 +11,7 @@
 #import "SimpleAudioEngine.h"
 #import "Config.h"
 #import "GameManager.h"
-
+#import "GameState.h"
 
 @implementation LevelSelectLayer
 
@@ -45,14 +45,17 @@
     [levelButtons addObject:_level9];
     [levelButtons addObject:_level10];
     
+    int prevStars = 0;
     for (int i = 1; i <= 10; i++)
     {
         LevelThumbnail * level = [levelButtons objectAtIndex:i-1];
         [level setLevel:i];
-        [level setNumberStars:0];
-        if (i < 6) // Hardcoded stuff for now
+        int stateStars = [[[[GameState shared] starStates] objectAtIndex:i-1] intValue];
+        [level setNumberStars:stateStars];
+        if ((stateStars > 0 || i == 1 || prevStars > 0) && i < 5) {// Hardcoded stuff for now
             [level setIsEnabled:YES];
-        else
+            prevStars = stateStars;
+        } else
             [level setIsEnabled:NO];
         [level initLevel];
         [level setThumbnail:[NSString stringWithFormat:@"level%d.png",i]];
@@ -64,6 +67,7 @@
     [[SpriteManager shared] addAnimationFromFile:@"yurie_anim.plist"];
     
 }
+
 
 - (void) pressedGoToMainMenu:(id)sender
 {

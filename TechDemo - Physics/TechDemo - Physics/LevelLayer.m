@@ -8,6 +8,7 @@
 
 // Import the interfaces
 #import "LevelLayer.h"
+#import "GameState.h"
 
 #pragma mark - Level
 
@@ -55,11 +56,13 @@ static int current_level = -1;
     
 }
 
+
 // on "init" you need to initialize your instance
 -(id) init
 {
     if( (self=[super init]))
     {
+        
         [[Registry shared] registerEntity:self withName:@"LevelLayer"];
         [[SimpleAudioEngine sharedEngine] playBackgroundMusic:[[Config shared] getStringProperty:@"IngameMusic"] loop:YES];
         
@@ -108,7 +111,6 @@ static int current_level = -1;
     ResourceManager * rm = [ResourceManager shared];
     Config * conf = [Config shared];
     [rm setArrows:[conf getIntProperty:@"InitialArrows"]];
-    [rm setGold: [conf getIntProperty:@"InitialGold"]];
     [rm setSkillPoints: [conf getIntProperty:@"InitialSkillPoints"]];
     [rm setMana: [[conf getNumberProperty:@"InitialMana"] doubleValue]];
     [rm reset];
@@ -124,10 +126,10 @@ static int current_level = -1;
     [hud updateWallHealth];
     [hud updateData];
     
-    if ((((Wall *)[[Registry shared]getEntityByName:@"Wall"]).health<=0 && (_gameOver==nil)))
+    if ([self tryLose])
         [self gameOver];
-    else if ([[WaveManager shared] enemies]==[[ResourceManager shared] enemyKillCount] && [[ResourceManager shared] enemiesHit] > 0)
-        [self victory];
+    else if ([self tryWin])
+        [self gameWin];
 }
 
 
@@ -211,7 +213,6 @@ static int current_level = -1;
 
 - (void)ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    
     [super ccTouchesBegan:touches withEvent:event];
     
     fire = YES;
@@ -240,8 +241,45 @@ static int current_level = -1;
     location = [[CCDirector sharedDirector] convertToGL:location];
 }
 
+-(BOOL) tryWin
+{
+    return ![[WaveManager shared] anymoreWaves] && [[ResourceManager shared] activeEnemies] == 0;
+}
+
+-(BOOL) tryLose
+{
+    return [(Wall *)[[Registry shared]getEntityByName:@"Wall"] health] <=0 && _gameOver == nil;
+}
+
+-(void) calculateAndUpdateNumberOfStars
+{
+    // Pontuacao:
+    // 1/4 accuracy
+    // 3/4 wall health
+    Wall* wall = [[Registry shared] getEntityByName:@"Wall"];
+    
+    float cont1 = 0.75 * [wall health] / [wall maxHealth];
+    float cont2 = 0.25 * [[ResourceManager shared] determineAccuracy] * 0.01;
+    
+    unsigned int numberStars = (unsigned int) ceil((cont1+cont2)*3);
+    
+    NSMutableArray * stars = [[GameState shared] starStates];
+    
+    NSNumber * currentStars = [stars objectAtIndex:current_level-1];
+    
+    if (numberStars > [currentStars intValue])
+        [stars replaceObjectAtIndex:current_level-1 withObject: [NSNumber numberWithInt:numberStars]];
+    
+}
+
+-(void)makeMoneyPersistent
+{
+    [[GameState shared] setGoldState: [NSNumber numberWithUnsignedInt:[[ResourceManager shared] gold]]];
+}
+
 -(void)onExit
 {
+    [[GameState shared] saveApplicationData];
     [[Registry shared] clearRegistry];
     [[CollisionManager shared] clearAllEntities];
     [self removeAllChildrenWithCleanup:YES];

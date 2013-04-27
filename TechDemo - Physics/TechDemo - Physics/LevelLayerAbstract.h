@@ -11,6 +11,7 @@
 #import "cocos2d.h"
 
 #import "GameOver.h"
+#import "GameWin.h"
 #import "MainScene.h"
 #import "Yuri.h"
 #import "Enemy.h"
@@ -44,6 +45,7 @@
 {
     CCSprite *_pauseButton;
     GameOver *_gameOver;
+    GameWin  *_gameWin;
     PauseHUD *_pause;
 }
 
@@ -52,7 +54,9 @@
 -(void) togglePause;
 -(void) pauseCheck:(UITouch *)touchLocation;
 -(void) gameOver;
--(void) victory;
+-(void) gameWin;
+-(void) calculateAndUpdateNumberOfStars;
+-(void) makeMoneyPersistent;
 
 -(void) addEnemy:(Enemy *) newEnemy;
 

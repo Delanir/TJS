@@ -145,6 +145,8 @@
 		8BFA2DA017172536008A2064 /* peasant_anim.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8BFA2D9F17172536008A2064 /* peasant_anim.plist */; };
 		8BFC3F0C172042C3000161FD /* GameOver.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BFC3F0B172042C3000161FD /* GameOver.m */; };
 		8BFC3F0F17204440000161FD /* GameOver.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 8BFC3F0E17204440000161FD /* GameOver.ccbi */; };
+		8C59B09E172BE0C0008D8D3F /* Buy_Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C59B09D172BE0C0008D8D3F /* Buy_Button.png */; };
+		8C72C2A8172968F6009EF8C1 /* GameWin.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C72C2A7172968F6009EF8C1 /* GameWin.m */; };
 		8CA9AECA17244CE400283D69 /* FireButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CA9AEC717244CE400283D69 /* FireButton.png */; };
 		8CA9AECC17244CE400283D69 /* MarksManButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CA9AEC917244CE400283D69 /* MarksManButton.png */; };
 		8CDE45941725A4630076BF38 /* FireButton-bw-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CDE458E1725A4630076BF38 /* FireButton-bw-ipadhd.png */; };
@@ -177,6 +179,7 @@
 		9C377C03170BAE3E00F840FB /* arrow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9C377C00170BAE3E00F840FB /* arrow.mp3 */; };
 		9C377C0A170BB7CC00F840FB /* hit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9C377C09170BB7CB00F840FB /* hit.mp3 */; };
 		9C377C0D170BBDD800F840FB /* EnemyFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C377C0C170BBDD600F840FB /* EnemyFactory.m */; };
+		9C500253172AD03800C141DB /* LoadingBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C500252172AD03800C141DB /* LoadingBar.m */; };
 		9C75D80E171A167E00419031 /* yurie_anim.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C75D80D171A167E00419031 /* yurie_anim.plist */; };
 		9C791C06172376B700780C5D /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C791C04172376B700780C5D /* pause.png */; };
 		9C791C07172376B700780C5D /* pause-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C791C05172376B700780C5D /* pause-ipadhd.png */; };
@@ -363,6 +366,7 @@
 		9C8DE0D117185844002E0D0A /* Tags in Resources */ = {isa = PBXBuildFile; fileRef = 9C8DE0D017185844002E0D0A /* Tags */; };
 		9C8DE0D31718E134002E0D0A /* zealot_anim.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C8DE0D21718E133002E0D0A /* zealot_anim.plist */; };
 		9C8DE0D61718EA00002E0D0A /* Zealot.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8DE0D51718EA00002E0D0A /* Zealot.m */; };
+		9C93D8E317297849004891D2 /* GameWin.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 8C72C2A51729687B009EF8C1 /* GameWin.ccbi */; };
 		9C94ABD817197BD2005BCE32 /* zDepth in Resources */ = {isa = PBXBuildFile; fileRef = 9C94ABD717197BD2005BCE32 /* zDepth */; };
 		9C9703551727804A00E48924 /* Level2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C9703541727804A00E48924 /* Level2.plist */; };
 		9C9703571727805800E48924 /* Level3.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C9703561727805800E48924 /* Level3.plist */; };
@@ -545,6 +549,10 @@
 		8BFC3F0A172042C2000161FD /* GameOver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOver.h; sourceTree = "<group>"; };
 		8BFC3F0B172042C3000161FD /* GameOver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOver.m; sourceTree = "<group>"; };
 		8BFC3F0E17204440000161FD /* GameOver.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = GameOver.ccbi; sourceTree = "<group>"; };
+		8C59B09D172BE0C0008D8D3F /* Buy_Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Buy_Button.png; sourceTree = "<group>"; };
+		8C72C2A51729687B009EF8C1 /* GameWin.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = GameWin.ccbi; sourceTree = "<group>"; };
+		8C72C2A6172968F6009EF8C1 /* GameWin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameWin.h; sourceTree = "<group>"; };
+		8C72C2A7172968F6009EF8C1 /* GameWin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameWin.m; sourceTree = "<group>"; };
 		8CA9AEC717244CE400283D69 /* FireButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FireButton.png; sourceTree = "<group>"; };
 		8CA9AEC917244CE400283D69 /* MarksManButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MarksManButton.png; sourceTree = "<group>"; };
 		8CDE458E1725A4630076BF38 /* FireButton-bw-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FireButton-bw-ipadhd.png"; sourceTree = "<group>"; };
@@ -588,6 +596,8 @@
 		9C377C09170BB7CB00F840FB /* hit.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hit.mp3; sourceTree = "<group>"; };
 		9C377C0B170BBDD300F840FB /* EnemyFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyFactory.h; sourceTree = "<group>"; };
 		9C377C0C170BBDD600F840FB /* EnemyFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnemyFactory.m; sourceTree = "<group>"; };
+		9C500251172AD03800C141DB /* LoadingBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingBar.h; sourceTree = "<group>"; };
+		9C500252172AD03800C141DB /* LoadingBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingBar.m; sourceTree = "<group>"; };
 		9C75D80D171A167E00419031 /* yurie_anim.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = yurie_anim.plist; sourceTree = "<group>"; };
 		9C791C04172376B700780C5D /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
 		9C791C05172376B700780C5D /* pause-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pause-ipadhd.png"; sourceTree = "<group>"; };
@@ -1113,6 +1123,7 @@
 		9C2B3CBE171EE9BC00E695FE /* Menus */ = {
 			isa = PBXGroup;
 			children = (
+				8C59B09D172BE0C0008D8D3F /* Buy_Button.png */,
 				8CDE458E1725A4630076BF38 /* FireButton-bw-ipadhd.png */,
 				8CDE458F1725A4630076BF38 /* FireButton-ipadhd.png */,
 				8CDE45901725A4630076BF38 /* IceButton-bw-ipadhd.png */,
@@ -1295,6 +1306,7 @@
 				8B8C2D9B1719DB9300B50C1E /* MainMenu.ccbi */,
 				8BBB6A2F171E27970064B3CD /* akaPotsley.ttf */,
 				8BFC3F0E17204440000161FD /* GameOver.ccbi */,
+				8C72C2A51729687B009EF8C1 /* GameWin.ccbi */,
 				3EEB679F17234BC2005C58E9 /* PauseMenu.ccbi */,
 				8B0E7131171DD5A2004D212C /* SkillTreeLayer.ccbi */,
 				8BBB6A22171E09E30064B3CD /* SettingsMenu.ccbi */,
@@ -1737,6 +1749,8 @@
 				8B79CDE0171F501D00E58EDD /* Hud.m */,
 				8BFC3F0A172042C2000161FD /* GameOver.h */,
 				8BFC3F0B172042C3000161FD /* GameOver.m */,
+				8C72C2A6172968F6009EF8C1 /* GameWin.h */,
+				8C72C2A7172968F6009EF8C1 /* GameWin.m */,
 				9C85F659170A3E4100EECB83 /* MainScene.h */,
 				9C85F65A170A3E4200EECB83 /* MainScene.m */,
 				3EDD9F2E1715E7F700C6A622 /* Wall.h */,
@@ -1765,6 +1779,8 @@
 				3EE2F9661723178C0084DF2F /* LevelThumbnail.m */,
 				3EE2F95C17230E640084DF2F /* LevelStars.h */,
 				3EE2F95D17230E640084DF2F /* LevelStars.m */,
+				9C500251172AD03800C141DB /* LoadingBar.h */,
+				9C500252172AD03800C141DB /* LoadingBar.m */,
 			);
 			name = "Scene Entities";
 			sourceTree = "<group>";
@@ -1772,7 +1788,6 @@
 		9C969E591716290D00BE7476 /* Startup Classes */ = {
 			isa = PBXGroup;
 			children = (
-				8BBB6A25171E0B240064B3CD /* SettingsMenuLayer.m */,
 				9C85F6231707958200EECB83 /* AppDelegate.h */,
 				9C85F6241707958200EECB83 /* AppDelegate.m */,
 				9C7FF34C170B3A49009DA7F9 /* main.m */,
@@ -1853,6 +1868,7 @@
 				8B8C2D951719D8A700B50C1E /* MainMenuLayer.h */,
 				8B8C2D961719D8A700B50C1E /* MainMenuLayer.m */,
 				8BBB6A24171E0B240064B3CD /* SettingsMenuLayer.h */,
+				8BBB6A25171E0B240064B3CD /* SettingsMenuLayer.m */,
 				9C85F6291707958200EECB83 /* IntroLayer.h */,
 				9C85F62A1707958200EECB83 /* IntroLayer.m */,
 			);
@@ -2119,6 +2135,7 @@
 				9C1E05BF1724C7B00093F0E3 /* DoneStuff in Resources */,
 				3EE9FE1417256DAD009718EC /* LevelSelectLayer.ccb in Resources */,
 				8CDE45941725A4630076BF38 /* FireButton-bw-ipadhd.png in Resources */,
+				9C93D8E317297849004891D2 /* GameWin.ccbi in Resources */,
 				8CDE45951725A4630076BF38 /* FireButton-ipadhd.png in Resources */,
 				8CDE45961725A4630076BF38 /* IceButton-bw-ipadhd.png in Resources */,
 				8CDE45971725A4630076BF38 /* IceButton-ipadhd.png in Resources */,
@@ -2130,6 +2147,7 @@
 				9C9703571727805800E48924 /* Level3.plist in Resources */,
 				9C9703591727806200E48924 /* Level4.plist in Resources */,
 				9C97035B1727806A00E48924 /* Level5.plist in Resources */,
+				8C59B09E172BE0C0008D8D3F /* Buy_Button.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2286,6 +2304,8 @@
 				3EEB67A317234C1B005C58E9 /* PauseHUD.m in Sources */,
 				9C1E05B617249B3A0093F0E3 /* GameManager.m in Sources */,
 				9C1E05BC1724C0560093F0E3 /* GameState.m in Sources */,
+				8C72C2A8172968F6009EF8C1 /* GameWin.m in Sources */,
+				9C500253172AD03800C141DB /* LoadingBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2307,7 +2327,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -2326,7 +2346,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -2344,9 +2364,7 @@
 					"\"TechDemo - Physics/libs/kazmath/include\"",
 				);
 				INFOPLIST_FILE = "TechDemo - Physics/Resources/Info.plist";
-
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-ObjC",
@@ -2368,9 +2386,7 @@
 					"\"TechDemo - Physics/libs/kazmath/include\"",
 				);
 				INFOPLIST_FILE = "TechDemo - Physics/Resources/Info.plist";
-
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-ObjC",
