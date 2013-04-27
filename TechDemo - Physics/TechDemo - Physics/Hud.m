@@ -70,8 +70,12 @@
                                                                             items:pushBackOff, pushBackOn, nil];
         pushBackToggleButton.position = ccp(950, 60);
         
+        CCMenuItem *buyButton = [CCMenuItemImage itemWithNormalImage:@"Buy_Button.png" selectedImage:@"Buy_Button.png" target:self selector:@selector(buyArrows)];
         
-        CCMenu *hudMenu = [CCMenu menuWithItems:iceToggleButton, fireToggleButton, pushBackToggleButton, nil];
+        buyButton.position = ccp(600, 60);
+        
+        
+        CCMenu *hudMenu = [CCMenu menuWithItems:iceToggleButton, fireToggleButton, pushBackToggleButton, buyButton, nil];
         hudMenu.position = CGPointZero;
         
         
@@ -108,6 +112,19 @@
     [self toggleButton:kPower3Button];
 }
 
+- (void) buyArrows
+{
+    if ([[ResourceManager shared] gold] > 4) {
+        
+        int arrow = [[ResourceManager shared] arrows];
+        [[ResourceManager shared] setArrows:arrow+10];
+        int gold = [[ResourceManager shared] gold];
+        [[ResourceManager shared] setGold:gold-5];
+        [self updateArrows];
+        [self updateMoney:0];
+    }
+    
+}
 
 - (NSMutableArray *)buttonsPressed
 {

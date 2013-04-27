@@ -145,6 +145,7 @@
 		8BFA2DA017172536008A2064 /* peasant_anim.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8BFA2D9F17172536008A2064 /* peasant_anim.plist */; };
 		8BFC3F0C172042C3000161FD /* GameOver.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BFC3F0B172042C3000161FD /* GameOver.m */; };
 		8BFC3F0F17204440000161FD /* GameOver.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 8BFC3F0E17204440000161FD /* GameOver.ccbi */; };
+		8C59B09E172BE0C0008D8D3F /* Buy_Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C59B09D172BE0C0008D8D3F /* Buy_Button.png */; };
 		8C72C2A8172968F6009EF8C1 /* GameWin.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C72C2A7172968F6009EF8C1 /* GameWin.m */; };
 		8CA9AECA17244CE400283D69 /* FireButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CA9AEC717244CE400283D69 /* FireButton.png */; };
 		8CA9AECC17244CE400283D69 /* MarksManButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CA9AEC917244CE400283D69 /* MarksManButton.png */; };
@@ -548,6 +549,7 @@
 		8BFC3F0A172042C2000161FD /* GameOver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOver.h; sourceTree = "<group>"; };
 		8BFC3F0B172042C3000161FD /* GameOver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOver.m; sourceTree = "<group>"; };
 		8BFC3F0E17204440000161FD /* GameOver.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = GameOver.ccbi; sourceTree = "<group>"; };
+		8C59B09D172BE0C0008D8D3F /* Buy_Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Buy_Button.png; sourceTree = "<group>"; };
 		8C72C2A51729687B009EF8C1 /* GameWin.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = GameWin.ccbi; sourceTree = "<group>"; };
 		8C72C2A6172968F6009EF8C1 /* GameWin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameWin.h; sourceTree = "<group>"; };
 		8C72C2A7172968F6009EF8C1 /* GameWin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameWin.m; sourceTree = "<group>"; };
@@ -1121,6 +1123,7 @@
 		9C2B3CBE171EE9BC00E695FE /* Menus */ = {
 			isa = PBXGroup;
 			children = (
+				8C59B09D172BE0C0008D8D3F /* Buy_Button.png */,
 				8CDE458E1725A4630076BF38 /* FireButton-bw-ipadhd.png */,
 				8CDE458F1725A4630076BF38 /* FireButton-ipadhd.png */,
 				8CDE45901725A4630076BF38 /* IceButton-bw-ipadhd.png */,
@@ -2144,6 +2147,7 @@
 				9C9703571727805800E48924 /* Level3.plist in Resources */,
 				9C9703591727806200E48924 /* Level4.plist in Resources */,
 				9C97035B1727806A00E48924 /* Level5.plist in Resources */,
+				8C59B09E172BE0C0008D8D3F /* Buy_Button.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
