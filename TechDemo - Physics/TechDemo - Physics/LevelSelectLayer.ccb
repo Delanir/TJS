@@ -277,8 +277,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>940</real>
-									<real>700</real>
+									<real>852</real>
+									<real>91</real>
 									<integer>0</integer>
 								</array>
 							</dict>
@@ -300,8 +300,8 @@
 								<string>ScaleLock</string>
 								<key>value</key>
 								<array>
-									<real>0.15000000596046448</real>
-									<real>0.15000000596046448</real>
+									<real>1</real>
+									<real>1</real>
 									<true/>
 									<integer>0</integer>
 								</array>
@@ -340,8 +340,8 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
-									<string>larcher_transparent_name.png</string>
+									<string>MenuSpritesheet.plist</string>
+									<string>main.png</string>
 								</array>
 							</dict>
 							<dict>

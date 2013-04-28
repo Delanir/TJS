@@ -279,8 +279,6 @@
 						<string>Yuri saved Amiens and his people.</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>baseClass</key>
@@ -455,8 +453,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>0.1885671466588974</real>
-							<real>0.14282548427581787</real>
+							<real>1</real>
+							<real>1</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -476,8 +474,8 @@
 						<string>SpriteFrame</string>
 						<key>value</key>
 						<array>
-							<string></string>
-							<string>larcher_transparent_name.png</string>
+							<string>MenuSpritesheet.plist</string>
+							<string>main.png</string>
 						</array>
 					</dict>
 				</array>
@@ -538,6 +536,8 @@
 				<false/>
 			</dict>
 		</array>
+		<key>selected</key>
+		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>

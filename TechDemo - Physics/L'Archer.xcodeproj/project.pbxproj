@@ -16,6 +16,7 @@
 		3E1231D2171A414D00FEBEDE /* plus-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E1231CC171A414D00FEBEDE /* plus-ipadhd.png */; };
 		3E1231D3171A414D00FEBEDE /* plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E1231CD171A414D00FEBEDE /* plus.png */; };
 		3E14D23B171A2A28005992A6 /* Comet.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E14D23A171A2A28005992A6 /* Comet.plist */; };
+		3E200E4D172C3176001FB46C /* akaPotsley.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3E200E4C172C3176001FB46C /* akaPotsley.ttf */; };
 		3E3A5D09171C6AE2006D5370 /* larcher_icon_72x72.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E3A5D08171C6AE2006D5370 /* larcher_icon_72x72.png */; };
 		3E3A5D0B171C6AEC006D5370 /* larcher_icon_144x144.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E3A5D0A171C6AEC006D5370 /* larcher_icon_144x144.png */; };
 		3EB8A37E17161AF800666626 /* defaultEmitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EB8A37D17161AF800666626 /* defaultEmitter.png */; };
@@ -384,6 +385,7 @@
 		3E1231CC171A414D00FEBEDE /* plus-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "plus-ipadhd.png"; sourceTree = "<group>"; };
 		3E1231CD171A414D00FEBEDE /* plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus.png; sourceTree = "<group>"; };
 		3E14D23A171A2A28005992A6 /* Comet.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Comet.plist; sourceTree = "<group>"; };
+		3E200E4C172C3176001FB46C /* akaPotsley.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = akaPotsley.ttf; sourceTree = "<group>"; };
 		3E3A5D08171C6AE2006D5370 /* larcher_icon_72x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = larcher_icon_72x72.png; path = ../larcher_icon_72x72.png; sourceTree = "<group>"; };
 		3E3A5D0A171C6AEC006D5370 /* larcher_icon_144x144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = larcher_icon_144x144.png; path = ../larcher_icon_144x144.png; sourceTree = "<group>"; };
 		3EB8A37D17161AF800666626 /* defaultEmitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultEmitter.png; sourceTree = "<group>"; };
@@ -1252,6 +1254,7 @@
 		9C85F4AC1707957E00EECB83 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3E200E4C172C3176001FB46C /* akaPotsley.ttf */,
 				3EE9FE1317256DAD009718EC /* LevelSelectLayer.ccb */,
 				3EE2F95F1723175E0084DF2F /* LevelSelectLayer.ccbi */,
 				3EE2F9601723175E0084DF2F /* LevelThumbnail.ccbi */,
@@ -2072,6 +2075,7 @@
 				9C268CF2172C4F1C00F303D8 /* MenuSpritesheet.png in Resources */,
 				9C268CF5172C4F6900F303D8 /* MenuSpritesheet-ipadhd.plist in Resources */,
 				9C268CF6172C4F6900F303D8 /* MenuSpritesheet-ipadhd.png in Resources */,
+				3E200E4D172C3176001FB46C /* akaPotsley.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

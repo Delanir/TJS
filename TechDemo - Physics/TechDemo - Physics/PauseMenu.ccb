@@ -304,7 +304,7 @@
 				<key>memberVarAssignmentName</key>
 				<string>_menu</string>
 				<key>memberVarAssignmentType</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>properties</key>
 				<array>
 					<dict>
@@ -419,8 +419,6 @@
 						<string>Return to main menu</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>baseClass</key>
@@ -434,7 +432,7 @@
 				<key>memberVarAssignmentName</key>
 				<string>_pause</string>
 				<key>memberVarAssignmentType</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>properties</key>
 				<array>
 					<dict>

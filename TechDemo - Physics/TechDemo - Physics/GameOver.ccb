@@ -280,8 +280,6 @@
 Yuri couldn't save his people.</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>baseClass</key>
@@ -456,8 +454,8 @@ Yuri couldn't save his people.</string>
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>0.1885671466588974</real>
-							<real>0.14282548427581787</real>
+							<real>1</real>
+							<real>1</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -477,11 +475,13 @@ Yuri couldn't save his people.</string>
 						<string>SpriteFrame</string>
 						<key>value</key>
 						<array>
-							<string></string>
-							<string>larcher_transparent_name.png</string>
+							<string>MenuSpritesheet.plist</string>
+							<string>main.png</string>
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>

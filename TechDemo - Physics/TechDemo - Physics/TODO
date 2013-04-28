@@ -9,7 +9,7 @@ Bug list:
 - Quando se mete pause e sai do jogo, quando volta ele tira o pause
     - é preciso não deixar isso acontecer
 Outras coisas:
-- Progress bar (o que está feito está no teu pc)
+- Progress bar 
 - Implementar skill tree - implementar a lógica e ver se fazemos uma spritesheet de bocadinhos para melhorar a performance (Daniela)
 - Random shouts dos inimigos
 - Acabar com o LevelLayerAbstract - Deixou de fazer sentido
@@ -28,9 +28,7 @@ João M:
     - Estado do leaderboard - é preciso implementar primeiro
     - Estado das settings - Isto pode ser feito
     - Skill points actuais (skill tree) - é preciso fazer umas contas, n precisa ser persistente
-- Ligacoes entre menus
-- remover warnings (cocos 2d)
-- Melhorar transicoes entre cenas 
+- Botão de reset
 
 - BURACOS DE MEMORIA ARGHHGHGHGH
     - Nao percebo a skill tree
@@ -40,14 +38,12 @@ João M:
     - Tratar das sprites do wood elf e do grand elf
 - som do impacto tem de ser corrigido
 - Por barra de vida na spritesheet (actually this is to be done on zwoptex)
-- Desenhar HUD
 - Converter todas as sprites com o faststone para ganhar memoria
 - Sprites dos edifícios
     - mage tower
     - masonry
     - fletcher
 - Melhorar sprites da Skill tree para ocuparem menos memoria talvez? testar com algumas mas sem posicionar
-        
         
 Ricardo:
 - Ligar ao game center para fazer achievements e leaderboard
@@ -92,8 +88,6 @@ João A:
 - Optimizacoes brutais no carregamento dos niveis
     - Falta correr profiler nisto
 - Criei a classe LoadingBar mas ignorem pra ja, obg. Estou a investigar multithreading
-
-
 - spritesheet com cenas de menus
     - ver se esta no sitio cert
     - por a carregar no sitio certo

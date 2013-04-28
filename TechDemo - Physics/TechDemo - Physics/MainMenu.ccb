@@ -563,7 +563,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>settings.png</string>
+									<string>MainMenu/buttonSettingsPressed.png</string>
 								</array>
 							</dict>
 						</array>
@@ -780,7 +780,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>skilltree.png</string>
+									<string>MainMenu/buttonSkillTreePressed.png</string>
 								</array>
 							</dict>
 						</array>
@@ -995,7 +995,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>achievements.png</string>
+									<string>MainMenu/buttonAchievementsPressed.png</string>
 								</array>
 							</dict>
 						</array>
@@ -1210,7 +1210,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>leaderboard.png</string>
+									<string>MainMenu/buttonLeaderboardPressed.png</string>
 								</array>
 							</dict>
 						</array>
