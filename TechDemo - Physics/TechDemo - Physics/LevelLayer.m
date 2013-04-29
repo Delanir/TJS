@@ -121,13 +121,16 @@ static int current_level = -1;
 
 - (void)update:(ccTime)dt
 {
-    if(fire && [[ResourceManager shared] arrows] > 0 && [(Yuri*)[self getChildByTag:9]fireIfAble: location] )
+    if(fire &&
+       [[ResourceManager shared] arrows] > 0 &&
+       location.y > 128 &&
+       [(Yuri*)[self getChildByTag:9]fireIfAble: location] )
         [self addProjectile:location];
     
     [[CollisionManager shared] updatePixelPerfectCollisions:dt];
     [[CollisionManager shared] updateWallsAndEnemies:dt];
     [hud updateWallHealth];
-    [hud updateData];
+    [hud updateMoney];
     
     if ([self tryLose])
         [self gameOver];

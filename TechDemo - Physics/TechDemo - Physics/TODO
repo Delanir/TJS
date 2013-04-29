@@ -8,6 +8,7 @@ Daniela:
 Bug list:
 - Quando se mete pause e sai do jogo, quando volta ele tira o pause
     - é preciso não deixar isso acontecer
+- Não há fonts! mas ca raio?
 Outras coisas:
 - Progress bar 
 - Implementar skill tree - implementar a lógica e ver se fazemos uma spritesheet de bocadinhos para melhorar a performance (Daniela)
@@ -29,6 +30,10 @@ João M:
     - Estado das settings - Isto pode ser feito
     - Skill points actuais (skill tree) - é preciso fazer umas contas, n precisa ser persistente
 - Botão de reset
+
+- ver casos de kksprites q estão a ser criadas sem necessidade
+- Verificar sons que faltam
+- Por o que está nos menus no zwoptex
 
 - BURACOS DE MEMORIA ARGHHGHGHGH
     - Nao percebo a skill tree

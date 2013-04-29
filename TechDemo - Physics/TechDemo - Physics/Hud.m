@@ -18,18 +18,56 @@
         [buttons addObject:[NSNumber numberWithBool:NO]];
         [buttons addObject:[NSNumber numberWithBool:NO]];
         [buttons addObject:[NSNumber numberWithBool:NO]];
-        
         lastHealth = 100.00;
         
-        unsigned int maxArrows = [[ResourceManager shared] arrows];
-        label1 =[CCLabelTTF labelWithString:[NSString stringWithFormat:@"Number of Arrows Left: %i", maxArrows] fontName:@"Futura" fontSize:20];
-        label2 = [CCLabelTTF labelWithString:@"Wall health: 100.00" fontName:@"Futura" fontSize:20];
-        label3 = [CCLabelTTF labelWithString:@"Enemies: 0  Money:  0 Accurracy: 100%" fontName:@"Futura" fontSize:20];
-        label1.position = CGPointMake(label1.contentSize.width/2 + 70, 80);
-        label2.position = CGPointMake(label2.contentSize.width/2 + 70,50);
-        label3.position = CGPointMake(label3.contentSize.width/2 + 70, 20);
+        CCSprite * hudBackground = [CCSprite spriteWithFile:@"hud-background.png"];
+        [hudBackground setPosition:ccp(512,64)];
         
-        //Power Buttons
+        CCSprite * manaDais = [CCSprite spriteWithSpriteFrameName:@"emptydais.png"];
+        [manaDais setPosition:ccp(950, 64)];
+        CCSprite * healthDais = [CCSprite spriteWithSpriteFrameName:@"emptydais.png"];
+        [healthDais setPosition:ccp(74, 64)];
+        
+        CCSprite * healthSprite = [CCSprite spriteWithSpriteFrameName:@"healthdais.png"];
+        [healthSprite setPosition:ccp(512, 384)];
+        [healthSprite setAnchorPoint:ccp(0.5,0.5)];
+        healthProgress = [CCProgressTimer progressWithSprite:healthSprite];
+        [healthProgress setType: kCCProgressTimerTypeBar];
+        [healthProgress setBarChangeRate:ccp(0,1)];
+        [healthProgress setMidpoint:ccp(0.5,0)];
+        [healthProgress setPercentage:100];
+        //[healthProgress setOpacity:180];
+        [healthProgress setPosition:ccp(74, 64)];
+        
+        CCSprite * manaSprite = [CCSprite spriteWithSpriteFrameName:@"manadais.png"];
+        [manaSprite setPosition:ccp(512, 384)];
+        [manaSprite setAnchorPoint:ccp(0.5,0.5)];
+        manaProgress = [CCProgressTimer progressWithSprite:manaSprite];
+        [manaProgress setType: kCCProgressTimerTypeBar];
+        [manaProgress setBarChangeRate:ccp(0,1)];
+        [manaProgress setMidpoint:ccp(0.5,0)];
+        [manaProgress setPercentage:70];
+        //[manaProgress setOpacity:180];
+        [manaProgress setPosition:ccp(950, 64)];
+
+        CCSprite * currentArrowsSprite = [CCSprite spriteWithSpriteFrameName:@"arrow.png"];
+        [currentArrowsSprite setPosition:ccp(173,40)];
+        CCSprite * currentMoneySprite = [CCSprite spriteWithSpriteFrameName:@"Coins.png"];
+        [currentMoneySprite setPosition:ccp(173,88)];
+        
+    //Labels Start
+        unsigned int nArrows = [[ResourceManager shared] arrows];
+        unsigned int nGolds = [[ResourceManager shared] gold];
+        label1 = [CCLabelTTF labelWithString: [NSString stringWithFormat:@"%i", nArrows] fontName:@"Futura" fontSize:24];
+        label2 = [CCLabelTTF labelWithString: [NSString stringWithFormat:@"%i", nGolds] fontName:@"Futura" fontSize:24];
+        [label1 setAnchorPoint:ccp(0,0.5)];
+        [label2 setAnchorPoint:ccp(0,0.5)];
+        label1.position = CGPointMake(197, 40);
+        label2.position = CGPointMake(197, 88);
+    //Labels End
+         
+        
+    //Power Buttons Start
         CCMenuItem *iceOn = [CCMenuItemImage
                              itemWithNormalImage:@"IceButton.png" selectedImage:@"IceButton.png"
                              target:self selector:nil];
@@ -40,9 +78,7 @@
         CCMenuItemToggle *iceToggleButton = [CCMenuItemToggle itemWithTarget:self
                                                                     selector:@selector(iceButtonToggle)
                                                                        items:iceOff, iceOn, nil];
-        iceToggleButton.position = ccp(750, 60);
-        
-        
+        iceToggleButton.position = ccp(680, 64);
         
         CCMenuItem *fireOn = [CCMenuItemImage
                               itemWithNormalImage:@"FireButton.png" selectedImage:@"FireButton.png"
@@ -53,10 +89,9 @@
         
         CCMenuItemToggle *fireToggleButton = [CCMenuItemToggle itemWithTarget:self
                                                                      selector:@selector(fireButtonToggle)
-                                                                        items:fireOff, fireOn, nil];
-        fireToggleButton.position = ccp(850, 60);
-        
-        
+                                                                    items:fireOff, fireOn, nil];
+        fireToggleButton.position = ccp(760, 64);
+
         
         CCMenuItem *pushBackOn = [CCMenuItemImage
                                   itemWithNormalImage:@"MarksManButton.png" selectedImage:@"MarksManButton.png"
@@ -68,21 +103,31 @@
         CCMenuItemToggle *pushBackToggleButton = [CCMenuItemToggle itemWithTarget:self
                                                                          selector:@selector(pushBackButtonToggle)
                                                                             items:pushBackOff, pushBackOn, nil];
-        pushBackToggleButton.position = ccp(950, 60);
+        pushBackToggleButton.position = ccp(840, 64);
         
-        CCMenuItem *buyButton = [CCMenuItemImage itemWithNormalImage:@"Buy_Button.png" selectedImage:@"Buy_Button.png" target:self selector:@selector(buyArrows)];
+        CCSprite * buyButtonSprite1 = [CCSprite spriteWithFile:@"buyarrow.png"];
+        CCSprite * buyButtonSprite2 = [CCSprite spriteWithFile:@"buyarrowPressed.png"];
         
-        buyButton.position = ccp(600, 60);
+        CCMenuItem *buyButton = [CCMenuItemImage itemWithNormalSprite:buyButtonSprite1 selectedSprite:buyButtonSprite2 target:self selector:@selector(buyArrows)];
         
+        buyButton.position = ccp(332, 64);
         
-        CCMenu *hudMenu = [CCMenu menuWithItems:iceToggleButton, fireToggleButton, pushBackToggleButton, buyButton, nil];
-        hudMenu.position = CGPointZero;
+        CCMenu *buttonsMenu = [CCMenu menuWithItems:iceToggleButton, fireToggleButton, pushBackToggleButton, buyButton, nil];
+        buttonsMenu.position = CGPointZero;
+    //Power Buttons End
+         
         
-        
-        [self addChild:hudMenu];
+        [self addChild:buttonsMenu];
+        [self addChild:currentArrowsSprite z:1];
+        [self addChild:currentMoneySprite z:1];
+        [self addChild:hudBackground z:-1];
+        [self addChild:manaDais z:2];
+        [self addChild:manaProgress z:1];
+        [self addChild:healthDais z:2];
+        [self addChild:healthProgress z:1];
         [self addChild:label1 z:1];
         [self addChild:label2 z:1];
-        [self addChild:label3 z:1];
+
     }
     
     self.isTouchEnabled = YES;
@@ -114,16 +159,13 @@
 
 - (void) buyArrows
 {
-    if ([[ResourceManager shared] gold] > 4) {
-        
-        int arrow = [[ResourceManager shared] arrows];
-        [[ResourceManager shared] setArrows:arrow+10];
-        int gold = [[ResourceManager shared] gold];
-        [[ResourceManager shared] setGold:gold-5];
+    if ([[ResourceManager shared] gold] > 4)
+    {
+        [[ResourceManager shared] addArrows:10];
+        [[ResourceManager shared] spendGold:5];
         [self updateArrows];
-        [self updateMoney:0];
+        [self updateMoney];
     }
-    
 }
 
 - (NSMutableArray *)buttonsPressed
@@ -133,7 +175,12 @@
 
 - (void)updateArrows
 {
-    [label1 setString:[NSString stringWithFormat:@"Number of Arrows Left: %i", [[ResourceManager shared] arrows]]];
+    [label1 setString:[NSString stringWithFormat:@"%i", [[ResourceManager shared] arrows]]];
+}
+
+- (void)updateMoney
+{
+    [label2 setString:[NSString stringWithFormat:@"%i", [[ResourceManager shared] gold]]];
 }
 
 - (void)updateWallHealth
@@ -143,29 +190,13 @@
     // optimização
     if(newHealth != lastHealth)
     {
-        [label2 setString:[NSString stringWithFormat:@"Wall health: %.02f", newHealth]];
+        double maxHealth = [wall maxHealth];
+        //[label2 setString:[NSString stringWithFormat:@"Wall health: %.02f", newHealth]];
         lastHealth = newHealth;
+        [healthProgress setPercentage: 100 * newHealth/maxHealth];
     }
 }
 
-
-- (void)updateMoney:(int)enemyXPosition
-{
-    [label3 setString:[NSString stringWithFormat:@"Gold: %i", [[ResourceManager shared] gold]]];
-}
-
-- (void)updateData
-{
-    ResourceManager * rm = [ResourceManager shared];
-    unsigned int enemies = [rm activeEnemies];
-    unsigned int gold = [rm gold];
-    double accuracy = [rm determineAccuracy];
-    double mana = [rm mana];
-    if (accuracy < 0)
-        [label3 setString:[NSString stringWithFormat:@"Enemies: %i Gold: %i Accuracy: ---%% Mana: %.0f", enemies, gold, mana]];
-    else
-        [label3 setString:[NSString stringWithFormat:@"Enemies: %i Gold: %i Accuracy: %i%% Mana: %.0f", enemies, gold, (int) accuracy, mana]];
-}
 
 -(void) dealloc
 {

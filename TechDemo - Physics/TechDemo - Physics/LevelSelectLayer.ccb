@@ -351,8 +351,8 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
-									<string>larcher_transparent_name.png</string>
+									<string>MenuSpritesheet.plist</string>
+									<string>main.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -362,11 +362,13 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
-									<string>larcher_transparent_name.png</string>
+									<string>MenuSpritesheet.plist</string>
+									<string>main.png</string>
 								</array>
 							</dict>
 						</array>
+						<key>selected</key>
+						<true/>
 					</dict>
 				</array>
 				<key>customClass</key>

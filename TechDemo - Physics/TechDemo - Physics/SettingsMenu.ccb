@@ -22,13 +22,13 @@
 		<array>
 			<dict>
 				<key>baseClass</key>
-				<string>CCLayerColor</string>
+				<string>CCSprite</string>
 				<key>children</key>
 				<array/>
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>SettingsMenuL</string>
+				<string>CCSprite</string>
 				<key>memberVarAssignmentName</key>
 				<string></string>
 				<key>memberVarAssignmentType</key>
@@ -37,14 +37,14 @@
 				<array>
 					<dict>
 						<key>name</key>
-						<string>contentSize</string>
+						<string>position</string>
 						<key>type</key>
-						<string>Size</string>
+						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>512</real>
-							<real>384</real>
-							<integer>5</integer>
+							<real>50</real>
+							<real>50</real>
+							<integer>4</integer>
 						</array>
 					</dict>
 					<dict>
@@ -73,70 +73,21 @@
 					</dict>
 					<dict>
 						<key>name</key>
-						<string>tag</string>
-						<key>type</key>
-						<string>Integer</string>
-						<key>value</key>
-						<integer>3</integer>
-					</dict>
-					<dict>
-						<key>name</key>
 						<string>ignoreAnchorPointForPosition</string>
 						<key>type</key>
 						<string>Check</string>
 						<key>value</key>
-						<true/>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>isTouchEnabled</string>
-						<key>platform</key>
-						<string>iOS</string>
-						<key>type</key>
-						<string>Check</string>
-						<key>value</key>
-						<true/>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>isAccelerometerEnabled</string>
-						<key>platform</key>
-						<string>iOS</string>
-						<key>type</key>
-						<string>Check</string>
-						<key>value</key>
 						<false/>
 					</dict>
 					<dict>
 						<key>name</key>
-						<string>mouseEnabled</string>
-						<key>platform</key>
-						<string>Mac</string>
+						<string>displayFrame</string>
 						<key>type</key>
-						<string>Check</string>
-						<key>value</key>
-						<true/>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>isKeyboardEnabled</string>
-						<key>platform</key>
-						<string>Mac</string>
-						<key>type</key>
-						<string>Check</string>
-						<key>value</key>
-						<false/>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>color</string>
-						<key>type</key>
-						<string>Color3</string>
+						<string>SpriteFrame</string>
 						<key>value</key>
 						<array>
-							<integer>11</integer>
-							<integer>54</integer>
-							<integer>6</integer>
+							<string></string>
+							<string>SelectLevelMenu/SimpleBackground.jpg</string>
 						</array>
 					</dict>
 					<dict>
@@ -146,8 +97,8 @@
 						<string>Blendmode</string>
 						<key>value</key>
 						<array>
-							<integer>1</integer>
-							<integer>1</integer>
+							<integer>770</integer>
+							<integer>771</integer>
 						</array>
 					</dict>
 				</array>
@@ -287,6 +238,18 @@
 						<array>
 							<dict>
 								<key>name</key>
+								<string>position</string>
+								<key>type</key>
+								<string>Position</string>
+								<key>value</key>
+								<array>
+									<real>-4</real>
+									<real>50</real>
+									<integer>0</integer>
+								</array>
+							</dict>
+							<dict>
+								<key>name</key>
 								<string>anchorPoint</string>
 								<key>type</key>
 								<string>Point</string>
@@ -303,8 +266,8 @@
 								<string>ScaleLock</string>
 								<key>value</key>
 								<array>
-									<real>1</real>
-									<real>1</real>
+									<real>0.5</real>
+									<real>0.5</real>
 									<false/>
 									<integer>0</integer>
 								</array>
@@ -490,8 +453,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>522</real>
-							<real>362</real>
+							<real>518</real>
+							<real>418</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -513,8 +476,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
-							<real>1</real>
+							<real>0.54545456171035767</real>
+							<real>0.54545456171035767</real>
 							<false/>
 							<integer>0</integer>
 						</array>

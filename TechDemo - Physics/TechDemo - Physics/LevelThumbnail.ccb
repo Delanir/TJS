@@ -42,18 +42,6 @@
 						<array>
 							<dict>
 								<key>name</key>
-								<string>position</string>
-								<key>type</key>
-								<string>Position</string>
-								<key>value</key>
-								<array>
-									<real>1</real>
-									<real>0.0</real>
-									<integer>0</integer>
-								</array>
-							</dict>
-							<dict>
-								<key>name</key>
 								<string>anchorPoint</string>
 								<key>type</key>
 								<string>Point</string>
@@ -110,8 +98,8 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
-									<string>cross.png</string>
+									<string>MenuSpritesheet.plist</string>
+									<string>level1.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -121,8 +109,8 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
-									<string>cross.png</string>
+									<string>MenuSpritesheet.plist</string>
+									<string>level1.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -257,8 +245,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>-0.5</real>
-							<real>-51.5</real>
+							<real>0.0</real>
+							<real>-32</real>
 							<integer>0</integer>
 						</array>
 					</dict>

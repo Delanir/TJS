@@ -17,13 +17,13 @@
     int money;
     NSMutableArray * buttons;
     double lastHealth;
-    CCLabelTTF *label1,*label2,*label3;
+    CCLabelTTF *label1, *label2;
+    CCProgressTimer * manaProgress, * healthProgress;
 }
 
 - (NSMutableArray *)buttonsPressed;
 - (void)updateArrows;
+- (void)updateMoney;
 - (void)updateWallHealth;
-- (void)updateMoney:(int)enemyXPosition;
-- (void)updateData;
 
 @end
