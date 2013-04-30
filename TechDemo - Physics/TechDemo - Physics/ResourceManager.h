@@ -50,7 +50,7 @@
 -(BOOL) spendMana:(double) spend;
 
 -(void) reset;
-
+-(void)update;
 
 // Statistics part
 - (void)increaseEnemyCount;

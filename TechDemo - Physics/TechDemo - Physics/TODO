@@ -18,17 +18,17 @@ Outras coisas:
 
 
 João M:
-- Destruição mais eficiente de projecteis
 - Acabar lógica dos estimulos
-- Lógica de levar dano em cima do moat
+- Lógica de levar dano em cima do moat - fazer batota e meter mesmo no caso
 - Alterar lógica do vPos para ser relativo ao ecrã
+
 - GameState falta definir:
     - Nível do yuri - pode ser calculado através do numero de skillpoints, n precisa ser persistente
+    - Skill points actuais (skill tree) - é preciso fazer umas contas, n precisa ser persistente
     - Estado da SkillTree - é preciso terminar a lógica disto primeiro
     - Estado dos achievements - é preciso implementar primeiro
     - Estado do leaderboard - é preciso implementar primeiro
     - Estado das settings - Isto pode ser feito
-    - Skill points actuais (skill tree) - é preciso fazer umas contas, n precisa ser persistente
 - Botão de reset
 
 - ver casos de kksprites q estão a ser criadas sem necessidade
@@ -40,7 +40,6 @@ João M:
 
 (Para usar o dell)
 - som do impacto tem de ser corrigido
-- Por barra de vida na spritesheet (actually this is to be done on zwoptex)
 - Converter todas as sprites com o faststone para ganhar memoria
 - Sprites dos edifícios
     - mage tower
@@ -96,7 +95,8 @@ João A:
     - por a carregar no sitio certo
 - spritesheet com cenas de jogo (incluindo castelo)
     - carregar no sitio certo
-    
-    
 - Passar para os arqueiros do heroes  (João M)
     - Tratar das sprites do wood elf e do grand elf
+- Destruição mais eficiente de projecteis
+- Nível do yuri
+- Skill points actuais

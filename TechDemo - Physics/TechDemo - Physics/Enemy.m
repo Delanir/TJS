@@ -23,7 +23,7 @@
         stimuli = [[NSMutableArray alloc] init];
         
         // Initialize health bar
-        CCSprite * barSprite = [[CCSprite alloc] initWithFile:@"red_health_bar.png"];
+        CCSprite * barSprite = [[CCSprite alloc] initWithSpriteFrameName:@"red_health_bar.png"];
         [self setHealthBar:[CCProgressTimer progressWithSprite:barSprite]];
         [healthBar setType: kCCProgressTimerTypeBar];
         [healthBar setBarChangeRate:ccp(1,0)];

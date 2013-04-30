@@ -77,8 +77,17 @@ static CollisionManager* _sharedSingleton = nil;
 {
     
     CCArray *projectilesToDelete = [[CCArray alloc] init];
+    CGSize winSize = [[CCDirector sharedDirector] winSize];
+    // If projectile is off the screen, destroy the bastard
     for (Projectile* projectile in _projectiles)
     {
+        if([[projectile sprite] position].x > winSize.width ||
+           [[projectile sprite] position].y > winSize.height ||
+           [[projectile sprite] position].y < winSize.height/6)
+        {
+            [projectilesToDelete addObject:projectile];
+            continue;
+        }
         KKPixelMaskSprite * projectileSprite = [projectile sprite];
         
         CCArray *targetsToDelete = [[CCArray alloc] init];

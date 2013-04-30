@@ -114,7 +114,6 @@ static int current_level = -1;
     ResourceManager * rm = [ResourceManager shared];
     Config * conf = [Config shared];
     [rm setArrows:[conf getIntProperty:@"InitialArrows"]];
-    [rm setSkillPoints: [conf getIntProperty:@"InitialSkillPoints"]];
     [rm setMana: [[conf getNumberProperty:@"InitialMana"] doubleValue]];
     [rm reset];
 }

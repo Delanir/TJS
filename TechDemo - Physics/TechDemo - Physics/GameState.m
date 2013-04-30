@@ -7,6 +7,7 @@
 //
 
 #import "GameState.h"
+#import "ResourceManager.h"
 
 @implementation GameState
 
@@ -54,6 +55,7 @@ static GameState* _sharedSingleton = nil;
     [defaults setObject:starStates forKey:@"Stars"];
     [defaults setObject:goldState forKey:@"Gold"];
     [[NSUserDefaults standardUserDefaults] synchronize];
+    [[ResourceManager shared] update];
 }
 
 -(void)loadApplicationData

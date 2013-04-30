@@ -7,6 +7,7 @@
 //
 
 #import "Yuri.h"
+#import "ResourceManager.h"
 
 
 @implementation Yuri
@@ -15,11 +16,10 @@
 
 -(id) init
 {
-    level = 1;
+    level = [self determineLevel];
     if(self = [super initWithSprite:[NSString stringWithFormat:@"y_lvl%d_06.png",level ]])
     {
         readyToFire = YES;
-#warning hehe ir calcular isto e ir buscar ao gamestate
         
         [self setShootUp:[CCRepeat actionWithAction:
                           [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:[NSString stringWithFormat:@"y_attack_up_lvl%d",level ] ]] times:1]];
@@ -95,6 +95,16 @@
 -(float) getCurrentFireRate
 {
     return [[[CCAnimationCache sharedAnimationCache] animationByName:@"y_attack_front"] delayPerUnit];
+}
+
+-(unsigned int) determineLevel
+{
+    unsigned int stars = [[ResourceManager shared] skillPoints];
+    if (stars < 9)
+        return 1;
+    else if(stars < 18)
+        return 2;
+    else return 3;
 }
 
 

@@ -43,11 +43,21 @@ static ResourceManager* _sharedSingleton = nil;
 -(id)init
 {
 	self = [super init];
-	if (self != nil) {
+	if (self != nil)
+    {
 		[self reset];
         [self setGold: [[[GameState shared] goldState] unsignedIntValue]];
+        [self setSkillPoints:[self determineSkillPoints]];
     }
 	return self;
+}
+
+// Called when game is saved
+-(void)update
+{
+    [self reset];
+    [self setGold: [[[GameState shared] goldState] unsignedIntValue]];
+    [self setSkillPoints:[self determineSkillPoints]];
 }
 
 -(void) reset
@@ -142,6 +152,15 @@ static ResourceManager* _sharedSingleton = nil;
 - (unsigned int) activeEnemies
 {
     return enemiesFromStart - enemyKillCount;
+}
+
+- (unsigned int)determineSkillPoints
+{
+    NSMutableArray * levels = [[GameState shared] starStates];
+    unsigned int result = 0;
+    for(NSNumber * level in levels)
+        result += [level unsignedIntValue];
+    return result;
 }
 
 @end
