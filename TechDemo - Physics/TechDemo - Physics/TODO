@@ -6,8 +6,7 @@
 
 Daniela:
 Bug list:
-- Quando se mete pause e sai do jogo, quando volta ele tira o pause
-    - é preciso não deixar isso acontecer
+
 Outras coisas:
 - Progress bar
 - Implementar skill tree - implementar a lógica e ver se fazemos uma spritesheet de bocadinhos para melhorar a performance (Daniela)
@@ -100,3 +99,5 @@ João A:
 - Skill points actuais
 - As custom fonts têm de ser assinaladas no info.plist
 - Acabar com o LevelLayerAbstract - Deixou de fazer sentido
+- Quando se mete pause e sai do jogo, quando volta ele tira o pause
+    - é preciso não deixar isso acontecer

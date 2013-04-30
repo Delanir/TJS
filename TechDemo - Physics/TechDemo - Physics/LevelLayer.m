@@ -257,8 +257,6 @@ static int current_level = -1;
 
 -(void) ccTouchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    if ([[CCDirector sharedDirector] isPaused])
-        return;
     fire = NO;
 }
 
@@ -345,7 +343,8 @@ static int current_level = -1;
     CGPoint pausePosition2 = [[_pause getPauseButton] position];
     float pauseRadius2 = [[_pause getPauseButton] contentSize].width/2;
     
-    if (ccpDistance(pausePosition, locationT)<=pauseRadius || (_pause.visible&&ccpDistance(pausePosition2, location)<=pauseRadius2)){
+    if (ccpDistance(pausePosition, locationT)<=pauseRadius ||
+        (_pause.visible&&ccpDistance(pausePosition2, location)<=pauseRadius2)){
         [self togglePause];
     }
 }
@@ -446,7 +445,8 @@ static int current_level = -1;
     [self makeMoneyPersistent];
 }
 
-  
+
+
 
 
 #pragma mark GameKit delegate
