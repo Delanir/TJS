@@ -133,7 +133,8 @@
         [[SimpleAudioEngine sharedEngine] resumeBackgroundMusic];
         [[CCDirector sharedDirector] resume];
         
-    } else if(_gameOver==nil&&(![[CCDirector sharedDirector] isPaused]))
+    }
+    else if(_gameOver==nil&&(![[CCDirector sharedDirector] isPaused]))
     {
         [_pause setVisible:YES];
         [[SimpleAudioEngine sharedEngine] pauseBackgroundMusic];
@@ -179,6 +180,7 @@
 
 -(void) makeMoneyPersistent
 {
+    
 }
 
 #pragma mark GameKit delegate

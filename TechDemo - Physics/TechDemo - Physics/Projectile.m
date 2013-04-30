@@ -13,14 +13,16 @@
 
 @synthesize destination, timeToLive, stimuli;
 
--(void)spriteMoveFinished:(id)sender {
+-(void)spriteMoveFinished:(id)sender
+{
     [self destroy];
     [[CollisionManager shared] removeFromProjectiles:self];
 }
 
 - (id) initWithSprite:(NSString *)spriteFile
 {
-    if( (self=[super init])) {
+    if( (self=[super init]))
+    {
       
         [self setSpriteWithSpriteFrameName:spriteFile];
         [self addChild:sprite];

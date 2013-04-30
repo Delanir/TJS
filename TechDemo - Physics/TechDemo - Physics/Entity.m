@@ -13,7 +13,8 @@
 // on "init" you need to initialize your instance
 -(id) initWithSprite: (NSString*) spriteFile
 {
-    if( (self=[super init])) {
+    if( (self=[super init]))
+    {
         [self setSpriteWithSpriteFrameName:spriteFile];
         [self addChild:sprite];
     }
@@ -24,7 +25,8 @@
 // on "init" you need to initialize your instance
 -(id) initWithSpriteFromFile: (NSString*) spriteFile
 {
-  if( (self=[super init])) {
+  if( (self=[super init]))
+  {
     [self setSprite:spriteFile];
     [self addChild:sprite];
   }
@@ -51,8 +53,6 @@
     
     sprite.anchorPoint=ccp(0.5f,0.5f);
     sprite.zOrder = [[CCDirector sharedDirector] winSize].height - sprite.position.y;
-    
-
 }
 
 - (void) setSpriteWithSpriteFrameName:(NSString*)spr

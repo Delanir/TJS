@@ -15,16 +15,18 @@
 
 -(id) init
 {
-    if(self = [super initWithSprite:@"y_lvl3_06.png"])
+    level = 1;
+    if(self = [super initWithSprite:[NSString stringWithFormat:@"y_lvl%d_06.png",level ]])
     {
         readyToFire = YES;
+#warning hehe ir calcular isto e ir buscar ao gamestate
         
         [self setShootUp:[CCRepeat actionWithAction:
-                          [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"y_attack_up" ]] times:1]];
+                          [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:[NSString stringWithFormat:@"y_attack_up_lvl%d",level ] ]] times:1]];
         [self setShootFront:[CCRepeat actionWithAction:
-                             [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"y_attack_front" ]] times:1]];
+                             [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:[NSString stringWithFormat:@"y_attack_front_lvl%d",level ] ]] times:1]];
         [self setShootDown:[CCRepeat actionWithAction:
-                            [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"y_attack_down" ]] times:1]];
+                            [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:[NSString stringWithFormat:@"y_attack_down_lvl%d",level ] ]] times:1]];
         //[self setIdle:[CCRepeatForever actionWithAction:
         //               [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"y_idle_1" ]]]];
         

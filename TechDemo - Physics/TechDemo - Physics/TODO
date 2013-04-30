@@ -10,7 +10,7 @@ Bug list:
     - é preciso não deixar isso acontecer
 - Não há fonts! mas ca raio?
 Outras coisas:
-- Progress bar 
+- Progress bar
 - Implementar skill tree - implementar a lógica e ver se fazemos uma spritesheet de bocadinhos para melhorar a performance (Daniela)
 - Random shouts dos inimigos
 - Acabar com o LevelLayerAbstract - Deixou de fazer sentido
@@ -39,8 +39,6 @@ João M:
     - Nao percebo a skill tree
 
 (Para usar o dell)
-- Passar para os arqueiros do heroes  (João M)
-    - Tratar das sprites do wood elf e do grand elf
 - som do impacto tem de ser corrigido
 - Por barra de vida na spritesheet (actually this is to be done on zwoptex)
 - Converter todas as sprites com o faststone para ganhar memoria
@@ -98,3 +96,7 @@ João A:
     - por a carregar no sitio certo
 - spritesheet com cenas de jogo (incluindo castelo)
     - carregar no sitio certo
+    
+    
+- Passar para os arqueiros do heroes  (João M)
+    - Tratar das sprites do wood elf e do grand elf

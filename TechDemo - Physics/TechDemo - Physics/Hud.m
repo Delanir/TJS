@@ -20,7 +20,7 @@
         [buttons addObject:[NSNumber numberWithBool:NO]];
         lastHealth = 100.00;
         
-        CCSprite * hudBackground = [CCSprite spriteWithFile:@"hud-background.png"];
+        CCSprite * hudBackground = [CCSprite spriteWithSpriteFrameName:@"hud-background.png"];
         [hudBackground setPosition:ccp(512,64)];
         
         CCSprite * manaDais = [CCSprite spriteWithSpriteFrameName:@"emptydais.png"];
@@ -105,8 +105,8 @@
                                                                             items:pushBackOff, pushBackOn, nil];
         pushBackToggleButton.position = ccp(840, 64);
         
-        CCSprite * buyButtonSprite1 = [CCSprite spriteWithFile:@"buyarrow.png"];
-        CCSprite * buyButtonSprite2 = [CCSprite spriteWithFile:@"buyarrowPressed.png"];
+        CCSprite * buyButtonSprite1 = [CCSprite spriteWithSpriteFrameName:@"buyarrow.png"];
+        CCSprite * buyButtonSprite2 = [CCSprite spriteWithSpriteFrameName:@"buyarrowPressed.png"];
         
         CCMenuItem *buyButton = [CCMenuItemImage itemWithNormalSprite:buyButtonSprite1 selectedSprite:buyButtonSprite2 target:self selector:@selector(buyArrows)];
         

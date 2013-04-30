@@ -32,10 +32,42 @@
 			<string>y_lvl3_idle2_02.png</string>
 		</array>
 	</dict>
-	<key>y_attack_up</key>
+	<key>y_attack_up_lvl1</key>
+	<dict>
+		<key>delay</key>
+		<real>0.08</real>
+		<key>frames</key>
+		<array>
+			<string>y_lvl1_07_up.png</string>
+			<string>y_lvl1_08.png</string>
+			<string>y_lvl1_01.png</string>
+			<string>y_lvl1_02.png</string>
+			<string>y_lvl1_03_up.png</string>
+			<string>y_lvl1_04_up.png</string>
+			<string>y_lvl1_05_up.png</string>
+			<string>y_lvl1_06_up.png</string>
+		</array>
+	</dict>
+	<key>y_attack_up_lvl2</key>
 	<dict>
 		<key>delay</key>
 		<real>0.06</real>
+		<key>frames</key>
+		<array>
+			<string>y_lvl2_07_up.png</string>
+			<string>y_lvl2_08.png</string>
+			<string>y_lvl2_01.png</string>
+			<string>y_lvl2_02.png</string>
+			<string>y_lvl2_03_up.png</string>
+			<string>y_lvl2_04_up.png</string>
+			<string>y_lvl2_05_up.png</string>
+			<string>y_lvl2_06_up.png</string>
+		</array>
+	</dict>
+	<key>y_attack_up_lvl3</key>
+	<dict>
+		<key>delay</key>
+		<real>0.04</real>
 		<key>frames</key>
 		<array>
 			<string>y_lvl3_07_up.png</string>
@@ -48,10 +80,42 @@
 			<string>y_lvl3_06_up.png</string>
 		</array>
 	</dict>
-	<key>y_attack_front</key>
+	<key>y_attack_front_lvl1</key>
+	<dict>
+		<key>delay</key>
+		<real>0.08</real>
+		<key>frames</key>
+		<array>
+			<string>y_lvl1_07.png</string>
+			<string>y_lvl1_08.png</string>
+			<string>y_lvl1_01.png</string>
+			<string>y_lvl1_02.png</string>
+			<string>y_lvl1_03.png</string>
+			<string>y_lvl1_04.png</string>
+			<string>y_lvl1_05.png</string>
+			<string>y_lvl1_06.png</string>
+		</array>
+	</dict>
+	<key>y_attack_front_lvl2</key>
 	<dict>
 		<key>delay</key>
 		<real>0.06</real>
+		<key>frames</key>
+		<array>
+			<string>y_lvl2_07.png</string>
+			<string>y_lvl2_08.png</string>
+			<string>y_lvl2_01.png</string>
+			<string>y_lvl2_02.png</string>
+			<string>y_lvl2_03.png</string>
+			<string>y_lvl2_04.png</string>
+			<string>y_lvl2_05.png</string>
+			<string>y_lvl2_06.png</string>
+		</array>
+	</dict>
+	<key>y_attack_front_lvl3</key>
+	<dict>
+		<key>delay</key>
+		<real>0.04</real>
 		<key>frames</key>
 		<array>
 			<string>y_lvl3_07.png</string>
@@ -64,10 +128,42 @@
 			<string>y_lvl3_06.png</string>
 		</array>
 	</dict>
-	<key>y_attack_down</key>
+	<key>y_attack_down_lvl1</key>
+	<dict>
+		<key>delay</key>
+		<real>0.08</real>
+		<key>frames</key>
+		<array>
+			<string>y_lvl1_07_down.png</string>
+			<string>y_lvl1_08.png</string>
+			<string>y_lvl1_01.png</string>
+			<string>y_lvl1_02.png</string>
+			<string>y_lvl1_03_down.png</string>
+			<string>y_lvl1_04_down.png</string>
+			<string>y_lvl1_05_down.png</string>
+			<string>y_lvl1_06_down.png</string>
+		</array>
+	</dict>
+	<key>y_attack_down_lvl2</key>
 	<dict>
 		<key>delay</key>
 		<real>0.06</real>
+		<key>frames</key>
+		<array>
+			<string>y_lvl2_07_down.png</string>
+			<string>y_lvl2_08.png</string>
+			<string>y_lvl2_01.png</string>
+			<string>y_lvl2_02.png</string>
+			<string>y_lvl2_03_up.png</string>
+			<string>y_lvl2_04_up.png</string>
+			<string>y_lvl2_05_down.png</string>
+			<string>y_lvl2_06_down.png</string>
+		</array>
+	</dict>
+	<key>y_attack_down_lvl3</key>
+	<dict>
+		<key>delay</key>
+		<real>0.04</real>
 		<key>frames</key>
 		<array>
 			<string>y_lvl3_07_down.png</string>

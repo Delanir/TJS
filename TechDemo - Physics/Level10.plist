@@ -6,15 +6,15 @@
 	<integer>2</integer>
 	<key>waves</key>
 	<array>
-		<string>FarieColumn</string>
+		<string>FaerieColumn</string>
 		<string>ZealotSquare</string>
 		<string>PeasantSpear</string>
 		<string>PeasantSpear</string>
-		<string>FarieColumn</string>
+		<string>FaerieColumn</string>
 		<string>PeasantSpear</string>
 		<string>ZealotSquare</string>
-		<string>FarieColumn</string>
-		<string>FarieColumn</string>
+		<string>FaerieColumn</string>
+		<string>FaerieColumn</string>
 	</array>
 </dict>
 </plist>
