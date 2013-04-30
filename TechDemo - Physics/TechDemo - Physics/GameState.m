@@ -80,6 +80,7 @@ static GameState* _sharedSingleton = nil;
 {
     [NSUserDefaults resetStandardUserDefaults];
     [self initApplicationData];
+    [self saveApplicationData];
     // limpar tudo
     // chamar init Application Data
 }

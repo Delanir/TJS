@@ -18,5 +18,6 @@
 
 - (void) pressedMainMenu:(id)sender;
 - (void) toggleMute:(id)sender;
+- (void) resetUserDefaults:(id)sender;
 
 @end

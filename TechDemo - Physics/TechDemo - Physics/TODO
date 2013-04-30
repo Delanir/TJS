@@ -11,7 +11,8 @@ Outras coisas:
 - Progress bar
 - Implementar skill tree - implementar a lógica e ver se fazemos uma spritesheet de bocadinhos para melhorar a performance (Daniela)
 - Random shouts dos inimigos
-- Fazer Reset ao NSUserDefaults (uma setting no SettingsLayer, método ja está criado, mas n testado, no gamestate)
+- Botao de Reset
+
 
 
 João M:
@@ -101,3 +102,4 @@ João A:
 - Acabar com o LevelLayerAbstract - Deixou de fazer sentido
 - Quando se mete pause e sai do jogo, quando volta ele tira o pause
     - é preciso não deixar isso acontecer
+- Fazer Reset ao NSUserDefaults (uma setting no SettingsLayer, método ja está criado, mas n testado, no gamestate)
