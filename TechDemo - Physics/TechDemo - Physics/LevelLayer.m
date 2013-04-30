@@ -59,8 +59,30 @@ static int current_level = -1;
 // on "init" you need to initialize your instance
 -(id) init
 {
+    
+    
+    
     if( (self=[super init]))
     {
+        CGSize winSize = [[CCDirector sharedDirector] winSize];
+        _pauseButton= [CCSprite spriteWithFile:@"pause.png"];
+        [_pauseButton setPosition:CGPointMake(_pauseButton.contentSize.width/2.0, winSize.height - _pauseButton.contentSize.height/2.0)];
+        
+        [_pauseButton setZOrder:1000];
+        
+        [self addChild:_pauseButton];
+        [[WaveManager shared] removeFromParentAndCleanup:NO];
+        [self addChild:[WaveManager shared]]; // Esta linha é imensos de feia. Mas tem de ser para haver update
+        
+        
+        _pause= (PauseHUD *)[CCBReader nodeGraphFromFile:@"PauseMenu.ccbi"];
+        [self addChild:_pause];
+        
+        [_pause setZOrder:1535];
+        [_pause setVisible:NO];
+        
+        //////
+        
         [[Registry shared] registerEntity:self withName:@"LevelLayer"];
         [[SimpleAudioEngine sharedEngine] playBackgroundMusic:[[Config shared] getStringProperty:@"IngameMusic"] loop:YES];
         
@@ -70,7 +92,7 @@ static int current_level = -1;
         [[SpriteManager shared] addAnimationFromFile:@"zealot_anim.plist"];
         [[SpriteManager shared] addAnimationFromFile:@"yurie_anim.plist"];
         
-        CGSize winSize = [[CCDirector sharedDirector] winSize];
+       
         timeElapsedSinceBeginning = 1.0f;
         fire = NO;
         
@@ -218,11 +240,16 @@ static int current_level = -1;
 
 - (void)ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    [super ccTouchesBegan:touches withEvent:event];
+    UITouch *touch = [touches anyObject];
+    [self pauseCheck:touch];
+    [self gameOverReturnToMainMenuCheck:touch];
+    [self gameWinReturnToMainMenuCheck:touch];
+    if ([[CCDirector sharedDirector] isPaused])
+        return;
     
     fire = YES;
     // Choose one of the touches to work with
-    UITouch *touch = [touches anyObject];
+    
     location = [self convertTouchToNodeSpace:touch];
     location = [touch  locationInView:[touch view]];
     location = [[CCDirector sharedDirector] convertToGL:location];
@@ -230,13 +257,15 @@ static int current_level = -1;
 
 -(void) ccTouchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    [super ccTouchesMoved:touches withEvent:event];
+    if ([[CCDirector sharedDirector] isPaused])
+        return;
     fire = NO;
 }
 
 -(void) ccTouchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    [super ccTouchesMoved:touches withEvent:event];
+    if ([[CCDirector sharedDirector] isPaused])
+        return;
     // Update touch position
     
     // Choose one of the touches to work with
@@ -294,6 +323,144 @@ static int current_level = -1;
 {
     [super dealloc];
     CCLOG(@"DEALOQUEI");
+}
+
+///
+
+
+
+
+
+
+
+
+-(void) pauseCheck:(UITouch *)touchLocation
+{
+    CGSize winSize = [[CCDirector sharedDirector] winSize];
+    CGPoint locationT=[touchLocation locationInView:[touchLocation view]];
+    locationT.y=winSize.height-locationT.y;
+    CGPoint pausePosition = _pauseButton.position;
+    float pauseRadius = _pauseButton.contentSize.width/2;
+    
+    CGPoint pausePosition2 = [[_pause getPauseButton] position];
+    float pauseRadius2 = [[_pause getPauseButton] contentSize].width/2;
+    
+    if (ccpDistance(pausePosition, locationT)<=pauseRadius || (_pause.visible&&ccpDistance(pausePosition2, location)<=pauseRadius2)){
+        [self togglePause];
+    }
+}
+
+-(void) gameOverReturnToMainMenuCheck:(UITouch *)touchLocation
+{
+    if (_gameOver!=nil)
+    {
+        CGSize winSize = [[CCDirector sharedDirector] winSize];
+        CGPoint locationT=[touchLocation locationInView:[touchLocation view]];
+        locationT.y=winSize.height-locationT.y;
+        CGPoint btnPosition = _gameOver.mainMenuButtonPosition;
+        float btnRadius = _gameOver.mainMenuButtonRadius/2;
+        
+        if ( ccpDistance(btnPosition, locationT)<=btnRadius)
+        {
+            [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
+            [self setIsTouchEnabled:NO];
+            [[CCDirector sharedDirector] resume];
+            
+            [[GameManager shared] runSceneWithID:kMainMenuScene];
+            
+        }
+    }else
+        return;
+    
+}
+
+-(void) gameWinReturnToMainMenuCheck:(UITouch *)touchLocation
+{
+    if (_gameWin!=nil)
+    {
+        CGSize winSize = [[CCDirector sharedDirector] winSize];
+        CGPoint locationT=[touchLocation locationInView:[touchLocation view]];
+        locationT.y=winSize.height-locationT.y;
+        CGPoint btnPosition = _gameWin.mainMenuButtonPosition;
+        float btnRadius = _gameWin.mainMenuButtonRadius/2;
+        
+        if ( ccpDistance(btnPosition, locationT)<=btnRadius)
+        {
+            [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
+            [self setIsTouchEnabled:NO];
+            [[CCDirector sharedDirector] resume];
+            
+            [[GameManager shared] runSceneWithID:kMainMenuScene];
+            
+        }
+    }else
+        return;
+    
+}
+
+-(void) togglePause
+{
+    if ([[CCDirector sharedDirector] isPaused] && _gameOver==nil)
+    {
+        [_pause setVisible:NO];
+        [[SimpleAudioEngine sharedEngine] resumeBackgroundMusic];
+        [[CCDirector sharedDirector] resume];
+        
+    }
+    else if(_gameOver==nil&&(![[CCDirector sharedDirector] isPaused]))
+    {
+        [_pause setVisible:YES];
+        [[SimpleAudioEngine sharedEngine] pauseBackgroundMusic];
+        
+        [[CCDirector sharedDirector] pause];
+    }
+    
+}
+
+-(void) addEnemy:(Enemy *) newEnemy
+{
+    NSInteger zOrder = [[CCDirector sharedDirector] winSize].height - [newEnemy sprite].position.y;
+    
+    [self addChild:newEnemy z:zOrder];
+    
+    [[CollisionManager shared] addToTargets:newEnemy];
+    [[ResourceManager shared] increaseEnemyCount];
+}
+
+-(void) gameOver
+{
+    _gameOver= (GameOver *)[CCBReader nodeGraphFromFile:@"GameOver.ccbi"];
+    [self addChild:_gameOver];
+    [_gameOver setZOrder:1535];
+    [[CCDirector sharedDirector] pause];
+}
+
+-(void) gameWin
+{
+    _gameWin = (GameWin *)[CCBReader nodeGraphFromFile:@"GameWin.ccbi"];
+    [self addChild:_gameWin];
+    [_gameWin setZOrder:1535];
+    [[CCDirector sharedDirector] pause];
+    
+    [self calculateAndUpdateNumberOfStars];
+    [self makeMoneyPersistent];
+}
+
+  
+
+
+#pragma mark GameKit delegate
+
+-(void) achievementViewControllerDidFinish:(GKAchievementViewController *)viewController
+{
+	AppController *app = (AppController*) [[UIApplication sharedApplication] delegate];
+	[[app navController] dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void) leaderboardViewControllerDidFinish:(GKLeaderboardViewController *)viewController
+{
+	AppController *app = (AppController*) [[UIApplication sharedApplication] delegate];
+	[[app navController] dismissViewControllerAnimated:YES completion:nil];
 }
 
 

@@ -67,7 +67,6 @@
 		8B0E7130171DD447004D212C /* SkillTreeLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0E712F171DD447004D212C /* SkillTreeLayer.m */; };
 		8B0E7132171DD5A2004D212C /* SkillTreeLayer.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E7131171DD5A2004D212C /* SkillTreeLayer.ccbi */; };
 		8B56089B171A251F00B14693 /* skilltree.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B560899171A251F00B14693 /* skilltree.png */; };
-		8B79CDCB171F15B800E58EDD /* LevelLayerAbstract.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B79CDCA171F15B800E58EDD /* LevelLayerAbstract.m */; };
 		8B79CDE1171F501D00E58EDD /* Hud.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B79CDE0171F501D00E58EDD /* Hud.m */; };
 		8B8C2D971719D8A700B50C1E /* MainMenuLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B8C2D961719D8A700B50C1E /* MainMenuLayer.m */; };
 		8B8C2D9C1719DB9300B50C1E /* MainMenu.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 8B8C2D9B1719DB9300B50C1E /* MainMenu.ccbi */; };
@@ -444,8 +443,6 @@
 		8B0E712F171DD447004D212C /* SkillTreeLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkillTreeLayer.m; sourceTree = "<group>"; };
 		8B0E7131171DD5A2004D212C /* SkillTreeLayer.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = SkillTreeLayer.ccbi; sourceTree = "<group>"; };
 		8B560899171A251F00B14693 /* skilltree.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = skilltree.png; sourceTree = "<group>"; };
-		8B79CDC9171F15B800E58EDD /* LevelLayerAbstract.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelLayerAbstract.h; sourceTree = "<group>"; };
-		8B79CDCA171F15B800E58EDD /* LevelLayerAbstract.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelLayerAbstract.m; sourceTree = "<group>"; };
 		8B79CDD9171F2D2500E58EDD /* TODO */ = {isa = PBXFileReference; lastKnownFileType = text; name = TODO; path = "TechDemo - Physics/TODO"; sourceTree = "<group>"; };
 		8B79CDDF171F501D00E58EDD /* Hud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hud.h; sourceTree = "<group>"; };
 		8B79CDE0171F501D00E58EDD /* Hud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hud.m; sourceTree = "<group>"; };
@@ -1816,8 +1813,6 @@
 			children = (
 				9C85F64A1709D59700EECB83 /* LevelLayer.h */,
 				9C85F64B1709D59800EECB83 /* LevelLayer.m */,
-				8B79CDC9171F15B800E58EDD /* LevelLayerAbstract.h */,
-				8B79CDCA171F15B800E58EDD /* LevelLayerAbstract.m */,
 				3EE2F96817231EC40084DF2F /* LevelSelectLayer.h */,
 				3EE2F96917231EC40084DF2F /* LevelSelectLayer.m */,
 				8B0E712E171DD446004D212C /* SkillTreeLayer.h */,
@@ -2236,7 +2231,6 @@
 				8BBB6A26171E0B240064B3CD /* SettingsMenuLayer.m in Sources */,
 				9CBF5B0A171E463000EF44B2 /* Registry.m in Sources */,
 				9CBF5B0D171E464E00EF44B2 /* ResourceManager.m in Sources */,
-				8B79CDCB171F15B800E58EDD /* LevelLayerAbstract.m in Sources */,
 				8B79CDE1171F501D00E58EDD /* Hud.m in Sources */,
 				9C11EEC017205775003510EB /* WaveManager.m in Sources */,
 				9C11EEC9172073F5003510EB /* NSMutableArray+QueueAdditions.m in Sources */,
