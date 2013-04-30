@@ -98,4 +98,5 @@ João A:
 - Destruição mais eficiente de projecteis
 - Nível do yuri
 - Skill points actuais
+- As custom fonts têm de ser assinaladas no info.plist
 - Acabar com o LevelLayerAbstract - Deixou de fazer sentido
