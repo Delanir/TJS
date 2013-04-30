@@ -3,15 +3,12 @@
 <plist version="1.0">
 <dict>
 	<key>timeBetweenWaves</key>
-	<integer>4</integer>
+	<integer>5</integer>
 	<key>waves</key>
 	<array>
 		<string>PeasantSpear</string>
 		<string>PeasantSpear</string>
-		<string>ZealotSquare</string>
 		<string>PeasantSpear</string>
-		<string>PeasantSpear</string>
-		<string>ZealotSquare</string>
 	</array>
 </dict>
 </plist>
