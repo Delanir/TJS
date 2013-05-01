@@ -14,5 +14,5 @@
 +(NSDictionary *) openPlist: (NSString *) plist;
 id loadData(NSString * filename);
 void saveData(id theData, NSString *filename);
-
++(int)getRandomNumberBetween:(int)from to:(int)to;
 @end

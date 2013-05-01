@@ -8,9 +8,7 @@ Daniela:
 
 - Progress bar - pode não ser necessário
 - Implementar skill tree - implementar a lógica e ver se fazemos uma spritesheet de bocadinhos para melhorar a performance (Daniela)
-- Random shouts dos inimigos
 - Por o que está nos menus no zwoptex
-
 
 João M:
 - Acabar lógica dos estimulos
@@ -100,3 +98,6 @@ João A:
 - Quando se mete pause e sai do jogo, quando volta ele tira o pause
     - é preciso não deixar isso acontecer
 - Fazer Reset ao NSUserDefaults (uma setting no SettingsLayer, método ja está criado, mas n testado, no gamestate)
+- Random shouts dos inimigos
+- FIX PAUSE MENU
+- Lógica de gastar e regenerar mana

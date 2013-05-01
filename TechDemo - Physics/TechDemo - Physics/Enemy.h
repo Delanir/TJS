@@ -17,6 +17,7 @@
     state currentState;
     float strength;
     float speed;
+    int shoutPercentage;
     float health, maxHealth;
     unsigned int goldValue;
     CCProgressTimer * healthBar;
