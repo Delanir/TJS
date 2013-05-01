@@ -9,6 +9,8 @@
 #import "SettingsMenuLayer.h"
 #import "GameManager.h"
 #import "GameState.h"
+#import "SimpleAudioEngine.h"
+#import "Config.h"
 
 
 @implementation SettingsMenuLayer
@@ -18,6 +20,22 @@
   [super init];
   
   return self;
+}
+
+- (void)onEnter{
+    [super onEnter];
+    if ([[SimpleAudioEngine sharedEngine] mute])
+    {
+        
+        
+        [[SimpleAudioEngine sharedEngine] setMute:YES];
+        [_mute setVisible:NO];
+    }
+    else
+    {
+        [[SimpleAudioEngine sharedEngine] setMute:NO];
+        [_mute setVisible:YES];
+    }
 }
 
 - (void) pressedMainMenu:(id)sender
@@ -37,12 +55,13 @@
         [[SimpleAudioEngine sharedEngine] setMute:YES];
         [_mute setVisible:NO];
     }
-    
+    [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"click"]];
 };
 
 - (void) resetUserDefaults:(id)sender{
    
     [[GameState shared] resetApplicationData];
+    [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"click"]];
     
 }
     

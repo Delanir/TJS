@@ -358,6 +358,7 @@ static int current_level = -1;
     if (ccpDistance(pausePosition, locationT)<=pauseRadius ||
         (_pause.visible&&
          [self checkRectangularButtonPressed:[_pause getPauseButton] givenTouchPoint:locationT])){
+            [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"click"]];
             [self togglePause];
             
         }else if (_pause.visible&&
@@ -365,7 +366,7 @@ static int current_level = -1;
             [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
             [self setIsTouchEnabled:NO];
             [[CCDirector sharedDirector] resume];
-            
+            [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"click"]];
             [[GameManager shared] runSceneWithID:kMainMenuScene];
         }
 }
@@ -421,6 +422,7 @@ static int current_level = -1;
         
         if ( ccpDistance(btnPosition, locationT)<=btnRadius)
         {
+            [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"click"]];
             [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
             [self setIsTouchEnabled:NO];
             [[CCDirector sharedDirector] resume];

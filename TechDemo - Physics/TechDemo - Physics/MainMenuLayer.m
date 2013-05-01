@@ -33,16 +33,19 @@
 
 - (void) pressedSettings:(id)sender
 {
+    [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"click"]];
     [[GameManager shared] runSceneWithID:kSettingsScene];
 }
 
 - (void) pressedSkillTree:(id)sender
 {
+    [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"click"]];
     [[GameManager shared] runSceneWithID:kSkillTreeScene];
 }
 
 - (void) pressedAchievments:(id)sender
 {
+    [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"click"]];
     GKAchievementViewController *achievementViewController = [[GKAchievementViewController alloc] init];
     achievementViewController.achievementDelegate = self;
     
@@ -55,6 +58,7 @@
 
 - (void) pressedLeaderboard:(id)sender
 {
+    [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"click"]];
     GKLeaderboardViewController *leaderboardViewController = [[GKLeaderboardViewController alloc] init];
     leaderboardViewController.leaderboardDelegate = self;
     
@@ -67,6 +71,7 @@
 
 - (void) pressedPlay:(id)sender
 {
+    [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"click"]];
     [[GameManager shared] runSceneWithID:kSelectLevel];
 }
 

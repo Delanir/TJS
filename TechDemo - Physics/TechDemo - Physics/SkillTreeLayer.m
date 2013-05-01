@@ -9,6 +9,8 @@
 #import "SkillTreeLayer.h"
 #import "Registry.h"
 #import "GameManager.h"
+#import "SimpleAudioEngine.h"
+#import "Config.h"
 
 @implementation SkillTreeLayer
 
@@ -110,7 +112,8 @@
 
 - (void) pressedMainMenu:(id)sender
 {
-   [[GameManager shared] runSceneWithID:kMainMenuScene];
+   [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"click"]];
+    [[GameManager shared] runSceneWithID:kMainMenuScene];
 }
 
 -(void)onExit

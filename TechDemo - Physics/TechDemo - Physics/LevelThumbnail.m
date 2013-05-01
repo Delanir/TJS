@@ -10,6 +10,7 @@
 #import "LevelLayer.h"
 #import "GameManager.h"
 #import "LoadingBar.h"
+#import "SimpleAudioEngine.h"
 
 
 @implementation LevelThumbnail
@@ -24,6 +25,7 @@
 
 - (void) goToLevel:(id)sender
 {
+    [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"click"]];
     [[GameManager shared] runLevel:level];
 }
 
