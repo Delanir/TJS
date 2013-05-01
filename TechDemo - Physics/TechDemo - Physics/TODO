@@ -6,15 +6,13 @@
 
 Daniela:
 Bug list:
-- Quando se mete pause e sai do jogo, quando volta ele tira o pause
-    - é preciso não deixar isso acontecer
-- Não há fonts! mas ca raio?
+
 Outras coisas:
 - Progress bar
 - Implementar skill tree - implementar a lógica e ver se fazemos uma spritesheet de bocadinhos para melhorar a performance (Daniela)
 - Random shouts dos inimigos
-- Acabar com o LevelLayerAbstract - Deixou de fazer sentido
-- Fazer Reset ao NSUserDefaults (uma setting no SettingsLayer, método ja está criado, mas n testado, no gamestate)
+- Por o que está nos menus no zwoptex
+
 
 
 João M:
@@ -29,7 +27,7 @@ João M:
 - Botão de reset
 - ver casos de kksprites q estão a ser criadas sem necessidade
 - Verificar sons que faltam
-- Por o que está nos menus no zwoptex
+
 
 - BURACOS DE MEMORIA ARGHHGHGHGH
     - Nao percebo a skill tree
@@ -96,3 +94,8 @@ João A:
 - Destruição mais eficiente de projecteis
 - Nível do yuri
 - Skill points actuais
+- As custom fonts têm de ser assinaladas no info.plist
+- Acabar com o LevelLayerAbstract - Deixou de fazer sentido
+- Quando se mete pause e sai do jogo, quando volta ele tira o pause
+    - é preciso não deixar isso acontecer
+- Fazer Reset ao NSUserDefaults (uma setting no SettingsLayer, método ja está criado, mas n testado, no gamestate)

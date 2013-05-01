@@ -3277,7 +3277,7 @@
 								<key>value</key>
 								<array>
 									<real>400</real>
-									<real>300</real>
+									<real>-300</real>
 									<integer>0</integer>
 								</array>
 							</dict>
@@ -3463,6 +3463,8 @@
 						<false/>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>baseClass</key>

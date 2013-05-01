@@ -8,6 +8,7 @@
 
 #import "SettingsMenuLayer.h"
 #import "GameManager.h"
+#import "GameState.h"
 
 
 @implementation SettingsMenuLayer
@@ -38,6 +39,16 @@
     }
     
 };
+
+- (void) resetUserDefaults:(id)sender{
+   
+    [[GameState shared] resetApplicationData];
+    
+}
+    
+    
+    
+
 
 -(void)dealloc
 {

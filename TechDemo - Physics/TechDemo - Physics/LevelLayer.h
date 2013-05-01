@@ -7,13 +7,38 @@
 //
 
 // When you import this file, you import all the cocos2d classes
-#import "cocos2d.h"
+
 #import "Hud.h"
-#import "LevelLayerAbstract.h"
 
 #import "Registry.h"
-#import "WaveManager.h"
 
+
+///////////////////////
+#import <GameKit/GameKit.h>
+#import <Foundation/Foundation.h>
+#import "cocos2d.h"
+
+#import "GameOver.h"
+#import "GameWin.h"
+#import "MainScene.h"
+#import "Yuri.h"
+#import "Enemy.h"
+#import "GameOver.h"
+#import "PauseHUD.h"
+#import "Peasant.h"
+#import "CollisionManager.h"
+#import "Config.h"
+#import "EnemyFactory.h"
+#import "SpriteManager.h"
+#import "FaerieDragon.h"
+#import "Arrow.h"
+#import "StimulusFactory.h"
+#import "Stimulus.h"
+#import "ResourceManager.h"
+
+#import "GameManager.h"
+
+#import "CCBReader.h"
 
 // Particle Systems
 #import "CCParticleSystem.h"
@@ -24,10 +49,17 @@
 // Needed to obtain the Navigation Controller
 #import "AppDelegate.h"
 
+#import "WaveManager.h"
+
 
 // HelloWorldLayer
-@interface LevelLayer : LevelLayerAbstract
+@interface LevelLayer : CCLayer <GKAchievementViewControllerDelegate, GKLeaderboardViewControllerDelegate>
 {
+    CCSprite *_pauseButton;
+    GameOver *_gameOver;
+    GameWin  *_gameWin;
+    PauseHUD *_pause;
+    
     int level;
     BOOL fire;
     Hud *hud;
@@ -41,6 +73,15 @@
 +(CCScene *) scene;
 +(void)setCurrentLevel:(int) newLevel;
 
+///////Previously in LLA
 
+-(void) togglePause;
+-(void) pauseCheck:(UITouch *)touchLocation;
+-(void) gameOver;
+-(void) gameWin;
+-(void) calculateAndUpdateNumberOfStars;
+-(void) makeMoneyPersistent;
+
+-(void) addEnemy:(Enemy *) newEnemy;
 
 @end

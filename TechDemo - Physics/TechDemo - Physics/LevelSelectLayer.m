@@ -13,6 +13,8 @@
 #import "GameManager.h"
 #import "GameState.h"
 
+
+
 @implementation LevelSelectLayer
 
 -(id)init
@@ -23,6 +25,8 @@
 
 -(void)dealloc{
     [self removeAllChildrenWithCleanup:YES];
+#warning acho que ]e suposto fazer este release aqui
+    [levelButtons release];
     [super dealloc];
 }
 
@@ -64,6 +68,8 @@
     
     
 }
+
+
 
 
 

@@ -11,6 +11,9 @@
 #import "AppDelegate.h"
 #import "GameManager.h"
 #import "CCBReader/CCBReader.h"
+#import "SimpleAudioEngine.h"
+#import "Registry.h"
+#import "LevelLayer.h"
 
 @implementation AppController
 
@@ -103,30 +106,44 @@
 // getting a call, pause the game
 -(void) applicationWillResignActive:(UIApplication *)application
 {
-	if( [navController_ visibleViewController] == director_ )
-		[director_ pause];
+	if( [navController_ visibleViewController] == director_ ){
+        LevelLayer * LL =[[Registry shared] getEntityByName:@"LevelLayer"];
+        
+        if (LL) {
+            [LL togglePause];
+        }
+//        [director_ pause];
+    }
+		
 }
 
 // call got rejected
 -(void) applicationDidBecomeActive:(UIApplication *)application
 {
 #warning e tirar isto depois de fazer o de baixo para n recomecar
-	if( [navController_ visibleViewController] == director_)
-		[director_ resume];
+	//if( [navController_ visibleViewController] == director_)
+		//[director_ resume];
 }
 
 -(void) applicationDidEnterBackground:(UIApplication*)application
 {
 #warning DANIELA: -forcar o pause aqui (o nosso pause)
     [[NSUserDefaults standardUserDefaults] synchronize];
-	if( [navController_ visibleViewController] == director_ )
+	if( [navController_ visibleViewController] == director_ ){
+        
+                
 		[director_ stopAnimation];
+    }
+    
 }
+
+
 
 -(void) applicationWillEnterForeground:(UIApplication*)application
 {
-	if( [navController_ visibleViewController] == director_ )
+	if( [navController_ visibleViewController] == director_ ){
 		[director_ startAnimation];
+    }
 }
 
 // application will be killed
