@@ -16,7 +16,7 @@
 {
     int money;
     NSMutableArray * buttons;
-    double lastHealth;
+    double lastHealth, lastMana;
     CCLabelTTF *label1, *label2;
     CCProgressTimer * manaProgress, * healthProgress;
 }
@@ -25,5 +25,6 @@
 - (void)updateArrows;
 - (void)updateMoney;
 - (void)updateWallHealth;
+- (void)updateMana;
 
 @end

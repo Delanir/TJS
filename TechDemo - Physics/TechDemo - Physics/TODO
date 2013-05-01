@@ -5,14 +5,11 @@
 **/            **/
 
 Daniela:
-Bug list:
 
-Outras coisas:
-- Progress bar
+- Progress bar - pode não ser necessário
 - Implementar skill tree - implementar a lógica e ver se fazemos uma spritesheet de bocadinhos para melhorar a performance (Daniela)
 - Random shouts dos inimigos
 - Por o que está nos menus no zwoptex
-
 
 
 João M:
@@ -24,10 +21,13 @@ João M:
     - Estado dos achievements - é preciso implementar primeiro
     - Estado do leaderboard - é preciso implementar primeiro
     - Estado das settings - Isto pode ser feito
-- Botão de reset
 - ver casos de kksprites q estão a ser criadas sem necessidade
 - Verificar sons que faltam
+    - Compilar lista
+    - Encontrar sons
+    - Implementar
 
+- Passar todas as constantes para o constants.h
 
 - BURACOS DE MEMORIA ARGHHGHGHGH
     - Nao percebo a skill tree
@@ -35,6 +35,7 @@ João M:
 (Para usar o dell)
 - som do impacto tem de ser corrigido
 - Converter todas as sprites com o faststone para ganhar memoria
+- Botão de reset
 - Sprites dos edifícios
     - mage tower
     - masonry

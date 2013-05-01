@@ -9,6 +9,7 @@
 #ifndef L_Archer_Constants_h
 #define L_Archer_Constants_h
 
+#define kManaRegenerationRate 0.02
 
 typedef enum {
     kMasterScene=0,

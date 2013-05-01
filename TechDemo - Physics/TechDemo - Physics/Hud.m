@@ -18,7 +18,8 @@
         [buttons addObject:[NSNumber numberWithBool:NO]];
         [buttons addObject:[NSNumber numberWithBool:NO]];
         [buttons addObject:[NSNumber numberWithBool:NO]];
-        lastHealth = 100.00;
+        lastHealth = [(Wall*)[[Registry shared] getEntityByName:@"Wall"] maxHealth];
+        lastMana = [[ResourceManager shared] maxMana];
         
         CCSprite * hudBackground = [CCSprite spriteWithSpriteFrameName:@"hud-background.png"];
         [hudBackground setPosition:ccp(512,64)];
@@ -36,7 +37,6 @@
         [healthProgress setBarChangeRate:ccp(0,1)];
         [healthProgress setMidpoint:ccp(0.5,0)];
         [healthProgress setPercentage:100];
-        //[healthProgress setOpacity:180];
         [healthProgress setPosition:ccp(74, 64)];
         
         CCSprite * manaSprite = [CCSprite spriteWithSpriteFrameName:@"manadais.png"];
@@ -46,8 +46,7 @@
         [manaProgress setType: kCCProgressTimerTypeBar];
         [manaProgress setBarChangeRate:ccp(0,1)];
         [manaProgress setMidpoint:ccp(0.5,0)];
-        [manaProgress setPercentage:70];
-        //[manaProgress setOpacity:180];
+        [manaProgress setPercentage:100];
         [manaProgress setPosition:ccp(950, 64)];
 
         CCSprite * currentArrowsSprite = [CCSprite spriteWithSpriteFrameName:@"arrow.png"];
@@ -159,10 +158,9 @@
 
 - (void) buyArrows
 {
-    if ([[ResourceManager shared] gold] > 4)
+    if ([[ResourceManager shared] spendGold:5])
     {
         [[ResourceManager shared] addArrows:10];
-        [[ResourceManager shared] spendGold:5];
         [self updateArrows];
         [self updateMoney];
     }
@@ -191,12 +189,23 @@
     if(newHealth != lastHealth)
     {
         double maxHealth = [wall maxHealth];
-        //[label2 setString:[NSString stringWithFormat:@"Wall health: %.02f", newHealth]];
         lastHealth = newHealth;
         [healthProgress setPercentage: 100 * newHealth/maxHealth];
     }
 }
 
+- (void)updateMana
+{
+    ResourceManager * rm = [ResourceManager shared];
+    double newMana= [rm mana];
+    // optimização
+    if(newMana != lastMana)
+    {
+        double maxMana = [rm maxMana];
+        lastMana = newMana;
+        [manaProgress setPercentage: 100 * newMana/maxMana];
+    }
+}
 
 -(void) dealloc
 {

@@ -7,7 +7,6 @@
 //
 
 #import "Stimulus.h"
-
 @implementation Stimulus
 
 @synthesize type, value;

@@ -11,7 +11,7 @@
 
 @implementation ResourceManager
 
-@synthesize skillPoints, arrows, gold, mana, arrowsUsed, enemiesFromStart, enemiesHit, enemyKillCount;
+@synthesize skillPoints, arrows, gold, mana, arrowsUsed, enemiesFromStart, enemiesHit, enemyKillCount, maxMana;
 
 static ResourceManager* _sharedSingleton = nil;
 
