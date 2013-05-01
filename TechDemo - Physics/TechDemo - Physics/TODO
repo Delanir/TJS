@@ -4,11 +4,17 @@
 *                *
 **/            **/
 
+- Coelho suicida
+
 Daniela:
 
 - Progress bar - pode não ser necessário
 - Implementar skill tree - implementar a lógica e ver se fazemos uma spritesheet de bocadinhos para melhorar a performance (Daniela)
 - Por o que está nos menus no zwoptex
+- Verificar sons que faltam
+    - Compilar lista
+    - Encontrar sons
+    - Implementar
 
 João M:
 - Acabar lógica dos estimulos
@@ -20,10 +26,7 @@ João M:
     - Estado do leaderboard - é preciso implementar primeiro
     - Estado das settings - Isto pode ser feito
 - ver casos de kksprites q estão a ser criadas sem necessidade
-- Verificar sons que faltam
-    - Compilar lista
-    - Encontrar sons
-    - Implementar
+
 
 - Passar todas as constantes para o constants.h
 

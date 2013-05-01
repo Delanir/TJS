@@ -78,6 +78,9 @@
         
         [self schedule:@selector(update:)];
         
+        
+        [self schedule:@selector(destructionChant) interval:9];
+        losingRate=health;
         //[self addMoat];
     }
     
@@ -227,6 +230,14 @@
 -(void) damage: (double) amount
 {
     health -= amount;
+}
+
+-(void) destructionChant{
+    if (losingRate -health >0.2*maxHealth) {
+        [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"killhim"]];
+    }
+    losingRate = health;
+    
 }
 
 

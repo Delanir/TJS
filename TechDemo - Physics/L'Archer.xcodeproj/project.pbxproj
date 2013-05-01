@@ -73,6 +73,7 @@
 		8B1EC88D17318C5500B00DB6 /* shout05.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8B1EC88817318C5500B00DB6 /* shout05.mp3 */; };
 		8B1EC8901731A6FC00B00DB6 /* fairie.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8B1EC88F1731A6FC00B00DB6 /* fairie.mp3 */; };
 		8B1EC8921731A91E00B00DB6 /* chant.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8B1EC8911731A91E00B00DB6 /* chant.mp3 */; };
+		8B1EC8941731B02C00B00DB6 /* killhim.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8B1EC8931731B02C00B00DB6 /* killhim.mp3 */; };
 		8B56089B171A251F00B14693 /* skilltree.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B560899171A251F00B14693 /* skilltree.png */; };
 		8B79CDE1171F501D00E58EDD /* Hud.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B79CDE0171F501D00E58EDD /* Hud.m */; };
 		8B8C2D971719D8A700B50C1E /* MainMenuLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B8C2D961719D8A700B50C1E /* MainMenuLayer.m */; };
@@ -456,6 +457,7 @@
 		8B1EC88817318C5500B00DB6 /* shout05.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = shout05.mp3; sourceTree = "<group>"; };
 		8B1EC88F1731A6FC00B00DB6 /* fairie.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fairie.mp3; sourceTree = "<group>"; };
 		8B1EC8911731A91E00B00DB6 /* chant.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = chant.mp3; sourceTree = "<group>"; };
+		8B1EC8931731B02C00B00DB6 /* killhim.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = killhim.mp3; sourceTree = "<group>"; };
 		8B560899171A251F00B14693 /* skilltree.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = skilltree.png; sourceTree = "<group>"; };
 		8B79CDD9171F2D2500E58EDD /* TODO */ = {isa = PBXFileReference; lastKnownFileType = text; name = TODO; path = "TechDemo - Physics/TODO"; sourceTree = "<group>"; };
 		8B79CDDF171F501D00E58EDD /* Hud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hud.h; sourceTree = "<group>"; };
@@ -1208,6 +1210,7 @@
 		9C377C04170BAE4500F840FB /* SFX */ = {
 			isa = PBXGroup;
 			children = (
+				8B1EC8931731B02C00B00DB6 /* killhim.mp3 */,
 				8B1EC8911731A91E00B00DB6 /* chant.mp3 */,
 				8B1EC88F1731A6FC00B00DB6 /* fairie.mp3 */,
 				8B1EC88417318C5500B00DB6 /* shout01.mp3 */,
@@ -2115,6 +2118,7 @@
 				8B1EC88D17318C5500B00DB6 /* shout05.mp3 in Resources */,
 				8B1EC8901731A6FC00B00DB6 /* fairie.mp3 in Resources */,
 				8B1EC8921731A91E00B00DB6 /* chant.mp3 in Resources */,
+				8B1EC8941731B02C00B00DB6 /* killhim.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

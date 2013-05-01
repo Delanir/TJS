@@ -22,6 +22,9 @@
     CCArray *sprites;
     CCParticleSmoke *smoke;
     CCParticleFire *fire;
+    
+    //para o som
+    double losingRate;
 }
 
 @property (nonatomic) double maxHealth, health, lastHealth;
