@@ -11,7 +11,7 @@ Outras coisas:
 - Progress bar
 - Implementar skill tree - implementar a lógica e ver se fazemos uma spritesheet de bocadinhos para melhorar a performance (Daniela)
 - Por o que está nos menus no zwoptex
-- FIX PAUSE MENU
+
 
 
 
@@ -104,3 +104,4 @@ João A:
     - é preciso não deixar isso acontecer
 - Fazer Reset ao NSUserDefaults (uma setting no SettingsLayer, método ja está criado, mas n testado, no gamestate)
 - Random shouts dos inimigos
+- FIX PAUSE MENU

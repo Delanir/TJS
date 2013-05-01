@@ -15,4 +15,9 @@
   return _pause;
 };
 
+-(CCSprite *) getMenuButton
+{
+    return _menu;
+};
+
 @end

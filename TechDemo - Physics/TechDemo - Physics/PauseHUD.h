@@ -17,5 +17,6 @@
 
 
 -(CCSprite *) getPauseButton;
+-(CCSprite *) getMenuButton;
 
 @end

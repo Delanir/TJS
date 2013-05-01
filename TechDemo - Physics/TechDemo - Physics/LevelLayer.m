@@ -340,13 +340,35 @@ static int current_level = -1;
     CGPoint pausePosition = _pauseButton.position;
     float pauseRadius = _pauseButton.contentSize.width/2;
     
-    CGPoint pausePosition2 = [[_pause getPauseButton] position];
-    float pauseRadius2 = [[_pause getPauseButton] contentSize].width/2;
     
     if (ccpDistance(pausePosition, locationT)<=pauseRadius ||
-        (_pause.visible&&ccpDistance(pausePosition2, location)<=pauseRadius2)){
-        [self togglePause];
+        (_pause.visible&&
+         [self checkRectangularButtonPressed:[_pause getPauseButton] givenTouchPoint:locationT])){
+            [self togglePause];
+            
+        }else if (_pause.visible&&
+                   [self checkRectangularButtonPressed:[_pause getMenuButton] givenTouchPoint:locationT]){
+            [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
+            [self setIsTouchEnabled:NO];
+            [[CCDirector sharedDirector] resume];
+            
+            [[GameManager shared] runSceneWithID:kMainMenuScene];
+        }
+}
+
+- (BOOL) checkRectangularButtonPressed:(CCSprite *)button givenTouchPoint:(CGPoint) locationT{
+    
+    CGPoint position= [button position];
+    CGSize size = [button contentSize];
+
+    
+    if (fabs(locationT.x-position.x)<=size.width/2.0&&
+         fabs(locationT.y-position.y)<=size.height/2.0){
+        return YES;
+    }else{
+        return NO;
     }
+    
 }
 
 -(void) gameOverReturnToMainMenuCheck:(UITouch *)touchLocation
@@ -365,7 +387,7 @@ static int current_level = -1;
             [self setIsTouchEnabled:NO];
             [[CCDirector sharedDirector] resume];
             
-            [[GameManager shared] runSceneWithID:kMainMenuScene];
+            [[GameManager shared] runSceneWithID:kSelectLevel];
             
         }
     }else
@@ -389,7 +411,7 @@ static int current_level = -1;
             [self setIsTouchEnabled:NO];
             [[CCDirector sharedDirector] resume];
             
-            [[GameManager shared] runSceneWithID:kMainMenuScene];
+            [[GameManager shared] runSceneWithID:kSelectLevel];
             
         }
     }else
