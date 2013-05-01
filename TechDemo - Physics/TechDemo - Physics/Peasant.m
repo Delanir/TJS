@@ -7,6 +7,8 @@
 //
 
 #import "Peasant.h"
+#import "SimpleAudioEngine.h"
+
 
 @implementation Peasant
 
@@ -61,6 +63,21 @@
     
     CCFiniteTimeAction * dieAction = [CCRepeat actionWithAction:[CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"p_dies" ]] times:1];
     [[self sprite] runAction:dieAction];
+}
+
+- (void) shout{
+    
+    int s;
+    NSString *sound;
+    
+    int play= [Utils getRandomNumberBetween:1 to:100];
+    if (play > shoutPercentage) {
+        return;
+    }
+    s= [Utils getRandomNumberBetween:1 to:5];
+    sound = [NSString stringWithFormat:@"shout0%d",s];
+    
+    [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:sound]];
 }
 
 @end

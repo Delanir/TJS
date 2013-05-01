@@ -8,6 +8,9 @@
 
 #import "Enemy.h"
 #import "CollisionManager.h"
+#import "Utils.h"
+
+#define SHOUTPERCENTAGE 7
 
 @implementation Enemy
 
@@ -38,6 +41,9 @@
 {
     [self setMaxHealth:health];
     [healthBar setPercentage:health];
+    shoutPercentage =SHOUTPERCENTAGE;
+    [self schedule:@selector(shout) interval:1.5];
+ 
     [self schedule:@selector(update:)];
 }
 
@@ -165,6 +171,8 @@
             }
         }
     }
+    
+    
 }
 
 
@@ -190,6 +198,7 @@
 
 -(void ) shout
 {
+    
 }
 
 @end

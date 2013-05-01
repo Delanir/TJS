@@ -71,4 +71,10 @@ void saveData(id theData, NSString *filename)
     [data writeToFile:pathForFile(filename) atomically:YES];
 }
 
+
++(int)getRandomNumberBetween:(int)from to:(int)to {
+    
+    return (int)from + arc4random() % (to-from+1);
+}
+
 @end
