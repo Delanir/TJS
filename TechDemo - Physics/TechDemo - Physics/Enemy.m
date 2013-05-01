@@ -10,6 +10,8 @@
 #import "CollisionManager.h"
 #import "Utils.h"
 
+#import "SimpleAudioEngine.h"
+
 #define SHOUTPERCENTAGE 7
 
 @implementation Enemy

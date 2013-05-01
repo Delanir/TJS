@@ -16,7 +16,7 @@
 {
     if((self = [super init]))
     {
-        maxHealth = 100.0; // Vai depender da skilltree
+        maxHealth = 1000.0; // Vai depender da skilltree
         health = maxHealth;
         lastHealth = maxHealth;
         status = kMintWall;

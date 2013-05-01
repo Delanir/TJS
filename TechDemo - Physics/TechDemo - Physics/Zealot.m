@@ -7,6 +7,7 @@
 //
 
 #import "Zealot.h"
+#define ZEALOTSHOUT 3
 
 @implementation Zealot
 
@@ -40,6 +41,7 @@
                             [CCCallFuncN actionWithTarget:self selector:@selector(damageWall)],
                             nil]];
     [[self sprite] runAction:walkAction];
+    shoutPercentage =ZEALOTSHOUT;
 }
 
 -(void) attack
@@ -60,6 +62,20 @@
     
     CCFiniteTimeAction * dieAction = [CCRepeat actionWithAction:[CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"z_dies" ]] times:1];
     [[self sprite] runAction:dieAction];
+}
+
+- (void) shout{
+    
+    int s;
+    NSString *sound;
+    
+    int play= [Utils getRandomNumberBetween:1 to:100];
+    if (play > shoutPercentage) {
+        return;
+    }
+    s= [Utils getRandomNumberBetween:1 to:5];
+    sound = @"chant";
+    [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:sound]];
 }
 
 

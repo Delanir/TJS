@@ -8,6 +8,8 @@
 
 #import "FaerieDragon.h"
 
+#define FAIRIESHOUT 1
+
 @implementation FaerieDragon
 
 @synthesize attackAction, flyAction;
@@ -40,6 +42,8 @@
                             [CCCallFuncN actionWithTarget:self selector:@selector(damageWall)],
                             nil]];
     [[self sprite] runAction:flyAction];
+    
+    shoutPercentage = FAIRIESHOUT;
 }
 
 -(void)attack
@@ -60,6 +64,20 @@
     
     CCFiniteTimeAction * dieAction = [CCRepeat actionWithAction:[CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"fd_dies" ]] times:1];
     [[self sprite] runAction:dieAction];
+}
+
+- (void) shout{
+    
+    int s;
+    NSString *sound;
+    
+    int play= [Utils getRandomNumberBetween:1 to:100];
+    if (play > shoutPercentage) {
+        return;
+    }
+    s= [Utils getRandomNumberBetween:1 to:5];
+    sound = @"fairie";
+    [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:sound]];
 }
 
 

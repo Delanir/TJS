@@ -11,6 +11,7 @@
 #import "ResourceManager.h"
 #import "NSMutableArray+QueueAdditions.h"
 #import "Constants.h"
+#import "SimpleAudioEngine.h"
 
 @interface Enemy : Entity
 {
