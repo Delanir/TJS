@@ -15,6 +15,7 @@
     unsigned int gold;
     unsigned int arrows;
     double mana;
+    double maxMana;
     
     
     // Statistics part
@@ -38,6 +39,7 @@
 @property unsigned int enemyKillCount;
 @property unsigned int enemiesHit;
 @property double mana;
+@property double maxMana;
 
 -(void) addSkillPoints:(unsigned int) add;
 -(void) addGold:(unsigned int) add;

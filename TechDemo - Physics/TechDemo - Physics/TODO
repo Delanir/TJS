@@ -5,33 +5,27 @@
 **/            **/
 
 Daniela:
-Bug list:
 
-Outras coisas:
-- Progress bar
+- Progress bar - pode não ser necessário
 - Implementar skill tree - implementar a lógica e ver se fazemos uma spritesheet de bocadinhos para melhorar a performance (Daniela)
 - Por o que está nos menus no zwoptex
 
-
-
-
 João M:
 - Acabar lógica dos estimulos
-- Lógica de levar dano em cima do moat - fazer batota e meter mesmo no caso
+- Lógica de levar dano em cima do moat - fazer batota e meter mesmo no attack state
 - Alterar lógica do vPos para ser relativo ao ecrã
-
 - GameState falta definir:
-    - Nível do yuri - pode ser calculado através do numero de skillpoints, n precisa ser persistente
-    - Skill points actuais (skill tree) - é preciso fazer umas contas, n precisa ser persistente
     - Estado da SkillTree - é preciso terminar a lógica disto primeiro
     - Estado dos achievements - é preciso implementar primeiro
     - Estado do leaderboard - é preciso implementar primeiro
     - Estado das settings - Isto pode ser feito
-- Botão de reset
-
 - ver casos de kksprites q estão a ser criadas sem necessidade
 - Verificar sons que faltam
+    - Compilar lista
+    - Encontrar sons
+    - Implementar
 
+- Passar todas as constantes para o constants.h
 
 - BURACOS DE MEMORIA ARGHHGHGHGH
     - Nao percebo a skill tree
@@ -39,6 +33,7 @@ João M:
 (Para usar o dell)
 - som do impacto tem de ser corrigido
 - Converter todas as sprites com o faststone para ganhar memoria
+- Botão de reset
 - Sprites dos edifícios
     - mage tower
     - masonry
@@ -105,3 +100,4 @@ João A:
 - Fazer Reset ao NSUserDefaults (uma setting no SettingsLayer, método ja está criado, mas n testado, no gamestate)
 - Random shouts dos inimigos
 - FIX PAUSE MENU
+- Lógica de gastar e regenerar mana

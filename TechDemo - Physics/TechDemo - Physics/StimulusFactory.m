@@ -7,6 +7,7 @@
 //
 
 #import "StimulusFactory.h"
+#import "ResourceManager.h"
 
 @implementation StimulusFactory
 
@@ -72,6 +73,7 @@ static StimulusFactory* _sharedSingleton = nil;
 -(Stimulus*) generatePushBackStimulusWithValue: (double) value
 {
     Stimulus * pushBackStimulus = [[Stimulus alloc] initWithStimulusType:KPushBackStimulus andValue:value];
+    [[ResourceManager shared] spendMana:2.0];
     [pushBackStimulus autorelease];
     return pushBackStimulus;
 }

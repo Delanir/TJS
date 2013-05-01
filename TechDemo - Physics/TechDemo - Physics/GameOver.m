@@ -11,11 +11,14 @@
 
 @implementation GameOver
 
--(CGPoint) mainMenuButtonPosition{
+-(CGPoint) mainMenuButtonPosition
+{
     return _mainMenuButton.position;
-};
--(float) mainMenuButtonRadius{
+}
+
+-(float) mainMenuButtonRadius
+{
     return max(_mainMenuButton.contentSize.width*self.scaleX, _mainMenuButton.contentSize.height*self.scaleY);
-};
+}
 
 @end

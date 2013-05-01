@@ -137,26 +137,36 @@ static int current_level = -1;
     Config * conf = [Config shared];
     [rm setArrows:[conf getIntProperty:@"InitialArrows"]];
     [rm setMana: [[conf getNumberProperty:@"InitialMana"] doubleValue]];
+    [rm setMaxMana: [[conf getNumberProperty:@"InitialMana"] doubleValue]];
     [rm reset];
 }
 
 - (void)update:(ccTime)dt
 {
+    // Do I have to shoot?
     if(fire &&
        [[ResourceManager shared] arrows] > 0 &&
        location.y > 128 &&
        [(Yuri*)[self getChildByTag:9]fireIfAble: location] )
         [self addProjectile:location];
     
+    [self regenerateMana];
+    
     [[CollisionManager shared] updatePixelPerfectCollisions:dt];
     [[CollisionManager shared] updateWallsAndEnemies:dt];
     [hud updateWallHealth];
     [hud updateMoney];
+    [hud updateMana];
     
     if ([self tryLose])
         [self gameOver];
     else if ([self tryWin])
         [self gameWin];
+}
+
+- (void) regenerateMana
+{
+    [[ResourceManager shared] addMana:kManaRegenerationRate];
 }
 
 
@@ -169,12 +179,16 @@ static int current_level = -1;
     
 #warning depois de fazer o gamestate, podemos testá-lo para linkar com os valores dos estimulos
 #warning calculate stimulus value method or something
+    // Damage Stimulus
     [stimulusPackage addObject:[[StimulusFactory shared] generateDamageStimulusWithValue:50]];
-    if ([[buttons objectAtIndex:kPower1Button] boolValue])
+    // Cold Stimulus
+    if ([[buttons objectAtIndex:kPower1Button] boolValue] && [[ResourceManager shared] spendMana:3.5])
         [stimulusPackage addObject:[[StimulusFactory shared] generateColdStimulusWithValue:50]];
-    if ([[buttons objectAtIndex:kPower2Button] boolValue])
+    // Fire Stimulus
+    if ([[buttons objectAtIndex:kPower2Button] boolValue] && [[ResourceManager shared] spendMana:3.5])
         [stimulusPackage addObject:[[StimulusFactory shared] generateFireStimulusWithValue:50]];
-    if ([[buttons objectAtIndex:kPower3Button] boolValue])
+    // PushBack Stimulus
+    if ([[buttons objectAtIndex:kPower3Button] boolValue] && [[ResourceManager shared] spendMana:2.0])
         [stimulusPackage addObject:[[StimulusFactory shared] generatePushBackStimulusWithValue:50]];
     
     Arrow * arrow = [[Arrow alloc] initWithDestination:alocation andStimulusPackage:stimulusPackage];
