@@ -3163,8 +3163,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>-148</real>
-									<real>91</real>
+									<real>-152</real>
+									<real>103</real>
 									<integer>0</integer>
 								</array>
 							</dict>
@@ -3463,8 +3463,6 @@
 						<false/>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>baseClass</key>
@@ -3540,8 +3538,8 @@
 						<string>SpriteFrame</string>
 						<key>value</key>
 						<array>
-							<string>MenuSpritesheet.plist</string>
-							<string>main.png</string>
+							<string></string>
+							<string>Skilltree - HD/Fire - el2 z35.png</string>
 						</array>
 					</dict>
 				</array>
@@ -3876,7 +3874,7 @@
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>0.0</real>
+			<real>1.3333333730697632</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>

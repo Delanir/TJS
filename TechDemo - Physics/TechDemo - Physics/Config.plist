@@ -21,11 +21,9 @@
 	<key>shout05</key>
 	<string>shout05.mp3</string>
 	<key>InitialArrows</key>
-	<integer>120</integer>
+	<integer>100</integer>
 	<key>InitialMana</key>
 	<integer>200</integer>
-	<key>InitialSkillPoints</key>
-	<integer>5</integer>
 	<key>existingEnemies</key>
 	<array>
 		<dict>

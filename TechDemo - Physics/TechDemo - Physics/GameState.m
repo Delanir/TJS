@@ -41,8 +41,7 @@ static GameState* _sharedSingleton = nil;
 
 -(id)init
 {
-	self = [super init];
-	if (self != nil)
+	if (self = [super init])
     {
         [self loadApplicationData];
     }

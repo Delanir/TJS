@@ -12,7 +12,7 @@
 
 -(id) init
 {
-    if( (self=[super init]))
+    if( self=[super init])
     {
         buttons = [[NSMutableArray alloc] init];
         [buttons addObject:[NSNumber numberWithBool:NO]];
@@ -114,7 +114,6 @@
         CCMenu *buttonsMenu = [CCMenu menuWithItems:iceToggleButton, fireToggleButton, pushBackToggleButton, buyButton, nil];
         buttonsMenu.position = CGPointZero;
     //Power Buttons End
-         
         
         [self addChild:buttonsMenu];
         [self addChild:currentArrowsSprite z:1];
@@ -126,7 +125,6 @@
         [self addChild:healthProgress z:1];
         [self addChild:label1 z:1];
         [self addChild:label2 z:1];
-
     }
     
     self.isTouchEnabled = YES;

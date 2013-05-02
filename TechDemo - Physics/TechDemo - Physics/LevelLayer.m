@@ -18,6 +18,12 @@
 
 static int current_level = -1;
 
+/** 
+*
+* Class methods
+*
+*/
+
 // Helper class method that creates a Scene
 +(CCScene *) scene
 {
@@ -43,26 +49,25 @@ static int current_level = -1;
     current_level = newLevel;
 }
 
--(void)gameLogic:(ccTime)dt
-{
-    timeElapsedSinceBeginning += dt;
-    
-    if((int)floor(timeElapsedSinceBeginning) % 5 == 1)
-        [self addPeasant];
-    if((int)floor(timeElapsedSinceBeginning) % 15 == 1)
-        [self addFaerieDragon];
-    if((int)floor(timeElapsedSinceBeginning) % 10 == 1)
-        [self addZealot];
-}
+/******
+ *****
+ ***** Instance methods
+ *****
+ *****/
+
+
+
+/**
+ *
+ * Initialization logic
+ *
+ */
 
 
 // on "init" you need to initialize your instance
 -(id) init
 {
-    
-    
-    
-    if( (self=[super init]))
+    if(self = [super init])
     {
         CGSize winSize = [[CCDirector sharedDirector] winSize];
         _pauseButton= [CCSprite spriteWithFile:@"pause.png"];
@@ -130,7 +135,6 @@ static int current_level = -1;
     return self;
 }
 
-
 - (void) initializeResources
 {
     ResourceManager * rm = [ResourceManager shared];
@@ -140,6 +144,13 @@ static int current_level = -1;
     [rm setMaxMana: [[conf getNumberProperty:@"InitialMana"] doubleValue]];
     [rm reset];
 }
+
+
+/**
+ *
+ * Update logic
+ *
+ */
 
 - (void)update:(ccTime)dt
 {
@@ -172,7 +183,6 @@ static int current_level = -1;
 
 - (void) addProjectile:(CGPoint) alocation
 {
-    
     CCArray * stimulusPackage = [[CCArray alloc] init];
     [stimulusPackage removeAllObjects];
     NSMutableArray * buttons = [hud buttonsPressed];
@@ -210,6 +220,45 @@ static int current_level = -1;
     
 }
 
+
+-(BOOL) tryWin
+{
+    return ![[WaveManager shared] anymoreWaves] && [[ResourceManager shared] activeEnemies] == 0;
+}
+
+-(BOOL) tryLose
+{
+    return [(Wall *)[[Registry shared]getEntityByName:@"Wall"] health] <=0 && _gameOver == nil;
+}
+
+-(void) addEnemy:(Enemy *) newEnemy
+{
+    NSInteger zOrder = [[CCDirector sharedDirector] winSize].height - [newEnemy sprite].position.y;
+    
+    [self addChild:newEnemy z:zOrder];
+    
+    [[CollisionManager shared] addToTargets:newEnemy];
+    [[ResourceManager shared] increaseEnemyCount];
+}
+
+/**
+ *
+ * Unused methods (ghost code)
+ *
+ */
+
+
+-(void)gameLogic:(ccTime)dt
+{
+    timeElapsedSinceBeginning += dt;
+    
+    if((int)floor(timeElapsedSinceBeginning) % 5 == 1)
+        [self addPeasant];
+    if((int)floor(timeElapsedSinceBeginning) % 15 == 1)
+        [self addFaerieDragon];
+    if((int)floor(timeElapsedSinceBeginning) % 10 == 1)
+        [self addZealot];
+}
 
 -(void)addPeasant
 {
@@ -252,6 +301,12 @@ static int current_level = -1;
 }
 
 
+/**
+ *
+ * Touch Management
+ *
+ */
+
 - (void)ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     UITouch *touch = [touches anyObject];
@@ -287,15 +342,14 @@ static int current_level = -1;
     location = [[CCDirector sharedDirector] convertToGL:location];
 }
 
--(BOOL) tryWin
-{
-    return ![[WaveManager shared] anymoreWaves] && [[ResourceManager shared] activeEnemies] == 0;
-}
 
--(BOOL) tryLose
-{
-    return [(Wall *)[[Registry shared]getEntityByName:@"Wall"] health] <=0 && _gameOver == nil;
-}
+
+/**
+ *
+ * Tests and evaluations
+ *
+ */
+
 
 -(void) calculateAndUpdateNumberOfStars
 {
@@ -315,8 +369,8 @@ static int current_level = -1;
     
     if (numberStars > [currentStars intValue])
         [stars replaceObjectAtIndex:current_level-1 withObject: [NSNumber numberWithInt:numberStars]];
-    
 }
+
 
 -(void)makeMoneyPersistent
 {
@@ -336,15 +390,6 @@ static int current_level = -1;
     [super dealloc];
     CCLOG(@"DEALOQUEI");
 }
-
-///
-
-
-
-
-
-
-
 
 -(void) pauseCheck:(UITouch *)touchLocation
 {
@@ -377,13 +422,8 @@ static int current_level = -1;
     CGSize size = [button contentSize];
 
     
-    if (fabs(locationT.x-position.x)<=size.width/2.0&&
-         fabs(locationT.y-position.y)<=size.height/2.0){
-        return YES;
-    }else{
-        return NO;
-    }
-    
+    return (fabs(locationT.x-position.x)<=size.width/2.0 &&
+            fabs(locationT.y-position.y)<=size.height/2.0);
 }
 
 -(void) gameOverReturnToMainMenuCheck:(UITouch *)touchLocation
@@ -415,8 +455,8 @@ static int current_level = -1;
     if (_gameWin!=nil)
     {
         CGSize winSize = [[CCDirector sharedDirector] winSize];
-        CGPoint locationT=[touchLocation locationInView:[touchLocation view]];
-        locationT.y=winSize.height-locationT.y;
+        CGPoint locationT = [touchLocation locationInView:[touchLocation view]];
+        locationT.y = winSize.height-locationT.y;
         CGPoint btnPosition = _gameWin.mainMenuButtonPosition;
         float btnRadius = _gameWin.mainMenuButtonRadius/2;
         
@@ -428,7 +468,6 @@ static int current_level = -1;
             [[CCDirector sharedDirector] resume];
             
             [[GameManager shared] runSceneWithID:kSelectLevel];
-            
         }
     }else
         return;
@@ -454,15 +493,6 @@ static int current_level = -1;
     
 }
 
--(void) addEnemy:(Enemy *) newEnemy
-{
-    NSInteger zOrder = [[CCDirector sharedDirector] winSize].height - [newEnemy sprite].position.y;
-    
-    [self addChild:newEnemy z:zOrder];
-    
-    [[CollisionManager shared] addToTargets:newEnemy];
-    [[ResourceManager shared] increaseEnemyCount];
-}
 
 -(void) gameOver
 {
@@ -486,7 +516,7 @@ static int current_level = -1;
 
 
 
-
+#warning JM: Alguém sabe me explicar para que é que isto explica
 #pragma mark GameKit delegate
 
 -(void) achievementViewControllerDidFinish:(GKAchievementViewController *)viewController

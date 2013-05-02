@@ -6,6 +6,30 @@
 
 - Coelho suicida
 - involcros para as skills (botoes + xpto)
+- Nova variável com total do skill points
+- Buildings e lógica respectiva
+- Botão para reparar muralha (logo uns 500 de gold)
+- Definir bonus passivos dos níveis do Yuri
+- Mostrar e calcular score no hud
+    - Desenhar Leaderboard
+        - Fazer reset normal e reset ao leaderboard (coisas diferentes)
+
+- URGENTE: REPENSAR PONTUAÇÃO, FAZ POUCO SENTIDO COM ESTE MODELO DE JOGO
+
+Skill Tree: 
+    Marksmanship:
+        Basic - 50% bonus
+            Strength, Speed, Critical %
+    Fire:
+        Basic - Damage over time
+            More damage over time, fire patches (particles), blast %
+    Cold:
+        Basic - Slow down
+            Longer Slowdown, Freeze %, slow patches (particles)
+    City:
+        Basic - Health Bonus
+            Mages tower (mana recovery), Masonry (wall recovery), Fletcher (dispara flechas simples)
+
 
 Daniela:
 
@@ -28,7 +52,6 @@ João M:
     - Estado das settings - Isto pode ser feito
 - ver casos de kksprites q estão a ser criadas sem necessidade
 
-
 - Passar todas as constantes para o constants.h
 
 - BURACOS DE MEMORIA ARGHHGHGHGH
@@ -49,6 +72,7 @@ Ricardo:
     - A partir da página 495 do livro que está na drop
 - Criar layers de achievements e leaderboard
 - Definir achievements
+    - Fazer página de achievements
 - Balancear dificuldade
 
 
