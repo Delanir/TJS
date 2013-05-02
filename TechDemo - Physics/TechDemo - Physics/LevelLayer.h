@@ -53,7 +53,7 @@
 
 
 // HelloWorldLayer
-@interface LevelLayer : CCLayer <GKAchievementViewControllerDelegate, GKLeaderboardViewControllerDelegate>
+@interface LevelLayer : CCLayer
 {
     CCSprite *_pauseButton;
     GameOver *_gameOver;

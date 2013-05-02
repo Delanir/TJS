@@ -516,20 +516,5 @@ static int current_level = -1;
 
 
 
-#warning JM: Alguém sabe me explicar para que é que isto explica
-#pragma mark GameKit delegate
-
--(void) achievementViewControllerDidFinish:(GKAchievementViewController *)viewController
-{
-	AppController *app = (AppController*) [[UIApplication sharedApplication] delegate];
-	[[app navController] dismissViewControllerAnimated:YES completion:nil];
-}
-
--(void) leaderboardViewControllerDidFinish:(GKLeaderboardViewController *)viewController
-{
-	AppController *app = (AppController*) [[UIApplication sharedApplication] delegate];
-	[[app navController] dismissViewControllerAnimated:YES completion:nil];
-}
-
 
 @end
