@@ -43,8 +43,10 @@
     CCSprite *_marksmanBranch1;
     
     CCLabelTTF *_numberStars;
+    int availableStars;
     
     FireSubSkillTree * fireMenu;
+    
 }
 - (void) pressedCitySymbol:(id)sender;
 - (void) pressedMainMenu:(id)sender;

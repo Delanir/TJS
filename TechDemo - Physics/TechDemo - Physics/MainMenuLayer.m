@@ -30,6 +30,13 @@
     [[SimpleAudioEngine sharedEngine] playBackgroundMusic:[[Config shared] getStringProperty:@"MainMenuMusic"] loop:YES];
 }
 
+- (void)onExit{
+    [self removeAllChildrenWithCleanup:YES];
+    
+    [[CCSpriteFrameCache sharedSpriteFrameCache] removeUnusedSpriteFrames];
+    [[CCTextureCache sharedTextureCache] removeUnusedTextures];
+    [super onExit];
+}
 
 - (void) pressedSettings:(id)sender
 {

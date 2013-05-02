@@ -383,6 +383,11 @@ static int current_level = -1;
     [[Registry shared] clearRegistry];
     [[CollisionManager shared] clearAllEntities];
     [self removeAllChildrenWithCleanup:YES];
+    
+        [[CCSpriteFrameCache sharedSpriteFrameCache] removeUnusedSpriteFrames];
+        [[CCTextureCache sharedTextureCache] removeUnusedTextures];
+        [super onExit];
+    
 }
 
 -(void)dealloc

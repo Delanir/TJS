@@ -78,7 +78,6 @@
 		8B1EC8941731B02C00B00DB6 /* killhim.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8B1EC8931731B02C00B00DB6 /* killhim.mp3 */; };
 		8B1EC8961731B92400B00DB6 /* buttonclick.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8B1EC8951731B92400B00DB6 /* buttonclick.mp3 */; };
 		8B3FF0E01732B60600D2212B /* FireSubSkillTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3FF0DF1732B60600D2212B /* FireSubSkillTree.m */; };
-		8B3FF0E31732BBB500D2212B /* SkillTreeSubMenu.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 8B3FF0E21732BBB500D2212B /* SkillTreeSubMenu.ccbi */; };
 		8B56089B171A251F00B14693 /* skilltree.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B560899171A251F00B14693 /* skilltree.png */; };
 		8B79CDE1171F501D00E58EDD /* Hud.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B79CDE0171F501D00E58EDD /* Hud.m */; };
 		8B8C2D971719D8A700B50C1E /* MainMenuLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B8C2D961719D8A700B50C1E /* MainMenuLayer.m */; };
@@ -1122,6 +1121,7 @@
 				9C8DE0D017185844002E0D0A /* Tags */,
 				9C94ABD717197BD2005BCE32 /* zDepth */,
 				9C2B3CBC171EE8FB00E695FE /* Registry Entities */,
+				9C377BE0170B6E6900F840FB /* Extern Classes */,
 				8B79CDD9171F2D2500E58EDD /* TODO */,
 				9C1E05BE1724C7B00093F0E3 /* DoneStuff */,
 			);
@@ -1218,6 +1218,7 @@
 				9C377BE4170B715A00F840FB /* bitarray.h */,
 			);
 			name = "Extern Classes";
+			path = "TechDemo - Physics";
 			sourceTree = "<group>";
 		};
 		9C377C04170BAE4500F840FB /* SFX */ = {
@@ -1297,7 +1298,6 @@
 				9C2B3CBB171EE83500E695FE /* Configs and References */,
 				9C9ADB2A17218A5E00C3FA59 /* Helper Classes */,
 				9C969E591716290D00BE7476 /* Startup Classes */,
-				9C377BE0170B6E6900F840FB /* Extern Classes */,
 				9C85F4AC1707957E00EECB83 /* Resources */,
 				9C85F4C61707957E00EECB83 /* libs */,
 			);

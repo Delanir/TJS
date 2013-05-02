@@ -7,12 +7,14 @@
 //
 
 #import "FireSubSkillTree.h"
+#import "SkillTreeLayer.h"
 
 
 @implementation FireSubSkillTree
 
 
 - (void) fireMainBranch:(id)sender{
+    [((SkillTreeLayer *)[self parent]) pressedIceSymbol:self];
     [fire setIsEnabled:NO];
 };
 - (void) fireBranch1:(id)sender{
@@ -41,6 +43,7 @@
     }
 };
 - (void) fireElement3:(id)sender{
+    
     if (![fireB3 isEnabled]) {
         [fireEl3 setIsEnabled:NO];
     }
