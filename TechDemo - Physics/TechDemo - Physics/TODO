@@ -4,8 +4,8 @@
 *                *
 **/            **/
 
-- Coelho suicida
-- involcros para as skills (botoes + xpto)
+- Sprites of enemies
+- involucros para as skills (botoes + xpto)
 - Nova variável com total do skill points
 - Buildings e lógica respectiva
 - Botão para reparar muralha (logo uns 500 de gold)
@@ -13,8 +13,6 @@
 - Mostrar e calcular score no hud
     - Desenhar Leaderboard
         - Fazer reset normal e reset ao leaderboard (coisas diferentes)
-
-- URGENTE: REPENSAR PONTUAÇÃO, FAZ POUCO SENTIDO COM ESTE MODELO DE JOGO
 
 Skill Tree: 
     Marksmanship:
@@ -30,12 +28,9 @@ Skill Tree:
         Basic - Health Bonus
             Mages tower (mana recovery), Masonry (wall recovery), Fletcher (dispara flechas simples)
 
-
 Daniela:
 
-- Progress bar - pode não ser necessário
 - Implementar skill tree - implementar a lógica e ver se fazemos uma spritesheet de bocadinhos para melhorar a performance (Daniela)
-- Por o que está nos menus no zwoptex
 - Verificar sons que faltam
     - Compilar lista
     - Encontrar sons
@@ -49,10 +44,10 @@ João M:
     - Estado da SkillTree - é preciso terminar a lógica disto primeiro
     - Estado dos achievements - é preciso implementar primeiro
     - Estado do leaderboard - é preciso implementar primeiro
-    - Estado das settings - Isto pode ser feito
-- ver casos de kksprites q estão a ser criadas sem necessidade
 
 - Passar todas as constantes para o constants.h
+
+- Corrigir spritesheet normal com botões de poderes
 
 - BURACOS DE MEMORIA ARGHHGHGHGH
     - Nao percebo a skill tree
@@ -61,6 +56,7 @@ João M:
 - som do impacto tem de ser corrigido
 - Converter todas as sprites com o faststone para ganhar memoria
 - Botão de reset
+- Botão de reparar wall
 - Sprites dos edifícios
     - mage tower
     - masonry
@@ -68,8 +64,6 @@ João M:
 - Melhorar sprites da Skill tree para ocuparem menos memoria talvez? testar com algumas mas sem posicionar
         
 Ricardo:
-- Ligar ao game center para fazer achievements e leaderboard
-    - A partir da página 495 do livro que está na drop
 - Criar layers de achievements e leaderboard
 - Definir achievements
     - Fazer página de achievements
@@ -79,10 +73,13 @@ Ricardo:
 João A:
 - Fazer fogo e fumo nas walls
     - Ver este exemplo https://github.com/azamsharp/Desert-Race/blob/master/DesertRace/Car.m
-- Multiplas setas de acordo com o nível do yuri
-    - já agora, os níveis do yuri
 - setas a saír por cima da wall
     - isto na verdade é corrigir o zOrder
+    
+    
+    
+    
+Afterburner:
 - Fazer projectiles do zealot
     
     

@@ -12,6 +12,8 @@
 		3E14D23B171A2A28005992A6 /* Comet.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E14D23A171A2A28005992A6 /* Comet.plist */; };
 		3E3A5D09171C6AE2006D5370 /* larcher_icon_72x72.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E3A5D08171C6AE2006D5370 /* larcher_icon_72x72.png */; };
 		3E3A5D0B171C6AEC006D5370 /* larcher_icon_144x144.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E3A5D0A171C6AEC006D5370 /* larcher_icon_144x144.png */; };
+		3EADA5A31732844B00AE0615 /* keylock2-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EADA5A11732843D00AE0615 /* keylock2-ipadhd.png */; };
+		3EADA5A41732844B00AE0615 /* keylock2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EADA5A21732844400AE0615 /* keylock2.png */; };
 		3EB8A37E17161AF800666626 /* defaultEmitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EB8A37D17161AF800666626 /* defaultEmitter.png */; };
 		3EB8A38017161CFA00666626 /* fire.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EB8A37F17161CFA00666626 /* fire.png */; };
 		3EDD9F231715DF2900C6A622 /* background-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EDD9F221715DF2900C6A622 /* background-ipadhd.png */; };
@@ -391,6 +393,8 @@
 		3E14D23A171A2A28005992A6 /* Comet.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Comet.plist; sourceTree = "<group>"; };
 		3E3A5D08171C6AE2006D5370 /* larcher_icon_72x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = larcher_icon_72x72.png; path = ../larcher_icon_72x72.png; sourceTree = "<group>"; };
 		3E3A5D0A171C6AEC006D5370 /* larcher_icon_144x144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = larcher_icon_144x144.png; path = ../larcher_icon_144x144.png; sourceTree = "<group>"; };
+		3EADA5A11732843D00AE0615 /* keylock2-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "keylock2-ipadhd.png"; sourceTree = "<group>"; };
+		3EADA5A21732844400AE0615 /* keylock2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = keylock2.png; sourceTree = "<group>"; };
 		3EB8A37D17161AF800666626 /* defaultEmitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultEmitter.png; sourceTree = "<group>"; };
 		3EB8A37F17161CFA00666626 /* fire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fire.png; sourceTree = "<group>"; };
 		3EDD9F221715DF2900C6A622 /* background-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-ipadhd.png"; sourceTree = "<group>"; };
@@ -1165,6 +1169,8 @@
 				9C791C1517237A7000780C5D /* buttonSkillTree.png */,
 				9C791C1617237A7000780C5D /* buttonSkillTreePressed-ipadhd.png */,
 				9C791C1717237A7000780C5D /* buttonSkillTreePressed.png */,
+				3EADA5A11732843D00AE0615 /* keylock2-ipadhd.png */,
+				3EADA5A21732844400AE0615 /* keylock2.png */,
 				9C3CE235172DE91B0044889D /* keylock-ipadhd.png */,
 				3EE2F96B1723287F0084DF2F /* keylock.png */,
 				9C791C04172376B700780C5D /* pause.png */,
@@ -2123,6 +2129,8 @@
 				8B1EC8921731A91E00B00DB6 /* chant.mp3 in Resources */,
 				8B1EC8941731B02C00B00DB6 /* killhim.mp3 in Resources */,
 				8B1EC8961731B92400B00DB6 /* buttonclick.mp3 in Resources */,
+				3EADA5A31732844B00AE0615 /* keylock2-ipadhd.png in Resources */,
+				3EADA5A41732844B00AE0615 /* keylock2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

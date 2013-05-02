@@ -61,6 +61,7 @@
 - (void)increaseEnemyKillCount;
 - (double)determineAccuracy;
 - (unsigned int) activeEnemies;
+#warning mana used
 
 +(ResourceManager*)shared;
 

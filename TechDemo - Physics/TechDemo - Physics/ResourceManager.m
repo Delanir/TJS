@@ -24,7 +24,6 @@ static ResourceManager* _sharedSingleton = nil;
         
 		return _sharedSingleton;
 	}
-    
 	return nil;
 }
 

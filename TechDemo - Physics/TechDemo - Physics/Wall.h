@@ -20,9 +20,10 @@
     double maxHealth, health, lastHealth;
     wallStatus status;
     CCArray *sprites;
-    CCParticleSmoke *smoke;
-    CCParticleFire *fire;
-    
+    CCParticleSmoke *smokeTop, *smokeBottom;
+    CCParticleFire *fireTop, *fireBottom;
+    CGPoint topPoint1, topPoint2, fireSparksTop, bottomPoint1, bottomPoint2, fireSparksBottom;
+  
     //para o som
     double losingRate;
 }

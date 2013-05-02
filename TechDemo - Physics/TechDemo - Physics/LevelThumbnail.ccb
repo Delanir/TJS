@@ -121,7 +121,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>keylock.png</string>
+									<string>keylock2.png</string>
 								</array>
 							</dict>
 						</array>
@@ -246,7 +246,7 @@
 						<key>value</key>
 						<array>
 							<real>0.0</real>
-							<real>-32</real>
+							<real>-40</real>
 							<integer>0</integer>
 						</array>
 					</dict>

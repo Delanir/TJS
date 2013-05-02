@@ -10,10 +10,12 @@
 #import "CCNode.h"
 #import "CCBReader.h"
 
-@interface LevelStars : CCNode{
-  CCSprite *_star1;
-  CCSprite *_star2;
-  CCSprite *_star3;
+@interface LevelStars : CCNode
+{
+  CCMenuItem *_star1;
+  CCMenuItem *_star2;
+  CCMenuItem *_star3;
 }
+
 -(void) makeVisible:(int)numberOfStars;
 @end

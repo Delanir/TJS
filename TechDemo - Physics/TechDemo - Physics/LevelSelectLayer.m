@@ -51,7 +51,7 @@
     [levelButtons addObject:_level10];
     
     int prevStars = 0;
-    for (int i = 1; i <= 10; i++)
+    for (int i = 1; i <= [levelButtons count]; i++)
     {
         LevelThumbnail * level = [levelButtons objectAtIndex:i-1];
         [level setLevel:i];
@@ -64,6 +64,7 @@
             [level setIsEnabled:NO];
         [level initLevel];
         [level setThumbnail:[NSString stringWithFormat:@"level%d.png",i]];
+        
     }
     
     
