@@ -70,7 +70,7 @@
       [spr setTag:5];
     }
     
-    [levelLayer addChild:castletop100 z:1500];
+    [levelLayer addChild:castletop100 z:999];
     [levelLayer addChild:castlebottom100 z:10];
     
     [[CollisionManager shared] addToWalls:castletop100];

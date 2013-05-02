@@ -43,7 +43,7 @@
         float length = sqrtf((offRealX*offRealX)+(offRealY*offRealY));
         float velocity = 600/1; // 480pixels/1sec
         [self setTimeToLive:length/velocity];
-        
+      
         // Rotate the arrow in the correct direction
         float angle = CC_RADIANS_TO_DEGREES(atanf((float)offRealY / (float)offRealX));
         [sprite setRotation:(-1 * angle)];

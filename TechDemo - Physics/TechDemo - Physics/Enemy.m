@@ -91,11 +91,18 @@
     // and along a random position along the Y axis as calculated above
     sprite.position = ccp(winSize.width + (spriteSize.width/2), actualY);
     //sprite.anchorPoint = ccp(1.0,1.0);
+  
     
+  
     healthBar.position = ccp(winSize.width + (spriteSize.width/2), actualY + spriteSize.height/2 + 2);
-    healthBar.scaleX = 6;
-    healthBar.scaleY = 1;
-    
+  
+  NSLog(@"SOU IPAD RETINA?");
+  if ([Utils iPadRetina])
+    NSLog(@"SOU SIM SENHOR");
+  else NSLog(@"NAO SOU NAO");
+  
+
+  
 }
 
 

@@ -11,8 +11,9 @@
 @implementation Utils
 
 
-+(BOOL)iPadRetina{
-    return ([[UIScreen mainScreen] respondsToSelector:@selector(displayLinkWithTarget:selector:)] && ([UIScreen mainScreen].scale == 2.0))?1:0;
++(BOOL)iPadRetina
+{
+    return ([[UIScreen mainScreen] respondsToSelector:@selector(displayLinkWithTarget:selector:)] && ([UIScreen mainScreen].scale == 2.0));
 }
 
 

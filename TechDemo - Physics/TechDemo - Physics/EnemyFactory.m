@@ -111,8 +111,8 @@ static EnemyFactory* _sharedSingleton = nil;
             [newEnemy sprite].position = ccp(x,y);
             
             [newEnemy healthBar].position = ccp(x,y+spriteSize.width/2+2);
-            [newEnemy healthBar].scaleY = 1;
-            [newEnemy healthBar].scaleX = 6;
+            [newEnemy healthBar].scaleX = [Utils iPadRetina]?6:3;
+            [newEnemy healthBar].scaleY = [Utils iPadRetina]?1:0.5;
             
             [newEnemy setupActions];
             [newEnemy autorelease];

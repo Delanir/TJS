@@ -8,7 +8,7 @@
 - involucros para as skills (botoes + xpto)
 - Nova variável com total do skill points
 - Buildings e lógica respectiva
-- Botão para reparar muralha (logo uns 500 de gold)
+
 - Definir bonus passivos dos níveis do Yuri
 - Mostrar e calcular score no hud
     - Desenhar Leaderboard
@@ -71,10 +71,7 @@ Ricardo:
 
 
 João A:
-- Fazer fogo e fumo nas walls
-    - Ver este exemplo https://github.com/azamsharp/Desert-Race/blob/master/DesertRace/Car.m
-- setas a saír por cima da wall
-    - isto na verdade é corrigir o zOrder
+- Botão para reparar muralha (logo uns 500 de gold)
     
     
     
@@ -91,7 +88,7 @@ Afterburner:
 *               *
 **/           **/
 
-
+- Fazer fogo e fumo nas walls
 - Criado .h de constantes
 - Melhorado Select Level layer
 - Acabar parte dos níveis
