@@ -77,6 +77,8 @@
 		8B1EC8921731A91E00B00DB6 /* chant.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8B1EC8911731A91E00B00DB6 /* chant.mp3 */; };
 		8B1EC8941731B02C00B00DB6 /* killhim.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8B1EC8931731B02C00B00DB6 /* killhim.mp3 */; };
 		8B1EC8961731B92400B00DB6 /* buttonclick.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8B1EC8951731B92400B00DB6 /* buttonclick.mp3 */; };
+		8B3FF0E01732B60600D2212B /* FireSubSkillTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3FF0DF1732B60600D2212B /* FireSubSkillTree.m */; };
+		8B3FF0E31732BBB500D2212B /* SkillTreeSubMenu.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 8B3FF0E21732BBB500D2212B /* SkillTreeSubMenu.ccbi */; };
 		8B56089B171A251F00B14693 /* skilltree.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B560899171A251F00B14693 /* skilltree.png */; };
 		8B79CDE1171F501D00E58EDD /* Hud.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B79CDE0171F501D00E58EDD /* Hud.m */; };
 		8B8C2D971719D8A700B50C1E /* MainMenuLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B8C2D961719D8A700B50C1E /* MainMenuLayer.m */; };
@@ -464,6 +466,9 @@
 		8B1EC8911731A91E00B00DB6 /* chant.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = chant.mp3; sourceTree = "<group>"; };
 		8B1EC8931731B02C00B00DB6 /* killhim.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = killhim.mp3; sourceTree = "<group>"; };
 		8B1EC8951731B92400B00DB6 /* buttonclick.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = buttonclick.mp3; sourceTree = "<group>"; };
+		8B3FF0DE1732B60600D2212B /* FireSubSkillTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FireSubSkillTree.h; sourceTree = "<group>"; };
+		8B3FF0DF1732B60600D2212B /* FireSubSkillTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FireSubSkillTree.m; sourceTree = "<group>"; };
+		8B3FF0E21732BBB500D2212B /* SkillTreeSubMenu.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = SkillTreeSubMenu.ccbi; sourceTree = "<group>"; };
 		8B560899171A251F00B14693 /* skilltree.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = skilltree.png; sourceTree = "<group>"; };
 		8B79CDD9171F2D2500E58EDD /* TODO */ = {isa = PBXFileReference; lastKnownFileType = text; name = TODO; path = "TechDemo - Physics/TODO"; sourceTree = "<group>"; };
 		8B79CDDF171F501D00E58EDD /* Hud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hud.h; sourceTree = "<group>"; };
@@ -1325,6 +1330,7 @@
 				8C72C2A51729687B009EF8C1 /* GameWin.ccbi */,
 				3EEB679F17234BC2005C58E9 /* PauseMenu.ccbi */,
 				8B0E7131171DD5A2004D212C /* SkillTreeLayer.ccbi */,
+				8B3FF0E21732BBB500D2212B /* SkillTreeSubMenu.ccbi */,
 				8BBB6A22171E09E30064B3CD /* SettingsMenu.ccbi */,
 				9C85F4C31707957E00EECB83 /* Info.plist */,
 			);
@@ -1762,6 +1768,8 @@
 				3EE2F95D17230E640084DF2F /* LevelStars.m */,
 				9C500251172AD03800C141DB /* LoadingBar.h */,
 				9C500252172AD03800C141DB /* LoadingBar.m */,
+				8B3FF0DE1732B60600D2212B /* FireSubSkillTree.h */,
+				8B3FF0DF1732B60600D2212B /* FireSubSkillTree.m */,
 			);
 			name = "Scene Entities";
 			sourceTree = "<group>";
@@ -2288,6 +2296,7 @@
 				9C1E05BC1724C0560093F0E3 /* GameState.m in Sources */,
 				8C72C2A8172968F6009EF8C1 /* GameWin.m in Sources */,
 				9C500253172AD03800C141DB /* LoadingBar.m in Sources */,
+				8B3FF0E01732B60600D2212B /* FireSubSkillTree.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

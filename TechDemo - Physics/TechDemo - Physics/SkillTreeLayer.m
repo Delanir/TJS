@@ -64,6 +64,9 @@
     [_marksmanBranch3 setVisible:NO];
     [_marksmanBranch2 setVisible:NO];
     [_marksmanBranch1 setVisible:NO];
+    
+    
+    [fireMenu setVisible:NO];
 }
 
 - (void) pressedCitySymbol:(id)sender
@@ -79,13 +82,16 @@
 
 - (void) pressedFireSymbol:(id)sender
 {
-    [_fireMainBranch setVisible:YES];
-    [_fireElement2 setVisible:YES];
-    [_fireElement1 setVisible:YES];
-    [_fireElement3 setVisible:YES];
-    [_fireBranch3 setVisible:YES];
-    [_fireBranch2 setVisible:YES];
-    [_fireBranch1 setVisible:YES];
+//    [_fireMainBranch setVisible:YES];
+//    [_fireElement2 setVisible:YES];
+//    [_fireElement1 setVisible:YES];
+//    [_fireElement3 setVisible:YES];
+//    [_fireBranch3 setVisible:YES];
+//    [_fireBranch2 setVisible:YES];
+//    [_fireBranch1 setVisible:YES];
+    
+    [fireMenu setVisible:YES];
+    [fireMenu setZOrder:1000];
 }
 
 - (void) pressedMarksmanSymbol:(id)sender

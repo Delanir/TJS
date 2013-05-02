@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 #import "CCBReader.h"
+#import "FireSubSkillTree.h"
 
 @interface SkillTreeLayer : CCLayer
 {
@@ -42,6 +43,8 @@
     CCSprite *_marksmanBranch1;
     
     CCLabelTTF *_numberStars;
+    
+    FireSubSkillTree * fireMenu;
 }
 - (void) pressedCitySymbol:(id)sender;
 - (void) pressedMainMenu:(id)sender;
