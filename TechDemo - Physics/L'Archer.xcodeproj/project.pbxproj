@@ -77,6 +77,12 @@
 		8B221468173338540055BF51 /* SkillTreeLayer.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 8B221466173338540055BF51 /* SkillTreeLayer.ccbi */; };
 		8B221469173338540055BF51 /* SkillTreeSubMenu.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 8B221467173338540055BF51 /* SkillTreeSubMenu.ccbi */; };
 		8B3FF0E01732B60600D2212B /* FireSubSkillTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3FF0DF1732B60600D2212B /* FireSubSkillTree.m */; };
+		8B4394821734167F008BAB1D /* SkillTreeLayerZWOP.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 8B4394811734167F008BAB1D /* SkillTreeLayerZWOP.ccbi */; };
+		8B43948D17341C30008BAB1D /* skillTreeSS.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B43948917341C30008BAB1D /* skillTreeSS.plist */; };
+		8B43948E17341C30008BAB1D /* skillTreeSS.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B43948A17341C30008BAB1D /* skillTreeSS.png */; };
+		8B43949517341E0F008BAB1D /* skillTreeSS-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B43949317341E0F008BAB1D /* skillTreeSS-ipadhd.png */; };
+		8B43949617341E0F008BAB1D /* skillTreeSS-ipadhd.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B43949417341E0F008BAB1D /* skillTreeSS-ipadhd.plist */; };
+		8B56089B171A251F00B14693 /* skilltree.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B560899171A251F00B14693 /* skilltree.png */; };
 		8B79CDE1171F501D00E58EDD /* Hud.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B79CDE0171F501D00E58EDD /* Hud.m */; };
 		8B8C2D971719D8A700B50C1E /* MainMenuLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B8C2D961719D8A700B50C1E /* MainMenuLayer.m */; };
 		8B8C2D9C1719DB9300B50C1E /* MainMenu.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 8B8C2D9B1719DB9300B50C1E /* MainMenu.ccbi */; };
@@ -405,6 +411,12 @@
 		8B221467173338540055BF51 /* SkillTreeSubMenu.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = SkillTreeSubMenu.ccbi; sourceTree = "<group>"; };
 		8B3FF0DE1732B60600D2212B /* FireSubSkillTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FireSubSkillTree.h; sourceTree = "<group>"; };
 		8B3FF0DF1732B60600D2212B /* FireSubSkillTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FireSubSkillTree.m; sourceTree = "<group>"; };
+		8B4394811734167F008BAB1D /* SkillTreeLayerZWOP.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = SkillTreeLayerZWOP.ccbi; sourceTree = "<group>"; };
+		8B43948917341C30008BAB1D /* skillTreeSS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = skillTreeSS.plist; sourceTree = "<group>"; };
+		8B43948A17341C30008BAB1D /* skillTreeSS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = skillTreeSS.png; sourceTree = "<group>"; };
+		8B43949317341E0F008BAB1D /* skillTreeSS-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "skillTreeSS-ipadhd.png"; sourceTree = "<group>"; };
+		8B43949417341E0F008BAB1D /* skillTreeSS-ipadhd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "skillTreeSS-ipadhd.plist"; sourceTree = "<group>"; };
+		8B560899171A251F00B14693 /* skilltree.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = skilltree.png; sourceTree = "<group>"; };
 		8B79CDD9171F2D2500E58EDD /* TODO */ = {isa = PBXFileReference; lastKnownFileType = text; name = TODO; path = "TechDemo - Physics/TODO"; sourceTree = "<group>"; };
 		8B79CDDF171F501D00E58EDD /* Hud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hud.h; sourceTree = "<group>"; };
 		8B79CDE0171F501D00E58EDD /* Hud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hud.m; sourceTree = "<group>"; };
@@ -1593,6 +1605,8 @@
 		9C969E5A17163EF700BE7476 /* ipadhd */ = {
 			isa = PBXGroup;
 			children = (
+				8B43949317341E0F008BAB1D /* skillTreeSS-ipadhd.png */,
+				8B43949417341E0F008BAB1D /* skillTreeSS-ipadhd.plist */,
 				9C268CF3172C4F6900F303D8 /* MenuSpritesheet-ipadhd.plist */,
 				9C268CF4172C4F6900F303D8 /* MenuSpritesheet-ipadhd.png */,
 				9C268CEE172C4D8D00F303D8 /* MenuSpritesheet-ipadhd.zwd */,
@@ -1610,6 +1624,8 @@
 		9C969E5B17163F1900BE7476 /* normal */ = {
 			isa = PBXGroup;
 			children = (
+				8B43948917341C30008BAB1D /* skillTreeSS.plist */,
+				8B43948A17341C30008BAB1D /* skillTreeSS.png */,
 				9C268CEF172C4F1C00F303D8 /* MenuSpritesheet.plist */,
 				9C268CF0172C4F1C00F303D8 /* MenuSpritesheet.png */,
 				9C268CEB172C4D8700F303D8 /* MenuSpritesheet.zwd */,
@@ -1901,6 +1917,11 @@
 				8B2214651733380A0055BF51 /* ccbResources in Resources */,
 				8B221468173338540055BF51 /* SkillTreeLayer.ccbi in Resources */,
 				8B221469173338540055BF51 /* SkillTreeSubMenu.ccbi in Resources */,
+				8B4394821734167F008BAB1D /* SkillTreeLayerZWOP.ccbi in Resources */,
+				8B43948D17341C30008BAB1D /* skillTreeSS.plist in Resources */,
+				8B43948E17341C30008BAB1D /* skillTreeSS.png in Resources */,
+				8B43949517341E0F008BAB1D /* skillTreeSS-ipadhd.png in Resources */,
+				8B43949617341E0F008BAB1D /* skillTreeSS-ipadhd.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

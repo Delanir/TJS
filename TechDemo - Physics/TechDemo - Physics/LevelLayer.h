@@ -83,5 +83,6 @@
 -(void) makeMoneyPersistent;
 
 -(void) addEnemy:(Enemy *) newEnemy;
+-(void) initStimulusFromSkillTree;
 
 @end

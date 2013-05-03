@@ -62,41 +62,53 @@
     
 }
 
+
+
 - (void) fireMainBranch:(id)sender{
-    [((SkillTreeLayer *)[self parent]) switchFire:14 withStarCost:STARCOST1];
-    [fire setIsEnabled:NO];
-    [[GameState shared] saveApplicationData];
+    
+    if ([((SkillTreeLayer *)[self parent]) availableStars] >= STARCOST1) {
+        [((SkillTreeLayer *)[self parent]) switchFire:14 withStarCost:STARCOST1];
+        [fire setIsEnabled:NO];
+        [((SkillTreeLayer *)[self parent]) decreaseAvailableStarsBy:STARCOST1];
+        [[GameState shared] saveApplicationData];
+    }
+    
 };
 - (void) fireBranch1:(id)sender{
-    if (![fire isEnabled]) {
+    if (![fire isEnabled] && ([((SkillTreeLayer *)[self parent]) availableStars] >= STARCOST2)) {
+        [((SkillTreeLayer *)[self parent]) decreaseAvailableStarsBy:STARCOST2];
         [((SkillTreeLayer *)[self parent]) switchFire:20 withStarCost:STARCOST2];
         [fireB1 setIsEnabled:NO];
         [[GameState shared] saveApplicationData];
     }
 };
 - (void) fireBranch2:(id)sender{
-    if (![fire isEnabled]) {
+    if (![fire isEnabled] && ([((SkillTreeLayer *)[self parent]) availableStars] >= STARCOST2)) {
+        [((SkillTreeLayer *)[self parent]) decreaseAvailableStarsBy:STARCOST2];
         [((SkillTreeLayer *)[self parent]) switchFire:19 withStarCost:STARCOST2];
         [fireB2 setIsEnabled:NO];
         [[GameState shared] saveApplicationData];
     }
 };
 - (void) fireBranch3:(id)sender{
-    if (![fire isEnabled]) {
+    if (![fire isEnabled] && ([((SkillTreeLayer *)[self parent]) availableStars] >= STARCOST2)) {
+        [((SkillTreeLayer *)[self parent]) decreaseAvailableStarsBy:STARCOST2];
         [((SkillTreeLayer *)[self parent]) switchFire:18 withStarCost:STARCOST2];
         [fireB3 setIsEnabled:NO];
         [[GameState shared] saveApplicationData];
     }
 };
 - (void) fireElement1:(id)sender{
-    if (![fireB1 isEnabled]) {
+    if (![fireB1 isEnabled] &&([((SkillTreeLayer *)[self parent]) availableStars] >= STARCOST3)) {
+        [((SkillTreeLayer *)[self parent]) decreaseAvailableStarsBy:STARCOST3];
         [((SkillTreeLayer *)[self parent]) switchFire:16 withStarCost:STARCOST3];
         [fireEl1 setIsEnabled:NO];
         [[GameState shared] saveApplicationData];
     }
 };
 - (void) fireElement2:(id)sender{
-    if (![fireB2 isEnabled]) {
+    if (![fireB2 isEnabled]&&([((SkillTreeLayer *)[self parent]) availableStars] >= STARCOST3)) {
+        [((SkillTreeLayer *)[self parent]) decreaseAvailableStarsBy:STARCOST3];
         [((SkillTreeLayer *)[self parent]) switchFire:15 withStarCost:STARCOST3];
         [fireEl2 setIsEnabled:NO];
         [[GameState shared] saveApplicationData];
@@ -104,7 +116,8 @@
 };
 - (void) fireElement3:(id)sender{
     
-    if (![fireB3 isEnabled]) {
+    if (![fireB3 isEnabled]&&([((SkillTreeLayer *)[self parent]) availableStars] >= STARCOST3)) {
+        [((SkillTreeLayer *)[self parent]) decreaseAvailableStarsBy:STARCOST3];
         [((SkillTreeLayer *)[self parent]) switchFire:17 withStarCost:STARCOST3];
         [fireEl3 setIsEnabled:NO];
         [[GameState shared] saveApplicationData];
