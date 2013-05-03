@@ -138,9 +138,9 @@
 						<string>Color3</string>
 						<key>value</key>
 						<array>
+							<integer>4</integer>
+							<integer>50</integer>
 							<integer>255</integer>
-							<integer>0</integer>
-							<integer>0</integer>
 						</array>
 					</dict>
 					<dict>
@@ -179,7 +179,7 @@
 						<key>displayName</key>
 						<string>CCMenuItemImage</string>
 						<key>memberVarAssignmentName</key>
-						<string>fire</string>
+						<string>ice</string>
 						<key>memberVarAssignmentType</key>
 						<integer>1</integer>
 						<key>properties</key>
@@ -235,7 +235,7 @@
 								<string>Block</string>
 								<key>value</key>
 								<array>
-									<string>fireMainBranch:</string>
+									<string>iceMainBranch:</string>
 									<integer>1</integer>
 								</array>
 							</dict>
@@ -292,7 +292,7 @@
 						<key>displayName</key>
 						<string>CCMenuItemImage</string>
 						<key>memberVarAssignmentName</key>
-						<string>fireB1</string>
+						<string>iceB1</string>
 						<key>memberVarAssignmentType</key>
 						<integer>1</integer>
 						<key>properties</key>
@@ -348,7 +348,7 @@
 								<string>Block</string>
 								<key>value</key>
 								<array>
-									<string>fireBranch1:</string>
+									<string>iceBranch1:</string>
 									<integer>1</integer>
 								</array>
 							</dict>
@@ -405,7 +405,7 @@
 						<key>displayName</key>
 						<string>CCMenuItemImage</string>
 						<key>memberVarAssignmentName</key>
-						<string>fireB2</string>
+						<string>iceB2</string>
 						<key>memberVarAssignmentType</key>
 						<integer>1</integer>
 						<key>properties</key>
@@ -417,8 +417,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>514</real>
-									<real>448</real>
+									<real>512</real>
+									<real>460</real>
 									<integer>0</integer>
 								</array>
 							</dict>
@@ -461,7 +461,7 @@
 								<string>Block</string>
 								<key>value</key>
 								<array>
-									<string>fireBranch2:</string>
+									<string>iceBranch2:</string>
 									<integer>1</integer>
 								</array>
 							</dict>
@@ -518,7 +518,7 @@
 						<key>displayName</key>
 						<string>CCMenuItemImage</string>
 						<key>memberVarAssignmentName</key>
-						<string>fireB3</string>
+						<string>iceB3</string>
 						<key>memberVarAssignmentType</key>
 						<integer>0</integer>
 						<key>properties</key>
@@ -574,7 +574,7 @@
 								<string>Block</string>
 								<key>value</key>
 								<array>
-									<string>fireBranch3:</string>
+									<string>iceBranch3:</string>
 									<integer>1</integer>
 								</array>
 							</dict>
@@ -631,7 +631,7 @@
 						<key>displayName</key>
 						<string>CCMenuItemImage</string>
 						<key>memberVarAssignmentName</key>
-						<string>fireEl1</string>
+						<string>iceEl1</string>
 						<key>memberVarAssignmentType</key>
 						<integer>1</integer>
 						<key>properties</key>
@@ -687,7 +687,7 @@
 								<string>Block</string>
 								<key>value</key>
 								<array>
-									<string>fireElement1:</string>
+									<string>iceElement1:</string>
 									<integer>1</integer>
 								</array>
 							</dict>
@@ -744,7 +744,7 @@
 						<key>displayName</key>
 						<string>CCMenuItemImage</string>
 						<key>memberVarAssignmentName</key>
-						<string>fireEl2</string>
+						<string>iceEl2</string>
 						<key>memberVarAssignmentType</key>
 						<integer>1</integer>
 						<key>properties</key>
@@ -800,7 +800,7 @@
 								<string>Block</string>
 								<key>value</key>
 								<array>
-									<string>fireElement2:</string>
+									<string>iceElement2:</string>
 									<integer>1</integer>
 								</array>
 							</dict>
@@ -857,7 +857,7 @@
 						<key>displayName</key>
 						<string>CCMenuItemImage</string>
 						<key>memberVarAssignmentName</key>
-						<string>fireEl3</string>
+						<string>iceEl3</string>
 						<key>memberVarAssignmentType</key>
 						<integer>1</integer>
 						<key>properties</key>
@@ -913,7 +913,7 @@
 								<string>Block</string>
 								<key>value</key>
 								<array>
-									<string>fireElement3:</string>
+									<string>iceElement3:</string>
 									<integer>1</integer>
 								</array>
 							</dict>
@@ -1072,6 +1072,8 @@
 								</array>
 							</dict>
 						</array>
+						<key>selected</key>
+						<true/>
 					</dict>
 				</array>
 				<key>customClass</key>
@@ -1704,8 +1706,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>514</real>
-							<real>481</real>
+							<real>511</real>
+							<real>492</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -2242,10 +2244,10 @@
 						<key>value</key>
 						<array>
 							<array>
-								<real>0.75999999046325684</real>
-								<real>0.25</real>
-								<real>0.11999999731779099</real>
-								<real>255</real>
+								<real>0.17166492342948914</real>
+								<real>0.33723410964012146</real>
+								<real>0.69565558433532715</real>
+								<real>1</real>
 							</array>
 							<array>
 								<real>0.0</real>
@@ -2337,15 +2339,15 @@
 						<key>type</key>
 						<string>Texture</string>
 						<key>value</key>
-						<string>fire.png</string>
+						<string>ccbResources/ccbParticleSnow.png</string>
 					</dict>
 				</array>
 			</dict>
 		</array>
 		<key>customClass</key>
-		<string>FireSubSkillTree</string>
+		<string>IceSubSkillTree</string>
 		<key>displayName</key>
-		<string>FireSubSkillTree</string>
+		<string>IceSubSkillTree</string>
 		<key>memberVarAssignmentName</key>
 		<string></string>
 		<key>memberVarAssignmentType</key>

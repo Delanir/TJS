@@ -10,6 +10,7 @@
 #import "cocos2d.h"
 #import "CCBReader.h"
 #import "FireSubSkillTree.h"
+#import "IceSubSkillTree.h"
 
 @interface SkillTreeLayer : CCLayer
 {
@@ -46,6 +47,7 @@
     int availableStars;
     
     FireSubSkillTree * fireMenu;
+    IceSubSkillTree *iceMenu;
     
 }
 
@@ -57,6 +59,7 @@
 - (void) pressedIceSymbol:(id)sender;
 - (void) pressedFireSymbol:(id)sender;
 - (void) switchFire: (int)index withStarCost:(int)star;
+- (void) switchIce: (int)index withStarCost:(int)star;
 -(int) usedStars;
 -(int) currentStars;
 - (void) decreaseAvailableStarsBy: (int) stars;

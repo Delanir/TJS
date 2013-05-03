@@ -152,18 +152,12 @@
 
 - (void) pressedFireSymbol:(id)sender
 {
-//    [_fireMainBranch setVisible:YES];
-//    [_fireElement2 setVisible:YES];
-//    [_fireElement1 setVisible:YES];
-//    [_fireElement3 setVisible:YES];
-//    [_fireBranch3 setVisible:YES];
-//    [_fireBranch2 setVisible:YES];
-//    [_fireBranch1 setVisible:YES];
-    
+ 
     if ([fireMenu visible]) {
         [fireMenu setVisible:NO];
     }else{
         [fireMenu setVisible:YES];
+        [iceMenu setVisible:NO];
         [fireMenu setZOrder:1000];
     }
     
@@ -188,13 +182,13 @@
 
 - (void) pressedIceSymbol:(id)sender
 {
-    [_iceMainBranch setVisible:YES];
-    [_iceElement2 setVisible:YES];
-    [_iceElement1 setVisible:YES];
-    [_iceElement3 setVisible:YES];
-    [_iceBranch3 setVisible:YES];
-    [_iceBranch2 setVisible:YES];
-    [_iceBranch1 setVisible:YES];
+    if ([iceMenu visible]) {
+        [iceMenu setVisible:NO];
+    }else{
+        [iceMenu setVisible:YES];
+        [fireMenu setVisible:NO];
+        [iceMenu setZOrder:1001];
+    }
 }
 
 - (void) pressedMainMenu:(id)sender
@@ -283,6 +277,42 @@
             break;
         case 20:
             [_fireBranch1 setVisible:YES];
+            break;
+        default:
+            break;
+    }
+    
+}
+
+- (void) switchIce: (int)index withStarCost:(int)star
+{
+    
+    NSMutableArray *skill = [[GameState shared] skillStates];
+    
+    [skill replaceObjectAtIndex:index withObject:[NSNumber numberWithInt:star]];
+    
+    switch (index) {
+        case 0:
+            [_iceMainBranch setVisible:YES];
+            break;
+        case 1:
+            [_iceElement2 setVisible:YES];
+            
+            break;
+        case 2:
+            [_iceElement1 setVisible:YES];
+            break;
+        case 3:
+            [_iceElement3 setVisible:YES];
+            break;
+        case 4:
+            [_iceBranch3 setVisible:YES];
+            break;
+        case 5:
+            [_iceBranch2 setVisible:YES];
+            break;
+        case 6:
+            [_iceBranch1 setVisible:YES];
             break;
         default:
             break;
