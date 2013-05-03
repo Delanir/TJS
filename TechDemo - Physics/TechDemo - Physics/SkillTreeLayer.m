@@ -12,13 +12,18 @@
 #import "SimpleAudioEngine.h"
 #import "Config.h"
 #import "GameState.h"
+#import "SpriteManager.h"
 
 @implementation SkillTreeLayer
 
 @synthesize availableStars;
 
 
-
+- (id)init{
+    [[SpriteManager shared] addSpritesToSpriteFrameCacheWithFile:@"skillTreeSS.plist" andBatchSpriteSheet:@"skillTreeSS.png"];
+    self = [super init];
+    return self;
+}
 
 
 -(void)onEnter
