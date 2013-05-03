@@ -254,7 +254,7 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
+									<string>MenuSpritesheet.plist</string>
 									<string>fleurBlack.png</string>
 								</array>
 							</dict>
@@ -265,7 +265,7 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
+									<string>MenuSpritesheet.plist</string>
 									<string>fleurDor.png</string>
 								</array>
 							</dict>
@@ -276,11 +276,13 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
+									<string>MenuSpritesheet.plist</string>
 									<string>fleurDor.png</string>
 								</array>
 							</dict>
 						</array>
+						<key>selected</key>
+						<true/>
 					</dict>
 					<dict>
 						<key>baseClass</key>
@@ -367,7 +369,7 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
+									<string>MenuSpritesheet.plist</string>
 									<string>fleurBlack.png</string>
 								</array>
 							</dict>
@@ -378,7 +380,7 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
+									<string>MenuSpritesheet.plist</string>
 									<string>fleurDor.png</string>
 								</array>
 							</dict>
@@ -389,7 +391,7 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
+									<string>MenuSpritesheet.plist</string>
 									<string>fleurDor.png</string>
 								</array>
 							</dict>
@@ -480,7 +482,7 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
+									<string>MenuSpritesheet.plist</string>
 									<string>fleurBlack.png</string>
 								</array>
 							</dict>
@@ -491,7 +493,7 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
+									<string>MenuSpritesheet.plist</string>
 									<string>fleurDor.png</string>
 								</array>
 							</dict>
@@ -502,7 +504,7 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
+									<string>MenuSpritesheet.plist</string>
 									<string>fleurDor.png</string>
 								</array>
 							</dict>
@@ -593,7 +595,7 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
+									<string>MenuSpritesheet.plist</string>
 									<string>fleurBlack.png</string>
 								</array>
 							</dict>
@@ -604,7 +606,7 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
+									<string>MenuSpritesheet.plist</string>
 									<string>fleurDor.png</string>
 								</array>
 							</dict>
@@ -615,7 +617,7 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
+									<string>MenuSpritesheet.plist</string>
 									<string>fleurDor.png</string>
 								</array>
 							</dict>
@@ -706,7 +708,7 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
+									<string>MenuSpritesheet.plist</string>
 									<string>fleurBlack.png</string>
 								</array>
 							</dict>
@@ -717,7 +719,7 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
+									<string>MenuSpritesheet.plist</string>
 									<string>fleurDor.png</string>
 								</array>
 							</dict>
@@ -728,7 +730,7 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
+									<string>MenuSpritesheet.plist</string>
 									<string>fleurDor.png</string>
 								</array>
 							</dict>
@@ -819,7 +821,7 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
+									<string>MenuSpritesheet.plist</string>
 									<string>fleurBlack.png</string>
 								</array>
 							</dict>
@@ -830,7 +832,7 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
+									<string>MenuSpritesheet.plist</string>
 									<string>fleurDor.png</string>
 								</array>
 							</dict>
@@ -841,7 +843,7 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
+									<string>MenuSpritesheet.plist</string>
 									<string>fleurDor.png</string>
 								</array>
 							</dict>
@@ -932,7 +934,7 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
+									<string>MenuSpritesheet.plist</string>
 									<string>fleurBlack.png</string>
 								</array>
 							</dict>
@@ -943,7 +945,7 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
+									<string>MenuSpritesheet.plist</string>
 									<string>fleurDor.png</string>
 								</array>
 							</dict>
@@ -954,7 +956,7 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
+									<string>MenuSpritesheet.plist</string>
 									<string>fleurDor.png</string>
 								</array>
 							</dict>
@@ -1045,8 +1047,8 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
-									<string>MainMenu/buttonSkillTree.png</string>
+									<string>MenuSpritesheet.plist</string>
+									<string>buttonSkillTree.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -1056,8 +1058,8 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
-									<string>MainMenu/buttonSkillTreePressed.png</string>
+									<string>MenuSpritesheet.plist</string>
+									<string>buttonSkillTreePressed.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -1067,8 +1069,8 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
-									<string>MainMenu/buttonSkillTreePressed.png</string>
+									<string>MenuSpritesheet.plist</string>
+									<string>buttonSkillTreePressed.png</string>
 								</array>
 							</dict>
 						</array>
@@ -2340,8 +2342,6 @@
 						<string>fire.png</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>
