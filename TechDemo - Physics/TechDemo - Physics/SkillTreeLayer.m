@@ -98,14 +98,35 @@
         [_fireBranch1 setVisible:YES];
     }
     
+    if ([[skill objectAtIndex:21] intValue] != 0) {
+        [_marksmanMainBranch setVisible:NO];
+    }
+    if ([[skill objectAtIndex:22] intValue] != 0) {
+        [_marksmanElement2 setVisible:NO];    }
+    if ([[skill objectAtIndex:23] intValue] != 0) {
+        [_marksmanElement1 setVisible:NO];
+    }
+    if ([[skill objectAtIndex:24] intValue] != 0) {
+        [_marksmanElement3 setVisible:NO];
+
+    }
+    if ([[skill objectAtIndex:25] intValue] != 0) {
+        [_marksmanBranch3 setVisible:NO];
+    }
+    if ([[skill objectAtIndex:26] intValue] != 0) {
+        [_marksmanBranch2 setVisible:NO];
+    }
+    if ([[skill objectAtIndex:27] intValue] != 0) {
+        [_marksmanBranch1 setVisible:NO];
+    }
+    
         
-    [_marksmanMainBranch setVisible:NO];
-    [_marksmanElement2 setVisible:NO];
-    [_marksmanElement1 setVisible:NO];
-    [_marksmanElement3 setVisible:NO];
-    [_marksmanBranch3 setVisible:NO];
-    [_marksmanBranch2 setVisible:NO];
-    [_marksmanBranch1 setVisible:NO];
+    
+    
+    
+        
+    
+    
     
     
     [fireMenu setVisible:NO];
