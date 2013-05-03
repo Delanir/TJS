@@ -3881,6 +3881,8 @@
 						<string>MarksSubMenu.ccb</string>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>baseClass</key>
@@ -3927,8 +3929,6 @@
 						<string>CitySubMenu.ccb</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>

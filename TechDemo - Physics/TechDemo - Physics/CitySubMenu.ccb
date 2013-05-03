@@ -520,7 +520,7 @@
 						<key>memberVarAssignmentName</key>
 						<string>cityB3</string>
 						<key>memberVarAssignmentType</key>
-						<integer>0</integer>
+						<integer>1</integer>
 						<key>properties</key>
 						<array>
 							<dict>
@@ -620,6 +620,8 @@
 								</array>
 							</dict>
 						</array>
+						<key>selected</key>
+						<true/>
 					</dict>
 					<dict>
 						<key>baseClass</key>
@@ -2065,8 +2067,6 @@
 						<string>1</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>baseClass</key>
@@ -2090,8 +2090,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>517</real>
-							<real>201</real>
+							<real>515</real>
+							<real>242</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -2113,8 +2113,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
-							<real>1</real>
+							<real>0.40000000596046448</real>
+							<real>0.30000001192092896</real>
 							<false/>
 							<integer>0</integer>
 						</array>

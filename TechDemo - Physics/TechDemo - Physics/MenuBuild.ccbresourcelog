@@ -2,6 +2,7 @@ AchievmentsLayer.ccbi
 akaPotsley.ttf
 background-ipadhd.png
 background.png
+blackdragon_anim.plist
 ccbDefaultImages-hd.plist
 ccbDefaultImages-hd.png
 ccbDefaultImages-ipad.plist
@@ -19,6 +20,7 @@ Default-Landscape~ipad.png
 defaultEmitter.png
 fairiedragon_anim.plist
 fire.png
+fireelemental_anim.plist
 GameOver.ccbi
 GameWin.ccbi
 IceSubMenu.ccbi
@@ -58,6 +60,7 @@ Info.plist
 SimpleBackground-ipadhd.jpg
 SimpleBackground.jpg
 SettingsMenu.ccbi
+skeleton_anim.plist
 Background z0-ipadhd.png
 Background z0.png
 Fire - el2 z35-ipadhd.png
@@ -78,5 +81,6 @@ skillTreeSS.plist
 skillTreeSS.png
 SkillTreeSubMenu.ccbi
 StarsNode.ccbi
+wraith_anim.plist
 yurie_anim.plist
 zealot_anim.plist

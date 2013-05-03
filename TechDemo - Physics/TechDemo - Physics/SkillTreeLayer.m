@@ -21,7 +21,8 @@
 #define DEFAULTPOINTS 18
 
 
-- (id)init{
+- (id)init
+{
     [[SpriteManager shared] addSpritesToSpriteFrameCacheWithFile:@"skillTreeSS.plist" andBatchSpriteSheet:@"skillTreeSS.png"];
     self = [super init];
     return self;
@@ -40,7 +41,6 @@
     
     if ([[skill objectAtIndex:0] intValue] != 0) {
         [_iceMainBranch setVisible:YES];
-        
     }
     if ([[skill objectAtIndex:1] intValue] != 0) {
         [_iceElement2 setVisible:YES];
@@ -60,7 +60,6 @@
     if ([[skill objectAtIndex:6] intValue] != 0) {
         [_iceBranch1 setVisible:YES];
     }
-  
     if ([[skill objectAtIndex:7] intValue] != 0) {
         [_cityMainBranch setVisible:YES];
     }
@@ -82,7 +81,6 @@
     if ([[skill objectAtIndex:13] intValue] != 0) {
         [_cityBranch1 setVisible:YES];
     }
-    
     if ([[skill objectAtIndex:14] intValue] != 0) {
         [_fireMainBranch setVisible:YES];
     }
@@ -104,18 +102,17 @@
     if ([[skill objectAtIndex:20] intValue] != 0) {
         [_fireBranch1 setVisible:YES];
     }
-    
     if ([[skill objectAtIndex:21] intValue] != 0) {
         [_marksmanMainBranch setVisible:NO];
     }
     if ([[skill objectAtIndex:22] intValue] != 0) {
-        [_marksmanElement2 setVisible:NO];    }
+        [_marksmanElement2 setVisible:NO];
+    }
     if ([[skill objectAtIndex:23] intValue] != 0) {
         [_marksmanElement1 setVisible:NO];
     }
     if ([[skill objectAtIndex:24] intValue] != 0) {
         [_marksmanElement3 setVisible:NO];
-
     }
     if ([[skill objectAtIndex:25] intValue] != 0) {
         [_marksmanBranch3 setVisible:NO];
@@ -126,15 +123,6 @@
     if ([[skill objectAtIndex:27] intValue] != 0) {
         [_marksmanBranch1 setVisible:NO];
     }
-    
-        
-    
-    
-    
-        
-    
-    
-    
     
     [fireMenu setVisible:NO];
     [fireMenu setStars];
@@ -156,7 +144,7 @@
         [iceMenu setVisible:NO];
         [marksmanMenu setVisible:NO];
         [cityMenu setVisible:YES];
-        [fireMenu setZOrder:1003];
+        [cityMenu setZOrder:1003];
     }
 }
 
@@ -174,12 +162,6 @@
     }
     
 }
-
-
-
-
-
-
 
 - (void) pressedMarksmanSymbol:(id)sender
 {

@@ -67,7 +67,6 @@ static int current_level = -1;
 // on "init" you need to initialize your instance
 -(id) init
 {
-#warning Daniela, estas duas linhas estavam a ser corridas depois do init do level layer (assim criava e logo de seguir removia)
     [[CCSpriteFrameCache sharedSpriteFrameCache] removeUnusedSpriteFrames];
     [[CCTextureCache sharedTextureCache] removeUnusedTextures];
     
