@@ -2518,8 +2518,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>522</real>
-									<real>400</real>
+									<real>322</real>
+									<real>44</real>
 									<integer>0</integer>
 								</array>
 							</dict>
@@ -2541,8 +2541,8 @@
 								<string>ScaleLock</string>
 								<key>value</key>
 								<array>
-									<real>1</real>
-									<real>1</real>
+									<real>1.7974578142166138</real>
+									<real>1.6698479652404785</real>
 									<false/>
 									<integer>0</integer>
 								</array>
@@ -2733,8 +2733,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>338</real>
-									<real>422</real>
+									<real>157</real>
+									<real>48</real>
 									<integer>0</integer>
 								</array>
 							</dict>
@@ -2756,8 +2756,8 @@
 								<string>ScaleLock</string>
 								<key>value</key>
 								<array>
-									<real>1</real>
-									<real>1</real>
+									<real>1.7986463308334351</real>
+									<real>1.7851324081420898</real>
 									<false/>
 									<integer>0</integer>
 								</array>
@@ -2948,8 +2948,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>516</real>
-									<real>282</real>
+									<real>467</real>
+									<real>45</real>
 									<integer>0</integer>
 								</array>
 							</dict>
@@ -2971,8 +2971,8 @@
 								<string>ScaleLock</string>
 								<key>value</key>
 								<array>
-									<real>1</real>
-									<real>1</real>
+									<real>1.6468726396560669</real>
+									<real>1.6619275808334351</real>
 									<false/>
 									<integer>0</integer>
 								</array>
@@ -3163,8 +3163,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>-152</real>
-									<real>103</real>
+									<real>62</real>
+									<real>-358</real>
 									<integer>0</integer>
 								</array>
 							</dict>
@@ -3186,8 +3186,8 @@
 								<string>ScaleLock</string>
 								<key>value</key>
 								<array>
-									<real>1.0370787382125854</real>
-									<real>1.2225806713104248</real>
+									<real>1.2892979383468628</real>
+									<real>1.5653064250946045</real>
 									<true/>
 									<integer>0</integer>
 								</array>
@@ -3759,18 +3759,6 @@
 				<integer>1</integer>
 				<key>properties</key>
 				<array>
-					<dict>
-						<key>name</key>
-						<string>position</string>
-						<key>type</key>
-						<string>Position</string>
-						<key>value</key>
-						<array>
-							<real>8</real>
-							<real>-4</real>
-							<integer>0</integer>
-						</array>
-					</dict>
 					<dict>
 						<key>name</key>
 						<string>scale</string>

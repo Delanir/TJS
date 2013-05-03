@@ -11,6 +11,7 @@
 #import "GameManager.h"
 #import "SimpleAudioEngine.h"
 #import "Config.h"
+#import "GameState.h"
 
 @implementation SkillTreeLayer
 
@@ -26,28 +27,75 @@
 {
     [super onEnter];
     
-    [_iceMainBranch setVisible:NO];
-    [_iceElement2 setVisible:NO];
-    [_iceElement1 setVisible:NO];
-    [_iceElement3 setVisible:NO];
-    [_iceBranch3 setVisible:NO];
-    [_iceBranch2 setVisible:NO];
-    [_iceBranch1 setVisible:NO];
+    NSMutableArray *skill = [[GameState shared] skillStates];
     
-    [_cityMainBranch setVisible:NO];
-//    [_cityMainBranch setZOrder:15];
-    [_cityElement2 setVisible:NO];
-//    [_cityElement2 setZOrder:4];
-    [_cityElement1 setVisible:NO];
-//    [_cityElement1 setZOrder:5];
-    [_cityElement3 setVisible:NO];
-//    [_cityElement3 setZOrder:2];
-    [_cityBranch3 setVisible:NO];
-//    [_cityBranch3 setZOrder:12];
-    [_cityBranch2 setVisible:NO];
-//    [_cityBranch2 setZOrder:13];
-    [_cityBranch1 setVisible:NO];
-//    [_cityBranch1 setZOrder:14];
+    if ([[skill objectAtIndex:0] intValue] == 0) {
+        [_iceMainBranch setVisible:NO];
+        
+    }
+    if ([[skill objectAtIndex:1] intValue] == 0) {
+        [_iceElement2 setVisible:NO];
+    }
+    if ([[skill objectAtIndex:2] intValue] == 0) {
+        [_iceElement1 setVisible:NO];
+    }
+    if ([[skill objectAtIndex:3] intValue] == 0) {
+        [_iceElement3 setVisible:NO];
+    }
+    if ([[skill objectAtIndex:4] intValue] == 0) {
+        [_iceBranch3 setVisible:NO];
+    }
+    if ([[skill objectAtIndex:5] intValue] == 0) {
+        [_iceBranch2 setVisible:NO];
+    }
+    if ([[skill objectAtIndex:6] intValue] == 0) {
+        [_iceBranch1 setVisible:NO];
+    }
+  
+    if ([[skill objectAtIndex:7] intValue] == 0) {
+        [_cityMainBranch setVisible:NO];
+    }
+    if ([[skill objectAtIndex:8] intValue] == 0) {
+        [_cityElement2 setVisible:NO];
+    }
+    if ([[skill objectAtIndex:9] intValue] == 0) {
+        [_cityElement1 setVisible:NO];
+    }
+    if ([[skill objectAtIndex:10] intValue] == 0) {
+        [_cityElement3 setVisible:NO];
+    }
+    if ([[skill objectAtIndex:11] intValue] == 0) {
+        [_cityBranch3 setVisible:NO];
+    }
+    if ([[skill objectAtIndex:12] intValue] == 0) {
+        [_cityBranch2 setVisible:NO];
+    }
+    if ([[skill objectAtIndex:13] intValue] == 0) {
+        [_cityBranch1 setVisible:NO];
+    }
+    
+    if ([[skill objectAtIndex:14] intValue] == 0) {
+        [_fireMainBranch setVisible:NO];
+    }
+    if ([[skill objectAtIndex:15] intValue] == 0) {
+        [_fireElement2 setVisible:NO];
+    }
+    if ([[skill objectAtIndex:16] intValue] == 0) {
+        [_fireElement1 setVisible:NO];
+    }
+    if ([[skill objectAtIndex:17] intValue] == 0) {
+        [_fireElement3 setVisible:NO];
+    }
+    if ([[skill objectAtIndex:18] intValue] == 0) {
+        [_fireBranch3 setVisible:NO];
+    }
+    if ([[skill objectAtIndex:19] intValue] == 0) {
+        [_fireBranch2 setVisible:NO];
+    }
+    if ([[skill objectAtIndex:20] intValue] == 0) {
+        [_fireBranch1 setVisible:NO];
+    }
+    
     
     [_fireMainBranch setVisible:NO];
     [_fireElement2 setVisible:NO];
@@ -67,6 +115,7 @@
     
     
     [fireMenu setVisible:NO];
+    [fireMenu setStars];
 }
 
 - (void) pressedCitySymbol:(id)sender
@@ -90,8 +139,55 @@
 //    [_fireBranch2 setVisible:YES];
 //    [_fireBranch1 setVisible:YES];
     
-    [fireMenu setVisible:YES];
-    [fireMenu setZOrder:1000];
+    if ([fireMenu visible]) {
+        [fireMenu setVisible:NO];
+    }else{
+        [fireMenu setVisible:YES];
+        [fireMenu setZOrder:1000];
+    }
+    
+}
+
+
+
+
+
+- (void) switchFire: (int)index withStarCost:(int)star
+{
+    [_fireMainBranch setVisible:YES];
+    
+    NSMutableArray *skill = [[GameState shared] skillStates];
+    
+//    [skill insertObject:[NSNumber numberWithInt:star] atIndex:index];
+    [skill replaceObjectAtIndex:index withObject:[NSNumber numberWithInt:star]];
+    
+    switch (index) {
+        case 14:
+            [_fireMainBranch setVisible:YES];
+            break;
+        case 15:
+            [_fireElement2 setVisible:YES];
+
+            break;
+        case 16:
+            [_fireElement1 setVisible:YES];
+            break;
+        case 17:
+            [_fireElement3 setVisible:YES];
+            break;
+        case 18:
+            [_fireBranch3 setVisible:YES];
+            break;
+        case 19:
+            [_fireBranch2 setVisible:YES];
+            break;
+        case 20:
+            [_fireBranch1 setVisible:YES];
+            break;
+        default:
+            break;
+    }
+    
 }
 
 - (void) pressedMarksmanSymbol:(id)sender
@@ -128,7 +224,8 @@
   [[[CCDirector sharedDirector] runningScene] stopAllActions];
   [[[CCDirector sharedDirector] runningScene] unscheduleAllSelectors];
   [self removeAllChildrenWithCleanup:YES];
-    
+    [[CCSpriteFrameCache sharedSpriteFrameCache] removeUnusedSpriteFrames];
+    [[CCTextureCache sharedTextureCache] removeUnusedTextures];
   [super onExit];
 }
 

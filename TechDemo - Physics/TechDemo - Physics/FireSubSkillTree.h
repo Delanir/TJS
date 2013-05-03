@@ -30,4 +30,5 @@
 - (void) fireElement2:(id)sender;
 - (void) fireElement3:(id)sender;
 - (void) returnS:(id)sender;
+- (void) setStars;
 @end
