@@ -1977,14 +1977,6 @@
 					</dict>
 					<dict>
 						<key>name</key>
-						<string>visible</string>
-						<key>type</key>
-						<string>Check</string>
-						<key>value</key>
-						<false/>
-					</dict>
-					<dict>
-						<key>name</key>
 						<string>displayFrame</string>
 						<key>type</key>
 						<string>SpriteFrame</string>
@@ -1995,6 +1987,8 @@
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>baseClass</key>
@@ -3781,8 +3775,6 @@
 						<string>SkillTreeSubMenu.ccb</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>

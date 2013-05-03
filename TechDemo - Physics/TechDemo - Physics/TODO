@@ -4,7 +4,6 @@
 *                *
 **/            **/
 
-- Sprites of enemies
 - involucros para as skills (botoes + xpto)
 - Nova variável com total do skill points
 - Buildings e lógica respectiva
@@ -48,9 +47,6 @@ João M:
 
 - Passar todas as constantes para o constants.h
 
-- Corrigir spritesheet normal com botões de poderes
-- Fazer Spritesheets de 2048x2048 max (e não se mexem mais)
-- Por skill tree numa spritesheet com trimming
 
 - BURACOS DE MEMORIA ARGHHGHGHGH
     - Nao percebo a skill tree
@@ -124,3 +120,8 @@ Afterburner:
 - Random shouts dos inimigos
 - FIX PAUSE MENU
 - Lógica de gastar e regenerar mana
+- Corrigir spritesheet normal com botões de poderes
+- Fazer Spritesheets de 2048x2048 max (e não se mexem mais)
+- Por skill tree numa spritesheet com trimming
+- Sprites of enemies
+
