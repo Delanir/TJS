@@ -80,7 +80,7 @@
     [[[CCAnimationCache sharedAnimationCache] animationByName:@"y_attack_up" ] setDelayPerUnit:fireRate];
     [[[CCAnimationCache sharedAnimationCache] animationByName:@"y_attack_front" ] setDelayPerUnit:fireRate];
     [[[CCAnimationCache sharedAnimationCache] animationByName:@"y_attack_down" ] setDelayPerUnit:fireRate];
-    
+
     [[self sprite] stopAllActions];
     
     [self setShootUp:[CCRepeat actionWithAction:

@@ -48,6 +48,7 @@ João M:
 - Passar todas as constantes para o constants.h
 
 - Corrigir spritesheet normal com botões de poderes
+- Fazer Spritesheets de 2048x2048 max (e não se mexem mais)
 
 - BURACOS DE MEMORIA ARGHHGHGHGH
     - Nao percebo a skill tree
