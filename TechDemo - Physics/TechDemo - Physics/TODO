@@ -5,7 +5,7 @@
 **/            **/
 
 - involucros para as skills (botoes + xpto)
-- Nova variável com total do skill points
+
 - Buildings e lógica respectiva
 - Utilização do Flurry
 
@@ -29,7 +29,6 @@ Skill Tree:
             Mages tower (mana recovery), Masonry (wall recovery), Fletcher (dispara flechas simples)
 
 Daniela:
-- Implementar skill tree - implementar a lógica e ver se fazemos uma spritesheet de bocadinhos para melhorar a performance (Daniela)
 - Verificar sons que faltam
     - Compilar lista
     - Encontrar sons
@@ -43,7 +42,6 @@ João M:
     - Estado da SkillTree - é preciso terminar a lógica disto primeiro
     - Estado dos achievements - é preciso implementar primeiro
     - Estado do leaderboard - é preciso implementar primeiro
-
 
 - BURACOS DE MEMORIA ARGHHGHGHGH
     - Nao percebo a skill tree
@@ -121,4 +119,7 @@ Afterburner:
 - Fazer Spritesheets de 2048x2048 max (e não se mexem mais)
 - Por skill tree numa spritesheet com trimming
 - Sprites of enemies
+- Nova variável com total do skill points
+- Implementar skill tree - implementar a lógica e ver se fazemos uma spritesheet de bocadinhos para melhorar a performance (Daniela)
+- Inimigos novos: Fire Elemental, Wraith, Skeleton, Black Dragon
 
