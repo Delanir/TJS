@@ -523,7 +523,123 @@ static int current_level = -1;
 }
 
 
+#warning This SHALL BE NOTICED
+#warning This SHALL BE NOTICED
+#warning This SHALL BE NOTICED
+#warning This SHALL BE NOTICED
+#warning This SHALL BE NOTICED
+#warning EFEITOS DA SKILL TREE HALP
+#warning EFEITOS DA SKILL TREE HALP
+#warning EFEITOS DA SKILL TREE HALP
+#warning EFEITOS DA SKILL TREE HALP
+#warning EFEITOS DA SKILL TREE HALP
+#warning EFEITOS DA SKILL TREE HALP
+#warning EFEITOS DA SKILL TREE HALP
+#warning EFEITOS DA SKILL TREE HALP
+#warning EFEITOS DA SKILL TREE HALP
+#warning EFEITOS DA SKILL TREE HALP
+#warning EFEITOS DA SKILL TREE HALP
+-(void) initStimulusFromSkillTree{
+    NSMutableArray *skill = [[GameState shared] skillStates];
+    
+    if ([[skill objectAtIndex:0] intValue] != 0) {
+//        [_iceMainBranch setVisible:YES];
+        
+    }
+    if ([[skill objectAtIndex:1] intValue] != 0) {
+//        [_iceElement2 setVisible:YES];
+    }
+    if ([[skill objectAtIndex:2] intValue] != 0) {
+//        [_iceElement1 setVisible:YES];
+    }
+    if ([[skill objectAtIndex:3] intValue] != 0) {
+//        [_iceElement3 setVisible:YES];
+    }
+    if ([[skill objectAtIndex:4] intValue] != 0) {
+//        [_iceBranch3 setVisible:YES];
+    }
+    if ([[skill objectAtIndex:5] intValue] != 0) {
+//        [_iceBranch2 setVisible:YES];
+    }
+    if ([[skill objectAtIndex:6] intValue] != 0) {
+//        [_iceBranch1 setVisible:YES];
+    }
+    
+    if ([[skill objectAtIndex:7] intValue] != 0) {
+//        [_cityMainBranch setVisible:YES];
+    }
+    if ([[skill objectAtIndex:8] intValue] != 0) {
+//        [_cityElement2 setVisible:YES];
+    }
+    if ([[skill objectAtIndex:9] intValue] != 0) {
+//        [_cityElement1 setVisible:YES];
+    }
+    if ([[skill objectAtIndex:10] intValue] != 0) {
+//        [_cityElement3 setVisible:YES];
+    }
+    if ([[skill objectAtIndex:11] intValue] != 0) {
+//        [_cityBranch3 setVisible:YES];
+    }
+    if ([[skill objectAtIndex:12] intValue] != 0) {
+//        [_cityBranch2 setVisible:YES];
+    }
+    if ([[skill objectAtIndex:13] intValue] != 0) {
+//        [_cityBranch1 setVisible:YES];
+    }
+    
+    if ([[skill objectAtIndex:14] intValue] != 0) {
+//        [_fireMainBranch setVisible:YES];
+    }
+    if ([[skill objectAtIndex:15] intValue] != 0) {
+//        [_fireElement2 setVisible:YES];
+    }
+    if ([[skill objectAtIndex:16] intValue] != 0) {
+//        [_fireElement1 setVisible:YES];
+    }
+    if ([[skill objectAtIndex:17] intValue] != 0) {
+//        [_fireElement3 setVisible:YES];
+    }
+    if ([[skill objectAtIndex:18] intValue] != 0) {
+//        [_fireBranch3 setVisible:YES];
+    }
+    if ([[skill objectAtIndex:19] intValue] != 0) {
+//        [_fireBranch2 setVisible:YES];
+    }
+    if ([[skill objectAtIndex:20] intValue] != 0) {
+//        [_fireBranch1 setVisible:YES];
+    }
+    
+    if ([[skill objectAtIndex:21] intValue] != 0) {
+//        [_marksmanMainBranch setVisible:NO];
+    }
+    if ([[skill objectAtIndex:22] intValue] != 0) {
+//        [_marksmanElement2 setVisible:NO];    }
+        CCLOG(@"SPAM");
+    }
+    if ([[skill objectAtIndex:23] intValue] != 0) {
+        CCLOG(@"SPAM");
+//        [_marksmanElement1 setVisible:NO];
+    }
+    if ([[skill objectAtIndex:24] intValue] != 0) {
+        CCLOG(@"SPAM");
+//        [_marksmanElement3 setVisible:NO];
+        
+    }
+    if ([[skill objectAtIndex:25] intValue] != 0) {
+        CCLOG(@"SPAM");
+//        [_marksmanBranch3 setVisible:NO];
+    }
+    if ([[skill objectAtIndex:26] intValue] != 0) {
+        CCLOG(@"SPAM");
+//        [_marksmanBranch2 setVisible:NO];
+    }
+    if ([[skill objectAtIndex:27] intValue] != 0) {
+        CCLOG(@"SPAM");
+//        [_marksmanBranch1 setVisible:NO];
+    }
 
+    
+}
 
 
 @end
