@@ -11,6 +11,8 @@
 #import "CCBReader.h"
 #import "FireSubSkillTree.h"
 #import "IceSubSkillTree.h"
+#import "MarksmanSubSkillTree.h"
+#import "CitySubSkillTree.h"
 
 @interface SkillTreeLayer : CCLayer
 {
@@ -48,6 +50,8 @@
     
     FireSubSkillTree * fireMenu;
     IceSubSkillTree *iceMenu;
+    MarksmanSubSkillTree *marksmanMenu;
+    CitySubSkillTree *cityMenu;
     
 }
 
@@ -60,6 +64,8 @@
 - (void) pressedFireSymbol:(id)sender;
 - (void) switchFire: (int)index withStarCost:(int)star;
 - (void) switchIce: (int)index withStarCost:(int)star;
+- (void) switchCity: (int)index withStarCost:(int)star;
+- (void) switchMarksman: (int)index withStarCost:(int)star;
 -(int) usedStars;
 -(int) currentStars;
 - (void) decreaseAvailableStarsBy: (int) stars;

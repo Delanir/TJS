@@ -12,6 +12,7 @@ ccbParticleFire.png
 ccbParticleSmoke.png
 ccbParticleSnow.png
 ccbParticleStars.png
+CitySubMenu.ccbi
 Comet.plist
 Config.plist
 Default-Landscape~ipad.png
@@ -33,6 +34,7 @@ Button_Play_pressed.png
 menuBackground-ipadhd.jpg
 menuBackground.jpg
 MainMenu.ccbi
+MarksSubMenu.ccbi
 MenuSpritesheet-ipadhd.plist
 MenuSpritesheet-ipadhd.png
 MenuSpritesheet.plist

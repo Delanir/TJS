@@ -18,6 +18,8 @@
 
 @synthesize availableStars;
 
+#define DEFAULTPOINTS 18
+
 
 - (id)init{
     [[SpriteManager shared] addSpritesToSpriteFrameCacheWithFile:@"skillTreeSS.plist" andBatchSpriteSheet:@"skillTreeSS.png"];
@@ -32,7 +34,7 @@
     
     NSMutableArray *skill = [[GameState shared] skillStates];
     
-    availableStars = [self currentStars] - [self usedStars];
+    availableStars = DEFAULTPOINTS + [self currentStars] - [self usedStars];
     
     [_numberStars setString:[NSString stringWithFormat:@"%i", availableStars] ];
     
@@ -136,18 +138,26 @@
     
     [fireMenu setVisible:NO];
     [fireMenu setStars];
+    [iceMenu setVisible:NO];
+    [iceMenu setStars];
+    [cityMenu setVisible:NO];
+    [cityMenu setStars];
+    [marksmanMenu setVisible:NO];
+    [marksmanMenu setStars];
     
 }
 
 - (void) pressedCitySymbol:(id)sender
 {
-    [_cityMainBranch setVisible:YES];
-    [_cityElement2 setVisible:YES];
-    [_cityElement1 setVisible:YES];
-    [_cityElement3 setVisible:YES];
-    [_cityBranch3 setVisible:YES];
-    [_cityBranch2 setVisible:YES];
-    [_cityBranch1 setVisible:YES];
+    if ([cityMenu visible]) {
+        [cityMenu setVisible:NO];
+    }else{
+        [fireMenu setVisible:NO];
+        [iceMenu setVisible:NO];
+        [marksmanMenu setVisible:NO];
+        [cityMenu setVisible:YES];
+        [fireMenu setZOrder:1003];
+    }
 }
 
 - (void) pressedFireSymbol:(id)sender
@@ -158,6 +168,8 @@
     }else{
         [fireMenu setVisible:YES];
         [iceMenu setVisible:NO];
+        [marksmanMenu setVisible:NO];
+        [cityMenu setVisible:NO];
         [fireMenu setZOrder:1000];
     }
     
@@ -171,13 +183,15 @@
 
 - (void) pressedMarksmanSymbol:(id)sender
 {
-    [_marksmanMainBranch setVisible:YES];
-    [_marksmanElement2 setVisible:YES];
-    [_marksmanElement1 setVisible:YES];
-    [_marksmanElement3 setVisible:YES];
-    [_marksmanBranch3 setVisible:YES];
-    [_marksmanBranch2 setVisible:YES];
-    [_marksmanBranch1 setVisible:YES];
+    if ([marksmanMenu visible]) {
+        [marksmanMenu setVisible:NO];
+    }else{
+        [fireMenu setVisible:NO];
+        [iceMenu setVisible:NO];
+        [marksmanMenu setVisible:YES];
+        [cityMenu setVisible:NO];
+        [marksmanMenu setZOrder:1002];
+    }
 }
 
 - (void) pressedIceSymbol:(id)sender
@@ -187,6 +201,8 @@
     }else{
         [iceMenu setVisible:YES];
         [fireMenu setVisible:NO];
+        [marksmanMenu setVisible:NO];
+        [cityMenu setVisible:NO];
         [iceMenu setZOrder:1001];
     }
 }
@@ -313,6 +329,78 @@
             break;
         case 6:
             [_iceBranch1 setVisible:YES];
+            break;
+        default:
+            break;
+    }
+    
+}
+
+- (void) switchCity: (int)index withStarCost:(int)star
+{
+    
+    NSMutableArray *skill = [[GameState shared] skillStates];
+    
+    [skill replaceObjectAtIndex:index withObject:[NSNumber numberWithInt:star]];
+    
+    switch (index) {
+        case 7:
+            [_cityMainBranch setVisible:YES];
+            break;
+        case 8:
+            [_cityElement2 setVisible:YES];
+            
+            break;
+        case 9:
+            [_cityElement1 setVisible:YES];
+            break;
+        case 10:
+            [_cityElement3 setVisible:YES];
+            break;
+        case 11:
+            [_cityBranch3 setVisible:YES];
+            break;
+        case 12:
+            [_cityBranch2 setVisible:YES];
+            break;
+        case 13:
+            [_cityBranch1 setVisible:YES];
+            break;
+        default:
+            break;
+    }
+    
+}
+
+- (void) switchMarksman:(int)index withStarCost:(int)star
+{
+    
+    NSMutableArray *skill = [[GameState shared] skillStates];
+    
+    [skill replaceObjectAtIndex:index withObject:[NSNumber numberWithInt:star]];
+    
+    switch (index) {
+        case 21:
+            [_marksmanMainBranch setVisible:YES];
+            break;
+        case 22:
+            [_marksmanElement2 setVisible:YES];
+            
+            break;
+        case 23:
+            [_marksmanElement1 setVisible:YES];
+            break;
+        case 24:
+            [_marksmanElement3 setVisible:YES];
+            break;
+        case 25:
+            [_marksmanBranch3 setVisible:YES];
+            break;
+        case 26:
+            [_marksmanBranch2 setVisible:YES];
+            break;
+        case 27:
+            [_marksmanBranch1 setVisible:YES];
             break;
         default:
             break;

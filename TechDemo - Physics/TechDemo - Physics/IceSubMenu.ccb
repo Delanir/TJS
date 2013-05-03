@@ -1072,8 +1072,6 @@
 								</array>
 							</dict>
 						</array>
-						<key>selected</key>
-						<true/>
 					</dict>
 				</array>
 				<key>customClass</key>
@@ -1296,7 +1294,7 @@
 						<key>type</key>
 						<string>Text</string>
 						<key>value</key>
-						<string>7</string>
+						<string>3</string>
 					</dict>
 				</array>
 			</dict>
@@ -1424,7 +1422,7 @@
 						<key>type</key>
 						<string>Text</string>
 						<key>value</key>
-						<string>7</string>
+						<string>3</string>
 					</dict>
 				</array>
 			</dict>
@@ -1552,7 +1550,7 @@
 						<key>type</key>
 						<string>Text</string>
 						<key>value</key>
-						<string>7</string>
+						<string>3</string>
 					</dict>
 				</array>
 			</dict>
@@ -1680,7 +1678,7 @@
 						<key>type</key>
 						<string>Text</string>
 						<key>value</key>
-						<string>5</string>
+						<string>2</string>
 					</dict>
 				</array>
 			</dict>
@@ -1808,7 +1806,7 @@
 						<key>type</key>
 						<string>Text</string>
 						<key>value</key>
-						<string>5</string>
+						<string>2</string>
 					</dict>
 				</array>
 			</dict>
@@ -1936,7 +1934,7 @@
 						<key>type</key>
 						<string>Text</string>
 						<key>value</key>
-						<string>5</string>
+						<string>2</string>
 					</dict>
 				</array>
 			</dict>
@@ -2064,9 +2062,11 @@
 						<key>type</key>
 						<string>Text</string>
 						<key>value</key>
-						<string>2</string>
+						<string>1</string>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>baseClass</key>

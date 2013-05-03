@@ -72,6 +72,10 @@
 		8BC21068173430E600B875B2 /* ccbParticleStars.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC21065173430E600B875B2 /* ccbParticleStars.png */; };
 		8BC2106A173431C400B875B2 /* IceSubMenu.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 8BC21069173431C400B875B2 /* IceSubMenu.ccbi */; };
 		8BC2106D1734320000B875B2 /* IceSubSkillTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BC2106C1734320000B875B2 /* IceSubSkillTree.m */; };
+		8BC21070173437D800B875B2 /* MarksmanSubSkillTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BC2106F173437D800B875B2 /* MarksmanSubSkillTree.m */; };
+		8BC2107217343A0800B875B2 /* MarksSubMenu.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 8BC2107117343A0800B875B2 /* MarksSubMenu.ccbi */; };
+		8BC2107417343D6500B875B2 /* CitySubMenu.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 8BC2107317343D6500B875B2 /* CitySubMenu.ccbi */; };
+		8BC2107717343D9400B875B2 /* CitySubSkillTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BC2107617343D9300B875B2 /* CitySubSkillTree.m */; };
 		8BD6228917145FF60076BF42 /* SpriteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD6228817145FF60076BF42 /* SpriteManager.m */; };
 		8BD62290171460200076BF42 /* lvl1spritesheet.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BD6228D171460200076BF42 /* lvl1spritesheet.png */; };
 		8BFA2D9D171724F9008A2064 /* fairiedragon_anim.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8BFA2D9C171724F9008A2064 /* fairiedragon_anim.plist */; };
@@ -356,6 +360,12 @@
 		8BC21069173431C400B875B2 /* IceSubMenu.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = IceSubMenu.ccbi; sourceTree = "<group>"; };
 		8BC2106B1734320000B875B2 /* IceSubSkillTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IceSubSkillTree.h; sourceTree = "<group>"; };
 		8BC2106C1734320000B875B2 /* IceSubSkillTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IceSubSkillTree.m; sourceTree = "<group>"; };
+		8BC2106E173437D800B875B2 /* MarksmanSubSkillTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarksmanSubSkillTree.h; sourceTree = "<group>"; };
+		8BC2106F173437D800B875B2 /* MarksmanSubSkillTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarksmanSubSkillTree.m; sourceTree = "<group>"; };
+		8BC2107117343A0800B875B2 /* MarksSubMenu.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = MarksSubMenu.ccbi; sourceTree = "<group>"; };
+		8BC2107317343D6500B875B2 /* CitySubMenu.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = CitySubMenu.ccbi; sourceTree = "<group>"; };
+		8BC2107517343D9300B875B2 /* CitySubSkillTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CitySubSkillTree.h; sourceTree = "<group>"; };
+		8BC2107617343D9300B875B2 /* CitySubSkillTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CitySubSkillTree.m; sourceTree = "<group>"; };
 		8BD6228717145FF60076BF42 /* SpriteManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpriteManager.h; sourceTree = "<group>"; };
 		8BD6228817145FF60076BF42 /* SpriteManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpriteManager.m; sourceTree = "<group>"; };
 		8BD6228B171460200076BF42 /* lvl1spritesheet.zwd */ = {isa = PBXFileReference; lastKnownFileType = file; path = lvl1spritesheet.zwd; sourceTree = "<group>"; };
@@ -1403,6 +1413,10 @@
 				3EE2F95D17230E640084DF2F /* LevelStars.m */,
 				9C500251172AD03800C141DB /* LoadingBar.h */,
 				9C500252172AD03800C141DB /* LoadingBar.m */,
+				8BC2106E173437D800B875B2 /* MarksmanSubSkillTree.h */,
+				8BC2106F173437D800B875B2 /* MarksmanSubSkillTree.m */,
+				8BC2107517343D9300B875B2 /* CitySubSkillTree.h */,
+				8BC2107617343D9300B875B2 /* CitySubSkillTree.m */,
 				8BC2106B1734320000B875B2 /* IceSubSkillTree.h */,
 				8BC2106C1734320000B875B2 /* IceSubSkillTree.m */,
 				8B3FF0DE1732B60600D2212B /* FireSubSkillTree.h */,
@@ -1501,7 +1515,9 @@
 				8BBB6A22171E09E30064B3CD /* SettingsMenu.ccbi */,
 				8B221466173338540055BF51 /* SkillTreeLayer.ccbi */,
 				9C4787021734260600180864 /* SkillTreeLayerZWOP.ccbi */,
+				8BC2107317343D6500B875B2 /* CitySubMenu.ccbi */,
 				8BC21069173431C400B875B2 /* IceSubMenu.ccbi */,
+				8BC2107117343A0800B875B2 /* MarksSubMenu.ccbi */,
 				8B221467173338540055BF51 /* SkillTreeSubMenu.ccbi */,
 				3EE9FE1317256DAD009718EC /* LevelSelectLayer.ccb */,
 				3EE2F95F1723175E0084DF2F /* LevelSelectLayer.ccbi */,
@@ -1684,6 +1700,8 @@
 				8BC21067173430E600B875B2 /* ccbParticleSnow.png in Resources */,
 				8BC21068173430E600B875B2 /* ccbParticleStars.png in Resources */,
 				8BC2106A173431C400B875B2 /* IceSubMenu.ccbi in Resources */,
+				8BC2107217343A0800B875B2 /* MarksSubMenu.ccbi in Resources */,
+				8BC2107417343D6500B875B2 /* CitySubMenu.ccbi in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1843,6 +1861,8 @@
 				9C500253172AD03800C141DB /* LoadingBar.m in Sources */,
 				8B3FF0E01732B60600D2212B /* FireSubSkillTree.m in Sources */,
 				8BC2106D1734320000B875B2 /* IceSubSkillTree.m in Sources */,
+				8BC21070173437D800B875B2 /* MarksmanSubSkillTree.m in Sources */,
+				8BC2107717343D9400B875B2 /* CitySubSkillTree.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
