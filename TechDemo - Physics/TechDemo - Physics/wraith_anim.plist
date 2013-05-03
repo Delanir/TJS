@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>w_taunt</key>
+	<dict>
+		<key>delay</key>
+		<real>0.1</real>
+		<key>frames</key>
+		<array>
+			<string>w_taunt_01.png</string>
+			<string>w_taunt_02.png</string>
+			<string>w_taunt_03.png</string>
+			<string>w_taunt_04.png</string>
+		</array>
+	</dict>
+	<key>w_attack</key>
+	<dict>
+		<key>delay</key>
+		<real>0.1</real>
+		<key>frames</key>
+		<array>
+			<string>w_attack_01.png</string>
+			<string>w_attack_02.png</string>
+			<string>w_attack_03.png</string>
+			<string>w_attack_04.png</string>
+			<string>w_attack_05.png</string>
+			<string>w_attack_06.png</string>
+			<string>w_attack_07.png</string>
+		</array>
+	</dict>
+	<key>w_dies</key>
+	<dict>
+		<key>delay</key>
+		<real>0.1</real>
+		<key>frames</key>
+		<array>
+			<string>w_die_01.png</string>
+			<string>w_die_02.png</string>
+			<string>w_die_03.png</string>
+			<string>w_die_04.png</string>
+			<string>w_die_05.png</string>
+			<string>w_die_06.png</string>
+		</array>
+	</dict>
+	<key>w_walk</key>
+	<dict>
+		<key>delay</key>
+		<real>0.1</real>
+		<key>frames</key>
+		<array>
+			<string>w_fly_01.png</string>
+			<string>w_fly_02.png</string>
+			<string>w_fly_03.png</string>
+			<string>w_fly_04.png</string>
+			<string>w_fly_05.png</string>
+			<string>w_fly_06.png</string>
+			<string>w_fly_07.png</string>
+			<string>w_fly_08.png</string>
+		</array>
+	</dict>
+</dict>
+</plist>

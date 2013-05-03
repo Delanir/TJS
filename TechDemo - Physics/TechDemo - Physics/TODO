@@ -29,7 +29,6 @@ Skill Tree:
             Mages tower (mana recovery), Masonry (wall recovery), Fletcher (dispara flechas simples)
 
 Daniela:
-
 - Implementar skill tree - implementar a lógica e ver se fazemos uma spritesheet de bocadinhos para melhorar a performance (Daniela)
 - Verificar sons que faltam
     - Compilar lista
@@ -44,8 +43,6 @@ João M:
     - Estado da SkillTree - é preciso terminar a lógica disto primeiro
     - Estado dos achievements - é preciso implementar primeiro
     - Estado do leaderboard - é preciso implementar primeiro
-
-- Passar todas as constantes para o constants.h
 
 
 - BURACOS DE MEMORIA ARGHHGHGHGH
@@ -68,13 +65,13 @@ Ricardo:
     - Fazer página de achievements
 - Balancear dificuldade
 
-
 João A:
 - Botão para reparar muralha (logo uns 500 de gold)
 
 Afterburner:
 - Fazer projectiles do zealot
 - Loading Screen (caso se justifique) com base em chunks
+- Passar todas as constantes para o constants.h
     
     
 

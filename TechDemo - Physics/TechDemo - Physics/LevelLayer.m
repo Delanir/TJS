@@ -79,6 +79,10 @@ static int current_level = -1;
         [[SpriteManager shared] addAnimationFromFile:@"fairiedragon_anim.plist"];
         [[SpriteManager shared] addAnimationFromFile:@"zealot_anim.plist"];
         [[SpriteManager shared] addAnimationFromFile:@"yurie_anim.plist"];
+        [[SpriteManager shared] addAnimationFromFile:@"fireelemental_anim.plist"];
+        [[SpriteManager shared] addAnimationFromFile:@"wraith_anim.plist"];
+        [[SpriteManager shared] addAnimationFromFile:@"skeleton_anim.plist"];
+        [[SpriteManager shared] addAnimationFromFile:@"blackdragon_anim.plist"];
         
         
         CGSize winSize = [[CCDirector sharedDirector] winSize];

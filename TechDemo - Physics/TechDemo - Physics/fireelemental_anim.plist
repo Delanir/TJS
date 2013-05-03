@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>f_walk</key>
+	<dict>
+		<key>delay</key>
+		<real>0.1</real>
+		<key>frames</key>
+		<array>
+			<string>f_walk_01.png</string>
+			<string>f_walk_02.png</string>
+			<string>f_walk_03.png</string>
+			<string>f_walk_04.png</string>
+			<string>f_walk_05.png</string>
+			<string>f_walk_06.png</string>
+		</array>
+	</dict>
+	<key>f_blast</key>
+	<dict>
+		<key>delay</key>
+		<real>0.1</real>
+		<key>frames</key>
+		<array>
+			<string>f_blast_01.png</string>
+			<string>f_blast_02.png</string>
+			<string>f_blast_03.png</string>
+			<string>f_blast_04.png</string>
+			<string>f_blast_05.png</string>
+			<string>f_blast_06.png</string>
+			<string>f_blast_07.png</string>
+			<string>f_blast_08.png</string>
+			<string>f_blast_09.png</string>
+			<string>f_blast_10.png</string>
+			<string>f_blast_11.png</string>
+			<string>f_blast_12.png</string>
+			<string>f_blast_13.png</string>
+			<string>f_blast_14.png</string>
+			<string>f_blast_15.png</string>
+			<string>f_blast_16.png</string>
+			<string>f_blast_17.png</string>
+			<string>f_blast_18.png</string>
+		</array>
+	</dict>
+</dict>
+</plist>

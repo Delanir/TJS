@@ -168,6 +168,15 @@
 		9C377C0D170BBDD800F840FB /* EnemyFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C377C0C170BBDD600F840FB /* EnemyFactory.m */; };
 		9C3CE234172DC4570044889D /* akaPotsley.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C3CE22F172D87E40044889D /* akaPotsley.ttf */; };
 		9C4787031734264300180864 /* SkillTreeLayerZWOP.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 9C4787021734260600180864 /* SkillTreeLayerZWOP.ccbi */; };
+		9C478705173429FC00180864 /* blackdragon_anim.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C478704173429FC00180864 /* blackdragon_anim.plist */; };
+		9C47870717342A0A00180864 /* skeleton_anim.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C47870617342A0A00180864 /* skeleton_anim.plist */; };
+		9C47870917342A1600180864 /* wraith_anim.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C47870817342A1600180864 /* wraith_anim.plist */; };
+		9C47870B17342A2500180864 /* fireelemental_anim.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C47870A17342A2500180864 /* fireelemental_anim.plist */; };
+		9C47870E17342B4B00180864 /* FireElemental.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C47870D17342B4B00180864 /* FireElemental.m */; };
+		9C47871117344CFD00180864 /* Wraith.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C47871017344CFD00180864 /* Wraith.m */; };
+		9C4787141734524E00180864 /* BlackDragon.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4787131734524D00180864 /* BlackDragon.m */; };
+		9C4787171734525D00180864 /* Skeleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4787161734525D00180864 /* Skeleton.m */; };
+		9C47871A173454B800180864 /* MixedWave.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C478719173454B800180864 /* MixedWave.plist */; };
 		9C500253172AD03800C141DB /* LoadingBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C500252172AD03800C141DB /* LoadingBar.m */; };
 		9C75D80E171A167E00419031 /* yurie_anim.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C75D80D171A167E00419031 /* yurie_anim.plist */; };
 		9C791C2C17237ADE00780C5D /* menuBackground-ipadhd.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C791C2817237ADE00780C5D /* menuBackground-ipadhd.jpg */; };
@@ -532,6 +541,19 @@
 		9C3CE22F172D87E40044889D /* akaPotsley.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = akaPotsley.ttf; sourceTree = "<group>"; };
 		9C478701173425DD00180864 /* SkillTreeSubMenu.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = SkillTreeSubMenu.ccbi; sourceTree = "<group>"; };
 		9C4787021734260600180864 /* SkillTreeLayerZWOP.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = SkillTreeLayerZWOP.ccbi; sourceTree = "<group>"; };
+		9C478704173429FC00180864 /* blackdragon_anim.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = blackdragon_anim.plist; sourceTree = "<group>"; };
+		9C47870617342A0A00180864 /* skeleton_anim.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = skeleton_anim.plist; sourceTree = "<group>"; };
+		9C47870817342A1600180864 /* wraith_anim.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = wraith_anim.plist; sourceTree = "<group>"; };
+		9C47870A17342A2500180864 /* fireelemental_anim.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = fireelemental_anim.plist; sourceTree = "<group>"; };
+		9C47870C17342B4B00180864 /* FireElemental.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FireElemental.h; sourceTree = "<group>"; };
+		9C47870D17342B4B00180864 /* FireElemental.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FireElemental.m; sourceTree = "<group>"; };
+		9C47870F17344CFD00180864 /* Wraith.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wraith.h; sourceTree = "<group>"; };
+		9C47871017344CFD00180864 /* Wraith.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Wraith.m; sourceTree = "<group>"; };
+		9C4787121734524D00180864 /* BlackDragon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlackDragon.h; sourceTree = "<group>"; };
+		9C4787131734524D00180864 /* BlackDragon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlackDragon.m; sourceTree = "<group>"; };
+		9C4787151734525D00180864 /* Skeleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Skeleton.h; sourceTree = "<group>"; };
+		9C4787161734525D00180864 /* Skeleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Skeleton.m; sourceTree = "<group>"; };
+		9C478719173454B800180864 /* MixedWave.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MixedWave.plist; sourceTree = "<group>"; };
 		9C500251172AD03800C141DB /* LoadingBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingBar.h; sourceTree = "<group>"; };
 		9C500252172AD03800C141DB /* LoadingBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingBar.m; sourceTree = "<group>"; };
 		9C75D80D171A167E00419031 /* yurie_anim.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = yurie_anim.plist; sourceTree = "<group>"; };
@@ -996,6 +1018,7 @@
 				9C11EEC51720646F003510EB /* PeasantSpear.plist */,
 				9C9ADB2E1721A94000C3FA59 /* ZealotSquare.plist */,
 				9C9ADB301721AB6400C3FA59 /* FaerieColumn.plist */,
+				9C478719173454B800180864 /* MixedWave.plist */,
 			);
 			name = Waves;
 			sourceTree = "<group>";
@@ -1087,6 +1110,27 @@
 				8B2214641733380A0055BF51 /* ccbResources */,
 			);
 			name = Sprites;
+			sourceTree = "<group>";
+		};
+		9C4787181734526600180864 /* Enemies */ = {
+			isa = PBXGroup;
+			children = (
+				9C47870F17344CFD00180864 /* Wraith.h */,
+				9C47871017344CFD00180864 /* Wraith.m */,
+				9C4787121734524D00180864 /* BlackDragon.h */,
+				9C4787131734524D00180864 /* BlackDragon.m */,
+				9C4787151734525D00180864 /* Skeleton.h */,
+				9C4787161734525D00180864 /* Skeleton.m */,
+				9C8DE0CD171853AD002E0D0A /* FaerieDragon.h */,
+				9C8DE0CE171853AD002E0D0A /* FaerieDragon.m */,
+				9C85F6471709D2EF00EECB83 /* Peasant.h */,
+				9C85F6481709D2EF00EECB83 /* Peasant.m */,
+				9C47870C17342B4B00180864 /* FireElemental.h */,
+				9C47870D17342B4B00180864 /* FireElemental.m */,
+				9C8DE0D41718E9FF002E0D0A /* Zealot.h */,
+				9C8DE0D51718EA00002E0D0A /* Zealot.m */,
+			);
+			name = Enemies;
 			sourceTree = "<group>";
 		};
 		9C85F48D1707957E00EECB83 = {
@@ -1514,6 +1558,10 @@
 				9C8DE0D21718E133002E0D0A /* zealot_anim.plist */,
 				8BFA2D9F17172536008A2064 /* peasant_anim.plist */,
 				9C75D80D171A167E00419031 /* yurie_anim.plist */,
+				9C478704173429FC00180864 /* blackdragon_anim.plist */,
+				9C47870617342A0A00180864 /* skeleton_anim.plist */,
+				9C47870817342A1600180864 /* wraith_anim.plist */,
+				9C47870A17342A2500180864 /* fireelemental_anim.plist */,
 			);
 			name = Animations;
 			sourceTree = "<group>";
@@ -1548,6 +1596,7 @@
 		9C969E581716263000BE7476 /* Scene Entities */ = {
 			isa = PBXGroup;
 			children = (
+				9C4787181734526600180864 /* Enemies */,
 				8B79CDDF171F501D00E58EDD /* Hud.h */,
 				8B79CDE0171F501D00E58EDD /* Hud.m */,
 				8BFC3F0A172042C2000161FD /* GameOver.h */,
@@ -1562,10 +1611,6 @@
 				3EEB67A217234C1A005C58E9 /* PauseHUD.m */,
 				9C85F654170A022800EECB83 /* Arrow.h */,
 				9C85F655170A022900EECB83 /* Arrow.m */,
-				9C8DE0CD171853AD002E0D0A /* FaerieDragon.h */,
-				9C8DE0CE171853AD002E0D0A /* FaerieDragon.m */,
-				9C85F6471709D2EF00EECB83 /* Peasant.h */,
-				9C85F6481709D2EF00EECB83 /* Peasant.m */,
 				9C85F6411709D1A800EECB83 /* Yuri.h */,
 				9C85F6421709D1A900EECB83 /* Yuri.m */,
 				9C85F6441709D25600EECB83 /* Enemy.h */,
@@ -1574,8 +1619,6 @@
 				9C85F6521709ECF300EECB83 /* Entity.m */,
 				9C85F65F170A4E4400EECB83 /* Projectile.h */,
 				9C85F660170A4E4400EECB83 /* Projectile.m */,
-				9C8DE0D41718E9FF002E0D0A /* Zealot.h */,
-				9C8DE0D51718EA00002E0D0A /* Zealot.m */,
 				3E08A7C71719B29D007BE310 /* Stimulus.h */,
 				3E08A7C81719B29D007BE310 /* Stimulus.m */,
 				3EE2F9651723178B0084DF2F /* LevelThumbnail.h */,
@@ -1923,6 +1966,11 @@
 				8B43948E17341C30008BAB1D /* skillTreeSS.png in Resources */,
 				8B43949517341E0F008BAB1D /* skillTreeSS-ipadhd.png in Resources */,
 				8B43949617341E0F008BAB1D /* skillTreeSS-ipadhd.plist in Resources */,
+				9C478705173429FC00180864 /* blackdragon_anim.plist in Resources */,
+				9C47870717342A0A00180864 /* skeleton_anim.plist in Resources */,
+				9C47870917342A1600180864 /* wraith_anim.plist in Resources */,
+				9C47870B17342A2500180864 /* fireelemental_anim.plist in Resources */,
+				9C47871A173454B800180864 /* MixedWave.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2081,6 +2129,10 @@
 				8C72C2A8172968F6009EF8C1 /* GameWin.m in Sources */,
 				9C500253172AD03800C141DB /* LoadingBar.m in Sources */,
 				8B3FF0E01732B60600D2212B /* FireSubSkillTree.m in Sources */,
+				9C47870E17342B4B00180864 /* FireElemental.m in Sources */,
+				9C47871117344CFD00180864 /* Wraith.m in Sources */,
+				9C4787141734524E00180864 /* BlackDragon.m in Sources */,
+				9C4787171734525D00180864 /* Skeleton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
