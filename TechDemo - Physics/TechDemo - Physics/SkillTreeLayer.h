@@ -48,12 +48,17 @@
     FireSubSkillTree * fireMenu;
     
 }
+
+@property int availableStars;
+
 - (void) pressedCitySymbol:(id)sender;
 - (void) pressedMainMenu:(id)sender;
 - (void) pressedMarksmanSymbol:(id)sender;
 - (void) pressedIceSymbol:(id)sender;
 - (void) pressedFireSymbol:(id)sender;
 - (void) switchFire: (int)index withStarCost:(int)star;
-
+-(int) usedStars;
+-(int) currentStars;
+- (void) decreaseAvailableStarsBy: (int) stars;
 
 @end

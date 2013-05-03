@@ -15,6 +15,8 @@
 
 @implementation SkillTreeLayer
 
+@synthesize availableStars;
+
 -(void)dealloc
 {
     NSLog(@"fui deallocado: skill");
@@ -23,11 +25,45 @@
     
 }
 
+-(int) currentStars{
+    int stars=0;
+    int totalStars =[[[GameState shared] starStates] count];
+    int aux;
+    for (int i = 1; i <= totalStars; i++)
+    {
+        
+        aux =[[[[GameState shared] starStates] objectAtIndex:i-1] intValue];
+        stars = stars + aux;
+        
+    }
+    return stars;
+}
+
+-(int) usedStars{
+    int stars=0;
+    for (int i = 1; i <= [[[GameState shared] skillStates] count]; i++)
+    {
+        
+        stars = stars + [[[[GameState shared] skillStates] objectAtIndex:i-1] intValue];
+        
+    }
+    return stars;
+}
+
+- (void) decreaseAvailableStarsBy: (int) stars{
+    [self setAvailableStars:availableStars - stars];
+    [_numberStars setString:[NSString stringWithFormat:@"%i", availableStars] ]; 
+}
+
 -(void)onEnter
 {
     [super onEnter];
     
     NSMutableArray *skill = [[GameState shared] skillStates];
+    
+    availableStars = [self currentStars] - [self usedStars];
+    
+    [_numberStars setString:[NSString stringWithFormat:@"%i", availableStars] ];
     
     if ([[skill objectAtIndex:0] intValue] == 0) {
         [_iceMainBranch setVisible:NO];
@@ -116,6 +152,7 @@
     
     [fireMenu setVisible:NO];
     [fireMenu setStars];
+    
 }
 
 - (void) pressedCitySymbol:(id)sender
