@@ -53,6 +53,7 @@
 - (void) pressedMarksmanSymbol:(id)sender;
 - (void) pressedIceSymbol:(id)sender;
 - (void) pressedFireSymbol:(id)sender;
+- (void) switchFire: (int)index withStarCost:(int)star;
 
 
 @end

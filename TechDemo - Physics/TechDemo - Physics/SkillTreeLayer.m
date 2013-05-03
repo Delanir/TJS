@@ -31,67 +31,68 @@
     
     if ([[skill objectAtIndex:0] intValue] == 0) {
         [_iceMainBranch setVisible:NO];
+        
     }
-    if ([[skill objectAtIndex:1] intValue] == 1) {
+    if ([[skill objectAtIndex:1] intValue] == 0) {
         [_iceElement2 setVisible:NO];
     }
-    if ([[skill objectAtIndex:2] intValue] == 2) {
+    if ([[skill objectAtIndex:2] intValue] == 0) {
         [_iceElement1 setVisible:NO];
     }
-    if ([[skill objectAtIndex:3] intValue] == 3) {
+    if ([[skill objectAtIndex:3] intValue] == 0) {
         [_iceElement3 setVisible:NO];
     }
-    if ([[skill objectAtIndex:4] intValue] == 4) {
+    if ([[skill objectAtIndex:4] intValue] == 0) {
         [_iceBranch3 setVisible:NO];
     }
-    if ([[skill objectAtIndex:5] intValue] == 5) {
+    if ([[skill objectAtIndex:5] intValue] == 0) {
         [_iceBranch2 setVisible:NO];
     }
-    if ([[skill objectAtIndex:6] intValue] == 6) {
+    if ([[skill objectAtIndex:6] intValue] == 0) {
         [_iceBranch1 setVisible:NO];
     }
   
-    if ([[skill objectAtIndex:7] intValue] == 7) {
+    if ([[skill objectAtIndex:7] intValue] == 0) {
         [_cityMainBranch setVisible:NO];
     }
-    if ([[skill objectAtIndex:8] intValue] == 8) {
+    if ([[skill objectAtIndex:8] intValue] == 0) {
         [_cityElement2 setVisible:NO];
     }
-    if ([[skill objectAtIndex:9] intValue] == 9) {
+    if ([[skill objectAtIndex:9] intValue] == 0) {
         [_cityElement1 setVisible:NO];
     }
-    if ([[skill objectAtIndex:10] intValue] == 10) {
+    if ([[skill objectAtIndex:10] intValue] == 0) {
         [_cityElement3 setVisible:NO];
     }
-    if ([[skill objectAtIndex:11] intValue] == 11) {
+    if ([[skill objectAtIndex:11] intValue] == 0) {
         [_cityBranch3 setVisible:NO];
     }
-    if ([[skill objectAtIndex:12] intValue] == 12) {
+    if ([[skill objectAtIndex:12] intValue] == 0) {
         [_cityBranch2 setVisible:NO];
     }
-    if ([[skill objectAtIndex:13] intValue] == 13) {
+    if ([[skill objectAtIndex:13] intValue] == 0) {
         [_cityBranch1 setVisible:NO];
     }
     
-    if ([[skill objectAtIndex:14] intValue] == 14) {
+    if ([[skill objectAtIndex:14] intValue] == 0) {
         [_fireMainBranch setVisible:NO];
     }
-    if ([[skill objectAtIndex:15] intValue] == 15) {
+    if ([[skill objectAtIndex:15] intValue] == 0) {
         [_fireElement2 setVisible:NO];
     }
-    if ([[skill objectAtIndex:16] intValue] == 16) {
+    if ([[skill objectAtIndex:16] intValue] == 0) {
         [_fireElement1 setVisible:NO];
     }
-    if ([[skill objectAtIndex:17] intValue] == 17) {
+    if ([[skill objectAtIndex:17] intValue] == 0) {
         [_fireElement3 setVisible:NO];
     }
-    if ([[skill objectAtIndex:18] intValue] == 18) {
+    if ([[skill objectAtIndex:18] intValue] == 0) {
         [_fireBranch3 setVisible:NO];
     }
-    if ([[skill objectAtIndex:19] intValue] == 19) {
+    if ([[skill objectAtIndex:19] intValue] == 0) {
         [_fireBranch2 setVisible:NO];
     }
-    if ([[skill objectAtIndex:20] intValue] == 20) {
+    if ([[skill objectAtIndex:20] intValue] == 0) {
         [_fireBranch1 setVisible:NO];
     }
     
@@ -114,6 +115,7 @@
     
     
     [fireMenu setVisible:NO];
+    [fireMenu setStars];
 }
 
 - (void) pressedCitySymbol:(id)sender
@@ -137,8 +139,55 @@
 //    [_fireBranch2 setVisible:YES];
 //    [_fireBranch1 setVisible:YES];
     
-    [fireMenu setVisible:YES];
-    [fireMenu setZOrder:1000];
+    if ([fireMenu visible]) {
+        [fireMenu setVisible:NO];
+    }else{
+        [fireMenu setVisible:YES];
+        [fireMenu setZOrder:1000];
+    }
+    
+}
+
+
+
+
+
+- (void) switchFire: (int)index withStarCost:(int)star
+{
+    [_fireMainBranch setVisible:YES];
+    
+    NSMutableArray *skill = [[GameState shared] skillStates];
+    
+//    [skill insertObject:[NSNumber numberWithInt:star] atIndex:index];
+    [skill replaceObjectAtIndex:index withObject:[NSNumber numberWithInt:star]];
+    
+    switch (index) {
+        case 14:
+            [_fireMainBranch setVisible:YES];
+            break;
+        case 15:
+            [_fireElement2 setVisible:YES];
+
+            break;
+        case 16:
+            [_fireElement1 setVisible:YES];
+            break;
+        case 17:
+            [_fireElement3 setVisible:YES];
+            break;
+        case 18:
+            [_fireBranch3 setVisible:YES];
+            break;
+        case 19:
+            [_fireBranch2 setVisible:YES];
+            break;
+        case 20:
+            [_fireBranch1 setVisible:YES];
+            break;
+        default:
+            break;
+    }
+    
 }
 
 - (void) pressedMarksmanSymbol:(id)sender
