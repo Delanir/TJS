@@ -73,6 +73,8 @@ Main Tree Branch - el2 z30-ipadhd.png
 Main Tree Branch - el2 z30.png
 Main Tree Branch z25-ipadhd.png
 Main Tree Branch z25.png
+stick1.png
+stick2.png
 SkillTreeLayer.ccbi
 SkillTreeLayerZWOP.ccbi
 skillTreeSS-ipadhd.plist
@@ -81,6 +83,10 @@ skillTreeSS.plist
 skillTreeSS.png
 SkillTreeSubMenu.ccbi
 StarsNode.ccbi
+stick1-ipadhd.png
+stick1.png
+stick2-ipadhd.png
+stick2.png
 wraith_anim.plist
 yurie_anim.plist
 zealot_anim.plist
