@@ -46,7 +46,7 @@
     [self setCurrentState:kAttackEnemyState];
     [[self sprite] stopAllActions];
     [[self healthBar] stopAllActions];
-    [sprite setPosition:ccp([sprite position].x +50, [sprite position].y)];
+    [sprite setPosition:ccp([sprite position].x +80, [sprite position].y)];
     [healthBar setPosition:ccp([sprite position].x, [sprite position].y + [sprite contentSize].height/2 + 2)];
     [[self sprite] runAction:[CCRepeatForever actionWithAction:attackAction]];
 }
