@@ -1,4 +1,6 @@
-AchievmentsLayer.ccbi
+achievement-guide.png
+AchievementNode.ccbi
+AchievementsLayer.ccbi
 akaPotsley.ttf
 background-ipadhd.png
 background.png
@@ -93,6 +95,10 @@ Default.png
 fps_images-hd.png
 fps_images-ipadhd.png
 fps_images.png
+golden-achievement-disabled-ipadhd.png
+golden-achievement-disabled.png
+golden-achievement-ipadhd.png
+golden-achievement.png
 Icon-72.png
 Icon-ipadhd.png
 Icon-Small-50.png

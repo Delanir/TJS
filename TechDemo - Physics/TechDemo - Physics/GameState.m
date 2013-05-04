@@ -54,6 +54,7 @@ static GameState* _sharedSingleton = nil;
     [defaults setObject:starStates forKey:@"Stars"];
     [defaults setObject:skillStates forKey:@"Skills"];
     [defaults setObject:goldState forKey:@"Gold"];
+    [defaults setObject:achievementStates forKey:@"Achievements"];
     [[NSUserDefaults standardUserDefaults] synchronize];
     [[ResourceManager shared] update];
 }
@@ -66,6 +67,7 @@ static GameState* _sharedSingleton = nil;
     if ( starStates == nil||skillStates==nil)
         [self initApplicationData];
     goldState = [defaults objectForKey:@"Gold"];
+    achievementStates = [defaults objectForKey:@"Achievements"];
 }
 
 -(void)initApplicationData
@@ -73,6 +75,9 @@ static GameState* _sharedSingleton = nil;
     starStates = [[NSMutableArray alloc] init];
     for (int i = 0; i < 10; i++)
         [starStates addObject: [NSNumber numberWithInt:0]];
+    achievementStates = [[NSMutableArray alloc] init];
+    for (int i = 0; i < 16; i++)
+        [achievementStates addObject: [NSNumber numberWithInt:0]];
 //  skillstates saves the number of stars used for the following entities, in the following sequence:
 //    0_iceMainBranch;
 //    1_iceElement2;
@@ -124,6 +129,7 @@ static GameState* _sharedSingleton = nil;
 {
     [starStates release];
     [skillStates release];
+    [achievementStates release];
     [_sharedSingleton release];
     [super dealloc];
 }

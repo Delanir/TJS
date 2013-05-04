@@ -13,12 +13,14 @@
 {
     NSMutableArray * starStates;
     NSMutableArray * skillStates;
+    NSMutableArray * achievementStates;
     NSNumber * goldState;
 }
 
 @property (nonatomic, retain) NSMutableArray * starStates;
 @property (nonatomic, retain) NSMutableArray * skillStates;
 @property (nonatomic, retain) NSNumber * goldState;
+@property (nonatomic, retain) NSMutableArray * achievementState;
 
 +(GameState*)shared;
 
