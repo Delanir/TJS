@@ -9,6 +9,11 @@
 - Buildings e lógica respectiva
 - Utilização do Flurry
 
+- No game over:
+    - Retry
+- No win:
+    - Play next chapter
+
 - Definir bonus passivos dos níveis do Yuri
 - Mostrar e calcular score no hud
     - Desenhar Leaderboard

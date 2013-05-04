@@ -23,7 +23,6 @@ static GameState* _sharedSingleton = nil;
 			[[self alloc] init];
 		return _sharedSingleton;
 	}
-    
 	return nil;
 }
 
@@ -72,37 +71,7 @@ static GameState* _sharedSingleton = nil;
 {
     starStates = [[NSMutableArray alloc] init];
     for (int i = 0; i < 10; i++)
-        [starStates addObject: [NSNumber numberWithInt:0]];
-//  skillstates saves the number of stars used for the following entities, in the following sequence:
-//    0_iceMainBranch;
-//    1_iceElement2;
-//    2_iceElement1;
-//    3_iceElement3;
-//    4_iceBranch3;
-//    5_iceBranch2;
-//    6_iceBranch1;
-//    7_cityMainBranch;
-//    8_cityElement2;
-//    9_cityElement1;
-//    10_cityElement3;
-//    11_cityBranch3;
-//    12_cityBranch2;
-//    13_cityBranch1;
-//    14_fireMainBranch;
-//    15_fireElement2;
-//    16_fireElement1;
-//    17_fireElement3;
-//    18_fireBranch3;
-//    19_fireBranch2;
-//    20_fireBranch1;
-//    21_marksmanMainBranch;
-//    22_marksmanElement2;
-//    23_marksmanElement1;
-//    24_marksmanElement3;
-//    25_marksmanBranch3;
-//    26_marksmanBranch2;
-//    27_marksmanBranch1;
-    
+        [starStates addObject: [NSNumber numberWithInt:0]];    
     skillStates = [[NSMutableArray alloc] init];
     for (int i = 0; i < 28; i++)
         [skillStates addObject: [NSNumber numberWithInt:0]];

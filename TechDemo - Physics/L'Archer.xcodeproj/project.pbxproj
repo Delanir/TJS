@@ -66,7 +66,6 @@
 		8BC00F42171DF82000A0DCD4 /* Main Tree Branch - el1 z27-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC00F1E171DF81F00A0DCD4 /* Main Tree Branch - el1 z27-ipadhd.png */; };
 		8BC00F43171DF82000A0DCD4 /* Main Tree Branch - el2 z30-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC00F1F171DF81F00A0DCD4 /* Main Tree Branch - el2 z30-ipadhd.png */; };
 		8BC00F44171DF82000A0DCD4 /* Main Tree Branch z25-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC00F20171DF81F00A0DCD4 /* Main Tree Branch z25-ipadhd.png */; };
-		8BC2106217342A7A00B875B2 /* skillTreeSS-ipadhd.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8BC2106117342A7900B875B2 /* skillTreeSS-ipadhd.plist */; };
 		8BC21066173430E600B875B2 /* ccbParticleSmoke.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC21063173430E600B875B2 /* ccbParticleSmoke.png */; };
 		8BC21067173430E600B875B2 /* ccbParticleSnow.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC21064173430E600B875B2 /* ccbParticleSnow.png */; };
 		8BC21068173430E600B875B2 /* ccbParticleStars.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC21065173430E600B875B2 /* ccbParticleStars.png */; };
@@ -1559,13 +1558,13 @@
 				8B221466173338540055BF51 /* SkillTreeLayer.ccbi */,
 				9C4787021734260600180864 /* SkillTreeLayerZWOP.ccbi */,
 				8BC2107317343D6500B875B2 /* CitySubMenu.ccbi */,
-				8BC21069173431C400B875B2 /* IceSubMenu.ccbi */,
 				8BC2107117343A0800B875B2 /* MarksSubMenu.ccbi */,
 				8B221467173338540055BF51 /* SkillTreeSubMenu.ccbi */,
 				3EE9FE1317256DAD009718EC /* LevelSelectLayer.ccb */,
 				3EE2F95F1723175E0084DF2F /* LevelSelectLayer.ccbi */,
 				3EE2F9601723175E0084DF2F /* LevelThumbnail.ccbi */,
 				3EE2F9611723175E0084DF2F /* StarsNode.ccbi */,
+				8BC21069173431C400B875B2 /* IceSubMenu.ccbi */,
 			);
 			name = CocosBuilder;
 			sourceTree = "<group>";
@@ -1738,7 +1737,6 @@
 				8B43948D17341C30008BAB1D /* skillTreeSS.plist in Resources */,
 				8B43948E17341C30008BAB1D /* skillTreeSS.png in Resources */,
 				8B43949517341E0F008BAB1D /* skillTreeSS-ipadhd.png in Resources */,
-                8B43949617341E0F008BAB1D /* skillTreeSS-ipadhd.plist in Resources */,
 				9C478705173429FC00180864 /* blackdragon_anim.plist in Resources */,
 				9C47870717342A0A00180864 /* skeleton_anim.plist in Resources */,
 				9C47870917342A1600180864 /* wraith_anim.plist in Resources */,

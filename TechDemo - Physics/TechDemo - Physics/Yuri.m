@@ -12,11 +12,16 @@
 
 @implementation Yuri
 
-@synthesize  readyToFire, level;
+@synthesize  readyToFire, level, strength, critical, criticalBonus, speedBonus, bonusActive, strengthBonus;
 
 -(id) init
 {
     level = [self determineLevel];
+    
+    [self initBonuses];
+    
+    strength = kYuriBaseStrength * level * strengthBonus;
+    
     if(self = [super initWithSprite:[NSString stringWithFormat:@"y_lvl%d_06.png",level ]])
     {
         readyToFire = YES;
@@ -29,6 +34,13 @@
                             [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:[NSString stringWithFormat:@"y_attack_down_lvl%d",level ] ]] times:1]];
     }
     return self;
+}
+
+-(void) initBonuses
+{
+    
+    
+    
 }
 
 
@@ -68,7 +80,6 @@
 {
     [self setReadyToFire:YES];
 }
-
 
 -(void) changeFireRate: (float) fireRate
 {

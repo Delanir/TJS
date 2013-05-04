@@ -133,6 +133,9 @@ static int current_level = -1;
         // This dummy method initializes the collision manager
         [[CollisionManager shared] dummyMethod];
         
+        // This method reads the current state of the skill tree and prepares the changes
+        [self prepSkillTreeChanges];
+        
         [self schedule:@selector(update:)];
     }
     
@@ -151,6 +154,192 @@ static int current_level = -1;
     [rm setMana: [[conf getNumberProperty:@"InitialMana"] doubleValue]];
     [rm setMaxMana: [[conf getNumberProperty:@"InitialMana"] doubleValue]];
     [rm reset];
+}
+
+- (void) prepSkillTreeChanges
+{
+    NSMutableArray *skill = [[GameState shared] skillStates];
+    
+    
+    /**
+     *
+     * MAIN BRANCHES
+     *
+     */
+    if ([[skill objectAtIndex:kIceMainBranch] intValue] != 0)
+    {
+#warning TODO
+        NSLog(@"Nesta situacao o botao do gelo tem de ficar activo");
+        NSLog(@"Gelo faz slowdown");
+    }
+    if ([[skill objectAtIndex:kFireMainBranch] intValue] != 0)
+    {
+#warning TODO
+        NSLog(@"Nesta situacao o botao do fogo tem de ficar activo");
+        NSLog(@"Fogo faz damage over time");
+    }
+    if ([[skill objectAtIndex:kMarksmanMainBranch] intValue] != 0)
+    {
+#warning TODO
+        NSLog(@"Nesta situacao o botao do Marksman tem de ficar activo");
+        NSLog(@"Marksman faz pushback");
+    }
+    if ([[skill objectAtIndex:kCityMainBranch] intValue] != 0)
+    {
+#warning TODO
+        NSLog(@"Nesta situacao a cidade fica com mais vida");
+    }
+    
+    
+    /**
+     *
+     * GELOOOOO
+     *
+     */
+    if ([[skill objectAtIndex:kIceBranch1] intValue] != 0)
+    {
+#warning TODO
+        NSLog(@"Slowdown demora mais tempo");
+    }
+    if ([[skill objectAtIndex:kIceBranch2] intValue] != 0)
+    {
+#warning TODO
+        NSLog(@"Ha uma % de fazer freeze (slowdown de 100%)");
+    }
+    if ([[skill objectAtIndex:kIceBranch3] intValue] != 0)
+    {
+#warning TODO
+        NSLog(@"Ice arrow tem area of effect");
+    }
+    if ([[skill objectAtIndex:kIceElement1] intValue] != 0)
+    {
+#warning TODO
+        NSLog(@"Slowdown demora ainda mais tempo");
+    }
+    if ([[skill objectAtIndex:kIceElement2] intValue] != 0)
+    {
+#warning TODO
+        NSLog(@"Ha uma % ainda maior de fazer freeze (slowdown de 100%)");
+    }
+    if ([[skill objectAtIndex:kIceElement3] intValue] != 0)
+    {
+#warning TODO
+        NSLog(@"Area of effect é maior");
+    }
+    
+    /**
+     *
+     * FOGOOOOO
+     *
+     */
+    if ([[skill objectAtIndex:kFireBranch1] intValue] != 0)
+    {
+#warning TODO
+        NSLog(@"More damage over time");
+    }
+    if ([[skill objectAtIndex:kFireBranch2] intValue] != 0)
+    {
+#warning TODO
+        NSLog(@"Fogo tem area of effect");
+    }
+    if ([[skill objectAtIndex:kFireBranch3] intValue] != 0)
+    {
+#warning TODO
+        NSLog(@"Fogo passa entre inimigos");
+    }
+    if ([[skill objectAtIndex:kFireElement1] intValue] != 0)
+    {
+#warning TODO
+        NSLog(@"Even more damage over time");
+    }
+    if ([[skill objectAtIndex:kFireElement2] intValue] != 0)
+    {
+#warning TODO
+        NSLog(@"Larger area of effect");
+    }
+    if ([[skill objectAtIndex:kFireElement3] intValue] != 0)
+    {
+#warning TODO
+        NSLog(@"Fogo passa entre inimigos");
+    }
+    
+    /**
+     *
+     * MARKSMAAAN
+     *
+     */
+    if ([[skill objectAtIndex:kMarksmanBranch1] intValue] != 0)
+    {
+#warning TODO
+        NSLog(@"Yuri gives more damage");
+    }
+    if ([[skill objectAtIndex:kMarksmanBranch2] intValue] != 0)
+    {
+#warning TODO
+        NSLog(@"Yuri is faster");
+    }
+    if ([[skill objectAtIndex:kMarksmanBranch3] intValue] != 0)
+    {
+#warning TODO
+        NSLog(@"Yuri has critical ration");
+    }
+    if ([[skill objectAtIndex:kMarksmanElement1] intValue] != 0)
+    {
+#warning TODO
+        NSLog(@"Yuri gives even more damage");
+    }
+    if ([[skill objectAtIndex:kMarksmanElement2] intValue] != 0)
+    {
+#warning TODO
+        NSLog(@"Yuri is even faster");
+    }
+    if ([[skill objectAtIndex:kMarksmanElement3] intValue] != 0)
+    {
+#warning TODO
+        NSLog(@"Yuri has a higher critical ratio");
+    }
+    
+    /**
+     *
+     * CITYYYY
+     *
+     */
+    if ([[skill objectAtIndex:kCityBranch1] intValue] != 0)
+    {
+#warning TODO
+        NSLog(@"Mage's tower recovers mana");
+        NSLog(@"Draws Mage's tower");
+    }
+    if ([[skill objectAtIndex:kCityBranch2] intValue] != 0)
+    {
+#warning TODO
+        NSLog(@"Wall health recovers over time");
+        NSLog(@"Draws Masonry");
+    }
+    if ([[skill objectAtIndex:kCityBranch3] intValue] != 0)
+    {
+#warning TODO
+        NSLog(@"Fletcher fires arrows against the enemies");
+        NSLog(@"Draws Fletcher");
+    }
+    if ([[skill objectAtIndex:kCityElement1] intValue] != 0)
+    {
+#warning TODO
+        NSLog(@"Mage's tower recovers even more mana");
+        NSLog(@"Draws Mage's tower");
+    }
+    if ([[skill objectAtIndex:kCityElement2] intValue] != 0)
+    {
+#warning TODO
+        NSLog(@"Wall health recovers faster over time");
+        NSLog(@"Draws Masonry");
+    }
+    if ([[skill objectAtIndex:kCityElement3] intValue] != 0)
+    {
+#warning TODO
+        NSLog(@"Fletcher arrows are faster and stronger over time");
+        NSLog(@"Draws Fletcher");
+    }
 }
 
 
@@ -194,20 +383,21 @@ static int current_level = -1;
     CCArray * stimulusPackage = [[CCArray alloc] init];
     [stimulusPackage removeAllObjects];
     NSMutableArray * buttons = [hud buttonsPressed];
+    unsigned int damage = [(Yuri*)[[Registry shared] getEntityByName:@"Yuri"] strength];
     
 #warning depois de fazer o gamestate, podemos testá-lo para linkar com os valores dos estimulos
 #warning calculate stimulus value method or something
     // Damage Stimulus
-    [stimulusPackage addObject:[[StimulusFactory shared] generateDamageStimulusWithValue:50]];
+    [stimulusPackage addObject:[[StimulusFactory shared] generateDamageStimulusWithValue:damage]];
     // Cold Stimulus
     if ([[buttons objectAtIndex:kPower1Button] boolValue] && [[ResourceManager shared] spendMana:3.5])
-        [stimulusPackage addObject:[[StimulusFactory shared] generateColdStimulusWithValue:50]];
+        [stimulusPackage addObject:[[StimulusFactory shared] generateColdStimulusWithValue:damage]];
     // Fire Stimulus
     if ([[buttons objectAtIndex:kPower2Button] boolValue] && [[ResourceManager shared] spendMana:3.5])
-        [stimulusPackage addObject:[[StimulusFactory shared] generateFireStimulusWithValue:50]];
+        [stimulusPackage addObject:[[StimulusFactory shared] generateFireStimulusWithValue:damage]];
     // PushBack Stimulus
     if ([[buttons objectAtIndex:kPower3Button] boolValue] && [[ResourceManager shared] spendMana:2.0])
-        [stimulusPackage addObject:[[StimulusFactory shared] generatePushBackStimulusWithValue:50]];
+        [stimulusPackage addObject:[[StimulusFactory shared] generatePushBackStimulusWithValue:damage]];
     
     Arrow * arrow = [[Arrow alloc] initWithDestination:alocation andStimulusPackage:stimulusPackage];
     
@@ -527,123 +717,6 @@ static int current_level = -1;
 }
 
 
-#warning This SHALL BE NOTICED
-#warning This SHALL BE NOTICED
-#warning This SHALL BE NOTICED
-#warning This SHALL BE NOTICED
-#warning This SHALL BE NOTICED
-#warning EFEITOS DA SKILL TREE HALP
-#warning EFEITOS DA SKILL TREE HALP
-#warning EFEITOS DA SKILL TREE HALP
-#warning EFEITOS DA SKILL TREE HALP
-#warning EFEITOS DA SKILL TREE HALP
-#warning EFEITOS DA SKILL TREE HALP
-#warning EFEITOS DA SKILL TREE HALP
-#warning EFEITOS DA SKILL TREE HALP
-#warning EFEITOS DA SKILL TREE HALP
-#warning EFEITOS DA SKILL TREE HALP
-#warning EFEITOS DA SKILL TREE HALP
--(void) initStimulusFromSkillTree{
-    NSMutableArray *skill = [[GameState shared] skillStates];
-    
-    if ([[skill objectAtIndex:0] intValue] != 0) {
-//        [_iceMainBranch setVisible:YES];
-        
-    }
-    if ([[skill objectAtIndex:1] intValue] != 0) {
-//        [_iceElement2 setVisible:YES];
-    }
-    if ([[skill objectAtIndex:2] intValue] != 0) {
-//        [_iceElement1 setVisible:YES];
-    }
-    if ([[skill objectAtIndex:3] intValue] != 0) {
-//        [_iceElement3 setVisible:YES];
-    }
-    if ([[skill objectAtIndex:4] intValue] != 0) {
-//        [_iceBranch3 setVisible:YES];
-    }
-    if ([[skill objectAtIndex:5] intValue] != 0) {
-//        [_iceBranch2 setVisible:YES];
-    }
-    if ([[skill objectAtIndex:6] intValue] != 0) {
-//        [_iceBranch1 setVisible:YES];
-    }
-    
-    if ([[skill objectAtIndex:7] intValue] != 0) {
-//        [_cityMainBranch setVisible:YES];
-    }
-    if ([[skill objectAtIndex:8] intValue] != 0) {
-//        [_cityElement2 setVisible:YES];
-    }
-    if ([[skill objectAtIndex:9] intValue] != 0) {
-//        [_cityElement1 setVisible:YES];
-    }
-    if ([[skill objectAtIndex:10] intValue] != 0) {
-//        [_cityElement3 setVisible:YES];
-    }
-    if ([[skill objectAtIndex:11] intValue] != 0) {
-//        [_cityBranch3 setVisible:YES];
-    }
-    if ([[skill objectAtIndex:12] intValue] != 0) {
-//        [_cityBranch2 setVisible:YES];
-    }
-    if ([[skill objectAtIndex:13] intValue] != 0) {
-//        [_cityBranch1 setVisible:YES];
-    }
-    
-    if ([[skill objectAtIndex:14] intValue] != 0) {
-//        [_fireMainBranch setVisible:YES];
-    }
-    if ([[skill objectAtIndex:15] intValue] != 0) {
-//        [_fireElement2 setVisible:YES];
-    }
-    if ([[skill objectAtIndex:16] intValue] != 0) {
-//        [_fireElement1 setVisible:YES];
-    }
-    if ([[skill objectAtIndex:17] intValue] != 0) {
-//        [_fireElement3 setVisible:YES];
-    }
-    if ([[skill objectAtIndex:18] intValue] != 0) {
-//        [_fireBranch3 setVisible:YES];
-    }
-    if ([[skill objectAtIndex:19] intValue] != 0) {
-//        [_fireBranch2 setVisible:YES];
-    }
-    if ([[skill objectAtIndex:20] intValue] != 0) {
-//        [_fireBranch1 setVisible:YES];
-    }
-    
-    if ([[skill objectAtIndex:21] intValue] != 0) {
-//        [_marksmanMainBranch setVisible:NO];
-    }
-    if ([[skill objectAtIndex:22] intValue] != 0) {
-//        [_marksmanElement2 setVisible:NO];    }
-        CCLOG(@"SPAM");
-    }
-    if ([[skill objectAtIndex:23] intValue] != 0) {
-        CCLOG(@"SPAM");
-//        [_marksmanElement1 setVisible:NO];
-    }
-    if ([[skill objectAtIndex:24] intValue] != 0) {
-        CCLOG(@"SPAM");
-//        [_marksmanElement3 setVisible:NO];
-        
-    }
-    if ([[skill objectAtIndex:25] intValue] != 0) {
-        CCLOG(@"SPAM");
-//        [_marksmanBranch3 setVisible:NO];
-    }
-    if ([[skill objectAtIndex:26] intValue] != 0) {
-        CCLOG(@"SPAM");
-//        [_marksmanBranch2 setVisible:NO];
-    }
-    if ([[skill objectAtIndex:27] intValue] != 0) {
-        CCLOG(@"SPAM");
-//        [_marksmanBranch1 setVisible:NO];
-    }
-
-    
-}
 
 
 @end

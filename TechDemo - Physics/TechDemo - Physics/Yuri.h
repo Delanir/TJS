@@ -15,10 +15,23 @@
 {
     BOOL readyToFire;
     unsigned int level;
+    unsigned int strength;
+    float critical;
+    
+    BOOL bonusActive;
+    float strengthBonus;
+    float speedBonus;
+    float criticalBonus;
 }
 
 @property (nonatomic) BOOL readyToFire;
 @property unsigned int level;
+@property unsigned int strength;
+@property float critical;
+@property BOOL bonusActive;
+@property float strengthBonus;
+@property float speedBonus;
+@property float criticalBonus;
 @property (nonatomic, retain) CCFiniteTimeAction *shootUp;
 @property (nonatomic, retain) CCFiniteTimeAction *shootFront;
 @property (nonatomic, retain) CCFiniteTimeAction *shootDown;
