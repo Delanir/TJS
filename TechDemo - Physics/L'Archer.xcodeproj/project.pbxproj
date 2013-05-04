@@ -12,11 +12,10 @@
 		3E14D23B171A2A28005992A6 /* Comet.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E14D23A171A2A28005992A6 /* Comet.plist */; };
 		3E3A5D09171C6AE2006D5370 /* larcher_icon_72x72.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E3A5D08171C6AE2006D5370 /* larcher_icon_72x72.png */; };
 		3E3A5D0B171C6AEC006D5370 /* larcher_icon_144x144.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E3A5D0A171C6AEC006D5370 /* larcher_icon_144x144.png */; };
-		3E926EC61734064B00BFA90D /* achievement-guide.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E926EC51734064B00BFA90D /* achievement-guide.png */; };
 		3E926EC9173423EE00BFA90D /* AchievementsLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E926EC8173423EE00BFA90D /* AchievementsLayer.m */; };
 		3E926ECC1734255700BFA90D /* AchievementNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E926ECB1734255700BFA90D /* AchievementNode.m */; };
-		3EADA5A31732844B00AE0615 /* keylock2-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EADA5A11732843D00AE0615 /* keylock2-ipadhd.png */; };
-		3EADA5A41732844B00AE0615 /* keylock2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EADA5A21732844400AE0615 /* keylock2.png */; };
+		3E99E2AA173569D100166046 /* AchievementsLayer.ccb in Resources */ = {isa = PBXBuildFile; fileRef = 3E99E2A8173569D100166046 /* AchievementsLayer.ccb */; };
+		3E99E2AB173569D100166046 /* AchievementNode.ccb in Resources */ = {isa = PBXBuildFile; fileRef = 3E99E2A9173569D100166046 /* AchievementNode.ccb */; };
 		3EB8A37E17161AF800666626 /* defaultEmitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EB8A37D17161AF800666626 /* defaultEmitter.png */; };
 		3EB8A38017161CFA00666626 /* fire.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EB8A37F17161CFA00666626 /* fire.png */; };
 		3EDD9F231715DF2900C6A622 /* background-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EDD9F221715DF2900C6A622 /* background-ipadhd.png */; };
@@ -302,8 +301,8 @@
 		3E926EC8173423EE00BFA90D /* AchievementsLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AchievementsLayer.m; sourceTree = "<group>"; };
 		3E926ECA1734255700BFA90D /* AchievementNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AchievementNode.h; sourceTree = "<group>"; };
 		3E926ECB1734255700BFA90D /* AchievementNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AchievementNode.m; sourceTree = "<group>"; };
-		3EADA5A11732843D00AE0615 /* keylock2-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "keylock2-ipadhd.png"; sourceTree = "<group>"; };
-		3EADA5A21732844400AE0615 /* keylock2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = keylock2.png; sourceTree = "<group>"; };
+		3E99E2A8173569D100166046 /* AchievementsLayer.ccb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = AchievementsLayer.ccb; sourceTree = "<group>"; };
+		3E99E2A9173569D100166046 /* AchievementNode.ccb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = AchievementNode.ccb; sourceTree = "<group>"; };
 		3EB8A37D17161AF800666626 /* defaultEmitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultEmitter.png; sourceTree = "<group>"; };
 		3EB8A37F17161CFA00666626 /* fire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fire.png; sourceTree = "<group>"; };
 		3EDD9F221715DF2900C6A622 /* background-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-ipadhd.png"; sourceTree = "<group>"; };
@@ -1039,14 +1038,10 @@
 		9C85F4AC1707957E00EECB83 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				9C3CE232172D90C90044889D /* hud-background-ipadhd.png */,
-				9C3CE230172D8FB60044889D /* hud-background.png */,
 				3EE9FE1317256DAD009718EC /* LevelSelectLayer.ccb */,
 				3EE2F95F1723175E0084DF2F /* LevelSelectLayer.ccbi */,
 				3EE2F9601723175E0084DF2F /* LevelThumbnail.ccbi */,
 				3EE2F9611723175E0084DF2F /* StarsNode.ccbi */,
-				9C9ADB321721CA2C00C3FA59 /* red_health_bar.png */,
-				9C9ADB331721CA2C00C3FA59 /* green_health_bar.png */,
 				3E926EC4173405ED00BFA90D /* Achievements */,
 				9C9D85991733FF690071B7C2 /* CocosBuilder */,
 				9C94ABD917197D3C005BCE32 /* Animations */,
@@ -1584,6 +1579,8 @@
 		9C9D85991733FF690071B7C2 /* CocosBuilder */ = {
 			isa = PBXGroup;
 			children = (
+				3E99E2A8173569D100166046 /* AchievementsLayer.ccb */,
+				3E99E2A9173569D100166046 /* AchievementNode.ccb */,
 				8B8C2D9B1719DB9300B50C1E /* MainMenu.ccbi */,
 				8BFC3F0E17204440000161FD /* GameOver.ccbi */,
 				8C72C2A51729687B009EF8C1 /* GameWin.ccbi */,
@@ -1789,6 +1786,8 @@
 				8BC2107417343D6500B875B2 /* CitySubMenu.ccbi in Resources */,
 				8B3854D317355A900044F4F3 /* stick1.png in Resources */,
 				8B3854D417355A900044F4F3 /* stick2.png in Resources */,
+				3E99E2AA173569D100166046 /* AchievementsLayer.ccb in Resources */,
+				3E99E2AB173569D100166046 /* AchievementNode.ccb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
