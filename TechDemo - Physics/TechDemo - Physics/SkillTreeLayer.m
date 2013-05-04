@@ -201,8 +201,8 @@
   [[[CCDirector sharedDirector] runningScene] stopAllActions];
   [[[CCDirector sharedDirector] runningScene] unscheduleAllSelectors];
   [self removeAllChildrenWithCleanup:YES];
-    [[CCSpriteFrameCache sharedSpriteFrameCache] removeUnusedSpriteFrames];
-    [[CCTextureCache sharedTextureCache] removeUnusedTextures];
+    [[CCSpriteFrameCache sharedSpriteFrameCache] removeSpriteFrames];
+    [[CCTextureCache sharedTextureCache] removeAllTextures];
   [super onExit];
 }
 

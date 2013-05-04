@@ -10,7 +10,13 @@
 #define L_Archer_Constants_h
 
 #define kManaRegenerationRate 0.02
-#define kYuriBaseStrength 25
+
+#define kYuriBaseStrength 25                // base damage
+#define kYuriBasePushbackDistance 20        // 20 pixels
+#define kYuriBaseSlowDownDuration 1         // one second
+#define kYuriBaseSlowDownPercentage 2       // twice slower
+#define kYuriBaseDamageOverTimeDuration 1   // one second
+#define kYuriBaseDamageOverTimeDamage 30    // 30 points per second
 
 typedef enum
 {
@@ -77,6 +83,7 @@ typedef enum
     kDOTStimulus,
     kDamageStimulus
 } stimulusType;
+
 
 typedef enum
 {

@@ -244,7 +244,16 @@
   health -= amount;
 }
 
--(void) destructionChant{
+
+-(void) increaseHealth:(double)ratio
+{
+    maxHealth = maxHealth * ratio; // Vai depender da skilltree
+    health = maxHealth;
+    lastHealth = maxHealth;
+}
+
+-(void) destructionChant
+{
   if (losingRate -health >0.2*maxHealth) {
     [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"killhim"]];
   }

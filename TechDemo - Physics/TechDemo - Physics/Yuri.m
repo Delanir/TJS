@@ -38,9 +38,7 @@
 
 -(void) initBonuses
 {
-    
-    
-    
+    strengthBonus = 1.0f;
 }
 
 

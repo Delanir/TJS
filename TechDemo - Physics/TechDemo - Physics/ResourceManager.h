@@ -41,6 +41,8 @@
 @property double mana;
 @property double maxMana;
 
++(void) loadLevelSprites;
+
 -(void) addSkillPoints:(unsigned int) add;
 -(void) addGold:(unsigned int) add;
 -(void) addArrows:(unsigned int) add;

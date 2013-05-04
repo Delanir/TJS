@@ -30,13 +30,15 @@ static int current_level = -1;
 	// 'scene' is an autorelease object.
 	CCScene *scene = [CCScene node];
 	
+    [ResourceManager loadLevelSprites];
+    
 	// 'layer' is an autorelease object.
-	LevelLayer *level = [LevelLayer node];
     Hud *levelHud = [Hud node];
+	LevelLayer *level = [LevelLayer node];
 	
 	// add layer as a child to scene
-	[scene addChild: level];
-	[scene addChild: levelHud];
+	[scene addChild: levelHud z:1];
+	[scene addChild: level z:0];
     
     level.hud = levelHud;
     
@@ -55,8 +57,6 @@ static int current_level = -1;
  *****
  *****/
 
-
-
 /**
  *
  * Initialization logic
@@ -67,22 +67,8 @@ static int current_level = -1;
 // on "init" you need to initialize your instance
 -(id) init
 {
-    [[CCSpriteFrameCache sharedSpriteFrameCache] removeUnusedSpriteFrames];
-    [[CCTextureCache sharedTextureCache] removeUnusedTextures];
-    
     if(self = [super init])
     {
-        
-        [[SpriteManager shared] addSpritesToSpriteFrameCacheWithFile:@"lvl1spritesheet.plist" andBatchSpriteSheet:@"lvl1spritesheet.png"];
-        [[SpriteManager shared] addAnimationFromFile:@"peasant_anim.plist"];
-        [[SpriteManager shared] addAnimationFromFile:@"fairiedragon_anim.plist"];
-        [[SpriteManager shared] addAnimationFromFile:@"zealot_anim.plist"];
-        [[SpriteManager shared] addAnimationFromFile:@"yurie_anim.plist"];
-        [[SpriteManager shared] addAnimationFromFile:@"fireelemental_anim.plist"];
-        [[SpriteManager shared] addAnimationFromFile:@"wraith_anim.plist"];
-        [[SpriteManager shared] addAnimationFromFile:@"skeleton_anim.plist"];
-        [[SpriteManager shared] addAnimationFromFile:@"blackdragon_anim.plist"];
-        
         
         CGSize winSize = [[CCDirector sharedDirector] winSize];
         _pauseButton= [CCSprite spriteWithSpriteFrameName:@"pause.png"];
@@ -93,7 +79,6 @@ static int current_level = -1;
         [self addChild:_pauseButton];
         [[WaveManager shared] removeFromParentAndCleanup:NO];
         [self addChild:[WaveManager shared]]; // Esta linha é imensos de feia. Mas tem de ser para haver update
-        
         
         _pause= (PauseHUD *)[CCBReader nodeGraphFromFile:@"PauseMenu.ccbi"];
         [self addChild:_pause];
@@ -133,15 +118,14 @@ static int current_level = -1;
         // This dummy method initializes the collision manager
         [[CollisionManager shared] dummyMethod];
         
-        // This method reads the current state of the skill tree and prepares the changes
+        // Prepare the changes due to the Skill Tree
         [self prepSkillTreeChanges];
-        
+
         [self schedule:@selector(update:)];
     }
     
     self.isTouchEnabled = YES;
     //    [self schedule:@selector(gameLogic:) interval:1.0];
-    
     
     return self;
 }
@@ -159,37 +143,61 @@ static int current_level = -1;
 - (void) prepSkillTreeChanges
 {
     NSMutableArray *skill = [[GameState shared] skillStates];
-    
+    Hud * headsUpDisplay = [[Registry shared] getEntityByName:@"Hud"];
     
     /**
      *
      * MAIN BRANCHES
      *
      */
+    
+    
+/*
+ Vamos fazer assim:
+    1 - As definiçoes estao guardadas no gamestate
+ 
+    2 - Vamos buscá-las e inicializamos as funções básicas
+        2.1 - Criamos as variáveis no enemy
+        2.2 - Criamos os comportamentos associados no tratamento de estimulo
+        2.3 - Criamos o tratamento de updates destes
+        2.4 - Importante não nos esquecermos de finalizar e restaurar o estado.
+            2.4.1 - Uma ideia interessante era usar heaps para fazer o estado temporário
+ 
+    3 - Para os comportamentos secundários queremos alterar variáveis de bónus
+        3.1 - As variáveis säo utilizadas nos métodos de inicializaçao das classes, 
+                por isso dá jeito aqui actualizar um repositório de dados, como o GameState
+                onde as instancias podem ir buscar os dados
+        3.2 - Dá jeito ter um método que encontra as instancias que estão num determinado
+                raio de um inimigo nos casos de area of effect
+        3.3 - Dá jeito ter um método que encontra a instancia mais próxima de um determinado
+                inimigo para o caso de passar um estimulo
+        3.4 - Fazer a cidade é simples, mas ainda falta as sprites para o efeito
+            3.4.1 - O fletcher é o pior, em termos de lógica. Mas não é assim tanto.
+                3.4.1.1 - Era giro se as flechas do fletcher também usassem a lógica dos estimulos
+                            caso os poderes estivessem activos
+ */
+    
+    
     if ([[skill objectAtIndex:kIceMainBranch] intValue] != 0)
     {
-#warning TODO
-        NSLog(@"Nesta situacao o botao do gelo tem de ficar activo");
-        NSLog(@"Gelo faz slowdown");
+#warning TODO - Aqui não é preciso fazer mais nada. É o tratamento básico do estimulo no enemy
+        [headsUpDisplay setIceToggleButtonActive];
     }
     if ([[skill objectAtIndex:kFireMainBranch] intValue] != 0)
     {
-#warning TODO
-        NSLog(@"Nesta situacao o botao do fogo tem de ficar activo");
-        NSLog(@"Fogo faz damage over time");
+#warning TODO - Aqui não é preciso fazer mais nada. É o tratamento básico do estimulo no enemy
+        [headsUpDisplay setFireToggleButtonActive];
     }
     if ([[skill objectAtIndex:kMarksmanMainBranch] intValue] != 0)
     {
-#warning TODO
-        NSLog(@"Nesta situacao o botao do Marksman tem de ficar activo");
-        NSLog(@"Marksman faz pushback");
+#warning TODO - Aqui não é preciso fazer mais nada. É o tratamento básico do estimulo no enemy
+        [headsUpDisplay setPushbackToggleButtonActive];
     }
     if ([[skill objectAtIndex:kCityMainBranch] intValue] != 0)
     {
-#warning TODO
-        NSLog(@"Nesta situacao a cidade fica com mais vida");
+        Wall * wall = [[Registry shared] getEntityByName:@"Wall"];
+        [wall increaseHealth:2.0];
     }
-    
     
     /**
      *
@@ -582,8 +590,8 @@ static int current_level = -1;
     [[CollisionManager shared] clearAllEntities];
     [self removeAllChildrenWithCleanup:YES];
     
-    [[CCSpriteFrameCache sharedSpriteFrameCache] removeUnusedSpriteFrames];
-    [[CCTextureCache sharedTextureCache] removeUnusedTextures];
+    [[CCSpriteFrameCache sharedSpriteFrameCache] removeSpriteFrames];
+    [[CCTextureCache sharedTextureCache] removeAllTextures];
     [super onExit];
     
 }

@@ -7,6 +7,7 @@
 //
 
 #import "FireElemental.h"
+#import "CollisionManager.h"
 
 @implementation FireElemental
 
@@ -59,8 +60,10 @@
     [super die];
     [self setCurrentState:kDieEnemyState];
     [[self sprite] stopAllActions];
+    [[CollisionManager shared] removeFromTargets:self];
     CCFiniteTimeAction * dieAction = [CCRepeat actionWithAction:[CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"f_blast" ]] times:1];
     [[self sprite] runAction:dieAction];
+    
 }
 
 

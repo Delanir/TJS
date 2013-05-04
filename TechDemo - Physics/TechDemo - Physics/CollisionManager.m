@@ -75,7 +75,6 @@ static CollisionManager* _sharedSingleton = nil;
 
 -(void)updatePixelPerfectCollisions:(ccTime)dt
 {
-    
     CCArray *projectilesToDelete = [[CCArray alloc] init];
     CGSize winSize = [[CCDirector sharedDirector] winSize];
     // If projectile is off the screen, destroy the bastard

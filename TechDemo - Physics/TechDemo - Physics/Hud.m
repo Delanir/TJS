@@ -7,13 +7,19 @@
 //
 
 #import "Hud.h"
+#import "SpriteManager.h"
+#import "Registry.h"
 
 @implementation Hud
+
+@synthesize fireToggleButton, iceToggleButton, pushBackToggleButton;
 
 -(id) init
 {
     if( self=[super init])
     {
+        [[Registry shared] registerEntity:self withName:@"Hud"];
+        
         buttons = [[NSMutableArray alloc] init];
         [buttons addObject:[NSNumber numberWithBool:NO]];
         [buttons addObject:[NSNumber numberWithBool:NO]];
@@ -48,13 +54,13 @@
         [manaProgress setMidpoint:ccp(0.5,0)];
         [manaProgress setPercentage:100];
         [manaProgress setPosition:ccp(950, 64)];
-
+        
         CCSprite * currentArrowsSprite = [CCSprite spriteWithSpriteFrameName:@"arrow.png"];
         [currentArrowsSprite setPosition:ccp(173,40)];
         CCSprite * currentMoneySprite = [CCSprite spriteWithSpriteFrameName:@"Coins.png"];
         [currentMoneySprite setPosition:ccp(173,88)];
         
-    //Labels Start
+        //Labels Start
         unsigned int nArrows = [[ResourceManager shared] arrows];
         unsigned int nGolds = [[ResourceManager shared] gold];
         label1 = [CCLabelTTF labelWithString: [NSString stringWithFormat:@"%i", nArrows] fontName:@"Futura" fontSize:24];
@@ -63,10 +69,10 @@
         [label2 setAnchorPoint:ccp(0,0.5)];
         label1.position = CGPointMake(197, 40);
         label2.position = CGPointMake(197, 88);
-    //Labels End
-         
+        //Labels End
         
-    //Power Buttons Start
+        
+        //Power Buttons Start
         CCMenuItem *iceOn = [CCMenuItemImage
                              itemWithNormalImage:@"IceButton.png" selectedImage:@"IceButton.png"
                              target:self selector:nil];
@@ -74,9 +80,11 @@
                               itemWithNormalImage:@"IceButton-bw.png" selectedImage:@"IceButton-bw.png"
                               target:self selector:nil];
         
-        CCMenuItemToggle *iceToggleButton = [CCMenuItemToggle itemWithTarget:self
-                                                                    selector:@selector(iceButtonToggle)
-                                                                       items:iceOff, iceOn, nil];
+        iceToggleButton = [CCMenuItemToggle itemWithTarget:self
+                                                  selector:@selector(iceButtonToggle)
+                                                     items:iceOff, iceOn, nil];
+        [iceToggleButton setIsEnabled:NO];
+        [iceToggleButton setOpacity:80];
         iceToggleButton.position = ccp(680, 64);
         
         CCMenuItem *fireOn = [CCMenuItemImage
@@ -86,11 +94,13 @@
                                itemWithNormalImage:@"FireButton-bw.png" selectedImage:@"FireButton-bw.png"
                                target:self selector:nil];
         
-        CCMenuItemToggle *fireToggleButton = [CCMenuItemToggle itemWithTarget:self
-                                                                     selector:@selector(fireButtonToggle)
-                                                                    items:fireOff, fireOn, nil];
+        fireToggleButton = [CCMenuItemToggle itemWithTarget:self
+                                                   selector:@selector(fireButtonToggle)
+                                                      items:fireOff, fireOn, nil];
+        [fireToggleButton setIsEnabled:NO];
+        [fireToggleButton setOpacity:80];
         fireToggleButton.position = ccp(760, 64);
-
+        
         
         CCMenuItem *pushBackOn = [CCMenuItemImage
                                   itemWithNormalImage:@"MarksManButton.png" selectedImage:@"MarksManButton.png"
@@ -99,9 +109,11 @@
                                    itemWithNormalImage:@"MarksManButton-bw.png" selectedImage:@"MarksManButton-bw.png"
                                    target:self selector:nil];
         
-        CCMenuItemToggle *pushBackToggleButton = [CCMenuItemToggle itemWithTarget:self
-                                                                         selector:@selector(pushBackButtonToggle)
-                                                                            items:pushBackOff, pushBackOn, nil];
+        pushBackToggleButton = [CCMenuItemToggle itemWithTarget:self
+                                                       selector:@selector(pushBackButtonToggle)
+                                                          items:pushBackOff, pushBackOn, nil];
+        [pushBackToggleButton setIsEnabled:NO];
+        [pushBackToggleButton setOpacity:80];
         pushBackToggleButton.position = ccp(840, 64);
         
         CCSprite * buyButtonSprite1 = [CCSprite spriteWithSpriteFrameName:@"buyarrow.png"];
@@ -113,7 +125,7 @@
         
         CCMenu *buttonsMenu = [CCMenu menuWithItems:iceToggleButton, fireToggleButton, pushBackToggleButton, buyButton, nil];
         buttonsMenu.position = CGPointZero;
-    //Power Buttons End
+        //Power Buttons End
         
         [self addChild:buttonsMenu];
         [self addChild:currentArrowsSprite z:1];
@@ -138,7 +150,6 @@
     [buttons replaceObjectAtIndex:button withObject:[NSNumber numberWithBool:!current]];
 }
 
-
 - (void) iceButtonToggle
 {
     [self toggleButton:kPower1Button];
@@ -152,6 +163,24 @@
 - (void) pushBackButtonToggle
 {
     [self toggleButton:kPower3Button];
+}
+
+-(void) setFireToggleButtonActive
+{
+    [fireToggleButton setIsEnabled:YES];
+    [fireToggleButton setOpacity:255];
+}
+
+-(void) setIceToggleButtonActive
+{
+    [iceToggleButton setIsEnabled:YES];
+    [iceToggleButton setOpacity:255];
+}
+
+-(void) setPushbackToggleButtonActive
+{
+    [pushBackToggleButton setIsEnabled:YES];
+    [pushBackToggleButton setOpacity:255];
 }
 
 - (void) buyArrows
