@@ -54,6 +54,10 @@ static GameState* _sharedSingleton = nil;
     [defaults setObject:skillStates forKey:@"Skills"];
     [defaults setObject:goldState forKey:@"Gold"];
     [defaults setObject:achievementStates forKey:@"Achievements"];
+    [defaults setObject:buyArrowsState forKey:@"BuyArrows"];
+    [defaults setObject:enemiesKilledState forKey:@"EnemiesKilled"];
+    [defaults setObject:dragonsKilledState forKey:@"DragonsKilled"];
+    [defaults setObject:fireElementalKilledState forKey:@"FireElementalKilled"];
     [[NSUserDefaults standardUserDefaults] synchronize];
     [[ResourceManager shared] update];
 }
@@ -67,6 +71,10 @@ static GameState* _sharedSingleton = nil;
         [self initApplicationData];
     goldState = [defaults objectForKey:@"Gold"];
     achievementStates = [defaults objectForKey:@"Achievements"];
+    buyArrowsState = [defaults objectForKey:@"BuyArrows"];
+    enemiesKilledState = [defaults objectForKey:@"EnemiesKilled"];
+    dragonsKilledState = [defaults objectForKey:@"DragonsKilled"];
+    fireElementalKilledState = [defaults objectForKey:@"FireElementalKilled"];
 }
 
 -(void)initApplicationData
@@ -111,6 +119,10 @@ static GameState* _sharedSingleton = nil;
     for (int i = 0; i < 28; i++)
         [skillStates addObject: [NSNumber numberWithInt:0]];
     goldState = [NSNumber numberWithInt:0];
+    buyArrowsState = [NSNumber numberWithInt:0];
+    enemiesKilledState = [NSNumber numberWithInt:0];
+    dragonsKilledState = [NSNumber numberWithInt:0];
+    fireElementalKilledState = [NSNumber numberWithInt:0];
 }
 
 

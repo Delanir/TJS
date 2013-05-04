@@ -14,8 +14,6 @@
 		3E3A5D0B171C6AEC006D5370 /* larcher_icon_144x144.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E3A5D0A171C6AEC006D5370 /* larcher_icon_144x144.png */; };
 		3E926EC9173423EE00BFA90D /* AchievementsLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E926EC8173423EE00BFA90D /* AchievementsLayer.m */; };
 		3E926ECC1734255700BFA90D /* AchievementNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E926ECB1734255700BFA90D /* AchievementNode.m */; };
-		3E99E2AA173569D100166046 /* AchievementsLayer.ccb in Resources */ = {isa = PBXBuildFile; fileRef = 3E99E2A8173569D100166046 /* AchievementsLayer.ccb */; };
-		3E99E2AB173569D100166046 /* AchievementNode.ccb in Resources */ = {isa = PBXBuildFile; fileRef = 3E99E2A9173569D100166046 /* AchievementNode.ccb */; };
 		3EB8A37E17161AF800666626 /* defaultEmitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EB8A37D17161AF800666626 /* defaultEmitter.png */; };
 		3EB8A38017161CFA00666626 /* fire.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EB8A37F17161CFA00666626 /* fire.png */; };
 		3EDD9F231715DF2900C6A622 /* background-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EDD9F221715DF2900C6A622 /* background-ipadhd.png */; };
@@ -301,8 +299,6 @@
 		3E926EC8173423EE00BFA90D /* AchievementsLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AchievementsLayer.m; sourceTree = "<group>"; };
 		3E926ECA1734255700BFA90D /* AchievementNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AchievementNode.h; sourceTree = "<group>"; };
 		3E926ECB1734255700BFA90D /* AchievementNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AchievementNode.m; sourceTree = "<group>"; };
-		3E99E2A8173569D100166046 /* AchievementsLayer.ccb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = AchievementsLayer.ccb; sourceTree = "<group>"; };
-		3E99E2A9173569D100166046 /* AchievementNode.ccb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = AchievementNode.ccb; sourceTree = "<group>"; };
 		3EB8A37D17161AF800666626 /* defaultEmitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultEmitter.png; sourceTree = "<group>"; };
 		3EB8A37F17161CFA00666626 /* fire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fire.png; sourceTree = "<group>"; };
 		3EDD9F221715DF2900C6A622 /* background-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-ipadhd.png"; sourceTree = "<group>"; };
@@ -1608,9 +1604,9 @@
 				9C85F64B1709D59800EECB83 /* LevelLayer.m */,
 				3EE2F96817231EC40084DF2F /* LevelSelectLayer.h */,
 				3EE2F96917231EC40084DF2F /* LevelSelectLayer.m */,
-				3E926EC7173423EE00BFA90D /* AchievementsLayer.h */,
 				3E926ECA1734255700BFA90D /* AchievementNode.h */,
 				3E926ECB1734255700BFA90D /* AchievementNode.m */,
+				3E926EC7173423EE00BFA90D /* AchievementsLayer.h */,
 				3E926EC8173423EE00BFA90D /* AchievementsLayer.m */,
 				8B0E712E171DD446004D212C /* SkillTreeLayer.h */,
 				8B0E712F171DD447004D212C /* SkillTreeLayer.m */,

@@ -7,6 +7,11 @@
 //
 
 #import "AchievementsLayer.h"
+#import "SpriteManager.h"
+#import "SimpleAudioEngine.h"
+#import "Config.h"
+#import "GameManager.h"
+#import "GameState.h"
 
 @implementation AchievementsLayer
 
@@ -47,21 +52,21 @@
     [Achievements addObject:_achievement14];
     [Achievements addObject:_achievement15];
     
-//    int prevStars = 0;
-//    for (int i = 1; i <= [Achievements count]; i++)
-//    {
-//        LevelThumbnail * level = [Achievements objectAtIndex:i-1];
-//        [level setLevel:i];
-//        int stateStars = [[[[GameState shared] achievementsStates] objectAtIndex:i-1] intValue];
-//        [level setNumberStars:stateStars];
-//        if ((stateStars > 0 || i == 1 || prevStars > 0) && i <= 10) {// Hardcoded stuff for now
-//            [level setIsEnabled:YES];
-//            prevStars = stateStars;
-//        } else
+    for (int i = 1; i <= [Achievements count]; i++)
+    {
+//        LevelThumbnail * level = [levelButtons objectAtIndex:i-1];
+        AchievementNode * achievement = [Achievements objectAtIndex:i-1];
+        
+        int achievementState = [[[[GameState shared] achievementState] objectAtIndex:i-1] intValue];
+        
+        if (achievementState) {// Hardcoded stuff for now
+//            [achievement setIsEnabled:YES];
+        } else
+            NSLog(@"cenas");
 //            [level setIsEnabled:NO];
 //        [level initLevel];
 //        [level setThumbnail:[NSString stringWithFormat:@"level%d.png",i]];
-//    }
+    }
 }
 
 
