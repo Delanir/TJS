@@ -23,6 +23,9 @@
 #define STARCOST3 3
 #define DEFAULTSKILLPOINTS 18
 
+#define WALLREPAIRCOST 500
+#define WALLREPAIRPERCENTAGE 0.25
+
 
 typedef enum
 {
