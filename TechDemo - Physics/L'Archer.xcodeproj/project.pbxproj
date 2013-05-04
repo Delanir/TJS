@@ -1575,6 +1575,8 @@
 		9C9D85991733FF690071B7C2 /* CocosBuilder */ = {
 			isa = PBXGroup;
 			children = (
+				3E99E2A8173569D100166046 /* AchievementsLayer.ccb */,
+				3E99E2A9173569D100166046 /* AchievementNode.ccb */,
 				8B8C2D9B1719DB9300B50C1E /* MainMenu.ccbi */,
 				8BFC3F0E17204440000161FD /* GameOver.ccbi */,
 				8C72C2A51729687B009EF8C1 /* GameWin.ccbi */,
@@ -1780,6 +1782,8 @@
 				8BC2107417343D6500B875B2 /* CitySubMenu.ccbi in Resources */,
 				8B3854D317355A900044F4F3 /* stick1.png in Resources */,
 				8B3854D417355A900044F4F3 /* stick2.png in Resources */,
+				3E99E2AA173569D100166046 /* AchievementsLayer.ccb in Resources */,
+				3E99E2AB173569D100166046 /* AchievementNode.ccb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

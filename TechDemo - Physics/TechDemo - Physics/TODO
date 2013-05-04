@@ -10,10 +10,7 @@
 - Buildings e lógica respectiva
 - Utilização do Flurry
 
-- No game over:
-    - Retry
-- No win:
-    - Play next chapter
+
 
 - Definir bonus passivos dos níveis do Yuri
 - Mostrar e calcular score no hud
@@ -49,8 +46,7 @@ João M:
     - Estado dos achievements - é preciso implementar primeiro
     - Estado do leaderboard - é preciso implementar primeiro
 
-- BURACOS DE MEMORIA ARGHHGHGHGH
-    - Nao percebo a skill tree
+
 
 (Para usar o dell)
 - som do impacto tem de ser corrigido
@@ -77,8 +73,15 @@ Afterburner:
 - Loading Screen (caso se justifique) com base em chunks
 - Passar todas as constantes para o constants.h
     
-    
-
+/**           /**
+*               *
+* Coisas possivelmente deixadas *
+*               *
+**/           **/    
+- No game over:
+    - Retry
+- No win:
+    - Play next chapter
 
 /**           /**
 *               *
@@ -128,4 +131,6 @@ Afterburner:
 - Nova variável com total do skill points
 - Implementar skill tree - implementar a lógica e ver se fazemos uma spritesheet de bocadinhos para melhorar a performance (Daniela)
 - Inimigos novos: Fire Elemental, Wraith, Skeleton, Black Dragon
+- BURACOS DE MEMORIA ARGHHGHGHGH
+    - Nao percebo a skill tree
 
