@@ -74,9 +74,6 @@
 }
 
 
-
-
-
 - (void) pressedGoToMainMenu:(id)sender
 {
     [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"click"]];
