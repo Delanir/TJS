@@ -140,6 +140,8 @@ static int current_level = -1;
     [rm reset];
 }
 
+
+
 - (void) prepSkillTreeChanges
 {
     NSMutableArray *skill = [[GameState shared] skillStates];
@@ -150,7 +152,6 @@ static int current_level = -1;
      * MAIN BRANCHES
      *
      */
-    
     
 /*
  Vamos fazer assim:

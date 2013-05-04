@@ -82,7 +82,8 @@ typedef enum
     kSlowStimulus,
     kDOTStimulus,
     kDamageStimulus
-} stimulusType;
+}
+stimulusType;
 
 
 typedef enum
@@ -115,7 +116,8 @@ typedef enum
     kMarksmanElement1 = 27,
     kMarksmanElement2 = 26,
     kMarksmanElement3 = 25
-} skillTreeType;
+}
+skillTreeType;
 
 
 
