@@ -122,9 +122,15 @@
         
         CCMenuItem *buyButton = [CCMenuItemImage itemWithNormalSprite:buyButtonSprite1 selectedSprite:buyButtonSprite2 target:self selector:@selector(buyArrows)];
         
-        buyButton.position = ccp(332, 64);
+        CCSprite * repairButtonSprite1 = [CCSprite spriteWithSpriteFrameName:@"repair.png"];
+        CCSprite * repairButtonSprite2 = [CCSprite spriteWithSpriteFrameName:@"repairPressed.png"];
         
-        CCMenu *buttonsMenu = [CCMenu menuWithItems:iceToggleButton, fireToggleButton, pushBackToggleButton, buyButton, nil];
+        CCMenuItem *repairButton = [CCMenuItemImage itemWithNormalSprite:repairButtonSprite1 selectedSprite:repairButtonSprite2 target:self selector:@selector(repairWall)];
+        
+        buyButton.position = ccp(332, 64);
+        repairButton.position = ccp(432,64);
+        
+        CCMenu *buttonsMenu = [CCMenu menuWithItems:iceToggleButton, fireToggleButton, pushBackToggleButton, buyButton, repairButton, nil];
         buttonsMenu.position = CGPointZero;
         //Power Buttons End
         
