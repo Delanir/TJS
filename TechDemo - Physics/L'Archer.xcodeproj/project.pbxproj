@@ -49,6 +49,7 @@
 		8B221469173338540055BF51 /* SkillTreeSubMenu.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 8B221467173338540055BF51 /* SkillTreeSubMenu.ccbi */; };
 		8B3854D317355A900044F4F3 /* stick1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B3854D117355A900044F4F3 /* stick1.png */; };
 		8B3854D417355A900044F4F3 /* stick2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B3854D217355A900044F4F3 /* stick2.png */; };
+		8B3854DE17357C690044F4F3 /* skillTreeSS-ipadhd.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8BC2106117342A7900B875B2 /* skillTreeSS-ipadhd.plist */; };
 		8B3FF0E01732B60600D2212B /* FireSubSkillTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3FF0DF1732B60600D2212B /* FireSubSkillTree.m */; };
 		8B43948D17341C30008BAB1D /* skillTreeSS.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B43948917341C30008BAB1D /* skillTreeSS.plist */; };
 		8B43948E17341C30008BAB1D /* skillTreeSS.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B43948A17341C30008BAB1D /* skillTreeSS.png */; };
@@ -1575,8 +1576,6 @@
 		9C9D85991733FF690071B7C2 /* CocosBuilder */ = {
 			isa = PBXGroup;
 			children = (
-				3E99E2A8173569D100166046 /* AchievementsLayer.ccb */,
-				3E99E2A9173569D100166046 /* AchievementNode.ccb */,
 				8B8C2D9B1719DB9300B50C1E /* MainMenu.ccbi */,
 				8BFC3F0E17204440000161FD /* GameOver.ccbi */,
 				8C72C2A51729687B009EF8C1 /* GameWin.ccbi */,
@@ -1782,8 +1781,7 @@
 				8BC2107417343D6500B875B2 /* CitySubMenu.ccbi in Resources */,
 				8B3854D317355A900044F4F3 /* stick1.png in Resources */,
 				8B3854D417355A900044F4F3 /* stick2.png in Resources */,
-				3E99E2AA173569D100166046 /* AchievementsLayer.ccb in Resources */,
-				3E99E2AB173569D100166046 /* AchievementNode.ccb in Resources */,
+				8B3854DE17357C690044F4F3 /* skillTreeSS-ipadhd.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
