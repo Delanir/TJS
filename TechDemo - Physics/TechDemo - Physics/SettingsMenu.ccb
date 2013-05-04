@@ -306,7 +306,7 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
+									<string>MenuSpritesheet.plist</string>
 									<string>SpeakerIcon_UP.png</string>
 								</array>
 							</dict>
@@ -317,8 +317,8 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
-									<string>SpeakerIcon_DOWN.png</string>
+									<string>MenuSpritesheet.plist</string>
+									<string>SpeakerIcon_UP.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -328,11 +328,13 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
+									<string>MenuSpritesheet.plist</string>
 									<string>SpeakerIcon_DOWN.png</string>
 								</array>
 							</dict>
 						</array>
+						<key>selected</key>
+						<true/>
 					</dict>
 					<dict>
 						<key>baseClass</key>
@@ -357,7 +359,7 @@
 								<key>value</key>
 								<array>
 									<real>0.0</real>
-									<real>-200</real>
+									<real>-162</real>
 									<integer>0</integer>
 								</array>
 							</dict>
@@ -379,8 +381,8 @@
 								<string>ScaleLock</string>
 								<key>value</key>
 								<array>
-									<real>1</real>
-									<real>1</real>
+									<real>0.5</real>
+									<real>0.5</real>
 									<false/>
 									<integer>0</integer>
 								</array>
@@ -419,8 +421,8 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
-									<string>buyarrow.png</string>
+									<string>MenuSpritesheet.plist</string>
+									<string>fleurBlack.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -430,8 +432,8 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
-									<string>buyarrowPressed.png</string>
+									<string>MenuSpritesheet.plist</string>
+									<string>fleurDor.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -610,7 +612,7 @@
 						<string>SpriteFrame</string>
 						<key>value</key>
 						<array>
-							<string></string>
+							<string>MenuSpritesheet.plist</string>
 							<string>SpeakerIcon_UP_SOUND.png</string>
 						</array>
 					</dict>
@@ -701,9 +703,9 @@
 						<string>Color3</string>
 						<key>value</key>
 						<array>
-							<integer>98</integer>
-							<integer>50</integer>
-							<integer>24</integer>
+							<integer>237</integer>
+							<integer>122</integer>
+							<integer>52</integer>
 						</array>
 					</dict>
 					<dict>
@@ -743,8 +745,6 @@
 						<string>Reset</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>

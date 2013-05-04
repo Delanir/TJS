@@ -325,8 +325,8 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
-									<string>MainMenu/playButton.png</string>
+									<string>MenuSpritesheet.plist</string>
+									<string>playButton.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -336,8 +336,8 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
-									<string>MainMenu/playButton.png</string>
+									<string>MenuSpritesheet.plist</string>
+									<string>playButton.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -347,8 +347,8 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
-									<string>MainMenu/playButton.png</string>
+									<string>MenuSpritesheet.plist</string>
+									<string>playButton.png</string>
 								</array>
 							</dict>
 						</array>
@@ -540,8 +540,8 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
-									<string>MainMenu/buttonSettings.png</string>
+									<string>MenuSpritesheet.plist</string>
+									<string>buttonSettings.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -551,8 +551,8 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
-									<string>MainMenu/buttonSettingsPressed.png</string>
+									<string>MenuSpritesheet.plist</string>
+									<string>buttonSettingsPressed.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -562,8 +562,8 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
-									<string>MainMenu/buttonSettingsPressed.png</string>
+									<string>MenuSpritesheet.plist</string>
+									<string>buttonSettingsPressed.png</string>
 								</array>
 							</dict>
 						</array>
@@ -757,8 +757,8 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
-									<string>MainMenu/buttonSkillTree.png</string>
+									<string>MenuSpritesheet.plist</string>
+									<string>buttonSkillTree.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -768,8 +768,8 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
-									<string>MainMenu/buttonSkillTreePressed.png</string>
+									<string>MenuSpritesheet.plist</string>
+									<string>buttonSkillTreePressed.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -779,8 +779,8 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
-									<string>MainMenu/buttonSkillTreePressed.png</string>
+									<string>MenuSpritesheet.plist</string>
+									<string>buttonSettingsPressed.png</string>
 								</array>
 							</dict>
 						</array>
@@ -972,8 +972,8 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
-									<string>MainMenu/buttonAchievements.png</string>
+									<string>MenuSpritesheet.plist</string>
+									<string>buttonAchievements.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -983,8 +983,8 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
-									<string>MainMenu/buttonAchievementsPressed.png</string>
+									<string>MenuSpritesheet.plist</string>
+									<string>buttonAchievementsPressed.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -994,8 +994,8 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
-									<string>MainMenu/buttonAchievementsPressed.png</string>
+									<string>MenuSpritesheet.plist</string>
+									<string>buttonAchievementsPressed.png</string>
 								</array>
 							</dict>
 						</array>
@@ -1187,8 +1187,8 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
-									<string>MainMenu/buttonLeaderboard.png</string>
+									<string>MenuSpritesheet.plist</string>
+									<string>buttonLeaderboard.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -1198,8 +1198,8 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
-									<string>MainMenu/buttonLeaderboardPressed.png</string>
+									<string>MenuSpritesheet.plist</string>
+									<string>buttonLeaderboardPressed.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -1209,8 +1209,8 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
-									<string>MainMenu/buttonLeaderboardPressed.png</string>
+									<string>MenuSpritesheet.plist</string>
+									<string>buttonLeaderboardPressed.png</string>
 								</array>
 							</dict>
 						</array>

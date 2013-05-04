@@ -8,6 +8,7 @@
 
 #import "ResourceManager.h"
 #import "GameState.h"
+#import "SpriteManager.h"
 
 @implementation ResourceManager
 
@@ -37,6 +38,22 @@ static ResourceManager* _sharedSingleton = nil;
 	}
     
 	return nil;
+}
+
++(void) loadLevelSprites
+{
+    [[CCSpriteFrameCache sharedSpriteFrameCache] removeSpriteFrames];
+    [[CCTextureCache sharedTextureCache] removeAllTextures];
+    
+    [[SpriteManager shared] addSpritesToSpriteFrameCacheWithFile:@"lvl1spritesheet.plist" andBatchSpriteSheet:@"lvl1spritesheet.png"];
+    [[SpriteManager shared] addAnimationFromFile:@"peasant_anim.plist"];
+    [[SpriteManager shared] addAnimationFromFile:@"fairiedragon_anim.plist"];
+    [[SpriteManager shared] addAnimationFromFile:@"zealot_anim.plist"];
+    [[SpriteManager shared] addAnimationFromFile:@"yurie_anim.plist"];
+    [[SpriteManager shared] addAnimationFromFile:@"fireelemental_anim.plist"];
+    [[SpriteManager shared] addAnimationFromFile:@"wraith_anim.plist"];
+    [[SpriteManager shared] addAnimationFromFile:@"skeleton_anim.plist"];
+    [[SpriteManager shared] addAnimationFromFile:@"blackdragon_anim.plist"];
 }
 
 -(id)init

@@ -23,7 +23,6 @@ static GameState* _sharedSingleton = nil;
 			[[self alloc] init];
 		return _sharedSingleton;
 	}
-    
 	return nil;
 }
 

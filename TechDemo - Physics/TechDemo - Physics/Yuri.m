@@ -12,11 +12,16 @@
 
 @implementation Yuri
 
-@synthesize  readyToFire, level;
+@synthesize  readyToFire, level, strength, critical, criticalBonus, speedBonus, bonusActive, strengthBonus;
 
 -(id) init
 {
     level = [self determineLevel];
+    
+    [self initBonuses];
+    
+    strength = kYuriBaseStrength * level * strengthBonus;
+    
     if(self = [super initWithSprite:[NSString stringWithFormat:@"y_lvl%d_06.png",level ]])
     {
         readyToFire = YES;
@@ -27,12 +32,13 @@
                              [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:[NSString stringWithFormat:@"y_attack_front_lvl%d",level ] ]] times:1]];
         [self setShootDown:[CCRepeat actionWithAction:
                             [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:[NSString stringWithFormat:@"y_attack_down_lvl%d",level ] ]] times:1]];
-        //[self setIdle:[CCRepeatForever actionWithAction:
-        //               [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"y_idle_1" ]]]];
-        
-        //[[self sprite] runAction:[self idle]];
     }
     return self;
+}
+
+-(void) initBonuses
+{
+    strengthBonus = 1.0f;
 }
 
 
@@ -73,14 +79,13 @@
     [self setReadyToFire:YES];
 }
 
-
 -(void) changeFireRate: (float) fireRate
 {
     //setup animations
     [[[CCAnimationCache sharedAnimationCache] animationByName:@"y_attack_up" ] setDelayPerUnit:fireRate];
     [[[CCAnimationCache sharedAnimationCache] animationByName:@"y_attack_front" ] setDelayPerUnit:fireRate];
     [[[CCAnimationCache sharedAnimationCache] animationByName:@"y_attack_down" ] setDelayPerUnit:fireRate];
-    
+
     [[self sprite] stopAllActions];
     
     [self setShootUp:[CCRepeat actionWithAction:

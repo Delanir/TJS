@@ -19,7 +19,16 @@
     double lastHealth, lastMana;
     CCLabelTTF *label1, *label2;
     CCProgressTimer * manaProgress, * healthProgress;
+    CCMenuItemToggle *fireToggleButton, *iceToggleButton, *pushBackToggleButton;
 }
+
+@property (nonatomic, retain) CCMenuItemToggle * fireToggleButton;
+@property (nonatomic, retain) CCMenuItemToggle * iceToggleButton;
+@property (nonatomic, retain) CCMenuItemToggle * pushBackToggleButton;
+
+-(void) setFireToggleButtonActive;
+-(void) setIceToggleButtonActive;
+-(void) setPushbackToggleButtonActive;
 
 - (NSMutableArray *)buttonsPressed;
 - (void)updateArrows;

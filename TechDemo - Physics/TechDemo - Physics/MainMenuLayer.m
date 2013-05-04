@@ -33,8 +33,8 @@
 - (void)onExit{
     [self removeAllChildrenWithCleanup:YES];
     
-    [[CCSpriteFrameCache sharedSpriteFrameCache] removeUnusedSpriteFrames];
-    [[CCTextureCache sharedTextureCache] removeUnusedTextures];
+    //[[CCSpriteFrameCache sharedSpriteFrameCache] removeUnusedSpriteFrames];
+    //[[CCTextureCache sharedTextureCache] removeUnusedTextures];
     [super onExit];
 }
 

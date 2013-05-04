@@ -110,7 +110,7 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
+									<string>MenuSpritesheet.plist</string>
 									<string>fleurDor.png</string>
 								</array>
 							</dict>
@@ -121,7 +121,7 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
+									<string>MenuSpritesheet.plist</string>
 									<string>fleurDor.png</string>
 								</array>
 							</dict>
@@ -132,13 +132,11 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
+									<string>MenuSpritesheet.plist</string>
 									<string>fleurBlack.png</string>
 								</array>
 							</dict>
 						</array>
-						<key>selected</key>
-						<true/>
 					</dict>
 				</array>
 				<key>customClass</key>
@@ -327,7 +325,7 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
+									<string>MenuSpritesheet.plist</string>
 									<string>fleurDor.png</string>
 								</array>
 							</dict>
@@ -338,7 +336,7 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
+									<string>MenuSpritesheet.plist</string>
 									<string>fleurDor.png</string>
 								</array>
 							</dict>
@@ -349,7 +347,7 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
+									<string>MenuSpritesheet.plist</string>
 									<string>fleurBlack.png</string>
 								</array>
 							</dict>
@@ -542,7 +540,7 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
+									<string>MenuSpritesheet.plist</string>
 									<string>fleurDor.png</string>
 								</array>
 							</dict>
@@ -553,7 +551,7 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
+									<string>MenuSpritesheet.plist</string>
 									<string>fleurDor.png</string>
 								</array>
 							</dict>
@@ -564,11 +562,13 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
+									<string>MenuSpritesheet.plist</string>
 									<string>fleurBlack.png</string>
 								</array>
 							</dict>
 						</array>
+						<key>selected</key>
+						<true/>
 					</dict>
 				</array>
 				<key>customClass</key>

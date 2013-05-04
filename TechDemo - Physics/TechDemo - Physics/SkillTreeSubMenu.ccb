@@ -254,7 +254,7 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
+									<string>MenuSpritesheet.plist</string>
 									<string>fleurBlack.png</string>
 								</array>
 							</dict>
@@ -265,7 +265,7 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
+									<string>MenuSpritesheet.plist</string>
 									<string>fleurDor.png</string>
 								</array>
 							</dict>
@@ -276,7 +276,7 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
+									<string>MenuSpritesheet.plist</string>
 									<string>fleurDor.png</string>
 								</array>
 							</dict>
@@ -367,7 +367,7 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
+									<string>MenuSpritesheet.plist</string>
 									<string>fleurBlack.png</string>
 								</array>
 							</dict>
@@ -378,7 +378,7 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
+									<string>MenuSpritesheet.plist</string>
 									<string>fleurDor.png</string>
 								</array>
 							</dict>
@@ -389,7 +389,7 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
+									<string>MenuSpritesheet.plist</string>
 									<string>fleurDor.png</string>
 								</array>
 							</dict>
@@ -480,7 +480,7 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
+									<string>MenuSpritesheet.plist</string>
 									<string>fleurBlack.png</string>
 								</array>
 							</dict>
@@ -491,7 +491,7 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
+									<string>MenuSpritesheet.plist</string>
 									<string>fleurDor.png</string>
 								</array>
 							</dict>
@@ -502,7 +502,7 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
+									<string>MenuSpritesheet.plist</string>
 									<string>fleurDor.png</string>
 								</array>
 							</dict>
@@ -520,7 +520,7 @@
 						<key>memberVarAssignmentName</key>
 						<string>fireB3</string>
 						<key>memberVarAssignmentType</key>
-						<integer>0</integer>
+						<integer>1</integer>
 						<key>properties</key>
 						<array>
 							<dict>
@@ -593,7 +593,7 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
+									<string>MenuSpritesheet.plist</string>
 									<string>fleurBlack.png</string>
 								</array>
 							</dict>
@@ -604,7 +604,7 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
+									<string>MenuSpritesheet.plist</string>
 									<string>fleurDor.png</string>
 								</array>
 							</dict>
@@ -615,7 +615,7 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
+									<string>MenuSpritesheet.plist</string>
 									<string>fleurDor.png</string>
 								</array>
 							</dict>
@@ -706,7 +706,7 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
+									<string>MenuSpritesheet.plist</string>
 									<string>fleurBlack.png</string>
 								</array>
 							</dict>
@@ -717,7 +717,7 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
+									<string>MenuSpritesheet.plist</string>
 									<string>fleurDor.png</string>
 								</array>
 							</dict>
@@ -728,7 +728,7 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
+									<string>MenuSpritesheet.plist</string>
 									<string>fleurDor.png</string>
 								</array>
 							</dict>
@@ -819,7 +819,7 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
+									<string>MenuSpritesheet.plist</string>
 									<string>fleurBlack.png</string>
 								</array>
 							</dict>
@@ -830,7 +830,7 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
+									<string>MenuSpritesheet.plist</string>
 									<string>fleurDor.png</string>
 								</array>
 							</dict>
@@ -841,7 +841,7 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
+									<string>MenuSpritesheet.plist</string>
 									<string>fleurDor.png</string>
 								</array>
 							</dict>
@@ -932,7 +932,7 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
+									<string>MenuSpritesheet.plist</string>
 									<string>fleurBlack.png</string>
 								</array>
 							</dict>
@@ -943,7 +943,7 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
+									<string>MenuSpritesheet.plist</string>
 									<string>fleurDor.png</string>
 								</array>
 							</dict>
@@ -954,7 +954,7 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
+									<string>MenuSpritesheet.plist</string>
 									<string>fleurDor.png</string>
 								</array>
 							</dict>
@@ -1045,8 +1045,8 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
-									<string>MainMenu/buttonSkillTree.png</string>
+									<string>MenuSpritesheet.plist</string>
+									<string>buttonSkillTree.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -1056,8 +1056,8 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
-									<string>MainMenu/buttonSkillTreePressed.png</string>
+									<string>MenuSpritesheet.plist</string>
+									<string>buttonSkillTreePressed.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -1067,8 +1067,8 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
-									<string>MainMenu/buttonSkillTreePressed.png</string>
+									<string>MenuSpritesheet.plist</string>
+									<string>buttonSkillTreePressed.png</string>
 								</array>
 							</dict>
 						</array>
@@ -1294,7 +1294,7 @@
 						<key>type</key>
 						<string>Text</string>
 						<key>value</key>
-						<string>7</string>
+						<string>3</string>
 					</dict>
 				</array>
 			</dict>
@@ -1422,7 +1422,7 @@
 						<key>type</key>
 						<string>Text</string>
 						<key>value</key>
-						<string>7</string>
+						<string>3</string>
 					</dict>
 				</array>
 			</dict>
@@ -1550,7 +1550,7 @@
 						<key>type</key>
 						<string>Text</string>
 						<key>value</key>
-						<string>7</string>
+						<string>3</string>
 					</dict>
 				</array>
 			</dict>
@@ -1678,7 +1678,7 @@
 						<key>type</key>
 						<string>Text</string>
 						<key>value</key>
-						<string>5</string>
+						<string>2</string>
 					</dict>
 				</array>
 			</dict>
@@ -1806,7 +1806,7 @@
 						<key>type</key>
 						<string>Text</string>
 						<key>value</key>
-						<string>5</string>
+						<string>2</string>
 					</dict>
 				</array>
 			</dict>
@@ -1934,7 +1934,7 @@
 						<key>type</key>
 						<string>Text</string>
 						<key>value</key>
-						<string>5</string>
+						<string>2</string>
 					</dict>
 				</array>
 			</dict>
@@ -2062,7 +2062,7 @@
 						<key>type</key>
 						<string>Text</string>
 						<key>value</key>
-						<string>2</string>
+						<string>1</string>
 					</dict>
 				</array>
 			</dict>
@@ -2088,8 +2088,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>517</real>
-							<real>201</real>
+							<real>515</real>
+							<real>242</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -2111,8 +2111,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
-							<real>1</real>
+							<real>0.40000000596046448</real>
+							<real>0.30000001192092896</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -2340,8 +2340,6 @@
 						<string>fire.png</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>
@@ -2399,6 +2397,8 @@
 				<false/>
 			</dict>
 		</array>
+		<key>selected</key>
+		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>

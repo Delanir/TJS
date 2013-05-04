@@ -29,46 +29,15 @@
 		3EE2F9641723175E0084DF2F /* StarsNode.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 3EE2F9611723175E0084DF2F /* StarsNode.ccbi */; };
 		3EE2F9671723178C0084DF2F /* LevelThumbnail.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE2F9661723178C0084DF2F /* LevelThumbnail.m */; };
 		3EE2F96A17231EC40084DF2F /* LevelSelectLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE2F96917231EC40084DF2F /* LevelSelectLayer.m */; };
-		3EE2F96C1723287F0084DF2F /* keylock.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EE2F96B1723287F0084DF2F /* keylock.png */; };
 		3EE9FE1417256DAD009718EC /* LevelSelectLayer.ccb in Resources */ = {isa = PBXBuildFile; fileRef = 3EE9FE1317256DAD009718EC /* LevelSelectLayer.ccb */; };
 		3EEB67A017234BC2005C58E9 /* PauseMenu.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 3EEB679F17234BC2005C58E9 /* PauseMenu.ccbi */; };
 		3EEB67A317234C1B005C58E9 /* PauseHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EEB67A217234C1A005C58E9 /* PauseHUD.m */; };
 		8B0E710A171DCCB9004D212C /* Background z0.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E70E6171DCCB9004D212C /* Background z0.png */; };
-		8B0E710B171DCCB9004D212C /* City - branch1 - z13.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E70E7171DCCB9004D212C /* City - branch1 - z13.png */; };
-		8B0E710C171DCCB9004D212C /* City - branch2 - z14.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E70E8171DCCB9004D212C /* City - branch2 - z14.png */; };
-		8B0E710D171DCCB9004D212C /* City - branch3 z12.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E70E9171DCCB9004D212C /* City - branch3 z12.png */; };
-		8B0E710E171DCCB9004D212C /* City - el1 z5.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E70EA171DCCB9004D212C /* City - el1 z5.png */; };
-		8B0E710F171DCCB9004D212C /* City - el2 z4.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E70EB171DCCB9004D212C /* City - el2 z4.png */; };
-		8B0E7110171DCCB9004D212C /* City - el3 z2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E70EC171DCCB9004D212C /* City - el3 z2.png */; };
-		8B0E7111171DCCB9004D212C /* City - Main branch z15.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E70ED171DCCB9004D212C /* City - Main branch z15.png */; };
-		8B0E7112171DCCB9004D212C /* City - Symbol z34.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E70EE171DCCB9004D212C /* City - Symbol z34.png */; };
-		8B0E7113171DCCB9004D212C /* Fire - branch 1 z8.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E70EF171DCCB9004D212C /* Fire - branch 1 z8.png */; };
-		8B0E7114171DCCB9004D212C /* Fire - branch2 z9.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E70F0171DCCB9004D212C /* Fire - branch2 z9.png */; };
-		8B0E7115171DCCB9004D212C /* Fire - branch3 z7.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E70F1171DCCB9004D212C /* Fire - branch3 z7.png */; };
-		8B0E7116171DCCB9004D212C /* Fire - el1 z11.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E70F2171DCCB9004D212C /* Fire - el1 z11.png */; };
 		8B0E7117171DCCB9004D212C /* Fire - el2 z35.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E70F3171DCCB9004D212C /* Fire - el2 z35.png */; };
 		8B0E7118171DCCB9004D212C /* Fire - el3 z6.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E70F4171DCCB9004D212C /* Fire - el3 z6.png */; };
-		8B0E7119171DCCB9004D212C /* Fire - Main branch z10.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E70F5171DCCB9004D212C /* Fire - Main branch z10.png */; };
-		8B0E711A171DCCB9004D212C /* Fire - Symbol z32.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E70F6171DCCB9004D212C /* Fire - Symbol z32.png */; };
-		8B0E711B171DCCB9004D212C /* Ice - branch1 z17.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E70F7171DCCB9004D212C /* Ice - branch1 z17.png */; };
-		8B0E711C171DCCB9004D212C /* Ice - branch2 z18.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E70F8171DCCB9004D212C /* Ice - branch2 z18.png */; };
-		8B0E711D171DCCB9004D212C /* Ice - branch3 z16.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E70F9171DCCB9004D212C /* Ice - branch3 z16.png */; };
-		8B0E711E171DCCB9004D212C /* Ice - el1 z1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E70FA171DCCB9004D212C /* Ice - el1 z1.png */; };
-		8B0E711F171DCCB9004D212C /* Ice - el2 z3.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E70FB171DCCB9004D212C /* Ice - el2 z3.png */; };
-		8B0E7120171DCCB9004D212C /* Ice - el3 z24.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E70FC171DCCB9004D212C /* Ice - el3 z24.png */; };
-		8B0E7121171DCCB9004D212C /* Ice - Main branch z19.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E70FD171DCCB9004D212C /* Ice - Main branch z19.png */; };
-		8B0E7122171DCCB9004D212C /* Ice - Symbol z31.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E70FE171DCCB9004D212C /* Ice - Symbol z31.png */; };
 		8B0E7123171DCCB9004D212C /* Main Tree Branch - el1 z27.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E70FF171DCCB9004D212C /* Main Tree Branch - el1 z27.png */; };
 		8B0E7124171DCCB9004D212C /* Main Tree Branch - el2 z30.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E7100171DCCB9004D212C /* Main Tree Branch - el2 z30.png */; };
 		8B0E7125171DCCB9004D212C /* Main Tree Branch z25.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E7101171DCCB9004D212C /* Main Tree Branch z25.png */; };
-		8B0E7126171DCCB9004D212C /* Marksman - branch1 z22.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E7102171DCCB9004D212C /* Marksman - branch1 z22.png */; };
-		8B0E7127171DCCB9004D212C /* Marksman - branch2 z20.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E7103171DCCB9004D212C /* Marksman - branch2 z20.png */; };
-		8B0E7128171DCCB9004D212C /* Marksman - branch3 z21.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E7104171DCCB9004D212C /* Marksman - branch3 z21.png */; };
-		8B0E7129171DCCB9004D212C /* Marksman - el1 z29.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E7105171DCCB9004D212C /* Marksman - el1 z29.png */; };
-		8B0E712A171DCCB9004D212C /* Marksman - el2 z28.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E7106171DCCB9004D212C /* Marksman - el2 z28.png */; };
-		8B0E712B171DCCB9004D212C /* Marksman - el3 z26.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E7107171DCCB9004D212C /* Marksman - el3 z26.png */; };
-		8B0E712C171DCCB9004D212C /* Marksman - Main branch z23.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E7108171DCCB9004D212C /* Marksman - Main branch z23.png */; };
-		8B0E712D171DCCB9004D212C /* Marksman Symbol - z33.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E7109171DCCB9004D212C /* Marksman Symbol - z33.png */; };
 		8B0E7130171DD447004D212C /* SkillTreeLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0E712F171DD447004D212C /* SkillTreeLayer.m */; };
 		8B1EC88917318C5500B00DB6 /* shout01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8B1EC88417318C5500B00DB6 /* shout01.mp3 */; };
 		8B1EC88A17318C5500B00DB6 /* shout02.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8B1EC88517318C5500B00DB6 /* shout02.mp3 */; };
@@ -79,11 +48,12 @@
 		8B1EC8921731A91E00B00DB6 /* chant.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8B1EC8911731A91E00B00DB6 /* chant.mp3 */; };
 		8B1EC8941731B02C00B00DB6 /* killhim.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8B1EC8931731B02C00B00DB6 /* killhim.mp3 */; };
 		8B1EC8961731B92400B00DB6 /* buttonclick.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8B1EC8951731B92400B00DB6 /* buttonclick.mp3 */; };
-		8B2214651733380A0055BF51 /* ccbResources in Resources */ = {isa = PBXBuildFile; fileRef = 8B2214641733380A0055BF51 /* ccbResources */; };
 		8B221468173338540055BF51 /* SkillTreeLayer.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 8B221466173338540055BF51 /* SkillTreeLayer.ccbi */; };
 		8B221469173338540055BF51 /* SkillTreeSubMenu.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 8B221467173338540055BF51 /* SkillTreeSubMenu.ccbi */; };
 		8B3FF0E01732B60600D2212B /* FireSubSkillTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3FF0DF1732B60600D2212B /* FireSubSkillTree.m */; };
-		8B56089B171A251F00B14693 /* skilltree.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B560899171A251F00B14693 /* skilltree.png */; };
+		8B43948D17341C30008BAB1D /* skillTreeSS.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B43948917341C30008BAB1D /* skillTreeSS.plist */; };
+		8B43948E17341C30008BAB1D /* skillTreeSS.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B43948A17341C30008BAB1D /* skillTreeSS.png */; };
+		8B43949517341E0F008BAB1D /* skillTreeSS-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B43949317341E0F008BAB1D /* skillTreeSS-ipadhd.png */; };
 		8B79CDE1171F501D00E58EDD /* Hud.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B79CDE0171F501D00E58EDD /* Hud.m */; };
 		8B8C2D971719D8A700B50C1E /* MainMenuLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B8C2D961719D8A700B50C1E /* MainMenuLayer.m */; };
 		8B8C2D9C1719DB9300B50C1E /* MainMenu.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 8B8C2D9B1719DB9300B50C1E /* MainMenu.ccbi */; };
@@ -93,59 +63,23 @@
 		8B8C2DB91719DDBF00B50C1E /* CCBsequence.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B8C2DB11719DDA900B50C1E /* CCBsequence.m */; };
 		8B8C2DBA1719DDC200B50C1E /* CCBSequenceProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B8C2DB31719DDA900B50C1E /* CCBSequenceProperty.m */; };
 		8B8C2DBB1719DDC500B50C1E /* CCNode+CCBRelativePositioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B8C2DB51719DDA900B50C1E /* CCNode+CCBRelativePositioning.m */; };
-		8B8C2DC51719EA3F00B50C1E /* larcher_transparent_name.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B8C2DC01719EA3F00B50C1E /* larcher_transparent_name.png */; };
-		8BBB6A13171E00C90064B3CD /* City - Symbol z34_DOWN-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BBB6A11171E00C90064B3CD /* City - Symbol z34_DOWN-ipadhd.png */; };
-		8BBB6A14171E00C90064B3CD /* City - Symbol z34_UP-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BBB6A12171E00C90064B3CD /* City - Symbol z34_UP-ipadhd.png */; };
-		8BBB6A1C171E08CD0064B3CD /* SpeakerIcon_DOWN-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BBB6A16171E08CD0064B3CD /* SpeakerIcon_DOWN-ipadhd.png */; };
-		8BBB6A1D171E08CD0064B3CD /* SpeakerIcon_DOWN.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BBB6A17171E08CD0064B3CD /* SpeakerIcon_DOWN.png */; };
-		8BBB6A1E171E08CD0064B3CD /* SpeakerIcon_UP_SOUND-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BBB6A18171E08CD0064B3CD /* SpeakerIcon_UP_SOUND-ipadhd.png */; };
-		8BBB6A1F171E08CD0064B3CD /* SpeakerIcon_UP_SOUND.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BBB6A19171E08CD0064B3CD /* SpeakerIcon_UP_SOUND.png */; };
-		8BBB6A20171E08CD0064B3CD /* SpeakerIcon_UP-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BBB6A1A171E08CD0064B3CD /* SpeakerIcon_UP-ipadhd.png */; };
-		8BBB6A21171E08CD0064B3CD /* SpeakerIcon_UP.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BBB6A1B171E08CD0064B3CD /* SpeakerIcon_UP.png */; };
 		8BBB6A23171E09E30064B3CD /* SettingsMenu.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 8BBB6A22171E09E30064B3CD /* SettingsMenu.ccbi */; };
 		8BBB6A26171E0B240064B3CD /* SettingsMenuLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BBB6A25171E0B240064B3CD /* SettingsMenuLayer.m */; };
-		8BBB6A2B171E273C0064B3CD /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BBB6A27171E273B0064B3CD /* star.png */; };
-		8BBB6A2C171E273C0064B3CD /* star-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BBB6A28171E273C0064B3CD /* star-ipadhd.png */; };
-		8BBB6A2D171E273C0064B3CD /* starUP.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BBB6A29171E273C0064B3CD /* starUP.png */; };
-		8BBB6A2E171E273C0064B3CD /* starUP-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BBB6A2A171E273C0064B3CD /* starUP-ipadhd.png */; };
-		8BC00EFC171DEA4700A0DCD4 /* City - Symbol z34_DOWN.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC00EFA171DEA4700A0DCD4 /* City - Symbol z34_DOWN.png */; };
-		8BC00EFD171DEA4700A0DCD4 /* City - Symbol z34_UP.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC00EFB171DEA4700A0DCD4 /* City - Symbol z34_UP.png */; };
 		8BC00F29171DF82000A0DCD4 /* Background z0-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC00F05171DF81F00A0DCD4 /* Background z0-ipadhd.png */; };
-		8BC00F2A171DF82000A0DCD4 /* City - branch1 - z13-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC00F06171DF81F00A0DCD4 /* City - branch1 - z13-ipadhd.png */; };
-		8BC00F2B171DF82000A0DCD4 /* City - branch2 - z14-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC00F07171DF81F00A0DCD4 /* City - branch2 - z14-ipadhd.png */; };
-		8BC00F2C171DF82000A0DCD4 /* City - branch3 z12-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC00F08171DF81F00A0DCD4 /* City - branch3 z12-ipadhd.png */; };
-		8BC00F2D171DF82000A0DCD4 /* City - el1 z5-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC00F09171DF81F00A0DCD4 /* City - el1 z5-ipadhd.png */; };
-		8BC00F2E171DF82000A0DCD4 /* City - el2 z4-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC00F0A171DF81F00A0DCD4 /* City - el2 z4-ipadhd.png */; };
-		8BC00F2F171DF82000A0DCD4 /* City - el3 z2-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC00F0B171DF81F00A0DCD4 /* City - el3 z2-ipadhd.png */; };
-		8BC00F30171DF82000A0DCD4 /* City - Main branch z15-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC00F0C171DF81F00A0DCD4 /* City - Main branch z15-ipadhd.png */; };
-		8BC00F31171DF82000A0DCD4 /* City - Symbol z34-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC00F0D171DF81F00A0DCD4 /* City - Symbol z34-ipadhd.png */; };
-		8BC00F32171DF82000A0DCD4 /* Fire - branch 1 z8-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC00F0E171DF81F00A0DCD4 /* Fire - branch 1 z8-ipadhd.png */; };
-		8BC00F33171DF82000A0DCD4 /* Fire - branch2 z9-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC00F0F171DF81F00A0DCD4 /* Fire - branch2 z9-ipadhd.png */; };
-		8BC00F34171DF82000A0DCD4 /* Fire - branch3 z7-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC00F10171DF81F00A0DCD4 /* Fire - branch3 z7-ipadhd.png */; };
-		8BC00F35171DF82000A0DCD4 /* Fire - el1 z11-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC00F11171DF81F00A0DCD4 /* Fire - el1 z11-ipadhd.png */; };
 		8BC00F36171DF82000A0DCD4 /* Fire - el2 z35-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC00F12171DF81F00A0DCD4 /* Fire - el2 z35-ipadhd.png */; };
 		8BC00F37171DF82000A0DCD4 /* Fire - el3 z6-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC00F13171DF81F00A0DCD4 /* Fire - el3 z6-ipadhd.png */; };
-		8BC00F38171DF82000A0DCD4 /* Fire - Main branch z10-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC00F14171DF81F00A0DCD4 /* Fire - Main branch z10-ipadhd.png */; };
-		8BC00F39171DF82000A0DCD4 /* Fire - Symbol z32-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC00F15171DF81F00A0DCD4 /* Fire - Symbol z32-ipadhd.png */; };
-		8BC00F3A171DF82000A0DCD4 /* Ice - branch1 z17-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC00F16171DF81F00A0DCD4 /* Ice - branch1 z17-ipadhd.png */; };
-		8BC00F3B171DF82000A0DCD4 /* Ice - branch2 z18-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC00F17171DF81F00A0DCD4 /* Ice - branch2 z18-ipadhd.png */; };
-		8BC00F3C171DF82000A0DCD4 /* Ice - branch3 z16-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC00F18171DF81F00A0DCD4 /* Ice - branch3 z16-ipadhd.png */; };
-		8BC00F3D171DF82000A0DCD4 /* Ice - el1 z1-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC00F19171DF81F00A0DCD4 /* Ice - el1 z1-ipadhd.png */; };
-		8BC00F3E171DF82000A0DCD4 /* Ice - el2 z3-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC00F1A171DF81F00A0DCD4 /* Ice - el2 z3-ipadhd.png */; };
-		8BC00F3F171DF82000A0DCD4 /* Ice - el3 z24-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC00F1B171DF81F00A0DCD4 /* Ice - el3 z24-ipadhd.png */; };
-		8BC00F40171DF82000A0DCD4 /* Ice - Main branch z19-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC00F1C171DF81F00A0DCD4 /* Ice - Main branch z19-ipadhd.png */; };
-		8BC00F41171DF82000A0DCD4 /* Ice - Symbol z31-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC00F1D171DF81F00A0DCD4 /* Ice - Symbol z31-ipadhd.png */; };
 		8BC00F42171DF82000A0DCD4 /* Main Tree Branch - el1 z27-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC00F1E171DF81F00A0DCD4 /* Main Tree Branch - el1 z27-ipadhd.png */; };
 		8BC00F43171DF82000A0DCD4 /* Main Tree Branch - el2 z30-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC00F1F171DF81F00A0DCD4 /* Main Tree Branch - el2 z30-ipadhd.png */; };
 		8BC00F44171DF82000A0DCD4 /* Main Tree Branch z25-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC00F20171DF81F00A0DCD4 /* Main Tree Branch z25-ipadhd.png */; };
-		8BC00F45171DF82000A0DCD4 /* Marksman - branch1 z22-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC00F21171DF82000A0DCD4 /* Marksman - branch1 z22-ipadhd.png */; };
-		8BC00F46171DF82000A0DCD4 /* Marksman - branch2 z20-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC00F22171DF82000A0DCD4 /* Marksman - branch2 z20-ipadhd.png */; };
-		8BC00F47171DF82000A0DCD4 /* Marksman - branch3 z21-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC00F23171DF82000A0DCD4 /* Marksman - branch3 z21-ipadhd.png */; };
-		8BC00F48171DF82000A0DCD4 /* Marksman - el1 z29-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC00F24171DF82000A0DCD4 /* Marksman - el1 z29-ipadhd.png */; };
-		8BC00F49171DF82000A0DCD4 /* Marksman - el2 z28-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC00F25171DF82000A0DCD4 /* Marksman - el2 z28-ipadhd.png */; };
-		8BC00F4A171DF82000A0DCD4 /* Marksman - el3 z26-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC00F26171DF82000A0DCD4 /* Marksman - el3 z26-ipadhd.png */; };
-		8BC00F4B171DF82000A0DCD4 /* Marksman - Main branch z23-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC00F27171DF82000A0DCD4 /* Marksman - Main branch z23-ipadhd.png */; };
-		8BC00F4C171DF82000A0DCD4 /* Marksman Symbol - z33-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC00F28171DF82000A0DCD4 /* Marksman Symbol - z33-ipadhd.png */; };
+		8BC21066173430E600B875B2 /* ccbParticleSmoke.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC21063173430E600B875B2 /* ccbParticleSmoke.png */; };
+		8BC21067173430E600B875B2 /* ccbParticleSnow.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC21064173430E600B875B2 /* ccbParticleSnow.png */; };
+		8BC21068173430E600B875B2 /* ccbParticleStars.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC21065173430E600B875B2 /* ccbParticleStars.png */; };
+		8BC2106A173431C400B875B2 /* IceSubMenu.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 8BC21069173431C400B875B2 /* IceSubMenu.ccbi */; };
+		8BC2106D1734320000B875B2 /* IceSubSkillTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BC2106C1734320000B875B2 /* IceSubSkillTree.m */; };
+		8BC21070173437D800B875B2 /* MarksmanSubSkillTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BC2106F173437D800B875B2 /* MarksmanSubSkillTree.m */; };
+		8BC2107217343A0800B875B2 /* MarksSubMenu.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 8BC2107117343A0800B875B2 /* MarksSubMenu.ccbi */; };
+		8BC2107417343D6500B875B2 /* CitySubMenu.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 8BC2107317343D6500B875B2 /* CitySubMenu.ccbi */; };
+		8BC2107717343D9400B875B2 /* CitySubSkillTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BC2107617343D9300B875B2 /* CitySubSkillTree.m */; };
 		8BD6228917145FF60076BF42 /* SpriteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD6228817145FF60076BF42 /* SpriteManager.m */; };
 		8BD62290171460200076BF42 /* lvl1spritesheet.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BD6228D171460200076BF42 /* lvl1spritesheet.png */; };
 		8BFA2D9D171724F9008A2064 /* fairiedragon_anim.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8BFA2D9C171724F9008A2064 /* fairiedragon_anim.plist */; };
@@ -158,18 +92,6 @@
 		8C1B7736172F3F6E00514B70 /* Level9.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C1B7735172F3F6E00514B70 /* Level9.plist */; };
 		8C1B7738172F3F7C00514B70 /* Level10.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C1B7737172F3F7C00514B70 /* Level10.plist */; };
 		8C72C2A8172968F6009EF8C1 /* GameWin.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C72C2A7172968F6009EF8C1 /* GameWin.m */; };
-		8CA9AECA17244CE400283D69 /* FireButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CA9AEC717244CE400283D69 /* FireButton.png */; };
-		8CA9AECC17244CE400283D69 /* MarksManButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CA9AEC917244CE400283D69 /* MarksManButton.png */; };
-		8CDE45941725A4630076BF38 /* FireButton-bw-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CDE458E1725A4630076BF38 /* FireButton-bw-ipadhd.png */; };
-		8CDE45951725A4630076BF38 /* FireButton-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CDE458F1725A4630076BF38 /* FireButton-ipadhd.png */; };
-		8CDE45961725A4630076BF38 /* IceButton-bw-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CDE45901725A4630076BF38 /* IceButton-bw-ipadhd.png */; };
-		8CDE45971725A4630076BF38 /* IceButton-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CDE45911725A4630076BF38 /* IceButton-ipadhd.png */; };
-		8CDE45981725A4630076BF38 /* MarksManButton-bw-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CDE45921725A4630076BF38 /* MarksManButton-bw-ipadhd.png */; };
-		8CDE45991725A4630076BF38 /* MarksManButton-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CDE45931725A4630076BF38 /* MarksManButton-ipadhd.png */; };
-		8CE17A0D172460F90069B4E3 /* FireButton-bw.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CE17A09172460F90069B4E3 /* FireButton-bw.png */; };
-		8CE17A0E172460F90069B4E3 /* IceButton-bw.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CE17A0A172460F90069B4E3 /* IceButton-bw.png */; };
-		8CE17A0F172460F90069B4E3 /* IceButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CE17A0B172460F90069B4E3 /* IceButton.png */; };
-		8CE17A10172460F90069B4E3 /* MarksManButton-bw.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CE17A0C172460F90069B4E3 /* MarksManButton-bw.png */; };
 		9C11EEC017205775003510EB /* WaveManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C11EEBF17205775003510EB /* WaveManager.m */; };
 		9C11EEC3172063B3003510EB /* Level1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C11EEC2172063B3003510EB /* Level1.plist */; };
 		9C11EEC61720646F003510EB /* PeasantSpear.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C11EEC51720646F003510EB /* PeasantSpear.plist */; };
@@ -192,44 +114,21 @@
 		9C377C03170BAE3E00F840FB /* arrow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9C377C00170BAE3E00F840FB /* arrow.mp3 */; };
 		9C377C0A170BB7CC00F840FB /* hit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9C377C09170BB7CB00F840FB /* hit.mp3 */; };
 		9C377C0D170BBDD800F840FB /* EnemyFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C377C0C170BBDD600F840FB /* EnemyFactory.m */; };
-		9C3CE231172D8FB60044889D /* hud-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C3CE230172D8FB60044889D /* hud-background.png */; };
-		9C3CE233172D90CA0044889D /* hud-background-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C3CE232172D90C90044889D /* hud-background-ipadhd.png */; };
 		9C3CE234172DC4570044889D /* akaPotsley.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C3CE22F172D87E40044889D /* akaPotsley.ttf */; };
-		9C3CE236172DE91F0044889D /* keylock-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C3CE235172DE91B0044889D /* keylock-ipadhd.png */; };
-		9C3CE239172DE92F0044889D /* fleurBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C3CE237172DE9230044889D /* fleurBlack.png */; };
-		9C3CE23A172DE92F0044889D /* fleurDor.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C3CE238172DE92B0044889D /* fleurDor.png */; };
-		9C3CE23D172DEDDC0044889D /* buyarrowPressed-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C3CE23B172DEDD40044889D /* buyarrowPressed-ipadhd.png */; };
-		9C3CE23E172DEDDC0044889D /* buyarrow-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C3CE23C172DEDD80044889D /* buyarrow-ipadhd.png */; };
-		9C3CE241172DF03C0044889D /* fleurDor-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C3CE23F172DF0330044889D /* fleurDor-ipadhd.png */; };
-		9C3CE242172DF03C0044889D /* fleurBlack-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C3CE240172DF0360044889D /* fleurBlack-ipadhd.png */; };
-		9C3CE244172DF49E0044889D /* hud-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C3CE243172DF4990044889D /* hud-background.png */; };
-		9C3CE247172DF5B90044889D /* buyarrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C3CE245172DF5B10044889D /* buyarrow.png */; };
-		9C3CE248172DF5B90044889D /* buyarrowPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C3CE246172DF5B40044889D /* buyarrowPressed.png */; };
-		9C3CE24A172DF5D70044889D /* hud-background-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C3CE249172DF5D30044889D /* hud-background-ipadhd.png */; };
+		9C4787031734264300180864 /* SkillTreeLayerZWOP.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 9C4787021734260600180864 /* SkillTreeLayerZWOP.ccbi */; };
+		9C478705173429FC00180864 /* blackdragon_anim.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C478704173429FC00180864 /* blackdragon_anim.plist */; };
+		9C47870717342A0A00180864 /* skeleton_anim.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C47870617342A0A00180864 /* skeleton_anim.plist */; };
+		9C47870917342A1600180864 /* wraith_anim.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C47870817342A1600180864 /* wraith_anim.plist */; };
+		9C47870B17342A2500180864 /* fireelemental_anim.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C47870A17342A2500180864 /* fireelemental_anim.plist */; };
+		9C47870E17342B4B00180864 /* FireElemental.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C47870D17342B4B00180864 /* FireElemental.m */; };
+		9C47871117344CFD00180864 /* Wraith.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C47871017344CFD00180864 /* Wraith.m */; };
+		9C4787141734524E00180864 /* BlackDragon.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4787131734524D00180864 /* BlackDragon.m */; };
+		9C4787171734525D00180864 /* Skeleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4787161734525D00180864 /* Skeleton.m */; };
+		9C47871A173454B800180864 /* MixedWave.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C478719173454B800180864 /* MixedWave.plist */; };
 		9C500253172AD03800C141DB /* LoadingBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C500252172AD03800C141DB /* LoadingBar.m */; };
 		9C75D80E171A167E00419031 /* yurie_anim.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C75D80D171A167E00419031 /* yurie_anim.plist */; };
-		9C791C06172376B700780C5D /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C791C04172376B700780C5D /* pause.png */; };
-		9C791C07172376B700780C5D /* pause-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C791C05172376B700780C5D /* pause-ipadhd.png */; };
-		9C791C1817237A7000780C5D /* buttonAchievements-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C791C0817237A7000780C5D /* buttonAchievements-ipadhd.png */; };
-		9C791C1917237A7000780C5D /* buttonAchievements.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C791C0917237A7000780C5D /* buttonAchievements.png */; };
-		9C791C1A17237A7000780C5D /* buttonAchievementsPressed-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C791C0A17237A7000780C5D /* buttonAchievementsPressed-ipadhd.png */; };
-		9C791C1B17237A7000780C5D /* buttonAchievementsPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C791C0B17237A7000780C5D /* buttonAchievementsPressed.png */; };
-		9C791C1C17237A7000780C5D /* buttonLeaderboard-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C791C0C17237A7000780C5D /* buttonLeaderboard-ipadhd.png */; };
-		9C791C1D17237A7000780C5D /* buttonLeaderboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C791C0D17237A7000780C5D /* buttonLeaderboard.png */; };
-		9C791C1E17237A7000780C5D /* buttonLeaderboardPressed-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C791C0E17237A7000780C5D /* buttonLeaderboardPressed-ipadhd.png */; };
-		9C791C1F17237A7000780C5D /* buttonLeaderboardPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C791C0F17237A7000780C5D /* buttonLeaderboardPressed.png */; };
-		9C791C2017237A7000780C5D /* buttonSettings-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C791C1017237A7000780C5D /* buttonSettings-ipadhd.png */; };
-		9C791C2117237A7000780C5D /* buttonSettings.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C791C1117237A7000780C5D /* buttonSettings.png */; };
-		9C791C2217237A7000780C5D /* buttonSettingsPressed-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C791C1217237A7000780C5D /* buttonSettingsPressed-ipadhd.png */; };
-		9C791C2317237A7000780C5D /* buttonSettingsPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C791C1317237A7000780C5D /* buttonSettingsPressed.png */; };
-		9C791C2417237A7000780C5D /* buttonSkillTree-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C791C1417237A7000780C5D /* buttonSkillTree-ipadhd.png */; };
-		9C791C2517237A7000780C5D /* buttonSkillTree.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C791C1517237A7000780C5D /* buttonSkillTree.png */; };
-		9C791C2617237A7000780C5D /* buttonSkillTreePressed-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C791C1617237A7000780C5D /* buttonSkillTreePressed-ipadhd.png */; };
-		9C791C2717237A7000780C5D /* buttonSkillTreePressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C791C1717237A7000780C5D /* buttonSkillTreePressed.png */; };
 		9C791C2C17237ADE00780C5D /* menuBackground-ipadhd.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C791C2817237ADE00780C5D /* menuBackground-ipadhd.jpg */; };
 		9C791C2D17237ADE00780C5D /* menuBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C791C2917237ADE00780C5D /* menuBackground.jpg */; };
-		9C791C2E17237ADE00780C5D /* playButton-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C791C2A17237ADE00780C5D /* playButton-ipadhd.png */; };
-		9C791C2F17237ADE00780C5D /* playButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C791C2B17237ADE00780C5D /* playButton.png */; };
 		9C7FF344170B28CE009DA7F9 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C7FF343170B28CE009DA7F9 /* Config.plist */; };
 		9C7FF347170B2AFA009DA7F9 /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C7FF346170B2AFA009DA7F9 /* Config.m */; };
 		9C7FF34E170B3C5C009DA7F9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C7FF34C170B3A49009DA7F9 /* main.m */; };
@@ -385,9 +284,6 @@
 		9C9ADB2D17218AA200C3FA59 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9ADB2C17218AA200C3FA59 /* Utils.m */; };
 		9C9ADB2F1721A94000C3FA59 /* ZealotSquare.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C9ADB2E1721A94000C3FA59 /* ZealotSquare.plist */; };
 		9C9ADB311721AB6400C3FA59 /* FaerieColumn.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C9ADB301721AB6400C3FA59 /* FaerieColumn.plist */; };
-		9C9ADB341721CA2C00C3FA59 /* red_health_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C9ADB321721CA2C00C3FA59 /* red_health_bar.png */; };
-		9C9ADB351721CA2C00C3FA59 /* green_health_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C9ADB331721CA2C00C3FA59 /* green_health_bar.png */; };
-		9CBF5B03171B1A0E00EF44B2 /* skilltree-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CBF5AFF171B1A0E00EF44B2 /* skilltree-ipadhd.png */; };
 		9CBF5B0A171E463000EF44B2 /* Registry.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CBF5B09171E462E00EF44B2 /* Registry.m */; };
 		9CBF5B0D171E464E00EF44B2 /* ResourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CBF5B0C171E464C00EF44B2 /* ResourceManager.m */; };
 /* End PBXBuildFile section */
@@ -422,47 +318,16 @@
 		3EE2F9661723178C0084DF2F /* LevelThumbnail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelThumbnail.m; sourceTree = "<group>"; };
 		3EE2F96817231EC40084DF2F /* LevelSelectLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelSelectLayer.h; sourceTree = "<group>"; };
 		3EE2F96917231EC40084DF2F /* LevelSelectLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelSelectLayer.m; sourceTree = "<group>"; };
-		3EE2F96B1723287F0084DF2F /* keylock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = keylock.png; sourceTree = "<group>"; };
 		3EE9FE1317256DAD009718EC /* LevelSelectLayer.ccb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = LevelSelectLayer.ccb; sourceTree = "<group>"; };
 		3EEB679F17234BC2005C58E9 /* PauseMenu.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = PauseMenu.ccbi; sourceTree = "<group>"; };
 		3EEB67A117234C1A005C58E9 /* PauseHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PauseHUD.h; sourceTree = "<group>"; };
 		3EEB67A217234C1A005C58E9 /* PauseHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PauseHUD.m; sourceTree = "<group>"; };
 		8B0E70E6171DCCB9004D212C /* Background z0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Background z0.png"; sourceTree = "<group>"; };
-		8B0E70E7171DCCB9004D212C /* City - branch1 - z13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "City - branch1 - z13.png"; sourceTree = "<group>"; };
-		8B0E70E8171DCCB9004D212C /* City - branch2 - z14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "City - branch2 - z14.png"; sourceTree = "<group>"; };
-		8B0E70E9171DCCB9004D212C /* City - branch3 z12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "City - branch3 z12.png"; sourceTree = "<group>"; };
-		8B0E70EA171DCCB9004D212C /* City - el1 z5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "City - el1 z5.png"; sourceTree = "<group>"; };
-		8B0E70EB171DCCB9004D212C /* City - el2 z4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "City - el2 z4.png"; sourceTree = "<group>"; };
-		8B0E70EC171DCCB9004D212C /* City - el3 z2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "City - el3 z2.png"; sourceTree = "<group>"; };
-		8B0E70ED171DCCB9004D212C /* City - Main branch z15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "City - Main branch z15.png"; sourceTree = "<group>"; };
-		8B0E70EE171DCCB9004D212C /* City - Symbol z34.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "City - Symbol z34.png"; sourceTree = "<group>"; };
-		8B0E70EF171DCCB9004D212C /* Fire - branch 1 z8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fire - branch 1 z8.png"; sourceTree = "<group>"; };
-		8B0E70F0171DCCB9004D212C /* Fire - branch2 z9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fire - branch2 z9.png"; sourceTree = "<group>"; };
-		8B0E70F1171DCCB9004D212C /* Fire - branch3 z7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fire - branch3 z7.png"; sourceTree = "<group>"; };
-		8B0E70F2171DCCB9004D212C /* Fire - el1 z11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fire - el1 z11.png"; sourceTree = "<group>"; };
 		8B0E70F3171DCCB9004D212C /* Fire - el2 z35.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fire - el2 z35.png"; sourceTree = "<group>"; };
 		8B0E70F4171DCCB9004D212C /* Fire - el3 z6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fire - el3 z6.png"; sourceTree = "<group>"; };
-		8B0E70F5171DCCB9004D212C /* Fire - Main branch z10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fire - Main branch z10.png"; sourceTree = "<group>"; };
-		8B0E70F6171DCCB9004D212C /* Fire - Symbol z32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fire - Symbol z32.png"; sourceTree = "<group>"; };
-		8B0E70F7171DCCB9004D212C /* Ice - branch1 z17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ice - branch1 z17.png"; sourceTree = "<group>"; };
-		8B0E70F8171DCCB9004D212C /* Ice - branch2 z18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ice - branch2 z18.png"; sourceTree = "<group>"; };
-		8B0E70F9171DCCB9004D212C /* Ice - branch3 z16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ice - branch3 z16.png"; sourceTree = "<group>"; };
-		8B0E70FA171DCCB9004D212C /* Ice - el1 z1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ice - el1 z1.png"; sourceTree = "<group>"; };
-		8B0E70FB171DCCB9004D212C /* Ice - el2 z3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ice - el2 z3.png"; sourceTree = "<group>"; };
-		8B0E70FC171DCCB9004D212C /* Ice - el3 z24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ice - el3 z24.png"; sourceTree = "<group>"; };
-		8B0E70FD171DCCB9004D212C /* Ice - Main branch z19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ice - Main branch z19.png"; sourceTree = "<group>"; };
-		8B0E70FE171DCCB9004D212C /* Ice - Symbol z31.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ice - Symbol z31.png"; sourceTree = "<group>"; };
 		8B0E70FF171DCCB9004D212C /* Main Tree Branch - el1 z27.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Main Tree Branch - el1 z27.png"; sourceTree = "<group>"; };
 		8B0E7100171DCCB9004D212C /* Main Tree Branch - el2 z30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Main Tree Branch - el2 z30.png"; sourceTree = "<group>"; };
 		8B0E7101171DCCB9004D212C /* Main Tree Branch z25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Main Tree Branch z25.png"; sourceTree = "<group>"; };
-		8B0E7102171DCCB9004D212C /* Marksman - branch1 z22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Marksman - branch1 z22.png"; sourceTree = "<group>"; };
-		8B0E7103171DCCB9004D212C /* Marksman - branch2 z20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Marksman - branch2 z20.png"; sourceTree = "<group>"; };
-		8B0E7104171DCCB9004D212C /* Marksman - branch3 z21.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Marksman - branch3 z21.png"; sourceTree = "<group>"; };
-		8B0E7105171DCCB9004D212C /* Marksman - el1 z29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Marksman - el1 z29.png"; sourceTree = "<group>"; };
-		8B0E7106171DCCB9004D212C /* Marksman - el2 z28.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Marksman - el2 z28.png"; sourceTree = "<group>"; };
-		8B0E7107171DCCB9004D212C /* Marksman - el3 z26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Marksman - el3 z26.png"; sourceTree = "<group>"; };
-		8B0E7108171DCCB9004D212C /* Marksman - Main branch z23.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Marksman - Main branch z23.png"; sourceTree = "<group>"; };
-		8B0E7109171DCCB9004D212C /* Marksman Symbol - z33.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Marksman Symbol - z33.png"; sourceTree = "<group>"; };
 		8B0E712E171DD446004D212C /* SkillTreeLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkillTreeLayer.h; sourceTree = "<group>"; };
 		8B0E712F171DD447004D212C /* SkillTreeLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkillTreeLayer.m; sourceTree = "<group>"; };
 		8B1EC88417318C5500B00DB6 /* shout01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = shout01.mp3; sourceTree = "<group>"; };
@@ -474,12 +339,13 @@
 		8B1EC8911731A91E00B00DB6 /* chant.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = chant.mp3; sourceTree = "<group>"; };
 		8B1EC8931731B02C00B00DB6 /* killhim.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = killhim.mp3; sourceTree = "<group>"; };
 		8B1EC8951731B92400B00DB6 /* buttonclick.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = buttonclick.mp3; sourceTree = "<group>"; };
-		8B2214641733380A0055BF51 /* ccbResources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ccbResources; sourceTree = "<group>"; };
 		8B221466173338540055BF51 /* SkillTreeLayer.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = SkillTreeLayer.ccbi; sourceTree = "<group>"; };
 		8B221467173338540055BF51 /* SkillTreeSubMenu.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = SkillTreeSubMenu.ccbi; sourceTree = "<group>"; };
 		8B3FF0DE1732B60600D2212B /* FireSubSkillTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FireSubSkillTree.h; sourceTree = "<group>"; };
 		8B3FF0DF1732B60600D2212B /* FireSubSkillTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FireSubSkillTree.m; sourceTree = "<group>"; };
-		8B560899171A251F00B14693 /* skilltree.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = skilltree.png; sourceTree = "<group>"; };
+		8B43948917341C30008BAB1D /* skillTreeSS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = skillTreeSS.plist; sourceTree = "<group>"; };
+		8B43948A17341C30008BAB1D /* skillTreeSS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = skillTreeSS.png; sourceTree = "<group>"; };
+		8B43949317341E0F008BAB1D /* skillTreeSS-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "skillTreeSS-ipadhd.png"; sourceTree = "<group>"; };
 		8B79CDD9171F2D2500E58EDD /* TODO */ = {isa = PBXFileReference; lastKnownFileType = text; name = TODO; path = "TechDemo - Physics/TODO"; sourceTree = "<group>"; };
 		8B79CDDF171F501D00E58EDD /* Hud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hud.h; sourceTree = "<group>"; };
 		8B79CDE0171F501D00E58EDD /* Hud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hud.m; sourceTree = "<group>"; };
@@ -498,60 +364,28 @@
 		8B8C2DB31719DDA900B50C1E /* CCBSequenceProperty.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCBSequenceProperty.m; sourceTree = "<group>"; };
 		8B8C2DB41719DDA900B50C1E /* CCNode+CCBRelativePositioning.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CCNode+CCBRelativePositioning.h"; sourceTree = "<group>"; };
 		8B8C2DB51719DDA900B50C1E /* CCNode+CCBRelativePositioning.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CCNode+CCBRelativePositioning.m"; sourceTree = "<group>"; };
-		8B8C2DC01719EA3F00B50C1E /* larcher_transparent_name.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = larcher_transparent_name.png; sourceTree = "<group>"; };
-		8BBB6A11171E00C90064B3CD /* City - Symbol z34_DOWN-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "City - Symbol z34_DOWN-ipadhd.png"; sourceTree = "<group>"; };
-		8BBB6A12171E00C90064B3CD /* City - Symbol z34_UP-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "City - Symbol z34_UP-ipadhd.png"; sourceTree = "<group>"; };
-		8BBB6A16171E08CD0064B3CD /* SpeakerIcon_DOWN-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SpeakerIcon_DOWN-ipadhd.png"; sourceTree = "<group>"; };
-		8BBB6A17171E08CD0064B3CD /* SpeakerIcon_DOWN.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SpeakerIcon_DOWN.png; sourceTree = "<group>"; };
-		8BBB6A18171E08CD0064B3CD /* SpeakerIcon_UP_SOUND-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SpeakerIcon_UP_SOUND-ipadhd.png"; sourceTree = "<group>"; };
-		8BBB6A19171E08CD0064B3CD /* SpeakerIcon_UP_SOUND.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SpeakerIcon_UP_SOUND.png; sourceTree = "<group>"; };
-		8BBB6A1A171E08CD0064B3CD /* SpeakerIcon_UP-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SpeakerIcon_UP-ipadhd.png"; sourceTree = "<group>"; };
-		8BBB6A1B171E08CD0064B3CD /* SpeakerIcon_UP.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SpeakerIcon_UP.png; sourceTree = "<group>"; };
 		8BBB6A22171E09E30064B3CD /* SettingsMenu.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = SettingsMenu.ccbi; sourceTree = "<group>"; };
 		8BBB6A24171E0B240064B3CD /* SettingsMenuLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsMenuLayer.h; sourceTree = "<group>"; };
 		8BBB6A25171E0B240064B3CD /* SettingsMenuLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsMenuLayer.m; sourceTree = "<group>"; };
-		8BBB6A27171E273B0064B3CD /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
-		8BBB6A28171E273C0064B3CD /* star-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-ipadhd.png"; sourceTree = "<group>"; };
-		8BBB6A29171E273C0064B3CD /* starUP.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = starUP.png; sourceTree = "<group>"; };
-		8BBB6A2A171E273C0064B3CD /* starUP-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "starUP-ipadhd.png"; sourceTree = "<group>"; };
-		8BC00EFA171DEA4700A0DCD4 /* City - Symbol z34_DOWN.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "City - Symbol z34_DOWN.png"; sourceTree = "<group>"; };
-		8BC00EFB171DEA4700A0DCD4 /* City - Symbol z34_UP.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "City - Symbol z34_UP.png"; sourceTree = "<group>"; };
 		8BC00F05171DF81F00A0DCD4 /* Background z0-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Background z0-ipadhd.png"; sourceTree = "<group>"; };
-		8BC00F06171DF81F00A0DCD4 /* City - branch1 - z13-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "City - branch1 - z13-ipadhd.png"; sourceTree = "<group>"; };
-		8BC00F07171DF81F00A0DCD4 /* City - branch2 - z14-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "City - branch2 - z14-ipadhd.png"; sourceTree = "<group>"; };
-		8BC00F08171DF81F00A0DCD4 /* City - branch3 z12-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "City - branch3 z12-ipadhd.png"; sourceTree = "<group>"; };
-		8BC00F09171DF81F00A0DCD4 /* City - el1 z5-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "City - el1 z5-ipadhd.png"; sourceTree = "<group>"; };
-		8BC00F0A171DF81F00A0DCD4 /* City - el2 z4-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "City - el2 z4-ipadhd.png"; sourceTree = "<group>"; };
-		8BC00F0B171DF81F00A0DCD4 /* City - el3 z2-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "City - el3 z2-ipadhd.png"; sourceTree = "<group>"; };
-		8BC00F0C171DF81F00A0DCD4 /* City - Main branch z15-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "City - Main branch z15-ipadhd.png"; sourceTree = "<group>"; };
-		8BC00F0D171DF81F00A0DCD4 /* City - Symbol z34-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "City - Symbol z34-ipadhd.png"; sourceTree = "<group>"; };
-		8BC00F0E171DF81F00A0DCD4 /* Fire - branch 1 z8-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fire - branch 1 z8-ipadhd.png"; sourceTree = "<group>"; };
-		8BC00F0F171DF81F00A0DCD4 /* Fire - branch2 z9-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fire - branch2 z9-ipadhd.png"; sourceTree = "<group>"; };
-		8BC00F10171DF81F00A0DCD4 /* Fire - branch3 z7-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fire - branch3 z7-ipadhd.png"; sourceTree = "<group>"; };
-		8BC00F11171DF81F00A0DCD4 /* Fire - el1 z11-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fire - el1 z11-ipadhd.png"; sourceTree = "<group>"; };
 		8BC00F12171DF81F00A0DCD4 /* Fire - el2 z35-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fire - el2 z35-ipadhd.png"; sourceTree = "<group>"; };
 		8BC00F13171DF81F00A0DCD4 /* Fire - el3 z6-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fire - el3 z6-ipadhd.png"; sourceTree = "<group>"; };
-		8BC00F14171DF81F00A0DCD4 /* Fire - Main branch z10-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fire - Main branch z10-ipadhd.png"; sourceTree = "<group>"; };
-		8BC00F15171DF81F00A0DCD4 /* Fire - Symbol z32-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fire - Symbol z32-ipadhd.png"; sourceTree = "<group>"; };
-		8BC00F16171DF81F00A0DCD4 /* Ice - branch1 z17-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ice - branch1 z17-ipadhd.png"; sourceTree = "<group>"; };
-		8BC00F17171DF81F00A0DCD4 /* Ice - branch2 z18-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ice - branch2 z18-ipadhd.png"; sourceTree = "<group>"; };
-		8BC00F18171DF81F00A0DCD4 /* Ice - branch3 z16-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ice - branch3 z16-ipadhd.png"; sourceTree = "<group>"; };
-		8BC00F19171DF81F00A0DCD4 /* Ice - el1 z1-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ice - el1 z1-ipadhd.png"; sourceTree = "<group>"; };
-		8BC00F1A171DF81F00A0DCD4 /* Ice - el2 z3-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ice - el2 z3-ipadhd.png"; sourceTree = "<group>"; };
-		8BC00F1B171DF81F00A0DCD4 /* Ice - el3 z24-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ice - el3 z24-ipadhd.png"; sourceTree = "<group>"; };
-		8BC00F1C171DF81F00A0DCD4 /* Ice - Main branch z19-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ice - Main branch z19-ipadhd.png"; sourceTree = "<group>"; };
-		8BC00F1D171DF81F00A0DCD4 /* Ice - Symbol z31-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ice - Symbol z31-ipadhd.png"; sourceTree = "<group>"; };
 		8BC00F1E171DF81F00A0DCD4 /* Main Tree Branch - el1 z27-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Main Tree Branch - el1 z27-ipadhd.png"; sourceTree = "<group>"; };
 		8BC00F1F171DF81F00A0DCD4 /* Main Tree Branch - el2 z30-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Main Tree Branch - el2 z30-ipadhd.png"; sourceTree = "<group>"; };
 		8BC00F20171DF81F00A0DCD4 /* Main Tree Branch z25-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Main Tree Branch z25-ipadhd.png"; sourceTree = "<group>"; };
-		8BC00F21171DF82000A0DCD4 /* Marksman - branch1 z22-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Marksman - branch1 z22-ipadhd.png"; sourceTree = "<group>"; };
-		8BC00F22171DF82000A0DCD4 /* Marksman - branch2 z20-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Marksman - branch2 z20-ipadhd.png"; sourceTree = "<group>"; };
-		8BC00F23171DF82000A0DCD4 /* Marksman - branch3 z21-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Marksman - branch3 z21-ipadhd.png"; sourceTree = "<group>"; };
-		8BC00F24171DF82000A0DCD4 /* Marksman - el1 z29-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Marksman - el1 z29-ipadhd.png"; sourceTree = "<group>"; };
-		8BC00F25171DF82000A0DCD4 /* Marksman - el2 z28-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Marksman - el2 z28-ipadhd.png"; sourceTree = "<group>"; };
-		8BC00F26171DF82000A0DCD4 /* Marksman - el3 z26-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Marksman - el3 z26-ipadhd.png"; sourceTree = "<group>"; };
-		8BC00F27171DF82000A0DCD4 /* Marksman - Main branch z23-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Marksman - Main branch z23-ipadhd.png"; sourceTree = "<group>"; };
-		8BC00F28171DF82000A0DCD4 /* Marksman Symbol - z33-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Marksman Symbol - z33-ipadhd.png"; sourceTree = "<group>"; };
+		8BC2106117342A7900B875B2 /* skillTreeSS-ipadhd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "skillTreeSS-ipadhd.plist"; sourceTree = "<group>"; };
+		8BC21063173430E600B875B2 /* ccbParticleSmoke.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ccbParticleSmoke.png; path = ccbResources/ccbParticleSmoke.png; sourceTree = "<group>"; };
+		8BC21064173430E600B875B2 /* ccbParticleSnow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ccbParticleSnow.png; path = ccbResources/ccbParticleSnow.png; sourceTree = "<group>"; };
+		8BC21065173430E600B875B2 /* ccbParticleStars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ccbParticleStars.png; path = ccbResources/ccbParticleStars.png; sourceTree = "<group>"; };
+		8BC21069173431C400B875B2 /* IceSubMenu.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = IceSubMenu.ccbi; sourceTree = "<group>"; };
+		8BC2106B1734320000B875B2 /* IceSubSkillTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IceSubSkillTree.h; sourceTree = "<group>"; };
+		8BC2106C1734320000B875B2 /* IceSubSkillTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IceSubSkillTree.m; sourceTree = "<group>"; };
+		8BC2106E173437D800B875B2 /* MarksmanSubSkillTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarksmanSubSkillTree.h; sourceTree = "<group>"; };
+		8BC2106F173437D800B875B2 /* MarksmanSubSkillTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarksmanSubSkillTree.m; sourceTree = "<group>"; };
+		8BC2107117343A0800B875B2 /* MarksSubMenu.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = MarksSubMenu.ccbi; sourceTree = "<group>"; };
+		8BC2107317343D6500B875B2 /* CitySubMenu.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = CitySubMenu.ccbi; sourceTree = "<group>"; };
+		8BC2107517343D9300B875B2 /* CitySubSkillTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CitySubSkillTree.h; sourceTree = "<group>"; };
+		8BC2107617343D9300B875B2 /* CitySubSkillTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CitySubSkillTree.m; sourceTree = "<group>"; };
 		8BD6228717145FF60076BF42 /* SpriteManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpriteManager.h; sourceTree = "<group>"; };
 		8BD6228817145FF60076BF42 /* SpriteManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpriteManager.m; sourceTree = "<group>"; };
 		8BD6228B171460200076BF42 /* lvl1spritesheet.zwd */ = {isa = PBXFileReference; lastKnownFileType = file; path = lvl1spritesheet.zwd; sourceTree = "<group>"; };
@@ -569,18 +403,6 @@
 		8C72C2A51729687B009EF8C1 /* GameWin.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = GameWin.ccbi; sourceTree = "<group>"; };
 		8C72C2A6172968F6009EF8C1 /* GameWin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameWin.h; sourceTree = "<group>"; };
 		8C72C2A7172968F6009EF8C1 /* GameWin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameWin.m; sourceTree = "<group>"; };
-		8CA9AEC717244CE400283D69 /* FireButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FireButton.png; sourceTree = "<group>"; };
-		8CA9AEC917244CE400283D69 /* MarksManButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MarksManButton.png; sourceTree = "<group>"; };
-		8CDE458E1725A4630076BF38 /* FireButton-bw-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FireButton-bw-ipadhd.png"; sourceTree = "<group>"; };
-		8CDE458F1725A4630076BF38 /* FireButton-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FireButton-ipadhd.png"; sourceTree = "<group>"; };
-		8CDE45901725A4630076BF38 /* IceButton-bw-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IceButton-bw-ipadhd.png"; sourceTree = "<group>"; };
-		8CDE45911725A4630076BF38 /* IceButton-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IceButton-ipadhd.png"; sourceTree = "<group>"; };
-		8CDE45921725A4630076BF38 /* MarksManButton-bw-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MarksManButton-bw-ipadhd.png"; sourceTree = "<group>"; };
-		8CDE45931725A4630076BF38 /* MarksManButton-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MarksManButton-ipadhd.png"; sourceTree = "<group>"; };
-		8CE17A09172460F90069B4E3 /* FireButton-bw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FireButton-bw.png"; sourceTree = "<group>"; };
-		8CE17A0A172460F90069B4E3 /* IceButton-bw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IceButton-bw.png"; sourceTree = "<group>"; };
-		8CE17A0B172460F90069B4E3 /* IceButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IceButton.png; sourceTree = "<group>"; };
-		8CE17A0C172460F90069B4E3 /* MarksManButton-bw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MarksManButton-bw.png"; sourceTree = "<group>"; };
 		9C11EEBE17205775003510EB /* WaveManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaveManager.h; sourceTree = "<group>"; };
 		9C11EEBF17205775003510EB /* WaveManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaveManager.m; sourceTree = "<group>"; };
 		9C11EEC2172063B3003510EB /* Level1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Level1.plist; sourceTree = "<group>"; };
@@ -619,44 +441,26 @@
 		9C377C0B170BBDD300F840FB /* EnemyFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyFactory.h; sourceTree = "<group>"; };
 		9C377C0C170BBDD600F840FB /* EnemyFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnemyFactory.m; sourceTree = "<group>"; };
 		9C3CE22F172D87E40044889D /* akaPotsley.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = akaPotsley.ttf; sourceTree = "<group>"; };
-		9C3CE230172D8FB60044889D /* hud-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hud-background.png"; sourceTree = "<group>"; };
-		9C3CE232172D90C90044889D /* hud-background-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hud-background-ipadhd.png"; sourceTree = "<group>"; };
-		9C3CE235172DE91B0044889D /* keylock-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "keylock-ipadhd.png"; sourceTree = "<group>"; };
-		9C3CE237172DE9230044889D /* fleurBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fleurBlack.png; sourceTree = "<group>"; };
-		9C3CE238172DE92B0044889D /* fleurDor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fleurDor.png; sourceTree = "<group>"; };
-		9C3CE23B172DEDD40044889D /* buyarrowPressed-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "buyarrowPressed-ipadhd.png"; sourceTree = "<group>"; };
-		9C3CE23C172DEDD80044889D /* buyarrow-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "buyarrow-ipadhd.png"; sourceTree = "<group>"; };
-		9C3CE23F172DF0330044889D /* fleurDor-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fleurDor-ipadhd.png"; sourceTree = "<group>"; };
-		9C3CE240172DF0360044889D /* fleurBlack-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fleurBlack-ipadhd.png"; sourceTree = "<group>"; };
-		9C3CE243172DF4990044889D /* hud-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hud-background.png"; sourceTree = "<group>"; };
-		9C3CE245172DF5B10044889D /* buyarrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buyarrow.png; sourceTree = "<group>"; };
-		9C3CE246172DF5B40044889D /* buyarrowPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buyarrowPressed.png; sourceTree = "<group>"; };
-		9C3CE249172DF5D30044889D /* hud-background-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hud-background-ipadhd.png"; sourceTree = "<group>"; };
+		9C478701173425DD00180864 /* SkillTreeSubMenu.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = SkillTreeSubMenu.ccbi; sourceTree = "<group>"; };
+		9C4787021734260600180864 /* SkillTreeLayerZWOP.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = SkillTreeLayerZWOP.ccbi; sourceTree = "<group>"; };
+		9C478704173429FC00180864 /* blackdragon_anim.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = blackdragon_anim.plist; sourceTree = "<group>"; };
+		9C47870617342A0A00180864 /* skeleton_anim.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = skeleton_anim.plist; sourceTree = "<group>"; };
+		9C47870817342A1600180864 /* wraith_anim.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = wraith_anim.plist; sourceTree = "<group>"; };
+		9C47870A17342A2500180864 /* fireelemental_anim.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = fireelemental_anim.plist; sourceTree = "<group>"; };
+		9C47870C17342B4B00180864 /* FireElemental.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FireElemental.h; sourceTree = "<group>"; };
+		9C47870D17342B4B00180864 /* FireElemental.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FireElemental.m; sourceTree = "<group>"; };
+		9C47870F17344CFD00180864 /* Wraith.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wraith.h; sourceTree = "<group>"; };
+		9C47871017344CFD00180864 /* Wraith.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Wraith.m; sourceTree = "<group>"; };
+		9C4787121734524D00180864 /* BlackDragon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlackDragon.h; sourceTree = "<group>"; };
+		9C4787131734524D00180864 /* BlackDragon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlackDragon.m; sourceTree = "<group>"; };
+		9C4787151734525D00180864 /* Skeleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Skeleton.h; sourceTree = "<group>"; };
+		9C4787161734525D00180864 /* Skeleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Skeleton.m; sourceTree = "<group>"; };
+		9C478719173454B800180864 /* MixedWave.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MixedWave.plist; sourceTree = "<group>"; };
 		9C500251172AD03800C141DB /* LoadingBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingBar.h; sourceTree = "<group>"; };
 		9C500252172AD03800C141DB /* LoadingBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingBar.m; sourceTree = "<group>"; };
 		9C75D80D171A167E00419031 /* yurie_anim.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = yurie_anim.plist; sourceTree = "<group>"; };
-		9C791C04172376B700780C5D /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
-		9C791C05172376B700780C5D /* pause-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pause-ipadhd.png"; sourceTree = "<group>"; };
-		9C791C0817237A7000780C5D /* buttonAchievements-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "buttonAchievements-ipadhd.png"; path = "MainMenu/buttonAchievements-ipadhd.png"; sourceTree = "<group>"; };
-		9C791C0917237A7000780C5D /* buttonAchievements.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = buttonAchievements.png; path = MainMenu/buttonAchievements.png; sourceTree = "<group>"; };
-		9C791C0A17237A7000780C5D /* buttonAchievementsPressed-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "buttonAchievementsPressed-ipadhd.png"; path = "MainMenu/buttonAchievementsPressed-ipadhd.png"; sourceTree = "<group>"; };
-		9C791C0B17237A7000780C5D /* buttonAchievementsPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = buttonAchievementsPressed.png; path = MainMenu/buttonAchievementsPressed.png; sourceTree = "<group>"; };
-		9C791C0C17237A7000780C5D /* buttonLeaderboard-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "buttonLeaderboard-ipadhd.png"; path = "MainMenu/buttonLeaderboard-ipadhd.png"; sourceTree = "<group>"; };
-		9C791C0D17237A7000780C5D /* buttonLeaderboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = buttonLeaderboard.png; path = MainMenu/buttonLeaderboard.png; sourceTree = "<group>"; };
-		9C791C0E17237A7000780C5D /* buttonLeaderboardPressed-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "buttonLeaderboardPressed-ipadhd.png"; path = "MainMenu/buttonLeaderboardPressed-ipadhd.png"; sourceTree = "<group>"; };
-		9C791C0F17237A7000780C5D /* buttonLeaderboardPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = buttonLeaderboardPressed.png; path = MainMenu/buttonLeaderboardPressed.png; sourceTree = "<group>"; };
-		9C791C1017237A7000780C5D /* buttonSettings-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "buttonSettings-ipadhd.png"; path = "MainMenu/buttonSettings-ipadhd.png"; sourceTree = "<group>"; };
-		9C791C1117237A7000780C5D /* buttonSettings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = buttonSettings.png; path = MainMenu/buttonSettings.png; sourceTree = "<group>"; };
-		9C791C1217237A7000780C5D /* buttonSettingsPressed-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "buttonSettingsPressed-ipadhd.png"; path = "MainMenu/buttonSettingsPressed-ipadhd.png"; sourceTree = "<group>"; };
-		9C791C1317237A7000780C5D /* buttonSettingsPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = buttonSettingsPressed.png; path = MainMenu/buttonSettingsPressed.png; sourceTree = "<group>"; };
-		9C791C1417237A7000780C5D /* buttonSkillTree-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "buttonSkillTree-ipadhd.png"; path = "MainMenu/buttonSkillTree-ipadhd.png"; sourceTree = "<group>"; };
-		9C791C1517237A7000780C5D /* buttonSkillTree.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = buttonSkillTree.png; path = MainMenu/buttonSkillTree.png; sourceTree = "<group>"; };
-		9C791C1617237A7000780C5D /* buttonSkillTreePressed-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "buttonSkillTreePressed-ipadhd.png"; path = "MainMenu/buttonSkillTreePressed-ipadhd.png"; sourceTree = "<group>"; };
-		9C791C1717237A7000780C5D /* buttonSkillTreePressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = buttonSkillTreePressed.png; path = MainMenu/buttonSkillTreePressed.png; sourceTree = "<group>"; };
 		9C791C2817237ADE00780C5D /* menuBackground-ipadhd.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "menuBackground-ipadhd.jpg"; path = "MainMenu/menuBackground-ipadhd.jpg"; sourceTree = "<group>"; };
 		9C791C2917237ADE00780C5D /* menuBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = menuBackground.jpg; path = MainMenu/menuBackground.jpg; sourceTree = "<group>"; };
-		9C791C2A17237ADE00780C5D /* playButton-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "playButton-ipadhd.png"; path = "MainMenu/playButton-ipadhd.png"; sourceTree = "<group>"; };
-		9C791C2B17237ADE00780C5D /* playButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = playButton.png; path = MainMenu/playButton.png; sourceTree = "<group>"; };
 		9C7FF343170B28CE009DA7F9 /* Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Config.plist; path = "TechDemo - Physics/Config.plist"; sourceTree = "<group>"; };
 		9C7FF345170B2AFA009DA7F9 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		9C7FF346170B2AFA009DA7F9 /* Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
@@ -964,9 +768,6 @@
 		9C9ADB2C17218AA200C3FA59 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		9C9ADB2E1721A94000C3FA59 /* ZealotSquare.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ZealotSquare.plist; sourceTree = "<group>"; };
 		9C9ADB301721AB6400C3FA59 /* FaerieColumn.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FaerieColumn.plist; sourceTree = "<group>"; };
-		9C9ADB321721CA2C00C3FA59 /* red_health_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red_health_bar.png; sourceTree = "<group>"; };
-		9C9ADB331721CA2C00C3FA59 /* green_health_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green_health_bar.png; sourceTree = "<group>"; };
-		9CBF5AFF171B1A0E00EF44B2 /* skilltree-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "skilltree-ipadhd.png"; sourceTree = "<group>"; };
 		9CBF5B08171E462D00EF44B2 /* Registry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Registry.h; sourceTree = "<group>"; };
 		9CBF5B09171E462E00EF44B2 /* Registry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Registry.m; sourceTree = "<group>"; };
 		9CBF5B0B171E464C00EF44B2 /* ResourceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourceManager.h; sourceTree = "<group>"; };
@@ -1005,81 +806,17 @@
 			isa = PBXGroup;
 			children = (
 				8BC00F05171DF81F00A0DCD4 /* Background z0-ipadhd.png */,
-				8BC00F06171DF81F00A0DCD4 /* City - branch1 - z13-ipadhd.png */,
-				8BC00F07171DF81F00A0DCD4 /* City - branch2 - z14-ipadhd.png */,
-				8BC00F08171DF81F00A0DCD4 /* City - branch3 z12-ipadhd.png */,
-				8BC00F09171DF81F00A0DCD4 /* City - el1 z5-ipadhd.png */,
-				8BC00F0A171DF81F00A0DCD4 /* City - el2 z4-ipadhd.png */,
-				8BC00F0B171DF81F00A0DCD4 /* City - el3 z2-ipadhd.png */,
-				8BC00F0C171DF81F00A0DCD4 /* City - Main branch z15-ipadhd.png */,
-				8BC00F0D171DF81F00A0DCD4 /* City - Symbol z34-ipadhd.png */,
-				8BC00F0E171DF81F00A0DCD4 /* Fire - branch 1 z8-ipadhd.png */,
-				8BC00F0F171DF81F00A0DCD4 /* Fire - branch2 z9-ipadhd.png */,
-				8BC00F10171DF81F00A0DCD4 /* Fire - branch3 z7-ipadhd.png */,
-				8BC00F11171DF81F00A0DCD4 /* Fire - el1 z11-ipadhd.png */,
 				8BC00F12171DF81F00A0DCD4 /* Fire - el2 z35-ipadhd.png */,
 				8BC00F13171DF81F00A0DCD4 /* Fire - el3 z6-ipadhd.png */,
-				8BC00F14171DF81F00A0DCD4 /* Fire - Main branch z10-ipadhd.png */,
-				8BC00F15171DF81F00A0DCD4 /* Fire - Symbol z32-ipadhd.png */,
-				8BC00F16171DF81F00A0DCD4 /* Ice - branch1 z17-ipadhd.png */,
-				8BC00F17171DF81F00A0DCD4 /* Ice - branch2 z18-ipadhd.png */,
-				8BC00F18171DF81F00A0DCD4 /* Ice - branch3 z16-ipadhd.png */,
-				8BC00F19171DF81F00A0DCD4 /* Ice - el1 z1-ipadhd.png */,
-				8BC00F1A171DF81F00A0DCD4 /* Ice - el2 z3-ipadhd.png */,
-				8BC00F1B171DF81F00A0DCD4 /* Ice - el3 z24-ipadhd.png */,
-				8BC00F1C171DF81F00A0DCD4 /* Ice - Main branch z19-ipadhd.png */,
-				8BC00F1D171DF81F00A0DCD4 /* Ice - Symbol z31-ipadhd.png */,
 				8BC00F1E171DF81F00A0DCD4 /* Main Tree Branch - el1 z27-ipadhd.png */,
 				8BC00F1F171DF81F00A0DCD4 /* Main Tree Branch - el2 z30-ipadhd.png */,
 				8BC00F20171DF81F00A0DCD4 /* Main Tree Branch z25-ipadhd.png */,
-				8BC00F21171DF82000A0DCD4 /* Marksman - branch1 z22-ipadhd.png */,
-				8BC00F22171DF82000A0DCD4 /* Marksman - branch2 z20-ipadhd.png */,
-				8BC00F23171DF82000A0DCD4 /* Marksman - branch3 z21-ipadhd.png */,
-				8BC00F24171DF82000A0DCD4 /* Marksman - el1 z29-ipadhd.png */,
-				8BC00F25171DF82000A0DCD4 /* Marksman - el2 z28-ipadhd.png */,
-				8BC00F26171DF82000A0DCD4 /* Marksman - el3 z26-ipadhd.png */,
-				8BC00F27171DF82000A0DCD4 /* Marksman - Main branch z23-ipadhd.png */,
-				8BC00F28171DF82000A0DCD4 /* Marksman Symbol - z33-ipadhd.png */,
-				8BBB6A11171E00C90064B3CD /* City - Symbol z34_DOWN-ipadhd.png */,
-				8BBB6A12171E00C90064B3CD /* City - Symbol z34_UP-ipadhd.png */,
-				8BC00EFA171DEA4700A0DCD4 /* City - Symbol z34_DOWN.png */,
-				8BC00EFB171DEA4700A0DCD4 /* City - Symbol z34_UP.png */,
 				8B0E70E6171DCCB9004D212C /* Background z0.png */,
-				8B0E70E7171DCCB9004D212C /* City - branch1 - z13.png */,
-				8B0E70E8171DCCB9004D212C /* City - branch2 - z14.png */,
-				8B0E70E9171DCCB9004D212C /* City - branch3 z12.png */,
-				8B0E70EA171DCCB9004D212C /* City - el1 z5.png */,
-				8B0E70EB171DCCB9004D212C /* City - el2 z4.png */,
-				8B0E70EC171DCCB9004D212C /* City - el3 z2.png */,
-				8B0E70ED171DCCB9004D212C /* City - Main branch z15.png */,
-				8B0E70EE171DCCB9004D212C /* City - Symbol z34.png */,
-				8B0E70EF171DCCB9004D212C /* Fire - branch 1 z8.png */,
-				8B0E70F0171DCCB9004D212C /* Fire - branch2 z9.png */,
-				8B0E70F1171DCCB9004D212C /* Fire - branch3 z7.png */,
-				8B0E70F2171DCCB9004D212C /* Fire - el1 z11.png */,
 				8B0E70F3171DCCB9004D212C /* Fire - el2 z35.png */,
 				8B0E70F4171DCCB9004D212C /* Fire - el3 z6.png */,
-				8B0E70F5171DCCB9004D212C /* Fire - Main branch z10.png */,
-				8B0E70F6171DCCB9004D212C /* Fire - Symbol z32.png */,
-				8B0E70F7171DCCB9004D212C /* Ice - branch1 z17.png */,
-				8B0E70F8171DCCB9004D212C /* Ice - branch2 z18.png */,
-				8B0E70F9171DCCB9004D212C /* Ice - branch3 z16.png */,
-				8B0E70FA171DCCB9004D212C /* Ice - el1 z1.png */,
-				8B0E70FB171DCCB9004D212C /* Ice - el2 z3.png */,
-				8B0E70FC171DCCB9004D212C /* Ice - el3 z24.png */,
-				8B0E70FD171DCCB9004D212C /* Ice - Main branch z19.png */,
-				8B0E70FE171DCCB9004D212C /* Ice - Symbol z31.png */,
 				8B0E70FF171DCCB9004D212C /* Main Tree Branch - el1 z27.png */,
 				8B0E7100171DCCB9004D212C /* Main Tree Branch - el2 z30.png */,
 				8B0E7101171DCCB9004D212C /* Main Tree Branch z25.png */,
-				8B0E7102171DCCB9004D212C /* Marksman - branch1 z22.png */,
-				8B0E7103171DCCB9004D212C /* Marksman - branch2 z20.png */,
-				8B0E7104171DCCB9004D212C /* Marksman - branch3 z21.png */,
-				8B0E7105171DCCB9004D212C /* Marksman - el1 z29.png */,
-				8B0E7106171DCCB9004D212C /* Marksman - el2 z28.png */,
-				8B0E7107171DCCB9004D212C /* Marksman - el3 z26.png */,
-				8B0E7108171DCCB9004D212C /* Marksman - Main branch z23.png */,
-				8B0E7109171DCCB9004D212C /* Marksman Symbol - z33.png */,
 			);
 			name = Skilltree;
 			path = "Skilltree - HD";
@@ -1127,6 +864,7 @@
 				9C11EEC51720646F003510EB /* PeasantSpear.plist */,
 				9C9ADB2E1721A94000C3FA59 /* ZealotSquare.plist */,
 				9C9ADB301721AB6400C3FA59 /* FaerieColumn.plist */,
+				9C478719173454B800180864 /* MixedWave.plist */,
 			);
 			name = Waves;
 			sourceTree = "<group>";
@@ -1151,66 +889,9 @@
 		9C2B3CBE171EE9BC00E695FE /* Menus */ = {
 			isa = PBXGroup;
 			children = (
-				9C3CE245172DF5B10044889D /* buyarrow.png */,
-				9C3CE246172DF5B40044889D /* buyarrowPressed.png */,
-				9C3CE23B172DEDD40044889D /* buyarrowPressed-ipadhd.png */,
-				9C3CE23C172DEDD80044889D /* buyarrow-ipadhd.png */,
-				9C3CE249172DF5D30044889D /* hud-background-ipadhd.png */,
-				9C3CE243172DF4990044889D /* hud-background.png */,
-				8CDE45901725A4630076BF38 /* IceButton-bw-ipadhd.png */,
-				8CDE45911725A4630076BF38 /* IceButton-ipadhd.png */,
-				8CE17A0A172460F90069B4E3 /* IceButton-bw.png */,
-				8CE17A0B172460F90069B4E3 /* IceButton.png */,
-				8CDE458E1725A4630076BF38 /* FireButton-bw-ipadhd.png */,
-				8CE17A09172460F90069B4E3 /* FireButton-bw.png */,
-				8CDE458F1725A4630076BF38 /* FireButton-ipadhd.png */,
-				8CA9AEC717244CE400283D69 /* FireButton.png */,
-				8CDE45921725A4630076BF38 /* MarksManButton-bw-ipadhd.png */,
-				8CE17A0C172460F90069B4E3 /* MarksManButton-bw.png */,
-				8CDE45931725A4630076BF38 /* MarksManButton-ipadhd.png */,
-				8CA9AEC917244CE400283D69 /* MarksManButton.png */,
+				9C319F2B1727024E00D3A6EA /* SelectLevelMenu */,
 				9C791C2817237ADE00780C5D /* menuBackground-ipadhd.jpg */,
 				9C791C2917237ADE00780C5D /* menuBackground.jpg */,
-				9C3CE240172DF0360044889D /* fleurBlack-ipadhd.png */,
-				9C3CE237172DE9230044889D /* fleurBlack.png */,
-				9C3CE23F172DF0330044889D /* fleurDor-ipadhd.png */,
-				9C3CE238172DE92B0044889D /* fleurDor.png */,
-				9C791C2A17237ADE00780C5D /* playButton-ipadhd.png */,
-				9C791C2B17237ADE00780C5D /* playButton.png */,
-				9C791C0817237A7000780C5D /* buttonAchievements-ipadhd.png */,
-				9C791C0917237A7000780C5D /* buttonAchievements.png */,
-				9C791C0A17237A7000780C5D /* buttonAchievementsPressed-ipadhd.png */,
-				9C791C0B17237A7000780C5D /* buttonAchievementsPressed.png */,
-				9C791C0C17237A7000780C5D /* buttonLeaderboard-ipadhd.png */,
-				9C791C0D17237A7000780C5D /* buttonLeaderboard.png */,
-				9C791C0E17237A7000780C5D /* buttonLeaderboardPressed-ipadhd.png */,
-				9C791C0F17237A7000780C5D /* buttonLeaderboardPressed.png */,
-				9C791C1017237A7000780C5D /* buttonSettings-ipadhd.png */,
-				9C791C1117237A7000780C5D /* buttonSettings.png */,
-				9C791C1217237A7000780C5D /* buttonSettingsPressed-ipadhd.png */,
-				9C791C1317237A7000780C5D /* buttonSettingsPressed.png */,
-				9C791C1417237A7000780C5D /* buttonSkillTree-ipadhd.png */,
-				9C791C1517237A7000780C5D /* buttonSkillTree.png */,
-				9C791C1617237A7000780C5D /* buttonSkillTreePressed-ipadhd.png */,
-				9C791C1717237A7000780C5D /* buttonSkillTreePressed.png */,
-				3EADA5A11732843D00AE0615 /* keylock2-ipadhd.png */,
-				3EADA5A21732844400AE0615 /* keylock2.png */,
-				9C3CE235172DE91B0044889D /* keylock-ipadhd.png */,
-				3EE2F96B1723287F0084DF2F /* keylock.png */,
-				9C791C04172376B700780C5D /* pause.png */,
-				9C791C05172376B700780C5D /* pause-ipadhd.png */,
-				8BBB6A27171E273B0064B3CD /* star.png */,
-				8BBB6A28171E273C0064B3CD /* star-ipadhd.png */,
-				8BBB6A29171E273C0064B3CD /* starUP.png */,
-				8BBB6A2A171E273C0064B3CD /* starUP-ipadhd.png */,
-				8B560899171A251F00B14693 /* skilltree.png */,
-				9CBF5AFF171B1A0E00EF44B2 /* skilltree-ipadhd.png */,
-				8BBB6A16171E08CD0064B3CD /* SpeakerIcon_DOWN-ipadhd.png */,
-				8BBB6A17171E08CD0064B3CD /* SpeakerIcon_DOWN.png */,
-				8BBB6A18171E08CD0064B3CD /* SpeakerIcon_UP_SOUND-ipadhd.png */,
-				8BBB6A19171E08CD0064B3CD /* SpeakerIcon_UP_SOUND.png */,
-				8BBB6A1A171E08CD0064B3CD /* SpeakerIcon_UP-ipadhd.png */,
-				8BBB6A1B171E08CD0064B3CD /* SpeakerIcon_UP.png */,
 			);
 			name = Menus;
 			sourceTree = "<group>";
@@ -1264,16 +945,40 @@
 		9C377C12170BC19200F840FB /* Sprites */ = {
 			isa = PBXGroup;
 			children = (
+				9C2B3CBE171EE9BC00E695FE /* Menus */,
+				8B0E70E5171DCCB9004D212C /* Skilltree */,
 				9C969E5A17163EF700BE7476 /* ipadhd */,
 				9C969E5B17163F1900BE7476 /* normal */,
 				9C973FE0171739DB00B25075 /* Castle */,
-				8B8C2DC01719EA3F00B50C1E /* larcher_transparent_name.png */,
 				3EB8A37F17161CFA00666626 /* fire.png */,
+				8BC21063173430E600B875B2 /* ccbParticleSmoke.png */,
+				8BC21064173430E600B875B2 /* ccbParticleSnow.png */,
+				8BC21065173430E600B875B2 /* ccbParticleStars.png */,
 				3EB8A37D17161AF800666626 /* defaultEmitter.png */,
 				3EDD9F241715DF9F00C6A622 /* background.png */,
-				8B2214641733380A0055BF51 /* ccbResources */,
 			);
 			name = Sprites;
+			sourceTree = "<group>";
+		};
+		9C4787181734526600180864 /* Enemies */ = {
+			isa = PBXGroup;
+			children = (
+				9C47870F17344CFD00180864 /* Wraith.h */,
+				9C47871017344CFD00180864 /* Wraith.m */,
+				9C4787121734524D00180864 /* BlackDragon.h */,
+				9C4787131734524D00180864 /* BlackDragon.m */,
+				9C4787151734525D00180864 /* Skeleton.h */,
+				9C4787161734525D00180864 /* Skeleton.m */,
+				9C8DE0CD171853AD002E0D0A /* FaerieDragon.h */,
+				9C8DE0CE171853AD002E0D0A /* FaerieDragon.m */,
+				9C85F6471709D2EF00EECB83 /* Peasant.h */,
+				9C85F6481709D2EF00EECB83 /* Peasant.m */,
+				9C47870C17342B4B00180864 /* FireElemental.h */,
+				9C47870D17342B4B00180864 /* FireElemental.m */,
+				9C8DE0D41718E9FF002E0D0A /* Zealot.h */,
+				9C8DE0D51718EA00002E0D0A /* Zealot.m */,
+			);
+			name = Enemies;
 			sourceTree = "<group>";
 		};
 		9C85F48D1707957E00EECB83 = {
@@ -1338,21 +1043,11 @@
 				9C9ADB331721CA2C00C3FA59 /* green_health_bar.png */,
 				3E926EC4173405ED00BFA90D /* Achievements */,
 				9C94ABD917197D3C005BCE32 /* Animations */,
-				9C2B3CBE171EE9BC00E695FE /* Menus */,
-				8B0E70E5171DCCB9004D212C /* Skilltree */,
-				9C319F2B1727024E00D3A6EA /* SelectLevelMenu */,
 				9C8DE0CC171852F8002E0D0A /* App resources */,
 				9C377C04170BAE4500F840FB /* SFX */,
 				9C969E5C1716470500BE7476 /* Music */,
 				9C377C12170BC19200F840FB /* Sprites */,
 				3E14D23A171A2A28005992A6 /* Comet.plist */,
-				8B8C2D9B1719DB9300B50C1E /* MainMenu.ccbi */,
-				8BFC3F0E17204440000161FD /* GameOver.ccbi */,
-				8C72C2A51729687B009EF8C1 /* GameWin.ccbi */,
-				3EEB679F17234BC2005C58E9 /* PauseMenu.ccbi */,
-				8BBB6A22171E09E30064B3CD /* SettingsMenu.ccbi */,
-				8B221466173338540055BF51 /* SkillTreeLayer.ccbi */,
-				8B221467173338540055BF51 /* SkillTreeSubMenu.ccbi */,
 				9C85F4C31707957E00EECB83 /* Info.plist */,
 			);
 			name = Resources;
@@ -1719,6 +1414,10 @@
 				9C8DE0D21718E133002E0D0A /* zealot_anim.plist */,
 				8BFA2D9F17172536008A2064 /* peasant_anim.plist */,
 				9C75D80D171A167E00419031 /* yurie_anim.plist */,
+				9C478704173429FC00180864 /* blackdragon_anim.plist */,
+				9C47870617342A0A00180864 /* skeleton_anim.plist */,
+				9C47870817342A1600180864 /* wraith_anim.plist */,
+				9C47870A17342A2500180864 /* fireelemental_anim.plist */,
 			);
 			name = Animations;
 			sourceTree = "<group>";
@@ -1753,6 +1452,7 @@
 		9C969E581716263000BE7476 /* Scene Entities */ = {
 			isa = PBXGroup;
 			children = (
+				9C4787181734526600180864 /* Enemies */,
 				8B79CDDF171F501D00E58EDD /* Hud.h */,
 				8B79CDE0171F501D00E58EDD /* Hud.m */,
 				8BFC3F0A172042C2000161FD /* GameOver.h */,
@@ -1767,10 +1467,6 @@
 				3EEB67A217234C1A005C58E9 /* PauseHUD.m */,
 				9C85F654170A022800EECB83 /* Arrow.h */,
 				9C85F655170A022900EECB83 /* Arrow.m */,
-				9C8DE0CD171853AD002E0D0A /* FaerieDragon.h */,
-				9C8DE0CE171853AD002E0D0A /* FaerieDragon.m */,
-				9C85F6471709D2EF00EECB83 /* Peasant.h */,
-				9C85F6481709D2EF00EECB83 /* Peasant.m */,
 				9C85F6411709D1A800EECB83 /* Yuri.h */,
 				9C85F6421709D1A900EECB83 /* Yuri.m */,
 				9C85F6441709D25600EECB83 /* Enemy.h */,
@@ -1779,8 +1475,6 @@
 				9C85F6521709ECF300EECB83 /* Entity.m */,
 				9C85F65F170A4E4400EECB83 /* Projectile.h */,
 				9C85F660170A4E4400EECB83 /* Projectile.m */,
-				9C8DE0D41718E9FF002E0D0A /* Zealot.h */,
-				9C8DE0D51718EA00002E0D0A /* Zealot.m */,
 				3E08A7C71719B29D007BE310 /* Stimulus.h */,
 				3E08A7C81719B29D007BE310 /* Stimulus.m */,
 				3EE2F9651723178B0084DF2F /* LevelThumbnail.h */,
@@ -1789,6 +1483,12 @@
 				3EE2F95D17230E640084DF2F /* LevelStars.m */,
 				9C500251172AD03800C141DB /* LoadingBar.h */,
 				9C500252172AD03800C141DB /* LoadingBar.m */,
+				8BC2106E173437D800B875B2 /* MarksmanSubSkillTree.h */,
+				8BC2106F173437D800B875B2 /* MarksmanSubSkillTree.m */,
+				8BC2107517343D9300B875B2 /* CitySubSkillTree.h */,
+				8BC2107617343D9300B875B2 /* CitySubSkillTree.m */,
+				8BC2106B1734320000B875B2 /* IceSubSkillTree.h */,
+				8BC2106C1734320000B875B2 /* IceSubSkillTree.m */,
 				8B3FF0DE1732B60600D2212B /* FireSubSkillTree.h */,
 				8B3FF0DF1732B60600D2212B /* FireSubSkillTree.m */,
 			);
@@ -1809,6 +1509,8 @@
 		9C969E5A17163EF700BE7476 /* ipadhd */ = {
 			isa = PBXGroup;
 			children = (
+				8B43949317341E0F008BAB1D /* skillTreeSS-ipadhd.png */,
+				8BC2106117342A7900B875B2 /* skillTreeSS-ipadhd.plist */,
 				9C268CF3172C4F6900F303D8 /* MenuSpritesheet-ipadhd.plist */,
 				9C268CF4172C4F6900F303D8 /* MenuSpritesheet-ipadhd.png */,
 				9C268CEE172C4D8D00F303D8 /* MenuSpritesheet-ipadhd.zwd */,
@@ -1826,6 +1528,8 @@
 		9C969E5B17163F1900BE7476 /* normal */ = {
 			isa = PBXGroup;
 			children = (
+				8B43948917341C30008BAB1D /* skillTreeSS.plist */,
+				8B43948A17341C30008BAB1D /* skillTreeSS.png */,
 				9C268CEF172C4F1C00F303D8 /* MenuSpritesheet.plist */,
 				9C268CF0172C4F1C00F303D8 /* MenuSpritesheet.png */,
 				9C268CEB172C4D8700F303D8 /* MenuSpritesheet.zwd */,
@@ -1868,6 +1572,29 @@
 				9C9ADB2C17218AA200C3FA59 /* Utils.m */,
 			);
 			name = "Helper Classes";
+			sourceTree = "<group>";
+		};
+		9C9D85991733FF690071B7C2 /* CocosBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				8B8C2D9B1719DB9300B50C1E /* MainMenu.ccbi */,
+				8BFC3F0E17204440000161FD /* GameOver.ccbi */,
+				8C72C2A51729687B009EF8C1 /* GameWin.ccbi */,
+				9C478701173425DD00180864 /* SkillTreeSubMenu.ccbi */,
+				3EEB679F17234BC2005C58E9 /* PauseMenu.ccbi */,
+				8BBB6A22171E09E30064B3CD /* SettingsMenu.ccbi */,
+				8B221466173338540055BF51 /* SkillTreeLayer.ccbi */,
+				9C4787021734260600180864 /* SkillTreeLayerZWOP.ccbi */,
+				8BC2107317343D6500B875B2 /* CitySubMenu.ccbi */,
+				8BC2107117343A0800B875B2 /* MarksSubMenu.ccbi */,
+				8B221467173338540055BF51 /* SkillTreeSubMenu.ccbi */,
+				3EE9FE1317256DAD009718EC /* LevelSelectLayer.ccb */,
+				3EE2F95F1723175E0084DF2F /* LevelSelectLayer.ccbi */,
+				3EE2F9601723175E0084DF2F /* LevelThumbnail.ccbi */,
+				3EE2F9611723175E0084DF2F /* StarsNode.ccbi */,
+				8BC21069173431C400B875B2 /* IceSubMenu.ccbi */,
+			);
+			name = CocosBuilder;
 			sourceTree = "<group>";
 		};
 		9CBF5B0E171E4D5D00EF44B2 /* Layer Classes */ = {
@@ -1983,147 +1710,35 @@
 				9C8C65CC1719B4EA00F56FC4 /* moat-ipadhd.png in Resources */,
 				3E14D23B171A2A28005992A6 /* Comet.plist in Resources */,
 				8B8C2D9C1719DB9300B50C1E /* MainMenu.ccbi in Resources */,
-				8B8C2DC51719EA3F00B50C1E /* larcher_transparent_name.png in Resources */,
 				9C75D80E171A167E00419031 /* yurie_anim.plist in Resources */,
-				8B56089B171A251F00B14693 /* skilltree.png in Resources */,
-				9CBF5B03171B1A0E00EF44B2 /* skilltree-ipadhd.png in Resources */,
 				3E3A5D09171C6AE2006D5370 /* larcher_icon_72x72.png in Resources */,
 				3E3A5D0B171C6AEC006D5370 /* larcher_icon_144x144.png in Resources */,
 				8B0E710A171DCCB9004D212C /* Background z0.png in Resources */,
-				8B0E710B171DCCB9004D212C /* City - branch1 - z13.png in Resources */,
-				8B0E710C171DCCB9004D212C /* City - branch2 - z14.png in Resources */,
-				8B0E710D171DCCB9004D212C /* City - branch3 z12.png in Resources */,
-				8B0E710E171DCCB9004D212C /* City - el1 z5.png in Resources */,
-				8B0E710F171DCCB9004D212C /* City - el2 z4.png in Resources */,
-				8B0E7110171DCCB9004D212C /* City - el3 z2.png in Resources */,
-				8B0E7111171DCCB9004D212C /* City - Main branch z15.png in Resources */,
-				8B0E7112171DCCB9004D212C /* City - Symbol z34.png in Resources */,
-				8B0E7113171DCCB9004D212C /* Fire - branch 1 z8.png in Resources */,
-				8B0E7114171DCCB9004D212C /* Fire - branch2 z9.png in Resources */,
-				8B0E7115171DCCB9004D212C /* Fire - branch3 z7.png in Resources */,
-				8B0E7116171DCCB9004D212C /* Fire - el1 z11.png in Resources */,
 				8B0E7117171DCCB9004D212C /* Fire - el2 z35.png in Resources */,
 				8B0E7118171DCCB9004D212C /* Fire - el3 z6.png in Resources */,
-				8B0E7119171DCCB9004D212C /* Fire - Main branch z10.png in Resources */,
-				8B0E711A171DCCB9004D212C /* Fire - Symbol z32.png in Resources */,
-				8B0E711B171DCCB9004D212C /* Ice - branch1 z17.png in Resources */,
-				8B0E711C171DCCB9004D212C /* Ice - branch2 z18.png in Resources */,
-				8B0E711D171DCCB9004D212C /* Ice - branch3 z16.png in Resources */,
-				8B0E711E171DCCB9004D212C /* Ice - el1 z1.png in Resources */,
-				8B0E711F171DCCB9004D212C /* Ice - el2 z3.png in Resources */,
-				8B0E7120171DCCB9004D212C /* Ice - el3 z24.png in Resources */,
-				8B0E7121171DCCB9004D212C /* Ice - Main branch z19.png in Resources */,
-				8B0E7122171DCCB9004D212C /* Ice - Symbol z31.png in Resources */,
 				8B0E7123171DCCB9004D212C /* Main Tree Branch - el1 z27.png in Resources */,
 				8B0E7124171DCCB9004D212C /* Main Tree Branch - el2 z30.png in Resources */,
 				8B0E7125171DCCB9004D212C /* Main Tree Branch z25.png in Resources */,
-				8B0E7126171DCCB9004D212C /* Marksman - branch1 z22.png in Resources */,
-				8B0E7127171DCCB9004D212C /* Marksman - branch2 z20.png in Resources */,
-				8B0E7128171DCCB9004D212C /* Marksman - branch3 z21.png in Resources */,
-				8B0E7129171DCCB9004D212C /* Marksman - el1 z29.png in Resources */,
-				8B0E712A171DCCB9004D212C /* Marksman - el2 z28.png in Resources */,
-				8B0E712B171DCCB9004D212C /* Marksman - el3 z26.png in Resources */,
-				8B0E712C171DCCB9004D212C /* Marksman - Main branch z23.png in Resources */,
-				8B0E712D171DCCB9004D212C /* Marksman Symbol - z33.png in Resources */,
-				8BC00EFC171DEA4700A0DCD4 /* City - Symbol z34_DOWN.png in Resources */,
-				8BC00EFD171DEA4700A0DCD4 /* City - Symbol z34_UP.png in Resources */,
 				8BC00F29171DF82000A0DCD4 /* Background z0-ipadhd.png in Resources */,
-				8BC00F2A171DF82000A0DCD4 /* City - branch1 - z13-ipadhd.png in Resources */,
-				8BC00F2B171DF82000A0DCD4 /* City - branch2 - z14-ipadhd.png in Resources */,
-				8BC00F2C171DF82000A0DCD4 /* City - branch3 z12-ipadhd.png in Resources */,
-				8BC00F2D171DF82000A0DCD4 /* City - el1 z5-ipadhd.png in Resources */,
-				8BC00F2E171DF82000A0DCD4 /* City - el2 z4-ipadhd.png in Resources */,
-				8BC00F2F171DF82000A0DCD4 /* City - el3 z2-ipadhd.png in Resources */,
-				8BC00F30171DF82000A0DCD4 /* City - Main branch z15-ipadhd.png in Resources */,
-				8BC00F31171DF82000A0DCD4 /* City - Symbol z34-ipadhd.png in Resources */,
-				8BC00F32171DF82000A0DCD4 /* Fire - branch 1 z8-ipadhd.png in Resources */,
-				8BC00F33171DF82000A0DCD4 /* Fire - branch2 z9-ipadhd.png in Resources */,
-				8BC00F34171DF82000A0DCD4 /* Fire - branch3 z7-ipadhd.png in Resources */,
-				8BC00F35171DF82000A0DCD4 /* Fire - el1 z11-ipadhd.png in Resources */,
 				8BC00F36171DF82000A0DCD4 /* Fire - el2 z35-ipadhd.png in Resources */,
 				8BC00F37171DF82000A0DCD4 /* Fire - el3 z6-ipadhd.png in Resources */,
-				8BC00F38171DF82000A0DCD4 /* Fire - Main branch z10-ipadhd.png in Resources */,
-				8BC00F39171DF82000A0DCD4 /* Fire - Symbol z32-ipadhd.png in Resources */,
-				8BC00F3A171DF82000A0DCD4 /* Ice - branch1 z17-ipadhd.png in Resources */,
-				8BC00F3B171DF82000A0DCD4 /* Ice - branch2 z18-ipadhd.png in Resources */,
-				8BC00F3C171DF82000A0DCD4 /* Ice - branch3 z16-ipadhd.png in Resources */,
-				8BC00F3D171DF82000A0DCD4 /* Ice - el1 z1-ipadhd.png in Resources */,
-				8BC00F3E171DF82000A0DCD4 /* Ice - el2 z3-ipadhd.png in Resources */,
-				8BC00F3F171DF82000A0DCD4 /* Ice - el3 z24-ipadhd.png in Resources */,
-				8BC00F40171DF82000A0DCD4 /* Ice - Main branch z19-ipadhd.png in Resources */,
-				8BC00F41171DF82000A0DCD4 /* Ice - Symbol z31-ipadhd.png in Resources */,
 				8BC00F42171DF82000A0DCD4 /* Main Tree Branch - el1 z27-ipadhd.png in Resources */,
 				8BC00F43171DF82000A0DCD4 /* Main Tree Branch - el2 z30-ipadhd.png in Resources */,
 				8BC00F44171DF82000A0DCD4 /* Main Tree Branch z25-ipadhd.png in Resources */,
-				8BC00F45171DF82000A0DCD4 /* Marksman - branch1 z22-ipadhd.png in Resources */,
-				8BC00F46171DF82000A0DCD4 /* Marksman - branch2 z20-ipadhd.png in Resources */,
-				8BC00F47171DF82000A0DCD4 /* Marksman - branch3 z21-ipadhd.png in Resources */,
-				8BC00F48171DF82000A0DCD4 /* Marksman - el1 z29-ipadhd.png in Resources */,
-				8BC00F49171DF82000A0DCD4 /* Marksman - el2 z28-ipadhd.png in Resources */,
-				8BC00F4A171DF82000A0DCD4 /* Marksman - el3 z26-ipadhd.png in Resources */,
-				8BC00F4B171DF82000A0DCD4 /* Marksman - Main branch z23-ipadhd.png in Resources */,
-				8BC00F4C171DF82000A0DCD4 /* Marksman Symbol - z33-ipadhd.png in Resources */,
-				8BBB6A13171E00C90064B3CD /* City - Symbol z34_DOWN-ipadhd.png in Resources */,
-				8BBB6A14171E00C90064B3CD /* City - Symbol z34_UP-ipadhd.png in Resources */,
-				8BBB6A1C171E08CD0064B3CD /* SpeakerIcon_DOWN-ipadhd.png in Resources */,
-				8BBB6A1D171E08CD0064B3CD /* SpeakerIcon_DOWN.png in Resources */,
-				8BBB6A1E171E08CD0064B3CD /* SpeakerIcon_UP_SOUND-ipadhd.png in Resources */,
-				8BBB6A1F171E08CD0064B3CD /* SpeakerIcon_UP_SOUND.png in Resources */,
-				8BBB6A20171E08CD0064B3CD /* SpeakerIcon_UP-ipadhd.png in Resources */,
-				8BBB6A21171E08CD0064B3CD /* SpeakerIcon_UP.png in Resources */,
 				8BBB6A23171E09E30064B3CD /* SettingsMenu.ccbi in Resources */,
-				8BBB6A2B171E273C0064B3CD /* star.png in Resources */,
-				8BBB6A2C171E273C0064B3CD /* star-ipadhd.png in Resources */,
-				8BBB6A2D171E273C0064B3CD /* starUP.png in Resources */,
-				8BBB6A2E171E273C0064B3CD /* starUP-ipadhd.png in Resources */,
 				9C11EEC3172063B3003510EB /* Level1.plist in Resources */,
 				9C11EEC61720646F003510EB /* PeasantSpear.plist in Resources */,
 				8BFC3F0F17204440000161FD /* GameOver.ccbi in Resources */,
 				9C9ADB2F1721A94000C3FA59 /* ZealotSquare.plist in Resources */,
 				9C9ADB311721AB6400C3FA59 /* FaerieColumn.plist in Resources */,
-				9C9ADB341721CA2C00C3FA59 /* red_health_bar.png in Resources */,
-				9C9ADB351721CA2C00C3FA59 /* green_health_bar.png in Resources */,
 				3EE2F9621723175E0084DF2F /* LevelSelectLayer.ccbi in Resources */,
 				3EE2F9631723175E0084DF2F /* LevelThumbnail.ccbi in Resources */,
 				3EE2F9641723175E0084DF2F /* StarsNode.ccbi in Resources */,
-				3EE2F96C1723287F0084DF2F /* keylock.png in Resources */,
 				3EEB67A017234BC2005C58E9 /* PauseMenu.ccbi in Resources */,
-				9C791C06172376B700780C5D /* pause.png in Resources */,
-				9C791C07172376B700780C5D /* pause-ipadhd.png in Resources */,
-				9C791C1817237A7000780C5D /* buttonAchievements-ipadhd.png in Resources */,
-				9C791C1917237A7000780C5D /* buttonAchievements.png in Resources */,
-				9C791C1A17237A7000780C5D /* buttonAchievementsPressed-ipadhd.png in Resources */,
-				9C791C1B17237A7000780C5D /* buttonAchievementsPressed.png in Resources */,
-				9C791C1C17237A7000780C5D /* buttonLeaderboard-ipadhd.png in Resources */,
-				9C791C1D17237A7000780C5D /* buttonLeaderboard.png in Resources */,
-				9C791C1E17237A7000780C5D /* buttonLeaderboardPressed-ipadhd.png in Resources */,
-				9C791C1F17237A7000780C5D /* buttonLeaderboardPressed.png in Resources */,
-				9C791C2017237A7000780C5D /* buttonSettings-ipadhd.png in Resources */,
-				9C791C2117237A7000780C5D /* buttonSettings.png in Resources */,
-				9C791C2217237A7000780C5D /* buttonSettingsPressed-ipadhd.png in Resources */,
-				9C791C2317237A7000780C5D /* buttonSettingsPressed.png in Resources */,
-				9C791C2417237A7000780C5D /* buttonSkillTree-ipadhd.png in Resources */,
-				9C791C2517237A7000780C5D /* buttonSkillTree.png in Resources */,
-				9C791C2617237A7000780C5D /* buttonSkillTreePressed-ipadhd.png in Resources */,
-				9C791C2717237A7000780C5D /* buttonSkillTreePressed.png in Resources */,
 				9C791C2C17237ADE00780C5D /* menuBackground-ipadhd.jpg in Resources */,
 				9C791C2D17237ADE00780C5D /* menuBackground.jpg in Resources */,
-				9C791C2E17237ADE00780C5D /* playButton-ipadhd.png in Resources */,
-				9C791C2F17237ADE00780C5D /* playButton.png in Resources */,
-				8CA9AECA17244CE400283D69 /* FireButton.png in Resources */,
-				8CA9AECC17244CE400283D69 /* MarksManButton.png in Resources */,
-				8CE17A0D172460F90069B4E3 /* FireButton-bw.png in Resources */,
-				8CE17A0E172460F90069B4E3 /* IceButton-bw.png in Resources */,
-				8CE17A0F172460F90069B4E3 /* IceButton.png in Resources */,
-				8CE17A10172460F90069B4E3 /* MarksManButton-bw.png in Resources */,
 				3EE9FE1417256DAD009718EC /* LevelSelectLayer.ccb in Resources */,
-				8CDE45941725A4630076BF38 /* FireButton-bw-ipadhd.png in Resources */,
 				9C93D8E317297849004891D2 /* GameWin.ccbi in Resources */,
-				8CDE45951725A4630076BF38 /* FireButton-ipadhd.png in Resources */,
-				8CDE45961725A4630076BF38 /* IceButton-bw-ipadhd.png in Resources */,
-				8CDE45971725A4630076BF38 /* IceButton-ipadhd.png in Resources */,
-				8CDE45981725A4630076BF38 /* MarksManButton-bw-ipadhd.png in Resources */,
-				8CDE45991725A4630076BF38 /* MarksManButton-ipadhd.png in Resources */,
 				9C319F561727024E00D3A6EA /* SimpleBackground-ipadhd.jpg in Resources */,
 				9C319F571727024E00D3A6EA /* SimpleBackground.jpg in Resources */,
 				9C9703551727804A00E48924 /* Level2.plist in Resources */,
@@ -2134,19 +1749,6 @@
 				9C268CF2172C4F1C00F303D8 /* MenuSpritesheet.png in Resources */,
 				9C268CF5172C4F6900F303D8 /* MenuSpritesheet-ipadhd.plist in Resources */,
 				9C268CF6172C4F6900F303D8 /* MenuSpritesheet-ipadhd.png in Resources */,
-				9C3CE231172D8FB60044889D /* hud-background.png in Resources */,
-				9C3CE233172D90CA0044889D /* hud-background-ipadhd.png in Resources */,
-				9C3CE236172DE91F0044889D /* keylock-ipadhd.png in Resources */,
-				9C3CE239172DE92F0044889D /* fleurBlack.png in Resources */,
-				9C3CE23A172DE92F0044889D /* fleurDor.png in Resources */,
-				9C3CE23D172DEDDC0044889D /* buyarrowPressed-ipadhd.png in Resources */,
-				9C3CE23E172DEDDC0044889D /* buyarrow-ipadhd.png in Resources */,
-				9C3CE241172DF03C0044889D /* fleurDor-ipadhd.png in Resources */,
-				9C3CE242172DF03C0044889D /* fleurBlack-ipadhd.png in Resources */,
-				9C3CE244172DF49E0044889D /* hud-background.png in Resources */,
-				9C3CE247172DF5B90044889D /* buyarrow.png in Resources */,
-				9C3CE248172DF5B90044889D /* buyarrowPressed.png in Resources */,
-				9C3CE24A172DF5D70044889D /* hud-background-ipadhd.png in Resources */,
 				8C1B7730172F3D8800514B70 /* Level6.plist in Resources */,
 				8C1B7732172F3E2700514B70 /* Level7.plist in Resources */,
 				8C1B7734172F3F6300514B70 /* Level8.plist in Resources */,
@@ -2161,9 +1763,6 @@
 				8B1EC8921731A91E00B00DB6 /* chant.mp3 in Resources */,
 				8B1EC8941731B02C00B00DB6 /* killhim.mp3 in Resources */,
 				8B1EC8961731B92400B00DB6 /* buttonclick.mp3 in Resources */,
-				3EADA5A31732844B00AE0615 /* keylock2-ipadhd.png in Resources */,
-				3EADA5A41732844B00AE0615 /* keylock2.png in Resources */,
-				8B2214651733380A0055BF51 /* ccbResources in Resources */,
 				8B221468173338540055BF51 /* SkillTreeLayer.ccbi in Resources */,
 				8B221469173338540055BF51 /* SkillTreeSubMenu.ccbi in Resources */,
 				3E926EC61734064B00BFA90D /* achievement-guide.png in Resources */,

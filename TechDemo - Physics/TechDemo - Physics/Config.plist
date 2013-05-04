@@ -28,6 +28,14 @@
 	<array>
 		<dict>
 			<key>type</key>
+			<string>skeleton</string>
+			<key>class</key>
+			<string>Skeleton</string>
+			<key>initSprite</key>
+			<string>sk_walk_01.png</string>
+		</dict>
+		<dict>
+			<key>type</key>
 			<string>peasant</string>
 			<key>class</key>
 			<string>Peasant</string>
@@ -49,6 +57,30 @@
 			<string>Zealot</string>
 			<key>initSprite</key>
 			<string>z_walk01.png</string>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>fireelemental</string>
+			<key>class</key>
+			<string>FireElemental</string>
+			<key>initSprite</key>
+			<string>f_walk_01.png</string>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>wraith</string>
+			<key>class</key>
+			<string>Wraith</string>
+			<key>initSprite</key>
+			<string>w_fly_01.png</string>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>blackdragon</string>
+			<key>class</key>
+			<string>BlackDragon</string>
+			<key>initSprite</key>
+			<string>bd_fly_01.png</string>
 		</dict>
 	</array>
 	<key>MainMenuMusic</key>
