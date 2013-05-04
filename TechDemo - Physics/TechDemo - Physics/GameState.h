@@ -15,12 +15,20 @@
     NSMutableArray * skillStates;
     NSMutableArray * achievementStates;
     NSNumber * goldState;
+    NSNumber * buyArrowsState;
+    NSNumber * enemiesKilledState;
+    NSNumber * dragonsKilledState;
+    NSNumber * fireElementalKilledState;
 }
 
 @property (nonatomic, retain) NSMutableArray * starStates;
 @property (nonatomic, retain) NSMutableArray * skillStates;
 @property (nonatomic, retain) NSNumber * goldState;
 @property (nonatomic, retain) NSMutableArray * achievementState;
+@property (nonatomic, retain) NSNumber * buyArrowsState;
+@property (nonatomic, retain) NSNumber * enemiesKilledState;
+@property (nonatomic, retain) NSNumber * dragonsKilledState;
+@property (nonatomic, retain) NSNumber * fireElementalKilledState;
 
 +(GameState*)shared;
 
