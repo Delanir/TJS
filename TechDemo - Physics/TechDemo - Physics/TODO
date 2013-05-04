@@ -49,8 +49,7 @@ João M:
     - Estado dos achievements - é preciso implementar primeiro
     - Estado do leaderboard - é preciso implementar primeiro
 
-- BURACOS DE MEMORIA ARGHHGHGHGH
-    - Nao percebo a skill tree
+
 
 (Para usar o dell)
 - som do impacto tem de ser corrigido
@@ -128,4 +127,6 @@ Afterburner:
 - Nova variável com total do skill points
 - Implementar skill tree - implementar a lógica e ver se fazemos uma spritesheet de bocadinhos para melhorar a performance (Daniela)
 - Inimigos novos: Fire Elemental, Wraith, Skeleton, Black Dragon
+- BURACOS DE MEMORIA ARGHHGHGHGH
+    - Nao percebo a skill tree
 

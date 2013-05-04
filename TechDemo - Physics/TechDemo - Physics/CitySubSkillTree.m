@@ -10,9 +10,7 @@
 #import "SkillTreeLayer.h"
 #import "GameState.h"
 
-#define STARCOST1 1
-#define STARCOST2 2
-#define STARCOST3 3
+#import "Constants.h"
 
 
 @implementation CitySubSkillTree
