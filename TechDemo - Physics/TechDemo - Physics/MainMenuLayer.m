@@ -53,14 +53,15 @@
 - (void) pressedAchievments:(id)sender
 {
     [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"click"]];
-    GKAchievementViewController *achievementViewController = [[GKAchievementViewController alloc] init];
-    achievementViewController.achievementDelegate = self;
-    
-    AppController *app = (AppController*) [[UIApplication sharedApplication] delegate];
-    
-    [[app navController] presentViewController:achievementViewController animated:YES completion:nil];
-    
-    [achievementViewController release];
+    [[GameManager shared] runSceneWithID:kAchievementsScene];
+//    GKAchievementViewController *achievementViewController = [[GKAchievementViewController alloc] init];
+//    achievementViewController.achievementDelegate = self;
+//    
+//    AppController *app = (AppController*) [[UIApplication sharedApplication] delegate];
+//    
+//    [[app navController] presentViewController:achievementViewController animated:YES completion:nil];
+//    
+//    [achievementViewController release];
 }
 
 - (void) pressedLeaderboard:(id)sender

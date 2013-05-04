@@ -77,12 +77,10 @@
 
 
 
-
-
 - (void) pressedGoToMainMenu:(id)sender
 {
-    //[[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"click"]];
-    //[[GameManager shared] runSceneWithID:kMainMenuScene];
+    [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"click"]];
+    [[GameManager shared] runSceneWithID:kMainMenuScene];
 }
 
 @end

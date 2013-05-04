@@ -233,6 +233,14 @@
 					</dict>
 					<dict>
 						<key>name</key>
+						<string>visible</string>
+						<key>type</key>
+						<string>Check</string>
+						<key>value</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
 						<string>displayFrame</string>
 						<key>type</key>
 						<string>SpriteFrame</string>
@@ -243,6 +251,8 @@
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>baseClass</key>
@@ -3881,8 +3891,6 @@
 						<string>MarksSubMenu.ccb</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>baseClass</key>
@@ -4058,7 +4066,7 @@
 			<key>name</key>
 			<string>Default Timeline</string>
 			<key>offset</key>
-			<real>0.0</real>
+			<real>0.10460519790649414</real>
 			<key>position</key>
 			<real>1.3333333730697632</real>
 			<key>resolution</key>

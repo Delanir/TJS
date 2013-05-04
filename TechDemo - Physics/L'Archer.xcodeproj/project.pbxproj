@@ -1451,6 +1451,8 @@
 		9C969E581716263000BE7476 /* Scene Entities */ = {
 			isa = PBXGroup;
 			children = (
+				3E926ECA1734255700BFA90D /* AchievementNode.h */,
+				3E926ECB1734255700BFA90D /* AchievementNode.m */,
 				9C4787181734526600180864 /* Enemies */,
 				8B79CDDF171F501D00E58EDD /* Hud.h */,
 				8B79CDE0171F501D00E58EDD /* Hud.m */,
@@ -1603,8 +1605,6 @@
 				9C85F64B1709D59800EECB83 /* LevelLayer.m */,
 				3EE2F96817231EC40084DF2F /* LevelSelectLayer.h */,
 				3EE2F96917231EC40084DF2F /* LevelSelectLayer.m */,
-				3E926ECA1734255700BFA90D /* AchievementNode.h */,
-				3E926ECB1734255700BFA90D /* AchievementNode.m */,
 				3E926EC7173423EE00BFA90D /* AchievementsLayer.h */,
 				3E926EC8173423EE00BFA90D /* AchievementsLayer.m */,
 				8B0E712E171DD446004D212C /* SkillTreeLayer.h */,
