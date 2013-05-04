@@ -16,4 +16,6 @@
     CCLabelTTF *lblDescription;
 }
 
+@property (nonatomic, assign) BOOL  isEnabled;
+
 @end
