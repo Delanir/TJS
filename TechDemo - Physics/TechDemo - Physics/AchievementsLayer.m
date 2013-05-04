@@ -59,11 +59,10 @@
         
         int achievementState = [[[[GameState shared] achievementState] objectAtIndex:i-1] intValue];
         
-        if (achievementState) {// Hardcoded stuff for now
-//            [achievement setIsEnabled:YES];
+        if (achievementState) {
+            [achievement setIsEnabled:YES];
         } else
-            NSLog(@"cenas");
-//            [level setIsEnabled:NO];
+            [achievement setIsEnabled:NO];
 //        [level initLevel];
 //        [level setThumbnail:[NSString stringWithFormat:@"level%d.png",i]];
     }
