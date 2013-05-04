@@ -16,7 +16,6 @@
 {
   CCMenuItemImage *_thumbnail;
   LevelStars *_stars;
-  
 }
 
 @property (nonatomic, assign) BOOL  isEnabled;

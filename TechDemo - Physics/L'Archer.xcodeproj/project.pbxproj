@@ -12,6 +12,8 @@
 		3E14D23B171A2A28005992A6 /* Comet.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E14D23A171A2A28005992A6 /* Comet.plist */; };
 		3E3A5D09171C6AE2006D5370 /* larcher_icon_72x72.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E3A5D08171C6AE2006D5370 /* larcher_icon_72x72.png */; };
 		3E3A5D0B171C6AEC006D5370 /* larcher_icon_144x144.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E3A5D0A171C6AEC006D5370 /* larcher_icon_144x144.png */; };
+		3E926EC9173423EE00BFA90D /* AchievementsLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E926EC8173423EE00BFA90D /* AchievementsLayer.m */; };
+		3E926ECC1734255700BFA90D /* AchievementNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E926ECB1734255700BFA90D /* AchievementNode.m */; };
 		3EB8A37E17161AF800666626 /* defaultEmitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EB8A37D17161AF800666626 /* defaultEmitter.png */; };
 		3EB8A38017161CFA00666626 /* fire.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EB8A37F17161CFA00666626 /* fire.png */; };
 		3EDD9F231715DF2900C6A622 /* background-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EDD9F221715DF2900C6A622 /* background-ipadhd.png */; };
@@ -45,6 +47,8 @@
 		8B1EC8961731B92400B00DB6 /* buttonclick.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8B1EC8951731B92400B00DB6 /* buttonclick.mp3 */; };
 		8B221468173338540055BF51 /* SkillTreeLayer.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 8B221466173338540055BF51 /* SkillTreeLayer.ccbi */; };
 		8B221469173338540055BF51 /* SkillTreeSubMenu.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 8B221467173338540055BF51 /* SkillTreeSubMenu.ccbi */; };
+		8B3854D317355A900044F4F3 /* stick1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B3854D117355A900044F4F3 /* stick1.png */; };
+		8B3854D417355A900044F4F3 /* stick2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B3854D217355A900044F4F3 /* stick2.png */; };
 		8B3FF0E01732B60600D2212B /* FireSubSkillTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3FF0DF1732B60600D2212B /* FireSubSkillTree.m */; };
 		8B43948D17341C30008BAB1D /* skillTreeSS.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B43948917341C30008BAB1D /* skillTreeSS.plist */; };
 		8B43948E17341C30008BAB1D /* skillTreeSS.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B43948A17341C30008BAB1D /* skillTreeSS.png */; };
@@ -290,6 +294,11 @@
 		3E14D23A171A2A28005992A6 /* Comet.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Comet.plist; sourceTree = "<group>"; };
 		3E3A5D08171C6AE2006D5370 /* larcher_icon_72x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = larcher_icon_72x72.png; path = ../larcher_icon_72x72.png; sourceTree = "<group>"; };
 		3E3A5D0A171C6AEC006D5370 /* larcher_icon_144x144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = larcher_icon_144x144.png; path = ../larcher_icon_144x144.png; sourceTree = "<group>"; };
+		3E926EC51734064B00BFA90D /* achievement-guide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "achievement-guide.png"; sourceTree = "<group>"; };
+		3E926EC7173423EE00BFA90D /* AchievementsLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AchievementsLayer.h; sourceTree = "<group>"; };
+		3E926EC8173423EE00BFA90D /* AchievementsLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AchievementsLayer.m; sourceTree = "<group>"; };
+		3E926ECA1734255700BFA90D /* AchievementNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AchievementNode.h; sourceTree = "<group>"; };
+		3E926ECB1734255700BFA90D /* AchievementNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AchievementNode.m; sourceTree = "<group>"; };
 		3EB8A37D17161AF800666626 /* defaultEmitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultEmitter.png; sourceTree = "<group>"; };
 		3EB8A37F17161CFA00666626 /* fire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fire.png; sourceTree = "<group>"; };
 		3EDD9F221715DF2900C6A622 /* background-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-ipadhd.png"; sourceTree = "<group>"; };
@@ -329,6 +338,8 @@
 		8B1EC8951731B92400B00DB6 /* buttonclick.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = buttonclick.mp3; sourceTree = "<group>"; };
 		8B221466173338540055BF51 /* SkillTreeLayer.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = SkillTreeLayer.ccbi; sourceTree = "<group>"; };
 		8B221467173338540055BF51 /* SkillTreeSubMenu.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = SkillTreeSubMenu.ccbi; sourceTree = "<group>"; };
+		8B3854D117355A900044F4F3 /* stick1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stick1.png; sourceTree = "<group>"; };
+		8B3854D217355A900044F4F3 /* stick2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stick2.png; sourceTree = "<group>"; };
 		8B3FF0DE1732B60600D2212B /* FireSubSkillTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FireSubSkillTree.h; sourceTree = "<group>"; };
 		8B3FF0DF1732B60600D2212B /* FireSubSkillTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FireSubSkillTree.m; sourceTree = "<group>"; };
 		8B43948917341C30008BAB1D /* skillTreeSS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = skillTreeSS.plist; sourceTree = "<group>"; };
@@ -782,6 +793,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E926EC4173405ED00BFA90D /* Achievements */ = {
+			isa = PBXGroup;
+			children = (
+				3E926EC51734064B00BFA90D /* achievement-guide.png */,
+			);
+			name = Achievements;
+			sourceTree = "<group>";
+		};
 		8B0E70E5171DCCB9004D212C /* Skilltree */ = {
 			isa = PBXGroup;
 			children = (
@@ -794,6 +813,8 @@
 				8B0E70E6171DCCB9004D212C /* Background z0.png */,
 				8B0E70F3171DCCB9004D212C /* Fire - el2 z35.png */,
 				8B0E70F4171DCCB9004D212C /* Fire - el3 z6.png */,
+				8B3854D117355A900044F4F3 /* stick1.png */,
+				8B3854D217355A900044F4F3 /* stick2.png */,
 				8B0E70FF171DCCB9004D212C /* Main Tree Branch - el1 z27.png */,
 				8B0E7100171DCCB9004D212C /* Main Tree Branch - el2 z30.png */,
 				8B0E7101171DCCB9004D212C /* Main Tree Branch z25.png */,
@@ -1013,6 +1034,11 @@
 		9C85F4AC1707957E00EECB83 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3EE9FE1317256DAD009718EC /* LevelSelectLayer.ccb */,
+				3EE2F95F1723175E0084DF2F /* LevelSelectLayer.ccbi */,
+				3EE2F9601723175E0084DF2F /* LevelThumbnail.ccbi */,
+				3EE2F9611723175E0084DF2F /* StarsNode.ccbi */,
+				3E926EC4173405ED00BFA90D /* Achievements */,
 				9C9D85991733FF690071B7C2 /* CocosBuilder */,
 				9C94ABD917197D3C005BCE32 /* Animations */,
 				9C8DE0CC171852F8002E0D0A /* App resources */,
@@ -1549,6 +1575,8 @@
 		9C9D85991733FF690071B7C2 /* CocosBuilder */ = {
 			isa = PBXGroup;
 			children = (
+				3E99E2A8173569D100166046 /* AchievementsLayer.ccb */,
+				3E99E2A9173569D100166046 /* AchievementNode.ccb */,
 				8B8C2D9B1719DB9300B50C1E /* MainMenu.ccbi */,
 				8BFC3F0E17204440000161FD /* GameOver.ccbi */,
 				8C72C2A51729687B009EF8C1 /* GameWin.ccbi */,
@@ -1576,6 +1604,10 @@
 				9C85F64B1709D59800EECB83 /* LevelLayer.m */,
 				3EE2F96817231EC40084DF2F /* LevelSelectLayer.h */,
 				3EE2F96917231EC40084DF2F /* LevelSelectLayer.m */,
+				3E926ECA1734255700BFA90D /* AchievementNode.h */,
+				3E926ECB1734255700BFA90D /* AchievementNode.m */,
+				3E926EC7173423EE00BFA90D /* AchievementsLayer.h */,
+				3E926EC8173423EE00BFA90D /* AchievementsLayer.m */,
 				8B0E712E171DD446004D212C /* SkillTreeLayer.h */,
 				8B0E712F171DD447004D212C /* SkillTreeLayer.m */,
 				8B8C2D951719D8A700B50C1E /* MainMenuLayer.h */,
@@ -1748,6 +1780,10 @@
 				8BC2106A173431C400B875B2 /* IceSubMenu.ccbi in Resources */,
 				8BC2107217343A0800B875B2 /* MarksSubMenu.ccbi in Resources */,
 				8BC2107417343D6500B875B2 /* CitySubMenu.ccbi in Resources */,
+				8B3854D317355A900044F4F3 /* stick1.png in Resources */,
+				8B3854D417355A900044F4F3 /* stick2.png in Resources */,
+				3E99E2AA173569D100166046 /* AchievementsLayer.ccb in Resources */,
+				3E99E2AB173569D100166046 /* AchievementNode.ccb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1913,6 +1949,8 @@
 				8BC2106D1734320000B875B2 /* IceSubSkillTree.m in Sources */,
 				8BC21070173437D800B875B2 /* MarksmanSubSkillTree.m in Sources */,
 				8BC2107717343D9400B875B2 /* CitySubSkillTree.m in Sources */,
+				3E926EC9173423EE00BFA90D /* AchievementsLayer.m in Sources */,
+				3E926ECC1734255700BFA90D /* AchievementNode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

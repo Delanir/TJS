@@ -1,4 +1,6 @@
-AchievmentsLayer.ccbi
+achievement-guide.png
+AchievementNode.ccbi
+AchievementsLayer.ccbi
 akaPotsley.ttf
 background-ipadhd.png
 background.png
@@ -49,6 +51,10 @@ Default.png
 fps_images-hd.png
 fps_images-ipadhd.png
 fps_images.png
+golden-achievement-disabled-ipadhd.png
+golden-achievement-disabled.png
+golden-achievement-ipadhd.png
+golden-achievement.png
 Icon-72.png
 Icon-ipadhd.png
 Icon-Small-50.png
@@ -73,6 +79,8 @@ Main Tree Branch - el2 z30-ipadhd.png
 Main Tree Branch - el2 z30.png
 Main Tree Branch z25-ipadhd.png
 Main Tree Branch z25.png
+stick1.png
+stick2.png
 SkillTreeLayer.ccbi
 SkillTreeLayerZWOP.ccbi
 skillTreeSS-ipadhd.plist
@@ -81,6 +89,10 @@ skillTreeSS.plist
 skillTreeSS.png
 SkillTreeSubMenu.ccbi
 StarsNode.ccbi
+stick1-ipadhd.png
+stick1.png
+stick2-ipadhd.png
+stick2.png
 wraith_anim.plist
 yurie_anim.plist
 zealot_anim.plist

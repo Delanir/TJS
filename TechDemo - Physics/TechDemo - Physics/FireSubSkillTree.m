@@ -9,10 +9,9 @@
 #import "FireSubSkillTree.h"
 #import "SkillTreeLayer.h"
 #import "GameState.h"
+#import "Constants.h"
 
-#define STARCOST1 1
-#define STARCOST2 2
-#define STARCOST3 3
+
 
 
 @implementation FireSubSkillTree

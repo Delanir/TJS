@@ -18,6 +18,15 @@
 #define kYuriBaseDamageOverTimeDuration 1   // one second
 #define kYuriBaseDamageOverTimeDamage 30    // 30 points per second
 
+#define STARCOST1 1
+#define STARCOST2 2
+#define STARCOST3 3
+#define DEFAULTSKILLPOINTS 18
+
+#define WALLREPAIRCOST 500
+#define WALLREPAIRPERCENTAGE 0.25
+
+
 typedef enum
 {
     kMasterScene=0,

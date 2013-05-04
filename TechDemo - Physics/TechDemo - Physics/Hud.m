@@ -9,6 +9,7 @@
 #import "Hud.h"
 #import "SpriteManager.h"
 #import "Registry.h"
+#import "Constants.h"
 
 @implementation Hud
 
@@ -192,6 +193,18 @@
         [self updateMoney];
     }
 }
+
+- (void) repairWall
+{
+    if ([[ResourceManager shared] spendGold:WALLREPAIRCOST])
+    {
+        Wall *w =[[Registry shared] getEntityByName:@"Wall"];
+        [w increaseHealth:WALLREPAIRPERCENTAGE*[w health]];
+        [self updateWallHealth];
+        [self updateMoney];
+    }
+}
+
 
 - (NSMutableArray *)buttonsPressed
 {
