@@ -542,11 +542,13 @@ OVER THE LAZY DOGS !</string>
 						<string>SpriteFrame</string>
 						<key>value</key>
 						<array>
-							<string></string>
+							<string>MenuSpritesheet.plist</string>
 							<string>keylock2.png</string>
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>

@@ -1457,9 +1457,9 @@
 		9C969E581716263000BE7476 /* Scene Entities */ = {
 			isa = PBXGroup;
 			children = (
+				9C4787181734526600180864 /* Enemies */,
 				3E926ECA1734255700BFA90D /* AchievementNode.h */,
 				3E926ECB1734255700BFA90D /* AchievementNode.m */,
-				9C4787181734526600180864 /* Enemies */,
 				8B79CDDF171F501D00E58EDD /* Hud.h */,
 				8B79CDE0171F501D00E58EDD /* Hud.m */,
 				8BFC3F0A172042C2000161FD /* GameOver.h */,
