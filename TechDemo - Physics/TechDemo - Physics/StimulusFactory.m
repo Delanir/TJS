@@ -49,16 +49,16 @@ static StimulusFactory* _sharedSingleton = nil;
 }
 
 
--(Stimulus*) generateColdStimulusWithValue: (double) value
+-(Stimulus*) generateColdStimulusWithValue: (double) value andDuration: (double) duration
 {
-    Stimulus * coldStimulus = [[Stimulus alloc] initWithStimulusType:kSlowStimulus andValue:value];
+    Stimulus * coldStimulus = [[Stimulus alloc] initWithStimulusType:kSlowStimulus value:value andDuration:duration];
     [coldStimulus autorelease];
     return coldStimulus;
 }
 
--(Stimulus*) generateFireStimulusWithValue: (double) value
+-(Stimulus*) generateFireStimulusWithValue: (double) value andDuration: (double) duration;
 {
-    Stimulus * fireStimulus = [[Stimulus alloc] initWithStimulusType:kDOTStimulus andValue:value];
+    Stimulus * fireStimulus = [[Stimulus alloc] initWithStimulusType:kDOTStimulus value:value andDuration:duration];
     [fireStimulus autorelease];
     return fireStimulus;
 }

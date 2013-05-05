@@ -20,10 +20,10 @@
         [self setSpeed:20];
         [self setStrength:2.8];
         [self setGoldValue:20];
-        [self setDamageVulnerability:0.5];
-        [self setFireVulnerability:1.0];
-        [self setIceVulnerability:1.5];
-        [self setPushbackVulnerability:1.0];
+        [self setDamageVulnerability: kDamageBaseVulnerability * 0.5];
+        [self setFireVulnerability: kFireBaseVulnerability * 1.0];
+        [self setIceVulnerability: kIceBaseVulnerability * 1.5];
+        [self setPushbackVulnerability: kPushbackBaseVulnerability * 1.0];
         
         [self postInit];
     }

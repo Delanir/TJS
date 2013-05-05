@@ -245,6 +245,7 @@ Done    2.1 - Criamos as variáveis no enemy
     if ([[skill objectAtIndex:kFireBranch1] intValue] != 0)
     {
         [yuri setFireDamageBonus:kYuriDamageOverTimeDamageBaseBonus];
+        [yuri setFireDurationBonus:kYuriDamageOverTimeDurationBaseBonus];
     }
     if ([[skill objectAtIndex:kFireBranch2] intValue] != 0)
     {
@@ -260,6 +261,7 @@ Done    2.1 - Criamos as variáveis no enemy
     {
 #warning TODO
         [yuri setFireDamageBonus:kYuriDamageOverTimeDamageExtraBonus];
+        [yuri setFireDurationBonus:kYuriDamageOverTimeDurationExtraBonus];
     }
     if ([[skill objectAtIndex:kFireElement2] intValue] != 0)
     {
@@ -389,7 +391,14 @@ Done    2.1 - Criamos as variáveis no enemy
     [stimulusPackage removeAllObjects];
     NSMutableArray * buttons = [hud buttonsPressed];
     Yuri * yuri = [[Registry shared] getEntityByName:@"Yuri"];
-    unsigned int damage = [yuri strength] * [yuri isCritical];
+    
+    
+    int i = [yuri isCritical];
+    if (i == 2)
+        NSLog(@"CRITICAL!!!! perc:%f ",[yuri critical] * 100);
+    else NSLog(@"Nope");
+    
+    unsigned int damage = [yuri strength] * i;
     
 #warning depois de fazer o gamestate, podemos testá-lo para linkar com os valores dos estimulos
 #warning calculate stimulus value method or something
@@ -397,13 +406,15 @@ Done    2.1 - Criamos as variáveis no enemy
     [stimulusPackage addObject:[[StimulusFactory shared] generateDamageStimulusWithValue:damage]];
     // Cold Stimulus
     if ([[buttons objectAtIndex:kPower1Button] boolValue] && [[ResourceManager shared] spendMana:3.5])
-        [stimulusPackage addObject:[[StimulusFactory shared] generateColdStimulusWithValue:damage]];
+        [stimulusPackage addObject:[[StimulusFactory shared] generateColdStimulusWithValue:[yuri slowPercentage]
+                                                                               andDuration:[yuri slowTime]]];
     // Fire Stimulus
     if ([[buttons objectAtIndex:kPower2Button] boolValue] && [[ResourceManager shared] spendMana:3.5])
-        [stimulusPackage addObject:[[StimulusFactory shared] generateFireStimulusWithValue:kYuriBaseDamageOverTimeDamage]];
+        [stimulusPackage addObject:[[StimulusFactory shared] generateFireStimulusWithValue: [yuri fireDamage]
+                                                                               andDuration:[yuri fireDuration]]];
     // PushBack Stimulus
     if ([[buttons objectAtIndex:kPower3Button] boolValue] && [[ResourceManager shared] spendMana:2.0])
-        [stimulusPackage addObject:[[StimulusFactory shared] generatePushBackStimulusWithValue:damage]];
+        [stimulusPackage addObject:[[StimulusFactory shared] generatePushBackStimulusWithValue:kYuriBasePushbackDistance]];
     
     Arrow * arrow = [[Arrow alloc] initWithDestination:alocation andStimulusPackage:stimulusPackage];
     

@@ -35,17 +35,14 @@
 #define kYuriExtraCriticalBonus 3
 
 //Power up stat bonuses
-#define kYuriPushbackDistanceNoBonus 1.0
 #define kYuriSlowDownDurationNoBonus 1.0
 #define kYuriSlowDownPercentageNoBonus 1.0
 #define kYuriDamageOverTimeDurationNoBonus 1.0
 #define kYuriDamageOverTimeDamageNoBonus 1.0
-#define kYuriPushbackDistanceBaseBonus 1.4
 #define kYuriSlowDownDurationBaseBonus 1.4
 #define kYuriSlowDownPercentageBaseBonus 1.4
 #define kYuriDamageOverTimeDurationBaseBonus 1.4
 #define kYuriDamageOverTimeDamageBaseBonus 1.4
-#define kYuriPushbackDistanceExtraBonus 1.8
 #define kYuriSlowDownDurationExtraBonus 1.8
 #define kYuriSlowDownPercentageExtraBonus 1.8
 #define kYuriDamageOverTimeDurationExtraBonus 1.8

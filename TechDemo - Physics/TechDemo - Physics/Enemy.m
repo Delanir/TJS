@@ -152,10 +152,6 @@
     
     if([stimuli count] > 0)
     {
-        
-        // PARA EXPANDIR PARA PARTICULARIDADES DE CADA UM DOS ENEMIES
-        // É PRECISO POR ESTE FOR EM CADA UMA DAS SUBCLASSES
-        // E IMPLEMENTAR DISTINTAMENTE PARA CADA UM DELES
         for (int i = 0; i< [stimuli count]; i++)
         {
             Stimulus * stimulus = [stimuli dequeue];
@@ -164,21 +160,27 @@
             {
                 case kDamageStimulus:
                     [self takeDamage:[stimulus value] * damageVulnerability];
+                    //NSLog(@"Damage value: %f", [stimulus value]);
+                    //NSLog(@"Damage taken: %f", [stimulus value] * damageVulnerability);
                     break;
                 case kDOTStimulus:
-                    damageOverTimeCurrentValue = [stimulus value];
-                    fireRemainingTime = kFireBaseVulnerability * fireVulnerability;
+                    NSLog(@"Fire damage: %f Fire duration: %f", [stimulus value], [stimulus duration]);
+                    NSLog(@"Fire taken: %f Duration taken: %f", [stimulus value] * fireVulnerability, [stimulus duration] * fireVulnerability);
+                    damageOverTimeCurrentValue = [stimulus value] * fireVulnerability;
+                    fireRemainingTime = [stimulus duration] * fireVulnerability;
                     break;
                 case kSlowStimulus:
+#warning FALTA ISTO [stimulus duration]
                     // FAZER LOGICA DE SLOW
                     // METER UMA VARIAVEL QUE DECREMENTA
                     // ENQUANTO N É ZERO, SPEED MAIS LENTO -> REFAZER ANIMAÇÃO
-                    [self takeDamage:[stimulus value] * kIceBaseVulnerability * iceVulnerability];
+                    [self takeDamage:[stimulus value] * iceVulnerability];
                     break;
                 case KPushBackStimulus:
+#warning FALTA ISTO
                     // FAZER LOGICA DE PUSH BACK
                     // TRANSLATES PARA TRÁS
-                    [self takeDamage:[stimulus value] * kPushbackBaseVulnerability * pushbackVulnerability];
+                    [self takeDamage:[stimulus value] * pushbackVulnerability];
                     break;
                 default:
                     break;

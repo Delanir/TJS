@@ -4,80 +4,68 @@
 *                *
 **/            **/
 
-- Efeitos da skill tree!
-
-- Buildings e lógica respectiva
-- Utilização do Flurry
-
-
-
-- Definir bonus passivos dos níveis do Yuri
-- Mostrar e calcular score no hud
-    - Desenhar Leaderboard
-        - Fazer reset normal e reset ao leaderboard (coisas diferentes)
-
+- No game over:
+    - Retry
+- No win:
+    - Play next chapter
+    
 Skill Tree: 
-    Marksmanship:
-        Basic - 50% bonus
-            Strength, Speed, Critical %
     Fire:
-        Basic - Damage over time
-            More damage over time, fire patches (particles), blast %
+        Basic - 
+            Area of effect, Burn next target
     Cold:
         Basic - Slow down
-            Longer Slowdown, Freeze %, slow patches (particles)
+            Longer Slowdown, Freeze %, Area of effect
     City:
-        Basic - Health Bonus
-            Mages tower (mana recovery), Masonry (wall recovery), Fletcher (dispara flechas simples)
+        Basic - 
+            Mages tower (mana recovery), Masonry (wall recovery), Fletcher (dispara flechas simples) ou Moat
 
 Daniela:
+- Texto nas opções
+- Informação na skill tree
 - Verificar sons que faltam
     - Compilar lista
     - Encontrar sons
     - Implementar
 
 João M:
+- Efeitos da skill tree!
+- Buildings e lógica respectiva
 - Acabar lógica dos estimulos
 - Lógica de levar dano em cima do moat - fazer batota e meter mesmo no attack state
 - Alterar lógica do vPos para ser relativo ao ecrã
 - GameState falta definir:
     - Estado da SkillTree - é preciso terminar a lógica disto primeiro
     - Estado dos achievements - é preciso implementar primeiro
-    - Estado do leaderboard - é preciso implementar primeiro
 
 (Para usar o dell)
 - som do impacto tem de ser corrigido
-- Converter todas as sprites com o faststone para ganhar memoria
-- Botão de reset
-- Botão de reparar wall
 - Sprites dos edifícios
     - mage tower
     - masonry
     - fletcher
         
 Ricardo:
-- Criar layers de achievements e leaderboard
+- Mais waves com novos inimigos
 - Definir achievements
     - Fazer página de achievements
 - Balancear dificuldade
 
 João A:
-- Botão para reparar muralha (logo uns 500 de gold)
+- Utilização do Flurry
+- Mostrar e calcular score no hud
+- Fazer Leaderboard à batoteiro
+- Particulas de explosão do fire elemental
+- Particulas das fire arrows e slow arrows
+
 
 Afterburner:
 - Fazer projectiles do zealot
 - Loading Screen (caso se justifique) com base em chunks
 - Passar todas as constantes para o constants.h
-    
-/**           /**
-*               *
-* Coisas possivelmente deixadas *
-*               *
-**/           **/    
-- No game over:
-    - Retry
-- No win:
-    - Play next chapter
+
+ 
+
 
 /**           /**
 *               *
@@ -136,4 +124,4 @@ Afterburner:
     - Strength bonus
     - Speed bonus
     - Critical ratio
-
+- Definir bonus passivos dos níveis do Yuri

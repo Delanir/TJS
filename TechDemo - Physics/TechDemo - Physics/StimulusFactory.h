@@ -16,8 +16,8 @@
 
 +(StimulusFactory*)shared;
 
--(Stimulus*) generateColdStimulusWithValue: (double) value;
--(Stimulus*) generateFireStimulusWithValue: (double) value;
+-(Stimulus*) generateColdStimulusWithValue: (double) value andDuration: (double) duration;
+-(Stimulus*) generateFireStimulusWithValue: (double) value andDuration: (double) duration;
 -(Stimulus*) generateDamageStimulusWithValue: (double) value;
 -(Stimulus*) generatePushBackStimulusWithValue: (double) value;
 

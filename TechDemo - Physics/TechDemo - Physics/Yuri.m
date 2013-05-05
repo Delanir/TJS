@@ -51,7 +51,7 @@
 {
     strengthBonus = 1.0f;
     speedBonus = 1.0f;
-    criticalBonus = 1.0f;
+    criticalBonus = kYuriBaseCriticalBonus;
     fireDamageBonus = kYuriDamageOverTimeDamageNoBonus;
     fireDurationBonus = kYuriDamageOverTimeDurationNoBonus;
     slowTimeBonus = kYuriSlowDownDurationNoBonus;
