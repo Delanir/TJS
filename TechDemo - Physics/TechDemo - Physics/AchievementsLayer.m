@@ -59,11 +59,12 @@
         
         int achievementState = [[[[GameState shared] achievementState] objectAtIndex:i-1] intValue];
         
-        if (achievementState) {
+        if (achievementState == 1) {
             [achievement setIsEnabled:YES];
         } else
             [achievement setIsEnabled:NO];
-//        [level initLevel];
+        [achievement initAchievement];
+        [achievement setInformation:i-1];
 //        [level setThumbnail:[NSString stringWithFormat:@"level%d.png",i]];
     }
 }

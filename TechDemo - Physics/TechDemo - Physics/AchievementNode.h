@@ -7,6 +7,7 @@
 //
 
 #import "CCNode.h"
+#import "Utils.h"
 
 @interface AchievementNode : CCNode
 {
@@ -16,6 +17,8 @@
     CCLabelTTF *lblDescription;
 }
 
-@property (nonatomic, assign) BOOL  isEnabled;
+@property (nonatomic, assign) BOOL isEnabled;
 
+-(void) initAchievement;
+-(void) setInformation:(int) num;
 @end
