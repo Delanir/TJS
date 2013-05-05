@@ -29,7 +29,6 @@
     AchievementNode *_achievement13;
     AchievementNode *_achievement14;
     AchievementNode *_achievement15;
-
 }
 
 

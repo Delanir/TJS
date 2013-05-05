@@ -74,8 +74,8 @@ static GameManager* _sharedSingleton = nil;
             sceneToRun = [CCBReader sceneWithNodeGraphFromFile:@"SkillTreeLayerZWOP.ccbi"];
             break;
         case kAchievementsScene:
-            sceneToRun = [CCBReader sceneWithNodeGraphFromFile:@"SettingsMenu.ccbi"];
-        //    sceneToRun = [CCBReader sceneWithNodeGraphFromFile:@"AchievementsLayer.ccbi"];
+            sceneToRun = [CCBReader sceneWithNodeGraphFromFile:@"AchievementsLayer.ccbi"];
+        //    sceneToRun = [CCBReader sceneWithNodeGraphFromFile:@"SettingsMenu.ccbi"];
             break;
         case kLeaderboardScene:
             //            sceneToRun = ; // TODO
