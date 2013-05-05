@@ -15,7 +15,7 @@
 {
     BOOL readyToFire;
     unsigned int level;
-    unsigned int strength;
+    float strength;
     float critical;
     
     BOOL bonusActive;
@@ -26,7 +26,7 @@
 
 @property (nonatomic) BOOL readyToFire;
 @property unsigned int level;
-@property unsigned int strength;
+@property float strength;
 @property float critical;
 @property BOOL bonusActive;
 @property float strengthBonus;
@@ -39,7 +39,10 @@
 
 -(void) getReady;
 
+-(void) initBasicStats;
+
 -(BOOL)fireIfAble:(CGPoint)location;
+-(int)isCritical;
 -(float) getCurrentFireRate;
 -(void) changeFireRate: (float) fireRate;
 

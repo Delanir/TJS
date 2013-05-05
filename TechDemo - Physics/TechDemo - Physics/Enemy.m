@@ -17,6 +17,9 @@
 @implementation Enemy
 
 @synthesize currentState, strength, speed, goldValue, health, healthBar, maxHealth, stimuli;
+@synthesize damageVulnerability, fireVulnerability, iceVulnerability, pushbackVulnerability;
+@synthesize coldRemainingTime, fireRemainingTime;
+@synthesize damageOverTimeCurrentValue;
 
 
 - (id) initWithSprite:(NSString *)spriteFile
@@ -26,6 +29,14 @@
         [self setSpriteWithSpriteFrameName:spriteFile];
         [self addChild:sprite z:1];
         stimuli = [[NSMutableArray alloc] init];
+        
+        damageVulnerability = kDamageBaseVulnerability;
+        fireVulnerability = kFireBaseVulnerability;
+        iceVulnerability = kIceBaseVulnerability;
+        pushbackVulnerability = kPushbackBaseVulnerability;
+        coldRemainingTime = 0;
+        fireRemainingTime = 0;
+        damageOverTimeCurrentValue = 0;
         
         // Initialize health bar
         CCSprite * barSprite = [[CCSprite alloc] initWithSpriteFrameName:@"red_health_bar.png"];
@@ -43,7 +54,7 @@
 {
     [self setMaxHealth:health];
     [healthBar setPercentage:health];
-    shoutPercentage =SHOUTPERCENTAGE;
+    shoutPercentage = SHOUTPERCENTAGE;
     [self schedule:@selector(shout) interval:1.5];
  
     [self schedule:@selector(update:)];
@@ -90,19 +101,8 @@
     // Create the target slightly off-screen along the right edge,
     // and along a random position along the Y axis as calculated above
     sprite.position = ccp(winSize.width + (spriteSize.width/2), actualY);
-    //sprite.anchorPoint = ccp(1.0,1.0);
-  
-    
   
     healthBar.position = ccp(winSize.width + (spriteSize.width/2), actualY + spriteSize.height/2 + 2);
-  
-  NSLog(@"SOU IPAD RETINA?");
-  if ([Utils iPadRetina])
-    NSLog(@"SOU SIM SENHOR");
-  else NSLog(@"NAO SOU NAO");
-  
-
-  
 }
 
 
@@ -117,7 +117,7 @@
     
 }
 
--(void) takeDamage:(int) amount
+-(void) takeDamage:(double) amount
 {
     if(![self isDead])  // para garantir que só morre uma vez
     {
@@ -143,6 +143,13 @@
     if([healthBar opacity] > 0)
         [healthBar setOpacity:[healthBar opacity] - dt*0.08];
     
+    if (fireRemainingTime > 0)
+    {
+        fireRemainingTime -= dt;
+        [self takeDamage: dt * fireVulnerability * damageOverTimeCurrentValue];
+#warning João amaral particulas fogo here
+    }
+    
     if([stimuli count] > 0)
     {
         
@@ -156,24 +163,22 @@
             switch ([stimulus type])
             {
                 case kDamageStimulus:
-                    [self takeDamage:[stimulus value]];
+                    [self takeDamage:[stimulus value] * damageVulnerability];
                     break;
                 case kDOTStimulus:
-                    // FAZER LOGICA DE DAMAGE OVER TIME
-                    // METER UMA VARIAVEL QUE DECREMENTA
-                    // ENQUANTO N É ZERO, PARTICULAS FOGO
-                    [self takeDamage:[stimulus value]];
+                    damageOverTimeCurrentValue = [stimulus value];
+                    fireRemainingTime = kFireBaseVulnerability * fireVulnerability;
                     break;
                 case kSlowStimulus:
                     // FAZER LOGICA DE SLOW
                     // METER UMA VARIAVEL QUE DECREMENTA
                     // ENQUANTO N É ZERO, SPEED MAIS LENTO -> REFAZER ANIMAÇÃO
-                    [self takeDamage:[stimulus value]];
+                    [self takeDamage:[stimulus value] * kIceBaseVulnerability * iceVulnerability];
                     break;
                 case KPushBackStimulus:
                     // FAZER LOGICA DE PUSH BACK
                     // TRANSLATES PARA TRÁS
-                    [self takeDamage:[stimulus value]];
+                    [self takeDamage:[stimulus value] * kPushbackBaseVulnerability * pushbackVulnerability];
                     break;
                 default:
                     break;

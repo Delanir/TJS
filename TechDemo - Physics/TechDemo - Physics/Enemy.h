@@ -21,6 +21,9 @@
     int shoutPercentage;
     float health, maxHealth;
     unsigned int goldValue;
+    float damageVulnerability, fireVulnerability, iceVulnerability, pushbackVulnerability;
+    double coldRemainingTime, fireRemainingTime;
+    unsigned int damageOverTimeCurrentValue;
     CCProgressTimer * healthBar;
     NSMutableArray * stimuli;
 }
@@ -31,11 +34,14 @@
 @property float strength;
 @property float speed;
 @property float health, maxHealth;
+@property float damageVulnerability, fireVulnerability, iceVulnerability, pushbackVulnerability;
+@property double coldRemainingTime, fireRemainingTime;
+@property unsigned int damageOverTimeCurrentValue;
 @property unsigned int goldValue;
 
 
-- (id) initWithSprite:(NSString *)spriteFile;
-- (void) postInit;
+-(id) initWithSprite:(NSString *)spriteFile;
+-(void) postInit;
 -(void) setupActions;
 -(void) attack;
 -(void) die;
@@ -45,5 +51,5 @@
 -(BOOL) isDead;
 -(void) enqueueStimuli:(NSMutableArray *) stimulusPackage;
 
--(void) takeDamage:(int) amount;
+-(void) takeDamage:(double) amount;
 @end

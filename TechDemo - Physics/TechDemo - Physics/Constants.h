@@ -12,11 +12,19 @@
 #define kManaRegenerationRate 0.02
 
 #define kYuriBaseStrength 25                // base damage
+#define kYuriBaseCritical 0.01              // base critical
 #define kYuriBasePushbackDistance 20        // 20 pixels
 #define kYuriBaseSlowDownDuration 1         // one second
 #define kYuriBaseSlowDownPercentage 2       // twice slower
 #define kYuriBaseDamageOverTimeDuration 1   // one second
 #define kYuriBaseDamageOverTimeDamage 30    // 30 points per second
+
+#define kYuriBaseStrengthBonus 1.2
+#define kYuriExtraStrengthBonus 1.4
+#define kYuriBaseSpeedBonus 0.8
+#define kYuriExtraSpeedBonus 0.6
+#define kYuriBaseCriticalBonus 2
+#define kYuriExtraCriticalBonus 3
 
 #define STARCOST1 1
 #define STARCOST2 2
@@ -25,6 +33,11 @@
 
 #define WALLREPAIRCOST 500
 #define WALLREPAIRPERCENTAGE 0.25
+
+#define kDamageBaseVulnerability 1.0
+#define kFireBaseVulnerability 1.0
+#define kIceBaseVulnerability 1.0
+#define kPushbackBaseVulnerability 1.0
 
 
 typedef enum

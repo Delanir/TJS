@@ -146,7 +146,7 @@ static int current_level = -1;
 {
     NSMutableArray *skill = [[GameState shared] skillStates];
     Hud * headsUpDisplay = [[Registry shared] getEntityByName:@"Hud"];
-    
+    Yuri * yuri = [[Registry shared] getEntityByName:@"Yuri"];
     /**
      *
      * MAIN BRANCHES
@@ -155,10 +155,10 @@ static int current_level = -1;
     
 /*
  Vamos fazer assim:
-    1 - As definiçoes estao guardadas no gamestate
+Done1 - As definiçoes estao guardadas no gamestate
  
     2 - Vamos buscá-las e inicializamos as funções básicas
-        2.1 - Criamos as variáveis no enemy
+Done    2.1 - Criamos as variáveis no enemy
         2.2 - Criamos os comportamentos associados no tratamento de estimulo
         2.3 - Criamos o tratamento de updates destes
         2.4 - Importante não nos esquecermos de finalizar e restaurar o estado.
@@ -179,6 +179,14 @@ static int current_level = -1;
  */
     
     
+#warning MUST TEST CRITICAL
+#warning MUST TEST CRITICAL
+#warning MUST TEST CRITICAL
+#warning MUST TEST CRITICAL
+#warning MUST TEST CRITICAL
+#warning MUST TEST CRITICAL
+#warning MUST TEST CRITICAL
+    
     if ([[skill objectAtIndex:kIceMainBranch] intValue] != 0)
     {
 #warning TODO - Aqui não é preciso fazer mais nada. É o tratamento básico do estimulo no enemy
@@ -186,7 +194,6 @@ static int current_level = -1;
     }
     if ([[skill objectAtIndex:kFireMainBranch] intValue] != 0)
     {
-#warning TODO - Aqui não é preciso fazer mais nada. É o tratamento básico do estimulo no enemy
         [headsUpDisplay setFireToggleButtonActive];
     }
     if ([[skill objectAtIndex:kMarksmanMainBranch] intValue] != 0)
@@ -197,7 +204,7 @@ static int current_level = -1;
     if ([[skill objectAtIndex:kCityMainBranch] intValue] != 0)
     {
         Wall * wall = [[Registry shared] getEntityByName:@"Wall"];
-        [wall increaseHealth:2.0];
+        [wall increaseHealth:1.5];
     }
     
     /**
@@ -279,33 +286,27 @@ static int current_level = -1;
      */
     if ([[skill objectAtIndex:kMarksmanBranch1] intValue] != 0)
     {
-#warning TODO
-        NSLog(@"Yuri gives more damage");
+        [yuri setStrengthBonus:kYuriBaseStrengthBonus];
     }
     if ([[skill objectAtIndex:kMarksmanBranch2] intValue] != 0)
     {
-#warning TODO
-        NSLog(@"Yuri is faster");
+        [yuri setSpeedBonus:kYuriBaseSpeedBonus];
     }
     if ([[skill objectAtIndex:kMarksmanBranch3] intValue] != 0)
     {
-#warning TODO
-        NSLog(@"Yuri has critical ration");
+        [yuri setCriticalBonus:kYuriExtraCriticalBonus];
     }
     if ([[skill objectAtIndex:kMarksmanElement1] intValue] != 0)
     {
-#warning TODO
-        NSLog(@"Yuri gives even more damage");
+        [yuri setStrengthBonus:kYuriExtraStrengthBonus];
     }
     if ([[skill objectAtIndex:kMarksmanElement2] intValue] != 0)
     {
-#warning TODO
-        NSLog(@"Yuri is even faster");
+        [yuri setSpeedBonus:kYuriExtraSpeedBonus];
     }
     if ([[skill objectAtIndex:kMarksmanElement3] intValue] != 0)
     {
-#warning TODO
-        NSLog(@"Yuri has a higher critical ratio");
+        [yuri setCriticalBonus:kYuriExtraCriticalBonus];
     }
     
     /**
@@ -349,6 +350,8 @@ static int current_level = -1;
         NSLog(@"Fletcher arrows are faster and stronger over time");
         NSLog(@"Draws Fletcher");
     }
+    
+    [yuri initBasicStats];
 }
 
 
@@ -392,7 +395,8 @@ static int current_level = -1;
     CCArray * stimulusPackage = [[CCArray alloc] init];
     [stimulusPackage removeAllObjects];
     NSMutableArray * buttons = [hud buttonsPressed];
-    unsigned int damage = [(Yuri*)[[Registry shared] getEntityByName:@"Yuri"] strength];
+    Yuri * yuri = [[Registry shared] getEntityByName:@"Yuri"];
+    unsigned int damage = [yuri strength] * [yuri isCritical];
     
 #warning depois de fazer o gamestate, podemos testá-lo para linkar com os valores dos estimulos
 #warning calculate stimulus value method or something

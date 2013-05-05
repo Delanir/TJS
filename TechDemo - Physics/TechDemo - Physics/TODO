@@ -5,7 +5,6 @@
 **/            **/
 
 - Efeitos da skill tree!
-- Fraquezas e resistencias dos inimigos 
 
 - Buildings e lógica respectiva
 - Utilização do Flurry
@@ -46,8 +45,6 @@ João M:
     - Estado dos achievements - é preciso implementar primeiro
     - Estado do leaderboard - é preciso implementar primeiro
 
-
-
 (Para usar o dell)
 - som do impacto tem de ser corrigido
 - Converter todas as sprites com o faststone para ganhar memoria
@@ -57,7 +54,6 @@ João M:
     - mage tower
     - masonry
     - fletcher
-- Melhorar sprites da Skill tree para ocuparem menos memoria talvez? testar com algumas mas sem posicionar
         
 Ricardo:
 - Criar layers de achievements e leaderboard
@@ -133,4 +129,11 @@ Afterburner:
 - Inimigos novos: Fire Elemental, Wraith, Skeleton, Black Dragon
 - BURACOS DE MEMORIA ARGHHGHGHGH
     - Nao percebo a skill tree
+- Fraquezas e resistencias dos inimigos
+- Lógica das fraquezas e resistencias implementada
+- Damage over time working 
+- Lógica do path of the marksman
+    - Strength bonus
+    - Speed bonus
+    - Critical ratio
 

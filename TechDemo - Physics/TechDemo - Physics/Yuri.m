@@ -20,7 +20,8 @@
     
     [self initBonuses];
     
-    strength = kYuriBaseStrength * level * strengthBonus;
+    strength = kYuriBaseStrength * level;
+    critical = kYuriBaseCritical * level;
     
     if(self = [super initWithSprite:[NSString stringWithFormat:@"y_lvl%d_06.png",level ]])
     {
@@ -39,6 +40,8 @@
 -(void) initBonuses
 {
     strengthBonus = 1.0f;
+    speedBonus = 1.0f;
+    criticalBonus = 1.0f;
 }
 
 
@@ -74,6 +77,13 @@
 }
 
 
+-(void) initBasicStats
+{
+    strength = kYuriBaseStrength * level * strengthBonus;
+    critical = kYuriBaseCritical * level *  criticalBonus;
+    [self changeFireRate:[self getCurrentFireRate] * speedBonus];
+}
+
 -(void) getReady
 {
     [self setReadyToFire:YES];
@@ -82,24 +92,24 @@
 -(void) changeFireRate: (float) fireRate
 {
     //setup animations
-    [[[CCAnimationCache sharedAnimationCache] animationByName:@"y_attack_up" ] setDelayPerUnit:fireRate];
-    [[[CCAnimationCache sharedAnimationCache] animationByName:@"y_attack_front" ] setDelayPerUnit:fireRate];
-    [[[CCAnimationCache sharedAnimationCache] animationByName:@"y_attack_down" ] setDelayPerUnit:fireRate];
+    [[[CCAnimationCache sharedAnimationCache] animationByName:[NSString stringWithFormat:@"y_attack_up_lvl%d",level ] ] setDelayPerUnit:fireRate];
+    [[[CCAnimationCache sharedAnimationCache] animationByName:[NSString stringWithFormat:@"y_attack_front_lvl%d",level ] ] setDelayPerUnit:fireRate];
+    [[[CCAnimationCache sharedAnimationCache] animationByName:[NSString stringWithFormat:@"y_attack_down_lvl%d",level ] ] setDelayPerUnit:fireRate];
 
     [[self sprite] stopAllActions];
     
     [self setShootUp:[CCRepeat actionWithAction:
-                      [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"y_attack_up" ]] times:1]];
+                      [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:[NSString stringWithFormat:@"y_attack_up_lvl%d",level ] ]] times:1]];
     [self setShootFront:[CCRepeat actionWithAction:
-                         [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"y_attack_front" ]] times:1]];
+                         [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:[NSString stringWithFormat:@"y_attack_front_lvl%d",level ] ]] times:1]];
     [self setShootDown:[CCRepeat actionWithAction:
-                        [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"y_attack_down" ]] times:1]];
+                        [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:[NSString stringWithFormat:@"y_attack_down_lvl%d",level ] ]] times:1]];
     
 }
 
 -(float) getCurrentFireRate
 {
-    return [[[CCAnimationCache sharedAnimationCache] animationByName:@"y_attack_front"] delayPerUnit];
+    return [[[CCAnimationCache sharedAnimationCache] animationByName:[NSString stringWithFormat:@"y_attack_front_lvl%d",level ]] delayPerUnit];
 }
 
 -(unsigned int) determineLevel
@@ -110,6 +120,11 @@
     else if(stars < 18)
         return 2;
     else return 3;
+}
+
+-(int)isCritical
+{
+    return arc4random_uniform(100) < critical * 100 ?2 :1;
 }
 
 
