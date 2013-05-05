@@ -19,7 +19,7 @@
     
     BOOL bonusActive;
     float strengthBonus, speedBonus, criticalBonus;
-    float fireDuration, fireDamage, slowTime, slowPercentage;
+    float fireDuration, fireDamage, slowTime, slowPercentage, iceAreaOfEffect, fireAreaOfEffect;
     float fireDurationBonus, fireDamageBonus, slowTimeBonus, slowPercentageBonus;
 }
 
@@ -28,7 +28,7 @@
 @property BOOL bonusActive;
 @property float strength, critical;
 @property float strengthBonus, speedBonus, criticalBonus;
-@property float fireDuration, fireDamage, slowTime, slowPercentage;
+@property float fireDuration, fireDamage, slowTime, slowPercentage, iceAreaOfEffect, fireAreaOfEffect;
 @property float fireDurationBonus, fireDamageBonus, slowTimeBonus, slowPercentageBonus;
 
 @property (nonatomic, retain) CCFiniteTimeAction *shootUp;

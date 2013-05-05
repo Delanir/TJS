@@ -164,8 +164,8 @@
                     //NSLog(@"Damage taken: %f", [stimulus value] * damageVulnerability);
                     break;
                 case kDOTStimulus:
-                    NSLog(@"Fire damage: %f Fire duration: %f", [stimulus value], [stimulus duration]);
-                    NSLog(@"Fire taken: %f Duration taken: %f", [stimulus value] * fireVulnerability, [stimulus duration] * fireVulnerability);
+                   // NSLog(@"Fire damage: %f Fire duration: %f", [stimulus value], [stimulus duration]);
+                    //NSLog(@"Fire taken: %f Duration taken: %f", [stimulus value] * fireVulnerability, [stimulus duration] * fireVulnerability);
                     damageOverTimeCurrentValue = [stimulus value] * fireVulnerability;
                     fireRemainingTime = [stimulus duration] * fireVulnerability;
                     break;

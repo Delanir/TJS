@@ -47,6 +47,11 @@
 #define kYuriSlowDownPercentageExtraBonus 1.8
 #define kYuriDamageOverTimeDurationExtraBonus 1.8
 #define kYuriDamageOverTimeDamageExtraBonus 1.8
+#define kYuriNoAreaOfEffect 0
+#define kYuriBaseAreaOfEffect 70
+#define kYuriExtraAreaOfEffect 140
+
+#define kMaxRange 500
 
 #define STARCOST1 1
 #define STARCOST2 2

@@ -9,6 +9,8 @@
 #import "CollisionManager.h"
 #import "ResourceManager.h"
 #import "Config.h"
+#import "Yuri.h"
+#import "NSMutableArray+QueueAdditions.h"
 
 // Sound interface
 #import "SimpleAudioEngine.h"
@@ -112,6 +114,7 @@ static CollisionManager* _sharedSingleton = nil;
         {
             [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"HitSound"]];
             [target enqueueStimuli:(NSMutableArray*)[projectile stimuli]];
+            [self handleAreaOfEffectWithStimuli: (NSMutableArray*)[projectile stimuli] andSourceEnemy: target];
         }
         
         if (targetsToDelete.count > 0)
@@ -177,6 +180,93 @@ static CollisionManager* _sharedSingleton = nil;
     [_walls removeAllObjects];
     [_targets removeAllObjects];
 }
+
+-(void) handleAreaOfEffectWithStimuli: (NSMutableArray*) stimuli andSourceEnemy: (id) sourceEnemy
+{
+    for (int i = 0; i < [stimuli count]; i++)
+    {
+        Stimulus * stimulus = [stimuli objectAtIndex:i];
+        Yuri * yuri = [[Registry shared] getEntityByName:@"Yuri"];
+        float iceRange = [yuri iceAreaOfEffect];
+        float fireRange = [yuri fireAreaOfEffect];
+        
+        switch ([stimulus type])
+        {
+            case kDOTStimulus:
+                if (fireRange != kYuriNoAreaOfEffect)
+                {
+                    CCArray * dudesToAffect = [self findAllEnemiesInRange:[yuri fireAreaOfEffect] ofEnemy:sourceEnemy];
+                    for (Enemy * enemy in dudesToAffect)
+                    {
+                        NSMutableArray * stimulusToAdd = [NSMutableArray arrayWithObject:stimulus];
+                        [enemy enqueueStimuli:stimulusToAdd];
+                    }
+                }
+                break;
+            case kSlowStimulus:
+                if (iceRange != kYuriNoAreaOfEffect)
+                {
+                    CCArray * dudesToAffect = [self findAllEnemiesInRange:[yuri iceAreaOfEffect] ofEnemy:sourceEnemy];
+                    for (Enemy * enemy in dudesToAffect)
+                    {
+                        NSMutableArray * stimulusToAdd = [NSMutableArray arrayWithObject:stimulus];
+                        [enemy enqueueStimuli:stimulusToAdd];
+                    }
+                }
+                break;
+            default:
+                break;
+        }
+    }
+}
+
+-(id)findClosestTarget: (CGPoint) sourcePosition
+{
+    if ( _targets.count <= 1)
+        return nil;
+    
+    id closestTarget;
+    double closestRangeSquared = kMaxRange * kMaxRange;
+    for ( Enemy * enemy in _targets )
+    {
+        CGPoint currentEnemyPosition = [[enemy sprite] position];
+        float squaredDistance = [self squaredDistanceBetweenPointA:sourcePosition andPointB:currentEnemyPosition];
+        if (squaredDistance < closestRangeSquared)
+        {
+            closestTarget = enemy;
+            closestRangeSquared = squaredDistance;
+        }
+    }
+    return closestTarget;
+}
+
+-(CCArray*)findAllEnemiesInRange: (double) range ofEnemy: (id) sourceEnemy
+{
+    CCArray * returnArray = [[CCArray alloc] init];
+    CGPoint sourcePosition = [[sourceEnemy sprite] position];
+    
+    for ( Enemy * enemy in _targets )
+    {
+        if (enemy == sourceEnemy) continue;
+        CGPoint currentEnemyPosition = [[enemy sprite] position];
+        float squaredDistance = [self squaredDistanceBetweenPointA:sourcePosition andPointB:currentEnemyPosition];
+        if (squaredDistance < range * range)
+            [returnArray addObject:enemy];
+    }
+    return [returnArray autorelease];
+}
+
+-(double) squaredDistanceBetweenPointA: (CGPoint) pointA andPointB: (CGPoint) pointB
+{
+    return pow(pointA.x - pointB.x, 2) + pow(pointA.y - pointB.y, 2);
+}
+
+
+
+
+
+
+
 
 
 @end

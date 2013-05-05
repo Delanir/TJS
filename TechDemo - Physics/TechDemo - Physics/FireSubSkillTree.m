@@ -20,39 +20,38 @@
     
     NSMutableArray *skill = [[GameState shared] skillStates];
     int index;
-    for (int i=14; i<21; i++) {
+    for (int i=14; i<21; i++)
+    {
         index = [[skill objectAtIndex:i] intValue];
-        switch (i) {
+        switch (i)
+        {
             case 14:
-                if (index!=0) {
+                if (index!=0)
                     [fire setIsEnabled:NO];
-                }
-                
                 break;
             case 15:
-                if (index!=0) 
-                [fireEl2 setIsEnabled:NO];
-                
+                if (index!=0)
+                    [fireEl2 setIsEnabled:NO];
                 break;
             case 16:
-                if (index!=0) 
-                [fireEl1 setIsEnabled:NO];
+                if (index!=0)
+                    [fireEl1 setIsEnabled:NO];
                 break;
             case 17:
-                if (index!=0) 
-                [fireEl3 setIsEnabled:NO];
+                if (index!=0)
+                    [fireEl3 setIsEnabled:NO];
                 break;
             case 18:
-                if (index!=0) 
-                [fireB3 setIsEnabled:NO];
+                if (index!=0)
+                    [fireB3 setIsEnabled:NO];
                 break;
             case 19:
-                if (index!=0) 
-                [fireB2 setIsEnabled:NO];
+                if (index!=0)
+                    [fireB2 setIsEnabled:NO];
                 break;
             case 20:
                 if (index!=0)
-                [fireB1 setIsEnabled:NO];
+                    [fireB1 setIsEnabled:NO];
                 break;
             default:
                 break;

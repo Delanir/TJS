@@ -179,10 +179,6 @@ Done    2.1 - Criamos as variáveis no enemy
  */
     
     
-
-#warning MUST TEST CRITICAL
-#warning MUST TEST CRITICAL
-    
     if ([[skill objectAtIndex:kIceMainBranch] intValue] != 0)
     {
 #warning TODO - Aqui não é preciso fazer mais nada. É o tratamento básico do estimulo no enemy
@@ -219,8 +215,7 @@ Done    2.1 - Criamos as variáveis no enemy
     }
     if ([[skill objectAtIndex:kIceBranch3] intValue] != 0)
     {
-#warning TODO
-        NSLog(@"Ice arrow tem area of effect");
+        [yuri setIceAreaOfEffect:kYuriBaseAreaOfEffect];
     }
     if ([[skill objectAtIndex:kIceElement1] intValue] != 0)
     {
@@ -233,8 +228,7 @@ Done    2.1 - Criamos as variáveis no enemy
     }
     if ([[skill objectAtIndex:kIceElement3] intValue] != 0)
     {
-#warning TODO
-        NSLog(@"Area of effect é maior");
+        [yuri setIceAreaOfEffect:kYuriExtraAreaOfEffect];
     }
     
     /**
@@ -250,28 +244,25 @@ Done    2.1 - Criamos as variáveis no enemy
     if ([[skill objectAtIndex:kFireBranch2] intValue] != 0)
     {
 #warning TODO
-        NSLog(@"Fogo tem area of effect");
+        NSLog(@"Fogo passa para o proximo inimigo");
     }
     if ([[skill objectAtIndex:kFireBranch3] intValue] != 0)
     {
-#warning TODO
-        NSLog(@"Fogo passa para o proximo inimigo");
+        [yuri setFireAreaOfEffect:kYuriBaseAreaOfEffect];
     }
     if ([[skill objectAtIndex:kFireElement1] intValue] != 0)
     {
-#warning TODO
         [yuri setFireDamageBonus:kYuriDamageOverTimeDamageExtraBonus];
         [yuri setFireDurationBonus:kYuriDamageOverTimeDurationExtraBonus];
     }
     if ([[skill objectAtIndex:kFireElement2] intValue] != 0)
     {
 #warning TODO
-        NSLog(@"Larger area of effect");
+        NSLog(@"Fogo passa para os 2 inimigos mais proximos");
     }
     if ([[skill objectAtIndex:kFireElement3] intValue] != 0)
     {
-#warning TODO
-        NSLog(@"Fogo passa para os 2 inimigos mais proximos");
+        [yuri setFireAreaOfEffect:kYuriExtraAreaOfEffect];
     }
     
     /**
@@ -392,16 +383,8 @@ Done    2.1 - Criamos as variáveis no enemy
     NSMutableArray * buttons = [hud buttonsPressed];
     Yuri * yuri = [[Registry shared] getEntityByName:@"Yuri"];
     
-    
-    int i = [yuri isCritical];
-    if (i == 2)
-        NSLog(@"CRITICAL!!!! perc:%f ",[yuri critical] * 100);
-    else NSLog(@"Nope");
-    
-    unsigned int damage = [yuri strength] * i;
-    
-#warning depois de fazer o gamestate, podemos testá-lo para linkar com os valores dos estimulos
-#warning calculate stimulus value method or something
+    unsigned int damage = [yuri strength] * [yuri isCritical];
+
     // Damage Stimulus
     [stimulusPackage addObject:[[StimulusFactory shared] generateDamageStimulusWithValue:damage]];
     // Cold Stimulus
