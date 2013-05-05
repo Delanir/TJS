@@ -115,6 +115,9 @@
 		9C377C0A170BB7CC00F840FB /* hit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9C377C09170BB7CB00F840FB /* hit.mp3 */; };
 		9C377C0D170BBDD800F840FB /* EnemyFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C377C0C170BBDD600F840FB /* EnemyFactory.m */; };
 		9C3CE234172DC4570044889D /* akaPotsley.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C3CE22F172D87E40044889D /* akaPotsley.ttf */; };
+		9C3E4923173704FD001D45B7 /* AchievementsLayer.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 9C3E4922173704A6001D45B7 /* AchievementsLayer.ccbi */; };
+		9C3E492417370501001D45B7 /* AchievementNode.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 9C3E492017370481001D45B7 /* AchievementNode.ccbi */; };
+		9C3E492517370509001D45B7 /* LeaderBoardLayer.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 9C3E492117370493001D45B7 /* LeaderBoardLayer.ccbi */; };
 		9C4787031734264300180864 /* SkillTreeLayerZWOP.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 9C4787021734260600180864 /* SkillTreeLayerZWOP.ccbi */; };
 		9C478705173429FC00180864 /* blackdragon_anim.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C478704173429FC00180864 /* blackdragon_anim.plist */; };
 		9C47870717342A0A00180864 /* skeleton_anim.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C47870617342A0A00180864 /* skeleton_anim.plist */; };
@@ -441,6 +444,9 @@
 		9C377C0B170BBDD300F840FB /* EnemyFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyFactory.h; sourceTree = "<group>"; };
 		9C377C0C170BBDD600F840FB /* EnemyFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnemyFactory.m; sourceTree = "<group>"; };
 		9C3CE22F172D87E40044889D /* akaPotsley.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = akaPotsley.ttf; sourceTree = "<group>"; };
+		9C3E492017370481001D45B7 /* AchievementNode.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = AchievementNode.ccbi; sourceTree = "<group>"; };
+		9C3E492117370493001D45B7 /* LeaderBoardLayer.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = LeaderBoardLayer.ccbi; sourceTree = "<group>"; };
+		9C3E4922173704A6001D45B7 /* AchievementsLayer.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = AchievementsLayer.ccbi; sourceTree = "<group>"; };
 		9C478701173425DD00180864 /* SkillTreeSubMenu.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = SkillTreeSubMenu.ccbi; sourceTree = "<group>"; };
 		9C4787021734260600180864 /* SkillTreeLayerZWOP.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = SkillTreeLayerZWOP.ccbi; sourceTree = "<group>"; };
 		9C478704173429FC00180864 /* blackdragon_anim.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = blackdragon_anim.plist; sourceTree = "<group>"; };
@@ -1579,10 +1585,13 @@
 			isa = PBXGroup;
 			children = (
 				8B8C2D9B1719DB9300B50C1E /* MainMenu.ccbi */,
+				9C3E492017370481001D45B7 /* AchievementNode.ccbi */,
+				9C3E4922173704A6001D45B7 /* AchievementsLayer.ccbi */,
 				8BFC3F0E17204440000161FD /* GameOver.ccbi */,
 				8C72C2A51729687B009EF8C1 /* GameWin.ccbi */,
 				9C478701173425DD00180864 /* SkillTreeSubMenu.ccbi */,
 				3EEB679F17234BC2005C58E9 /* PauseMenu.ccbi */,
+				9C3E492117370493001D45B7 /* LeaderBoardLayer.ccbi */,
 				8BBB6A22171E09E30064B3CD /* SettingsMenu.ccbi */,
 				8B221466173338540055BF51 /* SkillTreeLayer.ccbi */,
 				9C4787021734260600180864 /* SkillTreeLayerZWOP.ccbi */,
@@ -1782,6 +1791,9 @@
 				8B3854D317355A900044F4F3 /* stick1.png in Resources */,
 				8B3854D417355A900044F4F3 /* stick2.png in Resources */,
 				8B3854DE17357C690044F4F3 /* skillTreeSS-ipadhd.plist in Resources */,
+				9C3E492417370501001D45B7 /* AchievementNode.ccbi in Resources */,
+				9C3E492517370509001D45B7 /* LeaderBoardLayer.ccbi in Resources */,
+				9C3E4923173704FD001D45B7 /* AchievementsLayer.ccbi in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

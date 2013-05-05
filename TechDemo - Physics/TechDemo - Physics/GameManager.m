@@ -74,8 +74,8 @@ static GameManager* _sharedSingleton = nil;
             sceneToRun = [CCBReader sceneWithNodeGraphFromFile:@"SkillTreeLayerZWOP.ccbi"];
             break;
         case kAchievementsScene:
-            sceneToRun = [CCBReader sceneWithNodeGraphFromFile:@"SettingsMenu.ccbi"];
-        //    sceneToRun = [CCBReader sceneWithNodeGraphFromFile:@"AchievementsLayer.ccbi"];
+        //    sceneToRun = [CCBReader sceneWithNodeGraphFromFile:@"SettingsMenu.ccbi"];
+            sceneToRun = [CCBReader sceneWithNodeGraphFromFile:@"AchievementsLayer.ccbi"];
             break;
         case kLeaderboardScene:
             //            sceneToRun = ; // TODO
@@ -87,13 +87,7 @@ static GameManager* _sharedSingleton = nil;
             sceneToRun = [CCBReader sceneWithNodeGraphFromFile:@"LevelSelectLayer.ccbi"];
             break;
         case kGameLevel:
-            sceneToRun = [LevelLayer scene]; // TODO interactive way to do this for every level
-            break;
-        case kGameOverScene:
-            //            sceneToRun = [GameScene node]; // TODO
-            break;
-        case kLevelCompleteScene:
-            //            sceneToRun = [GameScene node]; // TODO
+            sceneToRun = [LevelLayer scene];
             break;
         default:
             CCLOG(@"Unknown ID, cannot switch scenes");

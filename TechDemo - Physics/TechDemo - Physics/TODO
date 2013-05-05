@@ -11,13 +11,11 @@
     
 Skill Tree: 
     Fire:
-        Basic - 
             Area of effect, Burn next target
     Cold:
         Basic - Slow down
-            Longer Slowdown, Freeze %, Area of effect
+            Area of effect, Freeze %
     City:
-        Basic - 
             Mages tower (mana recovery), Masonry (wall recovery), Fletcher (dispara flechas simples) ou Moat
 
 Daniela:
@@ -43,8 +41,7 @@ João M:
 - Sprites dos edifícios
     - mage tower
     - masonry
-    - fletcher
-        
+
 Ricardo:
 - Mais waves com novos inimigos
 - Definir achievements
