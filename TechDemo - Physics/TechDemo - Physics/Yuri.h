@@ -15,27 +15,25 @@
 {
     BOOL readyToFire;
     unsigned int level;
-    float strength;
-    float critical;
+    float strength, critical;
     
     BOOL bonusActive;
-    float strengthBonus;
-    float speedBonus;
-    float criticalBonus;
+    float strengthBonus, speedBonus, criticalBonus;
+    float fireDuration, fireDamage, slowTime, slowPercentage;
+    float fireDurationBonus, fireDamageBonus, slowTimeBonus, slowPercentageBonus;
 }
 
 @property (nonatomic) BOOL readyToFire;
 @property unsigned int level;
-@property float strength;
-@property float critical;
 @property BOOL bonusActive;
-@property float strengthBonus;
-@property float speedBonus;
-@property float criticalBonus;
+@property float strength, critical;
+@property float strengthBonus, speedBonus, criticalBonus;
+@property float fireDuration, fireDamage, slowTime, slowPercentage;
+@property float fireDurationBonus, fireDamageBonus, slowTimeBonus, slowPercentageBonus;
+
 @property (nonatomic, retain) CCFiniteTimeAction *shootUp;
 @property (nonatomic, retain) CCFiniteTimeAction *shootFront;
 @property (nonatomic, retain) CCFiniteTimeAction *shootDown;
-//@property (nonatomic, retain) CCAction *idle;
 
 -(void) getReady;
 

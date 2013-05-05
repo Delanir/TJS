@@ -12,7 +12,12 @@
 
 @implementation Yuri
 
-@synthesize  readyToFire, level, strength, critical, criticalBonus, speedBonus, bonusActive, strengthBonus;
+@synthesize readyToFire, level;
+@synthesize strength, critical;
+@synthesize criticalBonus, speedBonus, bonusActive, strengthBonus;
+@synthesize fireDuration, fireDamage, slowTime, slowPercentage;
+@synthesize fireDurationBonus, fireDamageBonus, slowTimeBonus, slowPercentageBonus;
+
 
 -(id) init
 {
@@ -22,7 +27,12 @@
     
     strength = kYuriBaseStrength * level;
     critical = kYuriBaseCritical * level;
+    fireDamage = kYuriBaseDamageOverTimeDamage * fireDamageBonus;
+    fireDuration = kYuriBaseDamageOverTimeDuration * fireDurationBonus;
+    slowTime = kYuriBaseSlowDownDuration * slowTimeBonus;
+    slowPercentage = kYuriBaseSlowDownPercentage * slowPercentageBonus;
     
+    // Init animations with basic speed
     if(self = [super initWithSprite:[NSString stringWithFormat:@"y_lvl%d_06.png",level ]])
     {
         readyToFire = YES;
@@ -42,6 +52,10 @@
     strengthBonus = 1.0f;
     speedBonus = 1.0f;
     criticalBonus = 1.0f;
+    fireDamageBonus = kYuriDamageOverTimeDamageNoBonus;
+    fireDurationBonus = kYuriDamageOverTimeDurationNoBonus;
+    slowTimeBonus = kYuriSlowDownDurationNoBonus;
+    slowPercentageBonus = kYuriSlowDownPercentageNoBonus;
 }
 
 
@@ -82,6 +96,10 @@
     strength = kYuriBaseStrength * level * strengthBonus;
     critical = kYuriBaseCritical * level *  criticalBonus;
     [self changeFireRate:[self getCurrentFireRate] * speedBonus];
+    fireDamage = kYuriBaseDamageOverTimeDamage * fireDamageBonus;
+    fireDuration = kYuriBaseDamageOverTimeDuration * fireDurationBonus;
+    slowTime = kYuriBaseSlowDownDuration * slowTimeBonus;
+    slowPercentage = kYuriBaseSlowDownPercentage * slowPercentageBonus;
 }
 
 -(void) getReady
@@ -115,9 +133,9 @@
 -(unsigned int) determineLevel
 {
     unsigned int stars = [[ResourceManager shared] skillPoints];
-    if (stars < 9)
+    if (stars < kYuriPointsToLevel2)
         return 1;
-    else if(stars < 18)
+    else if(stars < kYuriPointsToLevel3)
         return 2;
     else return 3;
 }

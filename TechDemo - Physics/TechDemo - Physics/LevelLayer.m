@@ -179,11 +179,7 @@ Done    2.1 - Criamos as variáveis no enemy
  */
     
     
-#warning MUST TEST CRITICAL
-#warning MUST TEST CRITICAL
-#warning MUST TEST CRITICAL
-#warning MUST TEST CRITICAL
-#warning MUST TEST CRITICAL
+
 #warning MUST TEST CRITICAL
 #warning MUST TEST CRITICAL
     
@@ -214,8 +210,7 @@ Done    2.1 - Criamos as variáveis no enemy
      */
     if ([[skill objectAtIndex:kIceBranch1] intValue] != 0)
     {
-#warning TODO
-        NSLog(@"Slowdown demora mais tempo");
+        [yuri setSlowPercentageBonus:kYuriSlowDownDurationBaseBonus];
     }
     if ([[skill objectAtIndex:kIceBranch2] intValue] != 0)
     {
@@ -229,8 +224,7 @@ Done    2.1 - Criamos as variáveis no enemy
     }
     if ([[skill objectAtIndex:kIceElement1] intValue] != 0)
     {
-#warning TODO
-        NSLog(@"Slowdown demora ainda mais tempo");
+        [yuri setSlowPercentageBonus:kYuriSlowDownDurationExtraBonus];
     }
     if ([[skill objectAtIndex:kIceElement2] intValue] != 0)
     {
@@ -250,8 +244,7 @@ Done    2.1 - Criamos as variáveis no enemy
      */
     if ([[skill objectAtIndex:kFireBranch1] intValue] != 0)
     {
-#warning TODO
-        NSLog(@"More damage over time");
+        [yuri setFireDamageBonus:kYuriDamageOverTimeDamageBaseBonus];
     }
     if ([[skill objectAtIndex:kFireBranch2] intValue] != 0)
     {
@@ -261,12 +254,12 @@ Done    2.1 - Criamos as variáveis no enemy
     if ([[skill objectAtIndex:kFireBranch3] intValue] != 0)
     {
 #warning TODO
-        NSLog(@"Fogo passa entre inimigos");
+        NSLog(@"Fogo passa para o proximo inimigo");
     }
     if ([[skill objectAtIndex:kFireElement1] intValue] != 0)
     {
 #warning TODO
-        NSLog(@"Even more damage over time");
+        [yuri setFireDamageBonus:kYuriDamageOverTimeDamageExtraBonus];
     }
     if ([[skill objectAtIndex:kFireElement2] intValue] != 0)
     {
@@ -276,7 +269,7 @@ Done    2.1 - Criamos as variáveis no enemy
     if ([[skill objectAtIndex:kFireElement3] intValue] != 0)
     {
 #warning TODO
-        NSLog(@"Fogo passa entre inimigos");
+        NSLog(@"Fogo passa para os 2 inimigos mais proximos");
     }
     
     /**
@@ -407,7 +400,7 @@ Done    2.1 - Criamos as variáveis no enemy
         [stimulusPackage addObject:[[StimulusFactory shared] generateColdStimulusWithValue:damage]];
     // Fire Stimulus
     if ([[buttons objectAtIndex:kPower2Button] boolValue] && [[ResourceManager shared] spendMana:3.5])
-        [stimulusPackage addObject:[[StimulusFactory shared] generateFireStimulusWithValue:damage]];
+        [stimulusPackage addObject:[[StimulusFactory shared] generateFireStimulusWithValue:kYuriBaseDamageOverTimeDamage]];
     // PushBack Stimulus
     if ([[buttons objectAtIndex:kPower3Button] boolValue] && [[ResourceManager shared] spendMana:2.0])
         [stimulusPackage addObject:[[StimulusFactory shared] generatePushBackStimulusWithValue:damage]];

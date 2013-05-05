@@ -10,21 +10,46 @@
 #define L_Archer_Constants_h
 
 #define kManaRegenerationRate 0.02
+#define kManaBaseRegenerationBonus 1.5
+#define kManaExtraRegenerationBonus 2.0
 
+//Base stats
 #define kYuriBaseStrength 25                // base damage
 #define kYuriBaseCritical 0.01              // base critical
+#define kYuriPointsToLevel2 9
+#define kYuriPointsToLevel3 18
+
+//Power up base stats
 #define kYuriBasePushbackDistance 20        // 20 pixels
 #define kYuriBaseSlowDownDuration 1         // one second
 #define kYuriBaseSlowDownPercentage 2       // twice slower
 #define kYuriBaseDamageOverTimeDuration 1   // one second
 #define kYuriBaseDamageOverTimeDamage 30    // 30 points per second
 
+//Base stat bonuses
 #define kYuriBaseStrengthBonus 1.2
 #define kYuriExtraStrengthBonus 1.4
 #define kYuriBaseSpeedBonus 0.8
 #define kYuriExtraSpeedBonus 0.6
 #define kYuriBaseCriticalBonus 2
 #define kYuriExtraCriticalBonus 3
+
+//Power up stat bonuses
+#define kYuriPushbackDistanceNoBonus 1.0
+#define kYuriSlowDownDurationNoBonus 1.0
+#define kYuriSlowDownPercentageNoBonus 1.0
+#define kYuriDamageOverTimeDurationNoBonus 1.0
+#define kYuriDamageOverTimeDamageNoBonus 1.0
+#define kYuriPushbackDistanceBaseBonus 1.4
+#define kYuriSlowDownDurationBaseBonus 1.4
+#define kYuriSlowDownPercentageBaseBonus 1.4
+#define kYuriDamageOverTimeDurationBaseBonus 1.4
+#define kYuriDamageOverTimeDamageBaseBonus 1.4
+#define kYuriPushbackDistanceExtraBonus 1.8
+#define kYuriSlowDownDurationExtraBonus 1.8
+#define kYuriSlowDownPercentageExtraBonus 1.8
+#define kYuriDamageOverTimeDurationExtraBonus 1.8
+#define kYuriDamageOverTimeDamageExtraBonus 1.8
 
 #define STARCOST1 1
 #define STARCOST2 2
