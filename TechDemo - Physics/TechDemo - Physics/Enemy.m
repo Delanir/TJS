@@ -165,7 +165,7 @@
             //NSLog(@"BECOME SLOOOOOW");
             // por boneco mais lento
         }
-#warning João amaral particulas fogo here
+#warning João amaral particulas gelo here
     }
     else if (slowDown == YES)
     {
@@ -186,12 +186,8 @@
             {
                 case kDamageStimulus:
                     [self takeDamage:[stimulus value] * damageVulnerability];
-                    //NSLog(@"Damage value: %f", [stimulus value]);
-                    //NSLog(@"Damage taken: %f", [stimulus value] * damageVulnerability);
                     break;
                 case kDOTStimulus:
-                    // NSLog(@"Fire damage: %f Fire duration: %f", [stimulus value], [stimulus duration]);
-                    //NSLog(@"Fire taken: %f Duration taken: %f", [stimulus value] * fireVulnerability, [stimulus duration] * fireVulnerability);
                     damageOverTimeCurrentValue = [stimulus value] * fireVulnerability;
                     fireRemainingTime = [stimulus duration] * fireVulnerability;
                     break;
@@ -201,10 +197,7 @@
                     coldRemainingTime = [stimulus duration] * iceVulnerability;
                     break;
                 case KPushBackStimulus:
-#warning FALTA ISTO
-                    // FAZER LOGICA DE PUSH BACK
-                    // TRANSLATES PARA TRÁS
-                    [self takeDamage:[stimulus value] * pushbackVulnerability];
+                    [self takeDamage:[stimulus value] * damageVulnerability];
                     break;
                 default:
                     break;

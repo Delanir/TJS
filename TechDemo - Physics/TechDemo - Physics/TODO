@@ -32,11 +32,9 @@ João M:
 - Bichos aleatórios (definir um número deles por nível (entre waves, por exemplo)
 - Efeitos da skill tree!
 - Buildings e lógica respectiva
-- Acabar lógica dos estimulos
 - Lógica de levar dano em cima do moat - fazer batota e meter mesmo no attack state
 - Alterar lógica do vPos para ser relativo ao ecrã
 - GameState falta definir:
-    - Estado da SkillTree - é preciso terminar a lógica disto primeiro
     - Estado dos achievements - é preciso implementar primeiro
 
 (Para usar o dell)

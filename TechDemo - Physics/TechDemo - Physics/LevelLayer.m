@@ -14,7 +14,7 @@
 
 // HelloWorldLayer implementation
 @implementation LevelLayer
-@synthesize hud, level;
+@synthesize hud, level, manaRegenerationBonus;
 
 static int current_level = -1;
 
@@ -92,6 +92,7 @@ static int current_level = -1;
         [[SimpleAudioEngine sharedEngine] playBackgroundMusic:[[Config shared] getStringProperty:@"IngameMusic"] loop:YES];
         
         timeElapsedSinceBeginning = 1.0f;
+        manaRegenerationBonus = 1.0f;
         fire = NO;
         
         // inicializar recursos
@@ -295,7 +296,7 @@ Done    2.1 - Criamos as variáveis no enemy
     if ([[skill objectAtIndex:kCityBranch1] intValue] != 0)
     {
 #warning TODO
-        NSLog(@"Mage's tower recovers mana");
+        [self setManaRegenerationBonus:kManaBaseRegenerationBonus];
         NSLog(@"Draws Mage's tower");
     }
     if ([[skill objectAtIndex:kCityBranch2] intValue] != 0)
@@ -313,7 +314,7 @@ Done    2.1 - Criamos as variáveis no enemy
     if ([[skill objectAtIndex:kCityElement1] intValue] != 0)
     {
 #warning TODO
-        NSLog(@"Mage's tower recovers even more mana");
+        [self setManaRegenerationBonus:kManaExtraRegenerationBonus];
         NSLog(@"Draws Mage's tower");
     }
     if ([[skill objectAtIndex:kCityElement2] intValue] != 0)
@@ -365,7 +366,7 @@ Done    2.1 - Criamos as variáveis no enemy
 
 - (void) regenerateMana
 {
-    [[ResourceManager shared] addMana:kManaRegenerationRate];
+    [[ResourceManager shared] addMana:kManaRegenerationRate * manaRegenerationBonus];
 }
 
 
