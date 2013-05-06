@@ -12,6 +12,8 @@
 
 #import "SimpleAudioEngine.h"
 
+#import "Constants.h"
+
 #define SHOUTPERCENTAGE 7
 
 @implementation Enemy
@@ -204,7 +206,9 @@
 #warning FALTA ISTO
                     // FAZER LOGICA DE PUSH BACK
                     // TRANSLATES PARA TRÁS
+                    [self pushBack];
                     [self takeDamage:[stimulus value] * pushbackVulnerability];
+                    
                     break;
                 default:
                     break;
@@ -212,6 +216,21 @@
         }
     }
     
+    
+}
+
+-(void) pushBack{
+    //    [self stopAllActions];
+    CGPoint currentPosition = [[self sprite] position];
+    [[self sprite] setPosition:ccp(currentPosition.x +kYuriBasePushbackDistance,currentPosition.y)];
+    
+    [sprite stopAllActions];
+    [healthBar stopAllActions];
+    [sprite setPosition:ccp([sprite position].x +kYuriBasePushbackDistance, [sprite position].y)];
+    [healthBar setPosition:ccp([sprite position].x+kYuriBasePushbackDistance, [sprite position].y + [sprite contentSize].height/2 + 2)];
+    [[self sprite] runAction:walkAction];
+    [self animateWalkLeft];
+    currentState = kWalkEnemyState;
     
 }
 

@@ -74,6 +74,7 @@
     [[self sprite] runAction:dieAction];
 }
 
+
 - (void) shout{
     
     int s;
