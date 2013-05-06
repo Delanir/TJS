@@ -57,10 +57,11 @@
 //        LevelThumbnail * level = [levelButtons objectAtIndex:i-1];
         AchievementNode * achievement = [Achievements objectAtIndex:i-1];
         
-        int achievementState = [[[[GameState shared] achievementState] objectAtIndex:i-1] intValue];
-        
+        int achievementState = [[[[GameState shared] achievementStates] objectAtIndex:i-1] intValue];
+        NSLog(@"Achievement %d with state %d",i,achievementState);
         if (achievementState == 1) {
             [achievement setIsEnabled:YES];
+            NSLog(@"ENTREI ACHIEVEMENT%d UNLOCK", i);
         } else
             [achievement setIsEnabled:NO];
         [achievement initAchievement];

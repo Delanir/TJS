@@ -11,6 +11,7 @@
 #import "Registry.h"
 #import "ResourceManager.h"
 #import "Constants.h"
+#import "GameState.h"
 
 @interface Hud : CCLayer
 {

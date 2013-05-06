@@ -63,6 +63,7 @@ static ResourceManager* _sharedSingleton = nil;
     {
 		[self reset];
         [self setGold: [[[GameState shared] goldState] unsignedIntValue]];
+        [self setEnemyKillCount:[[[GameState shared] enemiesKilledState] unsignedIntValue]];
         [self setSkillPoints:[self determineSkillPoints]];
     }
 	return self;
