@@ -568,6 +568,12 @@ Done    2.1 - Criamos as variáveis no enemy
     [[GameState shared] setGoldState: [NSNumber numberWithUnsignedInt:[[ResourceManager shared] gold]]];
 }
 
+-(void)makeEnemiesKilledPersistent
+{
+    int enemies = [[GameState shared] enemiesKilledState].intValue + [[ResourceManager shared] enemyKillCount];
+    [[GameState shared] setEnemiesKilledState:[NSNumber numberWithUnsignedInt:enemies]];
+}
+
 -(void)onExit
 {
     [[GameState shared] saveApplicationData];
@@ -689,6 +695,13 @@ Done    2.1 - Criamos as variáveis no enemy
     
 }
 
+-(void) checkAchievement1
+{
+    NSMutableArray * achievement = [[GameState shared] achievementStates];
+    if ([[achievement objectAtIndex:0]intValue] == 0 && [[GameState shared] enemiesKilledState].intValue > 50) {
+        [achievement replaceObjectAtIndex:0 withObject:[NSNumber numberWithInt:1]];
+    }
+}
 
 -(void) gameOver
 {
@@ -696,6 +709,9 @@ Done    2.1 - Criamos as variáveis no enemy
     [self addChild:_gameOver];
     [_gameOver setZOrder:1535];
     [[CCDirector sharedDirector] pause];
+    [self makeEnemiesKilledPersistent];
+    
+    [self checkAchievement1];
 }
 
 -(void) gameWin
@@ -706,7 +722,10 @@ Done    2.1 - Criamos as variáveis no enemy
     [[CCDirector sharedDirector] pause];
     
     [self calculateAndUpdateNumberOfStars];
-    [self makeMoneyPersistent];
+    [self makeMoneyPersistent];   
+    [self makeEnemiesKilledPersistent];
+    
+    [self checkAchievement1];
 }
 
 

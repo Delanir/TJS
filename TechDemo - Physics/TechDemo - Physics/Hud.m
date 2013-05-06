@@ -192,11 +192,14 @@
 
 - (void) buyArrows
 {
-    if ([[ResourceManager shared] spendGold:5])
+    if ([[ResourceManager shared] spendGold:BUYARROWSCOST])
     {
-        [[ResourceManager shared] addArrows:10];
+        [[ResourceManager shared] addArrows:BUYARROWGAIN];
         [self updateArrows];
         [self updateMoney];
+        
+        int numArrows = [[GameState shared] buyArrowsState];
+        [[GameState shared] setBuyArrowsState:numArrows+BUYARROWGAIN];
     }
 }
 
@@ -208,6 +211,9 @@
         [w increaseHealth:WALLREPAIRPERCENTAGE*[w health]];
         [self updateWallHealth];
         [self updateMoney];
+        
+        int wallRepairCount = [[GameState shared] wallRepairState];
+        [[GameState shared] setWallRepairState:wallRepairCount+1];
     }
 }
 

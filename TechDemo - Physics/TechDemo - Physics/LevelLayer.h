@@ -81,6 +81,7 @@
 -(void) gameWin;
 -(void) calculateAndUpdateNumberOfStars;
 -(void) makeMoneyPersistent;
+-(void) makeEnemiesKilledPersistent;
 
 -(void) addEnemy:(Enemy *) newEnemy;
 
