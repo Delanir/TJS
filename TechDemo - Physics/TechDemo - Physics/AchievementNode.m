@@ -9,5 +9,23 @@
 #import "AchievementNode.h"
 
 @implementation AchievementNode
+@synthesize isEnabled;
+
+-(void) initAchievement
+{
+    [spriteIcon setIsEnabled:isEnabled];
+}
+
+-(void) setInformation:(int) num
+{
+    NSDictionary * achievementInfo = [Utils openPlist:@"achievements"];
+    NSArray* temp = [achievementInfo objectForKey:@"achievements"];
+    
+    NSString* title = [[temp objectAtIndex:num] objectAtIndex:0];
+    [lblTitle setString:title];
+    
+    NSString* description = [[temp objectAtIndex:num] objectAtIndex:1];
+    [lblDescription setString:description];
+}
 
 @end

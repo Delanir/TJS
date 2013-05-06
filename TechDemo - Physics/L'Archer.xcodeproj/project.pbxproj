@@ -91,6 +91,12 @@
 		8C1B7734172F3F6300514B70 /* Level8.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C1B7733172F3F6300514B70 /* Level8.plist */; };
 		8C1B7736172F3F6E00514B70 /* Level9.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C1B7735172F3F6E00514B70 /* Level9.plist */; };
 		8C1B7738172F3F7C00514B70 /* Level10.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C1B7737172F3F7C00514B70 /* Level10.plist */; };
+		8C5B1D8A17370947003F4332 /* AchievementsLayer.ccb in Resources */ = {isa = PBXBuildFile; fileRef = 8C5B1D8917370947003F4332 /* AchievementsLayer.ccb */; };
+		8C5B1D8F17370D73003F4332 /* golden-achievement-disabled-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C5B1D8B17370D73003F4332 /* golden-achievement-disabled-ipadhd.png */; };
+		8C5B1D9017370D73003F4332 /* golden-achievement-disabled.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C5B1D8C17370D73003F4332 /* golden-achievement-disabled.png */; };
+		8C5B1D9117370D73003F4332 /* golden-achievement-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C5B1D8D17370D73003F4332 /* golden-achievement-ipadhd.png */; };
+		8C5B1D9217370D73003F4332 /* golden-achievement.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C5B1D8E17370D73003F4332 /* golden-achievement.png */; };
+		8C5B1D9417371934003F4332 /* achievements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C5B1D9317371934003F4332 /* achievements.plist */; };
 		8C72C2A8172968F6009EF8C1 /* GameWin.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C72C2A7172968F6009EF8C1 /* GameWin.m */; };
 		9C11EEC017205775003510EB /* WaveManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C11EEBF17205775003510EB /* WaveManager.m */; };
 		9C11EEC3172063B3003510EB /* Level1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C11EEC2172063B3003510EB /* Level1.plist */; };
@@ -116,7 +122,6 @@
 		9C377C0D170BBDD800F840FB /* EnemyFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C377C0C170BBDD600F840FB /* EnemyFactory.m */; };
 		9C3CE234172DC4570044889D /* akaPotsley.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C3CE22F172D87E40044889D /* akaPotsley.ttf */; };
 		9C3E4923173704FD001D45B7 /* AchievementsLayer.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 9C3E4922173704A6001D45B7 /* AchievementsLayer.ccbi */; };
-		9C3E492417370501001D45B7 /* AchievementNode.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 9C3E492017370481001D45B7 /* AchievementNode.ccbi */; };
 		9C3E492517370509001D45B7 /* LeaderBoardLayer.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 9C3E492117370493001D45B7 /* LeaderBoardLayer.ccbi */; };
 		9C4787031734264300180864 /* SkillTreeLayerZWOP.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 9C4787021734260600180864 /* SkillTreeLayerZWOP.ccbi */; };
 		9C478705173429FC00180864 /* blackdragon_anim.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C478704173429FC00180864 /* blackdragon_anim.plist */; };
@@ -403,6 +408,13 @@
 		8C1B7733172F3F6300514B70 /* Level8.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Level8.plist; sourceTree = "<group>"; };
 		8C1B7735172F3F6E00514B70 /* Level9.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Level9.plist; sourceTree = "<group>"; };
 		8C1B7737172F3F7C00514B70 /* Level10.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Level10.plist; sourceTree = "<group>"; };
+		8C5B1D88173708DB003F4332 /* AchievementNode.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = AchievementNode.ccbi; sourceTree = "<group>"; };
+		8C5B1D8917370947003F4332 /* AchievementsLayer.ccb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = AchievementsLayer.ccb; sourceTree = "<group>"; };
+		8C5B1D8B17370D73003F4332 /* golden-achievement-disabled-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "golden-achievement-disabled-ipadhd.png"; path = "Resources/golden-achievement-disabled-ipadhd.png"; sourceTree = "<group>"; };
+		8C5B1D8C17370D73003F4332 /* golden-achievement-disabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "golden-achievement-disabled.png"; path = "Resources/golden-achievement-disabled.png"; sourceTree = "<group>"; };
+		8C5B1D8D17370D73003F4332 /* golden-achievement-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "golden-achievement-ipadhd.png"; path = "Resources/golden-achievement-ipadhd.png"; sourceTree = "<group>"; };
+		8C5B1D8E17370D73003F4332 /* golden-achievement.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "golden-achievement.png"; path = "Resources/golden-achievement.png"; sourceTree = "<group>"; };
+		8C5B1D9317371934003F4332 /* achievements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = achievements.plist; sourceTree = "<group>"; };
 		8C72C2A51729687B009EF8C1 /* GameWin.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = GameWin.ccbi; sourceTree = "<group>"; };
 		8C72C2A6172968F6009EF8C1 /* GameWin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameWin.h; sourceTree = "<group>"; };
 		8C72C2A7172968F6009EF8C1 /* GameWin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameWin.m; sourceTree = "<group>"; };
@@ -444,7 +456,6 @@
 		9C377C0B170BBDD300F840FB /* EnemyFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyFactory.h; sourceTree = "<group>"; };
 		9C377C0C170BBDD600F840FB /* EnemyFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnemyFactory.m; sourceTree = "<group>"; };
 		9C3CE22F172D87E40044889D /* akaPotsley.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = akaPotsley.ttf; sourceTree = "<group>"; };
-		9C3E492017370481001D45B7 /* AchievementNode.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = AchievementNode.ccbi; sourceTree = "<group>"; };
 		9C3E492117370493001D45B7 /* LeaderBoardLayer.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = LeaderBoardLayer.ccbi; sourceTree = "<group>"; };
 		9C3E4922173704A6001D45B7 /* AchievementsLayer.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = AchievementsLayer.ccbi; sourceTree = "<group>"; };
 		9C478701173425DD00180864 /* SkillTreeSubMenu.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = SkillTreeSubMenu.ccbi; sourceTree = "<group>"; };
@@ -803,6 +814,10 @@
 		3E926EC4173405ED00BFA90D /* Achievements */ = {
 			isa = PBXGroup;
 			children = (
+				8C5B1D8B17370D73003F4332 /* golden-achievement-disabled-ipadhd.png */,
+				8C5B1D8C17370D73003F4332 /* golden-achievement-disabled.png */,
+				8C5B1D8D17370D73003F4332 /* golden-achievement-ipadhd.png */,
+				8C5B1D8E17370D73003F4332 /* golden-achievement.png */,
 				3E926EC51734064B00BFA90D /* achievement-guide.png */,
 			);
 			name = Achievements;
@@ -883,6 +898,7 @@
 				9C11EEC417206465003510EB /* Waves */,
 				9C11EEC11720637D003510EB /* Levels */,
 				9C7FF343170B28CE009DA7F9 /* Config.plist */,
+				8C5B1D9317371934003F4332 /* achievements.plist */,
 				9C8DE0D017185844002E0D0A /* Tags */,
 				9C94ABD717197BD2005BCE32 /* zDepth */,
 				9C2B3CBC171EE8FB00E695FE /* Registry Entities */,
@@ -1592,8 +1608,8 @@
 			isa = PBXGroup;
 			children = (
 				8B8C2D9B1719DB9300B50C1E /* MainMenu.ccbi */,
-				9C3E492017370481001D45B7 /* AchievementNode.ccbi */,
 				9C3E4922173704A6001D45B7 /* AchievementsLayer.ccbi */,
+				8C5B1D88173708DB003F4332 /* AchievementNode.ccbi */,
 				8BFC3F0E17204440000161FD /* GameOver.ccbi */,
 				8C72C2A51729687B009EF8C1 /* GameWin.ccbi */,
 				9C478701173425DD00180864 /* SkillTreeSubMenu.ccbi */,
@@ -1605,6 +1621,7 @@
 				8BC2107317343D6500B875B2 /* CitySubMenu.ccbi */,
 				8BC2107117343A0800B875B2 /* MarksSubMenu.ccbi */,
 				8B221467173338540055BF51 /* SkillTreeSubMenu.ccbi */,
+				8C5B1D8917370947003F4332 /* AchievementsLayer.ccb */,
 				3EE9FE1317256DAD009718EC /* LevelSelectLayer.ccb */,
 				3EE2F95F1723175E0084DF2F /* LevelSelectLayer.ccbi */,
 				3EE2F9601723175E0084DF2F /* LevelThumbnail.ccbi */,
@@ -1798,9 +1815,14 @@
 				8B3854D317355A900044F4F3 /* stick1.png in Resources */,
 				8B3854D417355A900044F4F3 /* stick2.png in Resources */,
 				8B3854DE17357C690044F4F3 /* skillTreeSS-ipadhd.plist in Resources */,
-				9C3E492417370501001D45B7 /* AchievementNode.ccbi in Resources */,
 				9C3E492517370509001D45B7 /* LeaderBoardLayer.ccbi in Resources */,
 				9C3E4923173704FD001D45B7 /* AchievementsLayer.ccbi in Resources */,
+				8C5B1D8A17370947003F4332 /* AchievementsLayer.ccb in Resources */,
+				8C5B1D8F17370D73003F4332 /* golden-achievement-disabled-ipadhd.png in Resources */,
+				8C5B1D9017370D73003F4332 /* golden-achievement-disabled.png in Resources */,
+				8C5B1D9117370D73003F4332 /* golden-achievement-ipadhd.png in Resources */,
+				8C5B1D9217370D73003F4332 /* golden-achievement.png in Resources */,
+				8C5B1D9417371934003F4332 /* achievements.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>achievements</key>
+	<array>
+		<array>
+			<string>Ils sont fous ces Mort-vivants</string>
+			<string>Kill 50 Enemys</string>
+			<string>Imagem</string>
+		</array>
+		<array>
+			<string>Saint Georges</string>
+			<string>Kill 10 Dragons</string>
+			<string>Imagem</string>
+		</array>
+		<array>
+			<string>Le Grand Dépensier</string>
+			<string>Buy 2500 Arrows</string>
+			<string>Imagem</string>
+		</array>
+		<array>
+			<string>Robin des Bois?</string>
+			<string>Finish a level with 100% accuracy</string>
+			<string>Imagem</string>
+		</array>
+		<array>
+			<string>L&apos;héritage de Crixus</string>
+			<string>Finish a level with 100% health</string>
+			<string>Imagem</string>
+		</array>
+		<array>
+			<string>Le Grand Chef</string>
+			<string>Finish Level 10</string>
+			<string>Imagem</string>
+		</array>
+		<array>
+			<string>Les Trois Mousquetaires</string>
+			<string>Get 3 fleur-de-lis in one level</string>
+			<string>Imagem</string>
+		</array>
+		<array>
+			<string>Le Grand Fleuriste D&apos;Amiens</string>
+			<string>Get 3 fleur-de-lis in all levels</string>
+			<string>Imagem</string>
+		</array>
+		<array>
+			<string>L&apos;Arbre de la Sagesse</string>
+			<string>Unlock all skill tree</string>
+			<string>Imagem</string>
+		</array>
+		<array>
+			<string>Pour Jeanne d&apos;Arc</string>
+			<string>Finish Level 5 with 100% health and accuracy</string>
+			<string>Imagem</string>
+		</array>
+		<array>
+			<string>Il est plus de 9000</string>
+			<string>Kill more than 9000 enemies</string>
+			<string>Imagem</string>
+		</array>
+		<array>
+			<string>Bonne chance</string>
+			<string>Kill 100 fire elements before reaching the wall</string>
+			<string>Imagem</string>
+		</array>
+		<array>
+			<string>Le Coq Sportif</string>
+			<string>Finish level 10 with 100% health</string>
+			<string>Imagem</string>
+		</array>
+		<array>
+			<string>Le Maçon d&apos;Amiens</string>
+			<string>Repair the wall 100 times</string>
+			<string>Imagem</string>
+		</array>
+		<array>
+			<string>L&apos;Archer D&apos;Amiens</string>
+			<string>Finish level 10 with 100% accuracy and health</string>
+			<string>Imagem</string>
+		</array>
+	</array>
+</dict>
+</plist>
