@@ -198,8 +198,8 @@
         [self updateArrows];
         [self updateMoney];
         
-        int numArrows = [[GameState shared] buyArrowsState];
-        [[GameState shared] setBuyArrowsState:numArrows+BUYARROWGAIN];
+        int numArrows = [[[GameState shared] buyArrowsState] intValue] + BUYARROWGAIN;
+        [[GameState shared] setBuyArrowsState:numArrows];
     }
 }
 
@@ -212,8 +212,8 @@
         [self updateWallHealth];
         [self updateMoney];
         
-        int wallRepairCount = [[GameState shared] wallRepairState];
-        [[GameState shared] setWallRepairState:wallRepairCount+1];
+        int wallRepairCount = [[[GameState shared] wallRepairState] intValue] + 1;
+        [[GameState shared] setWallRepairState:wallRepairCount];
     }
 }
 
