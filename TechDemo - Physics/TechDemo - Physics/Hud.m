@@ -199,7 +199,7 @@
         [self updateMoney];
         
         int numArrows = [[[GameState shared] buyArrowsState] intValue] + BUYARROWGAIN;
-        [[GameState shared] setBuyArrowsState:numArrows];
+        [[GameState shared] setBuyArrowsState:[NSNumber numberWithInt:numArrows]];
     }
 }
 
@@ -213,7 +213,7 @@
         [self updateMoney];
         
         int wallRepairCount = [[[GameState shared] wallRepairState] intValue] + 1;
-        [[GameState shared] setWallRepairState:wallRepairCount];
+        [[GameState shared] setWallRepairState:[NSNumber numberWithInt:wallRepairCount]];
     }
 }
 
