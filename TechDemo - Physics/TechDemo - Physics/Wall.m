@@ -253,6 +253,16 @@
     lastHealth = maxHealth;
 }
 
+-(void) regenerateHealth:(double)amount
+{
+    if (health == maxHealth)
+        return;
+    if (health + amount > maxHealth)
+        health = maxHealth;
+    else
+        health += amount;
+}
+
 -(void) destructionChant
 {
     if (losingRate -health >0.2*maxHealth) {

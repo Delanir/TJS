@@ -34,6 +34,7 @@
 -(void) damage: (double) amount;
 -(void) addMoat;
 -(void) increaseHealth:(double)ratio;
+-(void) regenerateHealth:(double)amount;
 
 
 @end

@@ -61,7 +61,7 @@
     PauseHUD *_pause;
     
     int level;
-    float manaRegenerationBonus;
+    float manaRegenerationBonus, healthRegenerationRate;
     BOOL fire;
     Hud *hud;
     double timeElapsedSinceBeginning;
@@ -69,7 +69,7 @@
 }
 @property (nonatomic,retain) Hud *hud;
 @property int level;
-@property float manaRegenerationBonus;
+@property float manaRegenerationBonus, healthRegenerationRate;
 
 // returns a CCScene that contains the HelloWorldLayer as the only child
 +(CCScene *) scene;

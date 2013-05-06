@@ -14,7 +14,7 @@
 
 // HelloWorldLayer implementation
 @implementation LevelLayer
-@synthesize hud, level, manaRegenerationBonus;
+@synthesize hud, level, manaRegenerationBonus, healthRegenerationRate;
 
 static int current_level = -1;
 
@@ -93,6 +93,7 @@ static int current_level = -1;
         
         timeElapsedSinceBeginning = 1.0f;
         manaRegenerationBonus = 1.0f;
+        healthRegenerationRate = 0.0f;
         fire = NO;
         
         // inicializar recursos
@@ -295,39 +296,34 @@ Done    2.1 - Criamos as variáveis no enemy
      */
     if ([[skill objectAtIndex:kCityBranch1] intValue] != 0)
     {
-#warning TODO
+#warning TODO draw stuff
         [self setManaRegenerationBonus:kManaBaseRegenerationBonus];
         NSLog(@"Draws Mage's tower");
     }
     if ([[skill objectAtIndex:kCityBranch2] intValue] != 0)
     {
-#warning TODO
-        NSLog(@"Wall health recovers over time");
+#warning TODO draw stuff
+        [self setHealthRegenerationRate:kHealthBaseRegenerationBonus];
         NSLog(@"Draws Masonry");
     }
     if ([[skill objectAtIndex:kCityBranch3] intValue] != 0)
     {
 #warning TODO
-        NSLog(@"Fletcher fires arrows against the enemies");
-        NSLog(@"Draws Fletcher");
+        NSLog(@"Moat damages the enemies. One time. a percentage value of health");
+        NSLog(@"Draws Moat");
     }
     if ([[skill objectAtIndex:kCityElement1] intValue] != 0)
     {
-#warning TODO
         [self setManaRegenerationBonus:kManaExtraRegenerationBonus];
-        NSLog(@"Draws Mage's tower");
     }
     if ([[skill objectAtIndex:kCityElement2] intValue] != 0)
     {
-#warning TODO
-        NSLog(@"Wall health recovers faster over time");
-        NSLog(@"Draws Masonry");
+        [self setHealthRegenerationRate:kHealthExtraRegenerationBonus];
     }
     if ([[skill objectAtIndex:kCityElement3] intValue] != 0)
     {
 #warning TODO
-        NSLog(@"Fletcher arrows are faster and stronger over time");
-        NSLog(@"Draws Fletcher");
+        NSLog(@"Moat has a small chance of instakill");
     }
     
     [yuri initBasicStats];
@@ -350,7 +346,7 @@ Done    2.1 - Criamos as variáveis no enemy
        [(Yuri*)[self getChildByTag:9]fireIfAble: location] )
         [self addProjectile:location];
     
-    [self regenerateMana];
+    [self regenerateHealthAndMana];
     
     [[CollisionManager shared] updatePixelPerfectCollisions:dt];
     [[CollisionManager shared] updateWallsAndEnemies:dt];
@@ -364,9 +360,11 @@ Done    2.1 - Criamos as variáveis no enemy
         [self gameWin];
 }
 
-- (void) regenerateMana
+- (void) regenerateHealthAndMana
 {
     [[ResourceManager shared] addMana:kManaRegenerationRate * manaRegenerationBonus];
+    Wall * wall = [[Registry shared] getEntityByName:@"Wall"];
+    [wall regenerateHealth:healthRegenerationRate];
 }
 
 

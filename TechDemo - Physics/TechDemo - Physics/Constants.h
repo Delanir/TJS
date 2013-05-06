@@ -12,6 +12,8 @@
 #define kManaRegenerationRate 0.02
 #define kManaBaseRegenerationBonus 1.5
 #define kManaExtraRegenerationBonus 2.0
+#define kHealthBaseRegenerationBonus 0.025
+#define kHealthExtraRegenerationBonus 0.05
 
 //Base stats
 #define kYuriBaseStrength 25                // base damage
