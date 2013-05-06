@@ -208,7 +208,10 @@
     if ([[ResourceManager shared] spendGold:WALLREPAIRCOST])
     {
         Wall *w =[[Registry shared] getEntityByName:@"Wall"];
-        [w increaseHealth:WALLREPAIRPERCENTAGE*[w health]];
+        
+         [w regenerateHealth:WALLREPAIRPERCENTAGE*[w maxHealth]];
+        
+        
         [self updateWallHealth];
         [self updateMoney];
         

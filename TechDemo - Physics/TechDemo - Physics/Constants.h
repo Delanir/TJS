@@ -69,7 +69,7 @@
 #define BUYARROWSCOST 5
 #define BUYARROWGAIN 10
 
-#define WALLREPAIRCOST 500
+#define WALLREPAIRCOST 50
 #define WALLREPAIRPERCENTAGE 0.25
 
 #define kDamageBaseVulnerability 1.0
