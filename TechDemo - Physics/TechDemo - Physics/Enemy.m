@@ -18,9 +18,8 @@
 
 @synthesize currentState, strength, speed, goldValue, health, healthBar, maxHealth, stimuli;
 @synthesize damageVulnerability, fireVulnerability, iceVulnerability, pushbackVulnerability;
-@synthesize coldRemainingTime, fireRemainingTime;
-@synthesize damageOverTimeCurrentValue;
-@synthesize normalAnimationSpeed, slowDown;
+@synthesize coldRemainingTime, fireRemainingTime, damageOverTimeCurrentValue;
+@synthesize normalAnimationSpeed, slowDown, slowDownSpeed;
 @synthesize attackAction, walkAction, walkAnimation, attackAnimation;
 
 
@@ -40,7 +39,6 @@
         fireRemainingTime = 0;
         damageOverTimeCurrentValue = 0;
         slowDown = NO;
-       // normalSpeed =
         
         // Initialize health bar
         CCSprite * barSprite = [[CCSprite alloc] initWithSpriteFrameName:@"red_health_bar.png"];
@@ -60,7 +58,7 @@
     [healthBar setPercentage:health];
     shoutPercentage = SHOUTPERCENTAGE;
     [self schedule:@selector(shout) interval:1.5];
- 
+    
     [self schedule:@selector(update:)];
 }
 
@@ -78,6 +76,7 @@
 
 - (void) animateWalkLeft;
 {
+    
     // Create the actions
     id actionMove = [CCMoveTo actionWithDuration:speed
                                         position:ccp(-sprite.contentSize.width/2, sprite.position.y)];
@@ -88,6 +87,7 @@
     id moveHealthBar = [CCMoveTo actionWithDuration:speed
                                            position:ccp(-sprite.contentSize.width/2, healthBar.position.y)];
     [[self healthBar] runAction:moveHealthBar];
+    
 }
 
 
@@ -105,7 +105,7 @@
     // Create the target slightly off-screen along the right edge,
     // and along a random position along the Y axis as calculated above
     sprite.position = ccp(winSize.width + (spriteSize.width/2), actualY);
-  
+    
     healthBar.position = ccp(winSize.width + (spriteSize.width/2), actualY + spriteSize.height/2 + 2);
 }
 
@@ -145,7 +145,7 @@
 - (void)update:(ccTime)dt
 {
     if([healthBar opacity] > 0)
-        [healthBar setOpacity:[healthBar opacity] - dt*0.08];
+        [healthBar setOpacity:[healthBar opacity] - dt * 0.08];
     
     if (fireRemainingTime > 0)
     {
@@ -157,8 +157,23 @@
     if (coldRemainingTime > 0)
     {
         coldRemainingTime -= dt;
-        
+        if (slowDown == NO)
+        {
+            slowDown = YES;
+            speed = speed * slowDownSpeed;
+            [self setCurrentSpeed: normalAnimationSpeed * slowDownSpeed];
+            //NSLog(@"BECOME SLOOOOOW");
+            // por boneco mais lento
+        }
 #warning João amaral particulas fogo here
+    }
+    else if (slowDown == YES)
+    {
+        speed = speed / slowDownSpeed;
+        [self setCurrentSpeed: normalAnimationSpeed];
+        //NSLog(@"RECOVER");
+        // por boneco com velocidade normal
+        slowDown = NO;
     }
     
     if([stimuli count] > 0)
@@ -175,17 +190,15 @@
                     //NSLog(@"Damage taken: %f", [stimulus value] * damageVulnerability);
                     break;
                 case kDOTStimulus:
-                   // NSLog(@"Fire damage: %f Fire duration: %f", [stimulus value], [stimulus duration]);
+                    // NSLog(@"Fire damage: %f Fire duration: %f", [stimulus value], [stimulus duration]);
                     //NSLog(@"Fire taken: %f Duration taken: %f", [stimulus value] * fireVulnerability, [stimulus duration] * fireVulnerability);
                     damageOverTimeCurrentValue = [stimulus value] * fireVulnerability;
                     fireRemainingTime = [stimulus duration] * fireVulnerability;
                     break;
                 case kSlowStimulus:
-#warning FALTA ISTO [stimulus duration]
-                    // FAZER LOGICA DE SLOW
-                    // METER UMA VARIAVEL QUE DECREMENTA
-                    // ENQUANTO N É ZERO, SPEED MAIS LENTO -> REFAZER ANIMAÇÃO
                     [self takeDamage:[stimulus value] * iceVulnerability];
+                    slowDownSpeed = [stimulus value];
+                    coldRemainingTime = [stimulus duration] * iceVulnerability;
                     break;
                 case KPushBackStimulus:
 #warning FALTA ISTO
@@ -228,16 +241,18 @@
     return [[[CCAnimationCache sharedAnimationCache] animationByName: walkAnimation ] delayPerUnit];
 }
 
--(void) setCurrentSpeed: (float) walkSpeed
+-(void) setCurrentSpeed: (float) newSpeed
 {
-    //setup animations
-    [[[CCAnimationCache sharedAnimationCache] animationByName:walkAnimation ] setDelayPerUnit:walkSpeed];
-
-    [[self sprite] stopAllActions];
-    
-    [self setupActions];
-
-    
+    // If enemy is dying, don't slow him down
+    if (currentState != kDieEnemyState)
+    {    //setup animations
+        [[[CCAnimationCache sharedAnimationCache] animationByName:walkAnimation ] setDelayPerUnit:newSpeed];
+        [[[CCAnimationCache sharedAnimationCache] animationByName:attackAnimation ] setDelayPerUnit:newSpeed];
+        
+        [[self sprite] stopAllActions];
+        
+        [self setupActions];
+    }
 }
 
 -(void ) shout

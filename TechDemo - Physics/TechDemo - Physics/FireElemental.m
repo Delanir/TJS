@@ -32,8 +32,7 @@
 
 -(void) setupActions
 {
-    // Setup Movement
-    [self animateWalkLeft];
+
     walkAnimation = @"f_walk";
     attackAnimation = @"f_blast";
     
@@ -44,7 +43,15 @@
                            [CCCallFuncN actionWithTarget:self selector:@selector(damageWall)],
                            [CCCallFuncN actionWithTarget:self selector:@selector(die)],
                             nil]];
-    [[self sprite] runAction:walkAction];
+    
+    // Setup Movement
+    if (currentState == kWalkEnemyState)
+    {
+        [[self sprite] runAction:walkAction];
+        [self animateWalkLeft];
+    }
+    if (currentState == kAttackEnemyState)
+        [sprite runAction:[CCRepeatForever actionWithAction:attackAction]];
 }
 
 

@@ -344,6 +344,7 @@ Done    2.1 - Criamos as variáveis no enemy
     // Do I have to shoot?
     if(fire &&
        [[ResourceManager shared] arrows] > 0 &&
+       location.x > 140 &&
        location.y > 128 &&
        [(Yuri*)[self getChildByTag:9]fireIfAble: location] )
         [self addProjectile:location];

@@ -22,7 +22,7 @@
 //Power up base stats
 #define kYuriBasePushbackDistance 20        // 20 pixels
 #define kYuriBaseSlowDownDuration 1         // one second
-#define kYuriBaseSlowDownPercentage 2       // twice slower
+#define kYuriBaseSlowDownPercentage 1.8       // times slower
 #define kYuriBaseDamageOverTimeDuration 1   // one second
 #define kYuriBaseDamageOverTimeDamage 30    // 30 points per second
 

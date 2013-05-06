@@ -26,7 +26,7 @@
     float damageVulnerability, fireVulnerability, iceVulnerability, pushbackVulnerability;
     double coldRemainingTime, fireRemainingTime;
     unsigned int damageOverTimeCurrentValue;
-    float normalAnimationSpeed;
+    float normalAnimationSpeed, slowDownSpeed;
     BOOL slowDown;
     CCProgressTimer * healthBar;
     NSMutableArray * stimuli;
@@ -44,7 +44,7 @@
 @property double coldRemainingTime, fireRemainingTime;
 @property unsigned int damageOverTimeCurrentValue;
 @property unsigned int goldValue;
-@property float normalAnimationSpeed;
+@property float normalAnimationSpeed, slowDownSpeed;
 @property BOOL slowDown;
 
 
@@ -59,7 +59,7 @@
 -(BOOL) isDead;
 -(void) enqueueStimuli:(NSMutableArray *) stimulusPackage;
 -(float) getCurrentSpeed;
--(void) setCurrentSpeed: (float) walkSpeed;
+-(void) setCurrentSpeed: (float) newSpeed;
 
 -(void) takeDamage:(double) amount;
 @end

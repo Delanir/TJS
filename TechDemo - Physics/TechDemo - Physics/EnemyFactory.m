@@ -115,6 +115,7 @@ static EnemyFactory* _sharedSingleton = nil;
             [newEnemy healthBar].scaleY = [Utils iPadRetina]?1:0.5;
             
             [newEnemy setupActions];
+            [newEnemy setNormalAnimationSpeed: [newEnemy getCurrentSpeed]];
             [newEnemy autorelease];
             
             

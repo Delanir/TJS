@@ -16,7 +16,7 @@
 {
     if (self = [super initWithSprite:spriteFile])
     {
-        [self setCurrentState:kFlyEnemyState];
+        [self setCurrentState:kWalkEnemyState];
         [self setHealth:240];
         [self setSpeed:11];
         [self setStrength:2];
@@ -33,8 +33,6 @@
 
 -(void) setupActions
 {
-    // Setup Movement
-    [self animateWalkLeft];
     walkAnimation = @"fd_fly";
     attackAnimation = @"fd_attack";
     // Setup animations
@@ -44,7 +42,15 @@
                             [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName: attackAnimation]],
                             [CCCallFuncN actionWithTarget:self selector:@selector(damageWall)],
                             nil]];
-    [[self sprite] runAction:walkAction];
+    
+    // Setup Movement
+    if (currentState == kWalkEnemyState)
+    {
+        [[self sprite] runAction:walkAction];
+        [self animateWalkLeft];
+    }
+    if (currentState == kAttackEnemyState)
+        [sprite runAction:[CCRepeatForever actionWithAction:attackAction]];
     
     shoutPercentage = FAIRIESHOUT;
 }

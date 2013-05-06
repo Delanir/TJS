@@ -10,16 +10,17 @@
     - Play next chapter
     
 Skill Tree: 
-    Fire:
-            Burn next target
+
+    Marskman: Basic - Pushback (estou tentado a substituir por um bonus geral de 20%)
+
     Cold:
-        Basic - Slow down
             Freeze %
     City:
-            Mages tower (mana recovery), Masonry (wall recovery), Fletcher (dispara flechas simples) ou Moat
+            Mages tower (mana recovery), Masonry (wall recovery), Moat (attacks enemies)
 
 Daniela:
 - Texto nas opções
+- Acertar posiçoes dos objectos das sub skill tree (sub menus estão diferentes)
 - Informação na skill tree
 - Verificar sons que faltam
     - Compilar lista
@@ -27,6 +28,8 @@ Daniela:
     - Implementar
 
 João M:
+- Sprite do moat no zwoptex!
+- Bichos aleatórios (definir um número deles por nível (entre waves, por exemplo)
 - Efeitos da skill tree!
 - Buildings e lógica respectiva
 - Acabar lógica dos estimulos
@@ -122,3 +125,5 @@ Afterburner:
     - Speed bonus
     - Critical ratio
 - Definir bonus passivos dos níveis do Yuri
+- Slow Down implementado (com mts bugs relacionados corrigidos)
+- Yuri já não dispara quando clicamos atrás dele

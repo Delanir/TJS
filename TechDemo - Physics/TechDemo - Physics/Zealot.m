@@ -32,8 +32,6 @@
 
 -(void) setupActions
 {
-    // Setup Movement
-    [self animateWalkLeft];
     walkAnimation = @"z_walk";
     attackAnimation = @"z_attack";
     // Setup animations
@@ -43,7 +41,16 @@
                             [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName: attackAnimation]],
                             [CCCallFuncN actionWithTarget:self selector:@selector(damageWall)],
                             nil]];
-    [[self sprite] runAction:walkAction];
+    
+    // Setup Movement
+    if (currentState == kWalkEnemyState)
+    {
+        [[self sprite] runAction:walkAction];
+        [self animateWalkLeft];
+    }
+    if (currentState == kAttackEnemyState)
+        [sprite runAction:[CCRepeatForever actionWithAction:attackAction]];
+    
     shoutPercentage =ZEALOTSHOUT;
 }
 
