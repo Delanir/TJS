@@ -50,6 +50,7 @@
 		8B3854D317355A900044F4F3 /* stick1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B3854D117355A900044F4F3 /* stick1.png */; };
 		8B3854D417355A900044F4F3 /* stick2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B3854D217355A900044F4F3 /* stick2.png */; };
 		8B3854DE17357C690044F4F3 /* skillTreeSS-ipadhd.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8BC2106117342A7900B875B2 /* skillTreeSS-ipadhd.plist */; };
+		8B3D7F341737F15F0097996B /* AchievementNode.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 8C5B1D88173708DB003F4332 /* AchievementNode.ccbi */; };
 		8B3FF0E01732B60600D2212B /* FireSubSkillTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3FF0DF1732B60600D2212B /* FireSubSkillTree.m */; };
 		8B43948D17341C30008BAB1D /* skillTreeSS.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B43948917341C30008BAB1D /* skillTreeSS.plist */; };
 		8B43948E17341C30008BAB1D /* skillTreeSS.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B43948A17341C30008BAB1D /* skillTreeSS.png */; };
@@ -1823,6 +1824,7 @@
 				8C5B1D9117370D73003F4332 /* golden-achievement-ipadhd.png in Resources */,
 				8C5B1D9217370D73003F4332 /* golden-achievement.png in Resources */,
 				8C5B1D9417371934003F4332 /* achievements.plist in Resources */,
+				8B3D7F341737F15F0097996B /* AchievementNode.ccbi in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
