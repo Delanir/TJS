@@ -16,6 +16,7 @@
 @interface Enemy : Entity
 {
     CCAction *walkAction;
+    NSString * walkAnimation, * attackAnimation;
     CCSequence *attackAction;
     state currentState;
     float strength, speed;
@@ -25,13 +26,14 @@
     float damageVulnerability, fireVulnerability, iceVulnerability, pushbackVulnerability;
     double coldRemainingTime, fireRemainingTime;
     unsigned int damageOverTimeCurrentValue;
-    float normalSpeed;
+    float normalAnimationSpeed;
     BOOL slowDown;
     CCProgressTimer * healthBar;
     NSMutableArray * stimuli;
 }
 
 @property (nonatomic, retain) CCAction *walkAction;
+@property (nonatomic, retain) NSString * walkAnimation, * attackAnimation;
 @property (nonatomic, retain) CCSequence *attackAction;
 @property (nonatomic, retain) CCProgressTimer * healthBar;
 @property (nonatomic, retain) NSMutableArray * stimuli;
@@ -42,7 +44,7 @@
 @property double coldRemainingTime, fireRemainingTime;
 @property unsigned int damageOverTimeCurrentValue;
 @property unsigned int goldValue;
-@property float normalSpeed;
+@property float normalAnimationSpeed;
 @property BOOL slowDown;
 
 
@@ -56,6 +58,8 @@
 -(void) animateWalkLeft;
 -(BOOL) isDead;
 -(void) enqueueStimuli:(NSMutableArray *) stimulusPackage;
+-(float) getCurrentSpeed;
+-(void) setCurrentSpeed: (float) walkSpeed;
 
 -(void) takeDamage:(double) amount;
 @end

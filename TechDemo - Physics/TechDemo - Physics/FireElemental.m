@@ -34,10 +34,12 @@
 {
     // Setup Movement
     [self animateWalkLeft];
+    walkAnimation = @"f_walk";
+    attackAnimation = @"f_blast";
     
     // Setup animations
     [self setWalkAction: [CCRepeatForever actionWithAction:
-                          [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"f_walk" ]]]];
+                          [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName: walkAnimation]]]];
     [self setAttackAction: [CCSequence actions:
                            [CCCallFuncN actionWithTarget:self selector:@selector(damageWall)],
                            [CCCallFuncN actionWithTarget:self selector:@selector(die)],
@@ -63,7 +65,7 @@
     [self setCurrentState:kDieEnemyState];
     [[self sprite] stopAllActions];
     [[CollisionManager shared] removeFromTargets:self];
-    CCFiniteTimeAction * dieAction = [CCRepeat actionWithAction:[CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"f_blast" ]] times:1];
+    CCFiniteTimeAction * dieAction = [CCRepeat actionWithAction:[CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName: attackAnimation]] times:1];
     [[self sprite] runAction:dieAction];
     
 }

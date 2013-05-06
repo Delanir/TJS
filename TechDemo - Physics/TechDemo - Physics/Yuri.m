@@ -118,7 +118,7 @@
     [[[CCAnimationCache sharedAnimationCache] animationByName:[NSString stringWithFormat:@"y_attack_up_lvl%d",level ] ] setDelayPerUnit:fireRate];
     [[[CCAnimationCache sharedAnimationCache] animationByName:[NSString stringWithFormat:@"y_attack_front_lvl%d",level ] ] setDelayPerUnit:fireRate];
     [[[CCAnimationCache sharedAnimationCache] animationByName:[NSString stringWithFormat:@"y_attack_down_lvl%d",level ] ] setDelayPerUnit:fireRate];
-
+    
     [[self sprite] stopAllActions];
     
     [self setShootUp:[CCRepeat actionWithAction:

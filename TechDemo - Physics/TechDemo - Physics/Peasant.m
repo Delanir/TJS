@@ -35,12 +35,13 @@
 {
     // Setup Movement
     [self animateWalkLeft];
-    
+    walkAnimation = @"p_walk";
+    attackAnimation = @"p_attack";
     // Setup animations
     [self setWalkAction: [CCRepeatForever actionWithAction:
-                          [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"p_walk" ]]]];
+                          [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName: walkAnimation]]]];
     [self setAttackAction: [CCSequence actions:
-                            [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"p_attack"]],
+                            [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName: attackAnimation]],
                             [CCCallFuncN actionWithTarget:self selector:@selector(damageWall)],
                             nil]];
     [[self sprite] runAction:walkAction];

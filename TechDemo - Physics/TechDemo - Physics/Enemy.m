@@ -20,8 +20,8 @@
 @synthesize damageVulnerability, fireVulnerability, iceVulnerability, pushbackVulnerability;
 @synthesize coldRemainingTime, fireRemainingTime;
 @synthesize damageOverTimeCurrentValue;
-@synthesize normalSpeed, slowDown;
-@synthesize attackAction, walkAction;
+@synthesize normalAnimationSpeed, slowDown;
+@synthesize attackAction, walkAction, walkAnimation, attackAnimation;
 
 
 - (id) initWithSprite:(NSString *)spriteFile
@@ -221,6 +221,23 @@
 {
     Wall * wall = [[Registry shared] getEntityByName:@"Wall"];
     [wall damage:strength];
+}
+
+-(float) getCurrentSpeed
+{
+    return [[[CCAnimationCache sharedAnimationCache] animationByName: walkAnimation ] delayPerUnit];
+}
+
+-(void) setCurrentSpeed: (float) walkSpeed
+{
+    //setup animations
+    [[[CCAnimationCache sharedAnimationCache] animationByName:walkAnimation ] setDelayPerUnit:walkSpeed];
+
+    [[self sprite] stopAllActions];
+    
+    [self setupActions];
+
+    
 }
 
 -(void ) shout

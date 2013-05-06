@@ -34,12 +34,13 @@
 {
     // Setup Movement
     [self animateWalkLeft];
-    
+    walkAnimation = @"z_walk";
+    attackAnimation = @"z_attack";
     // Setup animations
     [self setWalkAction: [CCRepeatForever actionWithAction:
-                          [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"z_walk" ]]]];
+                          [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName: walkAnimation]]]];
     [self setAttackAction: [CCSequence actions:
-                            [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"z_attack"]],
+                            [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName: attackAnimation]],
                             [CCCallFuncN actionWithTarget:self selector:@selector(damageWall)],
                             nil]];
     [[self sprite] runAction:walkAction];
