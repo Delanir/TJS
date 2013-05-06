@@ -11,8 +11,6 @@
 
 @implementation Peasant
 
-@synthesize attackAction, walkAction;
-
 
 -(id) initWithSprite:(NSString *)spriteFile
 {

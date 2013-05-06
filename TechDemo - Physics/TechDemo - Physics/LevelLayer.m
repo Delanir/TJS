@@ -181,7 +181,6 @@ Done    2.1 - Criamos as variáveis no enemy
     
     if ([[skill objectAtIndex:kIceMainBranch] intValue] != 0)
     {
-#warning TODO - Aqui não é preciso fazer mais nada. É o tratamento básico do estimulo no enemy
         [headsUpDisplay setIceToggleButtonActive];
     }
     if ([[skill objectAtIndex:kFireMainBranch] intValue] != 0)
@@ -190,7 +189,6 @@ Done    2.1 - Criamos as variáveis no enemy
     }
     if ([[skill objectAtIndex:kMarksmanMainBranch] intValue] != 0)
     {
-#warning TODO - Aqui não é preciso fazer mais nada. É o tratamento básico do estimulo no enemy
         [headsUpDisplay setPushbackToggleButtonActive];
     }
     if ([[skill objectAtIndex:kCityMainBranch] intValue] != 0)
@@ -201,7 +199,7 @@ Done    2.1 - Criamos as variáveis no enemy
     
     /**
      *
-     * GELOOOOO
+     * GELO
      *
      */
     if ([[skill objectAtIndex:kIceBranch1] intValue] != 0)
@@ -210,8 +208,7 @@ Done    2.1 - Criamos as variáveis no enemy
     }
     if ([[skill objectAtIndex:kIceBranch2] intValue] != 0)
     {
-#warning TODO
-        NSLog(@"Ha uma % de fazer freeze (slowdown de 100%)");
+        [yuri setFreezePercentage:kYuriBaseFreezePercentage];
     }
     if ([[skill objectAtIndex:kIceBranch3] intValue] != 0)
     {
@@ -223,8 +220,7 @@ Done    2.1 - Criamos as variáveis no enemy
     }
     if ([[skill objectAtIndex:kIceElement2] intValue] != 0)
     {
-#warning TODO
-        NSLog(@"Ha uma % ainda maior de fazer freeze (slowdown de 100%)");
+        [yuri setFreezePercentage:kYuriExtraFreezePercentage];
     }
     if ([[skill objectAtIndex:kIceElement3] intValue] != 0)
     {
@@ -233,18 +229,16 @@ Done    2.1 - Criamos as variáveis no enemy
     
     /**
      *
-     * FOGOOOOO
+     * FOGO
      *
      */
     if ([[skill objectAtIndex:kFireBranch1] intValue] != 0)
     {
         [yuri setFireDamageBonus:kYuriDamageOverTimeDamageBaseBonus];
-        [yuri setFireDurationBonus:kYuriDamageOverTimeDurationBaseBonus];
     }
     if ([[skill objectAtIndex:kFireBranch2] intValue] != 0)
     {
-#warning TODO
-        NSLog(@"Fogo passa para o proximo inimigo");
+        [yuri setFireDurationBonus:kYuriDamageOverTimeDurationBaseBonus];
     }
     if ([[skill objectAtIndex:kFireBranch3] intValue] != 0)
     {
@@ -253,12 +247,10 @@ Done    2.1 - Criamos as variáveis no enemy
     if ([[skill objectAtIndex:kFireElement1] intValue] != 0)
     {
         [yuri setFireDamageBonus:kYuriDamageOverTimeDamageExtraBonus];
-        [yuri setFireDurationBonus:kYuriDamageOverTimeDurationExtraBonus];
     }
     if ([[skill objectAtIndex:kFireElement2] intValue] != 0)
     {
-#warning TODO
-        NSLog(@"Fogo passa para os 2 inimigos mais proximos");
+        [yuri setFireDurationBonus:kYuriDamageOverTimeDurationExtraBonus];
     }
     if ([[skill objectAtIndex:kFireElement3] intValue] != 0)
     {
@@ -267,7 +259,7 @@ Done    2.1 - Criamos as variáveis no enemy
     
     /**
      *
-     * MARKSMAAAN
+     * MARKSMAN
      *
      */
     if ([[skill objectAtIndex:kMarksmanBranch1] intValue] != 0)

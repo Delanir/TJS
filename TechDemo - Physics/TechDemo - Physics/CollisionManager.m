@@ -220,6 +220,7 @@ static CollisionManager* _sharedSingleton = nil;
     }
 }
 
+
 -(id)findClosestTarget: (CGPoint) sourcePosition
 {
     if ( _targets.count <= 1)

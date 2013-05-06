@@ -15,29 +15,35 @@
 
 @interface Enemy : Entity
 {
+    CCAction *walkAction;
+    CCSequence *attackAction;
     state currentState;
-    float strength;
-    float speed;
+    float strength, speed;
     int shoutPercentage;
     float health, maxHealth;
     unsigned int goldValue;
     float damageVulnerability, fireVulnerability, iceVulnerability, pushbackVulnerability;
     double coldRemainingTime, fireRemainingTime;
     unsigned int damageOverTimeCurrentValue;
+    float normalSpeed;
+    BOOL slowDown;
     CCProgressTimer * healthBar;
     NSMutableArray * stimuli;
 }
 
+@property (nonatomic, retain) CCAction *walkAction;
+@property (nonatomic, retain) CCSequence *attackAction;
 @property (nonatomic, retain) CCProgressTimer * healthBar;
 @property (nonatomic, retain) NSMutableArray * stimuli;
 @property state currentState;
-@property float strength;
-@property float speed;
+@property float strength, speed;
 @property float health, maxHealth;
 @property float damageVulnerability, fireVulnerability, iceVulnerability, pushbackVulnerability;
 @property double coldRemainingTime, fireRemainingTime;
 @property unsigned int damageOverTimeCurrentValue;
 @property unsigned int goldValue;
+@property float normalSpeed;
+@property BOOL slowDown;
 
 
 -(id) initWithSprite:(NSString *)spriteFile;

@@ -10,12 +10,6 @@
 
 @interface FireElemental : Enemy
 {
-    CCAction *walkAction;
-    CCSequence *blastAction;
 }
 
-@property (nonatomic, retain) CCAction *walkAction;
-@property (nonatomic, retain) CCSequence *blastAction;
-
--(void)attack;
 @end

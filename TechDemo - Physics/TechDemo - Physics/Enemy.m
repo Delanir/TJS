@@ -20,6 +20,8 @@
 @synthesize damageVulnerability, fireVulnerability, iceVulnerability, pushbackVulnerability;
 @synthesize coldRemainingTime, fireRemainingTime;
 @synthesize damageOverTimeCurrentValue;
+@synthesize normalSpeed, slowDown;
+@synthesize attackAction, walkAction;
 
 
 - (id) initWithSprite:(NSString *)spriteFile
@@ -37,6 +39,8 @@
         coldRemainingTime = 0;
         fireRemainingTime = 0;
         damageOverTimeCurrentValue = 0;
+        slowDown = NO;
+       // normalSpeed =
         
         // Initialize health bar
         CCSprite * barSprite = [[CCSprite alloc] initWithSpriteFrameName:@"red_health_bar.png"];
@@ -147,6 +151,13 @@
     {
         fireRemainingTime -= dt;
         [self takeDamage: dt * fireVulnerability * damageOverTimeCurrentValue];
+#warning João amaral particulas fogo here
+    }
+    
+    if (coldRemainingTime > 0)
+    {
+        coldRemainingTime -= dt;
+        
 #warning João amaral particulas fogo here
     }
     

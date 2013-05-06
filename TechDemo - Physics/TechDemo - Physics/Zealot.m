@@ -11,8 +11,6 @@
 
 @implementation Zealot
 
-@synthesize attackAction, walkAction;
-
 -(id) initWithSprite:(NSString *)spriteFile
 {
     if (self = [super initWithSprite:spriteFile])

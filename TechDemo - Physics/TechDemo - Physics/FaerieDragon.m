@@ -12,8 +12,6 @@
 
 @implementation FaerieDragon
 
-@synthesize attackAction, flyAction;
-
 -(id) initWithSprite:(NSString *)spriteFile
 {
     if (self = [super initWithSprite:spriteFile])
@@ -39,13 +37,13 @@
     [self animateWalkLeft];
     
     // Setup animations
-    [self setFlyAction: [CCRepeatForever actionWithAction:
+    [self setWalkAction: [CCRepeatForever actionWithAction:
                          [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"fd_fly" ]]]];
     [self setAttackAction: [CCSequence actions:
                             [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"fd_attack"]],
                             [CCCallFuncN actionWithTarget:self selector:@selector(damageWall)],
                             nil]];
-    [[self sprite] runAction:flyAction];
+    [[self sprite] runAction:walkAction];
     
     shoutPercentage = FAIRIESHOUT;
 }

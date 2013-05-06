@@ -41,15 +41,21 @@
 #define kYuriDamageOverTimeDamageNoBonus 1.0
 #define kYuriSlowDownDurationBaseBonus 1.4
 #define kYuriSlowDownPercentageBaseBonus 1.4
-#define kYuriDamageOverTimeDurationBaseBonus 1.4
+#define kYuriDamageOverTimeDurationBaseBonus 1.5
 #define kYuriDamageOverTimeDamageBaseBonus 1.4
 #define kYuriSlowDownDurationExtraBonus 1.8
 #define kYuriSlowDownPercentageExtraBonus 1.8
-#define kYuriDamageOverTimeDurationExtraBonus 1.8
+#define kYuriDamageOverTimeDurationExtraBonus 2.0
 #define kYuriDamageOverTimeDamageExtraBonus 1.8
 #define kYuriNoAreaOfEffect 0
 #define kYuriBaseAreaOfEffect 70
 #define kYuriExtraAreaOfEffect 140
+#define kYuriNoChainTargets 0
+#define kYuriOneChainTarget 1
+#define kYuriTwoChainTargets 2
+#define kYuriNoFreezePercentage 0
+#define kYuriBaseFreezePercentage 0.1
+#define kYuriExtraFreezePercentage 0.2
 
 #define kMaxRange 500
 

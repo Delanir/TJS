@@ -15,7 +15,8 @@
 @synthesize readyToFire, level;
 @synthesize strength, critical;
 @synthesize criticalBonus, speedBonus, bonusActive, strengthBonus;
-@synthesize fireDuration, fireDamage, slowTime, slowPercentage, iceAreaOfEffect, fireAreaOfEffect;
+@synthesize fireDuration, fireDamage, fireAreaOfEffect, fireNumberOfChainTargets;
+@synthesize slowTime, slowPercentage, iceAreaOfEffect, freezePercentage;
 @synthesize fireDurationBonus, fireDamageBonus, slowTimeBonus, slowPercentageBonus;
 
 
@@ -33,6 +34,8 @@
     slowPercentage = kYuriBaseSlowDownPercentage * slowPercentageBonus;
     iceAreaOfEffect = kYuriNoAreaOfEffect;
     fireAreaOfEffect = kYuriNoAreaOfEffect;
+    fireNumberOfChainTargets = kYuriNoChainTargets;
+    freezePercentage = kYuriNoFreezePercentage;
     
     // Init animations with basic speed
     if(self = [super initWithSprite:[NSString stringWithFormat:@"y_lvl%d_06.png",level ]])

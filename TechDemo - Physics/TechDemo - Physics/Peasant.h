@@ -10,13 +10,7 @@
 
 @interface Peasant : Enemy
 {
-    CCAction *walkAction;
-    CCSequence *attackAction;
 }
 
-@property (nonatomic, retain) CCAction *walkAction;
-@property (nonatomic, retain) CCSequence *attackAction;
-
--(void)attack;
 
 @end

@@ -9,7 +9,6 @@
 #import "Skeleton.h"
 
 @implementation Skeleton
-@synthesize attackAction, walkAction;
 
 -(id) initWithSprite:(NSString *)spriteFile
 {

@@ -9,7 +9,6 @@
 #import "BlackDragon.h"
 
 @implementation BlackDragon
-@synthesize attackAction, walkAction;
 
 -(id) initWithSprite:(NSString *)spriteFile
 {

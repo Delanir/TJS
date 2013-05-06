@@ -9,7 +9,6 @@
 #import "Wraith.h"
 
 @implementation Wraith
-@synthesize attackAction, walkAction;
 
 -(id) initWithSprite:(NSString *)spriteFile
 {
