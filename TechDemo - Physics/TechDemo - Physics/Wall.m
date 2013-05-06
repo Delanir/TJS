@@ -63,8 +63,6 @@
         [sprites addObject:castletop0];
         [sprites addObject:castlebottom0];
         
-        
-        
         for (CCSprite * spr in sprites)
         {
             [spr setTag:5];
@@ -78,9 +76,24 @@
         
         [self schedule:@selector(update:)];
         
-        
         [self schedule:@selector(destructionChant) interval:9];
         losingRate=health;
+        
+        smokeTop = [[CCParticleSmoke alloc] init];
+        smokeBottom = [[CCParticleSmoke alloc] init];
+        [[[Registry shared] getEntityByName:@"LevelLayer"] addChild:smokeTop z:999];
+        [[[Registry shared] getEntityByName:@"LevelLayer"] addChild:smokeBottom z:999];
+        //[smoke setDuration:1];
+        fireTop = [[ CCParticleFire alloc] init];
+        fireBottom = [[ CCParticleFire alloc] init];
+        [[[Registry shared] getEntityByName:@"LevelLayer"] addChild:fireTop z:1000];
+        [[[Registry shared] getEntityByName:@"LevelLayer"] addChild:fireBottom z:1000];
+        
+        NSLog(@"Emission rate is %f", [fireTop emissionRate]);
+        [smokeTop setEmissionRate:0];
+        [smokeBottom setEmissionRate:0];
+        [fireTop setEmissionRate:0];
+        [fireBottom setEmissionRate:0];
         
         //[self addMoat];
     }
@@ -100,14 +113,19 @@
     //Only test if required - try health and status
     if(health != lastHealth)
     {
-        if (health < (0.75 * maxHealth) && health >= (0.5 * maxHealth) && status == kMintWall)
+        if(health > (0.75 * maxHealth) && status == kScratchedWall)
+        {
+            [self changeTopSprite:[sprites objectAtIndex:0] bottomSprite:[sprites objectAtIndex:1]];
+            [smokeTop setEmissionRate:0];
+            [smokeBottom setEmissionRate:0];
+            [fireTop setEmissionRate:0];
+            [fireBottom setEmissionRate:0];
+            status = kMintWall;
+        }
+        
+        if ( health < (0.75 * maxHealth) && health >= (0.5 * maxHealth) && (status == kMintWall || status == kDamagedWall))
         {
             [self changeTopSprite:[sprites objectAtIndex:2] bottomSprite:[sprites objectAtIndex:3]];
-            
-            smokeTop = [[CCParticleSmoke alloc] init];
-            smokeBottom = [[CCParticleSmoke alloc] init];
-            [[[Registry shared] getEntityByName:@"LevelLayer"] addChild:smokeTop z:999];
-            [[[Registry shared] getEntityByName:@"LevelLayer"] addChild:smokeBottom z:999];
             
             [smokeTop setStartSize:25];
             [smokeTop setEndSize:35];
@@ -115,18 +133,16 @@
             [smokeTop setTotalParticles:150];
             [smokeTop setAutoRemoveOnFinish:YES];
             
-            
             [smokeBottom setStartSize:25];
             [smokeBottom setEndSize:35];
             [smokeBottom setPosition:bottomPoint1];
             [smokeBottom setTotalParticles:150];
             [smokeBottom setAutoRemoveOnFinish:YES];
             
-            //[smoke setDuration:1];
-            fireTop = [[ CCParticleFire alloc] init];
-            fireBottom = [[ CCParticleFire alloc] init];
-            [[[Registry shared] getEntityByName:@"LevelLayer"] addChild:fireTop z:1000];
-            [[[Registry shared] getEntityByName:@"LevelLayer"] addChild:fireBottom z:1000];
+            [smokeTop setEmissionRate:80];
+            [smokeBottom setEmissionRate:80];
+            [fireTop setEmissionRate:80];
+            [fireBottom setEmissionRate:80];
             
             [fireTop setStartSize:0];
             [fireTop setEndSize:0];
@@ -150,9 +166,14 @@
             smokeTop.endColor = thisColor;
             smokeBottom.endColor = thisColor;
             
+    //        [smokeTop setVisible:YES];
+    //        [smokeBottom setVisible:YES];
+    //        [fireTop setVisible:YES];
+    //        [fireBottom setVisible:YES];
+            
             status = kScratchedWall;
         }
-        else if (health < (0.5 * maxHealth) && health >= (0.25 * maxHealth) && status == kScratchedWall)
+        else if (health < (0.5 * maxHealth) && health >= (0.25 * maxHealth) && (status == kScratchedWall || status == kWreckedWall))
         {
             ccColor4F thisColor;
             thisColor.r = 0.0;
