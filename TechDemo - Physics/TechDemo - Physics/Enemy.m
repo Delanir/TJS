@@ -199,11 +199,7 @@
                     coldRemainingTime = [stimulus duration] * iceVulnerability;
                     break;
                 case KPushBackStimulus:
-                    // FAZER LOGICA DE PUSH BACK
-                    // TRANSLATES PARA TRÁS
-                    [self pushBack];
-                    //[self takeDamage:[stimulus value] * pushbackVulnerability];
-                    
+                    [self pushBackWithForce:[stimulus value] * pushbackVulnerability];
                     break;
                 default:
                     break;
@@ -214,19 +210,16 @@
     
 }
 
--(void) pushBack
+-(void) pushBackWithForce: (float) force
 {
-    if ([self currentState] != kDieEnemyState) {
-        
-        //    [self stopAllActions];
-        CGPoint currentPosition = [[self sprite] position];
-        [[self sprite] setPosition:ccp(currentPosition.x +kYuriBasePushbackDistance,currentPosition.y)];
-        
+    CGPoint currentPosition = [sprite position];
+    [sprite setPosition:ccp(currentPosition.x + force,currentPosition.y)];
+    [healthBar setPosition:ccp([sprite position].x + force, [sprite position].y + [sprite contentSize].height/2 + 2)];
+    
+    if ([self currentState] != kDieEnemyState)
+    {
         [sprite stopAllActions];
         [healthBar stopAllActions];
-        [sprite setPosition:ccp([sprite position].x + kYuriBasePushbackDistance, [sprite position].y)];
-        [healthBar setPosition:ccp([sprite position].x + kYuriBasePushbackDistance, [sprite position].y + [sprite contentSize].height/2 + 2)];
-        [[self sprite] runAction:walkAction];
         currentState = kWalkEnemyState;
         [self setupActions];
     }
@@ -235,11 +228,9 @@
 
 -(void)die
 {
-    
     [self removeChild:healthBar cleanup:YES];
     [[ResourceManager shared] increaseEnemyKillCount];
     [[ResourceManager shared] addGold: goldValue];
-    
 }
 
 -(BOOL) isDead

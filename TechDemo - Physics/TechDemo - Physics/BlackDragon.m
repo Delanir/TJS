@@ -22,7 +22,7 @@
         [self setDamageVulnerability: kDamageBaseVulnerability * 0.5];
         [self setFireVulnerability: kFireBaseVulnerability * 1.0];
         [self setIceVulnerability: kIceBaseVulnerability * 1.5];
-        [self setPushbackVulnerability: kPushbackBaseVulnerability * 1.0];
+        [self setPushbackVulnerability: kPushbackBaseVulnerability * 0.25];
         
         [self postInit];
     }
