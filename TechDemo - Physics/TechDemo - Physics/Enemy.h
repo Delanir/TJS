@@ -25,12 +25,13 @@
     float health, maxHealth;
     unsigned int goldValue;
     float damageVulnerability, fireVulnerability, iceVulnerability, pushbackVulnerability;
-    double coldRemainingTime, fireRemainingTime;
+    double coldRemainingTime, fireRemainingTime, freezeRemainingTime;
     unsigned int damageOverTimeCurrentValue;
     float normalAnimationSpeed, slowDownSpeed;
     BOOL slowDown;
     CCProgressTimer * healthBar;
     NSMutableArray * stimuli;
+    BOOL frozen;
 }
 
 @property (nonatomic, retain) CCAction *walkAction;
