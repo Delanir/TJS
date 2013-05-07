@@ -9,6 +9,7 @@
 #import "Enemy.h"
 #import "CollisionManager.h"
 #import "Utils.h"
+#import "Yuri.h"
 
 #import "SimpleAudioEngine.h"
 
@@ -95,26 +96,26 @@
 }
 
 
-- (void) freeze{
-    frozen = YES;
-    [self stopAllActions];
-    [sprite stopAllActions];
-//    [healthBar stopAllActions];
-    sprite.color=ccc3(0, 183, 235);
-//    [sprite s
-//    [sprite runAction:[CCTintTo actionWithDuration:coldRemainingTime red:0 green:183 blue:235]];
-    
+- (void) freeze
+{
+    if (currentState != kDieEnemyState)
+    {
+        [self stopAllActions];
+        [sprite stopAllActions];
+        sprite.color=ccc3(0, 183, 235);
+    }
 }
 
-- (void) deFreeze{
-    frozen = NO;
-    [self stopAllActions];
-    
-    sprite.color=ccWHITE;
-    [sprite stopAllActions];
-//    [healthBar stopAllActions];
-    
-    [self setupActions];
+- (void) deFreeze
+{
+    if (currentState != kDieEnemyState)
+    {
+        frozen = NO;
+        [self stopAllActions];
+        sprite.color=ccWHITE;
+        [sprite stopAllActions];
+        [self setupActions];
+    }
 }
 
 
@@ -191,50 +192,44 @@
 #warning João amaral particulas fogo here
     }
     
+    
+    
     if (coldRemainingTime > 0)
     {
         coldRemainingTime -= dt;
         
         if (slowDown == NO)
         {
-            
             slowDown = YES;
-            speed = speed * slowDownSpeed;
-            [self setCurrentSpeed: normalAnimationSpeed * slowDownSpeed];
-            
-//            [self freeze];
+            if (frozen) [self freeze];
+            else
+            {
+                speed = speed * slowDownSpeed;
+                [self setCurrentSpeed: normalAnimationSpeed * slowDownSpeed];
+                
+            }
         }
-#warning João amaral particulas gelo here
     }
     else if (slowDown == YES)
     {
-       
-//       [self deFreeze];
-        speed = speed / slowDownSpeed;
-        [self setCurrentSpeed: normalAnimationSpeed];
-        slowDown = NO;
-    }
-    
-    if (freezeRemainingTime > 0)
-    {
-        freezeRemainingTime -= dt;
-        if (frozen == NO)
+       if (frozen)
+           [self deFreeze];
+        else
         {
-            
-            [self freeze];
-            
+            speed = speed / slowDownSpeed;
+            [self setCurrentSpeed: normalAnimationSpeed];
+            slowDown = NO;
         }
     }
-    else if (frozen == YES)
-    {
-        [self deFreeze];
-    }
+    
+
     
     if([stimuli count] > 0)
     {
         for (int i = 0; i< [stimuli count]; i++)
         {
             Stimulus * stimulus = [stimuli dequeue];
+            Yuri * yuri = [[Registry shared] getEntityByName:@"Yuri"];
             
             switch ([stimulus type])
             {
@@ -249,6 +244,7 @@
                     [self takeDamage:[stimulus value] * iceVulnerability];
                     slowDownSpeed = [stimulus value];
                     coldRemainingTime = [stimulus duration] * iceVulnerability;
+                    if ([yuri freezeWithCold]) frozen = YES;
                     break;
                 case KPushBackStimulus:
                     [self pushBackWithForce:[stimulus value] * pushbackVulnerability];
@@ -319,5 +315,7 @@
 {
     
 }
+
+
 
 @end

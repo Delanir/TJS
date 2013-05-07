@@ -127,8 +127,8 @@
         
         CCMenuItem *repairButton = [CCMenuItemImage itemWithNormalSprite:repairButtonSprite1 selectedSprite:repairButtonSprite2 target:self selector:@selector(repairWall)];
         
-        buyButton.position = ccp(332, 64);
-        repairButton.position = ccp(432,64);
+        buyButton.position = ccp(300, 64);
+        repairButton.position = ccp(400,64);
         
         CCMenu *buttonsMenu = [CCMenu menuWithItems:iceToggleButton, fireToggleButton, pushBackToggleButton, buyButton, repairButton, nil];
         buttonsMenu.position = CGPointZero;

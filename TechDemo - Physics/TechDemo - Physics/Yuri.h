@@ -60,5 +60,6 @@
 -(int)isCritical;
 -(float) getCurrentFireRate;
 -(void) changeFireRate: (float) fireRate;
+-(BOOL) freezeWithCold;
 
 @end

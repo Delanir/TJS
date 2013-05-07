@@ -150,5 +150,10 @@
     return arc4random_uniform(100) < critical * 100 ?2 :1;
 }
 
+-(BOOL) freezeWithCold
+{
+    return arc4random_uniform(100) < freezePercentage * 100;
+}
+
 
 @end

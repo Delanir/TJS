@@ -9,8 +9,7 @@ Daniela:
 - Verificar sons que faltam
 
 Skill Tree: 
-    Freeze %    - Mesma logica do slow mas mais simples. Fazer Stop all animations e reiniciar
-                - constantes ja estao definidas. Calcular percentagem como no instakill ou IsCritical
+    Freeze %   
 
 João M:
 - Bichos aleatórios (definir um número deles por nível (entre waves, por exemplo)
@@ -20,16 +19,18 @@ João M:
 
 Ricardo:
 - Mais waves com novos inimigos
-- Definir achievements
 - Balancear dificuldade
 
 João A:
-- Fazer Leaderboard à batoteiro
 - Particulas do slow e do damage over time
 
 
 Para MOJO:
 - Utilização do Flurry
+
+
+
+
 
 Afterburner:
 - Fazer projectiles do zealot
