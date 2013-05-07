@@ -76,6 +76,7 @@
     [[CollisionManager shared] removeFromTargets:self];
     CCFiniteTimeAction * dieAction = [CCRepeat actionWithAction:[CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName: attackAnimation]] times:1];
     [[self sprite] runAction:dieAction];
+    
     int fireKilled = [[[GameState shared] fireElementalKilledState] intValue] + 1;
     [[GameState shared] setFireElementalKilledState:[NSNumber numberWithInt: fireKilled]];
 }
