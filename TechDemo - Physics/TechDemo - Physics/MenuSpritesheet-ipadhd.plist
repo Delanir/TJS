@@ -5,7 +5,7 @@
 	<key>frames</key>
 	<dict>
 		
-		<key>SpeakerIcon_DOWN-ipadhd.png</key>
+		<key>SpeakerIcon_DOWN.png</key>
 		<dict>
 			<key>aliases</key>
 			<array>
@@ -27,7 +27,7 @@
 			<false/>
 		</dict>
 		
-		<key>SpeakerIcon_UP-ipadhd.png</key>
+		<key>SpeakerIcon_UP.png</key>
 		<dict>
 			<key>aliases</key>
 			<array>
@@ -49,7 +49,7 @@
 			<false/>
 		</dict>
 		
-		<key>SpeakerIcon_UP_SOUND-ipadhd.png</key>
+		<key>SpeakerIcon_UP_SOUND.png</key>
 		<dict>
 			<key>aliases</key>
 			<array>
@@ -577,7 +577,7 @@
 			<false/>
 		</dict>
 		
-		<key>fleurBlack-ipadhd.png</key>
+		<key>fleurBlack.png</key>
 		<dict>
 			<key>aliases</key>
 			<array>
@@ -599,7 +599,7 @@
 			<false/>
 		</dict>
 		
-		<key>fleurDor-ipadhd.png</key>
+		<key>fleurDor.png</key>
 		<dict>
 			<key>aliases</key>
 			<array>
@@ -621,7 +621,7 @@
 			<false/>
 		</dict>
 		
-		<key>keylock2-ipadhd.png</key>
+		<key>keylock2.png</key>
 		<dict>
 			<key>aliases</key>
 			<array>
@@ -917,17 +917,17 @@
 		<key>size</key>
 		<string>{2048, 1024}</string>
 		<key>name</key>
-		<string>MenuSpritesheet-ipadhd.zwd</string>
+		<string>MenuSpritesheet.zwd</string>
 		<key>target</key>
 		<dict>
 			<key>name</key>
 			<string>default</string>
 			<key>textureFileName</key>
-			<string>MenuSpritesheet-ipadhd</string>
+			<string>MenuSpritesheet</string>
 			<key>textureFileExtension</key>
 			<string>.png</string>
 			<key>coordinatesFileName</key>
-			<string>MenuSpritesheet-ipadhd</string>
+			<string>MenuSpritesheet</string>
 			<key>coordinatesFileExtension</key>
 			<string>.plist</string>
 			<key>premultipliedAlpha</key>
