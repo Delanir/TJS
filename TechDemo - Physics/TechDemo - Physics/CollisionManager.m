@@ -12,6 +12,10 @@
 #import "Yuri.h"
 #import "NSMutableArray+QueueAdditions.h"
 
+#warning TEST
+#import "FireExplosion.h"
+#import "IceExplosion.h"
+
 // Sound interface
 #import "SimpleAudioEngine.h"
 
@@ -105,6 +109,7 @@ static CollisionManager* _sharedSingleton = nil;
             KKPixelMaskSprite *targetSprite = [target sprite];
             if ([targetSprite pixelMaskContainsPoint:[projectileSprite position]])
             {
+#warning BLAH
                 [targetsToDelete addObject:target];
                 break;              // Cada flecha só mata um
             }
@@ -195,6 +200,7 @@ static CollisionManager* _sharedSingleton = nil;
             case kDOTStimulus:
                 if (fireRange != kYuriNoAreaOfEffect)
                 {
+                    [[[FireExplosion alloc] initWithPosition:[[sourceEnemy sprite] position] andRadius: (fireRange / kYuriBaseAreaOfEffect)] autorelease];
                     CCArray * dudesToAffect = [self findAllEnemiesInRange:[yuri fireAreaOfEffect] ofEnemy:sourceEnemy];
                     for (Enemy * enemy in dudesToAffect)
                     {
@@ -206,6 +212,7 @@ static CollisionManager* _sharedSingleton = nil;
             case kSlowStimulus:
                 if (iceRange != kYuriNoAreaOfEffect)
                 {
+                    [[[IceExplosion alloc] initWithPosition:[[sourceEnemy sprite] position] andRadius: (iceRange / kYuriBaseAreaOfEffect)] autorelease];
                     CCArray * dudesToAffect = [self findAllEnemiesInRange:[yuri iceAreaOfEffect] ofEnemy:sourceEnemy];
                     for (Enemy * enemy in dudesToAffect)
                     {
