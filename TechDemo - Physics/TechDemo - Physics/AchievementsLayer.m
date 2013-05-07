@@ -61,6 +61,7 @@
         NSLog(@"Achievement %d with state %d",i,achievementState);
         if (achievementState == 1) {
             [achievement setIsEnabled:YES];
+            [achievement setImage];
             NSLog(@"ENTREI ACHIEVEMENT%d UNLOCK", i);
         } else
             [achievement setIsEnabled:NO];

@@ -28,4 +28,11 @@
     [lblDescription setString:description];
 }
 
+-(void) setImage
+{
+    //spriteWithSpriteFrameName
+    NSLog(@"SetImage");
+    spriteShield = [CCSprite spriteWithFile:@"achievements_skull.png"];
+}
+
 @end

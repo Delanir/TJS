@@ -21,4 +21,5 @@
 
 -(void) initAchievement;
 -(void) setInformation:(int) num;
+-(void) setImage;
 @end

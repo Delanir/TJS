@@ -20,7 +20,7 @@
 			<string>Imagem</string>
 		</array>
 		<array>
-			<string>Robin des Bois?</string>
+			<string>Robin des Bois</string>
 			<string>Finish a level with 100% accuracy</string>
 			<string>Imagem</string>
 		</array>
@@ -46,7 +46,7 @@
 		</array>
 		<array>
 			<string>L&apos;Arbre de la Sagesse</string>
-			<string>Unlock all skill tree</string>
+			<string>Complete a branch of the skill tree</string>
 			<string>Imagem</string>
 		</array>
 		<array>
@@ -76,7 +76,7 @@
 		</array>
 		<array>
 			<string>L&apos;Archer D&apos;Amiens</string>
-			<string>Finish level 10 with 100% accuracy and health</string>
+			<string>Get all Achievements</string>
 			<string>Imagem</string>
 		</array>
 	</array>
