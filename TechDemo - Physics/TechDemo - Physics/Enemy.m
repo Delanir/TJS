@@ -188,7 +188,7 @@
     {
         fireRemainingTime -= dt;
         [self takeDamage: dt * fireVulnerability * damageOverTimeCurrentValue];
-#warning João amaral particulas fogo here
+        [sprite setColor:ccc3(255, 0, 0)];
     }
     
     if (coldRemainingTime > 0)
@@ -204,7 +204,8 @@
             
 //            [self freeze];
         }
-#warning João amaral particulas gelo here
+        [sprite setColor:ccc3(0, 255, 255)];
+        [sprite setOpacity:200];
     }
     else if (slowDown == YES)
     {
