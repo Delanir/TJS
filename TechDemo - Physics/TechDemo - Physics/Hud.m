@@ -75,10 +75,10 @@
         
         //Power Buttons Start
         CCMenuItem *iceOn = [CCMenuItemImage
-                             itemWithNormalImage:@"IceButton.png" selectedImage:@"IceButton.png"
+                             itemWithNormalSprite: [CCSprite spriteWithSpriteFrameName:@"IceButton.png"] selectedSprite:[CCSprite spriteWithSpriteFrameName:@"IceButton.png"]
                              target:self selector:nil];
         CCMenuItem *iceOff = [CCMenuItemImage
-                              itemWithNormalImage:@"IceButton-bw.png" selectedImage:@"IceButton-bw.png"
+                              itemWithNormalSprite:[CCSprite spriteWithSpriteFrameName:@"IceButton-bw.png"] selectedSprite:[CCSprite spriteWithSpriteFrameName:@"IceButton-bw.png"]
                               target:self selector:nil];
         
         iceToggleButton = [CCMenuItemToggle itemWithTarget:self
@@ -89,10 +89,10 @@
         iceToggleButton.position = ccp(680, 64);
         
         CCMenuItem *fireOn = [CCMenuItemImage
-                              itemWithNormalImage:@"FireButton.png" selectedImage:@"FireButton.png"
+                              itemWithNormalSprite:[CCSprite spriteWithSpriteFrameName:@"FireButton.png"] selectedSprite:[CCSprite spriteWithSpriteFrameName:@"FireButton.png"]
                               target:self selector:nil];
         CCMenuItem *fireOff = [CCMenuItemImage
-                               itemWithNormalImage:@"FireButton-bw.png" selectedImage:@"FireButton-bw.png"
+                               itemWithNormalSprite:[CCSprite spriteWithSpriteFrameName:@"FireButton-bw.png"] selectedSprite:[CCSprite spriteWithSpriteFrameName:@"FireButton-bw.png"]
                                target:self selector:nil];
         
         fireToggleButton = [CCMenuItemToggle itemWithTarget:self
@@ -104,10 +104,10 @@
         
         
         CCMenuItem *pushBackOn = [CCMenuItemImage
-                                  itemWithNormalImage:@"MarksManButton.png" selectedImage:@"MarksManButton.png"
+                                  itemWithNormalSprite:[CCSprite spriteWithSpriteFrameName:@"MarksManButton.png"] selectedSprite:[CCSprite spriteWithSpriteFrameName:@"MarksManButton.png"]
                                   target:self selector:nil];
         CCMenuItem *pushBackOff = [CCMenuItemImage
-                                   itemWithNormalImage:@"MarksManButton-bw.png" selectedImage:@"MarksManButton-bw.png"
+                                   itemWithNormalSprite:[CCSprite spriteWithSpriteFrameName:@"MarksManButton-bw.png"] selectedSprite:[CCSprite spriteWithSpriteFrameName:@"MarksManButton-bw.png"]
                                    target:self selector:nil];
         
         pushBackToggleButton = [CCMenuItemToggle itemWithTarget:self
