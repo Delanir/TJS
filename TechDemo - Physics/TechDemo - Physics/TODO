@@ -10,7 +10,7 @@ Daniela:
 - Verificar sons que faltam
 Skill Tree: 
     Freeze %    - Mesma logica do slow mas mais simples. Fazer Stop all animations e reiniciar
-                - Definir constantes e calcular percentagem como no instakill ou IsCritical
+                - constantes ja estao definidas. Calcular percentagem como no instakill ou IsCritical
 
 João M:
 - Bichos aleatórios (definir um número deles por nível (entre waves, por exemplo)
