@@ -8,6 +8,7 @@
 
 #import "FireElemental.h"
 #import "CollisionManager.h"
+#import "FireExplosion.h"
 
 @implementation FireElemental
 
@@ -34,7 +35,7 @@
 {
 
     walkAnimation = @"f_walk";
-    attackAnimation = @"f_blast";
+    attackAnimation = @"f_blast1";
     
     // Setup animations
     [self setWalkAction: [CCRepeatForever actionWithAction:
@@ -73,12 +74,23 @@
     [super die];
     [self setCurrentState:kDieEnemyState];
     [[self sprite] stopAllActions];
-    [[CollisionManager shared] removeFromTargets:self];
-    CCFiniteTimeAction * dieAction = [CCRepeat actionWithAction:[CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName: attackAnimation]] times:1];
+    [[CollisionManager shared] removeFromTargets:self];    
+    
+    CCSequence * dieAction = [CCSequence actions:
+                              [CCRepeat actionWithAction:[CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName: attackAnimation]] times:1],
+                              [CCCallFuncN actionWithTarget:self selector:@selector(blastEffect)],
+                              [CCRepeat actionWithAction:[CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName: @"f_blast2"]] times:1], nil];
+                              
+    
     [[self sprite] runAction:dieAction];
     int fireKilled = [[[GameState shared] fireElementalKilledState] intValue] + 1;
     [[GameState shared] setFireElementalKilledState:fireKilled];
 }
 
+-(void) blastEffect
+{
+    [[[FireExplosion alloc] initWithPosition:[sprite position] andRadius: 1] autorelease];
+
+}
 
 @end
