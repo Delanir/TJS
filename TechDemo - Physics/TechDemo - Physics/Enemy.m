@@ -50,6 +50,8 @@
         [healthBar setOpacity:0];
         [self addChild:healthBar z:2];
         [barSprite release];
+        frozen = NO;
+        freezeRemainingTime=0;
     }
     return self;
 }
@@ -90,6 +92,27 @@
                                            position:ccp(-sprite.contentSize.width/2, healthBar.position.y)];
     [[self healthBar] runAction:moveHealthBar];
     
+}
+
+
+- (void) freeze{
+    frozen = YES;
+    [self stopAllActions];
+    [sprite stopAllActions];
+    [healthBar stopAllActions];
+   
+    [[self sprite] setColor:ccc3(0, 183, 235)];
+}
+
+- (void) deFreeze{
+    frozen = NO;
+    [self stopAllActions];
+    [[self sprite] setColor:ccWHITE];
+    
+    [sprite stopAllActions];
+    [healthBar stopAllActions];
+    
+    [self setupActions];
 }
 
 
@@ -171,9 +194,12 @@
         coldRemainingTime -= dt;
         if (slowDown == NO)
         {
+            
             slowDown = YES;
             speed = speed * slowDownSpeed;
             [self setCurrentSpeed: normalAnimationSpeed * slowDownSpeed];
+            
+//            [self freeze];
         }
 #warning João amaral particulas gelo here
     }
@@ -182,6 +208,22 @@
         speed = speed / slowDownSpeed;
         [self setCurrentSpeed: normalAnimationSpeed];
         slowDown = NO;
+//        [self deFreeze];
+    }
+    
+    if (freezeRemainingTime > 0)
+    {
+        freezeRemainingTime -= dt;
+        if (frozen == NO)
+        {
+            
+            [self freeze];
+            
+        }
+    }
+    else if (frozen == YES)
+    {
+        [self deFreeze];
     }
     
     if([stimuli count] > 0)
