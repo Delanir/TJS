@@ -83,8 +83,9 @@
                               
     
     [[self sprite] runAction:dieAction];
+    
     int fireKilled = [[[GameState shared] fireElementalKilledState] intValue] + 1;
-    [[GameState shared] setFireElementalKilledState:fireKilled];
+    [[GameState shared] setFireElementalKilledState:[NSNumber numberWithInt: fireKilled]];
 }
 
 -(void) blastEffect

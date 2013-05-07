@@ -76,7 +76,7 @@
     CCFiniteTimeAction * dieAction = [CCRepeat actionWithAction:[CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"fd_dies" ]] times:1];
     [[self sprite] runAction:dieAction];
     int dragonKilled = [[[GameState shared] dragonsKilledState] intValue] + 1;
-    [[GameState shared] setFireElementalKilledState:dragonKilled];
+    [[GameState shared] setDragonsKilledState: [NSNumber numberWithInt:dragonKilled]];
 }
 
 - (void) shout{
