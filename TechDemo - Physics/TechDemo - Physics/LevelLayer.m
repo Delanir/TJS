@@ -724,6 +724,10 @@ static int current_level = -1;
 
 -(void) checkAchievement2
 {
+    NSMutableArray * achievement = [[GameState shared] achievementStates];
+    if ([[achievement objectAtIndex:1] intValue] == 0 && [[[GameState shared] dragonsKilledState] intValue] > 10) {
+        [achievement replaceObjectAtIndex:1 withObject:[NSNumber numberWithInt:1]];
+    }
 }
 
 -(void) checkAchievement3
@@ -816,7 +820,10 @@ static int current_level = -1;
 
 -(void) checkAchievement12
 {
-    
+    NSMutableArray * achievement = [[GameState shared] achievementStates];
+    if ([[achievement objectAtIndex:11] intValue] == 0 && [[[GameState shared] fireElementalKilledState] intValue] > 100) {
+        [achievement replaceObjectAtIndex:11 withObject:[NSNumber numberWithInt:1]];
+    }
 }
 
 -(void) checkAchievement13
