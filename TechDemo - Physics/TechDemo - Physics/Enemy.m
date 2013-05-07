@@ -99,18 +99,20 @@
     frozen = YES;
     [self stopAllActions];
     [sprite stopAllActions];
-    [healthBar stopAllActions];
-   
-    [[self sprite] setColor:ccc3(0, 183, 235)];
+//    [healthBar stopAllActions];
+    sprite.color=ccc3(0, 183, 235);
+//    [sprite s
+//    [sprite runAction:[CCTintTo actionWithDuration:coldRemainingTime red:0 green:183 blue:235]];
+    
 }
 
 - (void) deFreeze{
     frozen = NO;
     [self stopAllActions];
-    [[self sprite] setColor:ccWHITE];
     
+    sprite.color=ccWHITE;
     [sprite stopAllActions];
-    [healthBar stopAllActions];
+//    [healthBar stopAllActions];
     
     [self setupActions];
 }
@@ -192,6 +194,7 @@
     if (coldRemainingTime > 0)
     {
         coldRemainingTime -= dt;
+        
         if (slowDown == NO)
         {
             
@@ -205,10 +208,11 @@
     }
     else if (slowDown == YES)
     {
+       
+//       [self deFreeze];
         speed = speed / slowDownSpeed;
         [self setCurrentSpeed: normalAnimationSpeed];
         slowDown = NO;
-//        [self deFreeze];
     }
     
     if (freezeRemainingTime > 0)
