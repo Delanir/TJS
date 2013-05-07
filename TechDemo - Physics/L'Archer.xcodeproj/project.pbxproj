@@ -1072,10 +1072,6 @@
 		9C85F4AC1707957E00EECB83 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				3EE9FE1317256DAD009718EC /* LevelSelectLayer.ccb */,
-				3EE2F95F1723175E0084DF2F /* LevelSelectLayer.ccbi */,
-				3EE2F9601723175E0084DF2F /* LevelThumbnail.ccbi */,
-				3EE2F9611723175E0084DF2F /* StarsNode.ccbi */,
 				3E926EC4173405ED00BFA90D /* Achievements */,
 				9C9D85991733FF690071B7C2 /* CocosBuilder */,
 				9C94ABD917197D3C005BCE32 /* Animations */,
@@ -1608,6 +1604,10 @@
 		9C9D85991733FF690071B7C2 /* CocosBuilder */ = {
 			isa = PBXGroup;
 			children = (
+				3EE9FE1317256DAD009718EC /* LevelSelectLayer.ccb */,
+				3EE2F95F1723175E0084DF2F /* LevelSelectLayer.ccbi */,
+				3EE2F9601723175E0084DF2F /* LevelThumbnail.ccbi */,
+				3EE2F9611723175E0084DF2F /* StarsNode.ccbi */,
 				8B8C2D9B1719DB9300B50C1E /* MainMenu.ccbi */,
 				9C3E4922173704A6001D45B7 /* AchievementsLayer.ccbi */,
 				8C5B1D88173708DB003F4332 /* AchievementNode.ccbi */,

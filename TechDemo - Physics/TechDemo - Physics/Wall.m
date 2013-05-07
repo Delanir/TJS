@@ -10,7 +10,7 @@
 
 @implementation Wall
 
-@synthesize health, lastHealth, maxHealth;
+@synthesize health, lastHealth, maxHealth, moatLevel;
 
 - (id) init
 {
@@ -20,6 +20,7 @@
         health = maxHealth;
         lastHealth = maxHealth;
         status = kMintWall;
+        moatLevel = kMoatNoDamage;
         
         sprites = [[CCArray alloc] init];
         
@@ -89,13 +90,10 @@
         [[[Registry shared] getEntityByName:@"LevelLayer"] addChild:fireTop z:1000];
         [[[Registry shared] getEntityByName:@"LevelLayer"] addChild:fireBottom z:1000];
         
-        NSLog(@"Emission rate is %f", [fireTop emissionRate]);
         [smokeTop setEmissionRate:0];
         [smokeBottom setEmissionRate:0];
         [fireTop setEmissionRate:0];
         [fireBottom setEmissionRate:0];
-        
-        //[self addMoat];
     }
     
     return self;
@@ -238,10 +236,27 @@
 - (void) addMoat
 {
     CGSize winSize = [[CCDirector sharedDirector] winSize];
-    CCSprite * moat = [CCSprite spriteWithFile:@"moat.png"];
+    CCSprite * moat = [CCSprite spriteWithSpriteFrameName:@"moat.png"];
     [moat setPosition:ccp(250, winSize.height/2)];
     [moat setTag:8];
     [self addChild:moat z:0];
+}
+
+- (void) addMasonry
+{
+    CCSprite * masonry = [CCSprite spriteWithSpriteFrameName:@"masonry.png"];
+    [masonry setPosition:ccp(30, 240)];
+    [masonry setTag:10];
+    [self addChild:masonry z:20];
+}
+
+- (void) addMagesTower
+{
+    CCNode * levelLayer = [[Registry shared] getEntityByName:@"LevelLayer"];
+    CCSprite * magestower = [CCSprite spriteWithSpriteFrameName:@"mageTower2.png"];
+    [magestower setPosition:ccp(30, 600)];
+    [magestower setTag:11];
+    [levelLayer addChild:magestower z:1400];
 }
 
 - (void) dealloc
@@ -291,6 +306,11 @@
     }
     losingRate = health;
     
+}
+
++(BOOL) instaKill
+{
+    return arc4random_uniform(100) < kInstaKillChance;
 }
 
 

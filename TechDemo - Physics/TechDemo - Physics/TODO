@@ -11,17 +11,13 @@
     
 Skill Tree: 
 
-    Marskman: Basic - Pushback (estou tentado a substituir por um bonus geral de 20%)
-
-    Cold:
-            Freeze %
-    City:
-            Mages tower (mana recovery), Masonry (wall recovery), Moat (attacks enemies)
-
+    Cold:   Freeze %
+    City:   Moat
+    
 Daniela:
 - Texto nas opções
 - Acertar posiçoes dos objectos das sub skill tree (sub menus estão diferentes)
-- Informação na skill tree
+- Informação na skill tree - Marksman n está bem
 - Verificar sons que faltam
     - Compilar lista
     - Encontrar sons
@@ -34,14 +30,9 @@ João M:
 - Buildings e lógica respectiva
 - Lógica de levar dano em cima do moat - fazer batota e meter mesmo no attack state
 - Alterar lógica do vPos para ser relativo ao ecrã
-- GameState falta definir:
-    - Estado dos achievements - é preciso implementar primeiro
 
 (Para usar o dell)
 - som do impacto tem de ser corrigido
-- Sprites dos edifícios
-    - mage tower
-    - masonry
 
 Ricardo:
 - Mais waves com novos inimigos
@@ -51,7 +42,6 @@ Ricardo:
 
 João A:
 - Utilização do Flurry
-- Mostrar e calcular score no hud
 - Fazer Leaderboard à batoteiro
 - Particulas de explosão do fire elemental
 - Particulas das fire arrows e slow arrows
@@ -61,6 +51,7 @@ Afterburner:
 - Fazer projectiles do zealot
 - Loading Screen (caso se justifique) com base em chunks
 - Passar todas as constantes para o constants.h
+- Mostrar e calcular score no hud
 
  
 

@@ -23,16 +23,21 @@
     CCParticleSmoke *smokeTop, *smokeBottom;
     CCParticleFire *fireTop, *fireBottom;
     CGPoint topPoint1, topPoint2, fireSparksTop, bottomPoint1, bottomPoint2, fireSparksBottom;
+    unsigned int moatLevel;
   
     //para o som
     double losingRate;
 }
 
 @property (nonatomic) double maxHealth, health, lastHealth;
+@property unsigned int moatLevel;
 
++(BOOL) instaKill;
 
 -(void) damage: (double) amount;
 -(void) addMoat;
+-(void) addMasonry;
+-(void) addMagesTower;
 -(void) increaseHealth:(double)ratio;
 -(void) regenerateHealth:(double)amount;
 

@@ -56,6 +56,8 @@
 
 -(void)attack
 {
+    [super attack];
+    if ([self isDead]) return;  // may die in super because of the moat
     [self setCurrentState:kAttackEnemyState];
     [sprite stopAllActions];
     [healthBar stopAllActions];

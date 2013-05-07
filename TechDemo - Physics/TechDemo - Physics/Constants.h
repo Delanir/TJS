@@ -77,6 +77,11 @@
 #define kIceBaseVulnerability 1.0
 #define kPushbackBaseVulnerability 1.0
 
+#define kMoatNoDamage 0
+#define kMoatOneTimeDamage 1
+#define kMoatOneTimeDamagePercentage 0.2
+#define kMoatOneTimeDamageInstaKillChance 2
+#define kInstaKillChance 12
 
 typedef enum
 {

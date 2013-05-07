@@ -74,7 +74,7 @@ static int current_level = -1;
         _pauseButton= [CCSprite spriteWithSpriteFrameName:@"pause.png"];
         [_pauseButton setPosition:CGPointMake(_pauseButton.contentSize.width/2.0, winSize.height - _pauseButton.contentSize.height/2.0)];
         
-        [_pauseButton setZOrder:1000];
+        [_pauseButton setZOrder:2000];
         
         [self addChild:_pauseButton];
         [[WaveManager shared] removeFromParentAndCleanup:NO];
@@ -154,32 +154,6 @@ static int current_level = -1;
      * MAIN BRANCHES
      *
      */
-    
-/*
- Vamos fazer assim:
-Done1 - As definiçoes estao guardadas no gamestate
- 
-    2 - Vamos buscá-las e inicializamos as funções básicas
-Done    2.1 - Criamos as variáveis no enemy
-        2.2 - Criamos os comportamentos associados no tratamento de estimulo
-        2.3 - Criamos o tratamento de updates destes
-        2.4 - Importante não nos esquecermos de finalizar e restaurar o estado.
-            2.4.1 - Uma ideia interessante era usar heaps para fazer o estado temporário
- 
-    3 - Para os comportamentos secundários queremos alterar variáveis de bónus
-        3.1 - As variáveis säo utilizadas nos métodos de inicializaçao das classes, 
-                por isso dá jeito aqui actualizar um repositório de dados, como o GameState
-                onde as instancias podem ir buscar os dados
-        3.2 - Dá jeito ter um método que encontra as instancias que estão num determinado
-                raio de um inimigo nos casos de area of effect
-        3.3 - Dá jeito ter um método que encontra a instancia mais próxima de um determinado
-                inimigo para o caso de passar um estimulo
-        3.4 - Fazer a cidade é simples, mas ainda falta as sprites para o efeito
-            3.4.1 - O fletcher é o pior, em termos de lógica. Mas não é assim tanto.
-                3.4.1.1 - Era giro se as flechas do fletcher também usassem a lógica dos estimulos
-                            caso os poderes estivessem activos
- */
-    
     
     if ([[skill objectAtIndex:kIceMainBranch] intValue] != 0)
     {
@@ -296,21 +270,21 @@ Done    2.1 - Criamos as variáveis no enemy
      */
     if ([[skill objectAtIndex:kCityBranch1] intValue] != 0)
     {
-#warning TODO draw stuff
         [self setManaRegenerationBonus:kManaBaseRegenerationBonus];
-        NSLog(@"Draws Mage's tower");
+        Wall * wall = [[Registry shared] getEntityByName:@"Wall"];
+        [wall addMagesTower];
     }
     if ([[skill objectAtIndex:kCityBranch2] intValue] != 0)
     {
-#warning TODO draw stuff
         [self setHealthRegenerationRate:kHealthBaseRegenerationBonus];
-        NSLog(@"Draws Masonry");
+        Wall * wall = [[Registry shared] getEntityByName:@"Wall"];
+        [wall addMasonry];
     }
     if ([[skill objectAtIndex:kCityBranch3] intValue] != 0)
     {
-#warning TODO
-        NSLog(@"Moat damages the enemies. One time. a percentage value of health");
-        NSLog(@"Draws Moat");
+        Wall * wall = [[Registry shared] getEntityByName:@"Wall"];
+        [wall setMoatLevel:kMoatOneTimeDamage];
+        [wall addMoat];
     }
     if ([[skill objectAtIndex:kCityElement1] intValue] != 0)
     {
@@ -322,8 +296,8 @@ Done    2.1 - Criamos as variáveis no enemy
     }
     if ([[skill objectAtIndex:kCityElement3] intValue] != 0)
     {
-#warning TODO
-        NSLog(@"Moat has a small chance of instakill");
+        Wall * wall = [[Registry shared] getEntityByName:@"Wall"];
+        [wall setMoatLevel:kMoatOneTimeDamageInstaKillChance];
     }
     
     [yuri initBasicStats];

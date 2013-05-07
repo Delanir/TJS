@@ -112,7 +112,8 @@
 }
 
 
--(void)spriteMoveFinished:(id)sender {
+-(void)spriteMoveFinished:(id)sender
+{
     [self removeChild:sprite cleanup:YES];
     [self removeChild:healthBar cleanup:YES];
     [[CollisionManager shared] removeFromTargets:self];
@@ -120,7 +121,16 @@
 
 -(void)attack
 {
-    
+    Wall * wall = [[Registry shared] getEntityByName:@"Wall"];
+    if ([wall moatLevel] == kMoatOneTimeDamageInstaKillChance)
+    {
+        if ([Wall instaKill])
+        {
+            [self takeDamage:health];
+        }
+    }
+    if ([wall moatLevel] > kMoatNoDamage)
+        [self takeDamage: kMoatOneTimeDamagePercentage * health ];
 }
 
 -(void) takeDamage:(double) amount
@@ -164,8 +174,6 @@
             slowDown = YES;
             speed = speed * slowDownSpeed;
             [self setCurrentSpeed: normalAnimationSpeed * slowDownSpeed];
-            //NSLog(@"BECOME SLOOOOOW");
-            // por boneco mais lento
         }
 #warning João amaral particulas gelo here
     }
@@ -173,8 +181,6 @@
     {
         speed = speed / slowDownSpeed;
         [self setCurrentSpeed: normalAnimationSpeed];
-        //NSLog(@"RECOVER");
-        // por boneco com velocidade normal
         slowDown = NO;
     }
     
