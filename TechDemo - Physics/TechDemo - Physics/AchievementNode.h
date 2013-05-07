@@ -12,7 +12,7 @@
 @interface AchievementNode : CCNode
 {
     CCMenuItemImage *spriteIcon;
-    CCSprite *spriteShield;
+    CCMenuItemImage *spriteShield;
     CCLabelTTF *lblTitle;
     CCLabelTTF *lblDescription;
 }
