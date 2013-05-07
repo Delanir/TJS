@@ -186,7 +186,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>383</real>
+							<real>380</real>
 							<real>480</real>
 							<integer>0</integer>
 						</array>
@@ -330,7 +330,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>513</real>
+							<real>515</real>
 							<real>472</real>
 							<integer>0</integer>
 						</array>
@@ -562,8 +562,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>514</real>
-									<real>304</real>
+									<real>515</real>
+									<real>300</real>
 									<integer>0</integer>
 								</array>
 							</dict>
@@ -675,7 +675,7 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>382</real>
+									<real>380</real>
 									<real>412</real>
 									<integer>0</integer>
 								</array>
@@ -788,8 +788,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>512</real>
-									<real>460</real>
+									<real>515</real>
+									<real>450</real>
 									<integer>0</integer>
 								</array>
 							</dict>
@@ -901,7 +901,7 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>648</real>
+									<real>650</real>
 									<real>412</real>
 									<integer>0</integer>
 								</array>
@@ -1014,8 +1014,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>382</real>
-									<real>552</real>
+									<real>380</real>
+									<real>562</real>
 									<integer>0</integer>
 								</array>
 							</dict>
@@ -1127,8 +1127,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>514</real>
-									<real>606</real>
+									<real>515</real>
+									<real>600</real>
 									<integer>0</integer>
 								</array>
 							</dict>
@@ -1240,7 +1240,7 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>648</real>
+									<real>650</real>
 									<real>562</real>
 									<integer>0</integer>
 								</array>
@@ -1563,7 +1563,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>648</real>
+							<real>650</real>
 							<real>594</real>
 							<integer>0</integer>
 						</array>
@@ -1691,8 +1691,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>514</real>
-							<real>640</real>
+							<real>515</real>
+							<real>630</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -1819,8 +1819,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>382</real>
-							<real>584</real>
+							<real>380</real>
+							<real>594</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -1947,7 +1947,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>383</real>
+							<real>380</real>
 							<real>445</real>
 							<integer>0</integer>
 						</array>
@@ -2075,8 +2075,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>511</real>
-							<real>492</real>
+							<real>515</real>
+							<real>485</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -2203,8 +2203,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>649</real>
-							<real>444</real>
+							<real>650</real>
+							<real>445</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -2332,7 +2332,7 @@
 						<key>value</key>
 						<array>
 							<real>515</real>
-							<real>336</real>
+							<real>335</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -2825,7 +2825,7 @@
 						<string>Text</string>
 						<key>value</key>
 						<string>Unlocks: Marksmanship
-50% bonus
+Impact arrows
 Strength, Speed, Critical %</string>
 					</dict>
 				</array>

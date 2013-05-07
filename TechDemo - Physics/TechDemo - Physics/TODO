@@ -4,53 +4,41 @@
 *                *
 **/            **/
 
-- No game over:
-    - Retry
-- No win:
-    - Play next chapter
-    
-Skill Tree: 
 
-    Cold:   Freeze %
-    City:   Moat
-    
 Daniela:
 - Texto nas opções
-- Acertar posiçoes dos objectos das sub skill tree (sub menus estão diferentes)
-- Informação na skill tree - Marksman n está bem
 - Verificar sons que faltam
-    - Compilar lista
-    - Encontrar sons
-    - Implementar
+Skill Tree: 
+    Freeze %    - Mesma logica do slow mas mais simples. Fazer Stop all animations e reiniciar
+                - Definir constantes e calcular percentagem como no instakill ou IsCritical
 
 João M:
-- Sprite do moat no zwoptex!
 - Bichos aleatórios (definir um número deles por nível (entre waves, por exemplo)
-- Efeitos da skill tree!
-- Buildings e lógica respectiva
-- Lógica de levar dano em cima do moat - fazer batota e meter mesmo no attack state
-- Alterar lógica do vPos para ser relativo ao ecrã
-
-(Para usar o dell)
+- No game over: - Retry
+- No win: - Play next chapter
 - som do impacto tem de ser corrigido
 
 Ricardo:
 - Mais waves com novos inimigos
 - Definir achievements
-    - Fazer página de achievements
 - Balancear dificuldade
 
 João A:
-- Utilização do Flurry
 - Fazer Leaderboard à batoteiro
 - Particulas de explosão do fire elemental
 - Particulas das fire arrows e slow arrows
+
+
+Para MOJO:
+- Utilização do Flurry
+
 
 
 Afterburner:
 - Fazer projectiles do zealot
 - Loading Screen (caso se justifique) com base em chunks
 - Passar todas as constantes para o constants.h
+- Passar todos os imports possíveis para os .h
 - Mostrar e calcular score no hud
 
  
