@@ -6,8 +6,8 @@
 
 
 Daniela:
-- Texto nas opções
 - Verificar sons que faltam
+
 Skill Tree: 
     Freeze %    - Mesma logica do slow mas mais simples. Fazer Stop all animations e reiniciar
                 - constantes ja estao definidas. Calcular percentagem como no instakill ou IsCritical
@@ -25,14 +25,11 @@ Ricardo:
 
 João A:
 - Fazer Leaderboard à batoteiro
-- Particulas de explosão do fire elemental
-- Particulas das fire arrows e slow arrows
+- Particulas do slow e do damage over time
 
 
 Para MOJO:
 - Utilização do Flurry
-
-
 
 Afterburner:
 - Fazer projectiles do zealot
@@ -41,6 +38,8 @@ Afterburner:
 - Passar todos os imports possíveis para os .h
 - Mostrar e calcular score no hud
 
+Ideias:
+- Fazer uma catapulta
  
 
 
@@ -104,3 +103,4 @@ Afterburner:
 - Definir bonus passivos dos níveis do Yuri
 - Slow Down implementado (com mts bugs relacionados corrigidos)
 - Yuri já não dispara quando clicamos atrás dele
+- Particulas das fire arrows e slow arrows

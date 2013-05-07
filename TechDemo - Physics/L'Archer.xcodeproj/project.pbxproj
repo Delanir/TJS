@@ -101,11 +101,13 @@
 		8C5B1D9417371934003F4332 /* achievements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C5B1D9317371934003F4332 /* achievements.plist */; };
 		8C72C2A8172968F6009EF8C1 /* GameWin.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C72C2A7172968F6009EF8C1 /* GameWin.m */; };
 		9C11EEC017205775003510EB /* WaveManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C11EEBF17205775003510EB /* WaveManager.m */; };
-		9C11EEC3172063B3003510EB /* Level1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C11EEC2172063B3003510EB /* Level1.plist */; };
+		9C11EEC3172063B3003510EB /* Level2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C11EEC2172063B3003510EB /* Level2.plist */; };
 		9C11EEC61720646F003510EB /* PeasantSpear.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C11EEC51720646F003510EB /* PeasantSpear.plist */; };
 		9C11EEC9172073F5003510EB /* NSMutableArray+QueueAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C11EEC8172073F5003510EB /* NSMutableArray+QueueAdditions.m */; };
 		9C1E05B617249B3A0093F0E3 /* GameManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1E05B517249B380093F0E3 /* GameManager.m */; };
 		9C1E05BC1724C0560093F0E3 /* GameState.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1E05BB1724C0560093F0E3 /* GameState.m */; };
+		9C20F3D91739531400FC7FBB /* InstantEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C20F3D81739531400FC7FBB /* InstantEffect.m */; };
+		9C20F3DC17395B7300FC7FBB /* FireExplosion.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C20F3DB17395B7300FC7FBB /* FireExplosion.m */; };
 		9C268CF1172C4F1C00F303D8 /* MenuSpritesheet.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C268CEF172C4F1C00F303D8 /* MenuSpritesheet.plist */; };
 		9C268CF2172C4F1C00F303D8 /* MenuSpritesheet.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C268CF0172C4F1C00F303D8 /* MenuSpritesheet.png */; };
 		9C268CF5172C4F6900F303D8 /* MenuSpritesheet-ipadhd.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C268CF3172C4F6900F303D8 /* MenuSpritesheet-ipadhd.plist */; };
@@ -281,8 +283,9 @@
 		9C8DE0CF171853AD002E0D0A /* FaerieDragon.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8DE0CE171853AD002E0D0A /* FaerieDragon.m */; };
 		9C8DE0D31718E134002E0D0A /* zealot_anim.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C8DE0D21718E133002E0D0A /* zealot_anim.plist */; };
 		9C8DE0D61718EA00002E0D0A /* Zealot.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8DE0D51718EA00002E0D0A /* Zealot.m */; };
+		9C90647817398A8C005D7D33 /* IceExplosion.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C90647717398A8C005D7D33 /* IceExplosion.m */; };
 		9C93D8E317297849004891D2 /* GameWin.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 8C72C2A51729687B009EF8C1 /* GameWin.ccbi */; };
-		9C9703551727804A00E48924 /* Level2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C9703541727804A00E48924 /* Level2.plist */; };
+		9C9703551727804A00E48924 /* Level1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C9703541727804A00E48924 /* Level1.plist */; };
 		9C9703571727805800E48924 /* Level3.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C9703561727805800E48924 /* Level3.plist */; };
 		9C9703591727806200E48924 /* Level4.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C9703581727806100E48924 /* Level4.plist */; };
 		9C97035B1727806A00E48924 /* Level5.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C97035A1727806A00E48924 /* Level5.plist */; };
@@ -423,7 +426,7 @@
 		8C72C2A7172968F6009EF8C1 /* GameWin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameWin.m; sourceTree = "<group>"; };
 		9C11EEBE17205775003510EB /* WaveManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaveManager.h; sourceTree = "<group>"; };
 		9C11EEBF17205775003510EB /* WaveManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaveManager.m; sourceTree = "<group>"; };
-		9C11EEC2172063B3003510EB /* Level1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Level1.plist; sourceTree = "<group>"; };
+		9C11EEC2172063B3003510EB /* Level2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Level2.plist; sourceTree = "<group>"; };
 		9C11EEC51720646F003510EB /* PeasantSpear.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PeasantSpear.plist; sourceTree = "<group>"; };
 		9C11EEC7172073F5003510EB /* NSMutableArray+QueueAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+QueueAdditions.h"; sourceTree = "<group>"; };
 		9C11EEC8172073F5003510EB /* NSMutableArray+QueueAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+QueueAdditions.m"; sourceTree = "<group>"; };
@@ -433,6 +436,10 @@
 		9C1E05BB1724C0560093F0E3 /* GameState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameState.m; sourceTree = "<group>"; };
 		9C1E05BD1724C4CC0093F0E3 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		9C1E05BE1724C7B00093F0E3 /* DoneStuff */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DoneStuff; sourceTree = "<group>"; };
+		9C20F3D71739531400FC7FBB /* InstantEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstantEffect.h; sourceTree = "<group>"; };
+		9C20F3D81739531400FC7FBB /* InstantEffect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstantEffect.m; sourceTree = "<group>"; };
+		9C20F3DA17395B7300FC7FBB /* FireExplosion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FireExplosion.h; sourceTree = "<group>"; };
+		9C20F3DB17395B7300FC7FBB /* FireExplosion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FireExplosion.m; sourceTree = "<group>"; };
 		9C268CEB172C4D8700F303D8 /* MenuSpritesheet.zwd */ = {isa = PBXFileReference; lastKnownFileType = file; path = MenuSpritesheet.zwd; sourceTree = "<group>"; };
 		9C268CEE172C4D8D00F303D8 /* MenuSpritesheet-ipadhd.zwd */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MenuSpritesheet-ipadhd.zwd"; sourceTree = "<group>"; };
 		9C268CEF172C4F1C00F303D8 /* MenuSpritesheet.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MenuSpritesheet.plist; sourceTree = "<group>"; };
@@ -774,8 +781,10 @@
 		9C8DE0D21718E133002E0D0A /* zealot_anim.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = zealot_anim.plist; sourceTree = "<group>"; };
 		9C8DE0D41718E9FF002E0D0A /* Zealot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Zealot.h; sourceTree = "<group>"; };
 		9C8DE0D51718EA00002E0D0A /* Zealot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Zealot.m; sourceTree = "<group>"; };
+		9C90647617398A8C005D7D33 /* IceExplosion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IceExplosion.h; sourceTree = "<group>"; };
+		9C90647717398A8C005D7D33 /* IceExplosion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IceExplosion.m; sourceTree = "<group>"; };
 		9C94ABD717197BD2005BCE32 /* zDepth */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = zDepth; path = "TechDemo - Physics/zDepth"; sourceTree = "<group>"; };
-		9C9703541727804A00E48924 /* Level2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Level2.plist; sourceTree = "<group>"; };
+		9C9703541727804A00E48924 /* Level1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Level1.plist; sourceTree = "<group>"; };
 		9C9703561727805800E48924 /* Level3.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Level3.plist; sourceTree = "<group>"; };
 		9C9703581727806100E48924 /* Level4.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Level4.plist; sourceTree = "<group>"; };
 		9C97035A1727806A00E48924 /* Level5.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Level5.plist; sourceTree = "<group>"; };
@@ -871,8 +880,8 @@
 		9C11EEC11720637D003510EB /* Levels */ = {
 			isa = PBXGroup;
 			children = (
-				9C11EEC2172063B3003510EB /* Level1.plist */,
-				9C9703541727804A00E48924 /* Level2.plist */,
+				9C9703541727804A00E48924 /* Level1.plist */,
+				9C11EEC2172063B3003510EB /* Level2.plist */,
 				9C9703561727805800E48924 /* Level3.plist */,
 				9C9703581727806100E48924 /* Level4.plist */,
 				9C97035A1727806A00E48924 /* Level5.plist */,
@@ -894,6 +903,19 @@
 				9C478719173454B800180864 /* MixedWave.plist */,
 			);
 			name = Waves;
+			sourceTree = "<group>";
+		};
+		9C20F3D61739519900FC7FBB /* Instants */ = {
+			isa = PBXGroup;
+			children = (
+				9C20F3D71739531400FC7FBB /* InstantEffect.h */,
+				9C20F3D81739531400FC7FBB /* InstantEffect.m */,
+				9C20F3DA17395B7300FC7FBB /* FireExplosion.h */,
+				9C20F3DB17395B7300FC7FBB /* FireExplosion.m */,
+				9C90647617398A8C005D7D33 /* IceExplosion.h */,
+				9C90647717398A8C005D7D33 /* IceExplosion.m */,
+			);
+			name = Instants;
 			sourceTree = "<group>";
 		};
 		9C2B3CBB171EE83500E695FE /* Configs and References */ = {
@@ -1487,6 +1509,7 @@
 		9C969E581716263000BE7476 /* Scene Entities */ = {
 			isa = PBXGroup;
 			children = (
+				9C20F3D61739519900FC7FBB /* Instants */,
 				9C3E49261737068E001D45B7 /* Skill Tree */,
 				9C4787181734526600180864 /* Enemies */,
 				3E926ECA1734255700BFA90D /* AchievementNode.h */,
@@ -1762,7 +1785,7 @@
 				8BC00F43171DF82000A0DCD4 /* Main Tree Branch - el2 z30-ipadhd.png in Resources */,
 				8BC00F44171DF82000A0DCD4 /* Main Tree Branch z25-ipadhd.png in Resources */,
 				8BBB6A23171E09E30064B3CD /* SettingsMenu.ccbi in Resources */,
-				9C11EEC3172063B3003510EB /* Level1.plist in Resources */,
+				9C11EEC3172063B3003510EB /* Level2.plist in Resources */,
 				9C11EEC61720646F003510EB /* PeasantSpear.plist in Resources */,
 				8BFC3F0F17204440000161FD /* GameOver.ccbi in Resources */,
 				9C9ADB2F1721A94000C3FA59 /* ZealotSquare.plist in Resources */,
@@ -1777,7 +1800,7 @@
 				9C93D8E317297849004891D2 /* GameWin.ccbi in Resources */,
 				9C319F561727024E00D3A6EA /* SimpleBackground-ipadhd.jpg in Resources */,
 				9C319F571727024E00D3A6EA /* SimpleBackground.jpg in Resources */,
-				9C9703551727804A00E48924 /* Level2.plist in Resources */,
+				9C9703551727804A00E48924 /* Level1.plist in Resources */,
 				9C9703571727805800E48924 /* Level3.plist in Resources */,
 				9C9703591727806200E48924 /* Level4.plist in Resources */,
 				9C97035B1727806A00E48924 /* Level5.plist in Resources */,
@@ -1996,6 +2019,9 @@
 				8BC2107717343D9400B875B2 /* CitySubSkillTree.m in Sources */,
 				3E926EC9173423EE00BFA90D /* AchievementsLayer.m in Sources */,
 				3E926ECC1734255700BFA90D /* AchievementNode.m in Sources */,
+				9C20F3D91739531400FC7FBB /* InstantEffect.m in Sources */,
+				9C20F3DC17395B7300FC7FBB /* FireExplosion.m in Sources */,
+				9C90647817398A8C005D7D33 /* IceExplosion.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

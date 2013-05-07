@@ -16,7 +16,7 @@
 			<string>f_walk_06.png</string>
 		</array>
 	</dict>
-	<key>f_blast</key>
+	<key>f_blast1</key>
 	<dict>
 		<key>delay</key>
 		<real>0.1</real>
@@ -31,6 +31,14 @@
 			<string>f_blast_07.png</string>
 			<string>f_blast_08.png</string>
 			<string>f_blast_09.png</string>
+		</array>
+	</dict>
+	<key>f_blast2</key>
+	<dict>
+		<key>delay</key>
+		<real>0.1</real>
+		<key>frames</key>
+		<array>
 			<string>f_blast_10.png</string>
 			<string>f_blast_11.png</string>
 			<string>f_blast_12.png</string>
