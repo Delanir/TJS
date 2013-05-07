@@ -21,5 +21,5 @@
 
 -(void) initAchievement;
 -(void) setInformation:(int) num;
--(void) setImage;
+-(void) setImage:(NSString *)sprite;
 @end

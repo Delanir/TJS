@@ -28,11 +28,19 @@
     [lblDescription setString:description];
 }
 
--(void) setImage
+-(void) setImage:(NSString *)sprite
 {
-    //spriteWithSpriteFrameName
-    NSLog(@"SetImage");
-    spriteShield = [CCSprite spriteWithFile:@"achievements_skull.png"];
+//    CCSprite * spriteImage1 = [CCSprite spriteWithSpriteFrameName:sprite];
+//    CCTexture2D *texture = [[CCTextureCache sharedTextureCache] addImage:sprite];
+//    spriteShield = [CCSprite spriteWithTexture:texture];
+    
+//    spriteShield = [CCSprite spriteWithSpriteFrame:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"achievements_skull.png"]];
+
+//    [spriteShield setTexture:[[CCTextureCache sharedTextureCache] addImage:@""]];
+    NSLog(@"Change IMAGE");
+//    [spriteShield: spriteImage1];
+//    spriteWithSpriteFrameName
+//    spriteShield = [CCSprite spriteWithFile:@"achievements_skull.png"];
 }
 
 @end

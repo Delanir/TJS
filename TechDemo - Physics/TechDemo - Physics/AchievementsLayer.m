@@ -33,7 +33,7 @@
     [super onEnter];
     
     //Initialize art and animations
-   // [self addChild:[[SpriteManager shared] addSpritesToSpriteFrameCacheWithFile:@"MenuSpritesheet.plist" andBatchSpriteSheet:@"MenuSpritesheet.png"]];
+    //[self addChild:[[SpriteManager shared] addSpritesToSpriteFrameCacheWithFile:@"MenuSpritesheet.plist" andBatchSpriteSheet:@"MenuSpritesheet.png"]];
     
     Achievements = [[CCArray alloc] init];
     [Achievements addObject:_achievement1];
@@ -61,7 +61,7 @@
         NSLog(@"Achievement %d with state %d",i,achievementState);
         if (achievementState == 1) {
             [achievement setIsEnabled:YES];
-            [achievement setImage];
+            [achievement setImage:@"achievements_skull.png"];
             NSLog(@"ENTREI ACHIEVEMENT%d UNLOCK", i);
         } else
             [achievement setIsEnabled:NO];
