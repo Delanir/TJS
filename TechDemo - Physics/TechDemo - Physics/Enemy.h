@@ -12,6 +12,7 @@
 #import "NSMutableArray+QueueAdditions.h"
 #import "Constants.h"
 #import "SimpleAudioEngine.h"
+#import "GameState.h"
 
 @interface Enemy : Entity
 {
