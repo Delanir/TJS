@@ -100,9 +100,12 @@
 {
     if (currentState != kDieEnemyState)
     {
+        frozen = YES;
         [self stopAllActions];
         [sprite stopAllActions];
+        [healthBar stopAllActions];
         sprite.color=ccc3(0, 183, 235);
+        [sprite setOpacity:155];
     }
 }
 
@@ -115,6 +118,7 @@
         sprite.color=ccWHITE;
         [sprite stopAllActions];
         [self setupActions];
+        [sprite setOpacity:255];
     }
 }
 
@@ -185,15 +189,22 @@
     if([healthBar opacity] > 0)
         [healthBar setOpacity:[healthBar opacity] - dt * 0.08];
     
+    
+    // Damage over time treatment
     if (fireRemainingTime > 0)
     {
         fireRemainingTime -= dt;
         [self takeDamage: dt * fireVulnerability * damageOverTimeCurrentValue];
-#warning João amaral particulas fogo here
+        [sprite setColor:ccc3(255, 0, 0)];
+    }
+    else if (fireRemainingTime < 0)
+    {
+        fireRemainingTime = 0.0f;
+        [sprite setColor:ccc3(255, 255, 255)];
     }
     
     
-    
+    // Slow down treatment
     if (coldRemainingTime > 0)
     {
         coldRemainingTime -= dt;
@@ -201,35 +212,35 @@
         if (slowDown == NO)
         {
             slowDown = YES;
-            if (frozen) [self freeze];
-            else
+            speed = speed * slowDownSpeed;
+            [self setCurrentSpeed: normalAnimationSpeed * slowDownSpeed];
+            [sprite setColor:ccc3(0, 255, 255)];
+            if (!frozen)
             {
-                speed = speed * slowDownSpeed;
-                [self setCurrentSpeed: normalAnimationSpeed * slowDownSpeed];
-                
+                Yuri * yuri = [[Registry shared] getEntityByName:@"Yuri"];
+                if ([yuri freezeWithCold])
+                    [self freeze];
             }
         }
+
     }
     else if (slowDown == YES)
     {
-       if (frozen)
-           [self deFreeze];
-        else
-        {
-            speed = speed / slowDownSpeed;
-            [self setCurrentSpeed: normalAnimationSpeed];
-            slowDown = NO;
-        }
+        speed = speed / slowDownSpeed;
+        [self setCurrentSpeed: normalAnimationSpeed];
+        slowDown = NO;
+        if (frozen)
+            [self deFreeze];
+        
     }
     
-
+    
     
     if([stimuli count] > 0)
     {
         for (int i = 0; i< [stimuli count]; i++)
         {
             Stimulus * stimulus = [stimuli dequeue];
-            Yuri * yuri = [[Registry shared] getEntityByName:@"Yuri"];
             
             switch ([stimulus type])
             {
@@ -244,7 +255,6 @@
                     [self takeDamage:[stimulus value] * iceVulnerability];
                     slowDownSpeed = [stimulus value];
                     coldRemainingTime = [stimulus duration] * iceVulnerability;
-                    if ([yuri freezeWithCold]) frozen = YES;
                     break;
                 case KPushBackStimulus:
                     [self pushBackWithForce:[stimulus value] * pushbackVulnerability];

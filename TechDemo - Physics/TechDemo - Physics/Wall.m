@@ -173,13 +173,9 @@
         }
         else if (health < (0.5 * maxHealth) && health >= (0.25 * maxHealth) && (status == kScratchedWall || status == kWreckedWall))
         {
-            ccColor4F thisColor;
-            thisColor.r = 0.0;
-            thisColor.g = 0.0;
-            thisColor.b = 0.0;
-            thisColor.a = 0.1;
-            smokeTop.startColor = thisColor;
-            smokeBottom.startColor = thisColor;
+        
+            [smokeTop setStartColor:ccc4f(0.0, 0.0, 0.0, 0.1)];
+            [smokeBottom setStartColor:ccc4f(0.0, 0.0, 0.0, 0.1)];
             [self changeTopSprite:[sprites objectAtIndex:4] bottomSprite:[sprites objectAtIndex:5]];
             [smokeTop setStartSize:40];
             [smokeTop setEndSize:70];
