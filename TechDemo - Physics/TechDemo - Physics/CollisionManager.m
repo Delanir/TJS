@@ -12,7 +12,6 @@
 #import "Yuri.h"
 #import "NSMutableArray+QueueAdditions.h"
 
-#warning TEST
 #import "FireExplosion.h"
 #import "IceExplosion.h"
 
@@ -109,7 +108,6 @@ static CollisionManager* _sharedSingleton = nil;
             KKPixelMaskSprite *targetSprite = [target sprite];
             if ([targetSprite pixelMaskContainsPoint:[projectileSprite position]])
             {
-#warning BLAH
                 [targetsToDelete addObject:target];
                 [[ResourceManager shared] increaseEnemyHitCount];
                 break;              // Cada flecha só mata um

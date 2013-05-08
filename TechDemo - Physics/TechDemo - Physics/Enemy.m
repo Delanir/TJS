@@ -9,6 +9,7 @@
 #import "Enemy.h"
 #import "CollisionManager.h"
 #import "Utils.h"
+#import "Yuri.h"
 
 #import "SimpleAudioEngine.h"
 
@@ -95,26 +96,30 @@
 }
 
 
-- (void) freeze{
-    frozen = YES;
-    [self stopAllActions];
-    [sprite stopAllActions];
-//    [healthBar stopAllActions];
-    sprite.color=ccc3(0, 183, 235);
-//    [sprite s
-//    [sprite runAction:[CCTintTo actionWithDuration:coldRemainingTime red:0 green:183 blue:235]];
-    
+- (void) freeze
+{
+    if (currentState != kDieEnemyState)
+    {
+        frozen = YES;
+        [self stopAllActions];
+        [sprite stopAllActions];
+        [healthBar stopAllActions];
+        sprite.color=ccc3(0, 183, 235);
+        [sprite setOpacity:155];
+    }
 }
 
-- (void) deFreeze{
-    frozen = NO;
-    [self stopAllActions];
-    
-    sprite.color=ccWHITE;
-    [sprite stopAllActions];
-//    [healthBar stopAllActions];
-    
-    [self setupActions];
+- (void) deFreeze
+{
+    if (currentState != kDieEnemyState)
+    {
+        frozen = NO;
+        [self stopAllActions];
+        sprite.color=ccWHITE;
+        [sprite stopAllActions];
+        [self setupActions];
+        [sprite setOpacity:255];
+    }
 }
 
 
@@ -184,52 +189,53 @@
     if([healthBar opacity] > 0)
         [healthBar setOpacity:[healthBar opacity] - dt * 0.08];
     
+    
+    // Damage over time treatment
     if (fireRemainingTime > 0)
     {
         fireRemainingTime -= dt;
         [self takeDamage: dt * fireVulnerability * damageOverTimeCurrentValue];
         [sprite setColor:ccc3(255, 0, 0)];
     }
+    else if (fireRemainingTime < 0)
+    {
+        fireRemainingTime = 0.0f;
+        [sprite setColor:ccc3(255, 255, 255)];
+    }
     
+    
+    // Slow down treatment
     if (coldRemainingTime > 0)
     {
         coldRemainingTime -= dt;
         
         if (slowDown == NO)
         {
-            
             slowDown = YES;
             speed = speed * slowDownSpeed;
             [self setCurrentSpeed: normalAnimationSpeed * slowDownSpeed];
-            
-//            [self freeze];
+            [sprite setColor:ccc3(0, 255, 255)];
+            if (!frozen)
+            {
+                Yuri * yuri = [[Registry shared] getEntityByName:@"Yuri"];
+                if ([yuri freezeWithCold])
+                    [self freeze];
+            }
         }
         [sprite setColor:ccc3(0, 255, 255)];
         [sprite setOpacity:235];
     }
     else if (slowDown == YES)
     {
-       
-//       [self deFreeze];
         speed = speed / slowDownSpeed;
         [self setCurrentSpeed: normalAnimationSpeed];
         slowDown = NO;
+        if (frozen)
+            [self deFreeze];
+        
     }
     
-    if (freezeRemainingTime > 0)
-    {
-        freezeRemainingTime -= dt;
-        if (frozen == NO)
-        {
-            
-            [self freeze];
-            
-        }
-    }
-    else if (frozen == YES)
-    {
-        [self deFreeze];
-    }
+    
     
     if([stimuli count] > 0)
     {
@@ -320,5 +326,7 @@
 {
     
 }
+
+
 
 @end

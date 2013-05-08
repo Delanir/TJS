@@ -563,7 +563,6 @@ static int current_level = -1;
 -(void)dealloc
 {
     [super dealloc];
-    CCLOG(@"DEALOQUEI");
 }
 
 -(void) pauseCheck:(UITouch *)touchLocation
