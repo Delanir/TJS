@@ -6,12 +6,13 @@
 	<integer>3</integer>
 	<key>waves</key>
 	<array>
+		<string>SkeletonArmy</string>
+		<string>FireElementals</string>
+		<string>PeasantSpear</string>
 		<string>ZealotSquare</string>
-		<string>PeasantSpear</string>
-		<string>PeasantSpear</string>
-		<string>ZealotSquare</string>
-		<string>PeasantSpear</string>
-		<string>PeasantSpear</string>
+		<string>FireElementals</string>
+		<string>MixedWave</string>
+		<string>FaerieColumn</string>
 	</array>
 </dict>
 </plist>

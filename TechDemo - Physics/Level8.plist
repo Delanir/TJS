@@ -3,16 +3,18 @@
 <plist version="1.0">
 <dict>
 	<key>timeBetweenWaves</key>
-	<integer>4</integer>
+	<real>3.5</real>
 	<key>waves</key>
 	<array>
-		<string>PeasantSpear</string>
-		<string>PeasantSpear</string>
-		<string>ZealotSquare</string>
+		<string>FireElementals</string>
+		<string>WraithHex</string>
+		<string>SkeletonArmy</string>
+		<string>FireElementals</string>
 		<string>ZealotSquare</string>
 		<string>FaerieColumn</string>
+		<string>FireElementals</string>
 		<string>PeasantSpear</string>
-		<string>PeasantSpear</string>
+		<string>WraithHex</string>
 		<string>FaerieColumn</string>
 	</array>
 </dict>

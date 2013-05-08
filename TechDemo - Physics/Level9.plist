@@ -7,11 +7,16 @@
 	<key>waves</key>
 	<array>
 		<string>FaerieColumn</string>
-		<string>PeasantSpear</string>
+		<string>BlackDragonUp</string>
 		<string>ZealotSquare</string>
-		<string>ZealotSquare</string>
-		<string>PeasantSpear</string>
+		<string>FireElementals</string>
+		<string>WraithHex</string>
+		<string>SkeletonArmy</string>
 		<string>FaerieColumn</string>
+		<string>FireElementals</string>
+		<string>BlackDragonDown</string>
+		<string>FireElementals</string>
+		<string>PeasantSpear</string>
 	</array>
 </dict>
 </plist>

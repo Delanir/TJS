@@ -29,6 +29,7 @@
     [[GameManager shared] runLevel:level];
 }
 
+
 -(void) setThumbnail:(NSString *) sprite
 {
     CCSprite * spriteImage1 = [CCSprite spriteWithSpriteFrameName:sprite];

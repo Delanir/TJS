@@ -137,6 +137,10 @@
 		9C4787141734524E00180864 /* BlackDragon.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4787131734524D00180864 /* BlackDragon.m */; };
 		9C4787171734525D00180864 /* Skeleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4787161734525D00180864 /* Skeleton.m */; };
 		9C47871A173454B800180864 /* MixedWave.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C478719173454B800180864 /* MixedWave.plist */; };
+		9C48A50D1739DF8B0068D610 /* FireElementals.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C48A50C1739DF8B0068D610 /* FireElementals.plist */; };
+		9C48A50F1739DFC40068D610 /* SkeletonArmy.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C48A50E1739DFC40068D610 /* SkeletonArmy.plist */; };
+		9C48A5111739E01C0068D610 /* BlackDragonDown.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C48A5101739E01C0068D610 /* BlackDragonDown.plist */; };
+		9C48A5131739E0580068D610 /* WraithHex.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C48A5121739E0580068D610 /* WraithHex.plist */; };
 		9C500253172AD03800C141DB /* LoadingBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C500252172AD03800C141DB /* LoadingBar.m */; };
 		9C75D80E171A167E00419031 /* yurie_anim.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C75D80D171A167E00419031 /* yurie_anim.plist */; };
 		9C791C2C17237ADE00780C5D /* menuBackground-ipadhd.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C791C2817237ADE00780C5D /* menuBackground-ipadhd.jpg */; };
@@ -301,6 +305,9 @@
 		9C9ADB311721AB6400C3FA59 /* FaerieColumn.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C9ADB301721AB6400C3FA59 /* FaerieColumn.plist */; };
 		9CBF5B0A171E463000EF44B2 /* Registry.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CBF5B09171E462E00EF44B2 /* Registry.m */; };
 		9CBF5B0D171E464E00EF44B2 /* ResourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CBF5B0C171E464C00EF44B2 /* ResourceManager.m */; };
+		9CEB4CAB173A0AB5004297A2 /* SkeletonGroup.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9CEB4CAA173A0AB5004297A2 /* SkeletonGroup.plist */; };
+		9CEB4CAD173A0AC2004297A2 /* PeasantGroup.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9CEB4CAC173A0AC2004297A2 /* PeasantGroup.plist */; };
+		9CEB4CAF173A0ACD004297A2 /* BlackDragonUp.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9CEB4CAE173A0ACD004297A2 /* BlackDragonUp.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -485,6 +492,10 @@
 		9C4787151734525D00180864 /* Skeleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Skeleton.h; sourceTree = "<group>"; };
 		9C4787161734525D00180864 /* Skeleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Skeleton.m; sourceTree = "<group>"; };
 		9C478719173454B800180864 /* MixedWave.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MixedWave.plist; sourceTree = "<group>"; };
+		9C48A50C1739DF8B0068D610 /* FireElementals.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FireElementals.plist; sourceTree = "<group>"; };
+		9C48A50E1739DFC40068D610 /* SkeletonArmy.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SkeletonArmy.plist; sourceTree = "<group>"; };
+		9C48A5101739E01C0068D610 /* BlackDragonDown.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BlackDragonDown.plist; sourceTree = "<group>"; };
+		9C48A5121739E0580068D610 /* WraithHex.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = WraithHex.plist; sourceTree = "<group>"; };
 		9C500251172AD03800C141DB /* LoadingBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingBar.h; sourceTree = "<group>"; };
 		9C500252172AD03800C141DB /* LoadingBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingBar.m; sourceTree = "<group>"; };
 		9C75D80D171A167E00419031 /* yurie_anim.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = yurie_anim.plist; sourceTree = "<group>"; };
@@ -807,6 +818,9 @@
 		9CBF5B09171E462E00EF44B2 /* Registry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Registry.m; sourceTree = "<group>"; };
 		9CBF5B0B171E464C00EF44B2 /* ResourceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourceManager.h; sourceTree = "<group>"; };
 		9CBF5B0C171E464C00EF44B2 /* ResourceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResourceManager.m; sourceTree = "<group>"; };
+		9CEB4CAA173A0AB5004297A2 /* SkeletonGroup.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SkeletonGroup.plist; sourceTree = "<group>"; };
+		9CEB4CAC173A0AC2004297A2 /* PeasantGroup.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PeasantGroup.plist; sourceTree = "<group>"; };
+		9CEB4CAE173A0ACD004297A2 /* BlackDragonUp.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BlackDragonUp.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -907,6 +921,13 @@
 				9C9ADB2E1721A94000C3FA59 /* ZealotSquare.plist */,
 				9C9ADB301721AB6400C3FA59 /* FaerieColumn.plist */,
 				9C478719173454B800180864 /* MixedWave.plist */,
+				9C48A50C1739DF8B0068D610 /* FireElementals.plist */,
+				9C48A50E1739DFC40068D610 /* SkeletonArmy.plist */,
+				9C48A5101739E01C0068D610 /* BlackDragonDown.plist */,
+				9C48A5121739E0580068D610 /* WraithHex.plist */,
+				9CEB4CAA173A0AB5004297A2 /* SkeletonGroup.plist */,
+				9CEB4CAC173A0AC2004297A2 /* PeasantGroup.plist */,
+				9CEB4CAE173A0ACD004297A2 /* BlackDragonUp.plist */,
 			);
 			name = Waves;
 			sourceTree = "<group>";
@@ -1862,6 +1883,13 @@
 				8C5B1D9417371934003F4332 /* achievements.plist in Resources */,
 				8B3D7F341737F15F0097996B /* AchievementNode.ccbi in Resources */,
 				3EB671E91739562700937505 /* achievements_skull.png in Resources */,
+				9C48A50D1739DF8B0068D610 /* FireElementals.plist in Resources */,
+				9C48A50F1739DFC40068D610 /* SkeletonArmy.plist in Resources */,
+				9C48A5111739E01C0068D610 /* BlackDragonDown.plist in Resources */,
+				9C48A5131739E0580068D610 /* WraithHex.plist in Resources */,
+				9CEB4CAB173A0AB5004297A2 /* SkeletonGroup.plist in Resources */,
+				9CEB4CAD173A0AC2004297A2 /* PeasantGroup.plist in Resources */,
+				9CEB4CAF173A0ACD004297A2 /* BlackDragonUp.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

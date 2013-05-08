@@ -3,10 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>timeBetweenWaves</key>
-	<integer>2</integer>
+	<integer>5</integer>
 	<key>waves</key>
 	<array>
-		<string>MixedWave</string>
+		<string>PeasantGroup</string>
+		<string>ZealotSquare</string>
+		<string>SkeletonGroup</string>
+		<string>FireElementals</string>
 	</array>
 </dict>
 </plist>

@@ -235,6 +235,15 @@
     return buttons;
 }
 
+
+- (void)updateHUD
+{
+    [self updateArrows];
+    [self updateMoney];
+    [self updateWallHealth];
+    [self updateMana];
+}
+
 - (void)updateArrows
 {
     [label1 setString:[NSString stringWithFormat:@"%i", [[ResourceManager shared] arrows]]];

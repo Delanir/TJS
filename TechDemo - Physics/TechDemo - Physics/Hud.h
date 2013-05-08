@@ -36,5 +36,6 @@
 - (void)updateMoney;
 - (void)updateWallHealth;
 - (void)updateMana;
+- (void)updateHUD;
 
 @end

@@ -26,6 +26,7 @@
 {
     [[SpriteManager shared] addSpritesToSpriteFrameCacheWithFile:@"skillTreeSS.plist" andBatchSpriteSheet:@"skillTreeSS.png"];
     self = [super init];
+
     return self;
 }
 

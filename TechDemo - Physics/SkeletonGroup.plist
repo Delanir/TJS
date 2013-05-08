@@ -2,13 +2,19 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>verticalCenter</key>
-	<integer>380</integer>
 	<key>enemies</key>
 	<array>
 		<dict>
 			<key>type</key>
-			<string>zealot</string>
+			<string>skeleton</string>
+			<key>xdisp</key>
+			<integer>2</integer>
+			<key>ydisp</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>skeleton</string>
 			<key>xdisp</key>
 			<integer>2</integer>
 			<key>ydisp</key>
@@ -16,28 +22,14 @@
 		</dict>
 		<dict>
 			<key>type</key>
-			<string>zealot</string>
+			<string>skeleton</string>
 			<key>xdisp</key>
 			<integer>2</integer>
 			<key>ydisp</key>
-			<integer>-1</integer>
-		</dict>
-		<dict>
-			<key>type</key>
-			<string>zealot</string>
-			<key>xdisp</key>
-			<integer>0</integer>
-			<key>ydisp</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>type</key>
-			<string>zealot</string>
-			<key>xdisp</key>
-			<integer>0</integer>
-			<key>ydisp</key>
-			<integer>-1</integer>
+			<integer>2</integer>
 		</dict>
 	</array>
+	<key>verticalCenter</key>
+	<integer>200</integer>
 </dict>
 </plist>

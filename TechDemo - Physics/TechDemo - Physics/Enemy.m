@@ -84,14 +84,14 @@
 {
     
     // Create the actions
-    id actionMove = [CCMoveTo actionWithDuration:speed
-                                        position:ccp(-sprite.contentSize.width/2, sprite.position.y)];
+    id actionMove = [CCMoveTo actionWithDuration:speed*8
+                                        position:ccp(-9000, sprite.position.y)];
     id actionMoveDone = [CCCallFuncN actionWithTarget:self
                                              selector:@selector(spriteMoveFinished:)];
     [sprite runAction:[CCSequence actions:actionMove, actionMoveDone, nil]];
     
-    id moveHealthBar = [CCMoveTo actionWithDuration:speed
-                                           position:ccp(-sprite.contentSize.width/2, healthBar.position.y)];
+    id moveHealthBar = [CCMoveTo actionWithDuration:speed*8
+                                           position:ccp(-9000, healthBar.position.y)];
     [[self healthBar] runAction:moveHealthBar];
     
 }
@@ -161,7 +161,7 @@
         }
     }
     if ([wall moatLevel] > kMoatNoDamage)
-        [self takeDamage: kMoatOneTimeDamagePercentage * health ];
+        [self takeDamage: kMoatOneTimeDamagePercentage * maxHealth ];
 }
 
 -(void) takeDamage:(double) amount

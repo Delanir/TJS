@@ -8,13 +8,19 @@
 	<array>
 		<string>FaerieColumn</string>
 		<string>ZealotSquare</string>
-		<string>PeasantSpear</string>
-		<string>PeasantSpear</string>
+		<string>FireElementals</string>
+		<string>BlackDragonUp</string>
 		<string>FaerieColumn</string>
+		<string>PeasantSpear</string>
+		<string>FireElementals</string>
+		<string>WraithHex</string>
 		<string>PeasantSpear</string>
 		<string>ZealotSquare</string>
-		<string>FaerieColumn</string>
-		<string>FaerieColumn</string>
+		<string>FireElementals</string>
+		<string>SkeletonArmy</string>
+		<string>SkeletonArmy</string>
+		<string>MixedWave</string>
+		<string>MixedWave</string>
 	</array>
 </dict>
 </plist>

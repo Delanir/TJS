@@ -6,11 +6,11 @@
 	<integer>5</integer>
 	<key>waves</key>
 	<array>
+		<string>SkeletonArmy</string>
 		<string>PeasantSpear</string>
+		<string>SkeletonArmy</string>
 		<string>PeasantSpear</string>
-		<string>PeasantSpear</string>
-		<string>ZealotSquare</string>
-		<string>PeasantSpear</string>
+		<string>BlackDragonDown</string>
 	</array>
 </dict>
 </plist>

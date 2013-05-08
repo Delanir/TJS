@@ -15,9 +15,9 @@
     if (self = [super initWithSprite:spriteFile])
     {
         [self setCurrentState:kWalkEnemyState];
-        [self setHealth:400];
+        [self setHealth:600];
         [self setSpeed:20];
-        [self setStrength:2.8];
+        [self setStrength:4];
         [self setGoldValue:20];
         [self setDamageVulnerability: kDamageBaseVulnerability * 0.5];
         [self setFireVulnerability: kFireBaseVulnerability * 1.0];

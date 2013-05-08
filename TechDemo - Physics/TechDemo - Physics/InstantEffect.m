@@ -18,7 +18,7 @@
     {
         effectEnded = NO;
         effectPos = position;
-        CGSize winSize = [[CCDirector sharedDirector] winSize];
+        //CGSize winSize = [[CCDirector sharedDirector] winSize];
         LevelLayer * levelLayer = [[Registry shared] getEntityByName:@"LevelLayer"];
         [levelLayer addChild:self z:5000];//winSize.height - position.y];
         

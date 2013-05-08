@@ -96,8 +96,6 @@ static int current_level = -1;
         healthRegenerationRate = 0.0f;
         fire = NO;
         
-        // inicializar recursos
-        [self initializeResources];
         
         // Criação da cena com castelo
         MainScene *mainScene = [[MainScene alloc] init];
@@ -122,6 +120,9 @@ static int current_level = -1;
         
         // Prepare the changes due to the Skill Tree
         [self prepSkillTreeChanges];
+        
+        // inicializar recursos
+        [self initializeResources];
 
         [self schedule:@selector(update:)];
     }
@@ -134,12 +135,14 @@ static int current_level = -1;
 
 - (void) initializeResources
 {
+    Yuri * yuri = [[Registry shared] getEntityByName:@"Yuri"];
     ResourceManager * rm = [ResourceManager shared];
     Config * conf = [Config shared];
-    [rm setArrows:[conf getIntProperty:@"InitialArrows"]];
-    [rm setMana: [[conf getNumberProperty:@"InitialMana"] doubleValue]];
-    [rm setMaxMana: [[conf getNumberProperty:@"InitialMana"] doubleValue]];
+    [rm setArrows:[conf getIntProperty:@"InitialArrows"] / [yuri speedBonus]];
+    [rm setMana: [[conf getNumberProperty:@"InitialMana"] doubleValue] / [yuri speedBonus]];
+    [rm setMaxMana: [[conf getNumberProperty:@"InitialMana"] doubleValue] / [yuri speedBonus]];
     [rm reset];
+    [hud updateHUD];
 }
 
 
@@ -248,7 +251,7 @@ static int current_level = -1;
     }
     if ([[skill objectAtIndex:kMarksmanBranch3] intValue] != 0)
     {
-        [yuri setCriticalBonus:kYuriExtraCriticalBonus];
+        [yuri setCriticalBonus:kYuriBaseCriticalBonus];
     }
     if ([[skill objectAtIndex:kMarksmanElement1] intValue] != 0)
     {

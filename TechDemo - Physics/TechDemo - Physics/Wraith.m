@@ -17,10 +17,10 @@
         [self setCurrentState:kWalkEnemyState];
         [self setHealth:140];
         [self setSpeed:10];
-        [self setStrength:1.0];
+        [self setStrength:1.2];
         [self setGoldValue:4];
-        [self setDamageVulnerability: kDamageBaseVulnerability * 0.75];
-        [self setFireVulnerability: kFireBaseVulnerability * 2.0];
+        [self setDamageVulnerability: kDamageBaseVulnerability * 0.6];
+        [self setFireVulnerability: kFireBaseVulnerability * 1.6];
         [self setIceVulnerability: kIceBaseVulnerability * 0.25];
         [self setPushbackVulnerability: kPushbackBaseVulnerability * 0.5];
         

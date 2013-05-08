@@ -8,7 +8,9 @@
 
 #import "MainMenuLayer.h"
 #import "Registry.h"
-#import "GameManager.H"
+#import "GameManager.h"
+
+
 
 @implementation MainMenuLayer
 
@@ -16,12 +18,14 @@
     [super init];
     
     
+    
     return self;
 }
 
--(void)dealloc{
+-(void)dealloc
+{
     [super dealloc];
-//    [self removeAllChildrenWithCleanup:YES];
+    //    [self removeAllChildrenWithCleanup:YES];
 }
 
 -(void) onEnter
@@ -37,6 +41,7 @@
     //[[CCTextureCache sharedTextureCache] removeUnusedTextures];
     [super onExit];
 }
+
 
 - (void) pressedSettings:(id)sender
 {
@@ -54,14 +59,14 @@
 {
     [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"click"]];
     [[GameManager shared] runSceneWithID:kAchievementsScene];
-//    GKAchievementViewController *achievementViewController = [[GKAchievementViewController alloc] init];
-//    achievementViewController.achievementDelegate = self;
-//    
-//    AppController *app = (AppController*) [[UIApplication sharedApplication] delegate];
-//    
-//    [[app navController] presentViewController:achievementViewController animated:YES completion:nil];
-//    
-//    [achievementViewController release];
+    //    GKAchievementViewController *achievementViewController = [[GKAchievementViewController alloc] init];
+    //    achievementViewController.achievementDelegate = self;
+    //
+    //    AppController *app = (AppController*) [[UIApplication sharedApplication] delegate];
+    //
+    //    [[app navController] presentViewController:achievementViewController animated:YES completion:nil];
+    //
+    //    [achievementViewController release];
 }
 
 - (void) pressedLeaderboard:(id)sender

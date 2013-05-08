@@ -5,23 +5,28 @@
 **/            **/
 
 
+Bugs:
+- Gelo tem comportamento estranho qd inimigos estao a atacar
+- Skill tree não se inicializa com as sprites das coisas compradas
+- crasha de alguns em alguns jogos por algum motivo estranho
+
 Daniela:
-- No game over: - Retry
-- No win: - Play next chapter
+- No game over: Retry
+- No win: Play next chapter
+- Passar includes para .h
 
 João M:
+- Tutorial
+- Particles no menu
 - Bichos aleatórios (definir um número deles por nível (entre waves, por exemplo)
 - som do impacto tem de ser corrigido
+- Mais waves com novos inimigos
 
 Ricardo:
-- Mais waves com novos inimigos
 - Balancear dificuldade
 
 João A:
 - Utilização do Flurry
-
-
-
 
 
 Afterburner:

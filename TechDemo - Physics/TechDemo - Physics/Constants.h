@@ -12,11 +12,11 @@
 #define kManaRegenerationRate 0.02
 #define kManaBaseRegenerationBonus 1.5
 #define kManaExtraRegenerationBonus 2.0
-#define kHealthBaseRegenerationBonus 0.02
-#define kHealthExtraRegenerationBonus 0.04
+#define kHealthBaseRegenerationBonus 0.016
+#define kHealthExtraRegenerationBonus 0.032
 
 //Base stats
-#define kYuriBaseStrength 25                // base damage
+#define kYuriBaseStrength 20                // base damage
 #define kYuriBaseCritical 0.01              // base critical
 #define kYuriPointsToLevel2 9
 #define kYuriPointsToLevel3 18
@@ -25,8 +25,8 @@
 #define kYuriBasePushbackDistance 25        // 20 pixels
 #define kYuriBaseSlowDownDuration 1         // one second
 #define kYuriBaseSlowDownPercentage 1.8       // times slower
-#define kYuriBaseDamageOverTimeDuration 1   // one second
-#define kYuriBaseDamageOverTimeDamage 30    // 30 points per second
+#define kYuriBaseDamageOverTimeDuration 1.6   // one second
+#define kYuriBaseDamageOverTimeDamage 16    // 30 points per second
 
 //Base stat bonuses
 #define kYuriBaseStrengthBonus 1.2
@@ -64,7 +64,7 @@
 #define STARCOST1 1
 #define STARCOST2 2
 #define STARCOST3 3
-#define DEFAULTSKILLPOINTS 18
+#define DEFAULTSKILLPOINTS 5
 
 #define BUYARROWSCOST 5
 #define BUYARROWGAIN 10
