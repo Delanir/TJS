@@ -8,7 +8,7 @@
 Bugs:
 - Gelo tem comportamento estranho qd inimigos estao a atacar
 - Skill tree não se inicializa com as sprites das coisas compradas
-- crasha de alguns em alguns jogos por algum motivo estranho
+- crasha de alguns em alguns jogos por algum motivo estranho (memoria?)
 
 Daniela:
 - No game over: Retry
@@ -17,13 +17,11 @@ Daniela:
 
 João M:
 - Tutorial
-- Particles no menu
 - Bichos aleatórios (definir um número deles por nível (entre waves, por exemplo)
 - som do impacto tem de ser corrigido
 - Mais waves com novos inimigos
 
 Ricardo:
-- Balancear dificuldade
 
 João A:
 - Utilização do Flurry
@@ -33,7 +31,6 @@ Afterburner:
 - Fazer projectiles do zealot
 - Loading Screen (caso se justifique) com base em chunks
 - Passar todas as constantes para o constants.h
-- Passar todos os imports possíveis para os .h
 - Mostrar e calcular score no hud
 - Verificar sons que faltam
 

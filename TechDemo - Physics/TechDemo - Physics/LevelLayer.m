@@ -138,9 +138,9 @@ static int current_level = -1;
     Yuri * yuri = [[Registry shared] getEntityByName:@"Yuri"];
     ResourceManager * rm = [ResourceManager shared];
     Config * conf = [Config shared];
-    [rm setArrows:[conf getIntProperty:@"InitialArrows"] / [yuri speedBonus]];
-    [rm setMana: [[conf getNumberProperty:@"InitialMana"] doubleValue] / [yuri speedBonus]];
-    [rm setMaxMana: [[conf getNumberProperty:@"InitialMana"] doubleValue] / [yuri speedBonus]];
+    [rm setArrows:([conf getIntProperty:@"InitialArrows"]/2) * ([yuri level]+1)];
+    [rm setMana: ([[conf getNumberProperty:@"InitialMana"] doubleValue]/2) * ([yuri level]+1)];
+    [rm setMaxMana: ([[conf getNumberProperty:@"InitialMana"] doubleValue]/2) * ([yuri level]+1)];
     [rm reset];
     [hud updateHUD];
 }

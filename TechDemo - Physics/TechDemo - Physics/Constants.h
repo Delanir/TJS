@@ -29,12 +29,12 @@
 #define kYuriBaseDamageOverTimeDamage 16    // 30 points per second
 
 //Base stat bonuses
-#define kYuriBaseStrengthBonus 1.2
-#define kYuriExtraStrengthBonus 1.4
+#define kYuriBaseStrengthBonus 1.25
+#define kYuriExtraStrengthBonus 1.5
 #define kYuriBaseSpeedBonus 0.8
 #define kYuriExtraSpeedBonus 0.6
-#define kYuriBaseCriticalBonus 2
-#define kYuriExtraCriticalBonus 3
+#define kYuriBaseCriticalBonus 3
+#define kYuriExtraCriticalBonus 6
 
 //Power up stat bonuses
 #define kYuriSlowDownDurationNoBonus 1.0
@@ -64,7 +64,7 @@
 #define STARCOST1 1
 #define STARCOST2 2
 #define STARCOST3 3
-#define DEFAULTSKILLPOINTS 5
+#define DEFAULTSKILLPOINTS 6
 
 #define BUYARROWSCOST 5
 #define BUYARROWGAIN 10
@@ -175,12 +175,12 @@ typedef enum
     kFireElement1 = 16,
     kFireElement2 = 15,
     kFireElement3 = 17,
-    kMarksmanBranch1 = 23,
-    kMarksmanBranch2 = 22,
-    kMarksmanBranch3 = 24,
-    kMarksmanElement1 = 27,
-    kMarksmanElement2 = 26,
-    kMarksmanElement3 = 25
+    kMarksmanBranch1 = 27,
+    kMarksmanBranch2 = 26,
+    kMarksmanBranch3 = 25,
+    kMarksmanElement1 = 23,
+    kMarksmanElement2 = 22,
+    kMarksmanElement3 = 24
 }
 skillTreeType;
 
