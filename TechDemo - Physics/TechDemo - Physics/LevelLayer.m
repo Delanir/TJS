@@ -717,7 +717,7 @@ static int current_level = -1;
 -(void) checkAchievement1
 {
     NSMutableArray * achievement = [[GameState shared] achievementStates];
-    if ([[achievement objectAtIndex:0] intValue] == 0 && [[[GameState shared] enemiesKilledState] intValue] == 50) {
+    if ([[achievement objectAtIndex:0] intValue] == 0 && [[[GameState shared] enemiesKilledState] intValue] >= 25) { // 50
         [achievement replaceObjectAtIndex:0 withObject:[NSNumber numberWithInt:1]];
     }
 }
@@ -725,7 +725,7 @@ static int current_level = -1;
 -(void) checkAchievement2
 {
     NSMutableArray * achievement = [[GameState shared] achievementStates];
-    if ([[achievement objectAtIndex:1] intValue] == 0 && [[[GameState shared] dragonsKilledState] intValue] == 10) {
+    if ([[achievement objectAtIndex:1] intValue] == 0 && [[[GameState shared] dragonsKilledState] intValue] >= 1) { // 10
         [achievement replaceObjectAtIndex:1 withObject:[NSNumber numberWithInt:1]];
     }
 }
@@ -734,7 +734,7 @@ static int current_level = -1;
 {
     NSMutableArray * achievement = [[GameState shared] achievementStates];
     NSLog(@"Buy Arrows %d",[[[GameState shared] buyArrowsState] intValue]);
-    if ([[achievement objectAtIndex:2] intValue] == 0 && [[[GameState shared] buyArrowsState] intValue] > 2500) {
+    if ([[achievement objectAtIndex:2] intValue] == 0 && [[[GameState shared] buyArrowsState] intValue] >= 2500) {
         [achievement replaceObjectAtIndex:2 withObject:[NSNumber numberWithInt:1]];
     }
 }
@@ -742,7 +742,7 @@ static int current_level = -1;
 -(void) checkAchievement4
 {
     NSMutableArray * achievement = [[GameState shared] achievementStates];
-    if ([[achievement objectAtIndex:3] intValue] == 0 && [[ResourceManager shared] determineAccuracy] == 100) {
+    if ([[achievement objectAtIndex:3] intValue] == 0 && [[ResourceManager shared] determineAccuracy] == 100.0f) { // done ;)
         [achievement replaceObjectAtIndex:3 withObject:[NSNumber numberWithInt:1]];
     }
 }
@@ -751,8 +751,7 @@ static int current_level = -1;
 {
     NSMutableArray * achievement = [[GameState shared] achievementStates];
     Wall * wall = [[Registry shared] getEntityByName:@"Wall"];
-    
-    if ([[achievement objectAtIndex:4] intValue] == 0 && [wall health] == 100) {
+    if ([[achievement objectAtIndex:4] intValue] == 0 && [wall health] == [wall maxHealth]) { // a testar
         [achievement replaceObjectAtIndex:4 withObject:[NSNumber numberWithInt:1]];
     }
 }
@@ -765,7 +764,6 @@ static int current_level = -1;
     NSNumber * currentStars = [[stars objectAtIndex:9] intValue];
     
     if ([[achievement objectAtIndex:5] intValue] == 0 && currentStars > 0) {
-        NSLog(@"Unlocked");
         [achievement replaceObjectAtIndex:5 withObject:[NSNumber numberWithInt:1]];
     }
 }

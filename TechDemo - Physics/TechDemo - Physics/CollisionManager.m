@@ -111,6 +111,7 @@ static CollisionManager* _sharedSingleton = nil;
             {
 #warning BLAH
                 [targetsToDelete addObject:target];
+                [[ResourceManager shared] increaseEnemyHitCount];
                 break;              // Cada flecha só mata um
             }
         }
@@ -131,7 +132,6 @@ static CollisionManager* _sharedSingleton = nil;
     {
         [_projectiles removeObject:projectile];
         [projectile destroy];
-        [[ResourceManager shared] increaseEnemyHitCount];
     }
     [projectilesToDelete release];
 }
