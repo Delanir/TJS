@@ -109,6 +109,7 @@ static CollisionManager* _sharedSingleton = nil;
             if ([targetSprite pixelMaskContainsPoint:[projectileSprite position]])
             {
                 [targetsToDelete addObject:target];
+                [[ResourceManager shared] increaseEnemyHitCount];
                 break;              // Cada flecha só mata um
             }
         }
@@ -129,7 +130,6 @@ static CollisionManager* _sharedSingleton = nil;
     {
         [_projectiles removeObject:projectile];
         [projectile destroy];
-        [[ResourceManager shared] increaseEnemyHitCount];
     }
     [projectilesToDelete release];
 }

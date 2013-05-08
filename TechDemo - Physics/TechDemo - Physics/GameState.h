@@ -20,6 +20,7 @@
     NSNumber * enemiesKilledState;
     NSNumber * dragonsKilledState;
     NSNumber * fireElementalKilledState;
+    BOOL firstrun;
 }
 
 @property (nonatomic, retain) NSMutableArray * starStates;

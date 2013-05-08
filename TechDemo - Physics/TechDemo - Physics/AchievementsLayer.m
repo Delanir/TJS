@@ -57,11 +57,9 @@
         AchievementNode * achievement = [Achievements objectAtIndex:i-1];
         
         int achievementState = [[[[GameState shared] achievementStates] objectAtIndex:i-1] intValue];
-        NSLog(@"Achievement %d with state %d",i,achievementState);
         if (achievementState == 1) {
             [achievement setIsEnabled:YES];
             [achievement setImage:[NSString stringWithFormat:@"achievement%d.png",i]];
-            NSLog(@"ENTREI ACHIEVEMENT%d UNLOCK", i);
         } else
             [achievement setIsEnabled:NO];
         [achievement initAchievement];
