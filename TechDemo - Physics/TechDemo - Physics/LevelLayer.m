@@ -732,7 +732,7 @@ static int current_level = -1;
 -(void) checkAchievement3
 {
     NSMutableArray * achievement = [[GameState shared] achievementStates];
-    NSLog(@"Buy Arrows %d",[[[GameState shared] buyArrowsState] intValue]);
+    //NSLog(@"Buy Arrows %d",[[[GameState shared] buyArrowsState] intValue]);
     if ([[achievement objectAtIndex:2] intValue] == 0 && [[[GameState shared] buyArrowsState] intValue] >= 2500) {
         [achievement replaceObjectAtIndex:2 withObject:[NSNumber numberWithInt:1]];
     }

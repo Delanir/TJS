@@ -222,8 +222,7 @@
                     [self freeze];
             }
         }
-        [sprite setColor:ccc3(0, 255, 255)];
-        [sprite setOpacity:235];
+
     }
     else if (slowDown == YES)
     {
