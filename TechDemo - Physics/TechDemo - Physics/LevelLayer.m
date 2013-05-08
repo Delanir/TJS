@@ -33,14 +33,11 @@ static int current_level = -1;
     [ResourceManager loadLevelSprites];
     
 	// 'layer' is an autorelease object.
-    Hud *levelHud = [Hud node];
 	LevelLayer *level = [LevelLayer node];
 	
 	// add layer as a child to scene
-	[scene addChild: levelHud z:1];
 	[scene addChild: level z:0];
     
-    level.hud = levelHud;
     
 	// return the scene
 	return scene;
@@ -69,6 +66,9 @@ static int current_level = -1;
 {
     if(self = [super init])
     {
+        Hud *levelHud = [Hud node];
+        [self setHud:levelHud];
+        [self addChild:levelHud z:2000];
         
         CGSize winSize = [[CCDirector sharedDirector] winSize];
         _pauseButton= [CCSprite spriteWithSpriteFrameName:@"pause.png"];

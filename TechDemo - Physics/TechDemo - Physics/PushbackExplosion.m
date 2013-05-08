@@ -1,14 +1,14 @@
 //
-//  IceExplosion.m
+//  PushbackExplosion.m
 //  L'Archer
 //
-//  Created by jp on 07/05/13.
+//  Created by jp on 08/05/13.
 //
 //
 
-#import "IceExplosion.h"
+#import "PushbackExplosion.h"
 
-@implementation IceExplosion
+@implementation PushbackExplosion
 
 @synthesize radius;
 
@@ -53,7 +53,7 @@
     [explosion setTangentialAccel:0];
     [explosion setTangentialAccelVar:0];
     
-    [explosion setStartColor: ccc4f(0.0, 0.5, 0.5, 1)];
+    [explosion setStartColor: ccc4f(0.035, 0.027, 0.09, 1.0)];
     [explosion setEndColor:ccc4f(0, 0.0, 0.0, 0.84)];
     [explosion setStartColorVar:ccc4f(0.0, 0.1, 0.0, 0.5)];
     [explosion setEndColorVar:ccc4f(0, 0, 0, 0)];
@@ -73,7 +73,5 @@
     
     [super update];
 }
-
-
 
 @end

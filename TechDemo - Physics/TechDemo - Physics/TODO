@@ -6,15 +6,11 @@
 
 
 Daniela:
-- Verificar sons que faltam
-
-Skill Tree: 
-    Freeze %   
+- No game over: - Retry
+- No win: - Play next chapter
 
 João M:
 - Bichos aleatórios (definir um número deles por nível (entre waves, por exemplo)
-- No game over: - Retry
-- No win: - Play next chapter
 - som do impacto tem de ser corrigido
 
 Ricardo:
@@ -22,10 +18,6 @@ Ricardo:
 - Balancear dificuldade
 
 João A:
-- Particulas do slow e do damage over time
-
-
-Para MOJO:
 - Utilização do Flurry
 
 
@@ -38,6 +30,7 @@ Afterburner:
 - Passar todas as constantes para o constants.h
 - Passar todos os imports possíveis para os .h
 - Mostrar e calcular score no hud
+- Verificar sons que faltam
 
 Ideias:
 - Fazer uma catapulta

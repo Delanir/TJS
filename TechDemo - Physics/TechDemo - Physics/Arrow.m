@@ -83,7 +83,6 @@
                 // Move Particle system to actual endpoint
                 [ps runAction:[CCSequence actions:
                                [CCMoveTo actionWithDuration:[self timeToLive] position:[self destination]],
-                               //[CCCallFuncN actionWithTarget:self selector:@selector(spriteMoveFinished:)],
                                nil]];
                 break;
             case kDOTStimulus:
@@ -102,7 +101,6 @@
                 // Move Particle system to actual endpoint
                 [ps runAction:[CCSequence actions:
                                [CCMoveTo actionWithDuration:[self timeToLive] position:[self destination]],
-                               //[CCCallFuncN actionWithTarget:self selector:@selector(spriteMoveFinished:)],
                                nil]];
                 break;
             case KPushBackStimulus:
@@ -117,7 +115,6 @@
                 // Move Particle system to actual endpoint
                 [ps runAction:[CCSequence actions:
                                [CCMoveTo actionWithDuration:[self timeToLive] position:[self destination]],
-                               //[CCCallFuncN actionWithTarget:self selector:@selector(spriteMoveFinished:)],
                                nil]];
                 break;
             default:

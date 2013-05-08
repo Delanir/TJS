@@ -65,13 +65,22 @@
 
 -(void) die
 {
-    [super die];
     [self setCurrentState:kDieEnemyState];
     [[self sprite] stopAllActions];
     
-    CCFiniteTimeAction * dieAction = [CCRepeat actionWithAction:[CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"w_dies" ]] times:1];
+    CCFiniteTimeAction * dieAction = [CCSequence actions:
+                                      [CCRepeat actionWithAction:[CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"w_dies" ]] times:1],
+                                      [CCCallFuncN actionWithTarget:self selector:@selector(mockDie)],
+                                      nil];
     [[self sprite] runAction:dieAction];
 }
+
+-(void) mockDie
+{
+    [super die];
+}
+
+
 
 
 @end

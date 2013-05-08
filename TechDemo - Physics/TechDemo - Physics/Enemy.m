@@ -10,6 +10,7 @@
 #import "CollisionManager.h"
 #import "Utils.h"
 #import "Yuri.h"
+#import "PushbackExplosion.h"
 
 #import "SimpleAudioEngine.h"
 
@@ -273,6 +274,8 @@
     CGPoint currentPosition = [sprite position];
     [sprite setPosition:ccp(currentPosition.x + force,currentPosition.y)];
     [healthBar setPosition:ccp([sprite position].x + force, [sprite position].y + [sprite contentSize].height/2 + 2)];
+    
+    [[[PushbackExplosion alloc] initWithPosition:currentPosition  andRadius:0.4] autorelease];
     
     if ([self currentState] != kDieEnemyState)
     {

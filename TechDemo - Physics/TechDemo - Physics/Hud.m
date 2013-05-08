@@ -10,6 +10,9 @@
 #import "SpriteManager.h"
 #import "Registry.h"
 #import "Constants.h"
+#import "FireExplosion.h"
+#import "IceExplosion.h"
+#import "PushbackExplosion.h"
 
 @implementation Hud
 
@@ -127,8 +130,8 @@
         
         CCMenuItem *repairButton = [CCMenuItemImage itemWithNormalSprite:repairButtonSprite1 selectedSprite:repairButtonSprite2 target:self selector:@selector(repairWall)];
         
-        buyButton.position = ccp(300, 64);
-        repairButton.position = ccp(400,64);
+        buyButton.position = ccp(310, 64);
+        repairButton.position = ccp(410,64);
         
         CCMenu *buttonsMenu = [CCMenu menuWithItems:iceToggleButton, fireToggleButton, pushBackToggleButton, buyButton, repairButton, nil];
         buttonsMenu.position = CGPointZero;
@@ -160,16 +163,22 @@
 - (void) iceButtonToggle
 {
     [self toggleButton:kPower1Button];
+    if ([[buttons objectAtIndex:kPower1Button] boolValue])
+        [[[IceExplosion alloc] initWithPosition:[iceToggleButton position]  andRadius:0.7] autorelease];
 }
 
 - (void) fireButtonToggle
 {
     [self toggleButton:kPower2Button];
+    if ([[buttons objectAtIndex:kPower2Button] boolValue])
+        [[[FireExplosion alloc] initWithPosition:[fireToggleButton position]  andRadius:0.7] autorelease];
 }
 
 - (void) pushBackButtonToggle
 {
     [self toggleButton:kPower3Button];
+    if ([[buttons objectAtIndex:kPower3Button] boolValue])
+        [[[PushbackExplosion alloc] initWithPosition:[pushBackToggleButton position]  andRadius:0.7] autorelease];
 }
 
 -(void) setFireToggleButtonActive

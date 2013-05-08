@@ -284,6 +284,8 @@
 		9C8DE0D31718E134002E0D0A /* zealot_anim.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C8DE0D21718E133002E0D0A /* zealot_anim.plist */; };
 		9C8DE0D61718EA00002E0D0A /* Zealot.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8DE0D51718EA00002E0D0A /* Zealot.m */; };
 		9C90647817398A8C005D7D33 /* IceExplosion.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C90647717398A8C005D7D33 /* IceExplosion.m */; };
+		9C90647B1739BC68005D7D33 /* ElementalExplosion.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C90647A1739BC68005D7D33 /* ElementalExplosion.m */; };
+		9C90647E1739CC6C005D7D33 /* PushbackExplosion.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C90647D1739CC6B005D7D33 /* PushbackExplosion.m */; };
 		9C93D8E317297849004891D2 /* GameWin.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 8C72C2A51729687B009EF8C1 /* GameWin.ccbi */; };
 		9C9703551727804A00E48924 /* Level1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C9703541727804A00E48924 /* Level1.plist */; };
 		9C9703571727805800E48924 /* Level3.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C9703561727805800E48924 /* Level3.plist */; };
@@ -783,6 +785,10 @@
 		9C8DE0D51718EA00002E0D0A /* Zealot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Zealot.m; sourceTree = "<group>"; };
 		9C90647617398A8C005D7D33 /* IceExplosion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IceExplosion.h; sourceTree = "<group>"; };
 		9C90647717398A8C005D7D33 /* IceExplosion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IceExplosion.m; sourceTree = "<group>"; };
+		9C9064791739BC68005D7D33 /* ElementalExplosion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ElementalExplosion.h; sourceTree = "<group>"; };
+		9C90647A1739BC68005D7D33 /* ElementalExplosion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ElementalExplosion.m; sourceTree = "<group>"; };
+		9C90647C1739CC6B005D7D33 /* PushbackExplosion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushbackExplosion.h; sourceTree = "<group>"; };
+		9C90647D1739CC6B005D7D33 /* PushbackExplosion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushbackExplosion.m; sourceTree = "<group>"; };
 		9C94ABD717197BD2005BCE32 /* zDepth */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = zDepth; path = "TechDemo - Physics/zDepth"; sourceTree = "<group>"; };
 		9C9703541727804A00E48924 /* Level1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Level1.plist; sourceTree = "<group>"; };
 		9C9703561727805800E48924 /* Level3.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Level3.plist; sourceTree = "<group>"; };
@@ -914,6 +920,10 @@
 				9C20F3DB17395B7300FC7FBB /* FireExplosion.m */,
 				9C90647617398A8C005D7D33 /* IceExplosion.h */,
 				9C90647717398A8C005D7D33 /* IceExplosion.m */,
+				9C9064791739BC68005D7D33 /* ElementalExplosion.h */,
+				9C90647A1739BC68005D7D33 /* ElementalExplosion.m */,
+				9C90647C1739CC6B005D7D33 /* PushbackExplosion.h */,
+				9C90647D1739CC6B005D7D33 /* PushbackExplosion.m */,
 			);
 			name = Instants;
 			sourceTree = "<group>";
@@ -2022,6 +2032,8 @@
 				9C20F3D91739531400FC7FBB /* InstantEffect.m in Sources */,
 				9C20F3DC17395B7300FC7FBB /* FireExplosion.m in Sources */,
 				9C90647817398A8C005D7D33 /* IceExplosion.m in Sources */,
+				9C90647B1739BC68005D7D33 /* ElementalExplosion.m in Sources */,
+				9C90647E1739CC6C005D7D33 /* PushbackExplosion.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
