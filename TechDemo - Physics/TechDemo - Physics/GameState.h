@@ -21,6 +21,7 @@
     NSNumber * dragonsKilledState;
     NSNumber * fireElementalKilledState;
     BOOL firstrun;
+    BOOL firstRunSkill;
 }
 
 @property (nonatomic, retain) NSMutableArray * starStates;
@@ -39,5 +40,6 @@
 -(void)loadApplicationData;
 -(void)initApplicationData;
 -(void)resetApplicationData;
+-(BOOL)isFirstRun;
 
 @end

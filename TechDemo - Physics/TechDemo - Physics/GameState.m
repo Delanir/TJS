@@ -69,9 +69,12 @@ static GameState* _sharedSingleton = nil;
 {
     NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
     starStates = [defaults objectForKey:@"Stars"];
-    skillStates =[defaults objectForKey:@"Skills"]; 
-    if ( starStates == nil||skillStates==nil)
+    skillStates =[defaults objectForKey:@"Skills"];
+    firstRunSkill =NO;
+    if ( starStates == nil||skillStates==nil){
         [self initApplicationData];
+        firstRunSkill =YES;
+    }
     goldState = [defaults objectForKey:@"Gold"];
     achievementStates = [defaults objectForKey:@"Achievements"];
     buyArrowsState = [defaults objectForKey:@"BuyArrows"];
@@ -101,6 +104,15 @@ static GameState* _sharedSingleton = nil;
     enemiesKilledState = [NSNumber numberWithInt:0];
     dragonsKilledState = [NSNumber numberWithInt:0];
     fireElementalKilledState = [NSNumber numberWithInt:0];
+}
+
+-(BOOL)isFirstRun{
+    for (int i = 0; i < 28; i++){
+        if ([[skillStates objectAtIndex:i] intValue] != 0) {
+            return NO;
+        }
+    }
+    return YES;
 }
 
 

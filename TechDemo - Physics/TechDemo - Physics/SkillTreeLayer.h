@@ -56,7 +56,7 @@
 }
 
 @property int availableStars;
-
+- (void) pressedPlay:(id)sender;
 - (void) pressedCitySymbol:(id)sender;
 - (void) pressedMainMenu:(id)sender;
 - (void) pressedMarksmanSymbol:(id)sender;

@@ -393,4 +393,10 @@
 }
 
 
+- (void) pressedPlay:(id)sender{
+    [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"click"]];
+    [[GameManager shared] runSceneWithID:kSelectLevel];
+};
+
+
 @end

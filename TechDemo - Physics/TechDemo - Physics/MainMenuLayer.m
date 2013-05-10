@@ -85,7 +85,10 @@
 - (void) pressedPlay:(id)sender
 {
     [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"click"]];
-    [[GameManager shared] runSceneWithID:kSelectLevel];
+    if ([[GameState shared] isFirstRun]) 
+        [[GameManager shared] runSceneWithID:kSkillTreeScene];
+    else
+        [[GameManager shared] runSceneWithID:kSelectLevel];
 }
 
 #pragma mark GameKit delegate
