@@ -123,6 +123,7 @@ static ResourceManager* _sharedSingleton = nil;
 {
     if( gold < spend) return false;
     gold -= spend;
+    [[GameState shared] setGoldState:[NSNumber numberWithUnsignedInt:gold]];
     return true;
 }
 -(BOOL) spendArrows:(unsigned int) spend
