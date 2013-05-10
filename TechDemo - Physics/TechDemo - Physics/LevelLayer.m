@@ -330,6 +330,7 @@ static int current_level = -1;
     [hud updateWallHealth];
     [hud updateMoney];
     [hud updateMana];
+    [hud updateButtons];
     
     if ([self tryLose])
         [self gameOver];

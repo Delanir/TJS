@@ -122,18 +122,23 @@
         
         CCSprite * buyButtonSprite1 = [CCSprite spriteWithSpriteFrameName:@"buyarrow.png"];
         CCSprite * buyButtonSprite2 = [CCSprite spriteWithSpriteFrameName:@"buyarrowPressed.png"];
+        CCSprite * buyButtonSprite3 = [CCSprite spriteWithSpriteFrameName:@"buyarrow.png"];
+        [buyButtonSprite3 setColor:ccGRAY];
         
-        CCMenuItem *buyButton = [CCMenuItemImage itemWithNormalSprite:buyButtonSprite1 selectedSprite:buyButtonSprite2 target:self selector:@selector(buyArrows)];
+        buyButton = [CCMenuItemImage itemWithNormalSprite:buyButtonSprite1 selectedSprite:buyButtonSprite2 disabledSprite:buyButtonSprite3 target:self selector:@selector(buyArrows)];
         
         CCSprite * repairButtonSprite1 = [CCSprite spriteWithSpriteFrameName:@"repair.png"];
         CCSprite * repairButtonSprite2 = [CCSprite spriteWithSpriteFrameName:@"repairPressed.png"];
+        CCSprite * repairButtonSprite3 = [CCSprite spriteWithSpriteFrameName:@"repair.png"];
+        [repairButtonSprite3 setColor:ccGRAY];
         
-        CCMenuItem *repairButton = [CCMenuItemImage itemWithNormalSprite:repairButtonSprite1 selectedSprite:repairButtonSprite2 target:self selector:@selector(repairWall)];
-        
+        repairButton = [CCMenuItemImage itemWithNormalSprite:repairButtonSprite1  selectedSprite:repairButtonSprite2  disabledSprite:repairButtonSprite3  target:self selector:@selector(repairWall)];
         buyButton.position = ccp(310, 64);
         repairButton.position = ccp(410,64);
         
-        CCMenu *buttonsMenu = [CCMenu menuWithItems:iceToggleButton, fireToggleButton, pushBackToggleButton, buyButton, repairButton, nil];
+
+        
+        buttonsMenu = [CCMenu menuWithItems:iceToggleButton, fireToggleButton, pushBackToggleButton, buyButton, repairButton, nil];
         buttonsMenu.position = CGPointZero;
         //Power Buttons End
         
@@ -233,6 +238,19 @@
 - (NSMutableArray *)buttonsPressed
 {
     return buttons;
+}
+
+-(void) updateButtons{
+    if (WALLREPAIRCOST > [[ResourceManager shared] gold])
+        [repairButton setIsEnabled:NO];
+    else
+        [repairButton setIsEnabled:YES];
+        
+    if (BUYARROWSCOST > [[ResourceManager shared] gold])
+        [buyButton setIsEnabled:NO];
+    else
+        [buyButton setIsEnabled:YES];
+        
 }
 
 

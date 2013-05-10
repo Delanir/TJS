@@ -21,6 +21,9 @@
     CCLabelTTF *label1, *label2;
     CCProgressTimer * manaProgress, * healthProgress;
     CCMenuItemToggle *fireToggleButton, *iceToggleButton, *pushBackToggleButton;
+    CCMenu *buttonsMenu;
+    CCMenuItem *buyButton;
+    CCMenuItem *repairButton ;
 }
 
 @property (nonatomic, retain) CCMenuItemToggle * fireToggleButton;
@@ -32,6 +35,7 @@
 -(void) setPushbackToggleButtonActive;
 
 - (NSMutableArray *)buttonsPressed;
+- (void)updateButtons;
 - (void)updateArrows;
 - (void)updateMoney;
 - (void)updateWallHealth;
