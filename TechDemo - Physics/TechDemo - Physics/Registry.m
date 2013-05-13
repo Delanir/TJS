@@ -81,6 +81,12 @@ static Registry* _sharedSingleton = nil;
     //registry = [[NSMutableDictionary alloc] init];
 }
 
+
+-(void) removeEntityFromRegistry: (NSString*) entity
+{
+    [registry removeObjectForKey:entity];
+}
+
 -(void) printRegistry
 {
     NSLog(@"Entities in the registry");

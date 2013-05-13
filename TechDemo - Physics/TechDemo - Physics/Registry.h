@@ -20,6 +20,7 @@
 
 -(void) registerEntity: (id) entity withName: (NSString *) name;
 -(id) getEntityByName: (NSString *) entityName;
+-(void) removeEntityFromRegistry: (NSString*) entity;
 -(void) clearRegistry;
 -(void) printRegistry;
 

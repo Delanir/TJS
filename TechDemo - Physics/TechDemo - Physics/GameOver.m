@@ -33,6 +33,7 @@
     [[GameManager shared] runLevel:[((LevelLayer *)[self parent])level]];
     
 };
+
 - (void) skillTree:(id)sender{
     [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"click"]];
     [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];

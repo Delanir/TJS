@@ -104,6 +104,7 @@
 
 - (void) startGame
 {
+    [healthBar setPosition:ccp([sprite position].x, [sprite position].y + [sprite contentSize].height/2 + 2)];
     LevelLayer * levelLayer = [[Registry shared] getEntityByName:@"LevelLayer"];
     [levelLayer setGameStarted:YES];
 }
@@ -116,7 +117,6 @@
 - (void) resumeFromTaunt
 {
     [[self sprite] stopAllActions];
-    [healthBar setPosition:ccp([sprite position].x, [sprite position].y + [sprite contentSize].height/2 + 2)];
     [self setCurrentState:kWalkEnemyState];
     [self setupActions];
 }
