@@ -137,7 +137,8 @@
     
 }
 
-- (void) resetSkillTree{
+- (void) resetSkillTree:(id)sender
+{
     
     [[GameState shared]  resetSkillStates];
     NSMutableArray *skill = [[GameState shared] skillStates];
@@ -240,8 +241,7 @@
     [marksmanMenu setVisible:NO];
     [marksmanMenu setStars];
     
-    
-    
+
     
 }
 

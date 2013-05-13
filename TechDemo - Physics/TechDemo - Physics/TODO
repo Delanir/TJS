@@ -17,7 +17,7 @@ Flow:
     - No game over: Retry, Skill Tree
     - No win: Play next chapter, Skill Tree
     - Achievement unlocked layer
-    - Na skill tree botão para fazer reset
+    
     - Normalizar posiçoes de botoes iguais
     - Return to skill tree no pause
 
@@ -51,6 +51,8 @@ Afterburner:
 - Passar todas as constantes para o constants.h
 - Mostrar e calcular score no hud
 - Verificar sons que faltam
+
+-botao reset skill points
 
 Ideias:
 - Fazer uma catapulta
@@ -118,3 +120,4 @@ Ideias:
 - Slow Down implementado (com mts bugs relacionados corrigidos)
 - Yuri já não dispara quando clicamos atrás dele
 - Particulas das fire arrows e slow arrows
+- Na skill tree botão para fazer reset

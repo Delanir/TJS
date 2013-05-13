@@ -186,8 +186,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>514</real>
-							<real>428</real>
+							<real>512</real>
+							<real>493</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -431,8 +431,8 @@ Yuri couldn't save his people.</string>
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>504</real>
-							<real>340</real>
+							<real>512</real>
+							<real>302</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -480,8 +480,6 @@ Yuri couldn't save his people.</string>
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>
