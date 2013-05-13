@@ -62,6 +62,7 @@ static WaveManager* _sharedSingleton = nil;
 -(void) beginWaves
 {
     [self schedule:@selector(sendNextWave) interval:intervalBetweenWaves];
+    [self sendNextWave];
 }
 
 -(void) stopWaves
@@ -87,13 +88,36 @@ static WaveManager* _sharedSingleton = nil;
             CGPoint displacementPoint = ccp(xDisp, yDisp);
             Enemy * newEnemy = [[EnemyFactory shared] generateEnemyWithType:type
                                                                    vertical:[vPosition intValue]
-                                                               displacement:displacementPoint];
+                                                               displacement:displacementPoint
+                                                                      taunt:NO];
             [ll addEnemy:newEnemy];
             self.enemies++;
         }
     }
     else
         [self stopWaves];
+}
+
+-(void) sendWave:(NSString*)waveName taunt:(BOOL)isTaunt
+{
+    LevelLayer * ll = [[Registry shared] getEntityByName:@"LevelLayer"];
+    NSDictionary * nextWave = [Utils openPlist:waveName];
+    NSNumber * vPosition = [nextWave objectForKey:@"verticalCenter"];
+    NSArray * enemies = [nextWave objectForKey:@"enemies"];
+    
+    for (NSDictionary * enemy in enemies)
+    {
+        NSString * type = [enemy objectForKey:@"type"];
+        float xDisp = [[enemy objectForKey:@"xdisp" ] floatValue];
+        float yDisp = [[enemy objectForKey:@"ydisp"] floatValue];
+        CGPoint displacementPoint = ccp(xDisp, yDisp);
+        Enemy * newEnemy = [[EnemyFactory shared] generateEnemyWithType:type
+                                                               vertical:[vPosition intValue]
+                                                           displacement:displacementPoint
+                                                                  taunt:isTaunt];
+        [ll addEnemy:newEnemy];
+        self.enemies++;
+    }
 }
 
 - (BOOL) anymoreWaves

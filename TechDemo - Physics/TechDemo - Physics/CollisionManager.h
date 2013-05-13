@@ -28,11 +28,9 @@
 -(void)removeFromWalls: (CCSprite*) wall;
 -(void)clearAllEntities;
 
-// Collisions between arrow and enemies
--(void)updatePixelPerfectCollisions:(ccTime)dt;
+// Collisions
+-(void)updateCollisions:(ccTime)dt;
 
-// Collisions between enemies and walls
--(void)updateWallsAndEnemies:(ccTime)dt;
 
 
 @end

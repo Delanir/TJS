@@ -12,11 +12,11 @@
 
 @implementation FaerieDragon
 
--(id) initWithSprite:(NSString *)spriteFile
+-(id) initWithSprite:(NSString *)spriteFile initialState:(state) initialState
 {
-    if (self = [super initWithSprite:spriteFile])
+    if (self = [super initWithSprite:spriteFile initialState:initialState])
     {
-        [self setCurrentState:kWalkEnemyState];
+        [self setCurrentState:initialState];
         [self setHealth:240];
         [self setSpeed:11];
         [self setStrength:2.4];

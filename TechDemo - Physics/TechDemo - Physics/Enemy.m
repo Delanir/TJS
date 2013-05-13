@@ -27,7 +27,7 @@
 @synthesize attackAction, walkAction, walkAnimation, attackAnimation;
 
 
-- (id) initWithSprite:(NSString *)spriteFile
+- (id) initWithSprite:(NSString *)spriteFile initialState:(state) initialState;
 {
     if( (self = [super init]))
     {
@@ -82,8 +82,6 @@
 
 - (void) animateWalkLeft;
 {
-    
-    
     // Create the actions
     id actionMove = [CCMoveTo actionWithDuration:speed*kEnemySpeedMultiplier
                                         position:ccp(-9000, sprite.position.y)];
@@ -91,7 +89,7 @@
                                              selector:@selector(spriteMoveFinished:)];
     [sprite runAction:[CCSequence actions:actionMove, actionMoveDone, nil]];
     
-    id moveHealthBar = [CCMoveTo actionWithDuration:speed*8
+    id moveHealthBar = [CCMoveTo actionWithDuration:speed*kEnemySpeedMultiplier
                                            position:ccp(-9000, healthBar.position.y)];
     [[self healthBar] runAction:moveHealthBar];
     

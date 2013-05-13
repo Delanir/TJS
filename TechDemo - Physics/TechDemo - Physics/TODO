@@ -7,13 +7,12 @@
 
 Bugs:
 - Gelo tem comportamento estranho qd inimigos estao a atacar
-- Skill tree não se inicializa com as sprites das coisas compradas (solved?)
 - crasha de alguns em alguns jogos por algum motivo estranho (memoria? fazer profile)
-- Quando se tira o pause 
-- 1/2 MB de memória pendurada por cada jogo
+    - Está a deixar memória pendurada. Não muito. Mas está
+- Quando se tira o pause o yuri dispara flechinha
 
 Daniela:
-Flow:
+Flow control:
     - No game over: Retry, Skill Tree
     - No win: Play next chapter, Skill Tree
     - Achievement unlocked layer
@@ -22,19 +21,19 @@ Flow:
     - Return to skill tree no pause
 
 João M:
+- Verificar se dá para actualizar as mascaras das sprites e se isso está a afectar as colisões
+- Taunting: 
+    - tá hardcoded para a wraith. Generalizar/Fazer para mais
 - Volume separado de fx e music
-- Repair e buy arrow inactive
-    - sprites
-    - logica associada
-- Taunting
-- Passar includes para .h
-- Dendroids!
-- Tutorial
 - Bichos aleatórios (definir um número deles por nível (entre waves, por exemplo)
-- som do impacto tem de ser corrigido
-- Som nas explosões
+
+Resources:
+    - Dendroids!
+    - som do impacto tem de ser corrigido
+    - Som nas explosões
 
 Ricardo:
+- Utilização do Flurry
 
 João A:
 User Feedback:
@@ -42,10 +41,10 @@ User Feedback:
     - Custo de reparação
     - Número de estrelas ganhas no final de cada nível
     - Achievements unlocked warning
-- Utilização do Flurry
-
+    - Tutorial
 
 Afterburner:
+- Passar includes para .h
 - Fazer projectiles do zealot
 - Loading Screen (caso se justifique) com base em chunks
 - Passar todas as constantes para o constants.h
@@ -118,3 +117,4 @@ Ideias:
 - Slow Down implementado (com mts bugs relacionados corrigidos)
 - Yuri já não dispara quando clicamos atrás dele
 - Particulas das fire arrows e slow arrows
+- Skill tree não se inicializa com as sprites das coisas compradas (solved?)

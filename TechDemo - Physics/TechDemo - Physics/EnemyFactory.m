@@ -85,7 +85,7 @@ static EnemyFactory* _sharedSingleton = nil;
     
 }
 
--(Enemy*)generateEnemyWithType:(NSString*) type vertical:(int) vpos displacement:(CGPoint) disp;
+-(Enemy*)generateEnemyWithType:(NSString*) type vertical:(int) vpos displacement:(CGPoint) disp taunt:(BOOL) isTaunt;
 {
     Enemy * newEnemy = nil;
     //NSLog(@"Enemy: %@ Vert: %d Disp:(%f,%f)", type, vpos, disp.x, disp.y);
@@ -99,7 +99,7 @@ static EnemyFactory* _sharedSingleton = nil;
             NSString * spriteFile = [enemy objectForKey:@"initSprite"];
             
             newEnemy = [NSClassFromString(className) alloc];
-            [newEnemy initWithSprite:spriteFile];
+            [newEnemy initWithSprite:spriteFile initialState:kWalkEnemyState];
             
             // placement
             CGSize winSize = [[CCDirector sharedDirector] winSize];
@@ -113,6 +113,8 @@ static EnemyFactory* _sharedSingleton = nil;
             [newEnemy healthBar].position = ccp(x,y+spriteSize.width/2+2);
             [newEnemy healthBar].scaleX = [Utils iPadRetina]?6:3;
             [newEnemy healthBar].scaleY = [Utils iPadRetina]?1:0.5;
+            
+            if(isTaunt) [newEnemy setCurrentState:kTauntEnemyState];
             
             [newEnemy setupActions];
             [newEnemy setNormalAnimationSpeed: [newEnemy getCurrentSpeed]];
