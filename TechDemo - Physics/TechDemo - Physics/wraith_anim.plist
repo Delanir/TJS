@@ -5,13 +5,15 @@
 	<key>w_taunt</key>
 	<dict>
 		<key>delay</key>
-		<real>0.1</real>
+		<real>0.15</real>
 		<key>frames</key>
 		<array>
 			<string>w_taunt_01.png</string>
 			<string>w_taunt_02.png</string>
 			<string>w_taunt_03.png</string>
 			<string>w_taunt_04.png</string>
+			<string>w_taunt_03.png</string>
+			<string>w_taunt_02.png</string>
 		</array>
 	</dict>
 	<key>w_attack</key>

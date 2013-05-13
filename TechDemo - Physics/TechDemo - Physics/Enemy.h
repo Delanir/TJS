@@ -50,7 +50,7 @@
 @property BOOL slowDown;
 
 
--(id) initWithSprite:(NSString *)spriteFile;
+-(id) initWithSprite:(NSString *)spriteFile initialState:(state) initialState;
 -(void) postInit;
 -(void) setupActions;
 -(void) attack;

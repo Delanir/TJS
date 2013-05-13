@@ -14,7 +14,7 @@
 
 // HelloWorldLayer implementation
 @implementation LevelLayer
-@synthesize hud, level, manaRegenerationBonus, healthRegenerationRate;
+@synthesize hud, level, manaRegenerationBonus, healthRegenerationRate, gameStarted;
 
 static int current_level = -1;
 
@@ -95,7 +95,7 @@ static int current_level = -1;
         manaRegenerationBonus = 1.0f;
         healthRegenerationRate = 0.0f;
         fire = NO;
-        
+        gameStarted = NO;
         
         // Criação da cena com castelo
         MainScene *mainScene = [[MainScene alloc] init];
@@ -113,7 +113,6 @@ static int current_level = -1;
         // inicializar nível
         [self setLevel:current_level];
         [[WaveManager shared] initializeLevelLogic:[NSString stringWithFormat:@"Level%d",level]];
-        [[WaveManager shared] beginWaves];
         
         // This dummy method initializes the collision manager
         [[CollisionManager shared] dummyMethod];
@@ -123,8 +122,10 @@ static int current_level = -1;
         
         // inicializar recursos
         [self initializeResources];
-
-        [self schedule:@selector(update:)];
+        
+        [self schedule:@selector(updatePreGame:)];
+#warning temp
+        [[WaveManager shared] sendWave:@"WraithTaunt" taunt:YES];
     }
     
     self.isTouchEnabled = YES;
@@ -313,20 +314,25 @@ static int current_level = -1;
  *
  */
 
+
+- (void)updatePreGame:(ccTime)dt
+{
+    if (gameStarted)
+    {
+        [[WaveManager shared] beginWaves];
+        [self unscheduleAllSelectors];
+        [self schedule:@selector(update:)];
+    } 
+}
+
 - (void)update:(ccTime)dt
 {
-    // Do I have to shoot?
-    if(fire &&
-       [[ResourceManager shared] arrows] > 0 &&
-       location.x > 140 &&
-       location.y > 128 &&
-       [(Yuri*)[self getChildByTag:9]fireIfAble: location] )
+    if([self haveToShoot])
         [self addProjectile:location];
     
     [self regenerateHealthAndMana];
     
-    [[CollisionManager shared] updatePixelPerfectCollisions:dt];
-    [[CollisionManager shared] updateWallsAndEnemies:dt];
+    [[CollisionManager shared] updateCollisions:dt];
     [hud updateWallHealth];
     [hud updateMoney];
     [hud updateMana];
@@ -337,6 +343,8 @@ static int current_level = -1;
     else if ([self tryWin])
         [self gameWin];
 }
+
+
 
 - (void) regenerateHealthAndMana
 {
@@ -354,7 +362,7 @@ static int current_level = -1;
     Yuri * yuri = [[Registry shared] getEntityByName:@"Yuri"];
     
     unsigned int damage = [yuri strength] * [yuri isCritical];
-
+    
     // Damage Stimulus
     [stimulusPackage addObject:[[StimulusFactory shared] generateDamageStimulusWithValue:damage]];
     // Cold Stimulus
@@ -388,6 +396,15 @@ static int current_level = -1;
     
 }
 
+
+- (BOOL) haveToShoot
+{
+    return fire &&
+    [[ResourceManager shared] arrows] > 0 &&
+    location.x > 140 &&
+    location.y > 128 &&
+    [(Yuri*)[self getChildByTag:9]fireIfAble: location];
+}
 
 -(BOOL) tryWin
 {
@@ -690,7 +707,7 @@ static int current_level = -1;
     [[CCDirector sharedDirector] pause];
     
     [self calculateAndUpdateNumberOfStars];
-    [self makeMoneyPersistent];   
+    [self makeMoneyPersistent];
     [self makeEnemiesKilledPersistent];
     
     [self checkAchievements];

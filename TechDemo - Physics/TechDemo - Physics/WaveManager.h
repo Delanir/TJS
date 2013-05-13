@@ -30,6 +30,7 @@
 -(void) stopWaves;
 -(void) clearLevel;
 -(BOOL) anymoreWaves;
+-(void) sendWave:(NSString*)waveName taunt:(BOOL)isTaunt;
 
 
 @end

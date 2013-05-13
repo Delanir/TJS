@@ -10,11 +10,11 @@
 
 @implementation BlackDragon
 
--(id) initWithSprite:(NSString *)spriteFile
+-(id) initWithSprite:(NSString *)spriteFile initialState:(state) initialState
 {
-    if (self = [super initWithSprite:spriteFile])
+    if (self = [super initWithSprite:spriteFile initialState:initialState])
     {
-        [self setCurrentState:kWalkEnemyState];
+        [self setCurrentState:initialState];
         [self setHealth:600];
         [self setSpeed:20];
         [self setStrength:4];

@@ -9,9 +9,8 @@
 #import "Enemy.h"
 
 @interface Wraith : Enemy
-{
 
-}
+- (void) taunt;
 
 
 @end

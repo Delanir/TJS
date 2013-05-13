@@ -127,6 +127,7 @@ typedef enum
 {
     kWalkEnemyState,
     kAttackEnemyState,
+    kTauntEnemyState,
     kFlyEnemyState,
     kLandEnemyState,
     kHitEnemyState,

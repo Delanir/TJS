@@ -78,6 +78,12 @@ static CollisionManager* _sharedSingleton = nil;
     return;
 }
 
+-(void) updateCollisions:(ccTime)dt;
+{
+    [self updatePixelPerfectCollisions:dt];
+    [self updateWallsAndEnemies:dt];
+}
+
 -(void)updatePixelPerfectCollisions:(ccTime)dt
 {
     CCArray *projectilesToDelete = [[CCArray alloc] init];

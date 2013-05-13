@@ -143,6 +143,7 @@
 		9C48A5131739E0580068D610 /* WraithHex.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C48A5121739E0580068D610 /* WraithHex.plist */; };
 		9C500253172AD03800C141DB /* LoadingBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C500252172AD03800C141DB /* LoadingBar.m */; };
 		9C75D80E171A167E00419031 /* yurie_anim.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C75D80D171A167E00419031 /* yurie_anim.plist */; };
+		9C75E7A21741671900D335B1 /* WraithTaunt.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C75E7A11741671900D335B1 /* WraithTaunt.plist */; };
 		9C791C2C17237ADE00780C5D /* menuBackground-ipadhd.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C791C2817237ADE00780C5D /* menuBackground-ipadhd.jpg */; };
 		9C791C2D17237ADE00780C5D /* menuBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C791C2917237ADE00780C5D /* menuBackground.jpg */; };
 		9C7FF344170B28CE009DA7F9 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C7FF343170B28CE009DA7F9 /* Config.plist */; };
@@ -499,6 +500,7 @@
 		9C500251172AD03800C141DB /* LoadingBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingBar.h; sourceTree = "<group>"; };
 		9C500252172AD03800C141DB /* LoadingBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingBar.m; sourceTree = "<group>"; };
 		9C75D80D171A167E00419031 /* yurie_anim.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = yurie_anim.plist; sourceTree = "<group>"; };
+		9C75E7A11741671900D335B1 /* WraithTaunt.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = WraithTaunt.plist; sourceTree = "<group>"; };
 		9C791C2817237ADE00780C5D /* menuBackground-ipadhd.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "menuBackground-ipadhd.jpg"; path = "MainMenu/menuBackground-ipadhd.jpg"; sourceTree = "<group>"; };
 		9C791C2917237ADE00780C5D /* menuBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = menuBackground.jpg; path = MainMenu/menuBackground.jpg; sourceTree = "<group>"; };
 		9C7FF343170B28CE009DA7F9 /* Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Config.plist; path = "TechDemo - Physics/Config.plist"; sourceTree = "<group>"; };
@@ -928,6 +930,7 @@
 				9CEB4CAA173A0AB5004297A2 /* SkeletonGroup.plist */,
 				9CEB4CAC173A0AC2004297A2 /* PeasantGroup.plist */,
 				9CEB4CAE173A0ACD004297A2 /* BlackDragonUp.plist */,
+				9C75E7A11741671900D335B1 /* WraithTaunt.plist */,
 			);
 			name = Waves;
 			sourceTree = "<group>";
@@ -1890,6 +1893,7 @@
 				9CEB4CAB173A0AB5004297A2 /* SkeletonGroup.plist in Resources */,
 				9CEB4CAD173A0AC2004297A2 /* PeasantGroup.plist in Resources */,
 				9CEB4CAF173A0ACD004297A2 /* BlackDragonUp.plist in Resources */,
+				9C75E7A21741671900D335B1 /* WraithTaunt.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

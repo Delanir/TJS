@@ -10,11 +10,11 @@
 
 @implementation Skeleton
 
--(id) initWithSprite:(NSString *)spriteFile
+-(id) initWithSprite:(NSString *)spriteFile initialState:(state) initialState
 {
-    if (self = [super initWithSprite:spriteFile])
+    if (self = [super initWithSprite:spriteFile initialState:initialState])
     {
-        [self setCurrentState:kWalkEnemyState];
+        [self setCurrentState:initialState];
         [self setHealth:70];
         [self setSpeed:13];
         [self setStrength:0.5];
