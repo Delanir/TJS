@@ -17,5 +17,6 @@
 
 -(CGPoint) mainMenuButtonPosition;
 -(float) mainMenuButtonRadius;
-
+- (void) retry:(id)sender;
+- (void) skillTree:(id)sender;
 @end

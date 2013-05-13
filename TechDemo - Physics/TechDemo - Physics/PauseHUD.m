@@ -7,6 +7,8 @@
 //
 
 #import "PauseHUD.h"
+#import "SimpleAudioEngine.h"
+#import "LevelLayer.h"
 
 @implementation PauseHUD
 
@@ -19,5 +21,18 @@
 {
     return _menu;
 };
+
+- (void) skillTree:(id)sender{
+    if ([[CCDirector sharedDirector]isPaused]) {
+        [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"click"]];
+        [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
+        [((LevelLayer *)[self parent]) setIsTouchEnabled:NO];
+        [[CCDirector sharedDirector] resume];
+        
+        [[GameManager shared] runSceneWithID:kSkillTreeScene];
+    }
+   
+};
+
 
 @end

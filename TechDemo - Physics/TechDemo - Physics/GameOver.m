@@ -7,7 +7,8 @@
 //
 
 #import "GameOver.h"
-
+#import "SimpleAudioEngine.h"
+#import "LevelLayer.h"
 
 @implementation GameOver
 
@@ -20,5 +21,25 @@
 {
     return max(_mainMenuButton.contentSize.width*self.scaleX, _mainMenuButton.contentSize.height*self.scaleY);
 }
+
+- (void) retry:(id)sender{
+    
+    
+    [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"click"]];
+    [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
+    [((LevelLayer *)[self parent]) setIsTouchEnabled:NO];
+    [[CCDirector sharedDirector] resume];
+    
+    [[GameManager shared] runLevel:[((LevelLayer *)[self parent])level]];
+    
+};
+- (void) skillTree:(id)sender{
+    [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"click"]];
+    [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
+    [((LevelLayer *)[self parent]) setIsTouchEnabled:NO];
+    [[CCDirector sharedDirector] resume];
+    
+    [[GameManager shared] runSceneWithID:kSkillTreeScene];
+};
 
 @end

@@ -10,15 +10,14 @@ Bugs:
 - crasha de alguns em alguns jogos por algum motivo estranho (memoria? fazer profile)
     - Está a deixar memória pendurada. Não muito. Mas está
 - Quando se tira o pause o yuri dispara flechinha
+- Retry nao funciona bem, deixa o yuri sem disparar e s]o manda 1 montro (n]ivel 2)
 
 Daniela:
 Flow control:
-    - No game over: Retry, Skill Tree
     - No win: Play next chapter, Skill Tree
     - Achievement unlocked layer
-    - Na skill tree botão para fazer reset
     - Normalizar posiçoes de botoes iguais
-    - Return to skill tree no pause
+   
 
 João M:
 - Verificar se dá para actualizar as mascaras das sprites e se isso está a afectar as colisões
@@ -51,6 +50,8 @@ Afterburner:
 - Passar todas as constantes para o constants.h
 - Mostrar e calcular score no hud
 - Verificar sons que faltam
+
+-botao reset skill points
 
 Ideias:
 - Fazer uma catapulta
@@ -118,4 +119,8 @@ Ideias:
 - Slow Down implementado (com mts bugs relacionados corrigidos)
 - Yuri já não dispara quando clicamos atrás dele
 - Particulas das fire arrows e slow arrows
+
+- Na skill tree botão para fazer reset
 - Skill tree não se inicializa com as sprites das coisas compradas (solved?)
+- No game over: Retry, Skill Tree
+ - Return to skill tree no pause
