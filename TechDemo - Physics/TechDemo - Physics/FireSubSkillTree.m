@@ -27,31 +27,31 @@
         {
             case 14:
                 if (index!=0)
-                    [fire setIsEnabled:NO];
+                    [fire setIsEnabled:NO]; else [fire  setIsEnabled:YES]; 
                 break;
             case 15:
                 if (index!=0)
-                    [fireEl2 setIsEnabled:NO];
+                    [fireEl2 setIsEnabled:NO]; else  [fireEl2 setIsEnabled:YES]; 
                 break;
             case 16:
                 if (index!=0)
-                    [fireEl1 setIsEnabled:NO];
+                    [fireEl1 setIsEnabled:NO]; else [fireEl1 setIsEnabled:YES]; 
                 break;
             case 17:
                 if (index!=0)
-                    [fireEl3 setIsEnabled:NO];
+                    [fireEl3 setIsEnabled:NO]; else [fireEl3 setIsEnabled:YES]; 
                 break;
             case 18:
                 if (index!=0)
-                    [fireB3 setIsEnabled:NO];
+                    [fireB3 setIsEnabled:NO]; else  [fireB3 setIsEnabled:YES]; 
                 break;
             case 19:
                 if (index!=0)
-                    [fireB2 setIsEnabled:NO];
+                    [fireB2 setIsEnabled:NO]; else   [fireB2 setIsEnabled:YES]; 
                 break;
             case 20:
-                if (index!=0)
-                    [fireB1 setIsEnabled:NO];
+                if (index!=0) 
+                    [fireB1 setIsEnabled:NO]; else  [fireB1 setIsEnabled:YES]; 
                 break;
             default:
                 break;

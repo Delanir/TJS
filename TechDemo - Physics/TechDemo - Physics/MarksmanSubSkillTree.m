@@ -23,35 +23,34 @@
         index = [[skill objectAtIndex:i] intValue];
         switch (i) {
             case 21:
-                if (index!=0) {
-                    [marksman setIsEnabled:NO];
-                }
+                if (index!=0)
+                    [marksman setIsEnabled:NO]; else [marksman setIsEnabled:YES];  
+                
                 
                 break;
             case 22:
                 if (index!=0) 
-                [marksmanEl2 setIsEnabled:NO];
-                
+                [marksmanEl2 setIsEnabled:NO]; else [marksmanEl2  setIsEnabled:YES];                  
                 break;
             case 23:
                 if (index!=0) 
-                [marksmanEl1 setIsEnabled:NO];
+                [marksmanEl1 setIsEnabled:NO]; else [marksmanEl1 setIsEnabled:YES]; 
                 break;
             case 24:
                 if (index!=0) 
-                [marksmanEl3 setIsEnabled:NO];
+                [marksmanEl3 setIsEnabled:NO]; else [marksmanEl3  setIsEnabled:YES]; 
                 break;
             case 25:
                 if (index!=0) 
-                [marksmanB3 setIsEnabled:NO];
+                [marksmanB3 setIsEnabled:NO]; else [marksmanB3 setIsEnabled:YES]; 
                 break;
             case 26:
                 if (index!=0) 
-                [marksmanB2 setIsEnabled:NO];
+                [marksmanB2 setIsEnabled:NO]; else [marksmanB2 setIsEnabled:YES]; 
                 break;
             case 27:
                 if (index!=0)
-                [marksmanB1 setIsEnabled:NO];
+                [marksmanB1 setIsEnabled:NO]; else [marksmanB1  setIsEnabled:YES];
                 break;
             default:
                 break;

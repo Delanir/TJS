@@ -23,35 +23,35 @@
         index = [[skill objectAtIndex:i] intValue];
         switch (i) {
             case 0:
-                if (index!=0) {
-                    [ice setIsEnabled:NO];
-                }
+                if (index!=0) 
+                    [ice setIsEnabled:NO]; else [ice  setIsEnabled:YES]; 
+                
                 
                 break;
             case 1:
                 if (index!=0) 
-                [iceEl2 setIsEnabled:NO];
+                [iceEl2 setIsEnabled:NO]; else [iceEl2  setIsEnabled:YES]; 
                 
                 break;
             case 2:
                 if (index!=0) 
-                [iceEl1 setIsEnabled:NO];
+                [iceEl1 setIsEnabled:NO]; else [iceEl1 setIsEnabled:YES]; 
                 break;
             case 3:
                 if (index!=0) 
-                [iceEl3 setIsEnabled:NO];
+                [iceEl3 setIsEnabled:NO]; else [iceEl3 setIsEnabled:YES]; 
                 break;
             case 4:
                 if (index!=0) 
-                [iceB3 setIsEnabled:NO];
+                [iceB3 setIsEnabled:NO]; else [iceB3 setIsEnabled:YES]; 
                 break;
             case 5:
                 if (index!=0) 
-                [iceB2 setIsEnabled:NO];
+                [iceB2 setIsEnabled:NO]; else [iceB2 setIsEnabled:YES]; 
                 break;
             case 6:
                 if (index!=0)
-                [iceB1 setIsEnabled:NO];
+                [iceB1 setIsEnabled:NO]; else [iceB1 setIsEnabled:YES]; 
                 break;
             default:
                 break;
