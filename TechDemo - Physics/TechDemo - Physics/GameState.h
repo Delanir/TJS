@@ -41,5 +41,6 @@
 -(void)initApplicationData;
 -(void)resetApplicationData;
 -(BOOL)isFirstRun;
+-(void) resetSkillStates;
 
 @end

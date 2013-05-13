@@ -105,25 +105,25 @@
         [_fireBranch1 setVisible:YES];
     }
     if ([[skill objectAtIndex:kMarksmanMainBranch] intValue] != 0) {
-        [_marksmanMainBranch setVisible:NO];
+        [_marksmanMainBranch setVisible:YES];
     }
     if ([[skill objectAtIndex:kMarksmanBranch2] intValue] != 0) {
-        [_marksmanElement2 setVisible:NO];
+        [_marksmanElement2 setVisible:YES];
     }
     if ([[skill objectAtIndex:kMarksmanBranch1] intValue] != 0) {
-        [_marksmanElement1 setVisible:NO];
+        [_marksmanElement1 setVisible:YES];
     }
     if ([[skill objectAtIndex:kMarksmanBranch3] intValue] != 0) {
-        [_marksmanElement3 setVisible:NO];
+        [_marksmanElement3 setVisible:YES];
     }
     if ([[skill objectAtIndex:kMarksmanElement3] intValue] != 0) {
-        [_marksmanBranch3 setVisible:NO];
+        [_marksmanBranch3 setVisible:YES];
     }
     if ([[skill objectAtIndex:kMarksmanElement2] intValue] != 0) {
-        [_marksmanBranch2 setVisible:NO];
+        [_marksmanBranch2 setVisible:YES];
     }
     if ([[skill objectAtIndex: kMarksmanElement1] intValue] != 0) {
-        [_marksmanBranch1 setVisible:NO];
+        [_marksmanBranch1 setVisible:YES];
     }
     
     [fireMenu setVisible:NO];
@@ -134,6 +134,114 @@
     [cityMenu setStars];
     [marksmanMenu setVisible:NO];
     [marksmanMenu setStars];
+    
+}
+
+- (void) resetSkillTree{
+    
+    [[GameState shared]  resetSkillStates];
+    NSMutableArray *skill = [[GameState shared] skillStates];
+    
+    availableStars = DEFAULTSKILLPOINTS + [self currentStars] - [self usedStars];
+    
+    [_numberStars setString:[NSString stringWithFormat:@"%i", availableStars] ];
+    
+    if ([[skill objectAtIndex:kIceMainBranch] intValue] != 0) {
+        [_iceMainBranch setVisible:YES];
+    }
+    if ([[skill objectAtIndex:kIceElement2] intValue] != 0) {
+        [_iceElement2 setVisible:YES];
+    }
+    if ([[skill objectAtIndex: kIceElement1] intValue] != 0) {
+        [_iceElement1 setVisible:YES];
+    }
+    if ([[skill objectAtIndex:kIceElement3] intValue] != 0) {
+        [_iceElement3 setVisible:YES];
+    }
+    if ([[skill objectAtIndex:kIceBranch3] intValue] != 0) {
+        [_iceBranch3 setVisible:YES];
+    }
+    if ([[skill objectAtIndex:kIceBranch2] intValue] != 0) {
+        [_iceBranch2 setVisible:YES];
+    }
+    if ([[skill objectAtIndex:kIceBranch1] intValue] != 0) {
+        [_iceBranch1 setVisible:YES];
+    }
+    if ([[skill objectAtIndex:kCityMainBranch] intValue] != 0) {
+        [_cityMainBranch setVisible:YES];
+    }
+    if ([[skill objectAtIndex:kCityElement2] intValue] != 0) {
+        [_cityElement2 setVisible:YES];
+    }
+    if ([[skill objectAtIndex:kCityElement1] intValue] != 0) {
+        [_cityElement1 setVisible:YES];
+    }
+    if ([[skill objectAtIndex:kCityElement3] intValue] != 0) {
+        [_cityElement3 setVisible:YES];
+    }
+    if ([[skill objectAtIndex:kCityBranch3] intValue] != 0) {
+        [_cityBranch3 setVisible:YES];
+    }
+    if ([[skill objectAtIndex:kCityBranch2] intValue] != 0) {
+        [_cityBranch2 setVisible:YES];
+    }
+    if ([[skill objectAtIndex:kCityBranch1] intValue] != 0) {
+        [_cityBranch1 setVisible:YES];
+    }
+    if ([[skill objectAtIndex:kFireMainBranch] intValue] != 0) {
+        [_fireMainBranch setVisible:YES];
+    }
+    if ([[skill objectAtIndex:kFireElement2] intValue] != 0) {
+        [_fireElement2 setVisible:YES];
+    }
+    if ([[skill objectAtIndex:kFireElement1] intValue] != 0) {
+        [_fireElement1 setVisible:YES];
+    }
+    if ([[skill objectAtIndex:kFireElement3] intValue] != 0) {
+        [_fireElement3 setVisible:YES];
+    }
+    if ([[skill objectAtIndex:kFireBranch3] intValue] != 0) {
+        [_fireBranch3 setVisible:YES];
+    }
+    if ([[skill objectAtIndex:kFireBranch2 ] intValue] != 0) {
+        [_fireBranch2 setVisible:YES];
+    }
+    if ([[skill objectAtIndex:kFireBranch1] intValue] != 0) {
+        [_fireBranch1 setVisible:YES];
+    }
+    if ([[skill objectAtIndex:kMarksmanMainBranch] intValue] != 0) {
+        [_marksmanMainBranch setVisible:YES];
+    }
+    if ([[skill objectAtIndex:kMarksmanBranch2] intValue] != 0) {
+        [_marksmanElement2 setVisible:YES];
+    }
+    if ([[skill objectAtIndex:kMarksmanBranch1] intValue] != 0) {
+        [_marksmanElement1 setVisible:YES];
+    }
+    if ([[skill objectAtIndex:kMarksmanBranch3] intValue] != 0) {
+        [_marksmanElement3 setVisible:YES];
+    }
+    if ([[skill objectAtIndex:kMarksmanElement3] intValue] != 0) {
+        [_marksmanBranch3 setVisible:YES];
+    }
+    if ([[skill objectAtIndex:kMarksmanElement2] intValue] != 0) {
+        [_marksmanBranch2 setVisible:YES];
+    }
+    if ([[skill objectAtIndex: kMarksmanElement1] intValue] != 0) {
+        [_marksmanBranch1 setVisible:YES];
+    }
+    
+    [fireMenu setVisible:NO];
+    [fireMenu setStars];
+    [iceMenu setVisible:NO];
+    [iceMenu setStars];
+    [cityMenu setVisible:NO];
+    [cityMenu setStars];
+    [marksmanMenu setVisible:NO];
+    [marksmanMenu setStars];
+    
+    
+    
     
 }
 

@@ -106,6 +106,13 @@ static GameState* _sharedSingleton = nil;
     fireElementalKilledState = [NSNumber numberWithInt:0];
 }
 
+-(void) resetSkillStates{
+    [skillStates removeAllObjects];
+    for (int i = 0; i < 28; i++)
+        [skillStates addObject: [NSNumber numberWithInt:0]];
+    [self saveApplicationData];
+}
+
 -(BOOL)isFirstRun{
     for (int i = 0; i < 28; i++){
         if ([[skillStates objectAtIndex:i] intValue] != 0) {
