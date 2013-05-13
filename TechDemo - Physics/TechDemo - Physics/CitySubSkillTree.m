@@ -23,35 +23,35 @@
         index = [[skill objectAtIndex:i] intValue];
         switch (i) {
             case 7:
-                if (index!=0) {
-                    [city setIsEnabled:NO];
-                }
+                if (index!=0)
+                    [city setIsEnabled:NO]; else [city  setIsEnabled:YES]; 
+                
                 
                 break;
             case 8:
                 if (index!=0) 
-                [cityEl2 setIsEnabled:NO];
+                [cityEl2 setIsEnabled:NO]; else [cityEl2  setIsEnabled:YES]; 
                 
                 break;
             case 9:
                 if (index!=0) 
-                [cityEl1 setIsEnabled:NO];
+                [cityEl1 setIsEnabled:NO]; else [cityEl1 setIsEnabled:YES]; 
                 break;
             case 10:
                 if (index!=0) 
-                [cityEl3 setIsEnabled:NO];
+                [cityEl3 setIsEnabled:NO]; else [cityEl3 setIsEnabled:YES]; 
                 break;
             case 11:
                 if (index!=0) 
-                [cityB3 setIsEnabled:NO];
+                [cityB3 setIsEnabled:NO]; else [cityB3  setIsEnabled:YES]; 
                 break;
             case 12:
                 if (index!=0) 
-                [cityB2 setIsEnabled:NO];
+                [cityB2 setIsEnabled:NO]; else [cityB2 setIsEnabled:YES]; 
                 break;
             case 13:
                 if (index!=0)
-                [cityB1 setIsEnabled:NO];
+                [cityB1 setIsEnabled:NO]; else [cityB1 setIsEnabled:YES]; 
                 break;
             default:
                 break;
