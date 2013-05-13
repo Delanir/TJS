@@ -22,7 +22,7 @@
 #define kYuriPointsToLevel3 18
 
 //Power up base stats
-#define kYuriBasePushbackDistance 25        // 20 pixels
+#define kYuriBasePushbackDistance 32        // 20 pixels
 #define kYuriBaseSlowDownDuration 1         // one second
 #define kYuriBaseSlowDownPercentage 1.8       // times slower
 #define kYuriBaseDamageOverTimeDuration 1.6   // one second
@@ -43,6 +43,7 @@
 #define kYuriDamageOverTimeDamageNoBonus 1.0
 #define kYuriSlowDownDurationBaseBonus 1.4
 #define kYuriSlowDownPercentageBaseBonus 1.4
+#define kYuriSlowDownDamageMultiplier 3
 #define kYuriDamageOverTimeDurationBaseBonus 1.5
 #define kYuriDamageOverTimeDamageBaseBonus 1.4
 #define kYuriSlowDownDurationExtraBonus 1.8
@@ -82,6 +83,8 @@
 #define kMoatOneTimeDamagePercentage 0.2
 #define kMoatOneTimeDamageInstaKillChance 2
 #define kInstaKillChance 12
+
+#define kEnemySpeedMultiplier 9
 
 typedef enum
 {

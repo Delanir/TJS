@@ -20,22 +20,6 @@
 			<key>xdisp</key>
 			<integer>0</integer>
 			<key>ydisp</key>
-			<real>-0.8</real>
-		</dict>
-		<dict>
-			<key>type</key>
-			<string>faerie</string>
-			<key>xdisp</key>
-			<integer>0</integer>
-			<key>ydisp</key>
-			<real>0.8</real>
-		</dict>
-		<dict>
-			<key>type</key>
-			<string>faerie</string>
-			<key>xdisp</key>
-			<integer>0</integer>
-			<key>ydisp</key>
 			<real>-1.6</real>
 		</dict>
 		<dict>

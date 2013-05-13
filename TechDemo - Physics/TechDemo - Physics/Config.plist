@@ -21,7 +21,7 @@
 	<key>shout05</key>
 	<string>shout05.mp3</string>
 	<key>InitialArrows</key>
-	<integer>100</integer>
+	<integer>60</integer>
 	<key>InitialMana</key>
 	<integer>200</integer>
 	<key>existingEnemies</key>

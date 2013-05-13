@@ -39,7 +39,7 @@
 	director_.wantsFullScreenLayout = YES;
     
 	// Display FSP and SPF
-	[director_ setDisplayStats:YES];
+	//[director_ setDisplayStats:YES];
     
 	// set FPS at 60
 	[director_ setAnimationInterval:1.0/60];
@@ -77,7 +77,6 @@
 	[CCTexture2D PVRImagesHavePremultipliedAlpha:YES];
     
 	// and add the scene to the stack. The director will run it when it automatically when the view is displayed.
-//	[director_ pushScene: [IntroLayer scene]];
     
 	// Load the main menu scene from the ccbi-file
     [[GameManager shared] runSceneWithID:kMainMenuScene];

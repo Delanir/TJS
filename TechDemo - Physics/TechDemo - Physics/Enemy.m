@@ -83,8 +83,9 @@
 - (void) animateWalkLeft;
 {
     
+    
     // Create the actions
-    id actionMove = [CCMoveTo actionWithDuration:speed*8
+    id actionMove = [CCMoveTo actionWithDuration:speed*kEnemySpeedMultiplier
                                         position:ccp(-9000, sprite.position.y)];
     id actionMoveDone = [CCCallFuncN actionWithTarget:self
                                              selector:@selector(spriteMoveFinished:)];
@@ -253,7 +254,7 @@
                     fireRemainingTime = [stimulus duration] * fireVulnerability;
                     break;
                 case kSlowStimulus:
-                    [self takeDamage:[stimulus value] * iceVulnerability];
+                    [self takeDamage:[stimulus value] * kYuriSlowDownDamageMultiplier * iceVulnerability];
                     slowDownSpeed = [stimulus value];
                     coldRemainingTime = [stimulus duration] * iceVulnerability;
                     break;
