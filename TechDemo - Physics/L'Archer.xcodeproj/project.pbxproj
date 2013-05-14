@@ -296,6 +296,9 @@
 		9C9703571727805800E48924 /* Level3.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C9703561727805800E48924 /* Level3.plist */; };
 		9C9703591727806200E48924 /* Level4.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C9703581727806100E48924 /* Level4.plist */; };
 		9C97035B1727806A00E48924 /* Level5.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C97035A1727806A00E48924 /* Level5.plist */; };
+		9C9733FB1741C5E30032D905 /* Begin.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 9C9733FA1741C5060032D905 /* Begin.ccbi */; };
+		9C9733FE1741D40C0032D905 /* GetReady.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9733FD1741D40C0032D905 /* GetReady.m */; };
+		9C9734011741D41A0032D905 /* Begin.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9734001741D41A0032D905 /* Begin.m */; };
 		9C973FD717171B7900B25075 /* Icon-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C973FD617171B7800B25075 /* Icon-ipadhd.png */; };
 		9C973FD917171CE900B25075 /* icon3.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C973FD817171CE900B25075 /* icon3.png */; };
 		9C973FDB1717204700B25075 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C973FDA1717204700B25075 /* Default-Landscape~ipad.png */; };
@@ -807,6 +810,11 @@
 		9C9703561727805800E48924 /* Level3.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Level3.plist; sourceTree = "<group>"; };
 		9C9703581727806100E48924 /* Level4.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Level4.plist; sourceTree = "<group>"; };
 		9C97035A1727806A00E48924 /* Level5.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Level5.plist; sourceTree = "<group>"; };
+		9C9733FA1741C5060032D905 /* Begin.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = Begin.ccbi; sourceTree = "<group>"; };
+		9C9733FC1741D40C0032D905 /* GetReady.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetReady.h; sourceTree = "<group>"; };
+		9C9733FD1741D40C0032D905 /* GetReady.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetReady.m; sourceTree = "<group>"; };
+		9C9733FF1741D41A0032D905 /* Begin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Begin.h; sourceTree = "<group>"; };
+		9C9734001741D41A0032D905 /* Begin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Begin.m; sourceTree = "<group>"; };
 		9C973FD617171B7800B25075 /* Icon-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-ipadhd.png"; path = "Resources/Icon-ipadhd.png"; sourceTree = "<group>"; };
 		9C973FD817171CE900B25075 /* icon3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon3.png; path = ../icon3.png; sourceTree = "<group>"; };
 		9C973FDA1717204700B25075 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape~ipad.png"; path = "../Default-Landscape~ipad.png"; sourceTree = "<group>"; };
@@ -948,6 +956,10 @@
 				9C90647A1739BC68005D7D33 /* ElementalExplosion.m */,
 				9C90647C1739CC6B005D7D33 /* PushbackExplosion.h */,
 				9C90647D1739CC6B005D7D33 /* PushbackExplosion.m */,
+				9C9733FC1741D40C0032D905 /* GetReady.h */,
+				9C9733FD1741D40C0032D905 /* GetReady.m */,
+				9C9733FF1741D41A0032D905 /* Begin.h */,
+				9C9734001741D41A0032D905 /* Begin.m */,
 			);
 			name = Instants;
 			sourceTree = "<group>";
@@ -1664,6 +1676,7 @@
 		9C9D85991733FF690071B7C2 /* CocosBuilder */ = {
 			isa = PBXGroup;
 			children = (
+				9C9733FA1741C5060032D905 /* Begin.ccbi */,
 				3EE9FE1317256DAD009718EC /* LevelSelectLayer.ccb */,
 				3EE2F95F1723175E0084DF2F /* LevelSelectLayer.ccbi */,
 				3EE2F9601723175E0084DF2F /* LevelThumbnail.ccbi */,
@@ -1894,6 +1907,7 @@
 				9CEB4CAD173A0AC2004297A2 /* PeasantGroup.plist in Resources */,
 				9CEB4CAF173A0ACD004297A2 /* BlackDragonUp.plist in Resources */,
 				9C75E7A21741671900D335B1 /* WraithTaunt.plist in Resources */,
+				9C9733FB1741C5E30032D905 /* Begin.ccbi in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2066,6 +2080,8 @@
 				9C90647817398A8C005D7D33 /* IceExplosion.m in Sources */,
 				9C90647B1739BC68005D7D33 /* ElementalExplosion.m in Sources */,
 				9C90647E1739CC6C005D7D33 /* PushbackExplosion.m in Sources */,
+				9C9733FE1741D40C0032D905 /* GetReady.m in Sources */,
+				9C9734011741D41A0032D905 /* Begin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

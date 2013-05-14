@@ -9,6 +9,9 @@
 // Import the interfaces
 #import "LevelLayer.h"
 #import "GameState.h"
+#import "CCBAnimationManager.h"
+#import "GetReady.h"
+
 
 #pragma mark - Level
 
@@ -29,8 +32,6 @@ static int current_level = -1;
 {
 	// 'scene' is an autorelease object.
 	CCScene *scene = [CCScene node];
-	
-    [ResourceManager loadLevelSprites];
     
 	// 'layer' is an autorelease object.
 	LevelLayer *level = [LevelLayer node];
@@ -66,73 +67,87 @@ static int current_level = -1;
 {
     if(self = [super init])
     {
-        Hud *levelHud = [Hud node];
-        [self setHud:levelHud];
-        [self addChild:levelHud z:2000];
-        
-        CGSize winSize = [[CCDirector sharedDirector] winSize];
-        _pauseButton= [CCSprite spriteWithSpriteFrameName:@"pause.png"];
-        [_pauseButton setPosition:CGPointMake(_pauseButton.contentSize.width/2.0, winSize.height - _pauseButton.contentSize.height/2.0)];
-        
-        [_pauseButton setZOrder:2000];
-        
-        [self addChild:_pauseButton];
-        [[WaveManager shared] removeFromParentAndCleanup:NO];
-        [self addChild:[WaveManager shared]]; // Esta linha é imensos de feia. Mas tem de ser para haver update
-        
-        _pause= (PauseHUD *)[CCBReader nodeGraphFromFile:@"PauseMenu.ccbi"];
-        [self addChild:_pause];
-        
-        [_pause setZOrder:1535];
-        [_pause setVisible:NO];
-        
-        //////
-        
-        [[Registry shared] registerEntity:self withName:@"LevelLayer"];
-        [[SimpleAudioEngine sharedEngine] playBackgroundMusic:[[Config shared] getStringProperty:@"IngameMusic"] loop:YES];
-        
-        timeElapsedSinceBeginning = 1.0f;
-        manaRegenerationBonus = 1.0f;
-        healthRegenerationRate = 0.0f;
-        fire = NO;
-        gameStarted = NO;
-        
-        // Criação da cena com castelo
-        MainScene *mainScene = [[MainScene alloc] init];
-        [self addChild:mainScene z:0];
-        [mainScene release];
-        
-        // Meter yuri na cena
-        Yuri * yuri = [[Yuri alloc] init];
-        yuri.position = ccp([yuri spriteSize].width/2 + 120, winSize.height/2 + 30);     // @Hardcoded - to correct
-        [yuri setTag:9];
-        [self addChild:yuri z:1000];
-        [[Registry shared] registerEntity:yuri withName:@"Yuri"];
-        [yuri release];
-        
-        // inicializar nível
-        [self setLevel:current_level];
-        [[WaveManager shared] initializeLevelLogic:[NSString stringWithFormat:@"Level%d",level]];
-        
-        // This dummy method initializes the collision manager
-        [[CollisionManager shared] dummyMethod];
-        
-        // Prepare the changes due to the Skill Tree
-        [self prepSkillTreeChanges];
-        
-        // inicializar recursos
-        [self initializeResources];
-        
-        [self schedule:@selector(updatePreGame:)];
-#warning temp
-        [[WaveManager shared] sendWave:@"WraithTaunt" taunt:YES];
+        [self setIsTouchEnabled: YES];
     }
     
-    self.isTouchEnabled = YES;
     //    [self schedule:@selector(gameLogic:) interval:1.0];
     
     return self;
 }
+
+// Initialization done on onEnter. It happens after onExitDidTransitionStart
+- (void) onEnter
+{
+    [super onEnter];
+    [ResourceManager loadLevelSprites];
+    
+    CGSize winSize = [[CCDirector sharedDirector] winSize];
+    
+    // Criação do HUD
+    Hud *levelHud = [Hud node];
+    [self setHud:levelHud];
+    [self addChild:levelHud z:2000];
+    
+    // Criação do botão de pause
+    _pauseButton= [CCSprite spriteWithSpriteFrameName:@"pause.png"];
+    [_pauseButton setPosition:CGPointMake(_pauseButton.contentSize.width/2.0, winSize.height - _pauseButton.contentSize.height/2.0)];
+    [_pauseButton setZOrder:2000];
+    [self addChild:_pauseButton];
+    _pause= (PauseHUD *)[CCBReader nodeGraphFromFile:@"PauseMenu.ccbi"];
+    [self addChild:_pause];
+    [_pause setZOrder:1535];
+    [_pause setVisible:NO];
+    
+    // Preparar lançamento de waves
+    // Estas linhas são imensos de feias. Mas tem de ser para haver update
+    [[WaveManager shared] removeFromParentAndCleanup:NO];
+    [self addChild:[WaveManager shared]]; 
+    
+    // Adicionar entidade ao registo e começar a musica de jogo
+    [[Registry shared] registerEntity:self withName:@"LevelLayer"];
+    [[SimpleAudioEngine sharedEngine] playBackgroundMusic:[[Config shared] getStringProperty:@"IngameMusic"] loop:YES];
+    
+    // Inicialização de variáveis de jogo
+    timeElapsedSinceBeginning = 1.0f;
+    manaRegenerationBonus = 1.0f;
+    healthRegenerationRate = 0.0f;
+    fire = NO;
+    gameStarted = NO;
+    
+    // Criação da cena com castelo
+    MainScene *mainScene = [[MainScene alloc] init];
+    [self addChild:mainScene z:0];
+    [mainScene release];
+    
+    // Meter yuri na cena
+    Yuri * yuri = [[Yuri alloc] init];
+    yuri.position = ccp([yuri spriteSize].width/2 + 120, winSize.height/2 + 30);     // @Hardcoded - to correct
+    [yuri setTag:9];
+    [self addChild:yuri z:1000];
+    [[Registry shared] registerEntity:yuri withName:@"Yuri"];
+    [yuri release];
+    
+    // inicializar nível
+    [self setLevel:current_level];
+    [[WaveManager shared] initializeLevelLogic:[NSString stringWithFormat:@"Level%d",level]];
+    
+    // This dummy method initializes the collision manager
+    [[CollisionManager shared] dummyMethod];
+    
+    // Prepare the changes due to the Skill Tree
+    [self prepSkillTreeChanges];
+    
+    // inicializar recursos
+    [self initializeResources];
+    
+    [self schedule:@selector(updatePreGame:)];
+#warning temp
+    [[WaveManager shared] sendWave:@"WraithTaunt" taunt:YES];
+    [[[GetReady alloc] initWithPosition:ccp(512, 384)] autorelease];
+
+
+}
+
 
 - (void) initializeResources
 {
@@ -145,8 +160,6 @@ static int current_level = -1;
     [rm reset];
     [hud updateHUD];
 }
-
-
 
 - (void) prepSkillTreeChanges
 {
@@ -568,17 +581,15 @@ static int current_level = -1;
     [[GameState shared] setEnemiesKilledState:[NSNumber numberWithUnsignedInt:enemies]];
 }
 
--(void)onExit
+// Happens before next onEnter
+-(void)onExitTransitionDidStart
 {
+    [[CCSpriteFrameCache sharedSpriteFrameCache] removeSpriteFrames];
+    [[CCTextureCache sharedTextureCache] removeAllTextures];
     [[GameState shared] saveApplicationData];
     [[Registry shared] clearRegistry];
     [[CollisionManager shared] clearAllEntities];
     [self removeAllChildrenWithCleanup:YES];
-    
-    [[CCSpriteFrameCache sharedSpriteFrameCache] removeSpriteFrames];
-    [[CCTextureCache sharedTextureCache] removeAllTextures];
-    [super onExit];
-    
 }
 
 -(void)dealloc

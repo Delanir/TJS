@@ -26,7 +26,7 @@
 {
     [[SpriteManager shared] addSpritesToSpriteFrameCacheWithFile:@"skillTreeSS.plist" andBatchSpriteSheet:@"skillTreeSS.png"];
     self = [super init];
-
+    
     return self;
 }
 
@@ -141,7 +141,6 @@
 {
     
     [[GameState shared]  resetSkillStates];
-    NSMutableArray *skill = [[GameState shared] skillStates];
     
     availableStars = DEFAULTSKILLPOINTS + [self currentStars] - [self usedStars];
     
@@ -150,7 +149,7 @@
     [_iceMainBranch setVisible:NO];
     [_iceElement2 setVisible:NO];
     
-      [_iceElement1 setVisible:NO];
+    [_iceElement1 setVisible:NO];
     [_iceElement3 setVisible:NO];
     [_iceBranch3 setVisible:NO];
     [_iceBranch2 setVisible:NO];
@@ -159,7 +158,7 @@
     [_cityElement2 setVisible:NO];
     [_cityElement1 setVisible:NO];
     [_cityElement3 setVisible:NO];
-   [_cityBranch3 setVisible:NO];
+    [_cityBranch3 setVisible:NO];
     [_cityBranch2 setVisible:NO];
     [_cityBranch1 setVisible:NO];
     [_fireMainBranch setVisible:NO];
@@ -176,7 +175,7 @@
     [_marksmanBranch3 setVisible:NO];
     [_marksmanBranch2 setVisible:NO];
     [_marksmanBranch1 setVisible:NO];
-   
+    
     [fireMenu setVisible:NO];
     [fireMenu setStars];
     [iceMenu setVisible:NO];
@@ -186,7 +185,7 @@
     [marksmanMenu setVisible:NO];
     [marksmanMenu setStars];
     
-
+    
     
 }
 
@@ -205,7 +204,7 @@
 
 - (void) pressedFireSymbol:(id)sender
 {
- 
+    
     if ([fireMenu visible]) {
         [fireMenu setVisible:NO];
     }else{
@@ -246,19 +245,19 @@
 
 - (void) pressedMainMenu:(id)sender
 {
-   [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"click"]];
+    [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"click"]];
     [[GameManager shared] runSceneWithID:kMainMenuScene];
 }
 
 -(void)onExit
 {
-  
-  [[[CCDirector sharedDirector] runningScene] stopAllActions];
-  [[[CCDirector sharedDirector] runningScene] unscheduleAllSelectors];
-  [self removeAllChildrenWithCleanup:YES];
+    
+    [[[CCDirector sharedDirector] runningScene] stopAllActions];
+    [[[CCDirector sharedDirector] runningScene] unscheduleAllSelectors];
+    [self removeAllChildrenWithCleanup:YES];
     [[CCSpriteFrameCache sharedSpriteFrameCache] removeSpriteFrames];
     [[CCTextureCache sharedTextureCache] removeAllTextures];
-  [super onExit];
+    [super onExit];
 }
 
 -(void)dealloc

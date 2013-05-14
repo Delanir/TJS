@@ -93,10 +93,11 @@
     CGSize winSize = [[CCDirector sharedDirector] winSize];
     [[self sprite] runAction:walkAction];
     CCFiniteTimeAction * tauntAction = [CCSequence actions:
-                                        [CCMoveTo actionWithDuration:[self speed]/3 position:ccp(3 * winSize.width/4,[[self sprite] position].y)],
+                                        [CCMoveTo actionWithDuration:[self speed]/2 position:ccp(3 * winSize.width/4,[[self sprite] position].y)],
                                         [CCCallFuncN actionWithTarget:self selector:@selector(stopWalking)],
+                                        [CCRepeat actionWithAction:[CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"w_taunt" ]] times:2],
                                         [CCCallFuncN actionWithTarget:self selector:@selector(startGame)],
-                                        [CCRepeat actionWithAction:[CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"w_taunt" ]] times:3],
+                                        [CCRepeat actionWithAction:[CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"w_taunt" ]] times:2],
                                         [CCCallFuncN actionWithTarget:self selector:@selector(resumeFromTaunt)],
                                         nil];
     [[self sprite] runAction:tauntAction];
@@ -104,6 +105,7 @@
 
 - (void) startGame
 {
+    [healthBar setPosition:ccp([sprite position].x, [sprite position].y + [sprite contentSize].height/2 + 2)];
     LevelLayer * levelLayer = [[Registry shared] getEntityByName:@"LevelLayer"];
     [levelLayer setGameStarted:YES];
 }
@@ -116,7 +118,6 @@
 - (void) resumeFromTaunt
 {
     [[self sprite] stopAllActions];
-    [healthBar setPosition:ccp([sprite position].x, [sprite position].y + [sprite contentSize].height/2 + 2)];
     [self setCurrentState:kWalkEnemyState];
     [self setupActions];
 }
