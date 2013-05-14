@@ -164,11 +164,6 @@
             smokeTop.endColor = thisColor;
             smokeBottom.endColor = thisColor;
             
-    //        [smokeTop setVisible:YES];
-    //        [smokeBottom setVisible:YES];
-    //        [fireTop setVisible:YES];
-    //        [fireBottom setVisible:YES];
-            
             status = kScratchedWall;
         }
         else if (health < (0.5 * maxHealth) && health >= (0.25 * maxHealth) && (status == kScratchedWall || status == kWreckedWall))

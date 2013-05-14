@@ -188,8 +188,7 @@
 {
     if([healthBar opacity] > 0)
         [healthBar setOpacity:[healthBar opacity] - dt * 0.08];
-    
-    
+
     // Damage over time treatment
     if (fireRemainingTime > 0)
     {

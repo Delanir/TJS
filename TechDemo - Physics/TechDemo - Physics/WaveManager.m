@@ -40,8 +40,8 @@ static WaveManager* _sharedSingleton = nil;
 
 -(id)init
 {
-	self = [super init];
-	if (self != nil) {
+    if (self = [super init])
+    {
         waves = [[NSMutableArray alloc] init];
     }
 	return self;
@@ -62,6 +62,7 @@ static WaveManager* _sharedSingleton = nil;
 -(void) beginWaves
 {
     [self schedule:@selector(sendNextWave) interval:intervalBetweenWaves];
+    [self schedule:@selector(sendEnemy) interval:intervalBetweenWaves/2];
     [self sendNextWave];
 }
 
@@ -120,6 +121,12 @@ static WaveManager* _sharedSingleton = nil;
     }
 }
 
+-(void) sendEnemy
+{
+    LevelLayer * ll = [[Registry shared] getEntityByName:@"LevelLayer"];
+    [ll addEnemy:[[EnemyFactory shared] generateRandomEnemy]];
+}
+
 - (BOOL) anymoreWaves
 {
     return [waves count] > 0;
@@ -129,7 +136,6 @@ static WaveManager* _sharedSingleton = nil;
 {
     [waves removeAllObjects];
     self.enemies = 0;
-    // todo
 }
 
 -(void)dealloc

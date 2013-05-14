@@ -28,27 +28,23 @@
 	<array>
 		<dict>
 			<key>type</key>
-			<string>skeleton</string>
-			<key>class</key>
-			<string>Skeleton</string>
-			<key>initSprite</key>
-			<string>sk_walk_01.png</string>
-		</dict>
-		<dict>
-			<key>type</key>
 			<string>peasant</string>
 			<key>class</key>
 			<string>Peasant</string>
 			<key>initSprite</key>
 			<string>p_walk01.png</string>
+			<key>chance</key>
+			<integer>50</integer>
 		</dict>
 		<dict>
 			<key>type</key>
-			<string>faerie</string>
+			<string>skeleton</string>
 			<key>class</key>
-			<string>FaerieDragon</string>
+			<string>Skeleton</string>
 			<key>initSprite</key>
-			<string>fd_fly01.png</string>
+			<string>sk_walk_01.png</string>
+			<key>chance</key>
+			<integer>40</integer>
 		</dict>
 		<dict>
 			<key>type</key>
@@ -57,14 +53,8 @@
 			<string>Zealot</string>
 			<key>initSprite</key>
 			<string>z_walk01.png</string>
-		</dict>
-		<dict>
-			<key>type</key>
-			<string>fireelemental</string>
-			<key>class</key>
-			<string>FireElemental</string>
-			<key>initSprite</key>
-			<string>f_walk_01.png</string>
+			<key>chance</key>
+			<integer>30</integer>
 		</dict>
 		<dict>
 			<key>type</key>
@@ -73,6 +63,28 @@
 			<string>Wraith</string>
 			<key>initSprite</key>
 			<string>w_fly_01.png</string>
+			<key>chance</key>
+			<integer>20</integer>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>fireelemental</string>
+			<key>class</key>
+			<string>FireElemental</string>
+			<key>initSprite</key>
+			<string>f_walk_01.png</string>
+			<key>chance</key>
+			<integer>10</integer>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>faerie</string>
+			<key>class</key>
+			<string>FaerieDragon</string>
+			<key>initSprite</key>
+			<string>fd_fly01.png</string>
+			<key>chance</key>
+			<integer>5</integer>
 		</dict>
 		<dict>
 			<key>type</key>
@@ -81,6 +93,8 @@
 			<string>BlackDragon</string>
 			<key>initSprite</key>
 			<string>bd_fly_01.png</string>
+			<key>chance</key>
+			<integer>2</integer>
 		</dict>
 	</array>
 	<key>MainMenuMusic</key>

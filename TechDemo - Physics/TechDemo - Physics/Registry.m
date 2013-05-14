@@ -42,7 +42,8 @@ static Registry* _sharedSingleton = nil;
 -(id)init
 {
 	self = [super init];
-	if (self != nil) {
+	if (self != nil)
+    {
 		// initialize stuff here
         registry = [[NSMutableDictionary alloc] init];
     }

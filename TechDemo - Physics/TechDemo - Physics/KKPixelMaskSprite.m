@@ -94,13 +94,6 @@ static Class PixelMaskSpriteClass = nil;
 	return self;
 }
 
--(void) updatePixelMask
-{
-//#warning update pixel mask
-//    CCTexture2D *tex =[[self displayedFrame] texture] ;
-    
-}
-
 
 -(id) initWithSpriteFrameName:(NSString *)spriteFrameName alphaThreshold:(UInt8)alphaThreshold
 {
@@ -173,7 +166,6 @@ static Class PixelMaskSpriteClass = nil;
 	return self; 
     
 }
-
 
 +(id) spriteWithFile:(NSString *)filename
 {

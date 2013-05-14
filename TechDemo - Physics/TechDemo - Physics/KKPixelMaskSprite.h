@@ -46,19 +46,20 @@
 }
 
 #if USE_BITARRAY
-@property (nonatomic, readonly) bit_array_t* pixelMask;
+@property (nonatomic) bit_array_t* pixelMask;
 #else
-@property (nonatomic, readonly) BOOL* pixelMask;
+@property (nonatomic) BOOL* pixelMask;
 #endif
 
-@property (nonatomic, readonly) NSUInteger pixelMaskWidth;
-@property (nonatomic, readonly) NSUInteger pixelMaskHeight;
-@property (nonatomic, readonly) NSUInteger pixelMaskSize;
+@property (nonatomic) NSUInteger pixelMaskWidth;
+@property (nonatomic) NSUInteger pixelMaskHeight;
+@property (nonatomic) NSUInteger pixelMaskSize;
 
 // alpha threshold determines how transparent a pixel can be to still be included in the pixel mask
 // by default only fully opaque pixels (alpha threshold = 255) are considered
 -(id) initWithFile:(NSString *)filename alphaThreshold:(UInt8)alphaThreshold;
 -(id) initWithSpriteFrameName:(NSString *)spriteFrameName alphaThreshold:(UInt8)alphaThreshold;
+
 +(id) spriteWithFile:(NSString *)filename;
 +(id) spriteWithFile:(NSString *)filename alphaThreshold:(UInt8)alphaThreshold;
 +(id) spriteWithSpriteFrameName:(NSString *)spriteFrame alphaThreshold:(UInt8)alphaThreshold;
@@ -68,7 +69,5 @@
 
 // Util
 - (UIImage *) renderUIImageFromSprite :(CCSprite *)sprite;
-
--(void) updatePixelMask;
 
 @end

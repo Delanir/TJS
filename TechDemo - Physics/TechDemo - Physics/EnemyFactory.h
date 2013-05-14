@@ -14,17 +14,17 @@
 
 @interface EnemyFactory : CCScene
 {
+    float enemyChanceTotal;
     NSArray * enemyTypes;
 }
 
 @property (nonatomic, retain) NSArray * enemyTypes;
+@property float enemyChanceTotal;
 
 +(EnemyFactory*)shared;
 
--(Peasant*)generatePeasant;
--(FaerieDragon*)generateFaerieDragon;
--(Zealot*)generateZealot;
 -(Enemy*)generateEnemyWithType:(NSString*) type vertical:(int) vpos displacement:(CGPoint) disp taunt:(BOOL) isTaunt;
+-(Enemy*)generateRandomEnemy;
 
 @end
 

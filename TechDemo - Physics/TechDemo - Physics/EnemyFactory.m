@@ -10,7 +10,7 @@
 
 @implementation EnemyFactory
 
-@synthesize enemyTypes;
+@synthesize enemyTypes, enemyChanceTotal;
 
 static EnemyFactory* _sharedSingleton = nil;
 
@@ -39,51 +39,46 @@ static EnemyFactory* _sharedSingleton = nil;
 	return nil;
 }
 
--(id)init {
-	self = [super init];
-	if (self != nil) {
+-(id)init
+{
+	if (self = [super init])
+    {
+        enemyChanceTotal = 0;
 		enemyTypes = [[Config shared] getArrayProperty:@"existingEnemies"];
+        for ( NSDictionary * enemy in enemyTypes)
+        {
+            NSNumber * chance = [enemy objectForKey:@"chance"];
+            enemyChanceTotal += [chance floatValue];
+        }
     }
 	return self;
 }
 
 
 
--(Peasant*)generatePeasant
+
+
+-(Enemy*)generateRandomEnemy
 {
-    Peasant *peasant = [[Peasant alloc] initWithSprite:@"p_walk01.png"];
-    [peasant placeRandomly];
-    [peasant setupActions];
+    Enemy * newEnemy = nil;
+    float randomSeed = arc4random_uniform(enemyChanceTotal);
+    float count = 0;
     
-    [peasant autorelease];
-    
-    return peasant;
-    
+    for ( NSDictionary * enemy in enemyTypes)
+    {
+        NSNumber * chance = [enemy objectForKey:@"chance"];
+        count += [chance floatValue];
+        if (count > randomSeed)
+        {
+            CGSize winSize = [[CCDirector sharedDirector] winSize];
+            int positionOfCreation = arc4random_uniform(2*winSize.height/3) + winSize.height/6;
+            newEnemy = [self generateEnemyWithType:[enemy objectForKey:@"type"] vertical:positionOfCreation displacement:ccp(0,0) taunt:NO];
+            break;
+        }
+    }
+    return newEnemy;
 }
 
--(FaerieDragon*)generateFaerieDragon
-{
-    FaerieDragon *faerieDragon = [[FaerieDragon alloc] initWithSprite:@"fd_fly01.png"];
-    [faerieDragon placeRandomly];
-    [faerieDragon setupActions];
-    
-    [faerieDragon autorelease];
-    
-    return faerieDragon;
-    
-}
-
--(Zealot*)generateZealot
-{
-    Zealot *zealot = [[Zealot alloc] initWithSprite:@"z_walk01.png"];
-    [zealot placeRandomly];
-    [zealot setupActions];
-    
-    [zealot autorelease];
-    
-    return zealot;
-    
-}
 
 -(Enemy*)generateEnemyWithType:(NSString*) type vertical:(int) vpos displacement:(CGPoint) disp taunt:(BOOL) isTaunt;
 {
@@ -97,7 +92,6 @@ static EnemyFactory* _sharedSingleton = nil;
         {
             NSString * className = [enemy objectForKey:@"class"];
             NSString * spriteFile = [enemy objectForKey:@"initSprite"];
-            
             newEnemy = [NSClassFromString(className) alloc];
             [newEnemy initWithSprite:spriteFile initialState:kWalkEnemyState];
             
