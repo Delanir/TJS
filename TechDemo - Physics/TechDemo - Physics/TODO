@@ -14,9 +14,9 @@ Bugs:
 
 Daniela:
 Flow control:
-    - No win: Play next chapter, Skill Tree
+    
     - Achievement unlocked layer
-    - Normalizar posiçoes de botoes iguais
+    
 
 João M:
 - Taunting: 
@@ -37,19 +37,19 @@ João A:
 User Feedback:
     - Custo de arrows
     - Custo de reparação
-    - Número de estrelas ganhas no final de cada nível
+    
     - Achievements unlocked warning
     - Tutorial
 
 Afterburner:
-- Passar includes para .h
+
 - Fazer projectiles do zealot
 - Loading Screen (caso se justifique) com base em chunks
 - Passar todas as constantes para o constants.h
 - Mostrar e calcular score no hud
 - Verificar sons que faltam
 
--botao reset skill points
+
 
 Ideias:
 - Fazer uma catapulta
@@ -125,3 +125,10 @@ Ideias:
 - No game over: Retry, Skill Tree
 - Return to skill tree no pause
 - Bichos aleatórios (definir um número deles por nível (entre waves, por exemplo)
+- Normalizar posiçoes de botoes iguais
+    - No win: Play next chapter, Skill Tree
+    
+- Número de estrelas ganhas no final de cada nível
+-botao reset skill points
+- Passar includes para .h
+

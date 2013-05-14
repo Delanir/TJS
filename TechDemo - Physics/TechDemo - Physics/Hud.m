@@ -136,6 +136,26 @@
         buyButton.position = ccp(310, 64);
         repairButton.position = ccp(410,64);
         
+        // informacao do custo
+        buyCost= [CCLabelTTF labelWithString: [NSString stringWithFormat:@"%i", BUYARROWSCOST] fontName:@"Futura" fontSize:24];
+       
+        [buyCost setAnchorPoint:ccp(0,0.5)];
+        
+        buyCost.position = CGPointMake(310, 30);
+        
+        CCSprite * moneySprite1 = [CCSprite spriteWithSpriteFrameName:@"Coins.png"];
+        [moneySprite1  setPosition:ccp(310-[moneySprite1 contentSize].width/2.0,30)];
+        
+        repairCost= [CCLabelTTF labelWithString: [NSString stringWithFormat:@"%i",WALLREPAIRCOST] fontName:@"Futura" fontSize:24];
+        
+        [repairCost setAnchorPoint:ccp(0,0.5)];
+        
+        repairCost.position = CGPointMake(410, 30);
+        CCSprite * moneySprite2 = [CCSprite spriteWithSpriteFrameName:@"Coins.png"];
+        [moneySprite2  setPosition:ccp(410-[moneySprite2 contentSize].width/2.0,30)];
+        
+        //////////////////
+        
 
         
         buttonsMenu = [CCMenu menuWithItems:iceToggleButton, fireToggleButton, pushBackToggleButton, buyButton, repairButton, nil];
@@ -152,6 +172,10 @@
         [self addChild:healthProgress z:1];
         [self addChild:label1 z:1];
         [self addChild:label2 z:1];
+        [self addChild:buyCost z:1];
+        [self addChild:repairCost z:1];
+        [self addChild:moneySprite1 z:1];
+        [self addChild:moneySprite2 z:1];
     }
     
     self.isTouchEnabled = YES;
