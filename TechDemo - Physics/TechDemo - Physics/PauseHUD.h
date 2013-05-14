@@ -11,12 +11,14 @@
 #import "CCBReader.h"
 
 @interface PauseHUD : CCNode{
-  CCSprite *_pause;
-  CCSprite *_menu;
+    CCSprite *_pause;
+    CCSprite *_menu;
+    CCSprite *_retry;
 }
 
 
 -(CCSprite *) getPauseButton;
 -(CCSprite *) getMenuButton;
+-(CCSprite *) getRetryButton;
 
 @end

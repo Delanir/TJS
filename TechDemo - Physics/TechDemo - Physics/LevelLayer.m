@@ -619,6 +619,13 @@ static int current_level = -1;
             [[CCDirector sharedDirector] resume];
             [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"click"]];
             [[GameManager shared] runSceneWithID:kMainMenuScene];
+        }else if (_pause.visible&&
+                  [self checkRectangularButtonPressed:[_pause getRetryButton] givenTouchPoint:locationT]){
+            [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
+            [self setIsTouchEnabled:NO];
+            [[CCDirector sharedDirector] resume];
+            [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"click"]];
+            [[GameManager shared] runLevel:level];
         }
 }
 
@@ -639,10 +646,9 @@ static int current_level = -1;
         CGSize winSize = [[CCDirector sharedDirector] winSize];
         CGPoint locationT=[touchLocation locationInView:[touchLocation view]];
         locationT.y=winSize.height-locationT.y;
-        CGPoint btnPosition = _gameOver.mainMenuButtonPosition;
-        float btnRadius = _gameOver.mainMenuButtonRadius/2;
         
-        if ( ccpDistance(btnPosition, locationT)<=btnRadius)
+        
+        if (  [self checkRectangularButtonPressed:[_gameOver getMenuButton] givenTouchPoint:locationT])
         {
             [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
             [self setIsTouchEnabled:NO];
@@ -650,6 +656,19 @@ static int current_level = -1;
             
             [[GameManager shared] runSceneWithID:kSelectLevel];
             
+        }else if ([self checkRectangularButtonPressed:[_gameOver getRetryButton] givenTouchPoint:locationT]){
+            [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
+            [self setIsTouchEnabled:NO];
+            [[CCDirector sharedDirector] resume];
+            [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"click"]];
+            [[GameManager shared] runLevel:level];
+        }else if ([self checkRectangularButtonPressed:[_gameOver getSkillButton] givenTouchPoint:locationT]){
+            [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"click"]];
+            [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
+            [self setIsTouchEnabled:NO];
+            [[CCDirector sharedDirector] resume];
+            
+            [[GameManager shared] runSceneWithID:kSkillTreeScene];
         }
     }else
         return;
@@ -663,10 +682,9 @@ static int current_level = -1;
         CGSize winSize = [[CCDirector sharedDirector] winSize];
         CGPoint locationT = [touchLocation locationInView:[touchLocation view]];
         locationT.y = winSize.height-locationT.y;
-        CGPoint btnPosition = _gameWin.mainMenuButtonPosition;
-        float btnRadius = _gameWin.mainMenuButtonRadius/2;
         
-        if ( ccpDistance(btnPosition, locationT)<=btnRadius)
+        
+        if ( [self checkRectangularButtonPressed:[_gameWin getMenuButton] givenTouchPoint:locationT])
         {
             [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"click"]];
             [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
@@ -674,7 +692,21 @@ static int current_level = -1;
             [[CCDirector sharedDirector] resume];
             
             [[GameManager shared] runSceneWithID:kSelectLevel];
+        }else if ([[_gameWin getPlayButton] visible]&&[self checkRectangularButtonPressed:[_gameWin getPlayButton] givenTouchPoint:locationT]){
+            [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
+            [self setIsTouchEnabled:NO];
+            [[CCDirector sharedDirector] resume];
+            [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"click"]];
+            [[GameManager shared] runLevel:(level+1)];
+        }else if ([self checkRectangularButtonPressed:[_gameWin getSkillButton] givenTouchPoint:locationT]){
+            [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"click"]];
+            [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
+            [self setIsTouchEnabled:NO];
+            [[CCDirector sharedDirector] resume];
+            
+            [[GameManager shared] runSceneWithID:kSkillTreeScene];
         }
+
     }else
         return;
     
@@ -713,6 +745,11 @@ static int current_level = -1;
 -(void) gameWin
 {
     _gameWin = (GameWin *)[CCBReader nodeGraphFromFile:@"GameWin.ccbi"];
+    
+    if (level == [[[GameState shared] starStates] count]) {
+        [_gameWin disablePlayNext];
+    }
+    
     [self addChild:_gameWin];
     [_gameWin setZOrder:1535];
     [[CCDirector sharedDirector] pause];

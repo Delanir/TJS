@@ -12,10 +12,19 @@
 
 @interface GameWin : CCNode {
     CCSprite * _mainMenuButton;
+    
+    CCSprite * _menu;
+    CCSprite * _skill;
+    CCSprite * _play;
 }
 
--(CGPoint) mainMenuButtonPosition;
--(float) mainMenuButtonRadius;
 
+-(CCSprite *) getMenuButton;
+
+-(CCSprite *) getPlayButton;
+
+-(CCSprite *) getSkillButton;
+
+-(void) disablePlayNext;
 
 @end
