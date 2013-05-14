@@ -489,7 +489,7 @@ static int current_level = -1;
  */
 
 
--(void) calculateAndUpdateNumberOfStars
+-(int) calculateAndUpdateNumberOfStars
 {
     // Pontuacao:
     // 1/4 accuracy
@@ -507,6 +507,7 @@ static int current_level = -1;
     
     if (numberStars > [currentStars intValue])
         [stars replaceObjectAtIndex:current_level-1 withObject: [NSNumber numberWithInt:numberStars]];
+    return numberStars;
 }
 
 
@@ -694,7 +695,10 @@ static int current_level = -1;
     [_gameWin setZOrder:1535];
     [[CCDirector sharedDirector] pause];
     
-    [self calculateAndUpdateNumberOfStars];
+    ;
+//    Coloca estrelas
+    [_gameWin setStars:[self calculateAndUpdateNumberOfStars]];
+    
     [self makeMoneyPersistent];
     [self makeEnemiesKilledPersistent];
     

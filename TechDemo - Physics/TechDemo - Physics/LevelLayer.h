@@ -79,7 +79,7 @@
 -(void) pauseCheck:(UITouch *)touchLocation;
 -(void) gameOver;
 -(void) gameWin;
--(void) calculateAndUpdateNumberOfStars;
+-(int) calculateAndUpdateNumberOfStars;
 -(void) makeMoneyPersistent;
 -(void) makeEnemiesKilledPersistent;
 
