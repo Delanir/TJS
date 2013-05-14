@@ -10,14 +10,12 @@ Bugs:
 - crasha de alguns em alguns jogos por algum motivo estranho (memoria? fazer profile)
     - Está a deixar memória pendurada. Não muito. Mas está
 - Quando se tira o pause o yuri dispara flechinha
-- Retry nao funciona bem, deixa o yuri sem disparar e s]o manda 1 montro (n]ivel 2)
 
 Daniela:
 Flow control:
     - No win: Play next chapter, Skill Tree
     - Achievement unlocked layer
     - Normalizar posiçoes de botoes iguais
-   
 
 João M:
 - Verificar se dá para actualizar as mascaras das sprites e se isso está a afectar as colisões
@@ -31,6 +29,7 @@ Resources:
     - som do impacto tem de ser corrigido
     - Som nas explosões
     - Som do taunt
+    - Sprite do reset leaderboard
 
 Ricardo:
 - Utilização do Flurry
@@ -55,6 +54,9 @@ Afterburner:
 
 Ideias:
 - Fazer uma catapulta
+- Checkpoints (wave de CP)
+- Skill points por achievements
+- Fazer modo endless
  
 
 

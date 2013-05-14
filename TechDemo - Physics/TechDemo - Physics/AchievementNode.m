@@ -30,13 +30,10 @@
 
 -(void) setImage:(NSString *)sprite
 {
-   // NSLog(@"Change image to : ",sprite);
     CCSprite * spriteImage1 = [CCSprite spriteWithSpriteFrameName:sprite];
     CCSprite * spriteImage2 = [CCSprite spriteWithSpriteFrameName:sprite];
     [spriteShield setNormalImage: spriteImage1];
     [spriteShield setSelectedImage: spriteImage2];
-//    spriteWithSpriteFrameName
-//    spriteShield = [CCSprite spriteWithFile:@"achievements_skull.png"];
 }
 
 @end

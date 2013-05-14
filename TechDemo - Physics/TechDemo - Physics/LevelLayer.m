@@ -108,7 +108,6 @@ static int current_level = -1;
     [[SimpleAudioEngine sharedEngine] playBackgroundMusic:[[Config shared] getStringProperty:@"IngameMusic"] loop:YES];
     
     // Inicialização de variáveis de jogo
-    timeElapsedSinceBeginning = 1.0f;
     manaRegenerationBonus = 1.0f;
     healthRegenerationRate = 0.0f;
     fire = NO;
@@ -436,65 +435,6 @@ static int current_level = -1;
     [self addChild:newEnemy z:zOrder];
     
     [[CollisionManager shared] addToTargets:newEnemy];
-    [[ResourceManager shared] increaseEnemyCount];
-}
-
-/**
- *
- * Unused methods (ghost code)
- *
- */
-
-
--(void)gameLogic:(ccTime)dt
-{
-    timeElapsedSinceBeginning += dt;
-    
-    if((int)floor(timeElapsedSinceBeginning) % 5 == 1)
-        [self addPeasant];
-    if((int)floor(timeElapsedSinceBeginning) % 15 == 1)
-        [self addFaerieDragon];
-    if((int)floor(timeElapsedSinceBeginning) % 10 == 1)
-        [self addZealot];
-}
-
--(void)addPeasant
-{
-    Peasant * peasant  = [[EnemyFactory shared] generatePeasant];
-    
-    NSInteger zOrder = [[CCDirector sharedDirector] winSize].height - [peasant sprite].position.y;
-    
-    [self addChild:peasant z:zOrder];
-    
-    peasant.tag = 1;
-    [[CollisionManager shared] addToTargets:peasant];
-    [[ResourceManager shared] increaseEnemyCount];
-}
-
--(void)addFaerieDragon
-{
-    FaerieDragon * faerieDragon = [[EnemyFactory shared] generateFaerieDragon];
-    
-    NSInteger zOrder = [[CCDirector sharedDirector] winSize].height - [faerieDragon sprite].position.y;
-    
-    [self addChild:faerieDragon z:zOrder];
-    
-    faerieDragon.tag = 3;
-    [[CollisionManager shared] addToTargets:faerieDragon];
-    [[ResourceManager shared] increaseEnemyCount];
-    
-}
-
--(void)addZealot
-{
-    Zealot * zealot = [[EnemyFactory shared] generateZealot];
-    
-    NSInteger zOrder = [[CCDirector sharedDirector] winSize].height - [zealot sprite].position.y;
-    
-    [self addChild:zealot z:zOrder];
-    
-    zealot.tag = 4;
-    [[CollisionManager shared] addToTargets:zealot];
     [[ResourceManager shared] increaseEnemyCount];
 }
 

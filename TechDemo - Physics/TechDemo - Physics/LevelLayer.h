@@ -64,7 +64,6 @@
     float manaRegenerationBonus, healthRegenerationRate;
     BOOL fire, gameStarted;
     Hud *hud;
-    double timeElapsedSinceBeginning;
     CGPoint location;
 }
 @property (nonatomic,retain) Hud *hud;
@@ -75,8 +74,6 @@
 // returns a CCScene that contains the HelloWorldLayer as the only child
 +(CCScene *) scene;
 +(void)setCurrentLevel:(int) newLevel;
-
-///////Previously in LLA
 
 -(void) togglePause;
 -(void) pauseCheck:(UITouch *)touchLocation;
