@@ -10,6 +10,7 @@ Bugs:
 - crasha de alguns em alguns jogos por algum motivo estranho (memoria? fazer profile)
     - Está a deixar memória pendurada. Não muito. Mas está
 - Quando se tira o pause o yuri dispara flechinha
+- Verificar se dá para actualizar as mascaras das sprites. Isso está a afectar as colisões
 
 Daniela:
 Flow control:
@@ -18,11 +19,9 @@ Flow control:
     - Normalizar posiçoes de botoes iguais
 
 João M:
-- Verificar se dá para actualizar as mascaras das sprites e se isso está a afectar as colisões
 - Taunting: 
     - tá hardcoded para a wraith. Generalizar/Fazer para mais
 - Volume separado de fx e music
-- Bichos aleatórios (definir um número deles por nível (entre waves, por exemplo)
 
 Resources:
     - Dendroids!
@@ -121,8 +120,8 @@ Ideias:
 - Slow Down implementado (com mts bugs relacionados corrigidos)
 - Yuri já não dispara quando clicamos atrás dele
 - Particulas das fire arrows e slow arrows
-
 - Na skill tree botão para fazer reset
 - Skill tree não se inicializa com as sprites das coisas compradas (solved?)
 - No game over: Retry, Skill Tree
- - Return to skill tree no pause
+- Return to skill tree no pause
+- Bichos aleatórios (definir um número deles por nível (entre waves, por exemplo)
