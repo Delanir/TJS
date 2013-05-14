@@ -9,6 +9,9 @@
 // Import the interfaces
 #import "LevelLayer.h"
 #import "GameState.h"
+#import "CCBAnimationManager.h"
+#import "GetReady.h"
+
 
 #pragma mark - Level
 
@@ -80,28 +83,31 @@ static int current_level = -1;
     
     CGSize winSize = [[CCDirector sharedDirector] winSize];
     
+    // Criação do HUD
     Hud *levelHud = [Hud node];
     [self setHud:levelHud];
     [self addChild:levelHud z:2000];
     
+    // Criação do botão de pause
     _pauseButton= [CCSprite spriteWithSpriteFrameName:@"pause.png"];
     [_pauseButton setPosition:CGPointMake(_pauseButton.contentSize.width/2.0, winSize.height - _pauseButton.contentSize.height/2.0)];
-    
     [_pauseButton setZOrder:2000];
-    
     [self addChild:_pauseButton];
-    [[WaveManager shared] removeFromParentAndCleanup:NO];
-    [self addChild:[WaveManager shared]]; // Esta linha é imensos de feia. Mas tem de ser para haver update
-    
     _pause= (PauseHUD *)[CCBReader nodeGraphFromFile:@"PauseMenu.ccbi"];
     [self addChild:_pause];
-    
     [_pause setZOrder:1535];
     [_pause setVisible:NO];
     
+    // Preparar lançamento de waves
+    // Estas linhas são imensos de feias. Mas tem de ser para haver update
+    [[WaveManager shared] removeFromParentAndCleanup:NO];
+    [self addChild:[WaveManager shared]]; 
+    
+    // Adicionar entidade ao registo e começar a musica de jogo
     [[Registry shared] registerEntity:self withName:@"LevelLayer"];
     [[SimpleAudioEngine sharedEngine] playBackgroundMusic:[[Config shared] getStringProperty:@"IngameMusic"] loop:YES];
     
+    // Inicialização de variáveis de jogo
     timeElapsedSinceBeginning = 1.0f;
     manaRegenerationBonus = 1.0f;
     healthRegenerationRate = 0.0f;
@@ -137,6 +143,8 @@ static int current_level = -1;
     [self schedule:@selector(updatePreGame:)];
 #warning temp
     [[WaveManager shared] sendWave:@"WraithTaunt" taunt:YES];
+    [[[GetReady alloc] initWithPosition:ccp(512, 384)] autorelease];
+
 
 }
 
