@@ -14,7 +14,6 @@ Bugs:
 
 Daniela:
 Flow control:
-    
     - Achievement unlocked layer
     
 
@@ -35,14 +34,10 @@ Ricardo:
 
 João A:
 User Feedback:
-    - Custo de arrows
-    - Custo de reparação
-    
     - Achievements unlocked warning
     - Tutorial
 
 Afterburner:
-
 - Fazer projectiles do zealot
 - Loading Screen (caso se justifique) com base em chunks
 - Passar todas as constantes para o constants.h
@@ -131,4 +126,6 @@ Ideias:
 - Número de estrelas ganhas no final de cada nível
 -botao reset skill points
 - Passar includes para .h
+- Custo de arrows
+    - Custo de reparação
 
