@@ -12,6 +12,8 @@
 #import "CCBAnimationManager.h"
 #import "GetReady.h"
 
+#import "AchievementUnlocked.h"
+
 
 #pragma mark - Level
 
@@ -143,8 +145,6 @@ static int current_level = -1;
 #warning temp
     [[WaveManager shared] sendWave:@"WraithTaunt" taunt:YES];
     [[[GetReady alloc] initWithPosition:ccp(512, 384)] autorelease];
-
-
 }
 
 
@@ -705,6 +705,8 @@ static int current_level = -1;
 
 -(void) checkAchievements
 {
+    // criar array
+    // por cada um adicionar ao array os dados
     [self checkAchievement1];
     [self checkAchievement2];
     [self checkAchievement3];
@@ -720,6 +722,9 @@ static int current_level = -1;
     [self checkAchievement13];
     [self checkAchievement14];
     [self checkAchievement15];
+    
+    // Criar e mandar com array
+    [[[AchievementUnlocked alloc] initWithPosition:ccp(512, 384)] autorelease];
 }
 
 -(void) checkAchievement1
