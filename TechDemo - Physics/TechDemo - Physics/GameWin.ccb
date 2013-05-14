@@ -42,7 +42,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>512</real>
+							<real>511</real>
 							<real>380</real>
 							<integer>0</integer>
 						</array>
@@ -187,7 +187,7 @@
 						<key>value</key>
 						<array>
 							<real>512</real>
-							<real>484</real>
+							<real>448</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -443,7 +443,7 @@
 						<key>value</key>
 						<array>
 							<real>512</real>
-							<real>370</real>
+							<real>362</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -801,6 +801,106 @@
 						<string>Text</string>
 						<key>value</key>
 						<string>Return to main menu</string>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>baseClass</key>
+				<string>CCBFile</string>
+				<key>children</key>
+				<array/>
+				<key>customClass</key>
+				<string></string>
+				<key>displayName</key>
+				<string>LevelStars</string>
+				<key>memberVarAssignmentName</key>
+				<string>_stars1</string>
+				<key>memberVarAssignmentType</key>
+				<integer>1</integer>
+				<key>properties</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>position</string>
+						<key>type</key>
+						<string>Position</string>
+						<key>value</key>
+						<array>
+							<real>750</real>
+							<real>545</real>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>scale</string>
+						<key>type</key>
+						<string>ScaleLock</string>
+						<key>value</key>
+						<array>
+							<real>0.69999998807907104</real>
+							<real>0.69999998807907104</real>
+							<true/>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>ccbFile</string>
+						<key>type</key>
+						<string>CCBFile</string>
+						<key>value</key>
+						<string>StarsNode.ccb</string>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>baseClass</key>
+				<string>CCBFile</string>
+				<key>children</key>
+				<array/>
+				<key>customClass</key>
+				<string></string>
+				<key>displayName</key>
+				<string>LevelStars</string>
+				<key>memberVarAssignmentName</key>
+				<string>_stars2</string>
+				<key>memberVarAssignmentType</key>
+				<integer>1</integer>
+				<key>properties</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>position</string>
+						<key>type</key>
+						<string>Position</string>
+						<key>value</key>
+						<array>
+							<real>250</real>
+							<real>545</real>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>scale</string>
+						<key>type</key>
+						<string>ScaleLock</string>
+						<key>value</key>
+						<array>
+							<real>0.69999998807907104</real>
+							<real>0.69999998807907104</real>
+							<true/>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>ccbFile</string>
+						<key>type</key>
+						<string>CCBFile</string>
+						<key>value</key>
+						<string>StarsNode.ccb</string>
 					</dict>
 				</array>
 			</dict>

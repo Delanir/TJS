@@ -18,4 +18,5 @@
 }
 
 -(void) makeVisible:(int)numberOfStars;
+-(void) makeVisibleReverse:(int)numberOfStars;
 @end
