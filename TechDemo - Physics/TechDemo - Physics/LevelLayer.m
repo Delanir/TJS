@@ -143,12 +143,10 @@ static int current_level = -1;
     
     [self schedule:@selector(updatePreGame:)];
 #warning temp
-    // Send the flag zombie
-    [[WaveManager shared] sendWave:@"WraithTaunt" taunt:YES];
     
     _story =[[StoryBoardHUD alloc] initForLevel:level] ;
     [self addChild:_story z:2000];
-    [[[GetReady alloc] initWithPosition:ccp(512, 384)] autorelease];
+    
     
     // Update achievements
     
@@ -471,6 +469,11 @@ static int current_level = -1;
         return;
     if (_story!=nil&&[_story visible]) {
         [_story nextCard];
+        if (![_story visible]) {
+            // Send the flag zombie
+            [[WaveManager shared] sendWave:@"WraithTaunt" taunt:YES];
+            [[[GetReady alloc] initWithPosition:ccp(512, 384)] autorelease];
+        }
     }else if (_story!=nil){
         [_story release];
         _story = nil;
