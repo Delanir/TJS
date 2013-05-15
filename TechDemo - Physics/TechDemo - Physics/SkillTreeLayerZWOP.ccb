@@ -3510,8 +3510,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>-223</real>
-									<real>341</real>
+									<real>-259</real>
+									<real>336</real>
 									<integer>0</integer>
 								</array>
 							</dict>
@@ -3533,8 +3533,8 @@
 								<string>ScaleLock</string>
 								<key>value</key>
 								<array>
-									<real>3.1164970397949219</real>
-									<real>0.98132318258285522</real>
+									<real>1</real>
+									<real>1</real>
 									<false/>
 									<integer>0</integer>
 								</array>
@@ -3573,8 +3573,8 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
-									<string>Resources/golden-achievement.png</string>
+									<string>MenuSpritesheet.plist</string>
+									<string>reset.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -3584,8 +3584,8 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
-									<string>Resources/golden-achievement-disabled.png</string>
+									<string>MenuSpritesheet.plist</string>
+									<string>reset.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -3595,13 +3595,11 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
-									<string>Resources/golden-achievement-disabled.png</string>
+									<string>MenuSpritesheet.plist</string>
+									<string>reset_disabled.png</string>
 								</array>
 							</dict>
 						</array>
-						<key>selected</key>
-						<true/>
 					</dict>
 				</array>
 				<key>customClass</key>
