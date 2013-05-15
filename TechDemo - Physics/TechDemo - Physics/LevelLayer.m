@@ -709,6 +709,9 @@ static int current_level = -1;
     [self makeEnemiesKilledPersistent];
     
     [self checkAchievements];
+    
+    CCBAnimationManager * am = [_gameWin userObject];
+    [am runAnimationsForSequenceNamed:@"main"];
 }
 
 #pragma Update Achievements
