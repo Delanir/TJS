@@ -7,6 +7,8 @@
 //
 
 #import "EnemyFactory.h"
+#import "LevelLayer.h"
+#import "Registry.h"
 
 @implementation EnemyFactory
 
@@ -60,8 +62,12 @@ static EnemyFactory* _sharedSingleton = nil;
 
 -(Enemy*)generateRandomEnemy
 {
+    LevelLayer * levellayer = [[Registry shared] getEntityByName:@"LevelLayer"];
+    int level = [levellayer level];
+    
     Enemy * newEnemy = nil;
-    float randomSeed = arc4random_uniform(enemyChanceTotal);
+    float randomSeed = arc4random_uniform(enemyChanceTotal) / (11 - level);
+    randomSeed += enemyChanceTotal / (2 * (11 - level));
     float count = 0;
     
     for ( NSDictionary * enemy in enemyTypes)

@@ -93,7 +93,7 @@
     CGSize winSize = [[CCDirector sharedDirector] winSize];
     [[self sprite] runAction:walkAction];
     CCFiniteTimeAction * tauntAction = [CCSequence actions:
-                                        [CCMoveTo actionWithDuration:[self speed]/2 position:ccp(3 * winSize.width/4,[[self sprite] position].y)],
+                                        [CCMoveTo actionWithDuration:[self speed]/4 position:ccp(3 * winSize.width/4,[[self sprite] position].y)],
                                         [CCCallFuncN actionWithTarget:self selector:@selector(stopWalking)],
                                         [CCRepeat actionWithAction:[CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"w_taunt" ]] times:2],
                                         [CCCallFuncN actionWithTarget:self selector:@selector(startGame)],

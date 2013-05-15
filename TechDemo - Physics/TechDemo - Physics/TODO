@@ -12,14 +12,26 @@ Falta:
 - Aspecto
 
 Bugs:
+- Gelo tem comportamento estranho qd inimigos estao a atacar
 - crasha de alguns em alguns jogos por algum motivo estranho (memoria? fazer profile)
     - Está a deixar memória pendurada. Não muito. Mas está
 - Quando se tira o pause o yuri dispara flechinha
 - Verificar se dá para actualizar as mascaras das sprites. Isso está a afectar as colisões
+- Inimigos aleatórios estão a aparecer mt em baixo (é necessario somar metade da height na posição)
 
 Daniela:
+- Storyboards
+// Array de dicionários
+ Cada dicionário com:
+    - text
+    - image
+    - orientation - referencia uma animação
     
 João M:
+
+- Velocidade da wraith inicial (taunt) mais rapido
+- Flechas mais rapidas
+- Criar diplay para tutorial
 - Taunting:
     - tá hardcoded para a wraith. Generalizar/Fazer para mais
 
@@ -28,7 +40,9 @@ Resources:
     - som do impacto tem de ser corrigido
     - Som nas explosões
     - Som do taunt
+    - Winter background (summer)
     - Sprite do reset leaderboard
+    - Foto do boneco do poster para por no storyboard
 
 Ricardo:
 - Utilização do Flurry
@@ -42,13 +56,10 @@ Afterburner:
 - Loading Screen (caso se justifique) com base em chunks
 - Passar todas as constantes para o constants.h
 - Mostrar e calcular score no hud
-- Verificar sons que faltam
-- Gelo tem comportamento estranho qd inimigos estao a atacar
 - Volume separado de fx e music
-
+- Fazer uma catapulta
 
 Ideias:
-- Fazer uma catapulta
 - Checkpoints (wave de CP)
 - Skill points por achievements
 - Fazer modo endless
