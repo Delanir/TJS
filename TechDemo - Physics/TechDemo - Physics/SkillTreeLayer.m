@@ -35,7 +35,9 @@
 -(void)onEnter
 {
     [super onEnter];
-    [Flurry logEvent:@"Entered SkillTree with Flurry :D Test!" timed:YES];
+    [[Registry shared] registerEntity:self withName:@"nonUsedStars"];
+    [Flurry logEvent:@"Entered SkillTree with Flurry :D Test!"];
+    [Flurry logEvent:@"Entered SkillTree with Flurry :D Test! timed" timed:YES];
 
      NSLog(@"ESCREVE MAS É DO NSLOG");
     
@@ -302,6 +304,10 @@
         
     }
     return stars;
+}
+
+-(int) nonUsedStars{
+     return DEFAULTSKILLPOINTS + [self currentStars] - [self usedStars];
 }
 
 - (void) decreaseAvailableStarsBy: (int) stars{

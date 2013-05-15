@@ -70,5 +70,5 @@
 -(int) currentStars;
 - (void) decreaseAvailableStarsBy: (int) stars;
 - (void) resetSkillTree:(id)sender;
-
+-(int) nonUsedStars;
 @end

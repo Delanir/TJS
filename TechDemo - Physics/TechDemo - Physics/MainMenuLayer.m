@@ -9,8 +9,7 @@
 #import "MainMenuLayer.h"
 #import "Registry.h"
 #import "GameManager.h"
-
-
+#import "SkillTreeLayer.h"
 
 @implementation MainMenuLayer
 
@@ -32,6 +31,18 @@
 {
 	[super onEnter];
     [[SimpleAudioEngine sharedEngine] playBackgroundMusic:[[Config shared] getStringProperty:@"MainMenuMusic"] loop:YES];
+    
+    // Calculate number of stars
+    int nonUsedStars = [[[Registry shared] getEntityByName:@"nonUsedStars"] nonUsedStars];
+    if (nonUsedStars==0) {
+        [lblNotification setVisible:NO];
+        [spriteNotification setVisible:NO];
+    }else{
+        [lblNotification setVisible:YES];
+        [spriteNotification setVisible:YES];
+        [lblNotification setString:[NSString stringWithFormat:@"%i", nonUsedStars]];
+    }
+    
     
 }
 
