@@ -9,5 +9,12 @@
 #import "InstantEffect.h"
 
 @interface AchievementUnlocked : InstantEffect
+{
+    NSMutableArray * achievements;
+}
+
+@property (nonatomic, retain) NSMutableArray * achievements;
+
+-(id) initWithAchievements: (NSMutableArray*) achievs;
 
 @end

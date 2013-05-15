@@ -91,9 +91,10 @@ static GameState* _sharedSingleton = nil;
         [starStates addObject: [NSNumber numberWithInt:0]];
     achievementStates = [[NSMutableArray alloc] init];
     for (int i = 0; i < 16; i++)
-        if (firstrun) {
+        if (firstrun)
             [achievementStates addObject: [NSNumber numberWithInt:1]];
-        }else [achievementStates addObject: [NSNumber numberWithInt:0]];
+        else
+            [achievementStates addObject: [NSNumber numberWithInt:0]];
     firstrun = NO;
     skillStates = [[NSMutableArray alloc] init];
     for (int i = 0; i < 28; i++)
