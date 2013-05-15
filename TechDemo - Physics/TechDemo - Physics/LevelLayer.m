@@ -145,6 +145,9 @@ static int current_level = -1;
 #warning temp
     // Send the flag zombie
     [[WaveManager shared] sendWave:@"WraithTaunt" taunt:YES];
+    
+    _story =[[StoryBoardHUD alloc] initForLevel:level] ;
+    [self addChild:_story z:2000];
     [[[GetReady alloc] initWithPosition:ccp(512, 384)] autorelease];
     
     // Update achievements
@@ -466,6 +469,13 @@ static int current_level = -1;
     [self gameWinReturnToMainMenuCheck:touch];
     if ([[CCDirector sharedDirector] isPaused])
         return;
+    if (_story!=nil&&[_story visible]) {
+        [_story nextCard];
+    }else if (_story!=nil){
+        [_story release];
+        _story = nil;
+    }
+    
     
     fire = YES;
     // Choose one of the touches to work with
@@ -548,6 +558,10 @@ static int current_level = -1;
 
 -(void)dealloc
 {
+    if (_story!=nil){
+        [_story release];
+        _story = nil;
+    }
     [super dealloc];
 }
 

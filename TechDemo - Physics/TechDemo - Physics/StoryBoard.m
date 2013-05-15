@@ -7,18 +7,33 @@
 //
 
 #import "StoryBoard.h"
+#import "Utils.h"
 
 
 @implementation StoryBoard
 
 
-- (void) setBoard:(NSString*) message saidBy:(NSString*) person withPortrait:(NSString*)portrait{
+-(void) setInformation:(int) num inChapter:(int) c
+{
+#warning plist historia
+    NSDictionary * storyInfo = [Utils openPlist:@"story"];
+    NSArray* temp = [storyInfo objectForKey:[NSString stringWithFormat:@"chapter%d", c]];
     
-    [_msg setString:message];
+    NSString* person = [[temp objectAtIndex:num] objectAtIndex:0];
     [_person setString:person];
-    _portrait = [CCSprite spriteWithSpriteFrameName:portrait];
     
-};
+    NSString* message = [[temp objectAtIndex:num] objectAtIndex:1];
+   [_msg setString:message];
+    
+#warning TODO sprite, desta maneira o peholder mantem-se
+     NSString* portrait = [[temp objectAtIndex:num] objectAtIndex:2];
+    _portrait =[CCSprite spriteWithFile:portrait];
+    _portrait.position = _portrait1.position;
+    [self addChild:_portrait z:3000];
+    
+}
+
+
 
 
 @end

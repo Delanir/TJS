@@ -10,7 +10,7 @@
 #import "cocos2d.h"
 
 @interface StoryBoard : CCNode {
-    CCSprite *_portrait;
+    CCSprite *_portrait1,*_portrait;
     CCLabelTTF *_msg;
     CCLabelTTF *_person;
     
@@ -18,6 +18,6 @@
     
 }
 
-- (void) setBoard:(NSString*) message saidBy:(NSString*) person withPortrait:(NSString*)portrait;
+-(void) setInformation:(int) num inChapter:(int) c;
 
 @end

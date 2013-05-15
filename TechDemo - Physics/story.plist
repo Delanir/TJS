@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>chapter2</key>
+	<array>
+		<array>
+			<string>Ils sont fous ces Mort-vivants</string>
+			<string>Kill 25 Enemys</string>
+			<string>portrait.png</string>
+		</array>
+		<array>
+			<string>Saint Georges</string>
+			<string>Kill 1 Dragon</string>
+			<string>portrait.png</string>
+		</array>
+		<array>
+			<string>Le Grand Dépensier</string>
+			<string>Buy 2500 Arrows</string>
+			<string>portrait.png</string>
+		</array>
+		<array>
+			<string>Robin des Bois</string>
+			<string>Finish a level with 100% accuracy</string>
+			<string>portrait.png</string>
+		</array>
+	</array>
+	<key>chapter1</key>
+	<array>
+		<array>
+			<string>Ils sont fous ces Mort-vivants</string>
+			<string>Kill 25 Enemys</string>
+			<string>portrait.png</string>
+		</array>
+		<array>
+			<string>Saint Georges</string>
+			<string>Kill 1 Dragon</string>
+			<string>portrait.png</string>
+		</array>
+		<array>
+			<string>Le Grand Dépensier</string>
+			<string>Buy 2500 Arrows</string>
+			<string>portrait.png</string>
+		</array>
+		<array>
+			<string>Robin des Bois</string>
+			<string>Finish a level with 100% accuracy</string>
+			<string>portrait.png</string>
+		</array>
+	</array>
+</dict>
+</plist>

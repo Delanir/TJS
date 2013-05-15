@@ -25,6 +25,7 @@
 #import "Enemy.h"
 #import "GameOver.h"
 #import "PauseHUD.h"
+#import "StoryBoardHUD.h"
 #import "Peasant.h"
 #import "CollisionManager.h"
 #import "Config.h"
@@ -59,6 +60,7 @@
     GameOver *_gameOver;
     GameWin  *_gameWin;
     PauseHUD *_pause;
+    StoryBoardHUD *_story;
     
     int level;
     float manaRegenerationBonus, healthRegenerationRate;
