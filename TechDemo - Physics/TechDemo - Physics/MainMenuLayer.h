@@ -23,7 +23,8 @@
 
 @interface MainMenuLayer : CCLayer <GKAchievementViewControllerDelegate, GKLeaderboardViewControllerDelegate>
 {
-    
+    CCLabelTTF *lblNotification;
+    CCSprite *spriteNotification;
 }
 - (void) pressedPlay:(id)sender;
 @end
