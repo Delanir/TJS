@@ -343,24 +343,26 @@ static int current_level = -1;
 
 - (void)update:(ccTime)dt
 {
-    
-    
-    if([self haveToShoot])
-        [self addProjectile:location];
-    
-    [self regenerateHealthAndMana];
-    
-    [[CollisionManager shared] updateCollisions:dt];
-    [hud updateWallHealth];
-    [hud updateMoney];
-    [hud updateMana];
-    [hud updateButtons];
-    
-    if ([self tryLose])
-        [self gameOver];
-    
-    else if ([self tryWin])
-        [self gameWin];
+    if (![self tryWin]&&![self tryLose]) {
+        
+        if([self haveToShoot])
+            [self addProjectile:location];
+        
+        [self regenerateHealthAndMana];
+        
+        [[CollisionManager shared] updateCollisions:dt];
+        [hud updateWallHealth];
+        [hud updateMoney];
+        [hud updateMana];
+        [hud updateButtons];
+        
+        if ([self tryLose])
+            [self gameOver];
+        
+        else if ([self tryWin])
+            [self gameWin];
+
+    }
     
     [self checkAchievementsDuringGame];
 }
