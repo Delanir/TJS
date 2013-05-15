@@ -27,4 +27,20 @@
   
 }
 
+-(void) makeVisibleReverse:(int)numberOfStars{
+    switch (numberOfStars)
+    {
+        case 3:
+            [_star1 setIsEnabled:YES];
+        case 2:
+            [_star2 setIsEnabled:YES];
+        case 1:
+            [_star3 setIsEnabled:YES];
+            break;
+        default:
+            break;
+    }
+    
+}
+
 @end

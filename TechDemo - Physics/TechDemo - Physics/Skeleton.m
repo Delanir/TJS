@@ -31,7 +31,6 @@
 
 -(void) setupActions
 {
-
     walkAnimation = @"sk_walk";
     attackAnimation = @"sk_attack";
     // Setup animations
@@ -50,6 +49,7 @@
     }
     if (currentState == kAttackEnemyState)
         [sprite runAction:[CCRepeatForever actionWithAction:attackAction]];
+    
 }
 
 -(void) attack
@@ -62,6 +62,7 @@
     [sprite setPosition:ccp([sprite position].x +16, [sprite position].y)];
     [healthBar setPosition:ccp([sprite position].x, [sprite position].y + [sprite contentSize].height/2 + 2)];
     [[self sprite] runAction:[CCRepeatForever actionWithAction:attackAction]];
+    
 }
 
 -(void) die

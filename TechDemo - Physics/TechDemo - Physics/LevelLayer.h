@@ -64,7 +64,6 @@
     float manaRegenerationBonus, healthRegenerationRate;
     BOOL fire, gameStarted;
     Hud *hud;
-    double timeElapsedSinceBeginning;
     CGPoint location;
 }
 @property (nonatomic,retain) Hud *hud;
@@ -76,13 +75,11 @@
 +(CCScene *) scene;
 +(void)setCurrentLevel:(int) newLevel;
 
-///////Previously in LLA
-
 -(void) togglePause;
 -(void) pauseCheck:(UITouch *)touchLocation;
 -(void) gameOver;
 -(void) gameWin;
--(void) calculateAndUpdateNumberOfStars;
+-(int) calculateAndUpdateNumberOfStars;
 -(void) makeMoneyPersistent;
 -(void) makeEnemiesKilledPersistent;
 

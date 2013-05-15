@@ -10,51 +10,48 @@ Bugs:
 - crasha de alguns em alguns jogos por algum motivo estranho (memoria? fazer profile)
     - Está a deixar memória pendurada. Não muito. Mas está
 - Quando se tira o pause o yuri dispara flechinha
-- Retry nao funciona bem, deixa o yuri sem disparar e s]o manda 1 montro (n]ivel 2)
+- Verificar se dá para actualizar as mascaras das sprites. Isso está a afectar as colisões
+- Gold nao esta a ser bem guardado
 
 Daniela:
 Flow control:
-    - No win: Play next chapter, Skill Tree
     - Achievement unlocked layer
-    - Normalizar posiçoes de botoes iguais
-   
+    
 
 João M:
-- Verificar se dá para actualizar as mascaras das sprites e se isso está a afectar as colisões
 - Taunting: 
     - tá hardcoded para a wraith. Generalizar/Fazer para mais
 - Volume separado de fx e music
-- Bichos aleatórios (definir um número deles por nível (entre waves, por exemplo)
 
 Resources:
     - Dendroids!
     - som do impacto tem de ser corrigido
     - Som nas explosões
     - Som do taunt
+    - Sprite do reset leaderboard
 
 Ricardo:
 - Utilização do Flurry
 
 João A:
 User Feedback:
-    - Custo de arrows
-    - Custo de reparação
-    - Número de estrelas ganhas no final de cada nível
     - Achievements unlocked warning
     - Tutorial
 
 Afterburner:
-- Passar includes para .h
 - Fazer projectiles do zealot
 - Loading Screen (caso se justifique) com base em chunks
 - Passar todas as constantes para o constants.h
 - Mostrar e calcular score no hud
 - Verificar sons que faltam
 
--botao reset skill points
+
 
 Ideias:
 - Fazer uma catapulta
+- Checkpoints (wave de CP)
+- Skill points por achievements
+- Fazer modo endless
  
 
 
@@ -119,8 +116,17 @@ Ideias:
 - Slow Down implementado (com mts bugs relacionados corrigidos)
 - Yuri já não dispara quando clicamos atrás dele
 - Particulas das fire arrows e slow arrows
-
 - Na skill tree botão para fazer reset
 - Skill tree não se inicializa com as sprites das coisas compradas (solved?)
 - No game over: Retry, Skill Tree
- - Return to skill tree no pause
+- Return to skill tree no pause
+- Bichos aleatórios (definir um número deles por nível (entre waves, por exemplo)
+- Normalizar posiçoes de botoes iguais
+    - No win: Play next chapter, Skill Tree
+    
+- Número de estrelas ganhas no final de cada nível
+-botao reset skill points
+- Passar includes para .h
+- Custo de arrows
+    - Custo de reparação
+

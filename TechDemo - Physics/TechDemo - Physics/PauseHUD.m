@@ -22,17 +22,11 @@
     return _menu;
 };
 
-- (void) skillTree:(id)sender{
-    if ([[CCDirector sharedDirector]isPaused]) {
-        [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"click"]];
-        [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
-        [((LevelLayer *)[self parent]) setIsTouchEnabled:NO];
-        [[CCDirector sharedDirector] resume];
-        
-        [[GameManager shared] runSceneWithID:kSkillTreeScene];
-    }
-   
+-(CCSprite *) getRetryButton{
+    return _retry;
 };
+
+
 
 
 @end

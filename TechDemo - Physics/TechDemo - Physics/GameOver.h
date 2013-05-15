@@ -12,11 +12,14 @@
 
 @interface GameOver : CCNode
 {
-    CCSprite * _mainMenuButton;
+    CCSprite * _menu;
+    CCSprite * _skill;
+    CCSprite * _retry;
 }
 
--(CGPoint) mainMenuButtonPosition;
--(float) mainMenuButtonRadius;
-- (void) retry:(id)sender;
-- (void) skillTree:(id)sender;
+
+-(CCSprite *) getSkillButton;
+-(CCSprite *) getMenuButton;
+
+-(CCSprite *) getRetryButton;
 @end

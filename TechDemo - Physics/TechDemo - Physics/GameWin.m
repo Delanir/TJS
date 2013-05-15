@@ -10,11 +10,26 @@
 
 @implementation GameWin
 
--(CGPoint) mainMenuButtonPosition{
-    return _mainMenuButton.position;
+-(CCSprite *) getMenuButton
+{
+    return _menu;
 };
--(float) mainMenuButtonRadius{
-    return max(_mainMenuButton.contentSize.width*self.scaleX, _mainMenuButton.contentSize.height*self.scaleY);
+
+-(CCSprite *) getPlayButton{
+    return _play;
 };
+
+-(CCSprite *) getSkillButton{
+    return _skill;
+};
+
+-(void) disablePlayNext{
+    [_play setVisible:NO];
+}
+
+-(void) setStars: (int) numberOfStars{
+    [_stars1 makeVisible:numberOfStars];
+    [_stars2 makeVisibleReverse:numberOfStars];
+}
 
 @end

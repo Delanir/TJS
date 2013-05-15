@@ -18,7 +18,7 @@
     int money;
     NSMutableArray * buttons;
     double lastHealth, lastMana;
-    CCLabelTTF *label1, *label2;
+    CCLabelTTF *label1, *label2, *buyCost, *repairCost;
     CCProgressTimer * manaProgress, * healthProgress;
     CCMenuItemToggle *fireToggleButton, *iceToggleButton, *pushBackToggleButton;
     CCMenu *buttonsMenu;
