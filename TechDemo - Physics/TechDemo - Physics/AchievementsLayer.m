@@ -34,6 +34,7 @@
     
     //Initialize art and animations
     [self addChild:[[SpriteManager shared] addSpritesToSpriteFrameCacheWithFile:@"MenuSpritesheet.plist" andBatchSpriteSheet:@"MenuSpritesheet.png"]];
+    [self addChild:[[SpriteManager shared] addSpritesToSpriteFrameCacheWithFile:@"AchievementsSpritesheet.plist" andBatchSpriteSheet:@"AchievementsSpritesheet.png"]];
     
     Achievements = [[CCArray alloc] init];
     [Achievements addObject:_achievement1];
