@@ -103,7 +103,7 @@ static int current_level = -1;
     // Preparar lançamento de waves
     // Estas linhas são imensos de feias. Mas tem de ser para haver update
     [[WaveManager shared] removeFromParentAndCleanup:NO];
-    [self addChild:[WaveManager shared]]; 
+    [self addChild:[WaveManager shared]];
     
     // Adicionar entidade ao registo e começar a musica de jogo
     [[Registry shared] registerEntity:self withName:@"LevelLayer"];
@@ -333,38 +333,40 @@ static int current_level = -1;
 
 - (void)updatePreGame:(ccTime)dt
 {
+    [hud updateButtons];
     if (gameStarted)
     {
         [[WaveManager shared] beginWaves];
         [self unscheduleAllSelectors];
         [self schedule:@selector(update:)];
-    } 
+    }
 }
 
 - (void)update:(ccTime)dt
 {
-    if (![self tryWin]&&![self tryLose]) {
-        
-        if([self haveToShoot])
-            [self addProjectile:location];
-        
-        [self regenerateHealthAndMana];
-        
-        [[CollisionManager shared] updateCollisions:dt];
-        [hud updateWallHealth];
-        [hud updateMoney];
-        [hud updateMana];
-        [hud updateButtons];
-        
-        if ([self tryLose])
-            [self gameOver];
-        
-        else if ([self tryWin])
-            [self gameWin];
-
-    }
+    if([self haveToShoot])
+        [self addProjectile:location];
+    
+    [self regenerateHealthAndMana];
+    
+    [[CollisionManager shared] updateCollisions:dt];
+    [hud updateWallHealth];
+    [hud updateMoney];
+    [hud updateMana];
+    [hud updateButtons];
+    
+    if ([self tryLose])
+        [self gameOver];
+    
+    else if ([self tryWin])
+        [self gameWin];
     
     [self checkAchievementsDuringGame];
+    if ([self tryWin] || [self tryLose])
+    {
+        [self unscheduleAllSelectors];
+        return;
+    }
 }
 
 
@@ -557,7 +559,7 @@ static int current_level = -1;
     CGPoint pausePosition = _pauseButton.position;
     float pauseRadius = _pauseButton.contentSize.width/2;
     
-
+    
     if (ccpDistance(pausePosition, locationT)<=pauseRadius ||
         (_pause.visible&&
          [self checkRectangularButtonPressed:[_pause getPauseButton] givenTouchPoint:locationT])){
@@ -658,7 +660,7 @@ static int current_level = -1;
             
             [[GameManager shared] runSceneWithID:kSkillTreeScene];
         }
-
+        
     }else
         return;
     
@@ -688,9 +690,9 @@ static int current_level = -1;
     _gameOver= (GameOver *)[CCBReader nodeGraphFromFile:@"GameOver.ccbi"];
     [self addChild:_gameOver];
     [_gameOver setZOrder:1535];
-//    [[CCDirector sharedDirector] pause];
+    //    [[CCDirector sharedDirector] pause];
     [self makeEnemiesKilledPersistent];
-    
+    [self makeMoneyPersistent];
     [self checkAchievementsAfterGame];
 }
 
@@ -704,15 +706,14 @@ static int current_level = -1;
     
     [self addChild:_gameWin];
     [_gameWin setZOrder:1535];
-//    [[CCDirector sharedDirector] pause];
+    //    [[CCDirector sharedDirector] pause];
     
     ;
-//    Coloca estrelas
+    //    Coloca estrelas
     [_gameWin setStars:[self calculateAndUpdateNumberOfStars]];
     
     [self makeMoneyPersistent];
     [self makeEnemiesKilledPersistent];
-    
     [self checkAchievementsAfterGame];
     
     CCBAnimationManager * am = [_gameWin userObject];
@@ -737,7 +738,7 @@ static int current_level = -1;
     for (NSNumber * number in achievementsUnlocked)
         if ([number intValue] != -1)
             [achievementsUnlocked2 addObject:number];
-
+    
     [[[AchievementUnlocked alloc] initWithAchievements:achievementsUnlocked2] autorelease];
     
     [achievementsUnlocked release];
