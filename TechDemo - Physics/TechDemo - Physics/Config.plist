@@ -105,5 +105,7 @@
 	<string>hit.mp3</string>
 	<key>ShootArrowSound</key>
 	<string>Swoosh.caf</string>
+	<key>Achievement</key>
+	<string>achievement.mp3</string>
 </dict>
 </plist>
