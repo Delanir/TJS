@@ -10,6 +10,7 @@
 		3E08A7C61719A96F007BE310 /* Swoosh.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3E08A7C51719A96F007BE310 /* Swoosh.caf */; };
 		3E08A7C91719B29D007BE310 /* Stimulus.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E08A7C81719B29D007BE310 /* Stimulus.m */; };
 		3E14D23B171A2A28005992A6 /* Comet.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E14D23A171A2A28005992A6 /* Comet.plist */; };
+		3E23CECE1743F04100F6B2E0 /* achievement.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3E23CECD1743F04100F6B2E0 /* achievement.mp3 */; };
 		3E3A5D09171C6AE2006D5370 /* larcher_icon_72x72.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E3A5D08171C6AE2006D5370 /* larcher_icon_72x72.png */; };
 		3E3A5D0B171C6AEC006D5370 /* larcher_icon_144x144.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E3A5D0A171C6AEC006D5370 /* larcher_icon_144x144.png */; };
 		3E926EC9173423EE00BFA90D /* AchievementsLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E926EC8173423EE00BFA90D /* AchievementsLayer.m */; };
@@ -318,6 +319,7 @@
 		3E08A7C71719B29D007BE310 /* Stimulus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stimulus.h; sourceTree = "<group>"; };
 		3E08A7C81719B29D007BE310 /* Stimulus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stimulus.m; sourceTree = "<group>"; };
 		3E14D23A171A2A28005992A6 /* Comet.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Comet.plist; sourceTree = "<group>"; };
+		3E23CECD1743F04100F6B2E0 /* achievement.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = achievement.mp3; sourceTree = "<group>"; };
 		3E3A5D08171C6AE2006D5370 /* larcher_icon_72x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = larcher_icon_72x72.png; path = ../larcher_icon_72x72.png; sourceTree = "<group>"; };
 		3E3A5D0A171C6AEC006D5370 /* larcher_icon_144x144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = larcher_icon_144x144.png; path = ../larcher_icon_144x144.png; sourceTree = "<group>"; };
 		3E926EC51734064B00BFA90D /* achievement-guide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "achievement-guide.png"; sourceTree = "<group>"; };
@@ -1022,6 +1024,7 @@
 		9C377C04170BAE4500F840FB /* SFX */ = {
 			isa = PBXGroup;
 			children = (
+				3E23CECD1743F04100F6B2E0 /* achievement.mp3 */,
 				8B1EC8951731B92400B00DB6 /* buttonclick.mp3 */,
 				8B1EC8931731B02C00B00DB6 /* killhim.mp3 */,
 				8B1EC8911731A91E00B00DB6 /* chant.mp3 */,
@@ -1901,6 +1904,7 @@
 				9C7CADBC1743E14700D09E77 /* AchievementsSpritesheet.png in Resources */,
 				9C7CADBD1743E14D00D09E77 /* AchievementsSpritesheet-ipadhd.png in Resources */,
 				9C7CADBE1743E15000D09E77 /* AchievementsSpritesheet-ipadhd.plist in Resources */,
+				3E23CECE1743F04100F6B2E0 /* achievement.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

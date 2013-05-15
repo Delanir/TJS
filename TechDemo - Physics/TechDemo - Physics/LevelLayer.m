@@ -774,6 +774,7 @@ static int current_level = -1;
     NSMutableArray * achievement = [[GameState shared] achievementStates];
     if ([[achievement objectAtIndex:0] intValue] == 0 && [[[GameState shared] enemiesKilledState] intValue] + [[ResourceManager shared] enemyKillCount] >= 25) { // 50
         [achievement replaceObjectAtIndex:0 withObject:[NSNumber numberWithInt:1]];
+         [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"Achievement"]];
         return 1;
     }
     return -1;
@@ -784,6 +785,7 @@ static int current_level = -1;
     NSMutableArray * achievement = [[GameState shared] achievementStates];
     if ([[achievement objectAtIndex:1] intValue] == 0 && [[[GameState shared] dragonsKilledState] intValue] >= 1) { // 10
         [achievement replaceObjectAtIndex:1 withObject:[NSNumber numberWithInt:1]];
+        [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"Achievement"]];
         return 2;
     }
     return -1;
@@ -795,6 +797,7 @@ static int current_level = -1;
     //NSLog(@"Buy Arrows %d",[[[GameState shared] buyArrowsState] intValue]);
     if ([[achievement objectAtIndex:2] intValue] == 0 && [[[GameState shared] buyArrowsState] intValue] >= 2500) {
         [achievement replaceObjectAtIndex:2 withObject:[NSNumber numberWithInt:1]];
+        [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"Achievement"]];
         return 3;
     }
     return -1;
@@ -805,6 +808,7 @@ static int current_level = -1;
     NSMutableArray * achievement = [[GameState shared] achievementStates];
     if ([[achievement objectAtIndex:3] intValue] == 0 && [[ResourceManager shared] determineAccuracy] == 100.0f) { // done ;)
         [achievement replaceObjectAtIndex:3 withObject:[NSNumber numberWithInt:1]];
+        [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"Achievement"]];
         return 4;
     }
     return -1;
@@ -816,6 +820,7 @@ static int current_level = -1;
     Wall * wall = [[Registry shared] getEntityByName:@"Wall"];
     if ([[achievement objectAtIndex:4] intValue] == 0 && [wall health] == [wall maxHealth]) { // a testar
         [achievement replaceObjectAtIndex:4 withObject:[NSNumber numberWithInt:1]];
+        [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"Achievement"]];
         return 5;
     }
     return -1;
@@ -830,6 +835,7 @@ static int current_level = -1;
     
     if ([[achievement objectAtIndex:5] intValue] == 0 && currentStars > 0) {
         [achievement replaceObjectAtIndex:5 withObject:[NSNumber numberWithInt:1]];
+        [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"Achievement"]];
         return 6;
     }
     return -1;
@@ -844,6 +850,7 @@ static int current_level = -1;
     
     if ([[achievement objectAtIndex:6] intValue] == 0 && [currentStars intValue] == 3) {
         [achievement replaceObjectAtIndex:6 withObject:[NSNumber numberWithInt:1]];
+        [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"Achievement"]];
         return 7;
     }
     return -1;
@@ -863,6 +870,7 @@ static int current_level = -1;
         
         if ([[achievement objectAtIndex:7] intValue] == 0 && allLevelsCompleted) {
             [achievement replaceObjectAtIndex:7 withObject:[NSNumber numberWithInt:1]];
+            [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"Achievement"]];
             return 8;
         }
     }
@@ -874,6 +882,7 @@ static int current_level = -1;
     NSMutableArray * achievement = [[GameState shared] achievementStates];
     if ([[achievement objectAtIndex:8] intValue] == 0 && ([self checkSkillTreeBranch:0] || [self checkSkillTreeBranch:7] || [self checkSkillTreeBranch:14] || [self checkSkillTreeBranch:21])) {
         [achievement replaceObjectAtIndex:8 withObject:[NSNumber numberWithInt:1]];
+        [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"Achievement"]];
         return 9;
     }
     return -1;
@@ -899,6 +908,7 @@ static int current_level = -1;
         
         if ([[achievement objectAtIndex:9] intValue] == 0 && [[ResourceManager shared] determineAccuracy] == 100 && [wall health] == 100) {
             [achievement replaceObjectAtIndex:9 withObject:[NSNumber numberWithInt:1]];
+            [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"Achievement"]];
             return 10;
         }
         
@@ -911,6 +921,7 @@ static int current_level = -1;
     NSMutableArray * achievement = [[GameState shared] achievementStates];
     if ([[achievement objectAtIndex:10]intValue] == 0 && [[[GameState shared] enemiesKilledState] intValue] + [[ResourceManager shared] enemyKillCount] > 9000) {
         [achievement replaceObjectAtIndex:10 withObject:[NSNumber numberWithInt:1]];
+        [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"Achievement"]];
         return 11;
     }
     return -1;
@@ -921,6 +932,7 @@ static int current_level = -1;
     NSMutableArray * achievement = [[GameState shared] achievementStates];
     if ([[achievement objectAtIndex:11] intValue] == 0 && [[[GameState shared] fireElementalKilledState] intValue] > 100) {
         [achievement replaceObjectAtIndex:11 withObject:[NSNumber numberWithInt:1]];
+        [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"Achievement"]];
         return 12;
     }
     return -1;
@@ -934,6 +946,7 @@ static int current_level = -1;
         
         if ([[achievement objectAtIndex:12] intValue] == 0 && [[ResourceManager shared] determineAccuracy] > 100 && [wall health]) {
             [achievement replaceObjectAtIndex:12 withObject:[NSNumber numberWithInt:1]];
+            [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"Achievement"]];
             return 13;
         }
     }
@@ -945,6 +958,7 @@ static int current_level = -1;
     NSMutableArray * achievement = [[GameState shared] achievementStates];
     if ([[achievement objectAtIndex:13] intValue] == 0 && [[[GameState shared] wallRepairState] intValue] > 100) {
         [achievement replaceObjectAtIndex:13 withObject:[NSNumber numberWithInt:1]];
+        [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"Achievement"]];
         return 14;
     }
     return -1;
@@ -963,6 +977,7 @@ static int current_level = -1;
         }
         if (allAchievementsUnlocked) {
             [achievement replaceObjectAtIndex:14 withObject:[NSNumber numberWithInt:1]];
+            [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"Achievement"]];
             return 15;
         }
     }
