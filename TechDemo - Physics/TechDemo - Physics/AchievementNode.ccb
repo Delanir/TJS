@@ -129,8 +129,8 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
-									<string>Resources/golden-achievement.png</string>
+									<string>AchievementsSpritesheet.plist</string>
+									<string>golden-achievement.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -140,8 +140,8 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
-									<string>Resources/golden-achievement.png</string>
+									<string>AchievementsSpritesheet.plist</string>
+									<string>golden-achievement.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -151,8 +151,8 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
-									<string>Resources/golden-achievement-disabled.png</string>
+									<string>AchievementsSpritesheet.plist</string>
+									<string>golden-achievement-disabled.png</string>
 								</array>
 							</dict>
 						</array>
@@ -564,7 +564,7 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string>MenuSpritesheet.plist</string>
+									<string>AchievementsSpritesheet.plist</string>
 									<string>keylock2.png</string>
 								</array>
 							</dict>
@@ -575,7 +575,7 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string>MenuSpritesheet.plist</string>
+									<string>AchievementsSpritesheet.plist</string>
 									<string>keylock2.png</string>
 								</array>
 							</dict>
@@ -586,7 +586,7 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string>MenuSpritesheet.plist</string>
+									<string>AchievementsSpritesheet.plist</string>
 									<string>keylock2.png</string>
 								</array>
 							</dict>
