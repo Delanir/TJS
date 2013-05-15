@@ -343,6 +343,8 @@ static int current_level = -1;
 
 - (void)update:(ccTime)dt
 {
+    
+    
     if([self haveToShoot])
         [self addProjectile:location];
     
@@ -552,7 +554,7 @@ static int current_level = -1;
     CGPoint pausePosition = _pauseButton.position;
     float pauseRadius = _pauseButton.contentSize.width/2;
     
-    
+
     if (ccpDistance(pausePosition, locationT)<=pauseRadius ||
         (_pause.visible&&
          [self checkRectangularButtonPressed:[_pause getPauseButton] givenTouchPoint:locationT])){
@@ -683,7 +685,7 @@ static int current_level = -1;
     _gameOver= (GameOver *)[CCBReader nodeGraphFromFile:@"GameOver.ccbi"];
     [self addChild:_gameOver];
     [_gameOver setZOrder:1535];
-    [[CCDirector sharedDirector] pause];
+//    [[CCDirector sharedDirector] pause];
     [self makeEnemiesKilledPersistent];
     
     [self checkAchievements];
@@ -699,7 +701,7 @@ static int current_level = -1;
     
     [self addChild:_gameWin];
     [_gameWin setZOrder:1535];
-    [[CCDirector sharedDirector] pause];
+//    [[CCDirector sharedDirector] pause];
     
     ;
 //    Coloca estrelas
