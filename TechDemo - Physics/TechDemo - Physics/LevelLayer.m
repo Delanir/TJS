@@ -358,10 +358,11 @@ static int current_level = -1;
     
     if ([self tryLose])
         [self gameOver];
+    
     else if ([self tryWin])
         [self gameWin];
     
-    [self checkAchievements];
+    [self checkAchievementsDuringGame];
 }
 
 
@@ -688,7 +689,7 @@ static int current_level = -1;
 //    [[CCDirector sharedDirector] pause];
     [self makeEnemiesKilledPersistent];
     
-    [self checkAchievements];
+    [self checkAchievementsAfterGame];
 }
 
 -(void) gameWin
@@ -710,7 +711,7 @@ static int current_level = -1;
     [self makeMoneyPersistent];
     [self makeEnemiesKilledPersistent];
     
-    [self checkAchievements];
+    [self checkAchievementsAfterGame];
     
     CCBAnimationManager * am = [_gameWin userObject];
     [am runAnimationsForSequenceNamed:@"main"];
@@ -718,26 +719,18 @@ static int current_level = -1;
 
 #pragma Update Achievements
 
--(void) checkAchievements
+-(void) checkAchievementsDuringGame
 {
-    NSMutableArray * achievementsUnlocked = [[NSMutableArray alloc] init];
+    CCArray * achievementsUnlocked = [[CCArray alloc] init];
     NSMutableArray * achievementsUnlocked2 = [[NSMutableArray alloc] init];
     
     [achievementsUnlocked addObject:[NSNumber numberWithInt:[self checkAchievement1]]];
     [achievementsUnlocked addObject:[NSNumber numberWithInt:[self checkAchievement2]]];
     [achievementsUnlocked addObject:[NSNumber numberWithInt:[self checkAchievement3]]];
-    [achievementsUnlocked addObject:[NSNumber numberWithInt:[self checkAchievement4]]];
-    [achievementsUnlocked addObject:[NSNumber numberWithInt:[self checkAchievement5]]];
-    [achievementsUnlocked addObject:[NSNumber numberWithInt:[self checkAchievement6]]];
-    [achievementsUnlocked addObject:[NSNumber numberWithInt:[self checkAchievement7]]];
-    [achievementsUnlocked addObject:[NSNumber numberWithInt:[self checkAchievement8]]];
     [achievementsUnlocked addObject:[NSNumber numberWithInt:[self checkAchievement9]]];
-    [achievementsUnlocked addObject:[NSNumber numberWithInt:[self checkAchievement10]]];
     [achievementsUnlocked addObject:[NSNumber numberWithInt:[self checkAchievement11]]];
     [achievementsUnlocked addObject:[NSNumber numberWithInt:[self checkAchievement12]]];
-    [achievementsUnlocked addObject:[NSNumber numberWithInt:[self checkAchievement13]]];
     [achievementsUnlocked addObject:[NSNumber numberWithInt:[self checkAchievement14]]];
-    [achievementsUnlocked addObject:[NSNumber numberWithInt:[self checkAchievement15]]];
     
     for (NSNumber * number in achievementsUnlocked)
         if ([number intValue] != -1)
@@ -749,10 +742,34 @@ static int current_level = -1;
     [achievementsUnlocked2 release];
 }
 
+-(void) checkAchievementsAfterGame
+{
+    CCArray * achievementsUnlocked = [[CCArray alloc] init];
+    NSMutableArray * achievementsUnlocked2 = [[NSMutableArray alloc] init];
+    
+    [achievementsUnlocked addObject:[NSNumber numberWithInt:[self checkAchievement4]]];
+    [achievementsUnlocked addObject:[NSNumber numberWithInt:[self checkAchievement5]]];
+    [achievementsUnlocked addObject:[NSNumber numberWithInt:[self checkAchievement6]]];
+    [achievementsUnlocked addObject:[NSNumber numberWithInt:[self checkAchievement7]]];
+    [achievementsUnlocked addObject:[NSNumber numberWithInt:[self checkAchievement8]]];
+    [achievementsUnlocked addObject:[NSNumber numberWithInt:[self checkAchievement10]]];
+    [achievementsUnlocked addObject:[NSNumber numberWithInt:[self checkAchievement15]]];
+    [achievementsUnlocked addObject:[NSNumber numberWithInt:[self checkAchievement13]]];
+    
+    for (NSNumber * number in achievementsUnlocked)
+        if ([number intValue] != -1)
+            [achievementsUnlocked2 addObject:number];
+    
+    [[[AchievementUnlocked alloc] initWithAchievements:achievementsUnlocked2] autorelease];
+    
+    [achievementsUnlocked release];
+    [achievementsUnlocked2 release];
+}
+
 -(int) checkAchievement1
 {
     NSMutableArray * achievement = [[GameState shared] achievementStates];
-    if ([[achievement objectAtIndex:0] intValue] == 0 && [[[GameState shared] enemiesKilledState] intValue] >= 25) { // 50
+    if ([[achievement objectAtIndex:0] intValue] == 0 && [[[GameState shared] enemiesKilledState] intValue] + [[ResourceManager shared] enemyKillCount] >= 25) { // 50
         [achievement replaceObjectAtIndex:0 withObject:[NSNumber numberWithInt:1]];
         return 1;
     }
@@ -794,7 +811,7 @@ static int current_level = -1;
 {
     NSMutableArray * achievement = [[GameState shared] achievementStates];
     Wall * wall = [[Registry shared] getEntityByName:@"Wall"];
-    if ([[achievement objectAtIndex:4] intValue] == 0 && [wall health] == [wall maxHealth] && [self tryWin]) { // a testar
+    if ([[achievement objectAtIndex:4] intValue] == 0 && [wall health] == [wall maxHealth]) { // a testar
         [achievement replaceObjectAtIndex:4 withObject:[NSNumber numberWithInt:1]];
         return 5;
     }
@@ -889,7 +906,7 @@ static int current_level = -1;
 -(int) checkAchievement11
 {
     NSMutableArray * achievement = [[GameState shared] achievementStates];
-    if ([[achievement objectAtIndex:10]intValue] == 0 && [[[GameState shared] enemiesKilledState]intValue] > 9000) {
+    if ([[achievement objectAtIndex:10]intValue] == 0 && [[[GameState shared] enemiesKilledState] intValue] + [[ResourceManager shared] enemyKillCount] > 9000) {
         [achievement replaceObjectAtIndex:10 withObject:[NSNumber numberWithInt:1]];
         return 11;
     }

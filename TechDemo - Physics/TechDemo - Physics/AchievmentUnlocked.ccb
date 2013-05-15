@@ -146,7 +146,7 @@
 						<key>customClass</key>
 						<string></string>
 						<key>displayName</key>
-						<string>CCLayerColor</string>
+						<string>toto2</string>
 						<key>memberVarAssignmentName</key>
 						<string></string>
 						<key>memberVarAssignmentType</key>
@@ -263,6 +263,14 @@
 							</dict>
 							<dict>
 								<key>name</key>
+								<string>opacity</string>
+								<key>type</key>
+								<string>Byte</string>
+								<key>value</key>
+								<integer>167</integer>
+							</dict>
+							<dict>
+								<key>name</key>
 								<string>blendFunc</string>
 								<key>type</key>
 								<string>Blendmode</string>
@@ -273,6 +281,8 @@
 								</array>
 							</dict>
 						</array>
+						<key>selected</key>
+						<true/>
 					</dict>
 					<dict>
 						<key>baseClass</key>
@@ -284,9 +294,9 @@
 						<key>displayName</key>
 						<string>AchievementNode</string>
 						<key>memberVarAssignmentName</key>
-						<string></string>
+						<string>unlockedAchievement</string>
 						<key>memberVarAssignmentType</key>
-						<integer>0</integer>
+						<integer>1</integer>
 						<key>properties</key>
 						<array>
 							<dict>
@@ -328,7 +338,7 @@
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>CCNode</string>
+				<string>toto</string>
 				<key>memberVarAssignmentName</key>
 				<string></string>
 				<key>memberVarAssignmentType</key>
@@ -348,7 +358,7 @@
 						<key>value</key>
 						<array>
 							<real>300</real>
-							<real>650</real>
+							<real>698</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -390,7 +400,7 @@
 			</dict>
 		</array>
 		<key>customClass</key>
-		<string></string>
+		<string>AchievementUnlockedNode</string>
 		<key>displayName</key>
 		<string>CCNode</string>
 		<key>memberVarAssignmentName</key>
@@ -478,7 +488,7 @@
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>2</real>
+			<real>0.30000001192092896</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>
