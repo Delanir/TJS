@@ -66,8 +66,11 @@ static EnemyFactory* _sharedSingleton = nil;
     int level = [levellayer level];
     
     Enemy * newEnemy = nil;
-    float randomSeed = arc4random_uniform(enemyChanceTotal) / (11 - level);
-    randomSeed += enemyChanceTotal / (2 * (11 - level));
+    
+    float low_bound = (level - 1) *  (enemyChanceTotal / 18);
+    float high_bound = enemyChanceTotal / (11 - level);
+    float randomSeed = (((float)arc4random()/0x100000000)*(high_bound-low_bound)+low_bound);
+    
     float count = 0;
     
     for ( NSDictionary * enemy in enemyTypes)

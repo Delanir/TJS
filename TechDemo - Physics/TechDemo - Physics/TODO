@@ -4,7 +4,6 @@
 *                *
 **/            **/
 
-
 Falta:
 - Som
 - Balanceamento
@@ -29,8 +28,6 @@ Daniela:
     
 João M:
 
-- Velocidade da wraith inicial (taunt) mais rapido
-- Flechas mais rapidas
 - Criar diplay para tutorial
 - Taunting:
     - tá hardcoded para a wraith. Generalizar/Fazer para mais
@@ -134,11 +131,12 @@ Ideias:
 - Bichos aleatórios (definir um número deles por nível (entre waves, por exemplo)
 - Normalizar posiçoes de botoes iguais
     - No win: Play next chapter, Skill Tree
-    
 - Número de estrelas ganhas no final de cada nível
 -botao reset skill points
 - Passar includes para .h
 - Custo de arrows
     - Custo de reparação
     - Achievements unlocked warning
+- Velocidade da wraith inicial (taunt) mais rapido
+- Flechas mais rapidas
 
