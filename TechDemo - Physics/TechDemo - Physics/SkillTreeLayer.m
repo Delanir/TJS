@@ -14,6 +14,7 @@
 #import "GameState.h"
 #import "SpriteManager.h"
 #import "Constants.h"
+#import "Flurry.h"
 
 @implementation SkillTreeLayer
 
@@ -34,6 +35,9 @@
 -(void)onEnter
 {
     [super onEnter];
+    [Flurry logEvent:@"Entered SkillTree with Flurry :D Test!" timed:YES];
+
+     NSLog(@"ESCREVE MAS É DO NSLOG");
     
     NSMutableArray *skill = [[GameState shared] skillStates];
     
@@ -257,6 +261,11 @@
     [self removeAllChildrenWithCleanup:YES];
     [[CCSpriteFrameCache sharedSpriteFrameCache] removeSpriteFrames];
     [[CCTextureCache sharedTextureCache] removeAllTextures];
+    
+    
+    [Flurry endTimedEvent:@"Entered SkillTree with Flurry :D Test!" withParameters:nil];
+    NSLog(@"ESCREVE MAS É DO NSLOG 2 ON EXIT");
+    
     [super onExit];
 }
 

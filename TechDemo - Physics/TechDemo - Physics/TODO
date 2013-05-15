@@ -11,6 +11,7 @@ Bugs:
     - Está a deixar memória pendurada. Não muito. Mas está
 - Quando se tira o pause o yuri dispara flechinha
 - Verificar se dá para actualizar as mascaras das sprites. Isso está a afectar as colisões
+- Gold nao esta a ser bem guardado
 
 Daniela:
 Flow control:

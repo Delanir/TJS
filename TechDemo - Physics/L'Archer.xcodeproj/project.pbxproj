@@ -21,6 +21,8 @@
 		3EDD9F251715DF9F00C6A622 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EDD9F241715DF9F00C6A622 /* background.png */; };
 		3EDD9F291715E4CD00C6A622 /* lvl1spritesheet.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3EDD9F281715E4CD00C6A622 /* lvl1spritesheet.plist */; };
 		3EDD9F301715E7F800C6A622 /* Wall.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDD9F2F1715E7F800C6A622 /* Wall.m */; };
+		3EE1EA5C174295C700F5D7A7 /* libFlurry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EE1EA5B174295C700F5D7A7 /* libFlurry.a */; };
+		3EE1EA5E1742963800F5D7A7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EE1EA5D1742963800F5D7A7 /* SystemConfiguration.framework */; };
 		3EE2F95E17230E640084DF2F /* LevelStars.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE2F95D17230E640084DF2F /* LevelStars.m */; };
 		3EE2F9641723175E0084DF2F /* StarsNode.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 3EE2F9611723175E0084DF2F /* StarsNode.ccbi */; };
 		3EE2F9671723178C0084DF2F /* LevelThumbnail.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE2F9661723178C0084DF2F /* LevelThumbnail.m */; };
@@ -333,6 +335,9 @@
 		3EDD9F281715E4CD00C6A622 /* lvl1spritesheet.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = lvl1spritesheet.plist; sourceTree = "<group>"; };
 		3EDD9F2E1715E7F700C6A622 /* Wall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wall.h; sourceTree = "<group>"; };
 		3EDD9F2F1715E7F800C6A622 /* Wall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Wall.m; sourceTree = "<group>"; };
+		3EE1EA5A174295C700F5D7A7 /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
+		3EE1EA5B174295C700F5D7A7 /* libFlurry.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry.a; sourceTree = "<group>"; };
+		3EE1EA5D1742963800F5D7A7 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		3EE2F95C17230E640084DF2F /* LevelStars.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelStars.h; sourceTree = "<group>"; };
 		3EE2F95D17230E640084DF2F /* LevelStars.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelStars.m; sourceTree = "<group>"; };
 		3EE2F9611723175E0084DF2F /* StarsNode.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = StarsNode.ccbi; sourceTree = "<group>"; };
@@ -838,6 +843,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EE1EA5E1742963800F5D7A7 /* SystemConfiguration.framework in Frameworks */,
 				9C85F49A1707957E00EECB83 /* QuartzCore.framework in Frameworks */,
 				9C85F49C1707957E00EECB83 /* OpenGLES.framework in Frameworks */,
 				9C85F49E1707957E00EECB83 /* OpenAL.framework in Frameworks */,
@@ -847,6 +853,7 @@
 				9C85F4A61707957E00EECB83 /* Foundation.framework in Frameworks */,
 				9C85F4A81707957E00EECB83 /* CoreGraphics.framework in Frameworks */,
 				9C85F4AA1707957E00EECB83 /* GameKit.framework in Frameworks */,
+				3EE1EA5C174295C700F5D7A7 /* libFlurry.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -864,6 +871,15 @@
 				3E926EC51734064B00BFA90D /* achievement-guide.png */,
 			);
 			name = Achievements;
+			sourceTree = "<group>";
+		};
+		3EE1EA59174295C700F5D7A7 /* Flurry */ = {
+			isa = PBXGroup;
+			children = (
+				3EE1EA5A174295C700F5D7A7 /* Flurry.h */,
+				3EE1EA5B174295C700F5D7A7 /* libFlurry.a */,
+			);
+			path = Flurry;
 			sourceTree = "<group>";
 		};
 		8B0E70E5171DCCB9004D212C /* Skilltree */ = {
@@ -977,6 +993,7 @@
 				9C94ABD717197BD2005BCE32 /* zDepth */,
 				9C2B3CBC171EE8FB00E695FE /* Registry Entities */,
 				8B79CDD9171F2D2500E58EDD /* TODO */,
+				3EE1EA59174295C700F5D7A7 /* Flurry */,
 				9C1E05BE1724C7B00093F0E3 /* DoneStuff */,
 			);
 			name = "Configs and References";
@@ -1095,6 +1112,7 @@
 		9C85F48D1707957E00EECB83 = {
 			isa = PBXGroup;
 			children = (
+				3EE1EA5D1742963800F5D7A7 /* SystemConfiguration.framework */,
 				9C85F4AB1707957E00EECB83 /* L'Archer D'Amiens */,
 				9C85F4981707957E00EECB83 /* Frameworks */,
 				9C85F4971707957E00EECB83 /* Products */,
@@ -2138,6 +2156,10 @@
 				);
 				INFOPLIST_FILE = "TechDemo - Physics/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Flurry\"",
+				);
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-ObjC",
@@ -2160,6 +2182,10 @@
 				);
 				INFOPLIST_FILE = "TechDemo - Physics/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Flurry\"",
+				);
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-ObjC",
