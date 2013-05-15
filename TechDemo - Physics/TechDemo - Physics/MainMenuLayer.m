@@ -10,6 +10,7 @@
 #import "Registry.h"
 #import "GameManager.h"
 #import "SkillTreeLayer.h"
+#import "GameState.h"
 
 @implementation MainMenuLayer
 
@@ -32,15 +33,33 @@
 	[super onEnter];
     [[SimpleAudioEngine sharedEngine] playBackgroundMusic:[[Config shared] getStringProperty:@"MainMenuMusic"] loop:YES];
     
-    // Calculate number of stars
-    int nonUsedStars = [[[Registry shared] getEntityByName:@"nonUsedStars"] nonUsedStars];
-    if (nonUsedStars==0) {
-        [lblNotification setVisible:NO];
-        [spriteNotification setVisible:NO];
-    }else{
+    // Calculate number of used stars
+    NSMutableArray *skillPoints = [[GameState shared] skillStates];
+    int usedSkillPoints = 0;
+    for (int i = 0; i < 28; i++) {
+        usedSkillPoints += [[skillPoints objectAtIndex:i] intValue];
+    }
+    
+    // Calculate number of total stars
+    int stars = 0;
+    int totalStars =[[[GameState shared] starStates] count];
+    int aux;
+    for (int i = 1; i <= totalStars; i++)
+    {
+        
+        aux =[[[[GameState shared] starStates] objectAtIndex:i-1] intValue];
+        stars = stars + aux;
+        
+    }
+    
+    int res = DEFAULTSKILLPOINTS + stars - usedSkillPoints;
+    if (res>0) {
         [lblNotification setVisible:YES];
         [spriteNotification setVisible:YES];
-        [lblNotification setString:[NSString stringWithFormat:@"%i", nonUsedStars]];
+        [lblNotification setString:[NSString stringWithFormat:@"%i", res]];
+    }else{
+        [lblNotification setVisible:NO];
+        [spriteNotification setVisible:NO];
     }
     
     

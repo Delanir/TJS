@@ -35,8 +35,8 @@
 -(void)onEnter
 {
     [super onEnter];
-    [[Registry shared] registerEntity:self withName:@"nonUsedStars"];
-    [Flurry logEvent:@"Entered SkillTree with Flurry :D Test!"];
+    [[Registry shared] registerEntity:self withName:@"skillTree"];
+    [Flurry logEvent:@"Entered SkillTree with Flurry :D Test2!"];
     [Flurry logEvent:@"Entered SkillTree with Flurry :D Test! timed" timed:YES];
 
      NSLog(@"ESCREVE MAS É DO NSLOG");
