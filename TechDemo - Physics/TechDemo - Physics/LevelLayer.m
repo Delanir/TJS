@@ -467,17 +467,8 @@ static int current_level = -1;
     [self gameWinReturnToMainMenuCheck:touch];
     if ([[CCDirector sharedDirector] isPaused])
         return;
-    if (_story!=nil&&[_story visible]) {
-        [_story nextCard];
-        if (![_story visible]) {
-            // Send the flag zombie
-            [[WaveManager shared] sendWave:@"WraithTaunt" taunt:YES];
-            [[[GetReady alloc] initWithPosition:ccp(512, 384)] autorelease];
-        }
-    }else if (_story!=nil){
-        [_story release];
-        _story = nil;
-    }
+    [self checkStoryBoard];
+    
     
     
     fire = YES;
@@ -513,6 +504,20 @@ static int current_level = -1;
  * Tests and evaluations
  *
  */
+
+-(void) checkStoryBoard{
+    if (_story!=nil&&[_story visible]) {
+        [_story nextCard];
+        if (![_story visible]) {
+            // Send the flag zombie
+            [[WaveManager shared] sendWave:@"WraithTaunt" taunt:YES];
+            [[[GetReady alloc] initWithPosition:ccp(512, 384)] autorelease];
+        }
+    }else if (_story!=nil){
+        [_story release];
+        _story = nil;
+    }
+}
 
 
 -(int) calculateAndUpdateNumberOfStars
