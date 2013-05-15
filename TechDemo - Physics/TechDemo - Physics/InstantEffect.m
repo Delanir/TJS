@@ -18,10 +18,8 @@
     {
         effectEnded = NO;
         effectPos = position;
-        //CGSize winSize = [[CCDirector sharedDirector] winSize];
         LevelLayer * levelLayer = [[Registry shared] getEntityByName:@"LevelLayer"];
-        [levelLayer addChild:self z:5000];//winSize.height - position.y];
-        
+        [levelLayer addChild:self z:5000];        
         [self setInstantAction: [CCSequence actions:
                                  [CCCallFuncN actionWithTarget:self selector:@selector(performAction)],
                                  nil]];
