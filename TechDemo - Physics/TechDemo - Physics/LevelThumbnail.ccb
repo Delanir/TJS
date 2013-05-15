@@ -120,7 +120,7 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
+									<string>MenuSpritesheet.plist</string>
 									<string>keylock2.png</string>
 								</array>
 							</dict>

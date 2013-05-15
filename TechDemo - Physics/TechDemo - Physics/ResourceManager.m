@@ -46,6 +46,7 @@ static ResourceManager* _sharedSingleton = nil;
     [[CCTextureCache sharedTextureCache] removeAllTextures];
     
     [[SpriteManager shared] addSpritesToSpriteFrameCacheWithFile:@"lvl1spritesheet.plist" andBatchSpriteSheet:@"lvl1spritesheet.png"];
+    [[SpriteManager shared] addSpritesToSpriteFrameCacheWithFile:@"AchievementsSpritesheet.plist" andBatchSpriteSheet:@"AchievementsSpritesheet.png"];
     [[SpriteManager shared] addAnimationFromFile:@"peasant_anim.plist"];
     [[SpriteManager shared] addAnimationFromFile:@"fairiedragon_anim.plist"];
     [[SpriteManager shared] addAnimationFromFile:@"zealot_anim.plist"];
