@@ -9,6 +9,8 @@
 #import "AchievementUnlocked.h"
 #import "CCBAnimationManager.h"
 #import "NSMutableArray+QueueAdditions.h"
+#import "AchievementUnlockedNode.h"
+#import "AchievementNode.h"
 
 @implementation AchievementUnlocked
 
@@ -29,11 +31,15 @@
 {
     if ([achievements count] > 0)
     {
-        //NSNumber * first = [achievements dequeue];
-        CCNode * begin = [CCBReader nodeGraphFromFile:@"AchievmentUnlocked.ccbi"];
-        CCBAnimationManager * am = [begin userObject];
+        NSNumber * first = [achievements dequeue];
+        
+        AchievementUnlockedNode * node = (AchievementUnlockedNode *)[CCBReader nodeGraphFromFile:@"AchievmentUnlocked.ccbi"];
+        [node initWithNumber:[first intValue]];
+        
+        CCBAnimationManager * am = [node userObject];
         [am runAnimationsForSequenceNamed:@"animate"];
-        [self addChild:begin z:1 tag:0];
+        [self addChild:node z:1 tag:0];
+        [node release];
     }
     else [self setEffectEnded:YES];
 }

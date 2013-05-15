@@ -24,9 +24,9 @@
         
         [self setInstantAction: [CCSequence actions:
                                  [CCCallFuncN actionWithTarget:self selector:@selector(performAction)],
-                                 [CCCallFuncN actionWithTarget:self selector:@selector(scheduleUpdate)],
                                  nil]];
         [self runAction:instantAction];
+        [self schedule:@selector(update)];
     }
     return self;
 }
@@ -37,11 +37,6 @@
 
 }
 
--(void) scheduleUpdate
-{
-    [self schedule:@selector(update)];
-    
-}
 
 -(void) update
 {

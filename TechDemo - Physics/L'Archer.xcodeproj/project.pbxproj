@@ -140,6 +140,7 @@
 		9C500253172AD03800C141DB /* LoadingBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C500252172AD03800C141DB /* LoadingBar.m */; };
 		9C6187E91742ED0D00A6D63F /* AchievementUnlocked.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6187E81742ED0D00A6D63F /* AchievementUnlocked.m */; };
 		9C6187EB1742EDC800A6D63F /* AchievmentUnlocked.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 9C6187EA1742EDB500A6D63F /* AchievmentUnlocked.ccbi */; };
+		9C6187EE17430CAA00A6D63F /* AchievementUnlockedNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6187ED17430CAA00A6D63F /* AchievementUnlockedNode.m */; };
 		9C75D80E171A167E00419031 /* yurie_anim.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C75D80D171A167E00419031 /* yurie_anim.plist */; };
 		9C75E7A21741671900D335B1 /* WraithTaunt.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C75E7A11741671900D335B1 /* WraithTaunt.plist */; };
 		9C791C2C17237ADE00780C5D /* menuBackground-ipadhd.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C791C2817237ADE00780C5D /* menuBackground-ipadhd.jpg */; };
@@ -499,6 +500,8 @@
 		9C6187E71742ED0D00A6D63F /* AchievementUnlocked.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AchievementUnlocked.h; sourceTree = "<group>"; };
 		9C6187E81742ED0D00A6D63F /* AchievementUnlocked.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AchievementUnlocked.m; sourceTree = "<group>"; };
 		9C6187EA1742EDB500A6D63F /* AchievmentUnlocked.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = AchievmentUnlocked.ccbi; sourceTree = "<group>"; };
+		9C6187EC17430CAA00A6D63F /* AchievementUnlockedNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AchievementUnlockedNode.h; sourceTree = "<group>"; };
+		9C6187ED17430CAA00A6D63F /* AchievementUnlockedNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AchievementUnlockedNode.m; sourceTree = "<group>"; };
 		9C75D80D171A167E00419031 /* yurie_anim.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = yurie_anim.plist; sourceTree = "<group>"; };
 		9C75E7A11741671900D335B1 /* WraithTaunt.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = WraithTaunt.plist; sourceTree = "<group>"; };
 		9C791C2817237ADE00780C5D /* menuBackground-ipadhd.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "menuBackground-ipadhd.jpg"; path = "MainMenu/menuBackground-ipadhd.jpg"; sourceTree = "<group>"; };
@@ -1559,6 +1562,8 @@
 				9C4787181734526600180864 /* Enemies */,
 				3E926ECA1734255700BFA90D /* AchievementNode.h */,
 				3E926ECB1734255700BFA90D /* AchievementNode.m */,
+				9C6187EC17430CAA00A6D63F /* AchievementUnlockedNode.h */,
+				9C6187ED17430CAA00A6D63F /* AchievementUnlockedNode.m */,
 				8B79CDDF171F501D00E58EDD /* Hud.h */,
 				8B79CDE0171F501D00E58EDD /* Hud.m */,
 				8BFC3F0A172042C2000161FD /* GameOver.h */,
@@ -2073,6 +2078,7 @@
 				9C9733FE1741D40C0032D905 /* GetReady.m in Sources */,
 				9C9734011741D41A0032D905 /* Begin.m in Sources */,
 				9C6187E91742ED0D00A6D63F /* AchievementUnlocked.m in Sources */,
+				9C6187EE17430CAA00A6D63F /* AchievementUnlockedNode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
