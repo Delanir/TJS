@@ -97,7 +97,7 @@ static int current_level = -1;
     [self addChild:_pauseButton];
     _pause= (PauseHUD *)[CCBReader nodeGraphFromFile:@"PauseMenu.ccbi"];
     [self addChild:_pause];
-    [_pause setZOrder:1535];
+    [_pause setZOrder:5001];
     [_pause setVisible:NO];
     
     // Preparar lançamento de waves
