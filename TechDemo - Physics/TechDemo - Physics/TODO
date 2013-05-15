@@ -5,6 +5,12 @@
 **/            **/
 
 
+Falta:
+- Som
+- Balanceamento
+- Historia
+- Aspecto
+
 Bugs:
 - crasha de alguns em alguns jogos por algum motivo estranho (memoria? fazer profile)
     - Está a deixar memória pendurada. Não muito. Mas está
