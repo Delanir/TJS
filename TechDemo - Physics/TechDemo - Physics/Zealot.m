@@ -52,6 +52,7 @@
         [sprite runAction:[CCRepeatForever actionWithAction:attackAction]];
     
     shoutPercentage = ZEALOTSHOUT;
+    [self schedule:@selector(shout) interval:1.5];
 }
 
 -(void) attack

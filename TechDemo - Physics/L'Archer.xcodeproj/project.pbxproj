@@ -57,6 +57,9 @@
 		8B43948D17341C30008BAB1D /* skillTreeSS.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B43948917341C30008BAB1D /* skillTreeSS.plist */; };
 		8B43948E17341C30008BAB1D /* skillTreeSS.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B43948A17341C30008BAB1D /* skillTreeSS.png */; };
 		8B43949517341E0F008BAB1D /* skillTreeSS-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B43949317341E0F008BAB1D /* skillTreeSS-ipadhd.png */; };
+		8B68F97317455BDE0032DF73 /* wraith01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8B68F97017455BDE0032DF73 /* wraith01.mp3 */; };
+		8B68F97417455BDE0032DF73 /* wraith02.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8B68F97117455BDE0032DF73 /* wraith02.mp3 */; };
+		8B68F97517455BDE0032DF73 /* wraith03.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8B68F97217455BDE0032DF73 /* wraith03.mp3 */; };
 		8B79CDE1171F501D00E58EDD /* Hud.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B79CDE0171F501D00E58EDD /* Hud.m */; };
 		8B8C2D971719D8A700B50C1E /* MainMenuLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B8C2D961719D8A700B50C1E /* MainMenuLayer.m */; };
 		8B8C2D9C1719DB9300B50C1E /* MainMenu.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 8B8C2D9B1719DB9300B50C1E /* MainMenu.ccbi */; };
@@ -382,6 +385,9 @@
 		8B43948917341C30008BAB1D /* skillTreeSS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = skillTreeSS.plist; sourceTree = "<group>"; };
 		8B43948A17341C30008BAB1D /* skillTreeSS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = skillTreeSS.png; sourceTree = "<group>"; };
 		8B43949317341E0F008BAB1D /* skillTreeSS-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "skillTreeSS-ipadhd.png"; sourceTree = "<group>"; };
+		8B68F97017455BDE0032DF73 /* wraith01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = wraith01.mp3; sourceTree = "<group>"; };
+		8B68F97117455BDE0032DF73 /* wraith02.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = wraith02.mp3; sourceTree = "<group>"; };
+		8B68F97217455BDE0032DF73 /* wraith03.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = wraith03.mp3; sourceTree = "<group>"; };
 		8B79CDD9171F2D2500E58EDD /* TODO */ = {isa = PBXFileReference; lastKnownFileType = text; name = TODO; path = "TechDemo - Physics/TODO"; sourceTree = "<group>"; };
 		8B79CDDF171F501D00E58EDD /* Hud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hud.h; sourceTree = "<group>"; };
 		8B79CDE0171F501D00E58EDD /* Hud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hud.m; sourceTree = "<group>"; };
@@ -1039,6 +1045,9 @@
 		9C377C04170BAE4500F840FB /* SFX */ = {
 			isa = PBXGroup;
 			children = (
+				8B68F97017455BDE0032DF73 /* wraith01.mp3 */,
+				8B68F97117455BDE0032DF73 /* wraith02.mp3 */,
+				8B68F97217455BDE0032DF73 /* wraith03.mp3 */,
 				3E23CECD1743F04100F6B2E0 /* achievement.mp3 */,
 				8B1EC8951731B92400B00DB6 /* buttonclick.mp3 */,
 				8B1EC8931731B02C00B00DB6 /* killhim.mp3 */,
@@ -1931,6 +1940,9 @@
 				8BF9C5FF174440DD00E4B3F6 /* StoryBoard.ccbi in Resources */,
 				8BF9C6011744495700E4B3F6 /* portrait-ipadhd.png in Resources */,
 				8BF9C6031744496000E4B3F6 /* portrait.png in Resources */,
+				8B68F97317455BDE0032DF73 /* wraith01.mp3 in Resources */,
+				8B68F97417455BDE0032DF73 /* wraith02.mp3 in Resources */,
+				8B68F97517455BDE0032DF73 /* wraith03.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -63,7 +63,7 @@
     [self setMaxHealth:health];
     [healthBar setPercentage:health];
     shoutPercentage = SHOUTPERCENTAGE;
-    [self schedule:@selector(shout) interval:1.5];
+    
     
     [self schedule:@selector(update:)];
 }
@@ -76,7 +76,7 @@
 
 - (void) setupActions
 {
-    
+    [self schedule:@selector(shout) interval:1.5];
     
 }
 

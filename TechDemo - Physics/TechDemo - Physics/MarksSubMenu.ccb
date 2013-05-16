@@ -2735,7 +2735,7 @@
 						<key>value</key>
 						<array>
 							<real>514</real>
-							<real>212</real>
+							<real>201</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -2824,8 +2824,8 @@
 						<key>type</key>
 						<string>Text</string>
 						<key>value</key>
-						<string>Unlocks: Marksmanship
-Impact arrows
+						<string>Unlocks Power: Push Back
+Improves:
 Strength, Speed, Critical %</string>
 					</dict>
 				</array>
@@ -2942,9 +2942,11 @@ Strength, Speed, Critical %</string>
 						<key>type</key>
 						<string>Text</string>
 						<key>value</key>
-						<string>Faster Shoot Recovery</string>
+						<string>Draw Arrows Faster</string>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>baseClass</key>
@@ -3177,8 +3179,6 @@ Strength, Speed, Critical %</string>
 						<string>Better Critical Ratio</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>

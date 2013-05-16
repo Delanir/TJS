@@ -22,6 +22,11 @@
     return _menu;
 };
 
+-(CCSprite *) getMainButton
+{
+    return _main;
+};
+
 -(CCSprite *) getRetryButton{
     return _retry;
 };

@@ -15,6 +15,11 @@
     return _menu;
 };
 
+-(CCSprite *) getMainButton
+{
+    return _main;
+};
+
 -(CCSprite *) getPlayButton{
     return _play;
 };

@@ -108,6 +108,7 @@ static int current_level = -1;
     // Adicionar entidade ao registo e começar a musica de jogo
     [[Registry shared] registerEntity:self withName:@"LevelLayer"];
     [[SimpleAudioEngine sharedEngine] playBackgroundMusic:[[Config shared] getStringProperty:@"IngameMusic"] loop:YES];
+    [[SimpleAudioEngine sharedEngine] setBackgroundMusicVolume :0.5f];
     
     // Inicialização de variáveis de jogo
     manaRegenerationBonus = 1.0f;
@@ -594,7 +595,7 @@ static int current_level = -1;
             [self setIsTouchEnabled:NO];
             [[CCDirector sharedDirector] resume];
             [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"click"]];
-            [[GameManager shared] runSceneWithID:kMainMenuScene];
+            [[GameManager shared] runSceneWithID:kSelectLevel];
         }else if (_pause.visible&&
                   [self checkRectangularButtonPressed:[_pause getRetryButton] givenTouchPoint:locationT]){
             [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
@@ -602,6 +603,13 @@ static int current_level = -1;
             [[CCDirector sharedDirector] resume];
             [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"click"]];
             [[GameManager shared] runLevel:level];
+        }else if (_pause.visible&&
+                  [self checkRectangularButtonPressed:[_pause getMainButton] givenTouchPoint:locationT]){
+            [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
+            [self setIsTouchEnabled:NO];
+            [[CCDirector sharedDirector] resume];
+            [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"click"]];
+            [[GameManager shared] runSceneWithID:kMainMenuScene];
         }
 }
 
@@ -645,6 +653,12 @@ static int current_level = -1;
             [[CCDirector sharedDirector] resume];
             
             [[GameManager shared] runSceneWithID:kSkillTreeScene];
+        }else if (    [self checkRectangularButtonPressed:[_gameOver getMainButton] givenTouchPoint:locationT]){
+            [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
+            [self setIsTouchEnabled:NO];
+            [[CCDirector sharedDirector] resume];
+            
+            [[GameManager shared] runSceneWithID:kMainMenuScene];
         }
     }else
         return;
@@ -681,6 +695,12 @@ static int current_level = -1;
             [[CCDirector sharedDirector] resume];
             
             [[GameManager shared] runSceneWithID:kSkillTreeScene];
+        }else if (    [self checkRectangularButtonPressed:[_gameWin getMainButton] givenTouchPoint:locationT]){
+            [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
+            [self setIsTouchEnabled:NO];
+            [[CCDirector sharedDirector] resume];
+            
+            [[GameManager shared] runSceneWithID:kMainMenuScene];
         }
         
     }else
@@ -711,7 +731,7 @@ static int current_level = -1;
 {
     _gameOver= (GameOver *)[CCBReader nodeGraphFromFile:@"GameOver.ccbi"];
     [self addChild:_gameOver];
-    [_gameOver setZOrder:1535];
+    [_gameOver setZOrder:5035];
     //    [[CCDirector sharedDirector] pause];
     [self makeEnemiesKilledPersistent];
     [self makeMoneyPersistent];
@@ -727,7 +747,7 @@ static int current_level = -1;
     }
     
     [self addChild:_gameWin];
-    [_gameWin setZOrder:1535];
+    [_gameWin setZOrder:5035];
     //    [[CCDirector sharedDirector] pause];
     
     ;

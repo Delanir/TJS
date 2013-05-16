@@ -52,6 +52,8 @@
     }
     if (currentState == kAttackEnemyState)
         [sprite runAction:[CCRepeatForever actionWithAction:attackAction]];
+    
+    [self schedule:@selector(shout) interval:1.5];
 }
 
 -(void)attack
