@@ -2,6 +2,19 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>fd_taunt</key>
+	<dict>
+		<key>delay</key>
+		<real>0.15</real>
+		<key>frames</key>
+		<array>
+			<string>fd_taunt_01.png</string>
+			<string>fd_taunt_02.png</string>
+			<string>fd_taunt_03.png</string>
+			<string>fd_taunt_04.png</string>
+			<string>fd_taunt_05.png</string>
+		</array>
+	</dict>
 	<key>fd_dies</key>
 	<dict>
 		<key>delay</key>

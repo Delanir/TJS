@@ -84,6 +84,16 @@
 		</dict>
 		<dict>
 			<key>type</key>
+			<string>ent</string>
+			<key>class</key>
+			<string>Ent</string>
+			<key>initSprite</key>
+			<string>e_walk_01.png</string>
+			<key>chance</key>
+			<integer>10</integer>
+		</dict>
+		<dict>
+			<key>type</key>
 			<string>faerie</string>
 			<key>class</key>
 			<string>FaerieDragon</string>

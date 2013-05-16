@@ -55,6 +55,7 @@ static ResourceManager* _sharedSingleton = nil;
     [[SpriteManager shared] addAnimationFromFile:@"wraith_anim.plist"];
     [[SpriteManager shared] addAnimationFromFile:@"skeleton_anim.plist"];
     [[SpriteManager shared] addAnimationFromFile:@"blackdragon_anim.plist"];
+    [[SpriteManager shared] addAnimationFromFile:@"ent_anim.plist"];
 }
 
 -(id)init

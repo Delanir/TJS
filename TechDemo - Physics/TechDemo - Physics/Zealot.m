@@ -88,17 +88,19 @@
 
 
 - (void) shout{
-    
-    int s;
-    NSString *sound;
-    
-    int play= [Utils getRandomNumberBetween:1 to:100];
-    if (play > shoutPercentage) {
-        return;
+    if(![self isDead])
+    {
+        int s;
+        NSString *sound;
+        
+        int play= [Utils getRandomNumberBetween:1 to:100];
+        if (play > shoutPercentage) {
+            return;
+        }
+        s= [Utils getRandomNumberBetween:1 to:5];
+        sound = @"chant";
+        [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:sound]];
     }
-    s= [Utils getRandomNumberBetween:1 to:5];
-    sound = @"chant";
-    [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:sound]];
 }
 
 

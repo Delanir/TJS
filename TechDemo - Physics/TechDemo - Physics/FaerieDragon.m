@@ -25,7 +25,7 @@
         [self setFireVulnerability:kFireBaseVulnerability * 0.5];
         [self setIceVulnerability:kIceBaseVulnerability * 1.5];
         [self setPushbackVulnerability:kPushbackBaseVulnerability * 0.8];
-
+        
         [self postInit];
     }
     return self;
@@ -37,7 +37,7 @@
     attackAnimation = @"fd_attack";
     // Setup animations
     [self setWalkAction: [CCRepeatForever actionWithAction:
-                         [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName: walkAnimation]]]];
+                          [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName: walkAnimation]]]];
     [self setAttackAction: [CCSequence actions:
                             [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName: attackAnimation]],
                             [CCCallFuncN actionWithTarget:self selector:@selector(damageWall)],
@@ -89,16 +89,18 @@
 
 - (void) shout{
     
-    int s;
-    NSString *sound;
-    
-    int play= [Utils getRandomNumberBetween:1 to:100];
-    if (play > shoutPercentage) {
-        return;
+    if(![self isDead])
+    {
+        int s;
+        NSString *sound;
+        
+        int play= [Utils getRandomNumberBetween:1 to:100];
+        if (play > shoutPercentage)
+            return;
+        s= [Utils getRandomNumberBetween:1 to:5];
+        sound = @"fairie";
+        [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:sound]];
     }
-    s= [Utils getRandomNumberBetween:1 to:5];
-    sound = @"fairie";
-    [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:sound]];
 }
 
 
