@@ -72,7 +72,7 @@
 {
     [self setCurrentState:kDieEnemyState];
     [[self sprite] stopAllActions];
-    
+    [self unscheduleAllSelectors];
     CCFiniteTimeAction * dieAction = [CCSequence actions:
                                       [CCRepeat actionWithAction:[CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"p_dies" ]] times:1],
                                       [CCCallFuncN actionWithTarget:self selector:@selector(mockDie)],
@@ -100,7 +100,7 @@
         s= [Utils getRandomNumberBetween:1 to:5];
         sound = [NSString stringWithFormat:@"shout0%d",s];
         
-        [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:sound]];
+        [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:sound] pitch:1.0f pan:0.7f gain:0.5f];
     }
 }
 

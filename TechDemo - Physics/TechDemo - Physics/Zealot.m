@@ -71,7 +71,7 @@
 {
     [self setCurrentState:kDieEnemyState];
     [[self sprite] stopAllActions];
-    
+    [self unscheduleAllSelectors];
     CCFiniteTimeAction * dieAction = [CCSequence actions:
                                       [CCRepeat actionWithAction:[CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"z_dies" ]] times:1],
                                       [CCCallFuncN actionWithTarget:self selector:@selector(mockDie)],

@@ -293,7 +293,7 @@
 -(void) destructionChant
 {
     if (losingRate -health >0.2*maxHealth) {
-        [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"killhim"]];
+        [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"killhim"] pitch:1.0f pan:0.5f gain:0.7f];
     }
     losingRate = health;
     
