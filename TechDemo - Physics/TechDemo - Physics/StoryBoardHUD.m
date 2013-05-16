@@ -16,7 +16,7 @@
 
 @implementation StoryBoardHUD
 
-@synthesize story;
+@synthesize story, totalCards, currentCard;
 
 -(id) initForLevel: (int) level
 {

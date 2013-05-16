@@ -162,6 +162,7 @@
 		9C7CADC41745683800D09E77 /* ent_anim.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C7CADC31745683800D09E77 /* ent_anim.plist */; };
 		9C7CADC717456A8600D09E77 /* Ent.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C7CADC617456A8600D09E77 /* Ent.m */; };
 		9C7CADC917456C1100D09E77 /* EntScatter.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C7CADC817456C1100D09E77 /* EntScatter.plist */; };
+		9C7CADCB1745754800D09E77 /* ZealotTaunt.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C7CADCA1745754800D09E77 /* ZealotTaunt.plist */; };
 		9C7FF344170B28CE009DA7F9 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C7FF343170B28CE009DA7F9 /* Config.plist */; };
 		9C7FF347170B2AFA009DA7F9 /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C7FF346170B2AFA009DA7F9 /* Config.m */; };
 		9C7FF34E170B3C5C009DA7F9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C7FF34C170B3A49009DA7F9 /* main.m */; };
@@ -544,6 +545,7 @@
 		9C7CADC517456A8600D09E77 /* Ent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ent.h; sourceTree = "<group>"; };
 		9C7CADC617456A8600D09E77 /* Ent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ent.m; sourceTree = "<group>"; };
 		9C7CADC817456C1100D09E77 /* EntScatter.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = EntScatter.plist; sourceTree = "<group>"; };
+		9C7CADCA1745754800D09E77 /* ZealotTaunt.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ZealotTaunt.plist; sourceTree = "<group>"; };
 		9C7FF343170B28CE009DA7F9 /* Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Config.plist; path = "TechDemo - Physics/Config.plist"; sourceTree = "<group>"; };
 		9C7FF345170B2AFA009DA7F9 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		9C7FF346170B2AFA009DA7F9 /* Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
@@ -981,8 +983,9 @@
 				9CEB4CAA173A0AB5004297A2 /* SkeletonGroup.plist */,
 				9CEB4CAC173A0AC2004297A2 /* PeasantGroup.plist */,
 				9CEB4CAE173A0ACD004297A2 /* BlackDragonUp.plist */,
-				9C75E7A11741671900D335B1 /* WraithTaunt.plist */,
 				9C7CADC817456C1100D09E77 /* EntScatter.plist */,
+				9C75E7A11741671900D335B1 /* WraithTaunt.plist */,
+				9C7CADCA1745754800D09E77 /* ZealotTaunt.plist */,
 			);
 			name = Waves;
 			sourceTree = "<group>";
@@ -1964,6 +1967,7 @@
 				9C7CADC2174567F600D09E77 /* backgroundWinter-ipadhd.png in Resources */,
 				9C7CADC41745683800D09E77 /* ent_anim.plist in Resources */,
 				9C7CADC917456C1100D09E77 /* EntScatter.plist in Resources */,
+				9C7CADCB1745754800D09E77 /* ZealotTaunt.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

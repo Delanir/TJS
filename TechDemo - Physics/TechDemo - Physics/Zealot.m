@@ -7,6 +7,9 @@
 //
 
 #import "Zealot.h"
+#import "LevelLayer.h"
+#import "Registry.h"
+
 #define ZEALOTSHOUT 3
 
 @implementation Zealot
@@ -41,6 +44,9 @@
                             [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName: attackAnimation]],
                             [CCCallFuncN actionWithTarget:self selector:@selector(damageWall)],
                             nil]];
+    
+    if (currentState == kTauntEnemyState)
+        [self taunt];
     
     // Setup Movement
     if (currentState == kWalkEnemyState)
@@ -85,6 +91,52 @@
 {
     [super die];
 }
+
+
+- (void) taunt
+{
+    [self setCurrentState:kTauntEnemyState];
+    [self stopAnimations];
+    
+    CGSize winSize = [[CCDirector sharedDirector] winSize];
+    [[self sprite] runAction:walkAction];
+    CCFiniteTimeAction * tauntAction = [CCSequence actions:
+                                        [CCMoveTo actionWithDuration:[self speed]/4 position:ccp(3 * winSize.width/4,[[self sprite] position].y)],
+                                        [CCCallFuncN actionWithTarget:self selector:@selector(stopWalking)],
+                                        [CCCallFuncN actionWithTarget:self selector:@selector(shout)],
+                                        [CCRepeat actionWithAction:[CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"z_taunt" ]] times:1],
+                                        [CCCallFuncN actionWithTarget:self selector:@selector(startGame)],
+                                        [CCRepeat actionWithAction:[CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"z_taunt" ]] times:5],
+                                        [CCCallFuncN actionWithTarget:self selector:@selector(resumeFromTaunt)],
+                                        nil];
+    [[self sprite] runAction:tauntAction];
+}
+
+- (void) startGame
+{
+    [healthBar setPosition:ccp([sprite position].x, [sprite position].y + [sprite contentSize].height/2 + 2)];
+    LevelLayer * levelLayer = [[Registry shared] getEntityByName:@"LevelLayer"];
+    [levelLayer setGameStarted:YES];
+}
+
+- (void) stopWalking
+{
+    [self stopAction:walkAction];
+}
+
+- (void) resumeFromTaunt
+{
+    [[self sprite] stopAllActions];
+    [self setCurrentState:kWalkEnemyState];
+    [self setupActions];
+}
+
+- (void) stopAnimations
+{
+    [[self sprite] stopAllActions];
+}
+
+
 
 
 - (void) shout{
