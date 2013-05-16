@@ -43,7 +43,7 @@
 						<key>value</key>
 						<array>
 							<real>511</real>
-							<real>392</real>
+							<real>394</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -291,8 +291,6 @@
 						<string>Yuri saved Amiens and his people.</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>baseClass</key>
@@ -952,6 +950,8 @@
 						<string>StarsNode.ccb</string>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 				<key>seqExpanded</key>
 				<true/>
 			</dict>
@@ -1037,7 +1037,7 @@
 									<key>value</key>
 									<array>
 										<real>250</real>
-										<real>630</real>
+										<real>660</real>
 									</array>
 								</dict>
 							</array>
@@ -1075,7 +1075,7 @@
 						<key>value</key>
 						<array>
 							<real>250</real>
-							<real>630</real>
+							<real>660</real>
 							<integer>0</integer>
 						</array>
 					</dict>
