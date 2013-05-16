@@ -54,6 +54,9 @@
     }
     if (currentState == kAttackEnemyState)
         [sprite runAction:[CCRepeatForever actionWithAction:attackAction]];
+    
+    [self schedule:@selector(shout) interval:6.5];
+    shoutPercentage = 80;
 }
 
 -(void) attack
@@ -95,6 +98,7 @@
     CCFiniteTimeAction * tauntAction = [CCSequence actions:
                                         [CCMoveTo actionWithDuration:[self speed]/4 position:ccp(3 * winSize.width/4,[[self sprite] position].y)],
                                         [CCCallFuncN actionWithTarget:self selector:@selector(stopWalking)],
+                                        [CCCallFuncN actionWithTarget:self selector:@selector(shout)],
                                         [CCRepeat actionWithAction:[CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"w_taunt" ]] times:2],
                                         [CCCallFuncN actionWithTarget:self selector:@selector(startGame)],
                                         [CCRepeat actionWithAction:[CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"w_taunt" ]] times:2],
@@ -125,6 +129,21 @@
 - (void) stopAnimations
 {
     [[self sprite] stopAllActions];
+}
+
+- (void) shout{
+    
+    int s;
+    NSString *sound;
+    
+    int play= [Utils getRandomNumberBetween:1 to:100];
+    if (play > shoutPercentage) {
+        return;
+    }
+    s= [Utils getRandomNumberBetween:1 to:3];
+    sound = [NSString stringWithFormat:@"wraith0%d",s];
+    
+    [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:sound] pitch:0.5f pan:0.7f gain:1.0f];
 }
 
 

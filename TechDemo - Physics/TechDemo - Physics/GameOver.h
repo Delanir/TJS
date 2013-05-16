@@ -15,11 +15,12 @@
     CCSprite * _menu;
     CCSprite * _skill;
     CCSprite * _retry;
+    CCSprite * _main;
 }
 
 
 -(CCSprite *) getSkillButton;
 -(CCSprite *) getMenuButton;
-
+-(CCSprite *) getMainButton;
 -(CCSprite *) getRetryButton;
 @end

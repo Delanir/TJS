@@ -14,11 +14,13 @@
     CCSprite *_pause;
     CCSprite *_menu;
     CCSprite *_retry;
+    CCSprite *_main;
 }
 
 
 -(CCSprite *) getPauseButton;
 -(CCSprite *) getMenuButton;
+-(CCSprite *) getMainButton;
 -(CCSprite *) getRetryButton;
 
 @end

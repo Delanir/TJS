@@ -17,6 +17,7 @@
     CCSprite * _menu;
     CCSprite * _skill;
     CCSprite * _play;
+    CCSprite * _main;
     
     LevelStars* _stars1;
     LevelStars* _stars2;
@@ -28,6 +29,8 @@
 -(CCSprite *) getPlayButton;
 
 -(CCSprite *) getSkillButton;
+
+-(CCSprite *) getMainButton;
 
 -(void) disablePlayNext;
 

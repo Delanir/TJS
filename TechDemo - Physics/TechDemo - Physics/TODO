@@ -19,12 +19,7 @@ Bugs:
 - Inimigos aleatórios estão a aparecer mt em baixo (é necessario somar metade da height na posição)
 
 Daniela:
-- Storyboards
-// Array de dicionários
- Cada dicionário com:
-    - text
-    - image
-    - orientation - referencia uma animação
+
     
 João M:
 - Taunting:
@@ -58,6 +53,7 @@ Ideias:
 - Checkpoints (wave de CP)
 - Skill points por achievements
 - Fazer modo endless
+- Fazer um album para colectionar os monstros que aparecem
  
 
 
@@ -137,4 +133,10 @@ Ideias:
     - Achievements unlocked warning
 - Velocidade da wraith inicial (taunt) mais rapido
 - Flechas mais rapidas
+- Storyboards
+// Array de dicionários
+ Cada dicionário com:
+    - text
+    - image
+    - orientation - referencia uma animação
 

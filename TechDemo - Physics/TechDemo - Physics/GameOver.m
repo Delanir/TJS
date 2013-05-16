@@ -27,6 +27,11 @@
     return _skill;
 };
 
+-(CCSprite *) getMainButton
+{
+    return _main;
+};
+
 
 
 

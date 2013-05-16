@@ -20,6 +20,12 @@
 	<string>shout04.mp3</string>
 	<key>shout05</key>
 	<string>shout05.mp3</string>
+	<key>wraith01</key>
+	<string>wraith01.mp3</string>
+	<key>wraith02</key>
+	<string>wraith02.mp3</string>
+	<key>wraith03</key>
+	<string>wraith03.mp3</string>
 	<key>InitialArrows</key>
 	<integer>60</integer>
 	<key>InitialMana</key>
