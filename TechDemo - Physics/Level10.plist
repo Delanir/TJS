@@ -2,13 +2,17 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>tauntEnemyType</key>
+	<string>faeriedragon</string>
+	<key>background</key>
+	<string>summer</string>
 	<key>timeBetweenWaves</key>
 	<integer>2</integer>
 	<key>waves</key>
 	<array>
 		<string>FaerieColumn</string>
 		<string>ZealotSquare</string>
-		<string>FireElementals</string>
+		<string>EntScatter</string>
 		<string>BlackDragonUp</string>
 		<string>FaerieColumn</string>
 		<string>PeasantSpear</string>
@@ -18,6 +22,7 @@
 		<string>ZealotSquare</string>
 		<string>FireElementals</string>
 		<string>SkeletonArmy</string>
+		<string>EntScatter</string>
 		<string>SkeletonArmy</string>
 		<string>MixedWave</string>
 		<string>MixedWave</string>

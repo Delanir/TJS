@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>tauntEnemyType</key>
+	<string>faeriedragon</string>
+	<key>background</key>
+	<string>winter</string>
 	<key>timeBetweenWaves</key>
 	<integer>3</integer>
 	<key>waves</key>
@@ -13,10 +17,11 @@
 		<string>WraithHex</string>
 		<string>SkeletonArmy</string>
 		<string>FaerieColumn</string>
-		<string>FireElementals</string>
+		<string>EntScatter</string>
 		<string>BlackDragonDown</string>
 		<string>FireElementals</string>
 		<string>PeasantSpear</string>
+		<string>EntScatter</string>
 	</array>
 </dict>
 </plist>

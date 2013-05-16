@@ -2,6 +2,22 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>z_taunt</key>
+	<dict>
+		<key>delay</key>
+		<real>0.15</real>
+		<key>frames</key>
+		<array>
+			<string>z_taunt_01.png</string>
+			<string>z_taunt_02.png</string>
+			<string>z_taunt_03.png</string>
+			<string>z_taunt_04.png</string>
+			<string>z_taunt_05.png</string>
+			<string>z_taunt_06.png</string>
+			<string>z_taunt_07.png</string>
+			<string>z_taunt_08.png</string>
+		</array>
+	</dict>
 	<key>z_dies</key>
 	<dict>
 		<key>delay</key>

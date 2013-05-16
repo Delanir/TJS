@@ -133,17 +133,20 @@
 
 - (void) shout{
     
-    int s;
-    NSString *sound;
-    
-    int play= [Utils getRandomNumberBetween:1 to:100];
-    if (play > shoutPercentage) {
-        return;
+    if(![self isDead])
+    {
+        int s;
+        NSString *sound;
+        
+        int play= [Utils getRandomNumberBetween:1 to:100];
+        if (play > shoutPercentage)
+            return;
+        
+        s= [Utils getRandomNumberBetween:1 to:3];
+        sound = [NSString stringWithFormat:@"wraith0%d",s];
+        
+        [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:sound] pitch:1.0f pan:0.7f gain:1.4f];
     }
-    s= [Utils getRandomNumberBetween:1 to:3];
-    sound = [NSString stringWithFormat:@"wraith0%d",s];
-    
-    [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:sound] pitch:1.0f pan:0.7f gain:1.4f];
 }
 
 

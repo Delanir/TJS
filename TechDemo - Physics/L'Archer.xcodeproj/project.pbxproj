@@ -157,6 +157,12 @@
 		9C7CADBC1743E14700D09E77 /* AchievementsSpritesheet.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C7CADB81743DFAA00D09E77 /* AchievementsSpritesheet.png */; };
 		9C7CADBD1743E14D00D09E77 /* AchievementsSpritesheet-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C7CADB51743DF9100D09E77 /* AchievementsSpritesheet-ipadhd.png */; };
 		9C7CADBE1743E15000D09E77 /* AchievementsSpritesheet-ipadhd.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C7CADB61743DF9100D09E77 /* AchievementsSpritesheet-ipadhd.plist */; };
+		9C7CADC0174567E700D09E77 /* backgroundWinter.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C7CADBF174567E700D09E77 /* backgroundWinter.png */; };
+		9C7CADC2174567F600D09E77 /* backgroundWinter-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C7CADC1174567F500D09E77 /* backgroundWinter-ipadhd.png */; };
+		9C7CADC41745683800D09E77 /* ent_anim.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C7CADC31745683800D09E77 /* ent_anim.plist */; };
+		9C7CADC717456A8600D09E77 /* Ent.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C7CADC617456A8600D09E77 /* Ent.m */; };
+		9C7CADC917456C1100D09E77 /* EntScatter.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C7CADC817456C1100D09E77 /* EntScatter.plist */; };
+		9C7CADCB1745754800D09E77 /* ZealotTaunt.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C7CADCA1745754800D09E77 /* ZealotTaunt.plist */; };
 		9C7FF344170B28CE009DA7F9 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C7FF343170B28CE009DA7F9 /* Config.plist */; };
 		9C7FF347170B2AFA009DA7F9 /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C7FF346170B2AFA009DA7F9 /* Config.m */; };
 		9C7FF34E170B3C5C009DA7F9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C7FF34C170B3A49009DA7F9 /* main.m */; };
@@ -533,6 +539,13 @@
 		9C7CADB81743DFAA00D09E77 /* AchievementsSpritesheet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AchievementsSpritesheet.png; sourceTree = "<group>"; };
 		9C7CADB91743DFAA00D09E77 /* AchievementsSpritesheet.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = AchievementsSpritesheet.plist; sourceTree = "<group>"; };
 		9C7CADBA1743DFAA00D09E77 /* AchievementsSpritesheet.zwd */ = {isa = PBXFileReference; lastKnownFileType = file; path = AchievementsSpritesheet.zwd; sourceTree = "<group>"; };
+		9C7CADBF174567E700D09E77 /* backgroundWinter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backgroundWinter.png; sourceTree = "<group>"; };
+		9C7CADC1174567F500D09E77 /* backgroundWinter-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backgroundWinter-ipadhd.png"; sourceTree = "<group>"; };
+		9C7CADC31745683800D09E77 /* ent_anim.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ent_anim.plist; sourceTree = "<group>"; };
+		9C7CADC517456A8600D09E77 /* Ent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ent.h; sourceTree = "<group>"; };
+		9C7CADC617456A8600D09E77 /* Ent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ent.m; sourceTree = "<group>"; };
+		9C7CADC817456C1100D09E77 /* EntScatter.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = EntScatter.plist; sourceTree = "<group>"; };
+		9C7CADCA1745754800D09E77 /* ZealotTaunt.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ZealotTaunt.plist; sourceTree = "<group>"; };
 		9C7FF343170B28CE009DA7F9 /* Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Config.plist; path = "TechDemo - Physics/Config.plist"; sourceTree = "<group>"; };
 		9C7FF345170B2AFA009DA7F9 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		9C7FF346170B2AFA009DA7F9 /* Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
@@ -970,7 +983,9 @@
 				9CEB4CAA173A0AB5004297A2 /* SkeletonGroup.plist */,
 				9CEB4CAC173A0AC2004297A2 /* PeasantGroup.plist */,
 				9CEB4CAE173A0ACD004297A2 /* BlackDragonUp.plist */,
+				9C7CADC817456C1100D09E77 /* EntScatter.plist */,
 				9C75E7A11741671900D335B1 /* WraithTaunt.plist */,
+				9C7CADCA1745754800D09E77 /* ZealotTaunt.plist */,
 			);
 			name = Waves;
 			sourceTree = "<group>";
@@ -1079,7 +1094,6 @@
 				8BC21064173430E600B875B2 /* ccbParticleSnow.png */,
 				8BC21065173430E600B875B2 /* ccbParticleStars.png */,
 				3EB8A37D17161AF800666626 /* defaultEmitter.png */,
-				3EDD9F241715DF9F00C6A622 /* background.png */,
 			);
 			name = Sprites;
 			sourceTree = "<group>";
@@ -1116,6 +1130,8 @@
 				9C47870D17342B4B00180864 /* FireElemental.m */,
 				9C8DE0D41718E9FF002E0D0A /* Zealot.h */,
 				9C8DE0D51718EA00002E0D0A /* Zealot.m */,
+				9C7CADC517456A8600D09E77 /* Ent.h */,
+				9C7CADC617456A8600D09E77 /* Ent.m */,
 			);
 			name = Enemies;
 			sourceTree = "<group>";
@@ -1553,6 +1569,7 @@
 				9C47870617342A0A00180864 /* skeleton_anim.plist */,
 				9C47870817342A1600180864 /* wraith_anim.plist */,
 				9C47870A17342A2500180864 /* fireelemental_anim.plist */,
+				9C7CADC31745683800D09E77 /* ent_anim.plist */,
 			);
 			name = Animations;
 			sourceTree = "<group>";
@@ -1659,6 +1676,7 @@
 				9C8C65CE1719C09800F56FC4 /* lvl1spritesheet-ipadhd.png */,
 				9C8C65CF1719C09800F56FC4 /* lvl1spritesheet-ipadhd.zwd */,
 				3EDD9F221715DF2900C6A622 /* background-ipadhd.png */,
+				9C7CADC1174567F500D09E77 /* backgroundWinter-ipadhd.png */,
 				9C973FDC1717205000B25075 /* Default-Landscape@2x~ipad.png */,
 				9C973FDE1717232300B25075 /* Icon-ipadhd.png */,
 				9C85F4B51707957E00EECB83 /* fps_images-ipadhd.png */,
@@ -1677,6 +1695,8 @@
 				9C268CEF172C4F1C00F303D8 /* MenuSpritesheet.plist */,
 				9C268CF0172C4F1C00F303D8 /* MenuSpritesheet.png */,
 				9C268CEB172C4D8700F303D8 /* MenuSpritesheet.zwd */,
+				3EDD9F241715DF9F00C6A622 /* background.png */,
+				9C7CADBF174567E700D09E77 /* backgroundWinter.png */,
 				3EDD9F281715E4CD00C6A622 /* lvl1spritesheet.plist */,
 				8BF9C6021744496000E4B3F6 /* portrait.png */,
 				8BD6228D171460200076BF42 /* lvl1spritesheet.png */,
@@ -1943,6 +1963,11 @@
 				8B68F97317455BDE0032DF73 /* wraith01.mp3 in Resources */,
 				8B68F97417455BDE0032DF73 /* wraith02.mp3 in Resources */,
 				8B68F97517455BDE0032DF73 /* wraith03.mp3 in Resources */,
+				9C7CADC0174567E700D09E77 /* backgroundWinter.png in Resources */,
+				9C7CADC2174567F600D09E77 /* backgroundWinter-ipadhd.png in Resources */,
+				9C7CADC41745683800D09E77 /* ent_anim.plist in Resources */,
+				9C7CADC917456C1100D09E77 /* EntScatter.plist in Resources */,
+				9C7CADCB1745754800D09E77 /* ZealotTaunt.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2121,6 +2146,7 @@
 				9C6187EE17430CAA00A6D63F /* AchievementUnlockedNode.m in Sources */,
 				8B1189571743FE8500C68B70 /* StoryBoard.m in Sources */,
 				8BF9C5FD17443F1C00E4B3F6 /* StoryBoardHUD.m in Sources */,
+				9C7CADC717456A8600D09E77 /* Ent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

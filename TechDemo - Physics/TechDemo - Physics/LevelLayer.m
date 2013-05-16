@@ -143,7 +143,6 @@ static int current_level = -1;
     [self initializeResources];
     
     [self schedule:@selector(updatePreGame:)];
-#warning temp
     
     _story =[[StoryBoardHUD alloc] initForLevel:level] ;
     [self addChild:_story z:2000];
@@ -506,12 +505,15 @@ static int current_level = -1;
  *
  */
 
--(void) checkStoryBoard{
-    if (_story!=nil&&[_story visible]) {
+-(void) checkStoryBoard
+{
+    if (_story!=nil && [_story visible])
+    {
         [_story nextCard];
-        if (![_story visible]) {
+        if (![_story visible])
+        {
             // Send the flag zombie
-            [[WaveManager shared] sendWave:@"WraithTaunt" taunt:YES];
+            [[WaveManager shared] sendWave:@"ZealotTaunt" taunt:YES];
             [[[GetReady alloc] initWithPosition:ccp(512, 384)] autorelease];
         }
     }else if (_story!=nil){
