@@ -11,8 +11,20 @@
 		</array>
 		<array>
 			<string>Chapter 1</string>
+			<string>I live in peace and harmony among my family and friends
+and everything is...</string>
+			<string>portrait.png</string>
+		</array>
+		<array>
+			<string>Chapter 1</string>
 			<string>Mon Dieu! We are under attack by forces unknown
-Tap or press the screen to help me strike the invaders!</string>
+Quick, to the walls! Grab my bow on the way!</string>
+			<string>portrait.png</string>
+		</array>
+		<array>
+			<string>Chapter 1</string>
+			<string>Help me get rid of these invaders.
+Tap or press the screen to strike them with my arrows!</string>
 			<string>portrait.png</string>
 		</array>
 		<array>
@@ -23,7 +35,7 @@ I think I am going to need it!</string>
 		</array>
 		<array>
 			<string>Chapter 1</string>
-			<string>Use the buttons below to activate the powers
+			<string>Use the buttons below to activate my powers
 Quick, let&apos;s defend the city!</string>
 			<string>portrait.png</string>
 		</array>
@@ -38,7 +50,8 @@ I will teach him a lesson...</string>
 		</array>
 		<array>
 			<string>Chapter 2</string>
-			<string>I heard the dead are weary of fire
+			<string>They are tougher than the peasants, but 
+I heard the dead are weary of fire...
 Time to put it to the test!</string>
 			<string>portrait.png</string>
 		</array>
@@ -74,6 +87,90 @@ But for a price, as always. Damned unions...</string>
 		<array>
 			<string>Chapter 4</string>
 			<string>Use the buttons below to buy arrows or repair the wall</string>
+			<string>portrait.png</string>
+		</array>
+	</array>
+	<key>chapter5</key>
+	<array>
+		<array>
+			<string>Chapter 5</string>
+			<string>Sacrebleu! A dragon, in the winter? 
+Dragons hate cold, everyone knows that...
+They must be desperate</string>
+			<string>portrait.png</string>
+		</array>
+		<array>
+			<string>Chapter 5</string>
+			<string>The Fire elementals also despise the cold
+but I doubt they will stop coming</string>
+			<string>portrait.png</string>
+		</array>
+	</array>
+	<key>chapter6</key>
+	<array>
+		<array>
+			<string>Chapter 6</string>
+			<string>And they keep taunting me, these wraiths.</string>
+			<string>portrait.png</string>
+		</array>
+		<array>
+			<string>Chapter 6</string>
+			<string>Kill them! kill them with fire!
+They burn like trees</string>
+			<string>portrait.png</string>
+		</array>
+	</array>
+	<key>chapter7</key>
+	<array>
+		<array>
+			<string>Chapter 7</string>
+			<string>If I ask the masons to build a moat, the attackers will take
+some damage every time they get close to the wall</string>
+			<string>portrait.png</string>
+		</array>
+		<array>
+			<string>Chapter 7</string>
+			<string>And if I upgrade it with underwater spikes, they may even
+instantly die before they reach us!</string>
+			<string>portrait.png</string>
+		</array>
+		<array>
+			<string>Chapter 7</string>
+			<string>Hmmm...</string>
+			<string>portrait.png</string>
+		</array>
+	</array>
+	<key>chapter8</key>
+	<array>
+		<array>
+			<string>Chapter 8</string>
+			<string>That skill tree is really awesome</string>
+			<string>portrait.png</string>
+		</array>
+		<array>
+			<string>Chapter 8</string>
+			<string>I can try different options everytime I need</string>
+			<string>portrait.png</string>
+		</array>
+		<array>
+			<string>Chapter 8</string>
+			<string>Maybe it should not, but it is so much fun this way!</string>
+			<string>portrait.png</string>
+		</array>
+	</array>
+	<key>chapter9</key>
+	<array>
+		<array>
+			<string>Chapter 8</string>
+			<string>It is getting harder!</string>
+			<string>portrait.png</string>
+		</array>
+	</array>
+	<key>chapter10</key>
+	<array>
+		<array>
+			<string>Chapter 8</string>
+			<string>I bet they are coming all at once now...</string>
 			<string>portrait.png</string>
 		</array>
 	</array>

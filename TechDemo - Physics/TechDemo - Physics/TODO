@@ -14,7 +14,6 @@ Bugs:
 - Gelo tem comportamento estranho qd inimigos estao a atacar
 - crasha de alguns em alguns jogos por algum motivo estranho (memoria? fazer profile)
     - Está a deixar memória pendurada. Não muito. Mas está
-
 - Verificar se dá para actualizar as mascaras das sprites. Isso está a afectar as colisões
 - Inimigos aleatórios estão a aparecer mt em baixo (é necessario somar metade da height na posição)
 
@@ -24,12 +23,10 @@ Resources:
     - Som nas explosões
 
 João M:
-- história e tutorial
 - mais tempo de display dos achievements
 - Feedback de poucas flechas - como o get ready
 - Level up message
 - criaturas a serem desenhadas fora do ecra
-- 
 
 Ricardo:
 - Utilização do Flurry
@@ -150,3 +147,5 @@ Coisas saídas do play testing do rafael:
 - Dendroids!
 - Foto do boneco do poster para por no storyboard
 - Quando se tira o pause o yuri dispara flechinha
+- história e tutorial
+

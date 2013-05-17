@@ -9,6 +9,10 @@
 #ifndef L_Archer_Constants_h
 #define L_Archer_Constants_h
 
+#define kFireManaCost 3
+#define kIceManaCost 3
+#define kPushbackManaCost 1
+
 #define kManaRegenerationRate 0.02
 #define kManaBaseRegenerationBonus 1.5
 #define kManaExtraRegenerationBonus 2.0

@@ -392,15 +392,15 @@ static int current_level = -1;
     // Damage Stimulus
     [stimulusPackage addObject:[[StimulusFactory shared] generateDamageStimulusWithValue:damage]];
     // Cold Stimulus
-    if ([[buttons objectAtIndex:kPower1Button] boolValue] && [[ResourceManager shared] spendMana:3.5])
+    if ([[buttons objectAtIndex:kPower1Button] boolValue] && [[ResourceManager shared] spendMana:kFireManaCost])
         [stimulusPackage addObject:[[StimulusFactory shared] generateColdStimulusWithValue:[yuri slowPercentage]
                                                                                andDuration:[yuri slowTime]]];
     // Fire Stimulus
-    if ([[buttons objectAtIndex:kPower2Button] boolValue] && [[ResourceManager shared] spendMana:3.5])
+    if ([[buttons objectAtIndex:kPower2Button] boolValue] && [[ResourceManager shared] spendMana:kIceManaCost])
         [stimulusPackage addObject:[[StimulusFactory shared] generateFireStimulusWithValue: [yuri fireDamage]
                                                                                andDuration:[yuri fireDuration]]];
     // PushBack Stimulus
-    if ([[buttons objectAtIndex:kPower3Button] boolValue] && [[ResourceManager shared] spendMana:2.0])
+    if ([[buttons objectAtIndex:kPower3Button] boolValue] && [[ResourceManager shared] spendMana:kPushbackManaCost])
         [stimulusPackage addObject:[[StimulusFactory shared] generatePushBackStimulusWithValue:kYuriBasePushbackDistance]];
     
     Arrow * arrow = [[Arrow alloc] initWithDestination:alocation andStimulusPackage:stimulusPackage];
