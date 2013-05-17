@@ -15,6 +15,7 @@
 #import "SimpleAudioEngine.h"
 
 #import "Constants.h"
+#import "LevelLayer.h"
 
 #define SHOUTPERCENTAGE 7
 
@@ -327,6 +328,29 @@
     
 }
 
+- (void) startGame
+{
+    [healthBar setPosition:ccp([sprite position].x, [sprite position].y + [sprite contentSize].height/2 + 2)];
+    LevelLayer * levelLayer = [[Registry shared] getEntityByName:@"LevelLayer"];
+    [levelLayer setGameStarted:YES];
+}
+
+- (void) stopWalking
+{
+    [self stopAction:walkAction];
+}
+
+- (void) resumeFromTaunt
+{
+    [[self sprite] stopAllActions];
+    [self setCurrentState:kWalkEnemyState];
+    [self setupActions];
+}
+
+- (void) stopAnimations
+{
+    [[self sprite] stopAllActions];
+}
 
 
 @end

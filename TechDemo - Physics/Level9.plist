@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>tauntEnemyType</key>
-	<string>faeriedragon</string>
+	<string>faerie</string>
 	<key>background</key>
 	<string>winter</string>
 	<key>timeBetweenWaves</key>

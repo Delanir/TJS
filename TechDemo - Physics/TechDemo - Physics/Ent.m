@@ -41,6 +41,9 @@
                             [CCCallFuncN actionWithTarget:self selector:@selector(damageWall)],
                             nil]];
     
+    if (currentState == kTauntEnemyState)
+        [self taunt];
+    
     // Setup Movement
     if (currentState == kWalkEnemyState)
     {
@@ -84,5 +87,24 @@
     [super die];
 }
 
+
+- (void) taunt
+{
+    [self setCurrentState:kTauntEnemyState];
+    [self stopAnimations];
+    
+    CGSize winSize = [[CCDirector sharedDirector] winSize];
+    [[self sprite] runAction:walkAction];
+    CCFiniteTimeAction * tauntAction = [CCSequence actions:
+                                        [CCMoveTo actionWithDuration:[self speed]/4 position:ccp(3 * winSize.width/4,[[self sprite] position].y)],
+                                        [CCCallFuncN actionWithTarget:self selector:@selector(stopWalking)],
+                                        [CCCallFuncN actionWithTarget:self selector:@selector(shout)],
+                                        [CCRepeat actionWithAction:[CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"e_taunt" ]] times:1],
+                                        [CCCallFuncN actionWithTarget:self selector:@selector(startGame)],
+                                        [CCRepeat actionWithAction:[CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"e_taunt" ]] times:4],
+                                        [CCCallFuncN actionWithTarget:self selector:@selector(resumeFromTaunt)],
+                                        nil];
+    [[self sprite] runAction:tauntAction];
+}
 
 @end

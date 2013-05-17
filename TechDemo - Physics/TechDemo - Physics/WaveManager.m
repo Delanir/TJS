@@ -8,10 +8,11 @@
 
 #import "WaveManager.h"
 #import "LevelLayer.h"
+#import "MainScene.h"
 
 @implementation WaveManager
 
-@synthesize intervalBetweenWaves, waves;
+@synthesize intervalBetweenWaves, waves, currentTauntType;
 
 static WaveManager* _sharedSingleton = nil;
 
@@ -53,6 +54,9 @@ static WaveManager* _sharedSingleton = nil;
     // Por waves numa queue. Guardar tempo entre layers
     NSDictionary * levelDetails = [Utils openPlist:level];
     [self setIntervalBetweenWaves:[(NSNumber*)[levelDetails objectForKey:@"timeBetweenWaves"] doubleValue]];
+    [self setCurrentTauntType:[levelDetails objectForKey:@"tauntEnemyType"]];
+    
+    [(MainScene*)[[Registry shared] getEntityByName:@"MainScene"] setBackgroundWithSpriteType: [levelDetails objectForKey:@"background"]];
     
     NSArray* temp = [levelDetails objectForKey:@"waves"];
     for(NSString * wave in temp)
@@ -99,26 +103,16 @@ static WaveManager* _sharedSingleton = nil;
         [self stopWaves];
 }
 
--(void) sendWave:(NSString*)waveName taunt:(BOOL)isTaunt
+-(void) dispatchTaunt
 {
     LevelLayer * ll = [[Registry shared] getEntityByName:@"LevelLayer"];
-    NSDictionary * nextWave = [Utils openPlist:waveName];
-    NSNumber * vPosition = [nextWave objectForKey:@"verticalCenter"];
-    NSArray * enemies = [nextWave objectForKey:@"enemies"];
     
-    for (NSDictionary * enemy in enemies)
-    {
-        NSString * type = [enemy objectForKey:@"type"];
-        float xDisp = [[enemy objectForKey:@"xdisp" ] floatValue];
-        float yDisp = [[enemy objectForKey:@"ydisp"] floatValue];
-        CGPoint displacementPoint = ccp(xDisp, yDisp);
-        Enemy * newEnemy = [[EnemyFactory shared] generateEnemyWithType:type
-                                                               vertical:[vPosition intValue]
-                                                           displacement:displacementPoint
-                                                                  taunt:isTaunt];
-        [ll addEnemy:newEnemy];
-        self.enemies++;
-    }
+    Enemy * newEnemy = [[EnemyFactory shared] generateEnemyWithType: currentTauntType
+                                                           vertical: 380
+                                                       displacement: ccp(0,0)
+                                                              taunt: YES];
+    [ll addEnemy:newEnemy];
+    self.enemies++;
 }
 
 -(void) sendEnemy

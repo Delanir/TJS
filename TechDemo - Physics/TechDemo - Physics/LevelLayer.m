@@ -513,7 +513,7 @@ static int current_level = -1;
         if (![_story visible])
         {
             // Send the flag zombie
-            [[WaveManager shared] sendWave:@"ZealotTaunt" taunt:YES];
+            [[WaveManager shared] dispatchTaunt];
             [[[GetReady alloc] initWithPosition:ccp(512, 384)] autorelease];
         }
     }else if (_story!=nil){

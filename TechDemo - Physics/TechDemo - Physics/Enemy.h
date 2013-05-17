@@ -13,6 +13,9 @@
 #import "Constants.h"
 #import "SimpleAudioEngine.h"
 #import "GameState.h"
+#import "Registry.h"
+
+@class LevelLayer;
 
 @interface Enemy : Entity
 {
@@ -62,6 +65,10 @@
 -(void) enqueueStimuli:(NSMutableArray *) stimulusPackage;
 -(float) getCurrentSpeed;
 -(void) setCurrentSpeed: (float) newSpeed;
+- (void) startGame;
+- (void) stopWalking;
+- (void) resumeFromTaunt;
+- (void) stopAnimations;
 
 -(void) takeDamage:(double) amount;
 @end

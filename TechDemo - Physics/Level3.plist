@@ -7,7 +7,7 @@
 	<key>background</key>
 	<string>summer</string>
 	<key>timeBetweenWaves</key>
-	<integer>3</integer>
+	<integer>4</integer>
 	<key>waves</key>
 	<array>
 		<string>PeasantGroup</string>

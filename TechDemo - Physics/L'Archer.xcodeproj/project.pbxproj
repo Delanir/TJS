@@ -1018,6 +1018,7 @@
 			children = (
 				9C11EEC417206465003510EB /* Waves */,
 				9C11EEC11720637D003510EB /* Levels */,
+				9C94ABD917197D3C005BCE32 /* Animations */,
 				9C7FF343170B28CE009DA7F9 /* Config.plist */,
 				8C5B1D9317371934003F4332 /* achievements.plist */,
 				9C8DE0D017185844002E0D0A /* Tags */,
@@ -1116,6 +1117,8 @@
 		9C4787181734526600180864 /* Enemies */ = {
 			isa = PBXGroup;
 			children = (
+				9C85F6441709D25600EECB83 /* Enemy.h */,
+				9C85F6451709D25700EECB83 /* Enemy.m */,
 				9C47870F17344CFD00180864 /* Wraith.h */,
 				9C47871017344CFD00180864 /* Wraith.m */,
 				9C4787121734524D00180864 /* BlackDragon.h */,
@@ -1193,7 +1196,6 @@
 			children = (
 				3E926EC4173405ED00BFA90D /* Achievements */,
 				9C9D85991733FF690071B7C2 /* CocosBuilder */,
-				9C94ABD917197D3C005BCE32 /* Animations */,
 				9C8DE0CC171852F8002E0D0A /* App resources */,
 				9C377C04170BAE4500F840FB /* SFX */,
 				9C969E5C1716470500BE7476 /* Music */,
@@ -1572,31 +1574,32 @@
 				9C7CADC31745683800D09E77 /* ent_anim.plist */,
 			);
 			name = Animations;
+			path = "TechDemo - Physics";
 			sourceTree = "<group>";
 		};
 		9C969E571716260400BE7476 /* Singleton Classes */ = {
 			isa = PBXGroup;
 			children = (
+				9C85F65C170A458100EECB83 /* CollisionManager.h */,
+				9C85F65D170A458200EECB83 /* CollisionManager.m */,
 				9C7FF345170B2AFA009DA7F9 /* Config.h */,
 				9C7FF346170B2AFA009DA7F9 /* Config.m */,
 				9C377C0B170BBDD300F840FB /* EnemyFactory.h */,
 				9C377C0C170BBDD600F840FB /* EnemyFactory.m */,
-				9C85F65C170A458100EECB83 /* CollisionManager.h */,
-				9C85F65D170A458200EECB83 /* CollisionManager.m */,
-				8BD6228717145FF60076BF42 /* SpriteManager.h */,
-				8BD6228817145FF60076BF42 /* SpriteManager.m */,
-				9C8C65D21719E2A700F56FC4 /* StimulusFactory.h */,
-				9C8C65D31719E2A700F56FC4 /* StimulusFactory.m */,
-				9CBF5B08171E462D00EF44B2 /* Registry.h */,
-				9CBF5B09171E462E00EF44B2 /* Registry.m */,
-				9CBF5B0B171E464C00EF44B2 /* ResourceManager.h */,
-				9CBF5B0C171E464C00EF44B2 /* ResourceManager.m */,
-				9C11EEBE17205775003510EB /* WaveManager.h */,
-				9C11EEBF17205775003510EB /* WaveManager.m */,
 				9C1E05B417249B380093F0E3 /* GameManager.h */,
 				9C1E05B517249B380093F0E3 /* GameManager.m */,
 				9C1E05BA1724C0550093F0E3 /* GameState.h */,
 				9C1E05BB1724C0560093F0E3 /* GameState.m */,
+				9CBF5B08171E462D00EF44B2 /* Registry.h */,
+				9CBF5B09171E462E00EF44B2 /* Registry.m */,
+				9CBF5B0B171E464C00EF44B2 /* ResourceManager.h */,
+				9CBF5B0C171E464C00EF44B2 /* ResourceManager.m */,
+				8BD6228717145FF60076BF42 /* SpriteManager.h */,
+				8BD6228817145FF60076BF42 /* SpriteManager.m */,
+				9C8C65D21719E2A700F56FC4 /* StimulusFactory.h */,
+				9C8C65D31719E2A700F56FC4 /* StimulusFactory.m */,
+				9C11EEBE17205775003510EB /* WaveManager.h */,
+				9C11EEBF17205775003510EB /* WaveManager.m */,
 			);
 			name = "Singleton Classes";
 			sourceTree = "<group>";
@@ -1629,8 +1632,6 @@
 				9C85F655170A022900EECB83 /* Arrow.m */,
 				9C85F6411709D1A800EECB83 /* Yuri.h */,
 				9C85F6421709D1A900EECB83 /* Yuri.m */,
-				9C85F6441709D25600EECB83 /* Enemy.h */,
-				9C85F6451709D25700EECB83 /* Enemy.m */,
 				9C85F6511709ECF300EECB83 /* Entity.h */,
 				9C85F6521709ECF300EECB83 /* Entity.m */,
 				9C85F65F170A4E4400EECB83 /* Projectile.h */,

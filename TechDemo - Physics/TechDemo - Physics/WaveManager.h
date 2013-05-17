@@ -17,10 +17,12 @@
 {
     double intervalBetweenWaves;
     NSMutableArray *waves;
+    NSString *currentTauntType;
 }
 
 @property double intervalBetweenWaves, timeElapsedSinceLastWave;
 @property (nonatomic, retain) NSMutableArray* waves;
+@property (nonatomic, retain) NSString *currentTauntType;
 @property int enemies;
 
 +(WaveManager*)shared;
@@ -30,7 +32,7 @@
 -(void) stopWaves;
 -(void) clearLevel;
 -(BOOL) anymoreWaves;
--(void) sendWave:(NSString*)waveName taunt:(BOOL)isTaunt;
+-(void) dispatchTaunt;
 
 
 @end

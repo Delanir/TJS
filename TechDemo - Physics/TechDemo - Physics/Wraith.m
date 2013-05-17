@@ -7,8 +7,6 @@
 //
 
 #import "Wraith.h"
-#import "LevelLayer.h"
-#import "Registry.h"
 
 @implementation Wraith
 
@@ -99,37 +97,14 @@
                                         [CCMoveTo actionWithDuration:[self speed]/4 position:ccp(3 * winSize.width/4,[[self sprite] position].y)],
                                         [CCCallFuncN actionWithTarget:self selector:@selector(stopWalking)],
                                         [CCCallFuncN actionWithTarget:self selector:@selector(shout)],
-                                        [CCRepeat actionWithAction:[CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"w_taunt" ]] times:2],
+                                        [CCRepeat actionWithAction:[CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"w_taunt" ]] times:1],
                                         [CCCallFuncN actionWithTarget:self selector:@selector(startGame)],
-                                        [CCRepeat actionWithAction:[CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"w_taunt" ]] times:2],
+                                        [CCRepeat actionWithAction:[CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"w_taunt" ]] times:4],
                                         [CCCallFuncN actionWithTarget:self selector:@selector(resumeFromTaunt)],
                                         nil];
     [[self sprite] runAction:tauntAction];
 }
 
-- (void) startGame
-{
-    [healthBar setPosition:ccp([sprite position].x, [sprite position].y + [sprite contentSize].height/2 + 2)];
-    LevelLayer * levelLayer = [[Registry shared] getEntityByName:@"LevelLayer"];
-    [levelLayer setGameStarted:YES];
-}
-
-- (void) stopWalking
-{
-    [self stopAction:walkAction];
-}
-
-- (void) resumeFromTaunt
-{
-    [[self sprite] stopAllActions];
-    [self setCurrentState:kWalkEnemyState];
-    [self setupActions];
-}
-
-- (void) stopAnimations
-{
-    [[self sprite] stopAllActions];
-}
 
 - (void) shout{
     

@@ -17,9 +17,12 @@
 
 @interface MainScene : CCNode
 {
+    CCSprite * background;
     
 }
 
+@property (nonatomic, retain) CCSprite * background;
 
+- (void) setBackgroundWithSpriteType:(NSString *) type;
 
 @end

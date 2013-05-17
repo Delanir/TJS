@@ -6,5 +6,6 @@
 **/
 
 @"Wall"         - Wall*               - Adicionado no MainScene
+@"MainScene"    - MainScene*          - Adicionado no MainScene
 @"LevelLayer"   - LevelLayer*         - Adicionado no LevelLayer
 @"Yuri"         - Yuri*               - Adicionado no LevelLayer
