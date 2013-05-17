@@ -12,6 +12,8 @@
 	<string>fairie.mp3</string>
 	<key>shout01</key>
 	<string>shout01.mp3</string>
+	<key>explosion</key>
+	<string>explosion.mp3</string>
 	<key>shout02</key>
 	<string>shout02.mp3</string>
 	<key>shout03</key>
