@@ -10,6 +10,8 @@ AchievmentUnlocked.ccbi
 akaPotsley.ttf
 background-ipadhd.png
 background.png
+backgroundWinter-ipadhd.png
+backgroundWinter.png
 Begin.ccbi
 blackdragon_anim.plist
 ccbDefaultImages-hd.plist
@@ -27,6 +29,7 @@ Comet.plist
 Config.plist
 Default-Landscape~ipad.png
 defaultEmitter.png
+ent_anim.plist
 fairiedragon_anim.plist
 fire.png
 fireelemental_anim.plist

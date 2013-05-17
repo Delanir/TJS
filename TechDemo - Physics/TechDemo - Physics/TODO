@@ -19,6 +19,9 @@ Bugs:
 - Inimigos aleatórios estão a aparecer mt em baixo (é necessario somar metade da height na posição)
 
 Daniela:
+Resources:
+    - som do impacto tem de ser corrigido
+    - Som nas explosões
 
 João M:
 - história e tutorial
@@ -27,11 +30,6 @@ João M:
 - Level up message
 - criaturas a serem desenhadas fora do ecra
 - 
-
-Resources:
-    - som do impacto tem de ser corrigido
-    - Som nas explosões
-    - Som do taunt
 
 Ricardo:
 - Utilização do Flurry
