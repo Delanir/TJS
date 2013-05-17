@@ -462,10 +462,11 @@ static int current_level = -1;
 - (void)ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     UITouch *touch = [touches anyObject];
+    BOOL wasUnpaused=![_pause visible];
     [self pauseCheck:touch];
     [self gameOverReturnToMainMenuCheck:touch];
     [self gameWinReturnToMainMenuCheck:touch];
-    if ([[CCDirector sharedDirector] isPaused])
+    if ([[CCDirector sharedDirector] isPaused] || wasUnpaused!=![_pause visible])
         return;
     [self checkStoryBoard];
     

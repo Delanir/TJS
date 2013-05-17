@@ -14,7 +14,7 @@ Bugs:
 - Gelo tem comportamento estranho qd inimigos estao a atacar
 - crasha de alguns em alguns jogos por algum motivo estranho (memoria? fazer profile)
     - Está a deixar memória pendurada. Não muito. Mas está
-- Quando se tira o pause o yuri dispara flechinha
+
 - Verificar se dá para actualizar as mascaras das sprites. Isso está a afectar as colisões
 - Inimigos aleatórios estão a aparecer mt em baixo (é necessario somar metade da height na posição)
 
@@ -149,3 +149,4 @@ Coisas saídas do play testing do rafael:
 - Sprite do reset leaderboard
 - Dendroids!
 - Foto do boneco do poster para por no storyboard
+- Quando se tira o pause o yuri dispara flechinha
