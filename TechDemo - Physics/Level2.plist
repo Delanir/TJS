@@ -10,7 +10,7 @@
 	<integer>5</integer>
 	<key>waves</key>
 	<array>
-		<string>PeasantGroup</string>
+		<string>SkeletonGroup</string>
 		<string>ZealotSquare</string>
 		<string>SkeletonGroup</string>
 		<string>FireElementals</string>

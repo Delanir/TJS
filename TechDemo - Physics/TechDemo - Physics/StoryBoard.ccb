@@ -291,8 +291,6 @@
 						<string>[Person]:</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>baseClass</key>
@@ -368,7 +366,7 @@
 						<string>FloatScale</string>
 						<key>value</key>
 						<array>
-							<real>32</real>
+							<real>24</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -413,6 +411,8 @@ dfdfdf
 fdfdfdf</string>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>baseClass</key>

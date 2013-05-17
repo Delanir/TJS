@@ -80,7 +80,11 @@ static EnemyFactory* _sharedSingleton = nil;
         if (count > randomSeed)
         {
             CGSize winSize = [[CCDirector sharedDirector] winSize];
-            int positionOfCreation = arc4random_uniform(2*winSize.height/3) + winSize.height/6;
+            
+            float lb = winSize.height/6 + 80;
+            float hb = ((5 * winSize.height) /6) - 80;
+            float positionOfCreation = (((float)arc4random()/0x100000000)*(hb-lb)+lb);
+            
             newEnemy = [self generateEnemyWithType:[enemy objectForKey:@"type"] vertical:positionOfCreation displacement:ccp(0,0) taunt:NO];
             break;
         }
