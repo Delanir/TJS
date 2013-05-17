@@ -37,7 +37,7 @@ Afterburner:
 - Loading Screen (caso se justifique) com base em chunks
 - Passar todas as constantes para o constants.h
 - Mostrar e calcular score no hud
-
+- Controlo de Volume no pause
 - Fazer uma catapulta
 
 Ideias:
