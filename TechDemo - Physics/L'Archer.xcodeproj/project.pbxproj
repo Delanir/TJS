@@ -52,6 +52,7 @@
 		8B3854D317355A900044F4F3 /* stick1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B3854D117355A900044F4F3 /* stick1.png */; };
 		8B3854D417355A900044F4F3 /* stick2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B3854D217355A900044F4F3 /* stick2.png */; };
 		8B3854DE17357C690044F4F3 /* skillTreeSS-ipadhd.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8BC2106117342A7900B875B2 /* skillTreeSS-ipadhd.plist */; };
+		8B38A68A1745D21300B33D88 /* explosion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8B38A6891745D21200B33D88 /* explosion.mp3 */; };
 		8B3D7F341737F15F0097996B /* AchievementNode.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 8C5B1D88173708DB003F4332 /* AchievementNode.ccbi */; };
 		8B3FF0E01732B60600D2212B /* FireSubSkillTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3FF0DF1732B60600D2212B /* FireSubSkillTree.m */; };
 		8B43948D17341C30008BAB1D /* skillTreeSS.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B43948917341C30008BAB1D /* skillTreeSS.plist */; };
@@ -386,6 +387,7 @@
 		8B221467173338540055BF51 /* SkillTreeSubMenu.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = SkillTreeSubMenu.ccbi; sourceTree = "<group>"; };
 		8B3854D117355A900044F4F3 /* stick1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stick1.png; sourceTree = "<group>"; };
 		8B3854D217355A900044F4F3 /* stick2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stick2.png; sourceTree = "<group>"; };
+		8B38A6891745D21200B33D88 /* explosion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = explosion.mp3; sourceTree = "<group>"; };
 		8B3FF0DE1732B60600D2212B /* FireSubSkillTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FireSubSkillTree.h; sourceTree = "<group>"; };
 		8B3FF0DF1732B60600D2212B /* FireSubSkillTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FireSubSkillTree.m; sourceTree = "<group>"; };
 		8B43948917341C30008BAB1D /* skillTreeSS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = skillTreeSS.plist; sourceTree = "<group>"; };
@@ -1065,6 +1067,7 @@
 				8B68F97117455BDE0032DF73 /* wraith02.mp3 */,
 				8B68F97217455BDE0032DF73 /* wraith03.mp3 */,
 				3E23CECD1743F04100F6B2E0 /* achievement.mp3 */,
+				8B38A6891745D21200B33D88 /* explosion.mp3 */,
 				8B1EC8951731B92400B00DB6 /* buttonclick.mp3 */,
 				8B1EC8931731B02C00B00DB6 /* killhim.mp3 */,
 				8B1EC8911731A91E00B00DB6 /* chant.mp3 */,
@@ -1969,6 +1972,7 @@
 				9C7CADC41745683800D09E77 /* ent_anim.plist in Resources */,
 				9C7CADC917456C1100D09E77 /* EntScatter.plist in Resources */,
 				9C7CADCB1745754800D09E77 /* SkeletonSwarm.plist in Resources */,
+				8B38A68A1745D21300B33D88 /* explosion.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

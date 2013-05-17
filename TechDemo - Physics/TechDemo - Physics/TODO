@@ -19,7 +19,7 @@ Bugs:
 Daniela:
 Resources:
     - som do impacto tem de ser corrigido
-    - Som nas explosões
+
 
 João M:
 - mais tempo de display dos achievements
@@ -37,7 +37,7 @@ Afterburner:
 - Loading Screen (caso se justifique) com base em chunks
 - Passar todas as constantes para o constants.h
 - Mostrar e calcular score no hud
-- Volume separado de fx e music
+- Controlo de Volume no pause
 - Fazer uma catapulta
 
 Ideias:
@@ -145,6 +145,8 @@ Coisas saídas do play testing do rafael:
 - Dendroids!
 - Foto do boneco do poster para por no storyboard
 - Quando se tira o pause o yuri dispara flechinha
+- Volume separado de fx e music
 - história e tutorial
 - Inimigos aleatórios estão a aparecer mt em baixo (é necessario somar metade da height na posição)
+    - Som nas explosões
 

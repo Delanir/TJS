@@ -13,6 +13,7 @@
 
 - (void) performAction
 {
+    [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"explosion"]];
     CCParticleExplosion * explosion = [[CCParticleExplosion alloc] init];
     [explosion setPosition:effectPos];
     [explosion setAutoRemoveOnFinish:YES];

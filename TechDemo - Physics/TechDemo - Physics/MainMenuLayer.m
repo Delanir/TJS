@@ -32,7 +32,7 @@
 {
 	[super onEnter];
     [[SimpleAudioEngine sharedEngine] playBackgroundMusic:[[Config shared] getStringProperty:@"MainMenuMusic"] loop:YES];
-    [[SimpleAudioEngine sharedEngine] setBackgroundMusicVolume:1.0f];
+//    [[SimpleAudioEngine sharedEngine] setBackgroundMusicVolume:1.0f];
     
     // Calculate number of used stars
     NSMutableArray *skillPoints = [[GameState shared] skillStates];
