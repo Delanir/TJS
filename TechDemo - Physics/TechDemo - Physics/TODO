@@ -43,7 +43,7 @@ Afterburner:
 - Loading Screen (caso se justifique) com base em chunks
 - Passar todas as constantes para o constants.h
 - Mostrar e calcular score no hud
-- Volume separado de fx e music
+
 - Fazer uma catapulta
 
 Ideias:
@@ -152,3 +152,4 @@ Coisas saídas do play testing do rafael:
 - Dendroids!
 - Foto do boneco do poster para por no storyboard
 - Quando se tira o pause o yuri dispara flechinha
+- Volume separado de fx e music

@@ -14,10 +14,17 @@
 @interface SettingsMenuLayer : CCLayer
 {
     CCSprite * _mute;
+    CCSprite * _volume;
+    CCSprite * _volumefx;
+    float maxScale;
+    
 }
 
 - (void) pressedMainMenu:(id)sender;
 - (void) toggleMute:(id)sender;
 - (void) resetUserDefaults:(id)sender;
+
+- (void) moreBackgroundVolume:(id)sender;
+- (void) lessBackgroundVolume:(id)sender;
 
 @end

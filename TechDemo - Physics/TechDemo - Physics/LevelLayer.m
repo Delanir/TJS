@@ -108,7 +108,7 @@ static int current_level = -1;
     // Adicionar entidade ao registo e começar a musica de jogo
     [[Registry shared] registerEntity:self withName:@"LevelLayer"];
     [[SimpleAudioEngine sharedEngine] playBackgroundMusic:[[Config shared] getStringProperty:@"IngameMusic"] loop:YES];
-    [[SimpleAudioEngine sharedEngine] setBackgroundMusicVolume :0.4f];
+//    [[SimpleAudioEngine sharedEngine] setBackgroundMusicVolume :0.4f];
     
     // Inicialização de variáveis de jogo
     manaRegenerationBonus = 1.0f;

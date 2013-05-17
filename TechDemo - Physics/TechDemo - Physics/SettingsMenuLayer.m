@@ -24,6 +24,9 @@
 
 - (void)onEnter{
     [super onEnter];
+    maxScale = [_volume scaleX];
+    [_volume setScaleX:maxScale* [[SimpleAudioEngine sharedEngine] backgroundMusicVolume]];
+    
     if ([[SimpleAudioEngine sharedEngine] mute])
     {
         
@@ -64,6 +67,56 @@
     [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"click"]];
     
 }
+
+- (void) moreBackgroundVolume:(id)sender{
+    
+    if ([[SimpleAudioEngine sharedEngine] backgroundMusicVolume] <0.99f) {
+        [[SimpleAudioEngine sharedEngine] setBackgroundMusicVolume:([[SimpleAudioEngine sharedEngine] backgroundMusicVolume]+0.1f)],
+        [_volume setScaleX:maxScale* [[SimpleAudioEngine sharedEngine] backgroundMusicVolume]];
+    }
+    [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"click"]];
+    
+
+    
+};
+- (void) lessBackgroundVolume:(id)sender{
+   
+    if ([[SimpleAudioEngine sharedEngine] backgroundMusicVolume] >0.01f) {
+        [[SimpleAudioEngine sharedEngine] setBackgroundMusicVolume:([[SimpleAudioEngine sharedEngine] backgroundMusicVolume]-0.1f)],
+        [_volume setScaleX:maxScale* [[SimpleAudioEngine sharedEngine] backgroundMusicVolume]];
+        
+        
+    }
+    [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"click"]];
+};
+
+- (void) moreFXVolume:(id)sender{
+    
+    if ([[SimpleAudioEngine sharedEngine] effectsVolume] <0.99f) {
+        
+        [[SimpleAudioEngine sharedEngine] setEffectsVolume:([[SimpleAudioEngine sharedEngine] effectsVolume]+0.1f)],
+        [_volumefx setScaleX:maxScale* [[SimpleAudioEngine sharedEngine] effectsVolume]];
+    }
+#warning fazer toggle de acordo com o que preferirem para testar os SFX
+    [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"click"]];
+//    [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"ShootArrowSound"]];
+    
+    
+};
+- (void) lessFXVolume:(id)sender{
+    
+    if ([[SimpleAudioEngine sharedEngine] effectsVolume] >0.01f) {
+        [[SimpleAudioEngine sharedEngine] setEffectsVolume:([[SimpleAudioEngine sharedEngine] effectsVolume]-0.1f)],
+        [_volumefx setScaleX:maxScale* [[SimpleAudioEngine sharedEngine] effectsVolume]];
+        
+        
+    }
+#warning fazer toggle de acordo com o que preferirem para testar os SFX
+    [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"click"]];
+//    [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"ShootArrowSound"]];
+};
+
+
     
 - (void)onExit{
     [self removeAllChildrenWithCleanup:YES];
