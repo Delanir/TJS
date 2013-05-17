@@ -20,26 +20,23 @@ Bugs:
 
 Daniela:
 
-    
 João M:
-- Taunting:
-    - tá hardcoded para a wraith. Generalizar/Fazer para mais
+- história e tutorial
+- mais tempo de display dos achievements
+- Feedback de poucas flechas - como o get ready
+- Level up message
+- criaturas a serem desenhadas fora do ecra
+- 
 
 Resources:
-    - Dendroids!
     - som do impacto tem de ser corrigido
     - Som nas explosões
     - Som do taunt
-    - Winter background (summer)
-    - Sprite do reset leaderboard
-    - Foto do boneco do poster para por no storyboard
 
 Ricardo:
 - Utilização do Flurry
 
 João A:
-User Feedback:
-    - Tutorial
 
 Afterburner:
 - Fazer projectiles do zealot
@@ -58,24 +55,9 @@ Ideias:
 
 Coisas saídas do play testing do rafael:
 
--mais tempo de display dos achievements
-
 - barra da vida dos enemies nao dá feedback da vida que já tiramos e se falta muito para matar
-
-- Feedback de poucas flechas - como o get ready
-
-- feed back poucas setas
-
 - Pedro Santos gosta do gelo. -> make it stronger
-
-- Level up message
-
-- criaturas a serem desenhadas fora do ecra
-
-- Crasha de 5 em 5 jogos
-
 - O Rafael nao utiliza o poder de Marksman
-
 - Mudar o HUD 
 
 
@@ -163,4 +145,9 @@ Coisas saídas do play testing do rafael:
     - text
     - image
     - orientation - referencia uma animação
-
+- Taunting:
+    - tá hardcoded para a wraith. Generalizar/Fazer para mais
+- Winter background (summer)
+- Sprite do reset leaderboard
+- Dendroids!
+- Foto do boneco do poster para por no storyboard
