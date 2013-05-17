@@ -779,6 +779,7 @@ static int current_level = -1;
     [achievementsUnlocked addObject:[NSNumber numberWithInt:[self checkAchievement11]]];
     [achievementsUnlocked addObject:[NSNumber numberWithInt:[self checkAchievement12]]];
     [achievementsUnlocked addObject:[NSNumber numberWithInt:[self checkAchievement14]]];
+    [achievementsUnlocked addObject:[NSNumber numberWithInt:[self checkAchievement15]]];
     
     for (NSNumber * number in achievementsUnlocked)
         if ([number intValue] != -1)
@@ -951,7 +952,7 @@ static int current_level = -1;
         NSMutableArray * achievement = [[GameState shared] achievementStates];
         Wall * wall = [[Registry shared] getEntityByName:@"Wall"];
         
-        if ([[achievement objectAtIndex:9] intValue] == 0 && [[ResourceManager shared] determineAccuracy] == 100 && [wall health] == 100) {
+        if ([[achievement objectAtIndex:9] intValue] == 0 && [[ResourceManager shared] determineAccuracy] == 100 && [wall health] == [wall maxHealth]) {
             [achievement replaceObjectAtIndex:9 withObject:[NSNumber numberWithInt:1]];
             [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"Achievement"]];
             return 10;
@@ -968,6 +969,10 @@ static int current_level = -1;
         [achievement replaceObjectAtIndex:10 withObject:[NSNumber numberWithInt:1]];
         [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"Achievement"]];
         return 11;
+    }
+    else
+    {
+        NSLog(@"Number of enemies killed: %d", [[[GameState shared] enemiesKilledState] intValue] + [[ResourceManager shared] enemyKillCount]);
     }
     return -1;
 }
@@ -989,7 +994,7 @@ static int current_level = -1;
         NSMutableArray * achievement = [[GameState shared] achievementStates];
         Wall * wall = [[Registry shared] getEntityByName:@"Wall"];
         
-        if ([[achievement objectAtIndex:12] intValue] == 0 && [[ResourceManager shared] determineAccuracy] > 100 && [wall health]) {
+        if ([[achievement objectAtIndex:12] intValue] == 0 && [wall health] == [wall maxHealth]) {
             [achievement replaceObjectAtIndex:12 withObject:[NSNumber numberWithInt:1]];
             [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"Achievement"]];
             return 13;
