@@ -802,8 +802,8 @@ static int current_level = -1;
     [achievementsUnlocked addObject:[NSNumber numberWithInt:[self checkAchievement7]]];
     [achievementsUnlocked addObject:[NSNumber numberWithInt:[self checkAchievement8]]];
     [achievementsUnlocked addObject:[NSNumber numberWithInt:[self checkAchievement10]]];
-    [achievementsUnlocked addObject:[NSNumber numberWithInt:[self checkAchievement15]]];
     [achievementsUnlocked addObject:[NSNumber numberWithInt:[self checkAchievement13]]];
+    [achievementsUnlocked addObject:[NSNumber numberWithInt:[self checkAchievement15]]];
     
     for (NSNumber * number in achievementsUnlocked)
         if ([number intValue] != -1)
@@ -970,10 +970,7 @@ static int current_level = -1;
         [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"Achievement"]];
         return 11;
     }
-    else
-    {
-        NSLog(@"Number of enemies killed: %d", [[[GameState shared] enemiesKilledState] intValue] + [[ResourceManager shared] enemyKillCount]);
-    }
+
     return -1;
 }
 

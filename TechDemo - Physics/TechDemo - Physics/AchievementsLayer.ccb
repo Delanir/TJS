@@ -1358,9 +1358,11 @@
 						<key>type</key>
 						<string>Text</string>
 						<key>value</key>
-						<string>* Achievements unlocked at the end of each level</string>
+						<string>* Some achievements unlocked at the end of each level</string>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>

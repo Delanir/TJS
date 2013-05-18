@@ -257,7 +257,7 @@
 								<key>value</key>
 								<array>
 									<integer>0</integer>
-									<integer>36</integer>
+									<integer>69</integer>
 									<integer>0</integer>
 								</array>
 							</dict>
@@ -267,7 +267,7 @@
 								<key>type</key>
 								<string>Byte</string>
 								<key>value</key>
-								<integer>167</integer>
+								<integer>200</integer>
 							</dict>
 							<dict>
 								<key>name</key>
@@ -281,8 +281,6 @@
 								</array>
 							</dict>
 						</array>
-						<key>selected</key>
-						<true/>
 					</dict>
 					<dict>
 						<key>baseClass</key>
@@ -358,7 +356,7 @@
 						<key>value</key>
 						<array>
 							<real>300</real>
-							<real>698</real>
+							<real>770</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -488,7 +486,7 @@
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>0.30000001192092896</real>
+			<real>2.5</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>

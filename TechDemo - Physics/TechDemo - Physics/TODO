@@ -6,9 +6,6 @@
 
 Falta:
 - Som
-- Balanceamento
-- Historia
-- Aspecto
 
 Bugs:
 - Gelo tem comportamento estranho qd inimigos estao a atacar
@@ -20,15 +17,12 @@ Daniela:
 Resources:
     - som do impacto tem de ser corrigido
 
-
 João M:
-- mais tempo de display dos achievements
 - Feedback de poucas flechas - como o get ready
 - Level up message
-- criaturas a serem desenhadas fora do ecra
 
 Ricardo:
-- Utilização do Flurry
+- Utilização do Flurry ou TestFlight
 
 João A:
 
@@ -48,9 +42,6 @@ Ideias:
  
  
 Coisas saídas do play testing do rafael:
-
-- barra da vida dos enemies nao dá feedback da vida que já tiramos e se falta muito para matar
-- O Rafael nao utiliza o poder de Marksman
 - Mudar o HUD 
 
 

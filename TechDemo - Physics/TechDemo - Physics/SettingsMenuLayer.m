@@ -97,7 +97,6 @@
         [[SimpleAudioEngine sharedEngine] setEffectsVolume:([[SimpleAudioEngine sharedEngine] effectsVolume]+0.1f)],
         [_volumefx setScaleX:maxScale* [[SimpleAudioEngine sharedEngine] effectsVolume]];
     }
-#warning fazer toggle de acordo com o que preferirem para testar os SFX
     [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"click"]];
 //    [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"ShootArrowSound"]];
     
@@ -111,7 +110,6 @@
         
         
     }
-#warning fazer toggle de acordo com o que preferirem para testar os SFX
     [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"click"]];
 //    [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"ShootArrowSound"]];
 };

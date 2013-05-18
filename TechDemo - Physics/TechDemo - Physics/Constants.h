@@ -65,6 +65,7 @@
 #define kYuriExtraFreezePercentage 0.2
 
 #define kMaxRange 500
+#define kAcceptableNumberOfArrows 10
 
 #define STARCOST1 1
 #define STARCOST2 2

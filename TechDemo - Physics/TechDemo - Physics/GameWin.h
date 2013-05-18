@@ -20,7 +20,6 @@
     CCSprite * _main;
     
     LevelStars* _stars1;
-    LevelStars* _stars2;
 }
 
 

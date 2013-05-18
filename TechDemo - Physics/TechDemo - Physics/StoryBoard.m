@@ -30,6 +30,7 @@
     _portrait =[CCSprite spriteWithFile:portrait];
     _portrait.position = _portrait1.position;
     [self addChild:_portrait z:3000];
+    [_portrait1 setVisible:NO];
     
 }
 

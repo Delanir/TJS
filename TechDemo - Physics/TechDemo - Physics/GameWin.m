@@ -34,7 +34,6 @@
 
 -(void) setStars: (int) numberOfStars{
     [_stars1 makeVisible:numberOfStars];
-    [_stars2 makeVisibleReverse:numberOfStars];
 }
 
 @end

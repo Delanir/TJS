@@ -23,7 +23,8 @@
     CCMenuItemToggle *fireToggleButton, *iceToggleButton, *pushBackToggleButton;
     CCMenu *buttonsMenu;
     CCMenuItem *buyButton;
-    CCMenuItem *repairButton ;
+    CCMenuItem *repairButton;
+    BOOL lowArrows;
 }
 
 @property (nonatomic, retain) CCMenuItemToggle * fireToggleButton;

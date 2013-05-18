@@ -54,9 +54,9 @@
 						<string>Size</string>
 						<key>value</key>
 						<array>
-							<real>70.400001525878906</real>
-							<real>50.099998474121094</real>
-							<integer>1</integer>
+							<real>1024</real>
+							<real>300</real>
+							<integer>0</integer>
 						</array>
 					</dict>
 					<dict>
@@ -77,8 +77,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>1.4247735738754272</real>
-							<real>0.81173193454742432</real>
+							<real>1</real>
+							<real>1</real>
 							<true/>
 							<integer>0</integer>
 						</array>
@@ -138,9 +138,9 @@
 						<string>Color3</string>
 						<key>value</key>
 						<array>
-							<integer>35</integer>
-							<integer>75</integer>
-							<integer>38</integer>
+							<integer>78</integer>
+							<integer>0</integer>
+							<integer>124</integer>
 						</array>
 					</dict>
 					<dict>
@@ -187,7 +187,7 @@
 						<key>value</key>
 						<array>
 							<real>238</real>
-							<real>548</real>
+							<real>556</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -249,8 +249,8 @@
 						<string>Color3</string>
 						<key>value</key>
 						<array>
-							<integer>198</integer>
-							<integer>166</integer>
+							<integer>255</integer>
+							<integer>216</integer>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -315,7 +315,7 @@
 						<key>value</key>
 						<array>
 							<real>236</real>
-							<real>482</real>
+							<real>490</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -411,8 +411,6 @@ dfdfdf
 fdfdfdf</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>baseClass</key>
@@ -436,8 +434,8 @@ fdfdfdf</string>
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>120</real>
-							<real>440</real>
+							<real>114</real>
+							<real>418</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -459,8 +457,8 @@ fdfdfdf</string>
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
-							<real>1</real>
+							<real>1.5</real>
+							<real>1.5</real>
 							<true/>
 							<integer>0</integer>
 						</array>
@@ -480,8 +478,8 @@ fdfdfdf</string>
 						<string>SpriteFrame</string>
 						<key>value</key>
 						<array>
-							<string>AchievementsSpritesheet.plist</string>
-							<string>golden-achievement-disabled.png</string>
+							<string></string>
+							<string>portrait.png</string>
 						</array>
 					</dict>
 				</array>
@@ -509,7 +507,7 @@ fdfdfdf</string>
 						<key>value</key>
 						<array>
 							<real>846</real>
-							<real>305</real>
+							<real>313</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -571,8 +569,8 @@ fdfdfdf</string>
 						<string>Color3</string>
 						<key>value</key>
 						<array>
-							<integer>186</integer>
-							<integer>171</integer>
+							<integer>255</integer>
+							<integer>216</integer>
 							<integer>0</integer>
 						</array>
 					</dict>

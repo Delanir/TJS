@@ -13,6 +13,7 @@
 #import "FireExplosion.h"
 #import "IceExplosion.h"
 #import "PushbackExplosion.h"
+#import "ArrowWarning.h"
 
 @implementation Hud
 
@@ -30,6 +31,7 @@
         [buttons addObject:[NSNumber numberWithBool:NO]];
         lastHealth = [(Wall*)[[Registry shared] getEntityByName:@"Wall"] maxHealth];
         lastMana = [[ResourceManager shared] maxMana];
+        lowArrows = NO;
         
         CCSprite * hudBackground = [CCSprite spriteWithSpriteFrameName:@"hud-background.png"];
         [hudBackground setPosition:ccp(512,64)];
@@ -288,7 +290,16 @@
 
 - (void)updateArrows
 {
-    [label1 setString:[NSString stringWithFormat:@"%i", [[ResourceManager shared] arrows]]];
+    int numberOfArrows = [[ResourceManager shared] arrows];
+    if (!lowArrows && numberOfArrows <= kAcceptableNumberOfArrows)
+    {
+        lowArrows = YES;
+        [[[ArrowWarning alloc] initWithPosition:ccp(0,0)] autorelease];
+    }
+    else if (numberOfArrows > kAcceptableNumberOfArrows)
+        lowArrows = NO;
+        
+    [label1 setString:[NSString stringWithFormat:@"%i", numberOfArrows]];
 }
 
 - (void)updateMoney
