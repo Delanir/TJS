@@ -180,6 +180,12 @@ static ResourceManager* _sharedSingleton = nil;
     unsigned int result = 0;
     for(NSNumber * level in levels)
         result += [level unsignedIntValue];
+    
+    NSMutableArray * achievs = [[GameState shared] achievementStates];
+    for(NSNumber * value in achievs)
+        if ([value unsignedIntValue] > 0)
+            result ++;
+    
     return result;
 }
 

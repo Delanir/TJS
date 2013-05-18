@@ -63,6 +63,7 @@
 - (void)increaseEnemyKillCount;
 - (double)determineAccuracy;
 - (unsigned int) activeEnemies;
+- (unsigned int)determineSkillPoints;
 
 +(ResourceManager*)shared;
 

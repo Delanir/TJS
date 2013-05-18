@@ -10,6 +10,7 @@
 #import "Registry.h"
 #import "GameManager.h"
 #import "SimpleAudioEngine.h"
+#import "ResourceManager.h"
 #import "Config.h"
 #import "GameState.h"
 #import "SpriteManager.h"
@@ -281,28 +282,15 @@
 
 ///////////////////// UTILITIES
 
--(int) currentStars{
-    int stars=0;
-    int totalStars =[[[GameState shared] starStates] count];
-    int aux;
-    for (int i = 1; i <= totalStars; i++)
-    {
-        
-        aux =[[[[GameState shared] starStates] objectAtIndex:i-1] intValue];
-        stars = stars + aux;
-        
-    }
-    return stars;
+-(int) currentStars
+{
+    return [[ResourceManager shared] determineSkillPoints];
 }
 
 -(int) usedStars{
     int stars=0;
-    for (int i = 1; i <= [[[GameState shared] skillStates] count]; i++)
-    {
-        
-        stars = stars + [[[[GameState shared] skillStates] objectAtIndex:i-1] intValue];
-        
-    }
+    for (int i = 0; i < [[[GameState shared] skillStates] count]; i++)
+        stars = stars + [[[[GameState shared] skillStates] objectAtIndex:i] intValue];
     return stars;
 }
 

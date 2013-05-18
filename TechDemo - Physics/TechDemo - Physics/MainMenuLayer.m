@@ -42,16 +42,7 @@
     }
     
     // Calculate number of total stars
-    int stars = 0;
-    int totalStars =[[[GameState shared] starStates] count];
-    int aux;
-    for (int i = 1; i <= totalStars; i++)
-    {
-        
-        aux =[[[[GameState shared] starStates] objectAtIndex:i-1] intValue];
-        stars = stars + aux;
-        
-    }
+    int stars = [[ResourceManager shared] determineSkillPoints];
     
     int res = DEFAULTSKILLPOINTS + stars - usedSkillPoints;
     if (res>0) {
