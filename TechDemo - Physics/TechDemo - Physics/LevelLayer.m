@@ -562,6 +562,7 @@ static int current_level = -1;
 {
     [[CCSpriteFrameCache sharedSpriteFrameCache] removeSpriteFrames];
     [[CCTextureCache sharedTextureCache] removeAllTextures];
+    [self unscheduleAllSelectors];
     [[GameState shared] saveApplicationData];
     [[Registry shared] clearRegistry];
     [[CollisionManager shared] clearAllEntities];
