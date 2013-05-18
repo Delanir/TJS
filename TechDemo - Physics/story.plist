@@ -6,7 +6,7 @@
 	<array>
 		<array>
 			<string>Chapter 1</string>
-			<string>Bonjour! Je suis Yuri, a simple farmer from Amiens</string>
+			<string>Bonjour! I am Yuri, a simple farmer from Amiens.</string>
 			<string>portrait.png</string>
 		</array>
 		<array>
@@ -17,7 +17,7 @@ and everything is...</string>
 		</array>
 		<array>
 			<string>Chapter 1</string>
-			<string>Mon Dieu! We are under attack by forces unknown
+			<string>Mon Dieu! We are under attack by forces unknown.
 Quick, to the walls! Grab my bow on the way!</string>
 			<string>portrait.png</string>
 		</array>
@@ -29,13 +29,13 @@ Tap or press the screen to strike them with my arrows!</string>
 		</array>
 		<array>
 			<string>Chapter 1</string>
-			<string>I hope you spent a few points in the skill tree
+			<string>I hope you spent a few points in the skill tree.
 I think I am going to need it!</string>
 			<string>portrait.png</string>
 		</array>
 		<array>
 			<string>Chapter 1</string>
-			<string>Use the buttons below to activate my powers
+			<string>Use the buttons below to activate my powers.
 Quick, let&apos;s defend the city!</string>
 			<string>portrait.png</string>
 		</array>
@@ -161,8 +161,8 @@ instantly die before they reach us!</string>
 	<key>chapter9</key>
 	<array>
 		<array>
-			<string>Chapter 8</string>
-			<string>It is getting harder!</string>
+			<string>Chapter 9</string>
+			<string>Where did they all come from?</string>
 			<string>portrait.png</string>
 		</array>
 	</array>

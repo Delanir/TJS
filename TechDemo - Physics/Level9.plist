@@ -11,6 +11,7 @@
 	<key>waves</key>
 	<array>
 		<string>FaerieColumn</string>
+		<string>SkeletonSwarm</string>
 		<string>BlackDragonUp</string>
 		<string>ZealotSquare</string>
 		<string>FireElementals</string>
