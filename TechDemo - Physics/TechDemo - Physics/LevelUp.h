@@ -9,5 +9,10 @@
 #import "InstantEffect.h"
 
 @interface LevelUp : InstantEffect
+{
+    int level;
+}
+
+- (id) initWithLevel: (int) lvl;
 
 @end

@@ -11,12 +11,26 @@
 
 @implementation LevelUp
 
+- (id) initWithLevel: (int) lvl
+{
+    if (self = [super initWithPosition:ccp(0,0)])
+    {
+        level = lvl;
+    }
+    return self;
+}
+
 - (void) performAction
 {
     [self setZOrder:5100];
     
     CCNode * levelUp = [CCBReader nodeGraphFromFile:@"LevelUp.ccbi"];
+    
+    CCLabelTTF * number = (CCLabelTTF*)[[levelUp children] objectAtIndex:3];
+    [number setString:[NSString stringWithFormat:@"%d", level]];
+    
     CCBAnimationManager * am = [levelUp userObject];
+    
     [am runAnimationsForSequenceNamed:@"Appear"];
     [self addChild:levelUp z:1 tag:0];
     

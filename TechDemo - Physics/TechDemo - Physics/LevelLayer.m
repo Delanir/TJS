@@ -745,8 +745,8 @@ static int current_level = -1;
     [self checkAchievementsAfterGame];
     int starsAfter = floor([[ResourceManager shared] determineSkillPoints] / 10.0);
     
-    if(starsAfter > floor(starsBefore/10.0) && starsAfter < 4)
-        [[[LevelUp alloc] initWithPosition:ccp(0,0)] autorelease];
+    if(starsAfter > floor(starsBefore/10.0) && starsAfter < 3)
+        [[[LevelUp alloc] initWithLevel:starsAfter+1] autorelease];
     
     CCBAnimationManager * am = [_gameWin userObject];
     [am runAnimationsForSequenceNamed:@"main"];
