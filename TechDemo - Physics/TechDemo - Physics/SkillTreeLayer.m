@@ -39,8 +39,6 @@
     [[Registry shared] registerEntity:self withName:@"skillTree"];
     [Flurry logEvent:@"Entered SkillTree with Flurry :D Test2!"];
     [Flurry logEvent:@"Entered SkillTree with Flurry :D Test! timed" timed:YES];
-
-     NSLog(@"ESCREVE MAS É DO NSLOG");
     
     NSMutableArray *skill = [[GameState shared] skillStates];
     
@@ -267,17 +265,8 @@
     
     
     [Flurry endTimedEvent:@"Entered SkillTree with Flurry :D Test!" withParameters:nil];
-    NSLog(@"ESCREVE MAS É DO NSLOG 2 ON EXIT");
     
     [super onExit];
-}
-
--(void)dealloc
-{
-    NSLog(@"fui deallocado: skill");
-    // [self removeAllChildrenWithCleanup:YES];
-    [super dealloc];
-    
 }
 
 ///////////////////// UTILITIES

@@ -22,8 +22,8 @@
 //Base stats
 #define kYuriBaseStrength 20                // base damage
 #define kYuriBaseCritical 0.01              // base critical
-#define kYuriPointsToLevel2 9
-#define kYuriPointsToLevel3 18
+#define kYuriPointsToLevel2 10
+#define kYuriPointsToLevel3 20
 
 //Power up base stats
 #define kYuriBasePushbackDistance 32        // 20 pixels

@@ -108,7 +108,7 @@ static int current_level = -1;
     // Adicionar entidade ao registo e começar a musica de jogo
     [[Registry shared] registerEntity:self withName:@"LevelLayer"];
     [[SimpleAudioEngine sharedEngine] playBackgroundMusic:[[Config shared] getStringProperty:@"IngameMusic"] loop:YES];
-//    [[SimpleAudioEngine sharedEngine] setBackgroundMusicVolume :0.4f];
+    //    [[SimpleAudioEngine sharedEngine] setBackgroundMusicVolume :0.4f];
     
     // Inicialização de variáveis de jogo
     manaRegenerationBonus = 1.0f;
@@ -170,29 +170,24 @@ static int current_level = -1;
     NSMutableArray *skill = [[GameState shared] skillStates];
     Hud * headsUpDisplay = [[Registry shared] getEntityByName:@"Hud"];
     Yuri * yuri = [[Registry shared] getEntityByName:@"Yuri"];
+    Wall * wall = [[Registry shared] getEntityByName:@"Wall"];
+    
     /**
      *
      * MAIN BRANCHES
      *
      */
-    
     if ([[skill objectAtIndex:kIceMainBranch] intValue] != 0)
-    {
         [headsUpDisplay setIceToggleButtonActive];
-    }
+    
     if ([[skill objectAtIndex:kFireMainBranch] intValue] != 0)
-    {
         [headsUpDisplay setFireToggleButtonActive];
-    }
+    
     if ([[skill objectAtIndex:kMarksmanMainBranch] intValue] != 0)
-    {
         [headsUpDisplay setPushbackToggleButtonActive];
-    }
+    
     if ([[skill objectAtIndex:kCityMainBranch] intValue] != 0)
-    {
-        Wall * wall = [[Registry shared] getEntityByName:@"Wall"];
         [wall increaseHealth:1.5];
-    }
     
     /**
      *
@@ -200,29 +195,22 @@ static int current_level = -1;
      *
      */
     if ([[skill objectAtIndex:kIceBranch1] intValue] != 0)
-    {
         [yuri setSlowPercentageBonus:kYuriSlowDownDurationBaseBonus];
-    }
+    
     if ([[skill objectAtIndex:kIceBranch2] intValue] != 0)
-    {
         [yuri setFreezePercentage:kYuriBaseFreezePercentage];
-    }
+    
     if ([[skill objectAtIndex:kIceBranch3] intValue] != 0)
-    {
         [yuri setIceAreaOfEffect:kYuriBaseAreaOfEffect];
-    }
+    
     if ([[skill objectAtIndex:kIceElement1] intValue] != 0)
-    {
         [yuri setSlowPercentageBonus:kYuriSlowDownDurationExtraBonus];
-    }
+    
     if ([[skill objectAtIndex:kIceElement2] intValue] != 0)
-    {
         [yuri setFreezePercentage:kYuriExtraFreezePercentage];
-    }
+    
     if ([[skill objectAtIndex:kIceElement3] intValue] != 0)
-    {
         [yuri setIceAreaOfEffect:kYuriExtraAreaOfEffect];
-    }
     
     /**
      *
@@ -230,29 +218,22 @@ static int current_level = -1;
      *
      */
     if ([[skill objectAtIndex:kFireBranch1] intValue] != 0)
-    {
         [yuri setFireDamageBonus:kYuriDamageOverTimeDamageBaseBonus];
-    }
+    
     if ([[skill objectAtIndex:kFireBranch2] intValue] != 0)
-    {
         [yuri setFireDurationBonus:kYuriDamageOverTimeDurationBaseBonus];
-    }
+    
     if ([[skill objectAtIndex:kFireBranch3] intValue] != 0)
-    {
         [yuri setFireAreaOfEffect:kYuriBaseAreaOfEffect];
-    }
+    
     if ([[skill objectAtIndex:kFireElement1] intValue] != 0)
-    {
         [yuri setFireDamageBonus:kYuriDamageOverTimeDamageExtraBonus];
-    }
+    
     if ([[skill objectAtIndex:kFireElement2] intValue] != 0)
-    {
         [yuri setFireDurationBonus:kYuriDamageOverTimeDurationExtraBonus];
-    }
+    
     if ([[skill objectAtIndex:kFireElement3] intValue] != 0)
-    {
         [yuri setFireAreaOfEffect:kYuriExtraAreaOfEffect];
-    }
     
     /**
      *
@@ -260,29 +241,22 @@ static int current_level = -1;
      *
      */
     if ([[skill objectAtIndex:kMarksmanBranch1] intValue] != 0)
-    {
         [yuri setStrengthBonus:kYuriBaseStrengthBonus];
-    }
+    
     if ([[skill objectAtIndex:kMarksmanBranch2] intValue] != 0)
-    {
         [yuri setSpeedBonus:kYuriBaseSpeedBonus];
-    }
+    
     if ([[skill objectAtIndex:kMarksmanBranch3] intValue] != 0)
-    {
         [yuri setCriticalBonus:kYuriBaseCriticalBonus];
-    }
+    
     if ([[skill objectAtIndex:kMarksmanElement1] intValue] != 0)
-    {
         [yuri setStrengthBonus:kYuriExtraStrengthBonus];
-    }
+    
     if ([[skill objectAtIndex:kMarksmanElement2] intValue] != 0)
-    {
         [yuri setSpeedBonus:kYuriExtraSpeedBonus];
-    }
+    
     if ([[skill objectAtIndex:kMarksmanElement3] intValue] != 0)
-    {
         [yuri setCriticalBonus:kYuriExtraCriticalBonus];
-    }
     
     /**
      *
@@ -292,34 +266,26 @@ static int current_level = -1;
     if ([[skill objectAtIndex:kCityBranch1] intValue] != 0)
     {
         [self setManaRegenerationBonus:kManaBaseRegenerationBonus];
-        Wall * wall = [[Registry shared] getEntityByName:@"Wall"];
         [wall addMagesTower];
     }
     if ([[skill objectAtIndex:kCityBranch2] intValue] != 0)
     {
         [self setHealthRegenerationRate:kHealthBaseRegenerationBonus];
-        Wall * wall = [[Registry shared] getEntityByName:@"Wall"];
         [wall addMasonry];
     }
     if ([[skill objectAtIndex:kCityBranch3] intValue] != 0)
     {
-        Wall * wall = [[Registry shared] getEntityByName:@"Wall"];
         [wall setMoatLevel:kMoatOneTimeDamage];
         [wall addMoat];
     }
     if ([[skill objectAtIndex:kCityElement1] intValue] != 0)
-    {
         [self setManaRegenerationBonus:kManaExtraRegenerationBonus];
-    }
+    
     if ([[skill objectAtIndex:kCityElement2] intValue] != 0)
-    {
         [self setHealthRegenerationRate:kHealthExtraRegenerationBonus];
-    }
+    
     if ([[skill objectAtIndex:kCityElement3] intValue] != 0)
-    {
-        Wall * wall = [[Registry shared] getEntityByName:@"Wall"];
         [wall setMoatLevel:kMoatOneTimeDamageInstaKillChance];
-    }
     
     [yuri initBasicStats];
 }
@@ -571,7 +537,8 @@ static int current_level = -1;
 
 -(void)dealloc
 {
-    if (_story!=nil){
+    if (_story!=nil)
+    {
         [_story release];
         _story = nil;
     }
@@ -586,35 +553,40 @@ static int current_level = -1;
     CGPoint pausePosition = _pauseButton.position;
     float pauseRadius = _pauseButton.contentSize.width/2;
     
-    
     if (ccpDistance(pausePosition, locationT)<=pauseRadius ||
-        (_pause.visible&&
-         [self checkRectangularButtonPressed:[_pause getPauseButton] givenTouchPoint:locationT])){
-            [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"click"]];
-            [self togglePause];
-            
-        }else if (_pause.visible&&
-                  [self checkRectangularButtonPressed:[_pause getMenuButton] givenTouchPoint:locationT]){
-            [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
-            [self setIsTouchEnabled:NO];
-            [[CCDirector sharedDirector] resume];
-            [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"click"]];
-            [[GameManager shared] runSceneWithID:kSelectLevel];
-        }else if (_pause.visible&&
-                  [self checkRectangularButtonPressed:[_pause getRetryButton] givenTouchPoint:locationT]){
-            [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
-            [self setIsTouchEnabled:NO];
-            [[CCDirector sharedDirector] resume];
-            [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"click"]];
-            [[GameManager shared] runLevel:level];
-        }else if (_pause.visible&&
-                  [self checkRectangularButtonPressed:[_pause getMainButton] givenTouchPoint:locationT]){
-            [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
-            [self setIsTouchEnabled:NO];
-            [[CCDirector sharedDirector] resume];
-            [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"click"]];
-            [[GameManager shared] runSceneWithID:kMainMenuScene];
-        }
+        (_pause.visible &&
+         [self checkRectangularButtonPressed:[_pause getPauseButton] givenTouchPoint:locationT]))
+    {
+        [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"click"]];
+        [self togglePause];
+    }
+    else if (_pause.visible && [self checkRectangularButtonPressed:[_pause getMenuButton] givenTouchPoint:locationT])
+    {
+        [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
+        [self setIsTouchEnabled:NO];
+        [[CCDirector sharedDirector] resume];
+        [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"click"]];
+        
+        [[GameManager shared] runSceneWithID:kSelectLevel];
+    }
+    else if (_pause.visible && [self checkRectangularButtonPressed:[_pause getRetryButton] givenTouchPoint:locationT])
+    {
+        [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
+        [self setIsTouchEnabled:NO];
+        [[CCDirector sharedDirector] resume];
+        [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"click"]];
+        
+        [[GameManager shared] runLevel:level];
+    }
+    else if (_pause.visible && [self checkRectangularButtonPressed:[_pause getMainButton] givenTouchPoint:locationT])
+    {
+        [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
+        [self setIsTouchEnabled:NO];
+        [[CCDirector sharedDirector] resume];
+        [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"click"]];
+        
+        [[GameManager shared] runSceneWithID:kMainMenuScene];
+    }
 }
 
 - (BOOL) checkRectangularButtonPressed:(CCSprite *)button givenTouchPoint:(CGPoint) locationT{
@@ -635,8 +607,7 @@ static int current_level = -1;
         CGPoint locationT=[touchLocation locationInView:[touchLocation view]];
         locationT.y=winSize.height-locationT.y;
         
-        
-        if (  [self checkRectangularButtonPressed:[_gameOver getMenuButton] givenTouchPoint:locationT])
+        if ([self checkRectangularButtonPressed:[_gameOver getMenuButton] givenTouchPoint:locationT])
         {
             [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
             [self setIsTouchEnabled:NO];
@@ -644,29 +615,36 @@ static int current_level = -1;
             
             [[GameManager shared] runSceneWithID:kSelectLevel];
             
-        }else if ([self checkRectangularButtonPressed:[_gameOver getRetryButton] givenTouchPoint:locationT]){
+        }
+        else if ([self checkRectangularButtonPressed:[_gameOver getRetryButton] givenTouchPoint:locationT])
+        {
             [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
             [self setIsTouchEnabled:NO];
             [[CCDirector sharedDirector] resume];
             [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"click"]];
+            
             [[GameManager shared] runLevel:level];
-        }else if ([self checkRectangularButtonPressed:[_gameOver getSkillButton] givenTouchPoint:locationT]){
+        }
+        else if ([self checkRectangularButtonPressed:[_gameOver getSkillButton] givenTouchPoint:locationT])
+        {
             [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"click"]];
             [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
             [self setIsTouchEnabled:NO];
             [[CCDirector sharedDirector] resume];
             
             [[GameManager shared] runSceneWithID:kSkillTreeScene];
-        }else if (    [self checkRectangularButtonPressed:[_gameOver getMainButton] givenTouchPoint:locationT]){
+        }
+        else if ([self checkRectangularButtonPressed:[_gameOver getMainButton] givenTouchPoint:locationT])
+        {
             [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
             [self setIsTouchEnabled:NO];
             [[CCDirector sharedDirector] resume];
             
             [[GameManager shared] runSceneWithID:kMainMenuScene];
         }
-    }else
+    }
+    else
         return;
-    
 }
 
 -(void) gameWinReturnToMainMenuCheck:(UITouch *)touchLocation
@@ -677,8 +655,7 @@ static int current_level = -1;
         CGPoint locationT = [touchLocation locationInView:[touchLocation view]];
         locationT.y = winSize.height-locationT.y;
         
-        
-        if ( [self checkRectangularButtonPressed:[_gameWin getMenuButton] givenTouchPoint:locationT])
+        if ([self checkRectangularButtonPressed:[_gameWin getMenuButton] givenTouchPoint:locationT])
         {
             [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"click"]];
             [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
@@ -686,20 +663,27 @@ static int current_level = -1;
             [[CCDirector sharedDirector] resume];
             
             [[GameManager shared] runSceneWithID:kSelectLevel];
-        }else if ([[_gameWin getPlayButton] visible]&&[self checkRectangularButtonPressed:[_gameWin getPlayButton] givenTouchPoint:locationT]){
+        }
+        else if ([[_gameWin getPlayButton] visible] &&
+                 [self checkRectangularButtonPressed: [_gameWin getPlayButton] givenTouchPoint:locationT])
+        {
             [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
             [self setIsTouchEnabled:NO];
             [[CCDirector sharedDirector] resume];
             [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"click"]];
             [[GameManager shared] runLevel:(level+1)];
-        }else if ([self checkRectangularButtonPressed:[_gameWin getSkillButton] givenTouchPoint:locationT]){
+        }
+        else if ([self checkRectangularButtonPressed:[_gameWin getSkillButton] givenTouchPoint:locationT])
+        {
             [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"click"]];
             [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
             [self setIsTouchEnabled:NO];
             [[CCDirector sharedDirector] resume];
             
             [[GameManager shared] runSceneWithID:kSkillTreeScene];
-        }else if (    [self checkRectangularButtonPressed:[_gameWin getMainButton] givenTouchPoint:locationT]){
+        }
+        else if ([self checkRectangularButtonPressed:[_gameWin getMainButton] givenTouchPoint:locationT])
+        {
             [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
             [self setIsTouchEnabled:NO];
             [[CCDirector sharedDirector] resume];
@@ -707,9 +691,8 @@ static int current_level = -1;
             [[GameManager shared] runSceneWithID:kMainMenuScene];
         }
         
-    }else
-        return;
-    
+    }
+    else return;
 }
 
 -(void) togglePause
@@ -719,9 +702,8 @@ static int current_level = -1;
         [_pause setVisible:NO];
         [[SimpleAudioEngine sharedEngine] resumeBackgroundMusic];
         [[CCDirector sharedDirector] resume];
-        
     }
-    else if(_gameOver==nil&&(![[CCDirector sharedDirector] isPaused]))
+    else if(_gameOver==nil && ![[CCDirector sharedDirector] isPaused])
     {
         [_pause setVisible:YES];
         [[SimpleAudioEngine sharedEngine] pauseBackgroundMusic];
@@ -754,7 +736,6 @@ static int current_level = -1;
     [_gameWin setZOrder:5035];
     //    [[CCDirector sharedDirector] pause];
     
-    ;
     //    Coloca estrelas
     [_gameWin setStars:[self calculateAndUpdateNumberOfStars]];
     
@@ -821,7 +802,7 @@ static int current_level = -1;
     NSMutableArray * achievement = [[GameState shared] achievementStates];
     if ([[achievement objectAtIndex:0] intValue] == 0 && [[[GameState shared] enemiesKilledState] intValue] + [[ResourceManager shared] enemyKillCount] >= 25) { // 50
         [achievement replaceObjectAtIndex:0 withObject:[NSNumber numberWithInt:1]];
-         [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"Achievement"]];
+        [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"Achievement"]];
         return 1;
     }
     return -1;
@@ -914,7 +895,6 @@ static int current_level = -1;
                 allLevelsCompleted = NO;
             }
         }
-        
         if ([[achievement objectAtIndex:7] intValue] == 0 && allLevelsCompleted) {
             [achievement replaceObjectAtIndex:7 withObject:[NSNumber numberWithInt:1]];
             [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"Achievement"]];
@@ -971,7 +951,7 @@ static int current_level = -1;
         [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"Achievement"]];
         return 11;
     }
-
+    
     return -1;
 }
 
@@ -1031,7 +1011,5 @@ static int current_level = -1;
     }
     return -1;
 }
-
-
 
 @end

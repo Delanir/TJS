@@ -4,6 +4,105 @@
 *               *
 **/           **/
 
+
+
+Até 19 de Maio de 2013
+
+- Fazer fogo e fumo nas walls
+- Criado .h de constantes
+- Melhorado Select Level layer
+- Acabar parte dos níveis
+    - Fazer método no gamemanager RunLevelNumber: (int) levelNumber
+    - Fica dinâmico e recebe o parametro do thumbnail que é criado no selectLevelLayer
+- 5 níveis criados
+- Criar classe gameState para fazer track dos resources e estado do jogo
+- Passar projecto para deployment target 6.1
+    - alterei o cocos para o efeito :p
+- Gold também já é persistente
+- HUD
+    - mudar botões para toggles
+    - posicionar melhor botoes por todo o lado
+- Optimizacoes brutais no carregamento dos niveis
+    - Falta correr profiler nisto
+- Criei a classe LoadingBar mas ignorem pra ja, obg. Estou a investigar multithreading
+- spritesheet com cenas de menus
+    - ver se esta no sitio cert
+    - por a carregar no sitio certo
+- spritesheet com cenas de jogo (incluindo castelo)
+    - carregar no sitio certo
+- Passar para os arqueiros do heroes  (João M)
+    - Tratar das sprites do wood elf e do grand elf
+- Destruição mais eficiente de projecteis
+- Nível do yuri
+- Skill points actuais
+- As custom fonts têm de ser assinaladas no info.plist
+- Acabar com o LevelLayerAbstract - Deixou de fazer sentido
+- Quando se mete pause e sai do jogo, quando volta ele tira o pause
+    - é preciso não deixar isso acontecer
+- Fazer Reset ao NSUserDefaults (uma setting no SettingsLayer, método ja está criado, mas n testado, no gamestate)
+- Random shouts dos inimigos
+- FIX PAUSE MENU
+- Lógica de gastar e regenerar mana
+- Corrigir spritesheet normal com botões de poderes
+- Fazer Spritesheets de 2048x2048 max (e não se mexem mais)
+- Por skill tree numa spritesheet com trimming
+- Sprites of enemies
+- Nova variável com total do skill points
+- Implementar skill tree - implementar a lógica e ver se fazemos uma spritesheet de bocadinhos para melhorar a performance (Daniela)
+- Inimigos novos: Fire Elemental, Wraith, Skeleton, Black Dragon
+- BURACOS DE MEMORIA ARGHHGHGHGH
+    - Nao percebo a skill tree
+- Fraquezas e resistencias dos inimigos
+- Lógica das fraquezas e resistencias implementada
+- Damage over time working 
+- Lógica do path of the marksman
+    - Strength bonus
+    - Speed bonus
+    - Critical ratio
+- Definir bonus passivos dos níveis do Yuri
+- Slow Down implementado (com mts bugs relacionados corrigidos)
+- Yuri já não dispara quando clicamos atrás dele
+- Particulas das fire arrows e slow arrows
+- Na skill tree botão para fazer reset
+- Skill tree não se inicializa com as sprites das coisas compradas (solved?)
+- No game over: Retry, Skill Tree
+- Return to skill tree no pause
+- Bichos aleatórios (definir um número deles por nível (entre waves, por exemplo)
+- Normalizar posiçoes de botoes iguais
+    - No win: Play next chapter, Skill Tree
+- Número de estrelas ganhas no final de cada nível
+-botao reset skill points
+- Passar includes para .h
+- Custo de arrows
+    - Custo de reparação
+    - Achievements unlocked warning
+- Velocidade da wraith inicial (taunt) mais rapido
+- Flechas mais rapidas
+- Storyboards
+// Array de dicionários
+ Cada dicionário com:
+    - text
+    - image
+    - orientation - referencia uma animação
+- Taunting:
+    - tá hardcoded para a wraith. Generalizar/Fazer para mais
+- Winter background (summer)
+- Sprite do reset leaderboard
+- Dendroids!
+- Foto do boneco do poster para por no storyboard
+- Quando se tira o pause o yuri dispara flechinha
+- Volume separado de fx e music
+- história e tutorial
+- Inimigos aleatórios estão a aparecer mt em baixo (é necessario somar metade da height na posição)
+    - Som nas explosões
+- Feedback de poucas flechas - como o get ready
+- Skill points por achievements
+
+
+
+
+
+
 Até 22 de Abril de 2013
 
 - Criar pixel perfect collisions
