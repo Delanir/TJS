@@ -11,6 +11,7 @@
 #import "GameState.h"
 #import "CCBAnimationManager.h"
 #import "GetReady.h"
+#import "LevelUp.h"
 
 #import "AchievementUnlocked.h"
 
@@ -115,6 +116,7 @@ static int current_level = -1;
     healthRegenerationRate = 0.0f;
     fire = NO;
     gameStarted = NO;
+    starsBefore = [[ResourceManager shared] determineSkillPoints]; // used to determine when yuri levels up
     
     // Criação da cena com castelo
     MainScene *mainScene = [[MainScene alloc] init];
@@ -553,7 +555,7 @@ static int current_level = -1;
     CGPoint pausePosition = _pauseButton.position;
     float pauseRadius = _pauseButton.contentSize.width/2;
     
-    if (ccpDistance(pausePosition, locationT)<=pauseRadius ||
+    if (ccpDistance(pausePosition, locationT) <= pauseRadius ||
         (_pause.visible &&
          [self checkRectangularButtonPressed:[_pause getPauseButton] givenTouchPoint:locationT]))
     {
@@ -589,14 +591,14 @@ static int current_level = -1;
     }
 }
 
-- (BOOL) checkRectangularButtonPressed:(CCSprite *)button givenTouchPoint:(CGPoint) locationT{
+- (BOOL) checkRectangularButtonPressed:(CCSprite *)button givenTouchPoint:(CGPoint) locationT
+{
     
-    CGPoint position= [button position];
+    CGPoint position = [button position];
     CGSize size = [button contentSize];
     
-    
-    return (fabs(locationT.x-position.x)<=size.width/2.0 &&
-            fabs(locationT.y-position.y)<=size.height/2.0);
+    return (fabs(locationT.x-position.x) * 2.0 <= size.width &&
+            fabs(locationT.y-position.y) * 2.0 <= size.height);
 }
 
 -(void) gameOverReturnToMainMenuCheck:(UITouch *)touchLocation
@@ -728,9 +730,8 @@ static int current_level = -1;
 {
     _gameWin = (GameWin *)[CCBReader nodeGraphFromFile:@"GameWin.ccbi"];
     
-    if (level == [[[GameState shared] starStates] count]) {
+    if (level == [[[GameState shared] starStates] count])
         [_gameWin disablePlayNext];
-    }
     
     [self addChild:_gameWin];
     [_gameWin setZOrder:5035];
@@ -742,6 +743,10 @@ static int current_level = -1;
     [self makeMoneyPersistent];
     [self makeEnemiesKilledPersistent];
     [self checkAchievementsAfterGame];
+    int starsAfter = [[ResourceManager shared] determineSkillPoints];
+    
+    if(floor(starsAfter/10.0) > floor(starsBefore/10.0))
+        [[[LevelUp alloc] initWithPosition:ccp(0,0)] autorelease];
     
     CCBAnimationManager * am = [_gameWin userObject];
     [am runAnimationsForSequenceNamed:@"main"];

@@ -63,6 +63,7 @@
     StoryBoardHUD *_story;
     
     int level;
+    int starsBefore;
     float manaRegenerationBonus, healthRegenerationRate;
     BOOL fire, gameStarted;
     Hud *hud;

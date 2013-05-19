@@ -20,7 +20,6 @@
     CCBAnimationManager * am = [begin userObject];
     [am runAnimationsForSequenceNamed:@"Begin"];
     [self addChild:begin z:1 tag:0];
-    
 }
 
 

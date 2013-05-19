@@ -14,12 +14,11 @@
 
 - (void) performAction
 {
-    CCNode * begin = [CCBReader nodeGraphFromFile:@"Begin.ccbi"];
+    CCNode * arrowWarning = [CCBReader nodeGraphFromFile:@"Begin.ccbi"];
     
-    CCBAnimationManager * am = [begin userObject];
+    CCBAnimationManager * am = [arrowWarning userObject];
     [am runAnimationsForSequenceNamed:@"Arrows"];
-    [self addChild:begin];
-    
+    [self addChild:arrowWarning];
 }
 
 

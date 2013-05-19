@@ -19,7 +19,7 @@
         effectEnded = NO;
         effectPos = position;
         LevelLayer * levelLayer = [[Registry shared] getEntityByName:@"LevelLayer"];
-        [levelLayer addChild:self z:5000];        
+        [levelLayer addChild:self z:5000];
         [self setInstantAction: [CCSequence actions:
                                  [CCCallFuncN actionWithTarget:self selector:@selector(performAction)],
                                  nil]];

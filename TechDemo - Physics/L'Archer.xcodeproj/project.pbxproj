@@ -325,6 +325,8 @@
 		9CBF5B0A171E463000EF44B2 /* Registry.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CBF5B09171E462E00EF44B2 /* Registry.m */; };
 		9CBF5B0D171E464E00EF44B2 /* ResourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CBF5B0C171E464C00EF44B2 /* ResourceManager.m */; };
 		9CEAE45517482B7600A528A0 /* ArrowWarning.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CEAE45417482B7600A528A0 /* ArrowWarning.m */; };
+		9CEAE457174863D900A528A0 /* LevelUp.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 9CEAE456174863D500A528A0 /* LevelUp.ccbi */; };
+		9CEAE45A1748640000A528A0 /* LevelUp.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CEAE459174863FF00A528A0 /* LevelUp.m */; };
 		9CEB4CAB173A0AB5004297A2 /* SkeletonGroup.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9CEB4CAA173A0AB5004297A2 /* SkeletonGroup.plist */; };
 		9CEB4CAD173A0AC2004297A2 /* PeasantGroup.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9CEB4CAC173A0AC2004297A2 /* PeasantGroup.plist */; };
 		9CEB4CAF173A0ACD004297A2 /* BlackDragonUp.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9CEB4CAE173A0ACD004297A2 /* BlackDragonUp.plist */; };
@@ -868,6 +870,9 @@
 		9CBF5B0C171E464C00EF44B2 /* ResourceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResourceManager.m; sourceTree = "<group>"; };
 		9CEAE45317482B7600A528A0 /* ArrowWarning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrowWarning.h; sourceTree = "<group>"; };
 		9CEAE45417482B7600A528A0 /* ArrowWarning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrowWarning.m; sourceTree = "<group>"; };
+		9CEAE456174863D500A528A0 /* LevelUp.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = LevelUp.ccbi; sourceTree = "<group>"; };
+		9CEAE458174863FF00A528A0 /* LevelUp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelUp.h; sourceTree = "<group>"; };
+		9CEAE459174863FF00A528A0 /* LevelUp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelUp.m; sourceTree = "<group>"; };
 		9CEB4CAA173A0AB5004297A2 /* SkeletonGroup.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SkeletonGroup.plist; sourceTree = "<group>"; };
 		9CEB4CAC173A0AC2004297A2 /* PeasantGroup.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PeasantGroup.plist; sourceTree = "<group>"; };
 		9CEB4CAE173A0ACD004297A2 /* BlackDragonUp.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BlackDragonUp.plist; sourceTree = "<group>"; };
@@ -1011,6 +1016,8 @@
 				9C6187E81742ED0D00A6D63F /* AchievementUnlocked.m */,
 				9CEAE45317482B7600A528A0 /* ArrowWarning.h */,
 				9CEAE45417482B7600A528A0 /* ArrowWarning.m */,
+				9CEAE458174863FF00A528A0 /* LevelUp.h */,
+				9CEAE459174863FF00A528A0 /* LevelUp.m */,
 			);
 			name = Instants;
 			sourceTree = "<group>";
@@ -1751,6 +1758,7 @@
 				8BBB6A22171E09E30064B3CD /* SettingsMenu.ccbi */,
 				9C293C951746B685009F54F4 /* LevelSelectLayer.ccbi */,
 				9C293C971746B729009F54F4 /* LevelThumbnail.ccbi */,
+				9CEAE456174863D500A528A0 /* LevelUp.ccbi */,
 				8B221466173338540055BF51 /* SkillTreeLayer.ccbi */,
 				9C4787021734260600180864 /* SkillTreeLayerZWOP.ccbi */,
 				8BC2107117343A0800B875B2 /* MarksSubMenu.ccbi */,
@@ -1971,6 +1979,7 @@
 				9C293C961746B697009F54F4 /* LevelSelectLayer.ccbi in Resources */,
 				9C293C981746B72C009F54F4 /* LevelThumbnail.ccbi in Resources */,
 				9C293C9A1746BAC4009F54F4 /* GameWin.ccbi in Resources */,
+				9CEAE457174863D900A528A0 /* LevelUp.ccbi in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2151,6 +2160,7 @@
 				8BF9C5FD17443F1C00E4B3F6 /* StoryBoardHUD.m in Sources */,
 				9C7CADC717456A8600D09E77 /* Ent.m in Sources */,
 				9CEAE45517482B7600A528A0 /* ArrowWarning.m in Sources */,
+				9CEAE45A1748640000A528A0 /* LevelUp.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
