@@ -8,6 +8,7 @@
 
 #import "MainScene.h"
 #import "Utils.h"
+#import "Snow.h"
 
 @implementation MainScene
 
@@ -37,7 +38,10 @@
     CGSize winSize = [[CCDirector sharedDirector] winSize];
     
     if ([type isEqualToString: @"winter"])
+    {
         background = [CCSprite spriteWithFile:@"backgroundWinter.png"];
+        [[[Snow alloc] initWithPosition:ccp(0,0)]autorelease];
+    }
     
     else //([type isEqualToString: @"summer"])
         background = [CCSprite spriteWithFile:@"background.png"];

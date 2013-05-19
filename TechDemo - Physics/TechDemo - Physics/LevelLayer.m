@@ -743,9 +743,9 @@ static int current_level = -1;
     [self makeMoneyPersistent];
     [self makeEnemiesKilledPersistent];
     [self checkAchievementsAfterGame];
-    int starsAfter = [[ResourceManager shared] determineSkillPoints];
+    int starsAfter = floor([[ResourceManager shared] determineSkillPoints] / 10.0);
     
-    if(floor(starsAfter/10.0) > floor(starsBefore/10.0))
+    if(starsAfter > floor(starsBefore/10.0) && starsAfter < 4)
         [[[LevelUp alloc] initWithPosition:ccp(0,0)] autorelease];
     
     CCBAnimationManager * am = [_gameWin userObject];

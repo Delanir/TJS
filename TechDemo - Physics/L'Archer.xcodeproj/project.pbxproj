@@ -129,6 +129,7 @@
 		9C377C03170BAE3E00F840FB /* arrow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9C377C00170BAE3E00F840FB /* arrow.mp3 */; };
 		9C377C0A170BB7CC00F840FB /* hit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9C377C09170BB7CB00F840FB /* hit.mp3 */; };
 		9C377C0D170BBDD800F840FB /* EnemyFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C377C0C170BBDD600F840FB /* EnemyFactory.m */; };
+		9C3B3D6417494ECD0088DDD0 /* Snow.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C3B3D6317494ECD0088DDD0 /* Snow.m */; };
 		9C3CE234172DC4570044889D /* akaPotsley.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C3CE22F172D87E40044889D /* akaPotsley.ttf */; };
 		9C3E4923173704FD001D45B7 /* AchievementsLayer.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 9C3E4922173704A6001D45B7 /* AchievementsLayer.ccbi */; };
 		9C3E492517370509001D45B7 /* LeaderBoardLayer.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 9C3E492117370493001D45B7 /* LeaderBoardLayer.ccbi */; };
@@ -503,6 +504,8 @@
 		9C377C09170BB7CB00F840FB /* hit.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hit.mp3; sourceTree = "<group>"; };
 		9C377C0B170BBDD300F840FB /* EnemyFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyFactory.h; sourceTree = "<group>"; };
 		9C377C0C170BBDD600F840FB /* EnemyFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnemyFactory.m; sourceTree = "<group>"; };
+		9C3B3D6217494ECD0088DDD0 /* Snow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Snow.h; sourceTree = "<group>"; };
+		9C3B3D6317494ECD0088DDD0 /* Snow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Snow.m; sourceTree = "<group>"; };
 		9C3CE22F172D87E40044889D /* akaPotsley.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = akaPotsley.ttf; sourceTree = "<group>"; };
 		9C3E492117370493001D45B7 /* LeaderBoardLayer.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = LeaderBoardLayer.ccbi; sourceTree = "<group>"; };
 		9C3E4922173704A6001D45B7 /* AchievementsLayer.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = AchievementsLayer.ccbi; sourceTree = "<group>"; };
@@ -1018,6 +1021,8 @@
 				9CEAE45417482B7600A528A0 /* ArrowWarning.m */,
 				9CEAE458174863FF00A528A0 /* LevelUp.h */,
 				9CEAE459174863FF00A528A0 /* LevelUp.m */,
+				9C3B3D6217494ECD0088DDD0 /* Snow.h */,
+				9C3B3D6317494ECD0088DDD0 /* Snow.m */,
 			);
 			name = Instants;
 			sourceTree = "<group>";
@@ -2161,6 +2166,7 @@
 				9C7CADC717456A8600D09E77 /* Ent.m in Sources */,
 				9CEAE45517482B7600A528A0 /* ArrowWarning.m in Sources */,
 				9CEAE45A1748640000A528A0 /* LevelUp.m in Sources */,
+				9C3B3D6417494ECD0088DDD0 /* Snow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
