@@ -13,6 +13,8 @@
 		3E23CECE1743F04100F6B2E0 /* achievement.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3E23CECD1743F04100F6B2E0 /* achievement.mp3 */; };
 		3E3A5D09171C6AE2006D5370 /* larcher_icon_72x72.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E3A5D08171C6AE2006D5370 /* larcher_icon_72x72.png */; };
 		3E3A5D0B171C6AEC006D5370 /* larcher_icon_144x144.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E3A5D0A171C6AEC006D5370 /* larcher_icon_144x144.png */; };
+		3E88A61A174A16CF00B6706C /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E88A618174A16CF00B6706C /* libTestFlight.a */; };
+		3E88A61D174A178F00B6706C /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E88A61C174A178F00B6706C /* libz.dylib */; };
 		3E926EC9173423EE00BFA90D /* AchievementsLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E926EC8173423EE00BFA90D /* AchievementsLayer.m */; };
 		3E926ECC1734255700BFA90D /* AchievementNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E926ECB1734255700BFA90D /* AchievementNode.m */; };
 		3EB671E91739562700937505 /* achievements_skull.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EB671E81739562700937505 /* achievements_skull.png */; };
@@ -341,6 +343,9 @@
 		3E23CECD1743F04100F6B2E0 /* achievement.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = achievement.mp3; sourceTree = "<group>"; };
 		3E3A5D08171C6AE2006D5370 /* larcher_icon_72x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = larcher_icon_72x72.png; path = ../larcher_icon_72x72.png; sourceTree = "<group>"; };
 		3E3A5D0A171C6AEC006D5370 /* larcher_icon_144x144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = larcher_icon_144x144.png; path = ../larcher_icon_144x144.png; sourceTree = "<group>"; };
+		3E88A618174A16CF00B6706C /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
+		3E88A619174A16CF00B6706C /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
+		3E88A61C174A178F00B6706C /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		3E926EC51734064B00BFA90D /* achievement-guide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "achievement-guide.png"; sourceTree = "<group>"; };
 		3E926EC7173423EE00BFA90D /* AchievementsLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AchievementsLayer.h; sourceTree = "<group>"; };
 		3E926EC8173423EE00BFA90D /* AchievementsLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AchievementsLayer.m; sourceTree = "<group>"; };
@@ -886,6 +891,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E88A61D174A178F00B6706C /* libz.dylib in Frameworks */,
 				3EE1EA5E1742963800F5D7A7 /* SystemConfiguration.framework in Frameworks */,
 				9C85F49A1707957E00EECB83 /* QuartzCore.framework in Frameworks */,
 				9C85F49C1707957E00EECB83 /* OpenGLES.framework in Frameworks */,
@@ -897,12 +903,22 @@
 				9C85F4A81707957E00EECB83 /* CoreGraphics.framework in Frameworks */,
 				9C85F4AA1707957E00EECB83 /* GameKit.framework in Frameworks */,
 				3EE1EA5C174295C700F5D7A7 /* libFlurry.a in Frameworks */,
+				3E88A61A174A16CF00B6706C /* libTestFlight.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E88A61B174A16F900B6706C /* TestFlight */ = {
+			isa = PBXGroup;
+			children = (
+				3E88A618174A16CF00B6706C /* libTestFlight.a */,
+				3E88A619174A16CF00B6706C /* TestFlight.h */,
+			);
+			name = TestFlight;
+			sourceTree = "<group>";
+		};
 		3E926EC4173405ED00BFA90D /* Achievements */ = {
 			isa = PBXGroup;
 			children = (
@@ -1159,7 +1175,6 @@
 			children = (
 				3EE1EA5D1742963800F5D7A7 /* SystemConfiguration.framework */,
 				9C85F4AB1707957E00EECB83 /* L'Archer D'Amiens */,
-				9C85F4981707957E00EECB83 /* Frameworks */,
 				9C85F4971707957E00EECB83 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -1175,6 +1190,7 @@
 		9C85F4981707957E00EECB83 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3E88A61B174A16F900B6706C /* TestFlight */,
 				3EE1EA59174295C700F5D7A7 /* Flurry */,
 				9C85F4991707957E00EECB83 /* QuartzCore.framework */,
 				9C85F49B1707957E00EECB83 /* OpenGLES.framework */,
@@ -1187,6 +1203,7 @@
 				9C85F4A91707957E00EECB83 /* GameKit.framework */,
 			);
 			name = Frameworks;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		9C85F4AB1707957E00EECB83 /* L'Archer D'Amiens */ = {
@@ -1201,6 +1218,7 @@
 				9C969E591716290D00BE7476 /* Startup Classes */,
 				9C85F4AC1707957E00EECB83 /* Resources */,
 				9C85F4C61707957E00EECB83 /* libs */,
+				9C85F4981707957E00EECB83 /* Frameworks */,
 			);
 			name = "L'Archer D'Amiens";
 			path = "TechDemo - Physics";
@@ -1224,6 +1242,7 @@
 		9C85F4C61707957E00EECB83 /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				3E88A61C174A178F00B6706C /* libz.dylib */,
 				9C85F5DD1707958200EECB83 /* LICENSE_cocos2d.txt */,
 				9C85F5EC1707958200EECB83 /* LICENSE_CocosDenshion.txt */,
 				9C85F61E1707958200EECB83 /* LICENSE_Kazmath.txt */,
@@ -2229,6 +2248,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Flurry\"",
+					"\"$(SRCROOT)\"",
 				);
 				OTHER_LDFLAGS = (
 					"-lz",
@@ -2255,6 +2275,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Flurry\"",
+					"\"$(SRCROOT)\"",
 				);
 				OTHER_LDFLAGS = (
 					"-lz",
