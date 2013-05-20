@@ -888,7 +888,7 @@
 				<key>displayName</key>
 				<string>miau</string>
 				<key>memberVarAssignmentName</key>
-				<string>level</string>
+				<string>_level</string>
 				<key>memberVarAssignmentType</key>
 				<integer>1</integer>
 				<key>properties</key>
@@ -1003,8 +1003,6 @@
 						<string>0</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 				<key>seqExpanded</key>
 				<true/>
 			</dict>

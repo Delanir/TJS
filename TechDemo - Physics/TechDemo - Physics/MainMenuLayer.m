@@ -11,6 +11,7 @@
 #import "GameManager.h"
 #import "SkillTreeLayer.h"
 #import "GameState.h"
+#import "LoadingEffect.h"
 
 @implementation MainMenuLayer
 
@@ -32,7 +33,6 @@
 {
 	[super onEnter];
     [[SimpleAudioEngine sharedEngine] playBackgroundMusic:[[Config shared] getStringProperty:@"MainMenuMusic"] loop:YES];
-//    [[SimpleAudioEngine sharedEngine] setBackgroundMusicVolume:1.0f];
     
     // Calculate number of used stars
     NSMutableArray *skillPoints = [[GameState shared] skillStates];
@@ -45,16 +45,22 @@
     int stars = [[ResourceManager shared] determineSkillPoints];
     
     int res = DEFAULTSKILLPOINTS + stars - usedSkillPoints;
-    if (res>0) {
+    if (res>0)
+    {
         [lblNotification setVisible:YES];
         [spriteNotification setVisible:YES];
         [lblNotification setString:[NSString stringWithFormat:@"%i", res]];
-    }else{
+    }
+    else
+    {
         [lblNotification setVisible:NO];
         [spriteNotification setVisible:NO];
     }
     
-    
+    [NSThread detachNewThreadSelector:@selector(loading) toTarget:self  withObject:self];
+//    LoadingEffect * le = [[LoadingEffect alloc] init];
+//    [self addChild:le z:1000];
+//    [le release];
 }
 
 - (void)onExit{
@@ -66,20 +72,40 @@
 }
 
 
+
+- (void) loading
+{
+    NSAutoreleasePool *autoreleasepool = [[NSAutoreleasePool alloc] init];
+    //Create a shared opengl context so this texture can be shared with main context
+    EAGLContext *k_context = [[EAGLContext alloc]
+                               initWithAPI:kEAGLRenderingAPIOpenGLES2];
+    [EAGLContext setCurrentContext:k_context];
+
+    LoadingEffect * le = [[LoadingEffect alloc] init];
+    [self addChild:le z:1000];
+    [le release];
+    
+    [autoreleasepool release];
+    
+}
+
 - (void) pressedSettings:(id)sender
 {
+    [NSThread detachNewThreadSelector:@selector(loading) toTarget:self  withObject:self];
     [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"click"]];
     [[GameManager shared] runSceneWithID:kSettingsScene];
 }
 
 - (void) pressedSkillTree:(id)sender
 {
+    [NSThread detachNewThreadSelector:@selector(loading) toTarget:self  withObject:self];
     [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"click"]];
     [[GameManager shared] runSceneWithID:kSkillTreeScene];
 }
 
 - (void) pressedAchievments:(id)sender
 {
+    [NSThread detachNewThreadSelector:@selector(loading) toTarget:self  withObject:self];
     [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"click"]];
     [[GameManager shared] runSceneWithID:kAchievementsScene];
     //    GKAchievementViewController *achievementViewController = [[GKAchievementViewController alloc] init];

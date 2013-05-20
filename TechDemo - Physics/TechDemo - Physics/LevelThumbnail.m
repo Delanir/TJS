@@ -9,7 +9,6 @@
 #import "LevelThumbnail.h"
 #import "LevelLayer.h"
 #import "GameManager.h"
-#import "LoadingBar.h"
 #import "SimpleAudioEngine.h"
 
 

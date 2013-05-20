@@ -62,7 +62,6 @@ static SpriteManager* _sharedSingleton = nil;
  {
      [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:filePlist];
      CCSpriteBatchNode * spritesheetDisplayList = [CCSpriteBatchNode batchNodeWithFile:filePng];
-    
      return spritesheetDisplayList;
  }
 

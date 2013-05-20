@@ -188,9 +188,9 @@
 						<string>Color3</string>
 						<key>value</key>
 						<array>
-							<integer>252</integer>
-							<integer>212</integer>
-							<integer>48</integer>
+							<integer>255</integer>
+							<integer>216</integer>
+							<integer>0</integer>
 						</array>
 					</dict>
 					<dict>
@@ -230,6 +230,8 @@
 						<string>Achievements</string>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>baseClass</key>
@@ -1361,8 +1363,6 @@
 						<string>* Some achievements unlocked at the end of each level</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>

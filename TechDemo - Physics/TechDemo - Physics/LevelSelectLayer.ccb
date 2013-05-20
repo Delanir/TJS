@@ -207,8 +207,8 @@
 						<string>Color3</string>
 						<key>value</key>
 						<array>
-							<integer>185</integer>
-							<integer>152</integer>
+							<integer>255</integer>
+							<integer>216</integer>
 							<integer>0</integer>
 						</array>
 					</dict>

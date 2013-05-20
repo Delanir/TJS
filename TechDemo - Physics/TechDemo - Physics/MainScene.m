@@ -18,15 +18,12 @@
 {
     if( (self=[super init]))
     {
-        
-
-        
         Wall * wall = [[Wall alloc] init];
         [self addChild:wall];
         
         [[Registry shared] registerEntity:wall withName:@"Wall"];
         [[Registry shared] registerEntity:self withName:@"MainScene"];
-        
+
         [wall release];
     }
     return self;

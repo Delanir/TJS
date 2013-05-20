@@ -56,6 +56,14 @@
 }
 
 
+- (void) freeze
+{
+    [super freeze];
+    if (currentState != kDieEnemyState)
+        sprite.color=ccc3(255, 255, 255);
+}
+
+
 
 -(void) attack
 {

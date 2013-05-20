@@ -130,6 +130,7 @@
 		9C377C0A170BB7CC00F840FB /* hit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9C377C09170BB7CB00F840FB /* hit.mp3 */; };
 		9C377C0D170BBDD800F840FB /* EnemyFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C377C0C170BBDD600F840FB /* EnemyFactory.m */; };
 		9C3B3D6417494ECD0088DDD0 /* Snow.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C3B3D6317494ECD0088DDD0 /* Snow.m */; };
+		9C3B3D66174996440088DDD0 /* ccbParticleNeedle.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C3B3D65174996440088DDD0 /* ccbParticleNeedle.png */; };
 		9C3CE234172DC4570044889D /* akaPotsley.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C3CE22F172D87E40044889D /* akaPotsley.ttf */; };
 		9C3E4923173704FD001D45B7 /* AchievementsLayer.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 9C3E4922173704A6001D45B7 /* AchievementsLayer.ccbi */; };
 		9C3E492517370509001D45B7 /* LeaderBoardLayer.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 9C3E492117370493001D45B7 /* LeaderBoardLayer.ccbi */; };
@@ -147,7 +148,7 @@
 		9C48A50F1739DFC40068D610 /* SkeletonArmy.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C48A50E1739DFC40068D610 /* SkeletonArmy.plist */; };
 		9C48A5111739E01C0068D610 /* BlackDragonDown.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C48A5101739E01C0068D610 /* BlackDragonDown.plist */; };
 		9C48A5131739E0580068D610 /* WraithHex.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C48A5121739E0580068D610 /* WraithHex.plist */; };
-		9C500253172AD03800C141DB /* LoadingBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C500252172AD03800C141DB /* LoadingBar.m */; };
+		9C500253172AD03800C141DB /* LoadingEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C500252172AD03800C141DB /* LoadingEffect.m */; };
 		9C6187E91742ED0D00A6D63F /* AchievementUnlocked.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6187E81742ED0D00A6D63F /* AchievementUnlocked.m */; };
 		9C6187EB1742EDC800A6D63F /* AchievmentUnlocked.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 9C6187EA1742EDB500A6D63F /* AchievmentUnlocked.ccbi */; };
 		9C6187EE17430CAA00A6D63F /* AchievementUnlockedNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6187ED17430CAA00A6D63F /* AchievementUnlockedNode.m */; };
@@ -506,6 +507,7 @@
 		9C377C0C170BBDD600F840FB /* EnemyFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnemyFactory.m; sourceTree = "<group>"; };
 		9C3B3D6217494ECD0088DDD0 /* Snow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Snow.h; sourceTree = "<group>"; };
 		9C3B3D6317494ECD0088DDD0 /* Snow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Snow.m; sourceTree = "<group>"; };
+		9C3B3D65174996440088DDD0 /* ccbParticleNeedle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ccbParticleNeedle.png; path = ccbResources/ccbParticleNeedle.png; sourceTree = "<group>"; };
 		9C3CE22F172D87E40044889D /* akaPotsley.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = akaPotsley.ttf; sourceTree = "<group>"; };
 		9C3E492117370493001D45B7 /* LeaderBoardLayer.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = LeaderBoardLayer.ccbi; sourceTree = "<group>"; };
 		9C3E4922173704A6001D45B7 /* AchievementsLayer.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = AchievementsLayer.ccbi; sourceTree = "<group>"; };
@@ -527,8 +529,8 @@
 		9C48A50E1739DFC40068D610 /* SkeletonArmy.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SkeletonArmy.plist; sourceTree = "<group>"; };
 		9C48A5101739E01C0068D610 /* BlackDragonDown.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BlackDragonDown.plist; sourceTree = "<group>"; };
 		9C48A5121739E0580068D610 /* WraithHex.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = WraithHex.plist; sourceTree = "<group>"; };
-		9C500251172AD03800C141DB /* LoadingBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingBar.h; sourceTree = "<group>"; };
-		9C500252172AD03800C141DB /* LoadingBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingBar.m; sourceTree = "<group>"; };
+		9C500251172AD03800C141DB /* LoadingEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingEffect.h; sourceTree = "<group>"; };
+		9C500252172AD03800C141DB /* LoadingEffect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingEffect.m; sourceTree = "<group>"; };
 		9C6187E71742ED0D00A6D63F /* AchievementUnlocked.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AchievementUnlocked.h; sourceTree = "<group>"; };
 		9C6187E81742ED0D00A6D63F /* AchievementUnlocked.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AchievementUnlocked.m; sourceTree = "<group>"; };
 		9C6187EA1742EDB500A6D63F /* AchievmentUnlocked.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = AchievmentUnlocked.ccbi; sourceTree = "<group>"; };
@@ -1106,6 +1108,7 @@
 				9C969E5A17163EF700BE7476 /* ipadhd */,
 				9C969E5B17163F1900BE7476 /* normal */,
 				3EB8A37F17161CFA00666626 /* fire.png */,
+				9C3B3D65174996440088DDD0 /* ccbParticleNeedle.png */,
 				8BC21063173430E600B875B2 /* ccbParticleSmoke.png */,
 				8BC21064173430E600B875B2 /* ccbParticleSnow.png */,
 				8BC21065173430E600B875B2 /* ccbParticleStars.png */,
@@ -1657,8 +1660,8 @@
 				3EE2F9661723178C0084DF2F /* LevelThumbnail.m */,
 				3EE2F95C17230E640084DF2F /* LevelStars.h */,
 				3EE2F95D17230E640084DF2F /* LevelStars.m */,
-				9C500251172AD03800C141DB /* LoadingBar.h */,
-				9C500252172AD03800C141DB /* LoadingBar.m */,
+				9C500251172AD03800C141DB /* LoadingEffect.h */,
+				9C500252172AD03800C141DB /* LoadingEffect.m */,
 				8B1189551743FE8500C68B70 /* StoryBoard.h */,
 				8B1189561743FE8500C68B70 /* StoryBoard.m */,
 			);
@@ -1985,6 +1988,7 @@
 				9C293C981746B72C009F54F4 /* LevelThumbnail.ccbi in Resources */,
 				9C293C9A1746BAC4009F54F4 /* GameWin.ccbi in Resources */,
 				9CEAE457174863D900A528A0 /* LevelUp.ccbi in Resources */,
+				9C3B3D66174996440088DDD0 /* ccbParticleNeedle.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2141,7 +2145,7 @@
 				9C1E05B617249B3A0093F0E3 /* GameManager.m in Sources */,
 				9C1E05BC1724C0560093F0E3 /* GameState.m in Sources */,
 				8C72C2A8172968F6009EF8C1 /* GameWin.m in Sources */,
-				9C500253172AD03800C141DB /* LoadingBar.m in Sources */,
+				9C500253172AD03800C141DB /* LoadingEffect.m in Sources */,
 				8B3FF0E01732B60600D2212B /* FireSubSkillTree.m in Sources */,
 				9C47870E17342B4B00180864 /* FireElemental.m in Sources */,
 				9C47871117344CFD00180864 /* Wraith.m in Sources */,

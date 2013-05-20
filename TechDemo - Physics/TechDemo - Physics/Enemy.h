@@ -69,6 +69,7 @@
 - (void) stopWalking;
 - (void) resumeFromTaunt;
 - (void) stopAnimations;
+-(void) freeze;
 
 -(void) takeDamage:(double) amount;
 @end
