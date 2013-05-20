@@ -15,6 +15,7 @@
 #import "Registry.h"
 #import "LevelLayer.h"
 #import "Flurry.h"
+#import "TestFlight.h"
 
 @implementation AppController
 
@@ -28,7 +29,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    
+    // Metrics in Beta
+    // !!!: Use the next line only during beta
+    [TestFlight setDeviceIdentifier:[[UIDevice currentDevice] uniqueIdentifier]];
+
+    [TestFlight takeOff:@"80e8c2d7-603f-4dfd-81ec-095c54b5cce1"];
 	// Create the main window
 	window_ = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     

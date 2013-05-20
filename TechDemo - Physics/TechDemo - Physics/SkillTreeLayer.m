@@ -16,6 +16,7 @@
 #import "SpriteManager.h"
 #import "Constants.h"
 #import "Flurry.h"
+#import "TestFlight.h"
 
 @implementation SkillTreeLayer
 
@@ -39,6 +40,8 @@
     [[Registry shared] registerEntity:self withName:@"skillTree"];
     [Flurry logEvent:@"Entered SkillTree with Flurry :D Test2!"];
     [Flurry logEvent:@"Entered SkillTree with Flurry :D Test! timed" timed:YES];
+    [TestFlight passCheckpoint:@"Entered SkillTree with TestFlight :D Test1!"];
+    
     
     NSMutableArray *skill = [[GameState shared] skillStates];
     
