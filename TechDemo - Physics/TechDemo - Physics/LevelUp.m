@@ -36,7 +36,7 @@
 }
 
 
-- (void) update
+- (void) updateInstant
 {
     CCNode * levelUp = [self getChildByTag:0];
     CCBAnimationManager * am = [levelUp userObject];
@@ -46,7 +46,7 @@
         [self removeAllChildrenWithCleanup:YES];
     }
     
-    [super update];
+    [super updateInstant];
 }
 
 

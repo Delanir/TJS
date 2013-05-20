@@ -45,7 +45,7 @@
 }
 
 
-- (void) update
+- (void) updateInstant
 {
     CCNode * begin = [self getChildByTag:0];
     CCBAnimationManager * am = [begin userObject];
@@ -56,7 +56,7 @@
             [[[AchievementUnlocked alloc] initWithAchievements:achievements] autorelease];
     }
     
-    [super update];
+    [super updateInstant];
 }
 
 -(void) dealloc

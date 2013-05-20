@@ -23,7 +23,7 @@
 }
 
 
-- (void) update
+- (void) updateInstant
 {
     LevelLayer * levellayer = [[Registry shared] getEntityByName:@"LevelLayer"];
     if ([levellayer gameStarted])
@@ -34,7 +34,7 @@
         
     }
     
-    [super update];
+    [super updateInstant];
 }
 
 

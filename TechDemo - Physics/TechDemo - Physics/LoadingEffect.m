@@ -7,6 +7,7 @@
 //
 
 #import "LoadingEffect.h"
+#import "SpriteManager.h"
 
 @implementation LoadingEffect
 
@@ -22,9 +23,9 @@
         [spiral setPosVar:ccp(500,100)];
         [spiral setAutoRemoveOnFinish:YES];
         
-        [spiral setTotalParticles:350];
+        [spiral setTotalParticles:100];
         [spiral setLife: 3];
-        [spiral setLifeVar: 0.2];
+        [spiral setLifeVar: 1.2];
         [spiral setStartSize:44];
         [spiral setStartSizeVar:30];
         [spiral setEndSize:100];
@@ -39,8 +40,8 @@
         [spiral setEmitterMode:kCCParticleModeGravity];
         [spiral setDuration:-1.0];
         
-        [spiral setSpeed:21];
-        [spiral setSpeedVar:10];
+        [spiral setSpeed:1];
+        [spiral setSpeedVar:1];
         [spiral setGravity:ccp(-200, -900)];
         
         [spiral setRadialAccel: -800];

@@ -51,13 +51,13 @@
 }
 
 
-- (void) update
+- (void) updateInstant
 {
     //LevelLayer * levellayer = [[Registry shared] getEntityByName:@"LevelLayer"];
     //if (levellaye)
     //    [self setEffectEnded:YES];
     
-    [super update];
+    [super updateInstant];
 }
 
 

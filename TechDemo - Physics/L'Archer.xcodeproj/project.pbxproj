@@ -2010,7 +2010,7 @@
 				9C293C981746B72C009F54F4 /* LevelThumbnail.ccbi in Resources */,
 				9C293C9A1746BAC4009F54F4 /* GameWin.ccbi in Resources */,
 				9CEAE457174863D900A528A0 /* LevelUp.ccbi in Resources */,
-                9C3B3D66174996440088DDD0 /* ccbParticleNeedle.png in Resources */,
+				9C3B3D66174996440088DDD0 /* ccbParticleNeedle.png in Resources */,
 				8B232782174A6437001BE6B3 /* hit.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -33,13 +33,13 @@
 {
 	[super onEnter];
     [[SimpleAudioEngine sharedEngine] playBackgroundMusic:[[Config shared] getStringProperty:@"MainMenuMusic"] loop:YES];
+    [[SpriteManager shared] addSpritesToSpriteFrameCacheWithFile:@"MenuSpritesheet.plist" andBatchSpriteSheet:@"MenuSpritesheet.png"];
     
     // Calculate number of used stars
     NSMutableArray *skillPoints = [[GameState shared] skillStates];
     int usedSkillPoints = 0;
-    for (int i = 0; i < 28; i++) {
+    for (int i = 0; i < 28; i++)
         usedSkillPoints += [[skillPoints objectAtIndex:i] intValue];
-    }
     
     // Calculate number of total stars
     int stars = [[ResourceManager shared] determineSkillPoints];
@@ -56,14 +56,17 @@
         [lblNotification setVisible:NO];
         [spriteNotification setVisible:NO];
     }
-    
     [NSThread detachNewThreadSelector:@selector(loading) toTarget:self  withObject:self];
-//    LoadingEffect * le = [[LoadingEffect alloc] init];
-//    [self addChild:le z:1000];
-//    [le release];
+
+//Uncomment for interesting effect
+    //[[[self children] objectAtIndex:0] setZOrder:0];
+    //for (int i = 1 ; i < [[self children] count] ; i++)
+    //    [[[self children] objectAtIndex:i] setZOrder:2];
+    
 }
 
 - (void)onExit{
+    [self unscheduleAllSelectors];
     [self removeAllChildrenWithCleanup:YES];
     
     //[[CCSpriteFrameCache sharedSpriteFrameCache] removeUnusedSpriteFrames];
@@ -78,14 +81,14 @@
     NSAutoreleasePool *autoreleasepool = [[NSAutoreleasePool alloc] init];
     //Create a shared opengl context so this texture can be shared with main context
     EAGLContext *k_context = [[EAGLContext alloc]
-                               initWithAPI:kEAGLRenderingAPIOpenGLES2];
+                              initWithAPI:kEAGLRenderingAPIOpenGLES2];
     [EAGLContext setCurrentContext:k_context];
-
-    LoadingEffect * le = [[LoadingEffect alloc] init];
-    [self addChild:le z:1000];
-    [le release];
     
+    LoadingEffect * le = [[LoadingEffect alloc] init];
+    [self addChild:le z:1];
+    [le release];
     [autoreleasepool release];
+    [NSThread exit];
     
 }
 

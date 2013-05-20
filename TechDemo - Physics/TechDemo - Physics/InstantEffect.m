@@ -24,7 +24,7 @@
                                  [CCCallFuncN actionWithTarget:self selector:@selector(performAction)],
                                  nil]];
         [self runAction:instantAction];
-        [self schedule:@selector(update)];
+        [self schedule:@selector(updateInstant)];
     }
     return self;
 }
@@ -36,7 +36,7 @@
 }
 
 
--(void) update
+-(void) updateInstant
 {
     if (effectEnded)
         [self clearEffect];

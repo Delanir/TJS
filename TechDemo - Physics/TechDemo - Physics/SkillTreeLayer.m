@@ -27,12 +27,27 @@
 
 - (id)init
 {
-    [[SpriteManager shared] addSpritesToSpriteFrameCacheWithFile:@"skillTreeSS.plist" andBatchSpriteSheet:@"skillTreeSS.png"];
+    
+    [NSThread detachNewThreadSelector:@selector(loading) toTarget:self  withObject:self];
     self = [super init];
     
     return self;
 }
 
+
+- (void) loading
+{
+    NSAutoreleasePool *autoreleasepool = [[NSAutoreleasePool alloc] init];
+    //Create a shared opengl context so this texture can be shared with main context
+    EAGLContext *k_context = [[EAGLContext alloc]
+                              initWithAPI:kEAGLRenderingAPIOpenGLES2];
+    [EAGLContext setCurrentContext:k_context];
+    
+    [[SpriteManager shared] addSpritesToSpriteFrameCacheWithFile:@"skillTreeSS.plist" andBatchSpriteSheet:@"skillTreeSS.png"];
+    [autoreleasepool release];
+    [NSThread exit];
+    
+}
 
 -(void)onEnter
 {

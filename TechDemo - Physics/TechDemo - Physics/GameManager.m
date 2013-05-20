@@ -106,11 +106,12 @@ static GameManager* _sharedSingleton = nil;
         [[[CCDirector sharedDirector] runningScene] removeAllChildrenWithCleanup:YES];
         [[[CCDirector sharedDirector] runningScene] removeFromParentAndCleanup:YES];
         
+        
         if (sceneID == kMainMenuScene)
             [[CCDirector sharedDirector] replaceScene:[CCTransitionSlideInL transitionWithDuration:0.5f scene:sceneToRun]];
         else
             [[CCDirector sharedDirector] replaceScene:[CCTransitionSlideInR transitionWithDuration:0.5f scene:sceneToRun]];
-
+        
         //  else
         //  {
         

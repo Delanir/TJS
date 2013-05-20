@@ -12,7 +12,7 @@
 #import "Config.h"
 #import "GameManager.h"
 #import "GameState.h"
-
+#import "LoadingEffect.h"
 
 
 @implementation LevelSelectLayer
@@ -64,6 +64,24 @@
         [level initLevel];
         [level setThumbnail:[NSString stringWithFormat:@"level%d.png",i]];
     }
+    
+    [NSThread detachNewThreadSelector:@selector(loading) toTarget:self  withObject:self];
+}
+
+- (void) loading
+{
+    NSAutoreleasePool *autoreleasepool = [[NSAutoreleasePool alloc] init];
+    //Create a shared opengl context so this texture can be shared with main context
+    EAGLContext *k_context = [[EAGLContext alloc]
+                              initWithAPI:kEAGLRenderingAPIOpenGLES2];
+    [EAGLContext setCurrentContext:k_context];
+    
+    LoadingEffect * le = [[LoadingEffect alloc] init];
+    [self addChild:le z:1];
+    [le release];
+    [autoreleasepool release];
+    [NSThread exit];
+    
 }
 
 

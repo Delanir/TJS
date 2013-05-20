@@ -409,7 +409,7 @@ static int current_level = -1;
 
 -(BOOL) tryLose
 {
-    return [(Wall *)[[Registry shared]getEntityByName:@"Wall"] health] <=0 && _gameOver == nil;
+    return [(Wall *)[[Registry shared]getEntityByName:@"Wall"] health] <=0;
 }
 
 -(void) addEnemy:(Enemy *) newEnemy

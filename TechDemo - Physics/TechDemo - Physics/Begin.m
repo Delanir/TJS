@@ -23,7 +23,7 @@
 }
 
 
-- (void) update
+- (void) updateInstant
 {
     CCNode * begin = [self getChildByTag:0];
     CCBAnimationManager * am = [begin userObject];
@@ -32,7 +32,7 @@
         [self setEffectEnded:YES];
     }
     
-    [super update];
+    [super updateInstant];
 }
 
 

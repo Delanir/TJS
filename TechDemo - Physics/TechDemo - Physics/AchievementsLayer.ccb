@@ -230,8 +230,6 @@
 						<string>Achievements</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>baseClass</key>
@@ -1309,6 +1307,14 @@
 					</dict>
 					<dict>
 						<key>name</key>
+						<string>visible</string>
+						<key>type</key>
+						<string>Check</string>
+						<key>value</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
 						<string>fontName</string>
 						<key>type</key>
 						<string>FontTTF</string>
@@ -1363,6 +1369,8 @@
 						<string>* Some achievements unlocked at the end of each level</string>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>

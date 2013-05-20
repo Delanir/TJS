@@ -67,12 +67,12 @@
 }
 
 
-- (void) update
+- (void) updateInstant
 {
     if ([[self children] count] == 0)
         [self setEffectEnded:YES];
     
-    [super update];
+    [super updateInstant];
 }
 
 

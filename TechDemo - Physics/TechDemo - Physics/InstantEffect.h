@@ -24,6 +24,6 @@
 -(id) initWithPosition: (CGPoint) position;
 -(void) performAction;
 -(void) clearEffect;
--(void) update;
+-(void) updateInstant;
 
 @end

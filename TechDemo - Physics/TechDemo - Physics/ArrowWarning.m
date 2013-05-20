@@ -22,7 +22,7 @@
 }
 
 
-- (void) update
+- (void) updateInstant
 {
     if ([[ResourceManager shared] arrows] > kAcceptableNumberOfArrows)
     {
@@ -30,7 +30,7 @@
         [self removeAllChildrenWithCleanup:YES];
     }
     
-    [super update];
+    [super updateInstant];
 }
 
 
