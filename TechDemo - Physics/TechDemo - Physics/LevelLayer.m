@@ -731,6 +731,8 @@ static int current_level = -1;
     [self makeEnemiesKilledPersistent];
     [self makeMoneyPersistent];
     [self checkAchievementsAfterGame];
+    float mana = [[ResourceManager shared] mana];
+    [TestFlight passCheckpoint:[NSString stringWithFormat:@"Mana at level%@ was %f",[[GameState shared] actualLevel], mana]];
 }
 
 -(void) gameWin
@@ -750,6 +752,10 @@ static int current_level = -1;
     [self makeMoneyPersistent];
     [self makeEnemiesKilledPersistent];
     [self checkAchievementsAfterGame];
+    
+    float mana = [[ResourceManager shared] mana];
+    [TestFlight passCheckpoint:[NSString stringWithFormat:@"Mana at level%@ was %f",[[GameState shared] actualLevel], mana]];
+    
     int starsAfter = floor([[ResourceManager shared] determineSkillPoints] / 10.0);
     
     if(starsAfter > floor(starsBefore/10.0) && starsAfter < 3)
