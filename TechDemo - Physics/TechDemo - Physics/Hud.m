@@ -139,26 +139,26 @@
         repairButton.position = ccp(410,64);
         
         // informacao do custo
-        buyCost= [CCLabelTTF labelWithString: [NSString stringWithFormat:@"%i", BUYARROWSCOST] fontName:@"Futura" fontSize:24];
+        buyCost= [CCLabelTTF labelWithString: [NSString stringWithFormat:@"10 for %i", BUYARROWSCOST] fontName:@"Futura" fontSize:12];
        
         [buyCost setAnchorPoint:ccp(0,0.5)];
         
-        buyCost.position = CGPointMake(310, 30);
+        buyCost.position = CGPointMake(277, 30);
         
         CCSprite * moneySprite1 = [CCSprite spriteWithSpriteFrameName:@"Coins.png"];
-        [moneySprite1  setPosition:ccp(310-[moneySprite1 contentSize].width/2.0,30)];
+        [moneySprite1  setPosition:ccp(317+[moneySprite1 contentSize].width/2.0,30)];
+        [moneySprite1 setScale:0.5];
         
-        repairCost= [CCLabelTTF labelWithString: [NSString stringWithFormat:@"%i",WALLREPAIRCOST] fontName:@"Futura" fontSize:24];
+        repairCost= [CCLabelTTF labelWithString: [NSString stringWithFormat:@"25%% for %i",WALLREPAIRCOST] fontName:@"Futura" fontSize:12];
         
         [repairCost setAnchorPoint:ccp(0,0.5)];
         
-        repairCost.position = CGPointMake(410, 30);
+        repairCost.position = CGPointMake(365, 30);
         CCSprite * moneySprite2 = [CCSprite spriteWithSpriteFrameName:@"Coins.png"];
-        [moneySprite2  setPosition:ccp(410-[moneySprite2 contentSize].width/2.0,30)];
+        [moneySprite2  setPosition:ccp(431+[moneySprite2 contentSize].width/2.0,30)];
+        [moneySprite2 setScale:0.5];
         
         //////////////////
-        
-
         
         buttonsMenu = [CCMenu menuWithItems:iceToggleButton, fireToggleButton, pushBackToggleButton, buyButton, repairButton, nil];
         buttonsMenu.position = CGPointZero;
