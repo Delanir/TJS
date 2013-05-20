@@ -20,6 +20,7 @@
     NSNumber * enemiesKilledState;
     NSNumber * dragonsKilledState;
     NSNumber * fireElementalKilledState;
+    NSNumber * actualLevel;
     BOOL firstrun;
     BOOL firstRunSkill;
 }
@@ -33,6 +34,7 @@
 @property (nonatomic, retain) NSNumber * enemiesKilledState;
 @property (nonatomic, retain) NSNumber * dragonsKilledState;
 @property (nonatomic, retain) NSNumber * fireElementalKilledState;
+@property (nonatomic, retain) NSNumber * actualLevel;
 
 +(GameState*)shared;
 

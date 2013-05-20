@@ -12,7 +12,7 @@
 #import "CCBAnimationManager.h"
 #import "GetReady.h"
 #import "LevelUp.h"
-
+#import "TestFlight.h"
 #import "AchievementUnlocked.h"
 
 
@@ -50,6 +50,7 @@ static int current_level = -1;
 +(void)setCurrentLevel:(int) newLevel
 {
     current_level = newLevel;
+    [[GameState shared] setActualLevel:[NSNumber numberWithInt:current_level]];
 }
 
 /******
@@ -83,6 +84,7 @@ static int current_level = -1;
 {
     [super onEnter];
     [ResourceManager loadLevelSprites];
+//    [[GameState shared] setActualLevel:current_level];
     
     CGSize winSize = [[CCDirector sharedDirector] winSize];
     
@@ -498,9 +500,9 @@ static int current_level = -1;
     // 1/4 accuracy
     // 3/4 wall health
     Wall* wall = [[Registry shared] getEntityByName:@"Wall"];
-    
+    int accuracy = [[ResourceManager shared] determineAccuracy];
     float cont1 = 0.75 * [wall health] / [wall maxHealth];
-    float cont2 = 0.25 * [[ResourceManager shared] determineAccuracy] * 0.01;
+    float cont2 = 0.25 * accuracy * 0.01;
     
     unsigned int numberStars = (unsigned int) ceil((cont1+cont2)*3);
     
@@ -510,6 +512,9 @@ static int current_level = -1;
     
     if (numberStars > [currentStars intValue])
         [stars replaceObjectAtIndex:current_level-1 withObject: [NSNumber numberWithInt:numberStars]];
+    
+    [TestFlight passCheckpoint:[NSString stringWithFormat:@"Accuracy at level%@ was %d",[[GameState shared] actualLevel], accuracy]];
+    
     return numberStars;
 }
 
@@ -605,6 +610,7 @@ static int current_level = -1;
 {
     if (_gameOver!=nil)
     {
+        [[GameState shared] setActualLevel:0];
         CGSize winSize = [[CCDirector sharedDirector] winSize];
         CGPoint locationT=[touchLocation locationInView:[touchLocation view]];
         locationT.y=winSize.height-locationT.y;
@@ -653,6 +659,7 @@ static int current_level = -1;
 {
     if (_gameWin!=nil)
     {
+        [[GameState shared] setActualLevel:0];
         CGSize winSize = [[CCDirector sharedDirector] winSize];
         CGPoint locationT = [touchLocation locationInView:[touchLocation view]];
         locationT.y = winSize.height-locationT.y;

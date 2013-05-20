@@ -13,7 +13,7 @@
 
 static GameState* _sharedSingleton = nil;
 
-@synthesize starStates, goldState, skillStates, achievementStates;
+@synthesize starStates, goldState, skillStates, achievementStates, actualLevel;
 @synthesize  enemiesKilledState, buyArrowsState, fireElementalKilledState, dragonsKilledState, wallRepairState;
 
 +(GameState*)shared
@@ -61,6 +61,7 @@ static GameState* _sharedSingleton = nil;
     [defaults setObject:enemiesKilledState forKey:@"EnemiesKilled"];
     [defaults setObject:dragonsKilledState forKey:@"DragonsKilled"];
     [defaults setObject:fireElementalKilledState forKey:@"FireElementalKilled"];
+    [defaults setObject:actualLevel forKey:@"ActualLevel"];
     [[NSUserDefaults standardUserDefaults] synchronize];
     [[ResourceManager shared] update];
 }
@@ -82,6 +83,7 @@ static GameState* _sharedSingleton = nil;
     enemiesKilledState = [defaults objectForKey:@"EnemiesKilled"];
     dragonsKilledState = [defaults objectForKey:@"DragonsKilled"];
     fireElementalKilledState = [defaults objectForKey:@"FireElementalKilled"];
+    actualLevel = [defaults objectForKey:@"ActualLevel"];
 }
 
 -(void)initApplicationData
@@ -105,6 +107,7 @@ static GameState* _sharedSingleton = nil;
     enemiesKilledState = [NSNumber numberWithInt:0];
     dragonsKilledState = [NSNumber numberWithInt:0];
     fireElementalKilledState = [NSNumber numberWithInt:0];
+    actualLevel = [NSNumber numberWithInt:0];
 }
 
 -(void) resetSkillStates{
