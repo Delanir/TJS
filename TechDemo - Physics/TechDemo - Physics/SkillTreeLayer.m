@@ -55,7 +55,7 @@
     [[Registry shared] registerEntity:self withName:@"skillTree"];
     [Flurry logEvent:@"Entered SkillTree with Flurry :D Test2!"];
     [Flurry logEvent:@"Entered SkillTree with Flurry :D Test! timed" timed:YES];
-    [TestFlight passCheckpoint:@"Entered SkillTree with TestFlight :D Test1!"];
+    [TestFlight passCheckpoint:@"Entered SkillTree"];
     
     
     NSMutableArray *skill = [[GameState shared] skillStates];
