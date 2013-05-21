@@ -573,6 +573,7 @@ static int current_level = -1;
     {
         [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"click"]];
         [self togglePause];
+        [TestFlight passCheckpoint:[NSString stringWithFormat:@"Pause pressed"]];
     }
     else if (_pause.visible && [self checkRectangularButtonPressed:[_pause getMenuButton] givenTouchPoint:locationT])
     {
