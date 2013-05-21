@@ -12,12 +12,12 @@ Bugs:
 - crasha de alguns em alguns jogos por algum motivo estranho (memoria? fazer profile)
     - Está a deixar memória pendurada. Não muito. Mas está
 - Verificar se dá para actualizar as mascaras das sprites. Isso está a afectar as colisões
+    - Tá bravo
 
 Daniela:
-Resources:
-    - som do impacto tem de ser corrigido
 
-João M:
+João:
+- Yuri e projectiles n precisam de kkMaskSprites
 
 Ricardo:
 - Utilização do Flurry ou TestFlight
@@ -50,5 +50,6 @@ Coisas saídas do play testing do rafael:
 **/           **/
 
 - Level up message
-
+Resources:
+    - som do impacto tem de ser corrigido
 

@@ -16,6 +16,9 @@
 
 - (id) init;
 {
+#ifdef kDebugMode
+    [[Registry shared] addToCreatedEntities:self];
+#endif
     if( (self=[super init]))
     {
         Wall * wall = [[Wall alloc] init];
@@ -48,6 +51,12 @@
 
 }
 
-
+-(void) dealloc
+{
+#ifdef kDebugMode
+    [[Registry shared] addToDestroyedEntities:self];
+#endif
+    [super dealloc];
+}
 
 @end

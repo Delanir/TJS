@@ -9,6 +9,8 @@
 #ifndef L_Archer_Constants_h
 #define L_Archer_Constants_h
 
+#define kDebugMode 1
+
 #define kFireManaCost 3
 #define kIceManaCost 3
 #define kPushbackManaCost 1

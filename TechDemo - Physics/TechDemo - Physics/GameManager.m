@@ -49,7 +49,9 @@ static GameManager* _sharedSingleton = nil;
         isMusicON = YES;
         isSoundEffectsON = YES;
         currentScene = kMasterScene;
-        //masterScene = [CCScene node];
+#ifdef kDebugMode
+        [[Registry shared] addToCreatedEntities:self];
+#endif
     }
 	return self;
 }
@@ -57,6 +59,9 @@ static GameManager* _sharedSingleton = nil;
 
 -(void)dealloc
 {
+#ifdef kDebugMode
+    [[Registry shared] addToDestroyedEntities:self];
+#endif
     [_sharedSingleton release];
     [super dealloc];
 }

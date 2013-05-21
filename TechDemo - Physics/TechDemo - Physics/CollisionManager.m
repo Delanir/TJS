@@ -52,6 +52,9 @@ static CollisionManager* _sharedSingleton = nil;
 	self = [super init];
 	if (self != nil)
     {
+#ifdef kDebugMode
+        [[Registry shared] addToCreatedEntities:self];
+#endif
         _targets = [[CCArray alloc] init];
         _projectiles = [[CCArray alloc] init];
         _walls = [[CCArray alloc] init];
@@ -62,6 +65,9 @@ static CollisionManager* _sharedSingleton = nil;
 // on "dealloc" you need to release all your retained objects
 - (void) dealloc
 {
+#ifdef kDebugMode
+    [[Registry shared] addToDestroyedEntities:self];
+#endif
     [_walls release];
     _walls = nil;
     [_targets release];

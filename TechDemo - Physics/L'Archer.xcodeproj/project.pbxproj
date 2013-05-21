@@ -980,6 +980,23 @@
 			path = CCBReader;
 			sourceTree = "<group>";
 		};
+		9C030207174BECA20038B9FF /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				9C85F6511709ECF300EECB83 /* Entity.h */,
+				9C85F6521709ECF300EECB83 /* Entity.m */,
+				9C85F654170A022800EECB83 /* Arrow.h */,
+				9C85F655170A022900EECB83 /* Arrow.m */,
+				9C85F6411709D1A800EECB83 /* Yuri.h */,
+				9C85F6421709D1A900EECB83 /* Yuri.m */,
+				3EDD9F2E1715E7F700C6A622 /* Wall.h */,
+				3EDD9F2F1715E7F800C6A622 /* Wall.m */,
+				9C85F65F170A4E4400EECB83 /* Projectile.h */,
+				9C85F660170A4E4400EECB83 /* Projectile.m */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
 		9C11EEC11720637D003510EB /* Levels */ = {
 			isa = PBXGroup;
 			children = (
@@ -1647,6 +1664,7 @@
 		9C969E581716263000BE7476 /* Scene Entities */ = {
 			isa = PBXGroup;
 			children = (
+				9C030207174BECA20038B9FF /* Entities */,
 				9C20F3D61739519900FC7FBB /* Instants */,
 				9C3E49261737068E001D45B7 /* Skill Tree */,
 				9C4787181734526600180864 /* Enemies */,
@@ -1660,22 +1678,12 @@
 				8BFC3F0B172042C3000161FD /* GameOver.m */,
 				8C72C2A6172968F6009EF8C1 /* GameWin.h */,
 				8C72C2A7172968F6009EF8C1 /* GameWin.m */,
-				9C85F659170A3E4100EECB83 /* MainScene.h */,
-				9C85F65A170A3E4200EECB83 /* MainScene.m */,
-				3EDD9F2E1715E7F700C6A622 /* Wall.h */,
-				3EDD9F2F1715E7F800C6A622 /* Wall.m */,
 				3EEB67A117234C1A005C58E9 /* PauseHUD.h */,
 				3EEB67A217234C1A005C58E9 /* PauseHUD.m */,
+				9C85F659170A3E4100EECB83 /* MainScene.h */,
+				9C85F65A170A3E4200EECB83 /* MainScene.m */,
 				8BF9C5FB17443F1C00E4B3F6 /* StoryBoardHUD.h */,
 				8BF9C5FC17443F1C00E4B3F6 /* StoryBoardHUD.m */,
-				9C85F654170A022800EECB83 /* Arrow.h */,
-				9C85F655170A022900EECB83 /* Arrow.m */,
-				9C85F6411709D1A800EECB83 /* Yuri.h */,
-				9C85F6421709D1A900EECB83 /* Yuri.m */,
-				9C85F6511709ECF300EECB83 /* Entity.h */,
-				9C85F6521709ECF300EECB83 /* Entity.m */,
-				9C85F65F170A4E4400EECB83 /* Projectile.h */,
-				9C85F660170A4E4400EECB83 /* Projectile.m */,
 				3E08A7C71719B29D007BE310 /* Stimulus.h */,
 				3E08A7C81719B29D007BE310 /* Stimulus.m */,
 				3EE2F9651723178B0084DF2F /* LevelThumbnail.h */,

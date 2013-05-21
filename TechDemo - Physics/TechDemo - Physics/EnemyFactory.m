@@ -52,6 +52,9 @@ static EnemyFactory* _sharedSingleton = nil;
             NSNumber * chance = [enemy objectForKey:@"chance"];
             enemyChanceTotal += [chance floatValue];
         }
+#ifdef kDebugMode
+        [[Registry shared] addToCreatedEntities:self];
+#endif
     }
 	return self;
 }
@@ -136,6 +139,9 @@ static EnemyFactory* _sharedSingleton = nil;
 
 -(void)dealloc
 {
+#ifdef kDebugMode
+    [[Registry shared] addToDestroyedEntities:self];
+#endif
     [_sharedSingleton release];
     [super dealloc];
 }

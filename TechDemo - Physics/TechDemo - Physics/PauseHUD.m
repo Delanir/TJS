@@ -12,6 +12,15 @@
 
 @implementation PauseHUD
 
+-(id) init
+{
+    self = [super init];
+#ifdef kDebugMode
+    [[Registry shared] addToCreatedEntities:self];
+#endif
+    return self;
+}
+
 -(CCSprite *) getPauseButton
 {
   return _pause;
@@ -31,7 +40,13 @@
     return _retry;
 };
 
-
+-(void) dealloc
+{
+#ifdef kDebugMode
+    [[Registry shared] addToDestroyedEntities:self];
+#endif
+    [super dealloc];
+}
 
 
 @end

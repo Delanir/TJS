@@ -8,6 +8,7 @@
 
 #import "GameState.h"
 #import "ResourceManager.h"
+#import "Registry.h"
 
 @implementation GameState
 
@@ -45,6 +46,9 @@ static GameState* _sharedSingleton = nil;
 	if (self = [super init])
     {
         [self loadApplicationData];
+#ifdef kDebugMode
+        [[Registry shared] addToCreatedEntities:self];
+#endif
     }
 	return self;
 }
@@ -139,6 +143,9 @@ static GameState* _sharedSingleton = nil;
 
 -(void)dealloc
 {
+#ifdef kDebugMode
+    [[Registry shared] addToDestroyedEntities:self];
+#endif
     [starStates release];
     [skillStates release];
     [achievementStates release];

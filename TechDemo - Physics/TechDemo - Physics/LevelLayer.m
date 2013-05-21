@@ -72,6 +72,10 @@ static int current_level = -1;
     if(self = [super init])
     {
         [self setIsTouchEnabled: YES];
+        
+#ifdef kDebugMode
+        [[Registry shared] addToCreatedEntities:self];
+#endif
     }
     
     //    [self schedule:@selector(gameLogic:) interval:1.0];
@@ -544,6 +548,9 @@ static int current_level = -1;
 
 -(void)dealloc
 {
+#ifdef kDebugMode
+    [[Registry shared] addToDestroyedEntities:self];
+#endif
     if (_story!=nil)
     {
         [_story release];
@@ -785,7 +792,8 @@ static int current_level = -1;
         if ([number intValue] != -1)
             [achievementsUnlocked2 addObject:number];
     
-    [[[AchievementUnlocked alloc] initWithAchievements:achievementsUnlocked2] autorelease];
+    if ([achievementsUnlocked2 count] > 0)
+        [[[AchievementUnlocked alloc] initWithAchievements:achievementsUnlocked2] autorelease];
     
     [achievementsUnlocked release];
     [achievementsUnlocked2 release];
@@ -809,7 +817,8 @@ static int current_level = -1;
         if ([number intValue] != -1)
             [achievementsUnlocked2 addObject:number];
     
-    [[[AchievementUnlocked alloc] initWithAchievements:achievementsUnlocked2] autorelease];
+    if ([achievementsUnlocked2 count] > 0)
+        [[[AchievementUnlocked alloc] initWithAchievements:achievementsUnlocked2] autorelease];
     
     [achievementsUnlocked release];
     [achievementsUnlocked2 release];

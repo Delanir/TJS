@@ -24,6 +24,9 @@
 {
     if( self=[super init])
     {
+#ifdef kDebugMode
+        [[Registry shared] addToCreatedEntities:self];
+#endif
         [[Registry shared] registerEntity:self withName:@"Hud"];
         
         buttons = [[NSMutableArray alloc] init];
@@ -345,9 +348,14 @@
 
 -(void) dealloc
 {
+#ifdef kDebugMode
+    [[Registry shared] addToDestroyedEntities:self];
+#endif
     [buttons release];
     buttons = nil;
     [super dealloc];
 }
+
+
 
 @end

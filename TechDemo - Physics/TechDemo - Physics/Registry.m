@@ -10,7 +10,7 @@
 
 @implementation Registry
 
-@synthesize registry,lastScene;
+@synthesize registry,lastScene, numberOfCreatedEntities, numberOfDestroyedEntities, allEntities;
 
 static Registry* _sharedSingleton = nil;
 
@@ -46,6 +46,12 @@ static Registry* _sharedSingleton = nil;
     {
 		// initialize stuff here
         registry = [[NSMutableDictionary alloc] init];
+        allEntities = [[NSMutableArray alloc] init];
+        numberOfDestroyedEntities = 0;
+        numberOfCreatedEntities = 0;
+#ifdef kDebugMode
+        [[Registry shared] addToCreatedEntities:self];
+#endif
     }
 	return self;
 }
@@ -53,7 +59,11 @@ static Registry* _sharedSingleton = nil;
 
 -(void)dealloc
 {
+#ifdef kDebugMode
+    [[Registry shared] addToDestroyedEntities:self];
+#endif
     [registry release];
+    [allEntities release];
     [_sharedSingleton release];
     [super dealloc];
 }
@@ -92,6 +102,75 @@ static Registry* _sharedSingleton = nil;
 {
     NSLog(@"Entities in the registry");
     NSLog(@"%@", [registry allValues]);
+}
+
+// Debugging purposes
+
+-(void) addToCreatedEntities: (id) entity;
+{
+    NSString * className = NSStringFromClass([entity class]);
+    
+    for ( NSMutableDictionary * entry in allEntities)
+    {
+        if ([[entry objectForKey:@"Class"] isEqualToString:className])
+        {
+            NSNumber * amount = [entry objectForKey:@"Amount"];
+            amount = [NSNumber numberWithInt: [amount intValue] + 1];
+            [entry setObject:amount forKey:@"Amount"];
+            numberOfCreatedEntities++;
+            return;
+        }
+    }
+    NSMutableDictionary * newClass = [[NSMutableDictionary alloc] init];
+    [newClass setObject:className forKey:@"Class"];
+    [newClass setObject:[NSNumber numberWithInt:1] forKey:@"Amount"];
+    [allEntities addObject:newClass];
+    [newClass release];
+
+    numberOfCreatedEntities++;
+    
+}
+
+-(void) addToDestroyedEntities: (id) entity;
+{
+    NSString * className = NSStringFromClass([entity class]);
+    
+    for ( NSMutableDictionary * entry in allEntities)
+    {
+        if ([[entry objectForKey:@"Class"] isEqualToString:className])
+        {
+            NSNumber * amount = [entry objectForKey:@"Amount"];
+            amount = [NSNumber numberWithInt: [amount intValue] - 1];
+            [entry setObject:amount forKey:@"Amount"];
+            numberOfDestroyedEntities++;
+            return;
+        }
+    }    
+}
+
+-(int) numberOfExistingEntities
+{
+    return numberOfCreatedEntities - numberOfDestroyedEntities;
+}
+
+-(int) numberOfExistingEntitiesInClasses
+{
+    int count = 0;
+    for ( NSMutableDictionary * entry in allEntities)
+    {
+        NSNumber * amount = [entry objectForKey:@"Amount"];
+        count += [amount intValue];
+    }
+    return count;
+}
+
+
+-(void) printAllExistingEntities
+{
+    NSLog(@"Existing entities: %d (%d authentic)", [self numberOfExistingEntitiesInClasses], [self numberOfExistingEntities]);
+    NSLog(@"Created: %d Destroyed: %d", numberOfCreatedEntities, numberOfDestroyedEntities);
+    for (NSMutableDictionary * class in allEntities)
+        NSLog(@"Class: %@ (%d entities)", [class objectForKey:@"Class"], [[class objectForKey:@"Amount"] intValue]);
 }
 
 @end

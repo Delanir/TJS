@@ -7,6 +7,7 @@
 //
 
 #import "SpriteManager.h"
+#import "Registry.h"
 
 
 @implementation SpriteManager
@@ -40,9 +41,12 @@ static SpriteManager* _sharedSingleton = nil;
 
 -(id)init
 {
-	if (self = [super init]) {
+	if (self = [super init])
+    {
 
-        // Initialize stuff
+#ifdef kDebugMode
+        [[Registry shared] addToCreatedEntities:self];
+#endif
     }
     
 	return self;
@@ -51,6 +55,9 @@ static SpriteManager* _sharedSingleton = nil;
 // on "dealloc" you need to release all your retained objects
 - (void) dealloc
 {
+#ifdef kDebugMode
+    [[Registry shared] addToDestroyedEntities:self];
+#endif
     //Dealloc stuff below this line
     [_sharedSingleton release];
 	[super dealloc];

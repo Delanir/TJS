@@ -7,8 +7,19 @@
 //
 
 #import "LevelStars.h"
+#import "Registry.h"
 
 @implementation LevelStars
+
+
+-(id) init
+{
+    self = [super init];
+#ifdef kDebugMode
+    [[Registry shared] addToCreatedEntities:self];
+#endif
+    return self;
+}
 
 -(void) makeVisible:(int)numberOfStars
 {
@@ -42,5 +53,14 @@
     }
     
 }
+
+-(void) dealloc
+{
+#ifdef kDebugMode
+    [[Registry shared] addToDestroyedEntities:self];
+#endif
+    [super dealloc];
+}
+
 
 @end

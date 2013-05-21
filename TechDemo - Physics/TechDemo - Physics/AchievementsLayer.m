@@ -12,6 +12,7 @@
 #import "Config.h"
 #import "GameManager.h"
 #import "GameState.h"
+#import "Registry.h"
 
 @implementation AchievementsLayer
 
@@ -19,10 +20,17 @@
 -(id)init
 {
     [super init];
+#ifdef kDebugMode
+    [[Registry shared] addToCreatedEntities:self];
+#endif
     return self;
 }
 
--(void)dealloc{
+-(void)dealloc
+{
+#ifdef kDebugMode
+    [[Registry shared] addToDestroyedEntities:self];
+#endif
     [self removeAllChildrenWithCleanup:YES];
     [super dealloc];
 }

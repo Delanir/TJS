@@ -16,6 +16,9 @@
 {
     if(self = [super init])
     {
+#ifdef kDebugMode
+        [[Registry shared] addToCreatedEntities:self];
+#endif
         maxHealth = 100.0; // Vai depender da skilltree
         health = maxHealth;
         lastHealth = maxHealth;

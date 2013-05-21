@@ -7,6 +7,8 @@
 //
 
 #import "Stimulus.h"
+#import "Registry.h"
+
 @implementation Stimulus
 
 @synthesize type, value, duration;
@@ -15,6 +17,9 @@
 {
     if(self = [super init])
     {
+#ifdef kDebugMode
+        [[Registry shared] addToCreatedEntities:self];
+#endif
         [self setType:stimulus];
         [self setValue:val];
     }
@@ -31,5 +36,14 @@
     }
     return self;
 }
+
+-(void) dealloc
+{
+#ifdef kDebugMode
+    [[Registry shared] addToDestroyedEntities:self];
+#endif
+    [super dealloc];
+}
+
 
 @end

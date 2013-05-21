@@ -11,6 +11,7 @@
 #import "GameState.h"
 #import "SimpleAudioEngine.h"
 #import "Config.h"
+#import "Registry.h"
 
 
 @implementation SettingsMenuLayer
@@ -18,7 +19,9 @@
 -(id)init
 {
   [super init];
-  
+#ifdef kDebugMode
+    [[Registry shared] addToCreatedEntities:self];
+#endif
   return self;
 }
 
@@ -123,6 +126,16 @@
     //[[CCTextureCache sharedTextureCache] removeUnusedTextures];
     [super onExit];
 }
+
+-(void)dealloc
+{
+#ifdef kDebugMode
+    [[Registry shared] addToDestroyedEntities:self];
+#endif
+    [super dealloc];
+    //    [self removeAllChildrenWithCleanup:YES];
+}
+
     
 
 @end

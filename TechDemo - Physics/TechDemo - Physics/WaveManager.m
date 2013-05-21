@@ -44,6 +44,9 @@ static WaveManager* _sharedSingleton = nil;
     if (self = [super init])
     {
         waves = [[NSMutableArray alloc] init];
+#ifdef kDebugMode
+        [[Registry shared] addToCreatedEntities:self];
+#endif
     }
 	return self;
 }
@@ -134,6 +137,9 @@ static WaveManager* _sharedSingleton = nil;
 
 -(void)dealloc
 {
+#ifdef kDebugMode
+    [[Registry shared] addToDestroyedEntities:self];
+#endif
     [waves release];
     [_sharedSingleton release];
     [super dealloc];

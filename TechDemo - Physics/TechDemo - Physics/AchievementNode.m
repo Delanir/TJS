@@ -7,9 +7,19 @@
 //
 
 #import "AchievementNode.h"
+#import "Registry.h"
 
 @implementation AchievementNode
 @synthesize isEnabled;
+
+-(id) init
+{
+    self = [super init];
+#ifdef kDebugMode
+    [[Registry shared] addToCreatedEntities:self];
+#endif
+    return self;
+}
 
 -(void) initAchievement
 {
@@ -34,6 +44,14 @@
     CCSprite * spriteImage2 = [CCSprite spriteWithSpriteFrameName:sprite];
     [spriteShield setNormalImage: spriteImage1];
     [spriteShield setSelectedImage: spriteImage2];
+}
+
+-(void) dealloc
+{
+#ifdef kDebugMode
+    [[Registry shared] addToDestroyedEntities:self];
+#endif
+    [super dealloc];
 }
 
 @end

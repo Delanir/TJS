@@ -13,6 +13,7 @@
 #import "GameManager.h"
 #import "GameState.h"
 #import "LoadingEffect.h"
+#import "Registry.h"
 
 
 @implementation LevelSelectLayer
@@ -20,10 +21,17 @@
 -(id)init
 {
     [super init];
+#ifdef kDebugMode
+    [[Registry shared] addToCreatedEntities:self];
+#endif
     return self;
 }
 
--(void)dealloc{
+-(void)dealloc
+{
+#ifdef kDebugMode
+    [[Registry shared] addToDestroyedEntities:self];
+#endif
     [self removeAllChildrenWithCleanup:YES];
     [levelButtons release];
     [super dealloc];

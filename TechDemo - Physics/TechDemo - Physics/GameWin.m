@@ -7,8 +7,18 @@
 //
 
 #import "GameWin.h"
+#import "Registry.h"
 
 @implementation GameWin
+
+-(id) init
+{
+    self = [super init];
+#ifdef kDebugMode
+    [[Registry shared] addToCreatedEntities:self];
+#endif
+    return self;
+}
 
 -(CCSprite *) getMenuButton
 {
@@ -34,6 +44,14 @@
 
 -(void) setStars: (int) numberOfStars{
     [_stars1 makeVisible:numberOfStars];
+}
+
+-(void) dealloc
+{
+#ifdef kDebugMode
+    [[Registry shared] addToDestroyedEntities:self];
+#endif
+    [super dealloc];
 }
 
 @end

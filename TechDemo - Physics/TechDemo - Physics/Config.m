@@ -7,6 +7,7 @@
 //
 
 #import "Config.h"
+#import "Registry.h"
 
 @implementation Config
 
@@ -39,6 +40,9 @@ static Config* _sharedSingleton = nil;
 
 -(void)dealloc
 {
+#ifdef kDebugMode
+    [[Registry shared] addToDestroyedEntities:self];
+#endif
     //Dealloc stuff above this line
     [_sharedSingleton release];
     [data release];
@@ -54,8 +58,13 @@ static Config* _sharedSingleton = nil;
 -(id)init
 {
 	if(self = [super init]);
+    {
+#ifdef kDebugMode
+        [[Registry shared] addToCreatedEntities:self];
+#endif
         data = [[Utils openPlist:@"Config"] retain];
-    
+    }
+
 	return self;
 }
 

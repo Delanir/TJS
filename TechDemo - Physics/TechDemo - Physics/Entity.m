@@ -7,6 +7,7 @@
 //
 
 #import "Entity.h"
+#import "Registry.h"
 
 @implementation Entity
 
@@ -15,6 +16,9 @@
 {
     if( (self=[super init]))
     {
+#ifdef kDebugMode
+        [[Registry shared] addToCreatedEntities:self];
+#endif
         [self setSpriteWithSpriteFrameName:spriteFile];
         [self addChild:sprite];
     }
@@ -37,6 +41,9 @@
 
 -(void) dealloc
 {
+#ifdef kDebugMode
+    [[Registry shared] addToDestroyedEntities:self];
+#endif
     [sprite release];
     [super dealloc];
 }

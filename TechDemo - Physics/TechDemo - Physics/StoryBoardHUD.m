@@ -12,6 +12,7 @@
 #import "CCBReader.h"
 #import "Utils.h"
 #import "SpriteManager.h"
+#import "Registry.h"
 
 
 @implementation StoryBoardHUD
@@ -22,6 +23,9 @@
 {
     if ( self = [super init] )
     {
+#ifdef kDebugMode
+        [[Registry shared] addToCreatedEntities:self];
+#endif
         story = (StoryBoard *) [CCBReader nodeGraphFromFile:@"StoryBoard.ccbi"];
         chapter = level;
         
@@ -45,19 +49,23 @@
 }
 
 
--(void) nextCard{
+-(void) nextCard
+{
     currentCard++;
-    if (currentCard<totalCards) {
+    if (currentCard<totalCards)
         [story setInformation:currentCard inChapter:chapter];
-    }else{
+    else
         [self setVisible:NO];
-    }
 }
 
 
 -(void) dealloc
 {
+#ifdef kDebugMode
+    [[Registry shared] addToDestroyedEntities:self];
+#endif
     [super dealloc];
 }
+
 
 @end

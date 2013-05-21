@@ -30,7 +30,9 @@
     
     [NSThread detachNewThreadSelector:@selector(loading) toTarget:self  withObject:self];
     self = [super init];
-    
+#ifdef kDebugMode
+    [[Registry shared] addToCreatedEntities:self];
+#endif
     return self;
 }
 
@@ -285,6 +287,15 @@
     [Flurry endTimedEvent:@"Entered SkillTree with Flurry :D Test!" withParameters:nil];
     
     [super onExit];
+}
+
+
+-(void)dealloc
+{
+#ifdef kDebugMode
+    [[Registry shared] addToDestroyedEntities:self];
+#endif
+    [super dealloc];
 }
 
 ///////////////////// UTILITIES

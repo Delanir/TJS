@@ -16,6 +16,9 @@
 {
     if ( self = [super init])
     {
+#ifdef kDebugMode
+        [[Registry shared] addToCreatedEntities:self];
+#endif
         effectEnded = NO;
         effectPos = position;
         LevelLayer * levelLayer = [[Registry shared] getEntityByName:@"LevelLayer"];
@@ -46,6 +49,20 @@
 {
     LevelLayer * levelLayer = [[Registry shared] getEntityByName:@"LevelLayer"];
     [levelLayer removeChild:self cleanup:YES];
+}
+
+-(void) onExit
+{
+    [self removeAllChildrenWithCleanup:YES];
+    [super onExit];
+}
+
+-(void) dealloc
+{
+#ifdef kDebugMode
+    [[Registry shared] addToDestroyedEntities:self];
+#endif
+    [super dealloc];
 }
 
 

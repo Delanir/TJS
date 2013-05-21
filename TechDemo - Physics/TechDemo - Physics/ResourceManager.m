@@ -9,6 +9,7 @@
 #import "ResourceManager.h"
 #import "GameState.h"
 #import "SpriteManager.h"
+#import "Registry.h"
 
 @implementation ResourceManager
 
@@ -67,6 +68,9 @@ static ResourceManager* _sharedSingleton = nil;
         [self setGold: [[[GameState shared] goldState] unsignedIntValue]];
         [self setEnemyKillCount:[[[GameState shared] enemiesKilledState] unsignedIntValue]];
         [self setSkillPoints:[self determineSkillPoints]];
+#ifdef kDebugMode
+        [[Registry shared] addToCreatedEntities:self];
+#endif
     }
 	return self;
 }
@@ -90,6 +94,9 @@ static ResourceManager* _sharedSingleton = nil;
 
 -(void)dealloc
 {
+#ifdef kDebugMode
+    [[Registry shared] addToDestroyedEntities:self];
+#endif
     [_sharedSingleton release];
     [super dealloc];
 }

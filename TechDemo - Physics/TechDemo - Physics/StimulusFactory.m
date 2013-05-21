@@ -8,6 +8,7 @@
 
 #import "StimulusFactory.h"
 #import "ResourceManager.h"
+#import "Registry.h"
 
 @implementation StimulusFactory
 
@@ -43,7 +44,9 @@ static StimulusFactory* _sharedSingleton = nil;
 	self = [super init];
 	if (self != nil)
     {
-		// initialize stuff here
+#ifdef kDebugMode
+        [[Registry shared] addToCreatedEntities:self];
+#endif
     }
 	return self;
 }
@@ -82,6 +85,9 @@ static StimulusFactory* _sharedSingleton = nil;
 
 -(void)dealloc
 {
+#ifdef kDebugMode
+    [[Registry shared] addToDestroyedEntities:self];
+#endif
     [_sharedSingleton release];
     [super dealloc];
 }

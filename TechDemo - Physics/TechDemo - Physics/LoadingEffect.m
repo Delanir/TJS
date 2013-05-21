@@ -8,6 +8,7 @@
 
 #import "LoadingEffect.h"
 #import "SpriteManager.h"
+#import "Registry.h"
 
 @implementation LoadingEffect
 
@@ -16,6 +17,9 @@
 {
     if(self = [super init])
     {
+#ifdef kDebugMode
+        [[Registry shared] addToCreatedEntities:self];
+#endif
         [self setZOrder:1000];
         CCParticleMeteor * spiral = [[CCParticleMeteor alloc] init];
         
@@ -72,8 +76,12 @@
 
 -(void) dealloc
 {
+#ifdef kDebugMode
+    [[Registry shared] addToDestroyedEntities:self];
+#endif
     [super dealloc];
 }
+
 
 
 @end

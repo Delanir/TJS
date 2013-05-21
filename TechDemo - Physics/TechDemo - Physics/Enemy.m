@@ -30,10 +30,8 @@
 
 - (id) initWithSprite:(NSString *)spriteFile initialState:(state) initialState;
 {
-    if( (self = [super init]))
+    if( (self = [super initWithSprite:spriteFile]))
     {
-        [self setSpriteWithSpriteFrameName:spriteFile];
-        [self addChild:sprite z:1];
         stimuli = [[NSMutableArray alloc] init];
         
         damageVulnerability = kDamageBaseVulnerability;
@@ -67,6 +65,12 @@
     
     
     [self schedule:@selector(update:)];
+}
+
+-(void) onExit
+{
+    [self removeAllChildrenWithCleanup:YES];
+    [super onExit];
 }
 
 -(void) dealloc

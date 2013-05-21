@@ -10,7 +10,7 @@
 
 // Bit array uses 1/8th of the memory of the regular BOOL array, but is about 30% slower
 // set to 1 to use bit arrays instead of BOOL arrays
-#define USE_BITARRAY 0
+#define USE_BITARRAY 1
 
 @interface KKPixelMaskSprite : CCSprite
 {

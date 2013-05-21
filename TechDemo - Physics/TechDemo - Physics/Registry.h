@@ -11,11 +11,16 @@
 
 @interface Registry : NSObject
 {
-    NSMutableDictionary * registry;   
+    NSMutableDictionary * registry;
+    NSMutableArray * allEntities;
+    unsigned int numberOfCreatedEntities;
+    unsigned int numberOfDestroyedEntities;
 }
 
 @property (retain) NSMutableDictionary * registry;
+@property (retain) NSMutableArray * allEntities;
 @property (nonatomic, retain)  CCLayer *lastScene;
+@property unsigned int numberOfCreatedEntities, numberOfDestroyedEntities;
 +(Registry*)shared;
 
 -(void) registerEntity: (id) entity withName: (NSString *) name;
@@ -23,6 +28,12 @@
 -(void) removeEntityFromRegistry: (NSString*) entity;
 -(void) clearRegistry;
 -(void) printRegistry;
+
+// Debugging purposes
+-(void) addToCreatedEntities: (id) entity;
+-(void) addToDestroyedEntities: (id) entity;
+-(int) numberOfExistingEntities;
+-(void) printAllExistingEntities;
 
 
 @end

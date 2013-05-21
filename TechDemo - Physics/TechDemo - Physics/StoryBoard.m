@@ -8,10 +8,19 @@
 
 #import "StoryBoard.h"
 #import "Utils.h"
+#import "Registry.h"
 
 
 @implementation StoryBoard
 
+-(id) init
+{
+    self = [super init];
+#ifdef kDebugMode
+    [[Registry shared] addToCreatedEntities:self];
+#endif
+    return self;
+}
 
 -(void) setInformation:(int) num inChapter:(int) c
 {
@@ -23,10 +32,10 @@
     [_person setString:person];
     
     NSString* message = [[temp objectAtIndex:num] objectAtIndex:1];
-   [_msg setString:message];
+    [_msg setString:message];
     
 #warning TODO sprite, desta maneira o peholder mantem-se
-     NSString* portrait = [[temp objectAtIndex:num] objectAtIndex:2];
+    NSString* portrait = [[temp objectAtIndex:num] objectAtIndex:2];
     _portrait =[CCSprite spriteWithFile:portrait];
     _portrait.position = _portrait1.position;
     [self addChild:_portrait z:3000];
@@ -34,6 +43,13 @@
     
 }
 
+-(void) dealloc
+{
+#ifdef kDebugMode
+    [[Registry shared] addToDestroyedEntities:self];
+#endif
+    [super dealloc];
+}
 
 
 

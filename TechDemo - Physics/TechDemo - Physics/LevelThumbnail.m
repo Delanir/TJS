@@ -15,6 +15,14 @@
 @implementation LevelThumbnail
 @synthesize isEnabled,numberStars,level;
 
+-(id) init
+{
+    self = [super init];
+#ifdef kDebugMode
+    [[Registry shared] addToCreatedEntities:self];
+#endif
+    return self;
+}
 
 -(void)initLevel
 {
@@ -35,6 +43,20 @@
     CCSprite * spriteImage2 = [CCSprite spriteWithSpriteFrameName:sprite];
     [_thumbnail setNormalImage: spriteImage1];
     [_thumbnail setSelectedImage: spriteImage2];
+}
+
+-(void) onExit
+{
+    [self removeAllChildrenWithCleanup:YES];
+    [super onExit];
+}
+
+-(void) dealloc
+{
+#ifdef kDebugMode
+    [[Registry shared] addToDestroyedEntities:self];
+#endif
+    [super dealloc];
 }
 
 

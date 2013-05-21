@@ -15,16 +15,21 @@
 
 @implementation MainMenuLayer
 
--(id)init{
+-(id)init
+{
     [super init];
     
-    
-    
+#ifdef kDebugMode
+    [[Registry shared] addToCreatedEntities:self];
+#endif
     return self;
 }
 
 -(void)dealloc
 {
+#ifdef kDebugMode
+    [[Registry shared] addToDestroyedEntities:self];
+#endif
     [super dealloc];
     //    [self removeAllChildrenWithCleanup:YES];
 }
@@ -65,7 +70,15 @@
     
 }
 
-- (void)onExit{
+-(void) onEnterTransitionDidFinish
+{
+#ifdef kDebugMode
+    [[Registry shared] printAllExistingEntities];
+#endif
+}
+
+- (void)onExit
+{
     [self unscheduleAllSelectors];
     [self removeAllChildrenWithCleanup:YES];
     

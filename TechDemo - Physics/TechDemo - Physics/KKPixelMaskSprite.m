@@ -7,6 +7,7 @@
 
 #import "KKPixelMaskSprite.h"
 #import "CCNodeExtensions.h"
+#import "Registry.h"
 
 int isPowerOfTwo (unsigned int x)
 {
@@ -99,6 +100,9 @@ static Class PixelMaskSpriteClass = nil;
 {
 	if ((self = [super initWithSpriteFrameName:spriteFrameName]))
 	{
+#ifdef kDebugMode
+        [[Registry shared] addToCreatedEntities:self];
+#endif
 		if (PixelMaskSpriteClass == nil)
 			PixelMaskSpriteClass = [KKPixelMaskSprite class];
         
@@ -193,9 +197,12 @@ static Class PixelMaskSpriteClass = nil;
 #endif
 		pixelMask = nil;
 	}
-	
+#ifdef kDebugMode
+    [[Registry shared] addToDestroyedEntities:self];
+#endif
 	[super dealloc];
 }
+
 
 -(BOOL) pixelMaskBitAt:(CGPoint)point
 {
