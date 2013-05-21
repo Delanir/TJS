@@ -198,8 +198,10 @@
 {
     [self toggleButton:kPower1Button];
     if ([[buttons objectAtIndex:kPower1Button] boolValue]) {
-        [TestFlight passCheckpoint:[NSString stringWithFormat:@"Ice power activate at level%@",[[GameState shared] actualLevel]]];
+        [TestFlight passCheckpoint:[NSString stringWithFormat:@"Level%@ - Ice power active",[[GameState shared] actualLevel]]];
         [[[IceExplosion alloc] initWithPosition:[iceToggleButton position]  andRadius:0.7] autorelease];
+    } else {
+        [TestFlight passCheckpoint:[NSString stringWithFormat:@"Level%@ - Ice power inactive",[[GameState shared] actualLevel]]];
     }
 }
 
@@ -207,8 +209,10 @@
 {
     [self toggleButton:kPower2Button];
     if ([[buttons objectAtIndex:kPower2Button] boolValue]) {
-        [TestFlight passCheckpoint:[NSString stringWithFormat:@"Fire power activate at level%@",[[GameState shared] actualLevel]]];
+        [TestFlight passCheckpoint:[NSString stringWithFormat:@"Level%@ - Fire power active",[[GameState shared] actualLevel]]];
         [[[FireExplosion alloc] initWithPosition:[fireToggleButton position]  andRadius:0.7] autorelease];
+    } else {
+        [TestFlight passCheckpoint:[NSString stringWithFormat:@"Level%@ - Fire power inactive",[[GameState shared] actualLevel]]];
     }
 }
 
@@ -216,8 +220,10 @@
 {
     [self toggleButton:kPower3Button];
     if ([[buttons objectAtIndex:kPower3Button] boolValue]){
-        [TestFlight passCheckpoint:[NSString stringWithFormat:@"Push power activate at level%@",[[GameState shared] actualLevel]]];
+        [TestFlight passCheckpoint:[NSString stringWithFormat:@"Level%@ - Push power active",[[GameState shared] actualLevel]]];
         [[[PushbackExplosion alloc] initWithPosition:[pushBackToggleButton position]  andRadius:0.7] autorelease];
+    } else {
+        [TestFlight passCheckpoint:[NSString stringWithFormat:@"Level%@ - Push power inactive",[[GameState shared] actualLevel]]];
     }
 }
 
@@ -250,7 +256,7 @@
         int numArrows = [[[GameState shared] buyArrowsState] intValue] + BUYARROWGAIN;
         [[GameState shared] setBuyArrowsState:[NSNumber numberWithInt:numArrows]];
         
-        [TestFlight passCheckpoint:[NSString stringWithFormat:@"BuyArrows at level%@",[[GameState shared] actualLevel]]];
+        [TestFlight passCheckpoint:[NSString stringWithFormat:@"Level%@ - BuyArrows",[[GameState shared] actualLevel]]];
     }
 }
 
@@ -269,7 +275,7 @@
         int wallRepairCount = [[[GameState shared] wallRepairState] intValue] + 1;
         [[GameState shared] setWallRepairState:[NSNumber numberWithInt:wallRepairCount]];
         
-        [TestFlight passCheckpoint:[NSString stringWithFormat:@"RepairWall at level%@",[[GameState shared] actualLevel]]];
+        [TestFlight passCheckpoint:[NSString stringWithFormat:@"Level%@ - RepairWall",[[GameState shared] actualLevel]]];
     }
 }
 
