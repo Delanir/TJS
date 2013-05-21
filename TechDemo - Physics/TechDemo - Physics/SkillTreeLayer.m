@@ -56,8 +56,8 @@
     [super onEnter];
     [[Registry shared] registerEntity:self withName:@"skillTree"];
     [Flurry logEvent:@"Entered SkillTree with Flurry :D Test2!"];
-    [Flurry logEvent:@"Entered SkillTree with Flurry :D Test! timed" timed:YES];
-    [TestFlight passCheckpoint:@"Entered SkillTree"];
+    [Flurry logEvent:@"Entered SkillTree with Flurry!" timed:YES];
+    [TestFlight passCheckpoint:@"SkillTree - Selected"];
     
     
     NSMutableArray *skill = [[GameState shared] skillStates];
@@ -149,6 +149,7 @@
     }
     if ([[skill objectAtIndex: kMarksmanElement1] intValue] != 0) {
         [_marksmanBranch1 setVisible:YES];
+        
     }
     
     [fireMenu setVisible:NO];
@@ -210,7 +211,7 @@
     [marksmanMenu setVisible:NO];
     [marksmanMenu setStars];
     
-    
+    [TestFlight passCheckpoint:@"SkillTree - Reset"];
     
 }
 
@@ -284,7 +285,7 @@
     [[CCTextureCache sharedTextureCache] removeAllTextures];
     
     
-    [Flurry endTimedEvent:@"Entered SkillTree with Flurry :D Test!" withParameters:nil];
+    [Flurry endTimedEvent:@"Entered SkillTree with Flurry!" withParameters:nil];
     
     [super onExit];
 }
@@ -331,25 +332,32 @@
     switch (index) {
         case 14:
             [_fireMainBranch setVisible:YES];
+            [TestFlight passCheckpoint:@"SkillTree - Fire branch evolution"];
             break;
         case 15:
             [_fireElement2 setVisible:YES];
+            [TestFlight passCheckpoint:@"SkillTree - Fire branch evolution"];
             
             break;
         case 16:
             [_fireElement1 setVisible:YES];
+            [TestFlight passCheckpoint:@"SkillTree - Fire branch evolution"];
             break;
         case 17:
             [_fireElement3 setVisible:YES];
+            [TestFlight passCheckpoint:@"SkillTree - Fire branch evolution"];
             break;
         case 18:
             [_fireBranch3 setVisible:YES];
+            [TestFlight passCheckpoint:@"SkillTree - Fire branch evolution"];
             break;
         case 19:
             [_fireBranch2 setVisible:YES];
+            [TestFlight passCheckpoint:@"SkillTree - Fire branch evolution"];
             break;
         case 20:
             [_fireBranch1 setVisible:YES];
+            [TestFlight passCheckpoint:@"SkillTree - Fire branch evolution"];
             break;
         default:
             break;
@@ -367,25 +375,32 @@
     switch (index) {
         case 0:
             [_iceMainBranch setVisible:YES];
+            [TestFlight passCheckpoint:@"SkillTree - Ice branch evolution"];
             break;
         case 1:
             [_iceElement2 setVisible:YES];
+            [TestFlight passCheckpoint:@"SkillTree - Ice branch evolution"];
             
             break;
         case 2:
             [_iceElement1 setVisible:YES];
+            [TestFlight passCheckpoint:@"SkillTree - Ice branch evolution"];
             break;
         case 3:
             [_iceElement3 setVisible:YES];
+            [TestFlight passCheckpoint:@"SkillTree - Ice branch evolution"];
             break;
         case 4:
             [_iceBranch3 setVisible:YES];
+            [TestFlight passCheckpoint:@"SkillTree - Ice branch evolution"];
             break;
         case 5:
             [_iceBranch2 setVisible:YES];
+            [TestFlight passCheckpoint:@"SkillTree - Ice branch evolution"];
             break;
         case 6:
             [_iceBranch1 setVisible:YES];
+            [TestFlight passCheckpoint:@"SkillTree - Ice branch evolution"];
             break;
         default:
             break;
@@ -403,25 +418,32 @@
     switch (index) {
         case 7:
             [_cityMainBranch setVisible:YES];
+            [TestFlight passCheckpoint:@"SkillTree - City branch evolution"];
             break;
         case 8:
             [_cityElement2 setVisible:YES];
+            [TestFlight passCheckpoint:@"SkillTree - City branch evolution"];
             
             break;
         case 9:
             [_cityElement1 setVisible:YES];
+            [TestFlight passCheckpoint:@"SkillTree - City branch evolution"];
             break;
         case 10:
             [_cityElement3 setVisible:YES];
+            [TestFlight passCheckpoint:@"SkillTree - City branch evolution"];
             break;
         case 11:
             [_cityBranch3 setVisible:YES];
+            [TestFlight passCheckpoint:@"SkillTree - City branch evolution"];
             break;
         case 12:
             [_cityBranch2 setVisible:YES];
+            [TestFlight passCheckpoint:@"SkillTree - City branch evolution"];
             break;
         case 13:
             [_cityBranch1 setVisible:YES];
+            [TestFlight passCheckpoint:@"SkillTree - City branch evolution"];
             break;
         default:
             break;
@@ -439,25 +461,32 @@
     switch (index) {
         case 21:
             [_marksmanMainBranch setVisible:YES];
+            [TestFlight passCheckpoint:@"SkillTree - Marksman branch evolution"];
             break;
         case 22:
             [_marksmanElement2 setVisible:YES];
+            [TestFlight passCheckpoint:@"SkillTree - Marksman branch evolution"];
             
             break;
         case 23:
             [_marksmanElement1 setVisible:YES];
+            [TestFlight passCheckpoint:@"SkillTree - Marksman branch evolution"];
             break;
         case 24:
             [_marksmanElement3 setVisible:YES];
+            [TestFlight passCheckpoint:@"SkillTree - Marksman branch evolution"];
             break;
         case 25:
             [_marksmanBranch3 setVisible:YES];
+            [TestFlight passCheckpoint:@"SkillTree - Marksman branch evolution"];
             break;
         case 26:
             [_marksmanBranch2 setVisible:YES];
+            [TestFlight passCheckpoint:@"SkillTree - Marksman branch evolution"];
             break;
         case 27:
             [_marksmanBranch1 setVisible:YES];
+            [TestFlight passCheckpoint:@"SkillTree - Marksman branch evolution"];
             break;
         default:
             break;
