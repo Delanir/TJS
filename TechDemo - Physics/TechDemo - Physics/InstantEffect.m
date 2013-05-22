@@ -10,7 +10,7 @@
 
 @implementation InstantEffect
 
-@synthesize instantAction, effectPos, effectEnded;
+@synthesize effectPos, effectEnded;
 
 -(id) initWithPosition: (CGPoint) position
 {
@@ -23,10 +23,9 @@
         effectPos = position;
         LevelLayer * levelLayer = [[Registry shared] getEntityByName:@"LevelLayer"];
         [levelLayer addChild:self z:5000];
-        [self setInstantAction: [CCSequence actions:
-                                 [CCCallFuncN actionWithTarget:self selector:@selector(performAction)],
-                                 nil]];
-        [self runAction:instantAction];
+        [self runAction:[CCSequence actions:
+                         [CCCallFuncN actionWithTarget:self selector:@selector(performAction)],
+                         nil]];
         [self schedule:@selector(updateInstant)];
     }
     return self;
@@ -53,6 +52,7 @@
 
 -(void) onExit
 {
+    [self unscheduleAllSelectors];
     [self removeAllChildrenWithCleanup:YES];
     [super onExit];
 }

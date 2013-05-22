@@ -12,12 +12,10 @@
 
 @interface InstantEffect : CCNode
 {
-    CCSequence *instantAction;
     CGPoint effectPos;
     BOOL effectEnded;
 }
 
-@property (nonatomic, retain) CCSequence *instantAction;
 @property CGPoint effectPos;
 @property BOOL effectEnded;
 
