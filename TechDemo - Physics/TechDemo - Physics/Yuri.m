@@ -8,10 +8,12 @@
 
 #import "Yuri.h"
 #import "ResourceManager.h"
+#import "Registry.h"
 
 
 @implementation Yuri
 
+@synthesize sprite;
 @synthesize readyToFire, level;
 @synthesize strength, critical;
 @synthesize criticalBonus, speedBonus, bonusActive, strengthBonus;
@@ -38,9 +40,15 @@
     freezePercentage = kYuriNoFreezePercentage;
     
     // Init animations with basic speed
-    if(self = [super initWithSprite:[NSString stringWithFormat:@"y_lvl%d_06.png",level ]])
+    if(self = [super init])
     {
+#ifdef kDebugMode
+        [[Registry shared] addToCreatedEntities:self];
+#endif
         readyToFire = YES;
+        
+        [self setSprite:[CCSprite spriteWithSpriteFrameName:[NSString stringWithFormat:@"y_lvl%d_06.png",level ]]];
+        [self addChild:sprite];
         
         [self setShootUp:[CCRepeat actionWithAction:
                           [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:[NSString stringWithFormat:@"y_attack_up_lvl%d",level ] ]] times:1]];
@@ -153,6 +161,21 @@
 -(BOOL) freezeWithCold
 {
     return arc4random_uniform(100) < freezePercentage * 100;
+}
+
+-(void)onExit
+{
+    [self removeAllChildrenWithCleanup:YES];
+    [super onExit];
+}
+
+- (void)dealloc
+{
+#ifdef kDebugMode
+    [[Registry shared] addToDestroyedEntities:self];
+#endif
+    [sprite release];
+    [super dealloc];
 }
 
 

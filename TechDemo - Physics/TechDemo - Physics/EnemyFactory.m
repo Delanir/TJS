@@ -130,6 +130,7 @@ static EnemyFactory* _sharedSingleton = nil;
             [newEnemy setNormalAnimationSpeed: [newEnemy getCurrentSpeed]];
             [newEnemy autorelease];
             
+            
             break;
         }
     }

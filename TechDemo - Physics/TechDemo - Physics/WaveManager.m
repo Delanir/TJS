@@ -99,6 +99,7 @@ static WaveManager* _sharedSingleton = nil;
                                                                displacement:displacementPoint
                                                                       taunt:NO];
             [ll addEnemy:newEnemy];
+            [newEnemy release];
             self.enemies++;
         }
     }
@@ -115,13 +116,17 @@ static WaveManager* _sharedSingleton = nil;
                                                        displacement: ccp(0,0)
                                                               taunt: YES];
     [ll addEnemy:newEnemy];
+    [newEnemy release];
     self.enemies++;
 }
 
 -(void) sendEnemy
 {
     LevelLayer * ll = [[Registry shared] getEntityByName:@"LevelLayer"];
-    [ll addEnemy:[[EnemyFactory shared] generateRandomEnemy]];
+    
+    Enemy * newEnemy = [[EnemyFactory shared] generateRandomEnemy];
+    [ll addEnemy: newEnemy];
+    [newEnemy release];
 }
 
 - (BOOL) anymoreWaves

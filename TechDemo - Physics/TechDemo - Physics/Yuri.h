@@ -26,7 +26,7 @@
  * of effect method in the collision manager. Cheers!
  */
 
-@interface Yuri : Entity
+@interface Yuri : CCNode
 {
     BOOL readyToFire;
     unsigned int level;
@@ -37,6 +37,7 @@
     float fireDuration, fireDamage, fireAreaOfEffect, fireNumberOfChainTargets;
     float slowTime, slowPercentage, iceAreaOfEffect, freezePercentage;
     float fireDurationBonus, fireDamageBonus, slowTimeBonus, slowPercentageBonus;
+    CCSprite * sprite;
 }
 
 @property (nonatomic) BOOL readyToFire;
@@ -47,6 +48,7 @@
 @property float fireDuration, fireDamage, fireAreaOfEffect, fireNumberOfChainTargets;
 @property float slowTime, slowPercentage, iceAreaOfEffect, freezePercentage;
 @property float fireDurationBonus, fireDamageBonus, slowTimeBonus, slowPercentageBonus;
+@property (nonatomic, retain) CCSprite * sprite;
 
 @property (nonatomic, retain) CCFiniteTimeAction *shootUp;
 @property (nonatomic, retain) CCFiniteTimeAction *shootFront;

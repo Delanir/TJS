@@ -131,7 +131,7 @@ static int current_level = -1;
     
     // Meter yuri na cena
     Yuri * yuri = [[Yuri alloc] init];
-    yuri.position = ccp([yuri spriteSize].width/2 + 120, winSize.height/2 + 30);     // @Hardcoded - to correct
+    yuri.position = ccp([[yuri sprite] contentSize].width/2 + 120, winSize.height/2 + 30);     // @Hardcoded - to correct
     [yuri setTag:9];
     [self addChild:yuri z:1000];
     [[Registry shared] registerEntity:yuri withName:@"Yuri"];

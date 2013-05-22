@@ -44,7 +44,6 @@
 #ifdef kDebugMode
     [[Registry shared] addToDestroyedEntities:self];
 #endif
-    [sprite release];
     [super dealloc];
 }
 
