@@ -53,7 +53,7 @@
     {
         [self setEffectEnded:YES];
         if ([achievements count] > 0)
-            [[[AchievementUnlocked alloc] initWithAchievements:achievements] autorelease];
+            [[[AchievementUnlocked alloc] initWithAchievements:achievements] release];
     }
     
     [super updateInstant];

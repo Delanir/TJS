@@ -103,7 +103,7 @@
 
 -(void) blastEffect
 {
-    [[[ElementalExplosion alloc] initWithPosition:[sprite position]] autorelease];
+    [[[ElementalExplosion alloc] initWithPosition:[sprite position]] release];
 
 }
 

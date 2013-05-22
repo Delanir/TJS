@@ -13,8 +13,6 @@
     double radius;
 }
 
-@property double radius;
-
 - (id) initWithPosition: (CGPoint) position andRadius: (double) rad;
 
 @end

@@ -16,7 +16,6 @@
     
     if( self = [super initWithSprite:@"Projectile.png"])
     {
-        
         CGSize spriteSize = [self spriteSize];
         
         // @TODO init with yuri information
@@ -139,6 +138,7 @@
 
 -(void) dealloc
 {
+    [stimuli removeAllObjects];
     [self removeAllChildrenWithCleanup:YES];
     [super dealloc];
 }

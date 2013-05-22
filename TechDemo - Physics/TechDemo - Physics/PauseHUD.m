@@ -48,5 +48,11 @@
     [super dealloc];
 }
 
+-(void)onExit
+{
+    [self removeAllChildrenWithCleanup:YES];
+    [super onExit];
+}
+
 
 @end

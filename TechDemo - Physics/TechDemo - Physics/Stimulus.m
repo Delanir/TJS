@@ -30,6 +30,9 @@
 {
     if(self = [super init])
     {
+#ifdef kDebugMode
+        [[Registry shared] addToCreatedEntities:self];
+#endif
         [self setType:stimulus];
         [self setValue:val];
         [self setDuration:dur];

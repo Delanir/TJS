@@ -489,7 +489,7 @@ static int current_level = -1;
         {
             // Send the flag zombie
             [[WaveManager shared] dispatchTaunt];
-            [[[GetReady alloc] initWithPosition:ccp(512, 384)] autorelease];
+            [[[GetReady alloc] initWithPosition:ccp(512, 384)] release];
         }
     }else if (_story!=nil){
         [_story release];
@@ -769,7 +769,7 @@ static int current_level = -1;
     int starsAfter = floor([[ResourceManager shared] determineSkillPoints] / 10.0);
     
     if(starsAfter > floor(starsBefore/10.0) && starsAfter < 3)
-        [[[LevelUp alloc] initWithLevel:starsAfter+1] autorelease];
+        [[[LevelUp alloc] initWithLevel:starsAfter+1] release];
     
     CCBAnimationManager * am = [_gameWin userObject];
     [am runAnimationsForSequenceNamed:@"main"];
@@ -796,7 +796,7 @@ static int current_level = -1;
             [achievementsUnlocked2 addObject:number];
     
     if ([achievementsUnlocked2 count] > 0)
-        [[[AchievementUnlocked alloc] initWithAchievements:achievementsUnlocked2] autorelease];
+        [[[AchievementUnlocked alloc] initWithAchievements:achievementsUnlocked2] release];
     
     [achievementsUnlocked release];
     [achievementsUnlocked2 release];
@@ -821,7 +821,7 @@ static int current_level = -1;
             [achievementsUnlocked2 addObject:number];
     
     if ([achievementsUnlocked2 count] > 0)
-        [[[AchievementUnlocked alloc] initWithAchievements:achievementsUnlocked2] autorelease];
+        [[[AchievementUnlocked alloc] initWithAchievements:achievementsUnlocked2] release];
     
     [achievementsUnlocked release];
     [achievementsUnlocked2 release];

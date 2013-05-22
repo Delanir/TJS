@@ -69,6 +69,7 @@
 
 -(void) onExit
 {
+    [stimuli removeAllObjects];
     [self removeAllChildrenWithCleanup:YES];
     [super onExit];
 }
@@ -278,7 +279,7 @@
     [sprite setPosition:ccp(currentPosition.x + force,currentPosition.y)];
     [healthBar setPosition:ccp([sprite position].x + force, [sprite position].y + [sprite contentSize].height/2 + 2)];
     
-    [[[PushbackExplosion alloc] initWithPosition:currentPosition  andRadius:0.4] autorelease];
+    [[[PushbackExplosion alloc] initWithPosition:currentPosition  andRadius:0.4] release];
     
     if ([self currentState] != kDieEnemyState)
     {

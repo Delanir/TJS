@@ -134,7 +134,7 @@ static Registry* _sharedSingleton = nil;
 -(void) addToDestroyedEntities: (id) entity;
 {
     NSString * className = NSStringFromClass([entity class]);
-    
+    NSLog(@"Destroyed a %@",className);
     for ( NSMutableDictionary * entry in allEntities)
     {
         if ([[entry objectForKey:@"Class"] isEqualToString:className])
@@ -169,8 +169,14 @@ static Registry* _sharedSingleton = nil;
 {
     NSLog(@"Existing entities: %d (%d authentic)", [self numberOfExistingEntitiesInClasses], [self numberOfExistingEntities]);
     NSLog(@"Created: %d Destroyed: %d", numberOfCreatedEntities, numberOfDestroyedEntities);
+    NSLog(@"\nCleared Entities:");
     for (NSMutableDictionary * class in allEntities)
-        NSLog(@"Class: %@ (%d entities)", [class objectForKey:@"Class"], [[class objectForKey:@"Amount"] intValue]);
+        if ([[class objectForKey:@"Amount"] intValue] == 0)
+            NSLog(@"Class: %@ (%d entities)", [class objectForKey:@"Class"], [[class objectForKey:@"Amount"] intValue]);
+    NSLog(@"\nUnresolved Issues:");
+    for (NSMutableDictionary * class in allEntities)
+        if ([[class objectForKey:@"Amount"] intValue] != 0)
+            NSLog(@"Class: %@ (%d entities)", [class objectForKey:@"Class"], [[class objectForKey:@"Amount"] intValue]);
 }
 
 @end

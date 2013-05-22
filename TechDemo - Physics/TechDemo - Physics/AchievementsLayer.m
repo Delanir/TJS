@@ -31,7 +31,6 @@
 #ifdef kDebugMode
     [[Registry shared] addToDestroyedEntities:self];
 #endif
-    [self removeAllChildrenWithCleanup:YES];
     [super dealloc];
 }
 

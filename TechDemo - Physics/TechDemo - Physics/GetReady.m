@@ -30,7 +30,7 @@
     {
         [self setEffectEnded:YES];
         [self removeAllChildrenWithCleanup:YES];
-        [[[Begin alloc] initWithPosition:ccp(512, 384)] autorelease];
+        [[[Begin alloc] initWithPosition:ccp(512, 384)] release];
         
     }
     

@@ -133,7 +133,6 @@
     [[Registry shared] addToDestroyedEntities:self];
 #endif
     [super dealloc];
-    //    [self removeAllChildrenWithCleanup:YES];
 }
 
     

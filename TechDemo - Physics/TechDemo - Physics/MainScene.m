@@ -40,7 +40,7 @@
     if ([type isEqualToString: @"winter"])
     {
         background = [CCSprite spriteWithFile:@"backgroundWinter.png"];
-        [[[Snow alloc] initWithPosition:ccp(0,0)]autorelease];
+        [[[Snow alloc] initWithPosition:ccp(0,0)]release];
     }
     
     else //([type isEqualToString: @"summer"])

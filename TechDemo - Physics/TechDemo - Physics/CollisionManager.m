@@ -210,7 +210,7 @@ static CollisionManager* _sharedSingleton = nil;
             case kDOTStimulus:
                 if (fireRange != kYuriNoAreaOfEffect)
                 {
-                    [[[FireExplosion alloc] initWithPosition:[[sourceEnemy sprite] position] andRadius: (fireRange / kYuriBaseAreaOfEffect)] autorelease];
+                    [[[FireExplosion alloc] initWithPosition:[[sourceEnemy sprite] position] andRadius: (fireRange / kYuriBaseAreaOfEffect)] release];
                     CCArray * dudesToAffect = [self findAllEnemiesInRange:[yuri fireAreaOfEffect] ofEnemy:sourceEnemy];
                     for (Enemy * enemy in dudesToAffect)
                     {
@@ -222,7 +222,7 @@ static CollisionManager* _sharedSingleton = nil;
             case kSlowStimulus:
                 if (iceRange != kYuriNoAreaOfEffect)
                 {
-                    [[[IceExplosion alloc] initWithPosition:[[sourceEnemy sprite] position] andRadius: (iceRange / kYuriBaseAreaOfEffect)] autorelease];
+                    [[[IceExplosion alloc] initWithPosition:[[sourceEnemy sprite] position] andRadius: (iceRange / kYuriBaseAreaOfEffect)] release];
                     CCArray * dudesToAffect = [self findAllEnemiesInRange:[yuri iceAreaOfEffect] ofEnemy:sourceEnemy];
                     for (Enemy * enemy in dudesToAffect)
                     {

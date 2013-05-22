@@ -20,7 +20,6 @@
 @property (nonatomic) double timeToLive;
 @property (nonatomic, retain) CCArray * stimuli;
 
-- (id) initWithSprite:(NSString *)spriteFile;
 
 
 @end

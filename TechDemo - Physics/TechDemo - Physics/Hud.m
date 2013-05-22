@@ -199,7 +199,7 @@
     [self toggleButton:kPower1Button];
     if ([[buttons objectAtIndex:kPower1Button] boolValue]) {
         [TestFlight passCheckpoint:[NSString stringWithFormat:@"Level%@ - Ice power active",[[GameState shared] actualLevel]]];
-        [[[IceExplosion alloc] initWithPosition:[iceToggleButton position]  andRadius:0.7] autorelease];
+        [[[IceExplosion alloc] initWithPosition:[iceToggleButton position]  andRadius:0.7] release];
     } else {
         [TestFlight passCheckpoint:[NSString stringWithFormat:@"Level%@ - Ice power inactive",[[GameState shared] actualLevel]]];
     }
@@ -210,7 +210,7 @@
     [self toggleButton:kPower2Button];
     if ([[buttons objectAtIndex:kPower2Button] boolValue]) {
         [TestFlight passCheckpoint:[NSString stringWithFormat:@"Level%@ - Fire power active",[[GameState shared] actualLevel]]];
-        [[[FireExplosion alloc] initWithPosition:[fireToggleButton position]  andRadius:0.7] autorelease];
+        [[[FireExplosion alloc] initWithPosition:[fireToggleButton position]  andRadius:0.7] release];
     } else {
         [TestFlight passCheckpoint:[NSString stringWithFormat:@"Level%@ - Fire power inactive",[[GameState shared] actualLevel]]];
     }
@@ -221,7 +221,7 @@
     [self toggleButton:kPower3Button];
     if ([[buttons objectAtIndex:kPower3Button] boolValue]){
         [TestFlight passCheckpoint:[NSString stringWithFormat:@"Level%@ - Push power active",[[GameState shared] actualLevel]]];
-        [[[PushbackExplosion alloc] initWithPosition:[pushBackToggleButton position]  andRadius:0.7] autorelease];
+        [[[PushbackExplosion alloc] initWithPosition:[pushBackToggleButton position]  andRadius:0.7] release];
     } else {
         [TestFlight passCheckpoint:[NSString stringWithFormat:@"Level%@ - Push power inactive",[[GameState shared] actualLevel]]];
     }
@@ -313,7 +313,7 @@
     if (!lowArrows && numberOfArrows <= kAcceptableNumberOfArrows)
     {
         lowArrows = YES;
-        [[[ArrowWarning alloc] initWithPosition:ccp(0,0)] autorelease];
+        [[[ArrowWarning alloc] initWithPosition:ccp(0,0)] release];
     }
     else if (numberOfArrows > kAcceptableNumberOfArrows)
         lowArrows = NO;

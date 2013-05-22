@@ -10,8 +10,6 @@
 
 @implementation FireExplosion
 
-@synthesize radius;
-
 - (id) initWithPosition: (CGPoint) position andRadius: (double) rad
 {
     if (self = [super initWithPosition:position])
