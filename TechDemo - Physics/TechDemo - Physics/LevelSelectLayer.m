@@ -94,6 +94,7 @@
 
 - (void)onExit
 {
+    [self release];
     [self removeAllChildrenWithCleanup:YES];
     [super onExit];
 }

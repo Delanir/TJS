@@ -79,6 +79,7 @@
 
 - (void)onExit
 {
+    [self release];
     [[[CCDirector sharedDirector] runningScene] stopAllActions];
     [[[CCDirector sharedDirector] runningScene] unscheduleAllSelectors];
     [self removeAllChildrenWithCleanup:YES];

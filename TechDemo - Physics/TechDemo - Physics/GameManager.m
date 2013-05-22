@@ -106,7 +106,6 @@ static GameManager* _sharedSingleton = nil;
         else
             [[CCDirector sharedDirector] replaceScene:[CCTransitionSlideInR transitionWithDuration:0.5f scene:sceneToRun]];
     }
-
 }
 
 

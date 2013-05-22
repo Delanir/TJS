@@ -265,7 +265,8 @@
 
 -(void)onExit
 {
-    
+#warning not working yet must release all sub-ccbis
+    // [self release];
     [[[CCDirector sharedDirector] runningScene] stopAllActions];
     [[[CCDirector sharedDirector] runningScene] unscheduleAllSelectors];
     [self removeAllChildrenWithCleanup:YES];

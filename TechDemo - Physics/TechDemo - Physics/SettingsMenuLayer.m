@@ -119,7 +119,9 @@
 
 
     
-- (void)onExit{
+- (void)onExit
+{
+    [self release];
     [self removeAllChildrenWithCleanup:YES];
     
     //[[CCSpriteFrameCache sharedSpriteFrameCache] removeUnusedSpriteFrames];

@@ -78,6 +78,7 @@
 
 - (void)onExit
 {
+    [self release];
     [self unscheduleAllSelectors];
     [self removeAllChildrenWithCleanup:YES];
     
