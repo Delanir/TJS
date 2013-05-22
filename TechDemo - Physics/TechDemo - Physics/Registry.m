@@ -10,7 +10,7 @@
 
 @implementation Registry
 
-@synthesize registry,lastScene, numberOfCreatedEntities, numberOfDestroyedEntities, allEntities;
+@synthesize registry, numberOfCreatedEntities, numberOfDestroyedEntities, allEntities;
 
 static Registry* _sharedSingleton = nil;
 

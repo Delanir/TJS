@@ -104,7 +104,7 @@ static CollisionManager* _sharedSingleton = nil;
             [projectilesToDelete addObject:projectile];
             continue;
         }
-        KKPixelMaskSprite * projectileSprite = [projectile sprite];
+        CCSprite * projectileSprite = [projectile sprite];
         
         CCArray *targetsToDelete = [[CCArray alloc] init];
         for (Enemy *target in _targets)

@@ -352,8 +352,17 @@
     }
 }
 
+-(void) onExit
+{
+    [self removeAllChildrenWithCleanup:YES];
+    [super onExit];
+}
+
 -(void) dealloc
 {
+    [fireToggleButton release];
+    [iceToggleButton release];
+    [pushBackToggleButton release];
 #ifdef kDebugMode
     [[Registry shared] addToDestroyedEntities:self];
 #endif

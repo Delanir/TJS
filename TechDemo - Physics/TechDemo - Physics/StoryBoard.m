@@ -24,7 +24,6 @@
 
 -(void) setInformation:(int) num inChapter:(int) c
 {
-#warning plist historia
     NSDictionary * storyInfo = [Utils openPlist:@"story"];
     NSArray* temp = [storyInfo objectForKey:[NSString stringWithFormat:@"chapter%d", c]];
     
@@ -34,7 +33,6 @@
     NSString* message = [[temp objectAtIndex:num] objectAtIndex:1];
     [_msg setString:message];
     
-#warning TODO sprite, desta maneira o peholder mantem-se
     NSString* portrait = [[temp objectAtIndex:num] objectAtIndex:2];
     _portrait =[CCSprite spriteWithFile:portrait];
     _portrait.position = _portrait1.position;

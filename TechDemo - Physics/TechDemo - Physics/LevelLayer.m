@@ -548,6 +548,7 @@ static int current_level = -1;
 
 -(void)dealloc
 {
+    [_pause release];
 #ifdef kDebugMode
     [[Registry shared] addToDestroyedEntities:self];
 #endif
@@ -734,6 +735,7 @@ static int current_level = -1;
 {
     _gameOver= (GameOver *)[CCBReader nodeGraphFromFile:@"GameOver.ccbi"];
     [self addChild:_gameOver];
+    [_gameOver release];
     [_gameOver setZOrder:5035];
     //    [[CCDirector sharedDirector] pause];
     [self makeEnemiesKilledPersistent];
@@ -752,6 +754,7 @@ static int current_level = -1;
         [_gameWin disablePlayNext];
     
     [self addChild:_gameWin];
+    [_gameWin release];
     [_gameWin setZOrder:5035];
     //    [[CCDirector sharedDirector] pause];
     

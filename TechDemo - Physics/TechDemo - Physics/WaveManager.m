@@ -140,6 +140,7 @@ static WaveManager* _sharedSingleton = nil;
 #ifdef kDebugMode
     [[Registry shared] addToDestroyedEntities:self];
 #endif
+    [currentTauntType release];
     [waves release];
     [_sharedSingleton release];
     [super dealloc];

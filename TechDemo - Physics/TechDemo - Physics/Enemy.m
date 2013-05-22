@@ -69,6 +69,7 @@
 
 -(void) onExit
 {
+    [sprite release];
     [stimuli removeAllObjects];
     [self removeAllChildrenWithCleanup:YES];
     [super onExit];
@@ -76,6 +77,12 @@
 
 -(void) dealloc
 {
+    [walkAction release];
+    [walkAnimation release];
+    [attackAnimation release];
+    [attackAction release];
+    [healthBar release];
+
     [stimuli release];
     [super dealloc];
 }

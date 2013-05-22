@@ -130,7 +130,6 @@ static EnemyFactory* _sharedSingleton = nil;
             [newEnemy setNormalAnimationSpeed: [newEnemy getCurrentSpeed]];
             [newEnemy autorelease];
             
-            
             break;
         }
     }
@@ -140,6 +139,7 @@ static EnemyFactory* _sharedSingleton = nil;
 -(void)dealloc
 {
 #ifdef kDebugMode
+    [enemyTypes release];
     [[Registry shared] addToDestroyedEntities:self];
 #endif
     [_sharedSingleton release];

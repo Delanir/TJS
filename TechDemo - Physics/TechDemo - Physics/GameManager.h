@@ -11,16 +11,6 @@
 #import "Constants.h"
 
 @interface GameManager : NSObject
-{
-    BOOL isMusicON;
-    BOOL isSoundEffectsON;
-    SceneTypes currentScene;
-    //CCScene * masterScene;
-}
-
-@property BOOL isMusicON;
-@property BOOL isSoundEffectsON;
-//@property (nonatomic, retain) CCScene * masterScene;
 
 +(GameManager*)shared;
 -(void)runSceneWithID:(SceneTypes)sceneID;

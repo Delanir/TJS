@@ -150,6 +150,14 @@ static GameState* _sharedSingleton = nil;
     [skillStates release];
     [achievementStates release];
     [_sharedSingleton release];
+    [goldState release];
+    [buyArrowsState release];
+    [wallRepairState release];
+    [enemiesKilledState release];
+    [dragonsKilledState release];
+    [fireElementalKilledState release];
+    [actualLevel release];
+    
     [super dealloc];
 }
 

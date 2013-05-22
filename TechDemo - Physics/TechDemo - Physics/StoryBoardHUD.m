@@ -61,6 +61,7 @@
 
 -(void) dealloc
 {
+    [story release];
 #ifdef kDebugMode
     [[Registry shared] addToDestroyedEntities:self];
 #endif

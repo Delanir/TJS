@@ -14,8 +14,6 @@
 
 @implementation AchievementUnlocked
 
-@synthesize achievements;
-
 -(id) initWithAchievements: (NSMutableArray*) achievs
 {
     if ( self = [super initWithPosition:ccp(0,0)] )

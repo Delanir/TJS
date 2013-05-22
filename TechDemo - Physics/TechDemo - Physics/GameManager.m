@@ -11,8 +11,6 @@
 
 @implementation GameManager
 
-@synthesize isMusicON, isSoundEffectsON;//, masterScene;
-
 static GameManager* _sharedSingleton = nil;
 
 +(GameManager*)shared
@@ -46,9 +44,6 @@ static GameManager* _sharedSingleton = nil;
 	self = [super init];
 	if (self != nil)
     {
-        isMusicON = YES;
-        isSoundEffectsON = YES;
-        currentScene = kMasterScene;
 #ifdef kDebugMode
         [[Registry shared] addToCreatedEntities:self];
 #endif
@@ -68,8 +63,6 @@ static GameManager* _sharedSingleton = nil;
 
 -(void)runSceneWithID:(SceneTypes)sceneID
 {
-    SceneTypes oldScene = currentScene;
-    currentScene = sceneID;
     id sceneToRun = nil;
     switch (sceneID) {
         case kMainMenuScene:
@@ -99,10 +92,6 @@ static GameManager* _sharedSingleton = nil;
             break;
     }
     
-    if (sceneToRun == nil)
-        // Revert back, since no new scene was found
-        currentScene = oldScene;
-    
     if ([[CCDirector sharedDirector] runningScene] == nil)
         [[CCDirector sharedDirector] runWithScene:sceneToRun];
     else{
@@ -116,18 +105,8 @@ static GameManager* _sharedSingleton = nil;
             [[CCDirector sharedDirector] replaceScene:[CCTransitionSlideInL transitionWithDuration:0.5f scene:sceneToRun]];
         else
             [[CCDirector sharedDirector] replaceScene:[CCTransitionSlideInR transitionWithDuration:0.5f scene:sceneToRun]];
-        
-        //  else
-        //  {
-        
-        //    CCNode * node = [[masterScene children] objectAtIndex:0];
-        
-        //[masterScene removeAllChildrenWithCleanup:YES];
-        //[masterScene addChild:sceneToRun];
-        
     }
-    //  }
-    
+
 }
 
 

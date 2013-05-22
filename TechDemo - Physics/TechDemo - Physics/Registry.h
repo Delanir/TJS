@@ -19,7 +19,6 @@
 
 @property (retain) NSMutableDictionary * registry;
 @property (retain) NSMutableArray * allEntities;
-@property (nonatomic, retain)  CCLayer *lastScene;
 @property unsigned int numberOfCreatedEntities, numberOfDestroyedEntities;
 +(Registry*)shared;
 

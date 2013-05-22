@@ -130,7 +130,6 @@
 		9C377C01170BAE3E00F840FB /* firearrow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9C377BFE170BAE3E00F840FB /* firearrow.mp3 */; };
 		9C377C02170BAE3E00F840FB /* arrow2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9C377BFF170BAE3E00F840FB /* arrow2.mp3 */; };
 		9C377C03170BAE3E00F840FB /* arrow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9C377C00170BAE3E00F840FB /* arrow.mp3 */; };
-		9C377C0A170BB7CC00F840FB /* hit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9C377C09170BB7CB00F840FB /* hit.mp3 */; };
 		9C377C0D170BBDD800F840FB /* EnemyFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C377C0C170BBDD600F840FB /* EnemyFactory.m */; };
 		9C3B3D6417494ECD0088DDD0 /* Snow.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C3B3D6317494ECD0088DDD0 /* Snow.m */; };
 		9C3B3D66174996440088DDD0 /* ccbParticleNeedle.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C3B3D65174996440088DDD0 /* ccbParticleNeedle.png */; };
@@ -1895,7 +1894,6 @@
 				9C377C01170BAE3E00F840FB /* firearrow.mp3 in Resources */,
 				9C377C02170BAE3E00F840FB /* arrow2.mp3 in Resources */,
 				9C377C03170BAE3E00F840FB /* arrow.mp3 in Resources */,
-				9C377C0A170BB7CC00F840FB /* hit.mp3 in Resources */,
 				8BD62290171460200076BF42 /* lvl1spritesheet.png in Resources */,
 				3EDD9F231715DF2900C6A622 /* background-ipadhd.png in Resources */,
 				3EDD9F251715DF9F00C6A622 /* background.png in Resources */,

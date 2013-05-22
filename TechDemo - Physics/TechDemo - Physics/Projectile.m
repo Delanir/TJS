@@ -11,7 +11,7 @@
 
 @implementation Projectile
 
-@synthesize destination, timeToLive, stimuli;
+@synthesize destination, timeToLive, stimuli, sprite;
 
 -(void)spriteMoveFinished:(id)sender
 {
@@ -19,7 +19,17 @@
     [[CollisionManager shared] removeFromProjectiles:self];
 }
 
+- (void)dealloc
+{
+   // [stimuli release];
+   // [sprite release];
+    [super dealloc];
+}
 
+- (void) destroy
+{
+    [self removeAllChildrenWithCleanup:YES];
+}
 
 
 @end

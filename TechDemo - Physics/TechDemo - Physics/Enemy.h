@@ -38,7 +38,7 @@
 }
 
 @property (nonatomic, retain) CCAction *walkAction;
-@property (nonatomic, retain) NSString * walkAnimation, * attackAnimation;
+@property (nonatomic, copy) NSString * walkAnimation, * attackAnimation;
 @property (nonatomic, retain) CCSequence *attackAction;
 @property (nonatomic, retain) CCProgressTimer * healthBar;
 @property (nonatomic, retain) NSMutableArray * stimuli;

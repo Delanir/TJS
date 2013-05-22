@@ -7,16 +7,22 @@
 //
 
 #import "Arrow.h"
+#import "Registry.h"
 
 @implementation Arrow
 
 - (id) initWithDestination: (CGPoint) location andStimulusPackage: (CCArray *) stimulusPackage
 {
+#ifdef kDebugMode
+    [[Registry shared] addToCreatedEntities:self];
+#endif
     CGSize winSize = [[CCDirector sharedDirector] winSize];
     
-    if( self = [super initWithSprite:@"Projectile.png"])
+    if( self = [super init])
     {
-        CGSize spriteSize = [self spriteSize];
+        sprite = [CCSprite spriteWithSpriteFrameName:@"Projectile.png"];
+        [self addChild:sprite];
+        CGSize spriteSize = [sprite contentSize];
         
         // @TODO init with yuri information
         sprite.position = ccp(160, winSize.height/2 + 35);
@@ -136,10 +142,18 @@
          [[self children] removeObject:child];
 }
 
+-(void) onExit
+{
+    [self removeAllChildrenWithCleanup:YES];
+    [super onExit];
+}
+
 -(void) dealloc
 {
+#ifdef kDebugMode
+    [[Registry shared] addToDestroyedEntities:self];
+#endif
     [stimuli removeAllObjects];
-    [self removeAllChildrenWithCleanup:YES];
     [super dealloc];
 }
 
