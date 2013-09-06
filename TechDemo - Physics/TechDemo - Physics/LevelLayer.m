@@ -12,7 +12,7 @@
 #import "CCBAnimationManager.h"
 #import "GetReady.h"
 #import "LevelUp.h"
-#import "TestFlight.h"
+//#import "TestFlight.h"
 #import "AchievementUnlocked.h"
 
 
@@ -517,7 +517,7 @@ static int current_level = -1;
     if (numberStars > [currentStars intValue])
         [stars replaceObjectAtIndex:current_level-1 withObject: [NSNumber numberWithInt:numberStars]];
     
-    [TestFlight passCheckpoint:[NSString stringWithFormat:@"Level%@ - Accuracy was %d",[[GameState shared] actualLevel], accuracy]];
+//    [TestFlight passCheckpoint:[NSString stringWithFormat:@"Level%@ - Accuracy was %d",[[GameState shared] actualLevel], accuracy]];
     
     return numberStars;
 }
@@ -574,7 +574,7 @@ static int current_level = -1;
     {
         [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"click"]];
         [self togglePause];
-        [TestFlight passCheckpoint:[NSString stringWithFormat:@"Pause pressed"]];
+//        [TestFlight passCheckpoint:[NSString stringWithFormat:@"Pause pressed"]];
     }
     else if (_pause.visible && [self checkRectangularButtonPressed:[_pause getMenuButton] givenTouchPoint:locationT])
     {
@@ -742,8 +742,8 @@ static int current_level = -1;
     [self makeMoneyPersistent];
     [self checkAchievementsAfterGame];
     float mana = [[ResourceManager shared] mana];
-    [TestFlight passCheckpoint:[NSString stringWithFormat:@"Level%@ - Mana was %f",[[GameState shared] actualLevel], mana]];
-    [TestFlight passCheckpoint:[NSString stringWithFormat:@"Level%@ - Lose",[[GameState shared] actualLevel]]];
+//    [TestFlight passCheckpoint:[NSString stringWithFormat:@"Level%@ - Mana was %f",[[GameState shared] actualLevel], mana]];
+//    [TestFlight passCheckpoint:[NSString stringWithFormat:@"Level%@ - Lose",[[GameState shared] actualLevel]]];
 }
 
 -(void) gameWin
@@ -766,8 +766,8 @@ static int current_level = -1;
     [self checkAchievementsAfterGame];
     
     float mana = [[ResourceManager shared] mana];
-    [TestFlight passCheckpoint:[NSString stringWithFormat:@"Level%@ - Mana was %f",[[GameState shared] actualLevel], mana]];
-    [TestFlight passCheckpoint:[NSString stringWithFormat:@"Level%@ - Win",[[GameState shared] actualLevel]]];
+//    [TestFlight passCheckpoint:[NSString stringWithFormat:@"Level%@ - Mana was %f",[[GameState shared] actualLevel], mana]];
+//    [TestFlight passCheckpoint:[NSString stringWithFormat:@"Level%@ - Win",[[GameState shared] actualLevel]]];
     
     int starsAfter = floor([[ResourceManager shared] determineSkillPoints] / 10.0);
     
@@ -836,7 +836,7 @@ static int current_level = -1;
     if ([[achievement objectAtIndex:0] intValue] == 0 && [[[GameState shared] enemiesKilledState] intValue] + [[ResourceManager shared] enemyKillCount] >= 25) { // 50
         [achievement replaceObjectAtIndex:0 withObject:[NSNumber numberWithInt:1]];
         [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"Achievement"]];
-        [TestFlight passCheckpoint:@"Achievement1 Unlocked"];
+//        [TestFlight passCheckpoint:@"Achievement1 Unlocked"];
         return 1;
     }
     return -1;
@@ -848,7 +848,7 @@ static int current_level = -1;
     if ([[achievement objectAtIndex:1] intValue] == 0 && [[[GameState shared] dragonsKilledState] intValue] >= 1) { // 10
         [achievement replaceObjectAtIndex:1 withObject:[NSNumber numberWithInt:1]];
         [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"Achievement"]];
-        [TestFlight passCheckpoint:@"Achievement2 Unlocked"];
+//        [TestFlight passCheckpoint:@"Achievement2 Unlocked"];
         return 2;
     }
     return -1;
@@ -861,7 +861,7 @@ static int current_level = -1;
     if ([[achievement objectAtIndex:2] intValue] == 0 && [[[GameState shared] buyArrowsState] intValue] >= 2500) {
         [achievement replaceObjectAtIndex:2 withObject:[NSNumber numberWithInt:1]];
         [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"Achievement"]];
-        [TestFlight passCheckpoint:@"Achievement3 Unlocked"];
+//        [TestFlight passCheckpoint:@"Achievement3 Unlocked"];
         return 3;
     }
     return -1;
@@ -873,7 +873,7 @@ static int current_level = -1;
     if ([[achievement objectAtIndex:3] intValue] == 0 && [[ResourceManager shared] determineAccuracy] == 100.0f) { // done ;)
         [achievement replaceObjectAtIndex:3 withObject:[NSNumber numberWithInt:1]];
         [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"Achievement"]];
-        [TestFlight passCheckpoint:@"Achievement4 Unlocked"];
+//        [TestFlight passCheckpoint:@"Achievement4 Unlocked"];
         return 4;
     }
     return -1;
@@ -886,7 +886,7 @@ static int current_level = -1;
     if ([[achievement objectAtIndex:4] intValue] == 0 && [wall health] == [wall maxHealth]) { // a testar
         [achievement replaceObjectAtIndex:4 withObject:[NSNumber numberWithInt:1]];
         [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"Achievement"]];
-        [TestFlight passCheckpoint:@"Achievement5 Unlocked"];
+//        [TestFlight passCheckpoint:@"Achievement5 Unlocked"];
         return 5;
     }
     return -1;
@@ -902,7 +902,7 @@ static int current_level = -1;
     if ([[achievement objectAtIndex:5] intValue] == 0 && currentStars > 0) {
         [achievement replaceObjectAtIndex:5 withObject:[NSNumber numberWithInt:1]];
         [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"Achievement"]];
-        [TestFlight passCheckpoint:@"Achievement6 Unlocked"];
+//        [TestFlight passCheckpoint:@"Achievement6 Unlocked"];
         return 6;
     }
     return -1;
@@ -918,7 +918,7 @@ static int current_level = -1;
     if ([[achievement objectAtIndex:6] intValue] == 0 && [currentStars intValue] == 3) {
         [achievement replaceObjectAtIndex:6 withObject:[NSNumber numberWithInt:1]];
         [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"Achievement"]];
-        [TestFlight passCheckpoint:@"Achievement7 Unlocked"];
+//        [TestFlight passCheckpoint:@"Achievement7 Unlocked"];
         return 7;
     }
     return -1;
@@ -938,7 +938,7 @@ static int current_level = -1;
         if ([[achievement objectAtIndex:7] intValue] == 0 && allLevelsCompleted) {
             [achievement replaceObjectAtIndex:7 withObject:[NSNumber numberWithInt:1]];
             [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"Achievement"]];
-            [TestFlight passCheckpoint:@"Achievement8 Unlocked"];
+//            [TestFlight passCheckpoint:@"Achievement8 Unlocked"];
             return 8;
         }
     }
@@ -951,7 +951,7 @@ static int current_level = -1;
     if ([[achievement objectAtIndex:8] intValue] == 0 && ([self checkSkillTreeBranch:0] || [self checkSkillTreeBranch:7] || [self checkSkillTreeBranch:14] || [self checkSkillTreeBranch:21])) {
         [achievement replaceObjectAtIndex:8 withObject:[NSNumber numberWithInt:1]];
         [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"Achievement"]];
-        [TestFlight passCheckpoint:@"Achievement9 Unlocked"];
+//        [TestFlight passCheckpoint:@"Achievement9 Unlocked"];
         return 9;
     }
     return -1;
@@ -978,7 +978,7 @@ static int current_level = -1;
         if ([[achievement objectAtIndex:9] intValue] == 0 && [[ResourceManager shared] determineAccuracy] == 100 && [wall health] == [wall maxHealth]) {
             [achievement replaceObjectAtIndex:9 withObject:[NSNumber numberWithInt:1]];
             [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"Achievement"]];
-            [TestFlight passCheckpoint:@"Achievement10 Unlocked"];
+//            [TestFlight passCheckpoint:@"Achievement10 Unlocked"];
             return 10;
         }
         
@@ -992,7 +992,7 @@ static int current_level = -1;
     if ([[achievement objectAtIndex:10]intValue] == 0 && [[[GameState shared] enemiesKilledState] intValue] + [[ResourceManager shared] enemyKillCount] > 9000) {
         [achievement replaceObjectAtIndex:10 withObject:[NSNumber numberWithInt:1]];
         [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"Achievement"]];
-        [TestFlight passCheckpoint:@"Achievement11 Unlocked"];
+//        [TestFlight passCheckpoint:@"Achievement11 Unlocked"];
         return 11;
     }
     
@@ -1005,7 +1005,7 @@ static int current_level = -1;
     if ([[achievement objectAtIndex:11] intValue] == 0 && [[[GameState shared] fireElementalKilledState] intValue] > 100) {
         [achievement replaceObjectAtIndex:11 withObject:[NSNumber numberWithInt:1]];
         [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"Achievement"]];
-        [TestFlight passCheckpoint:@"Achievement12 Unlocked"];
+//        [TestFlight passCheckpoint:@"Achievement12 Unlocked"];
         return 12;
     }
     return -1;
@@ -1020,7 +1020,7 @@ static int current_level = -1;
         if ([[achievement objectAtIndex:12] intValue] == 0 && [wall health] == [wall maxHealth]) {
             [achievement replaceObjectAtIndex:12 withObject:[NSNumber numberWithInt:1]];
             [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"Achievement"]];
-            [TestFlight passCheckpoint:@"Achievement13 Unlocked"];
+//            [TestFlight passCheckpoint:@"Achievement13 Unlocked"];
             return 13;
         }
     }
@@ -1033,7 +1033,7 @@ static int current_level = -1;
     if ([[achievement objectAtIndex:13] intValue] == 0 && [[[GameState shared] wallRepairState] intValue] > 100) {
         [achievement replaceObjectAtIndex:13 withObject:[NSNumber numberWithInt:1]];
         [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"Achievement"]];
-        [TestFlight passCheckpoint:@"Achievement14 Unlocked"];
+//        [TestFlight passCheckpoint:@"Achievement14 Unlocked"];
         return 14;
     }
     return -1;
@@ -1053,7 +1053,7 @@ static int current_level = -1;
         if (allAchievementsUnlocked) {
             [achievement replaceObjectAtIndex:14 withObject:[NSNumber numberWithInt:1]];
             [[SimpleAudioEngine sharedEngine] playEffect:[[Config shared] getStringProperty:@"Achievement"]];
-            [TestFlight passCheckpoint:@"Achievement15 Unlocked"];
+//            [TestFlight passCheckpoint:@"Achievement15 Unlocked"];
             return 15;
         }
     }
