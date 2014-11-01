@@ -23,7 +23,6 @@
 		3EDD9F251715DF9F00C6A622 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EDD9F241715DF9F00C6A622 /* background.png */; };
 		3EDD9F291715E4CD00C6A622 /* lvl1spritesheet.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3EDD9F281715E4CD00C6A622 /* lvl1spritesheet.plist */; };
 		3EDD9F301715E7F800C6A622 /* Wall.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDD9F2F1715E7F800C6A622 /* Wall.m */; };
-		3EE1EA5C174295C700F5D7A7 /* libFlurry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EE1EA5B174295C700F5D7A7 /* libFlurry.a */; };
 		3EE1EA5E1742963800F5D7A7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EE1EA5D1742963800F5D7A7 /* SystemConfiguration.framework */; };
 		3EE2F95E17230E640084DF2F /* LevelStars.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE2F95D17230E640084DF2F /* LevelStars.m */; };
 		3EE2F9671723178C0084DF2F /* LevelThumbnail.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE2F9661723178C0084DF2F /* LevelThumbnail.m */; };
@@ -333,6 +332,7 @@
 		9CEB4CAB173A0AB5004297A2 /* SkeletonGroup.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9CEB4CAA173A0AB5004297A2 /* SkeletonGroup.plist */; };
 		9CEB4CAD173A0AC2004297A2 /* PeasantGroup.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9CEB4CAC173A0AC2004297A2 /* PeasantGroup.plist */; };
 		9CEB4CAF173A0ACD004297A2 /* BlackDragonUp.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9CEB4CAE173A0ACD004297A2 /* BlackDragonUp.plist */; };
+		9DECE06E1A05643D00ABBEB8 /* TODO_JPM in Resources */ = {isa = PBXBuildFile; fileRef = 9DECE06D1A05643D00ABBEB8 /* TODO_JPM */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -343,8 +343,6 @@
 		3E23CECD1743F04100F6B2E0 /* achievement.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = achievement.mp3; sourceTree = "<group>"; };
 		3E3A5D08171C6AE2006D5370 /* larcher_icon_72x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = larcher_icon_72x72.png; path = ../larcher_icon_72x72.png; sourceTree = "<group>"; };
 		3E3A5D0A171C6AEC006D5370 /* larcher_icon_144x144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = larcher_icon_144x144.png; path = ../larcher_icon_144x144.png; sourceTree = "<group>"; };
-		3E88A618174A16CF00B6706C /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
-		3E88A619174A16CF00B6706C /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 		3E88A61C174A178F00B6706C /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		3E926EC51734064B00BFA90D /* achievement-guide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "achievement-guide.png"; sourceTree = "<group>"; };
 		3E926EC7173423EE00BFA90D /* AchievementsLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AchievementsLayer.h; sourceTree = "<group>"; };
@@ -359,8 +357,6 @@
 		3EDD9F281715E4CD00C6A622 /* lvl1spritesheet.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = lvl1spritesheet.plist; sourceTree = "<group>"; };
 		3EDD9F2E1715E7F700C6A622 /* Wall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wall.h; sourceTree = "<group>"; };
 		3EDD9F2F1715E7F800C6A622 /* Wall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Wall.m; sourceTree = "<group>"; };
-		3EE1EA5A174295C700F5D7A7 /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
-		3EE1EA5B174295C700F5D7A7 /* libFlurry.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry.a; sourceTree = "<group>"; };
 		3EE1EA5D1742963800F5D7A7 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		3EE2F95C17230E640084DF2F /* LevelStars.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelStars.h; sourceTree = "<group>"; };
 		3EE2F95D17230E640084DF2F /* LevelStars.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelStars.m; sourceTree = "<group>"; };
@@ -886,6 +882,7 @@
 		9CEB4CAA173A0AB5004297A2 /* SkeletonGroup.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SkeletonGroup.plist; sourceTree = "<group>"; };
 		9CEB4CAC173A0AC2004297A2 /* PeasantGroup.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PeasantGroup.plist; sourceTree = "<group>"; };
 		9CEB4CAE173A0ACD004297A2 /* BlackDragonUp.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BlackDragonUp.plist; sourceTree = "<group>"; };
+		9DECE06D1A05643D00ABBEB8 /* TODO_JPM */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODO_JPM; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -904,22 +901,12 @@
 				9C85F4A61707957E00EECB83 /* Foundation.framework in Frameworks */,
 				9C85F4A81707957E00EECB83 /* CoreGraphics.framework in Frameworks */,
 				9C85F4AA1707957E00EECB83 /* GameKit.framework in Frameworks */,
-				3EE1EA5C174295C700F5D7A7 /* libFlurry.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3E88A61B174A16F900B6706C /* TestFlight */ = {
-			isa = PBXGroup;
-			children = (
-				3E88A618174A16CF00B6706C /* libTestFlight.a */,
-				3E88A619174A16CF00B6706C /* TestFlight.h */,
-			);
-			name = TestFlight;
-			sourceTree = "<group>";
-		};
 		3E926EC4173405ED00BFA90D /* Achievements */ = {
 			isa = PBXGroup;
 			children = (
@@ -927,15 +914,6 @@
 				3E926EC51734064B00BFA90D /* achievement-guide.png */,
 			);
 			name = Achievements;
-			sourceTree = "<group>";
-		};
-		3EE1EA59174295C700F5D7A7 /* Flurry */ = {
-			isa = PBXGroup;
-			children = (
-				3EE1EA5A174295C700F5D7A7 /* Flurry.h */,
-				3EE1EA5B174295C700F5D7A7 /* libFlurry.a */,
-			);
-			path = Flurry;
 			sourceTree = "<group>";
 		};
 		8B0E70E5171DCCB9004D212C /* Skilltree */ = {
@@ -1075,6 +1053,7 @@
 				8B79CDD9171F2D2500E58EDD /* TODO */,
 				8BF9C5F817443DAD00E4B3F6 /* story.plist */,
 				9C1E05BE1724C7B00093F0E3 /* DoneStuff */,
+				9DECE06D1A05643D00ABBEB8 /* TODO_JPM */,
 			);
 			name = "Configs and References";
 			path = ..;
@@ -1210,8 +1189,6 @@
 		9C85F4981707957E00EECB83 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3E88A61B174A16F900B6706C /* TestFlight */,
-				3EE1EA59174295C700F5D7A7 /* Flurry */,
 				9C85F4991707957E00EECB83 /* QuartzCore.framework */,
 				9C85F49B1707957E00EECB83 /* OpenGLES.framework */,
 				9C85F49D1707957E00EECB83 /* OpenAL.framework */,
@@ -1850,7 +1827,7 @@
 		9C85F48E1707957E00EECB83 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0610;
 			};
 			buildConfigurationList = 9C85F4911707957E00EECB83 /* Build configuration list for PBXProject "L'Archer" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -2007,6 +1984,7 @@
 				9C7CADC0174567E700D09E77 /* backgroundWinter.png in Resources */,
 				9C7CADC2174567F600D09E77 /* backgroundWinter-ipadhd.png in Resources */,
 				9C7CADC41745683800D09E77 /* ent_anim.plist in Resources */,
+				9DECE06E1A05643D00ABBEB8 /* TODO_JPM in Resources */,
 				9C7CADC917456C1100D09E77 /* EntScatter.plist in Resources */,
 				9C7CADCB1745754800D09E77 /* SkeletonSwarm.plist in Resources */,
 				8B38A68A1745D21300B33D88 /* explosion.mp3 in Resources */,
@@ -2207,8 +2185,15 @@
 		9C85F62C1707958200EECB83 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -2217,9 +2202,14 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -2228,15 +2218,26 @@
 		9C85F62D1707958200EECB83 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					NDEBUG,
 					"NS_BLOCK_ASSERTIONS=1",
 				);
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				SDKROOT = iphoneos;
@@ -2248,13 +2249,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TechDemo - Physics/Prefix.pch";
-				HEADER_SEARCH_PATHS = (
-					"\"TechDemo - Physics/libs/kazmath/include\"",
-				);
+				HEADER_SEARCH_PATHS = "\"TechDemo - Physics/libs/kazmath/include\"";
 				INFOPLIST_FILE = "TechDemo - Physics/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
@@ -2276,12 +2276,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TechDemo - Physics/Prefix.pch";
-				HEADER_SEARCH_PATHS = (
-					"\"TechDemo - Physics/libs/kazmath/include\"",
-				);
+				HEADER_SEARCH_PATHS = "\"TechDemo - Physics/libs/kazmath/include\"";
 				INFOPLIST_FILE = "TechDemo - Physics/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (

@@ -14,18 +14,17 @@
 #import "SimpleAudioEngine.h"
 #import "Registry.h"
 #import "LevelLayer.h"
-#import "Flurry.h"
 //#import "TestFlight.h"
 
 @implementation AppController
 
 @synthesize window=window_, navController=navController_, director=director_;
-
-// added because of Flurry required it
-- (void)applicationDidFinishLaunching:(UIApplication *)application
-{
-    [Flurry startSession:@"8M2VTYTBY2MJFH3Z9H2P"];
-}
+//
+//// added because of Flurry required it
+//- (void)applicationDidFinishLaunching:(UIApplication *)application
+//{
+//    [Flurry startSession:@"8M2VTYTBY2MJFH3Z9H2P"];
+//}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

@@ -741,7 +741,6 @@ static int current_level = -1;
     [self makeEnemiesKilledPersistent];
     [self makeMoneyPersistent];
     [self checkAchievementsAfterGame];
-    float mana = [[ResourceManager shared] mana];
 //    [TestFlight passCheckpoint:[NSString stringWithFormat:@"Level%@ - Mana was %f",[[GameState shared] actualLevel], mana]];
 //    [TestFlight passCheckpoint:[NSString stringWithFormat:@"Level%@ - Lose",[[GameState shared] actualLevel]]];
 }
@@ -764,10 +763,6 @@ static int current_level = -1;
     [self makeMoneyPersistent];
     [self makeEnemiesKilledPersistent];
     [self checkAchievementsAfterGame];
-    
-    float mana = [[ResourceManager shared] mana];
-//    [TestFlight passCheckpoint:[NSString stringWithFormat:@"Level%@ - Mana was %f",[[GameState shared] actualLevel], mana]];
-//    [TestFlight passCheckpoint:[NSString stringWithFormat:@"Level%@ - Win",[[GameState shared] actualLevel]]];
     
     int starsAfter = floor([[ResourceManager shared] determineSkillPoints] / 10.0);
     
@@ -897,7 +892,7 @@ static int current_level = -1;
     NSMutableArray * achievement = [[GameState shared] achievementStates];
     
     NSMutableArray * stars = [[GameState shared] starStates];
-    NSNumber * currentStars = [[stars objectAtIndex:9] intValue];
+    NSNumber * currentStars = [NSNumber numberWithInt: [[stars objectAtIndex:9] intValue]];
     
     if ([[achievement objectAtIndex:5] intValue] == 0 && currentStars > 0) {
         [achievement replaceObjectAtIndex:5 withObject:[NSNumber numberWithInt:1]];
@@ -1045,7 +1040,7 @@ static int current_level = -1;
     BOOL allAchievementsUnlocked = YES;
     if ([[achievement objectAtIndex:14] intValue] == 0) {
         for (int i = 0; i < 14; i++) {
-            NSNumber *value = [[achievement objectAtIndex:i] intValue];
+            NSNumber *value = [NSNumber numberWithInt:[[achievement objectAtIndex:i] intValue]];
             if (value == 0) {
                 allAchievementsUnlocked = NO;
             }

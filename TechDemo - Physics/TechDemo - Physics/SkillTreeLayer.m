@@ -15,7 +15,7 @@
 #import "GameState.h"
 #import "SpriteManager.h"
 #import "Constants.h"
-#import "Flurry.h"
+//#import "Flurry.h"
 //#import "TestFlight.h"
 
 @implementation SkillTreeLayer
@@ -43,8 +43,8 @@
 {
     [super onEnter];
     [[Registry shared] registerEntity:self withName:@"skillTree"];
-    [Flurry logEvent:@"Entered SkillTree with Flurry :D Test2!"];
-    [Flurry logEvent:@"Entered SkillTree with Flurry!" timed:YES];
+//    [Flurry logEvent:@"Entered SkillTree with Flurry :D Test2!"];
+//    [Flurry logEvent:@"Entered SkillTree with Flurry!" timed:YES];
 //    [TestFlight passCheckpoint:@"SkillTree - Selected"];
     
     
@@ -272,9 +272,6 @@
     [self removeAllChildrenWithCleanup:YES];
     [[CCSpriteFrameCache sharedSpriteFrameCache] removeSpriteFrames];
     [[CCTextureCache sharedTextureCache] removeAllTextures];
-    
-    
-    [Flurry endTimedEvent:@"Entered SkillTree with Flurry!" withParameters:nil];
     
     [super onExit];
 }

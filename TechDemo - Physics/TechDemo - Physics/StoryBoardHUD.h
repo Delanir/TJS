@@ -12,12 +12,13 @@
 {
     StoryBoard * story;
     int chapter;
-    int totalCards;
+    unsigned long totalCards;
     int currentCard;
 }
 
 @property (nonatomic, retain) StoryBoard * story;
-@property (nonatomic, assign) int totalCards, currentCard;
+@property (nonatomic, assign) unsigned long totalCards;
+@property (nonatomic, assign) int currentCard;
 
 -(void) nextCard;
 -(id) initForLevel: (int) level;

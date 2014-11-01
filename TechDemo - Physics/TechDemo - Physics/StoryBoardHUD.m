@@ -33,9 +33,6 @@
         NSArray* temp = [storyInfo objectForKey:[NSString stringWithFormat:@"chapter%d", level]];
         totalCards = 0;
         currentCard = 0;
-        
-        
-        
         if (temp!=nil) {
             totalCards = [temp count];
             currentCard = 0;

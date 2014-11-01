@@ -57,7 +57,7 @@ static Config* _sharedSingleton = nil;
 
 -(id)init
 {
-	if(self = [super init]);
+	if(self = [super init])
     {
 #ifdef kDebugMode
         [[Registry shared] addToCreatedEntities:self];

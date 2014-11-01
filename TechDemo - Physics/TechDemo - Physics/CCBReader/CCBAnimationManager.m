@@ -316,7 +316,7 @@
 - (void) runActionsForNode:(CCNode*)node sequenceProperty:(CCBSequenceProperty*)seqProp tweenDuration:(float)tweenDuration
 {
     NSArray* keyframes = [seqProp keyframes];
-    int numKeyframes = keyframes.count;
+    int numKeyframes = [keyframes count];
     
     if (numKeyframes > 1)
     {

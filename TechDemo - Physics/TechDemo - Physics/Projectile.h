@@ -22,6 +22,7 @@
 @property (nonatomic, retain) CCArray * stimuli;
 @property (nonatomic, retain) CCSprite * sprite;
 
+-(void)spriteMoveFinished:(id)sender;
 - (void) destroy;
 
 

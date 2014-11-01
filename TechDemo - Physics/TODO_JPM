@@ -1,0 +1,24 @@
+/**            /**
+*                *
+* Coisas a fazer *
+*                *
+**/            **/
+
+Fase 1:
+Queria actualizar o L'Archer d'Amiens para os iOS 7 e 8, mantendo a retrocompatibilidade com versões antigas. Quando fiz o upgrade para o iOS7, o jogo deixou de funcionar no meu iPad
+
+DONE - Atualizar o projecto para utilizar arm64
+DONE - Remover flurry (ou atualizar libs para x86_64)
+DONE - Corrigir warnings do código do L'Archer
+DONE - Remover definitivamente o Testflight
+- Actualizar código descontinuado
+- Actualizar libs Cocos2D
+- Actualizar CCBuilder
+- Refactorizar/Optimizar todo o código
+
+Fase 2:
+Instalar as dependências através de Cocoa Pods, para simplificar versões futuras.
+
+
+Fase 3:
+Remover a gestão de memória manual, para remover todos os problemas que tivémos com a memória da aplicação

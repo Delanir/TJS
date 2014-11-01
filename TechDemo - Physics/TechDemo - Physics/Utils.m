@@ -30,7 +30,7 @@
                                            format:&format
                                            errorDescription:&errorDesc];
     if (!dict)
-        NSLog(@"Error reading plist: %@, format: %d", errorDesc, format);
+        NSLog(@"Error reading plist: %@", errorDesc);
     return dict;
 }
 

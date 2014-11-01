@@ -53,23 +53,24 @@
 @property BOOL slowDown;
 
 
--(id) initWithSprite:(NSString *)spriteFile initialState:(state) initialState;
--(void) postInit;
--(void) setupActions;
--(void) attack;
--(void) die;
--(void) shout;
--(void) placeRandomly;
--(void) animateWalkLeft;
--(BOOL) isDead;
--(void) enqueueStimuli:(NSMutableArray *) stimulusPackage;
--(float) getCurrentSpeed;
--(void) setCurrentSpeed: (float) newSpeed;
+- (id) initWithSprite:(NSString *)spriteFile initialState:(state) initialState;
+- (void) postInit;
+- (void) setupActions;
+- (void) attack;
+- (void) die;
+- (void) shout;
+- (void) placeRandomly;
+- (void) animateWalkLeft;
+- (BOOL) isDead;
+- (void) enqueueStimuli:(NSMutableArray *) stimulusPackage;
+- (float) getCurrentSpeed;
+- (void) setCurrentSpeed: (float) newSpeed;
 - (void) startGame;
 - (void) stopWalking;
 - (void) resumeFromTaunt;
 - (void) stopAnimations;
--(void) freeze;
+- (void) freeze;
+- (void) damageWall;
 
 -(void) takeDamage:(double) amount;
 @end
