@@ -17,8 +17,9 @@ static GameManager* _sharedSingleton = nil;
 {
 	@synchronized([GameManager class])
 	{
-		if (!_sharedSingleton)
-			[[self alloc] init];
+        if (_sharedSingleton == nil) {
+            [[self alloc] init];
+        }
         
 		return _sharedSingleton;
 	}

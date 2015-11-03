@@ -19,20 +19,10 @@
 @implementation AppController
 
 @synthesize window=window_, navController=navController_, director=director_;
-//
-//// added because of Flurry required it
-//- (void)applicationDidFinishLaunching:(UIApplication *)application
-//{
-//    [Flurry startSession:@"8M2VTYTBY2MJFH3Z9H2P"];
-//}
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Metrics in Beta
-    // !!!: Use the next line only during beta
-//    [TestFlight setDeviceIdentifier:[[UIDevice currentDevice] uniqueIdentifier]];
-//
-//    [TestFlight takeOff:@"80e8c2d7-603f-4dfd-81ec-095c54b5cce1"];
 	// Create the main window
 	window_ = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
@@ -98,7 +88,6 @@
 	navController_.navigationBarHidden = YES;
 	
 	// set the Navigation Controller as the root view controller
-    //	[window_ addSubview:navController_.view];	// Generates flicker.
 	[window_ setRootViewController:navController_];
 	
 	// make main window visible

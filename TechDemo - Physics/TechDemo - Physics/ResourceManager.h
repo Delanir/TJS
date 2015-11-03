@@ -17,7 +17,6 @@
     double mana;
     double maxMana;
     
-    
     // Statistics part
     unsigned int enemiesFromStart;
     unsigned int enemiesHit;

@@ -8,9 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Config.h"
-#import "Peasant.h"
-#import "FaerieDragon.h"
-#import "Zealot.h"
+#import "Enemy.h"
 
 @interface EnemyFactory : CCScene
 {
